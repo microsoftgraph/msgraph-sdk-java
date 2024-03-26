@@ -34,7 +34,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("appDisplayName");
     }
     /**
-     * Gets the appId property value. Unique GUID representing the app ID in the Microsoft Entra ID.  Supports $filter (eq).
+     * Gets the appId property value. Unique GUID that represents the app ID in the Microsoft Entra ID.  Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the appliedConditionalAccessPolicies property value. Provides a list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
+     * Gets the appliedConditionalAccessPolicies property value. Provides a list of conditional access policies that the corresponding sign-in activity triggers. Apps need more Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
      * @return a {@link java.util.List<AppliedConditionalAccessPolicy>}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("conditionalAccessStatus");
     }
     /**
-     * Gets the correlationId property value. The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity.  Supports $filter (eq).
+     * Gets the correlationId property value. The request ID sent from the client when the sign-in is initiated. Used to troubleshoot sign-in activity.  Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("ipAddress");
     }
     /**
-     * Gets the isInteractive property value. Indicates if a sign-in is interactive or not.
+     * Gets the isInteractive property value. Indicates whether a sign-in is interactive.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("resourceId");
     }
     /**
-     * Gets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require a Microsoft Entra ID P2 license. Other licenses return the value hidden.
+     * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe. You must use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.The value none means that Microsoft Entra risk detection did not flag the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @return a {@link RiskDetail}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("riskDetail");
     }
     /**
-     * Gets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.  Supports $filter (eq).
+     * Gets the riskEventTypes property value. The riskEventTypes property
      * @return a {@link java.util.List<RiskEventType>}
      */
     @jakarta.annotation.Nullable
@@ -178,7 +178,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("riskEventTypes");
     }
     /**
-     * Gets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.  Supports $filter (eq, startsWith).
+     * Gets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic, or unknownFutureValue.  Supports $filter (eq, startsWith).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("riskLevelAggregated");
     }
     /**
-     * Gets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * Gets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("riskState");
     }
     /**
-     * Gets the status property value. Sign-in status. Includes the error code and description of the error (if there's a sign-in failure).  Supports $filter (eq) on errorCode property.
+     * Gets the status property value. Sign-in status. Includes the error code and description of the error (if a sign-in failure occurs).  Supports $filter (eq) on errorCode property.
      * @return a {@link SignInStatus}
      */
     @jakarta.annotation.Nullable
@@ -280,14 +280,14 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("appDisplayName", value);
     }
     /**
-     * Sets the appId property value. Unique GUID representing the app ID in the Microsoft Entra ID.  Supports $filter (eq).
+     * Sets the appId property value. Unique GUID that represents the app ID in the Microsoft Entra ID.  Supports $filter (eq).
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the appliedConditionalAccessPolicies property value. Provides a list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
+     * Sets the appliedConditionalAccessPolicies property value. Provides a list of conditional access policies that the corresponding sign-in activity triggers. Apps need more Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
      * @param value Value to set for the appliedConditionalAccessPolicies property.
      */
     public void setAppliedConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<AppliedConditionalAccessPolicy> value) {
@@ -308,7 +308,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("conditionalAccessStatus", value);
     }
     /**
-     * Sets the correlationId property value. The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity.  Supports $filter (eq).
+     * Sets the correlationId property value. The request ID sent from the client when the sign-in is initiated. Used to troubleshoot sign-in activity.  Supports $filter (eq).
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
@@ -336,7 +336,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("ipAddress", value);
     }
     /**
-     * Sets the isInteractive property value. Indicates if a sign-in is interactive or not.
+     * Sets the isInteractive property value. Indicates whether a sign-in is interactive.
      * @param value Value to set for the isInteractive property.
      */
     public void setIsInteractive(@jakarta.annotation.Nullable final Boolean value) {
@@ -364,21 +364,21 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("resourceId", value);
     }
     /**
-     * Sets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq).Note: Details for this property require a Microsoft Entra ID P2 license. Other licenses return the value hidden.
+     * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe. You must use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.The value none means that Microsoft Entra risk detection did not flag the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskDetail property.
      */
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
         this.backingStore.set("riskDetail", value);
     }
     /**
-     * Sets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.  Supports $filter (eq).
+     * Sets the riskEventTypes property value. The riskEventTypes property
      * @param value Value to set for the riskEventTypes property.
      */
     public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<RiskEventType> value) {
         this.backingStore.set("riskEventTypes", value);
     }
     /**
-     * Sets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.  Supports $filter (eq, startsWith).
+     * Sets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic, or unknownFutureValue.  Supports $filter (eq, startsWith).
      * @param value Value to set for the riskEventTypes_v2 property.
      */
     public void setRiskEventTypesV2(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -392,7 +392,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("riskLevelAggregated", value);
     }
     /**
-     * Sets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq).  Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelDuringSignIn property.
      */
     public void setRiskLevelDuringSignIn(@jakarta.annotation.Nullable final RiskLevel value) {
@@ -406,7 +406,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("riskState", value);
     }
     /**
-     * Sets the status property value. Sign-in status. Includes the error code and description of the error (if there's a sign-in failure).  Supports $filter (eq) on errorCode property.
+     * Sets the status property value. Sign-in status. Includes the error code and description of the error (if a sign-in failure occurs).  Supports $filter (eq) on errorCode property.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SignInStatus value) {

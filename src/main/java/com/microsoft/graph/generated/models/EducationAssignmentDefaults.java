@@ -63,7 +63,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
+     * Gets the notificationChannelUrl property value. Default Teams channel to which notifications are sent. Default value is null.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
         this.backingStore.set("dueTime", value);
     }
     /**
-     * Sets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
+     * Sets the notificationChannelUrl property value. Default Teams channel to which notifications are sent. Default value is null.
      * @param value Value to set for the notificationChannelUrl property.
      */
     public void setNotificationChannelUrl(@jakarta.annotation.Nullable final String value) {

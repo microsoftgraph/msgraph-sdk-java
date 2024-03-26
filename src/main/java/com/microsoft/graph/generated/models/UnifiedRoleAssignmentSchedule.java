@@ -25,7 +25,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         return new UnifiedRoleAssignmentSchedule();
     }
     /**
-     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
+     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
      * @return a {@link UnifiedRoleEligibilitySchedule}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         return this.backingStore.get("activatedUsing");
     }
     /**
-     * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
+     * Gets the assignmentType property value. The type of the assignment that can either be Assigned or Activated. Supports $filter (eq, ne).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         return deserializerMap;
     }
     /**
-     * Gets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
+     * Gets the memberType property value. How the assignment is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,21 +82,21 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         writer.writeObjectValue("scheduleInfo", this.getScheduleInfo());
     }
     /**
-     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
+     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
      * @param value Value to set for the activatedUsing property.
      */
     public void setActivatedUsing(@jakarta.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
         this.backingStore.set("activatedUsing", value);
     }
     /**
-     * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
+     * Sets the assignmentType property value. The type of the assignment that can either be Assigned or Activated. Supports $filter (eq, ne).
      * @param value Value to set for the assignmentType property.
      */
     public void setAssignmentType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("assignmentType", value);
     }
     /**
-     * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
+     * Sets the memberType property value. How the assignment is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
      */
     public void setMemberType(@jakarta.annotation.Nullable final String value) {

@@ -46,6 +46,24 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photo{?%24select}", rawUrl);
     }
     /**
+     * Delete navigation property photo for groups
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     */
+    public void delete() {
+        delete(null);
+    }
+    /**
+     * Delete navigation property photo for groups
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     */
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
      * The group's profile photo
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -91,6 +109,26 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ProfilePhoto::createFromDiscriminatorValue);
+    }
+    /**
+     * Delete navigation property photo for groups
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * Delete navigation property photo for groups
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}/photo", pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        return requestInfo;
     }
     /**
      * The group's profile photo
@@ -145,6 +183,12 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
     public PhotoRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PhotoRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * The group's profile photo

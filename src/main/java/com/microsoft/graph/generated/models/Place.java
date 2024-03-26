@@ -62,7 +62,7 @@ public class Place extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
+     * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude, and (optionally) altitude coordinates.
      * @return a {@link OutlookGeoCoordinates}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class Place extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
+     * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude, and (optionally) altitude coordinates.
      * @param value Value to set for the geoCoordinates property.
      */
     public void setGeoCoordinates(@jakarta.annotation.Nullable final OutlookGeoCoordinates value) {

@@ -26,7 +26,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return new AccessPackageResourceEnvironment();
     }
     /**
-     * Gets the connectionInfo property value. The connectionInfo property
+     * Gets the connectionInfo property value. Connection information of an environment used to connect to a resource.
      * @return a {@link ConnectionInfo}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
     /**
-     * Sets the connectionInfo property value. The connectionInfo property
+     * Sets the connectionInfo property value. Connection information of an environment used to connect to a resource.
      * @param value Value to set for the connectionInfo property.
      */
     public void setConnectionInfo(@jakarta.annotation.Nullable final ConnectionInfo value) {

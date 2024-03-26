@@ -44,7 +44,7 @@ public class Task extends Entity implements Parsable {
         return this.backingStore.get("category");
     }
     /**
-     * Gets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow will stop, and subsequent tasks will not run. Optional.
+     * Gets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class Task extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the executionSequence property value. An integer that states in what order the task will run in a workflow.Supports $orderby.
+     * Gets the executionSequence property value. An integer that states in what order the task runs in a workflow.Supports $orderby.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class Task extends Entity implements Parsable {
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks. Required.Supports $filter(eq, ne).
+     * Gets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see Configure the arguments for built-in Lifecycle Workflow tasks. Required.Supports $filter(eq, ne).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class Task extends Entity implements Parsable {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow will stop, and subsequent tasks will not run. Optional.
+     * Sets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
      * @param value Value to set for the continueOnError property.
      */
     public void setContinueOnError(@jakarta.annotation.Nullable final Boolean value) {
@@ -170,7 +170,7 @@ public class Task extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the executionSequence property value. An integer that states in what order the task will run in a workflow.Supports $orderby.
+     * Sets the executionSequence property value. An integer that states in what order the task runs in a workflow.Supports $orderby.
      * @param value Value to set for the executionSequence property.
      */
     public void setExecutionSequence(@jakarta.annotation.Nullable final Integer value) {
@@ -184,7 +184,7 @@ public class Task extends Entity implements Parsable {
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks. Required.Supports $filter(eq, ne).
+     * Sets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see Configure the arguments for built-in Lifecycle Workflow tasks. Required.Supports $filter(eq, ne).
      * @param value Value to set for the taskDefinitionId property.
      */
     public void setTaskDefinitionId(@jakarta.annotation.Nullable final String value) {

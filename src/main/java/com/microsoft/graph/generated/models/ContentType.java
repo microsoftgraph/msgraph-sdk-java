@@ -25,7 +25,7 @@ public class ContentType extends Entity implements Parsable {
         return new ContentType();
     }
     /**
-     * Gets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * Gets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type is applied to the lists in the enforced sites.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class ContentType extends Entity implements Parsable {
         return this.backingStore.get("columnPositions");
     }
     /**
-     * Gets the columns property value. The collection of column definitions for this contentType.
+     * Gets the columns property value. The collection of column definitions for this content type.
      * @return a {@link java.util.List<ColumnDefinition>}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class ContentType extends Entity implements Parsable {
         return this.backingStore.get("parentId");
     }
     /**
-     * Gets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
+     * Gets the propagateChanges property value. If true, any changes made to the content type are pushed to inherited content types and lists that implement the content type.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -232,7 +232,7 @@ public class ContentType extends Entity implements Parsable {
         writer.writeBooleanValue("sealed", this.getSealed());
     }
     /**
-     * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type is applied to the lists in the enforced sites.
      * @param value Value to set for the associatedHubsUrls property.
      */
     public void setAssociatedHubsUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -267,7 +267,7 @@ public class ContentType extends Entity implements Parsable {
         this.backingStore.set("columnPositions", value);
     }
     /**
-     * Sets the columns property value. The collection of column definitions for this contentType.
+     * Sets the columns property value. The collection of column definitions for this content type.
      * @param value Value to set for the columns property.
      */
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
@@ -344,7 +344,7 @@ public class ContentType extends Entity implements Parsable {
         this.backingStore.set("parentId", value);
     }
     /**
-     * Sets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
+     * Sets the propagateChanges property value. If true, any changes made to the content type are pushed to inherited content types and lists that implement the content type.
      * @param value Value to set for the propagateChanges property.
      */
     public void setPropagateChanges(@jakarta.annotation.Nullable final Boolean value) {

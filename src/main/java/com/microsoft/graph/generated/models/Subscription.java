@@ -34,7 +34,7 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("applicationId");
     }
     /**
-     * Gets the changeType property value. Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated or soft deleted.  Use deleted to receive notifications when user or group is permanently deleted.
+     * Gets the changeType property value. Required. Indicates the type of change in the subscribed resource that raises a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated, or soft deleted. Use deleted to receive notifications when user or group is permanently deleted.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("clientState");
     }
     /**
-     * Gets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
+     * Gets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("encryptionCertificateId");
     }
     /**
-     * Gets the expirationDateTime property value. Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below.
+     * Gets the expirationDateTime property value. Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see Subscription lifetime.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("lifecycleNotificationUrl");
     }
     /**
-     * Gets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.
+     * Gets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("notificationQueryOptions");
     }
     /**
-     * Gets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
+     * Gets the notificationUrl property value. Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property is included in the HTTP POST request when Microsoft Graph sends the change notifications.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("notificationUrl");
     }
     /**
-     * Gets the notificationUrlAppId property value. Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received.
+     * Gets the notificationUrlAppId property value. Optional. The app ID that the subscription service can use to generate the validation token. The value allows the client to validate the authenticity of the notification received.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("notificationUrlAppId");
     }
     /**
-     * Gets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+     * Gets the resource property value. Required. Specifies the resource that is monitored for changes. Don't include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class Subscription extends Entity implements Parsable {
         this.backingStore.set("applicationId", value);
     }
     /**
-     * Sets the changeType property value. Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated or soft deleted.  Use deleted to receive notifications when user or group is permanently deleted.
+     * Sets the changeType property value. Required. Indicates the type of change in the subscribed resource that raises a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated, or soft deleted. Use deleted to receive notifications when user or group is permanently deleted.
      * @param value Value to set for the changeType property.
      */
     public void setChangeType(@jakarta.annotation.Nullable final String value) {
@@ -204,7 +204,7 @@ public class Subscription extends Entity implements Parsable {
         this.backingStore.set("clientState", value);
     }
     /**
-     * Sets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
+     * Sets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.
      * @param value Value to set for the creatorId property.
      */
     public void setCreatorId(@jakarta.annotation.Nullable final String value) {
@@ -225,7 +225,7 @@ public class Subscription extends Entity implements Parsable {
         this.backingStore.set("encryptionCertificateId", value);
     }
     /**
-     * Sets the expirationDateTime property value. Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below.
+     * Sets the expirationDateTime property value. Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see Subscription lifetime.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -253,28 +253,28 @@ public class Subscription extends Entity implements Parsable {
         this.backingStore.set("lifecycleNotificationUrl", value);
     }
     /**
-     * Sets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.
+     * Sets the notificationQueryOptions property value. Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.
      * @param value Value to set for the notificationQueryOptions property.
      */
     public void setNotificationQueryOptions(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("notificationQueryOptions", value);
     }
     /**
-     * Sets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
+     * Sets the notificationUrl property value. Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property is included in the HTTP POST request when Microsoft Graph sends the change notifications.
      * @param value Value to set for the notificationUrl property.
      */
     public void setNotificationUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("notificationUrl", value);
     }
     /**
-     * Sets the notificationUrlAppId property value. Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received.
+     * Sets the notificationUrlAppId property value. Optional. The app ID that the subscription service can use to generate the validation token. The value allows the client to validate the authenticity of the notification received.
      * @param value Value to set for the notificationUrlAppId property.
      */
     public void setNotificationUrlAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("notificationUrlAppId", value);
     }
     /**
-     * Sets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+     * Sets the resource property value. Required. Specifies the resource that is monitored for changes. Don't include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final String value) {

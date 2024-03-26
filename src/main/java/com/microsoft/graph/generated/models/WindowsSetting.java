@@ -38,7 +38,7 @@ public class WindowsSetting extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the instances property value. The instances property
+     * Gets the instances property value. A collection of setting values for a given windowsSetting.
      * @return a {@link java.util.List<WindowsSettingInstance>}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class WindowsSetting extends Entity implements Parsable {
         return this.backingStore.get("instances");
     }
     /**
-     * Gets the payloadType property value. The payloadType property
+     * Gets the payloadType property value. The type of setting payloads contained in the instances navigation property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class WindowsSetting extends Entity implements Parsable {
         return this.backingStore.get("settingType");
     }
     /**
-     * Gets the windowsDeviceId property value. The windowsDeviceId property
+     * Gets the windowsDeviceId property value. A unique identifier for the device the setting might belong to if it is of the settingType backup.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,14 +82,14 @@ public class WindowsSetting extends Entity implements Parsable {
         writer.writeStringValue("windowsDeviceId", this.getWindowsDeviceId());
     }
     /**
-     * Sets the instances property value. The instances property
+     * Sets the instances property value. A collection of setting values for a given windowsSetting.
      * @param value Value to set for the instances property.
      */
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<WindowsSettingInstance> value) {
         this.backingStore.set("instances", value);
     }
     /**
-     * Sets the payloadType property value. The payloadType property
+     * Sets the payloadType property value. The type of setting payloads contained in the instances navigation property.
      * @param value Value to set for the payloadType property.
      */
     public void setPayloadType(@jakarta.annotation.Nullable final String value) {
@@ -103,7 +103,7 @@ public class WindowsSetting extends Entity implements Parsable {
         this.backingStore.set("settingType", value);
     }
     /**
-     * Sets the windowsDeviceId property value. The windowsDeviceId property
+     * Sets the windowsDeviceId property value. A unique identifier for the device the setting might belong to if it is of the settingType backup.
      * @param value Value to set for the windowsDeviceId property.
      */
     public void setWindowsDeviceId(@jakarta.annotation.Nullable final String value) {

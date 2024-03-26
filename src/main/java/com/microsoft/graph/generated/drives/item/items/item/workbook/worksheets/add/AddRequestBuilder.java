@@ -36,7 +36,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/add", rawUrl);
     }
     /**
-     * Adds a new worksheet to the workbook. The worksheet is added at the end of existing worksheets. If you wish to activate the newly added worksheet, call .activate() on it.
+     * Add a new worksheet to the workbook. The worksheet is added at the end of existing worksheets. If you want to activate the newly added worksheet, call .activate() on it.
      * @param body The request body
      * @return a {@link WorkbookWorksheet}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a new worksheet to the workbook. The worksheet is added at the end of existing worksheets. If you wish to activate the newly added worksheet, call .activate() on it.
+     * Add a new worksheet to the workbook. The worksheet is added at the end of existing worksheets. If you want to activate the newly added worksheet, call .activate() on it.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookWorksheet}
@@ -63,7 +63,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookWorksheet::createFromDiscriminatorValue);
     }
     /**
-     * Adds a new worksheet to the workbook. The worksheet is added at the end of existing worksheets. If you wish to activate the newly added worksheet, call .activate() on it.
+     * Add a new worksheet to the workbook. The worksheet is added at the end of existing worksheets. If you want to activate the newly added worksheet, call .activate() on it.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a new worksheet to the workbook. The worksheet is added at the end of existing worksheets. If you wish to activate the newly added worksheet, call .activate() on it.
+     * Add a new worksheet to the workbook. The worksheet is added at the end of existing worksheets. If you want to activate the newly added worksheet, call .activate() on it.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

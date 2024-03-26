@@ -82,7 +82,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Analytics about the view activities that took place in this site.
+     * Analytics about the view activities that took place on this site.
      * @return a {@link ItemAnalytics}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -91,7 +91,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Analytics about the view activities that took place in this site.
+     * Analytics about the view activities that took place on this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemAnalytics}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -149,7 +149,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Analytics about the view activities that took place in this site.
+     * Analytics about the view activities that took place on this site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Analytics about the view activities that took place in this site.
+     * Analytics about the view activities that took place on this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -209,7 +209,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Analytics about the view activities that took place in this site.
+     * Analytics about the view activities that took place on this site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

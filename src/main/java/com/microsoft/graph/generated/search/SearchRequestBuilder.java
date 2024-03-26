@@ -2,6 +2,9 @@ package com.microsoft.graph.search;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SearchEntity;
+import com.microsoft.graph.search.acronyms.AcronymsRequestBuilder;
+import com.microsoft.graph.search.bookmarks.BookmarksRequestBuilder;
+import com.microsoft.graph.search.qnas.QnasRequestBuilder;
 import com.microsoft.graph.search.query.QueryRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -21,6 +24,30 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SearchRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the acronyms property of the microsoft.graph.searchEntity entity.
+     * @return a {@link AcronymsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AcronymsRequestBuilder acronyms() {
+        return new AcronymsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the bookmarks property of the microsoft.graph.searchEntity entity.
+     * @return a {@link BookmarksRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BookmarksRequestBuilder bookmarks() {
+        return new BookmarksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the qnas property of the microsoft.graph.searchEntity entity.
+     * @return a {@link QnasRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public QnasRequestBuilder qnas() {
+        return new QnasRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the query method.
      * @return a {@link QueryRequestBuilder}

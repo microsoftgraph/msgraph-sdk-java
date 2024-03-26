@@ -32,8 +32,17 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("stream", (n) -> { this.setStream(n.getObjectValue(Stream::createFromDiscriminatorValue)); });
         deserializerMap.put("userAccount", (n) -> { this.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the stream property value. The stream property
+     * @return a {@link Stream}
+     */
+    @jakarta.annotation.Nullable
+    public Stream getStream() {
+        return this.backingStore.get("stream");
     }
     /**
      * Gets the userAccount property value. The user account details.
@@ -50,7 +59,15 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("stream", this.getStream());
         writer.writeObjectValue("userAccount", this.getUserAccount());
+    }
+    /**
+     * Sets the stream property value. The stream property
+     * @param value Value to set for the stream property.
+     */
+    public void setStream(@jakarta.annotation.Nullable final Stream value) {
+        this.backingStore.set("stream", value);
     }
     /**
      * Sets the userAccount property value. The user account details.

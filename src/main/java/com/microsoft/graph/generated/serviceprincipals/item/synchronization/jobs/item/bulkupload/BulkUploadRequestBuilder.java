@@ -64,7 +64,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get bulkUpload from servicePrincipals
+     * The bulk upload operation for the job.
      * @return a {@link BulkUpload}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get bulkUpload from servicePrincipals
+     * The bulk upload operation for the job.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BulkUpload}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get bulkUpload from servicePrincipals
+     * The bulk upload operation for the job.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get bulkUpload from servicePrincipals
+     * The bulk upload operation for the job.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get bulkUpload from servicePrincipals
+     * The bulk upload operation for the job.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

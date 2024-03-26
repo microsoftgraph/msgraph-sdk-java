@@ -32,6 +32,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fullResourceName", (n) -> { this.setFullResourceName(n.getStringValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
         deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(GoogleCloudLocationType::forValue)); });
         deserializerMap.put("projectId", (n) -> { this.setProjectId(n.getStringValue()); });
@@ -39,6 +40,14 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
         deserializerMap.put("resourceName", (n) -> { this.setResourceName(n.getStringValue()); });
         deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the fullResourceName property value. The fullResourceName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getFullResourceName() {
+        return this.backingStore.get("fullResourceName");
     }
     /**
      * Gets the location property value. The zone or region where the resource is located.
@@ -95,12 +104,20 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("fullResourceName", this.getFullResourceName());
         writer.writeStringValue("location", this.getLocation());
         writer.writeEnumValue("locationType", this.getLocationType());
         writer.writeStringValue("projectId", this.getProjectId());
         writer.writeLongValue("projectNumber", this.getProjectNumber());
         writer.writeStringValue("resourceName", this.getResourceName());
         writer.writeStringValue("resourceType", this.getResourceType());
+    }
+    /**
+     * Sets the fullResourceName property value. The fullResourceName property
+     * @param value Value to set for the fullResourceName property.
+     */
+    public void setFullResourceName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("fullResourceName", value);
     }
     /**
      * Sets the location property value. The zone or region where the resource is located.

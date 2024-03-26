@@ -4,15 +4,15 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Possible values for the file format of a report
+ * Possible values for the file format of a report.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementReportFileFormat implements ValuedEnum {
-    /** CSV Format */
+    /** CSV Format. */
     Csv("csv"),
-    /** PDF Format */
+    /** PDF Format (Deprecate later). */
     Pdf("pdf"),
-    /** JSON Format */
+    /** JSON Format. */
     Json("json"),
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");

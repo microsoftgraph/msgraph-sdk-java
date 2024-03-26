@@ -73,7 +73,6 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("appStoreUrl", this.getAppStoreUrl());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
-        writer.writeStringValue("packageId", this.getPackageId());
     }
     /**
      * Sets the appStoreUrl property value. The Android app store URL.

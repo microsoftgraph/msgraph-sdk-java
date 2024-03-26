@@ -26,7 +26,7 @@ public class WindowsSettingInstance extends Entity implements Parsable {
         return new WindowsSettingInstance();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Set by the server. Represents the dateTime in UTC when the object was created on the server.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class WindowsSettingInstance extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. Set by the server. The object expires at the specified dateTime in UTC, making it unavailable after that time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class WindowsSettingInstance extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Set by the server if not provided in the request from the Windows client device. Refers to the user's Windows device that modified the object at the specified dateTime in UTC.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class WindowsSettingInstance extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the payload property value. The payload property
+     * Gets the payload property value. Base64-encoded JSON setting value.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class WindowsSettingInstance extends Entity implements Parsable {
         writer.writeStringValue("payload", this.getPayload());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Set by the server. Represents the dateTime in UTC when the object was created on the server.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. Set by the server. The object expires at the specified dateTime in UTC, making it unavailable after that time.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Set by the server if not provided in the request from the Windows client device. Refers to the user's Windows device that modified the object at the specified dateTime in UTC.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the payload property value. The payload property
+     * Sets the payload property value. Base64-encoded JSON setting value.
      * @param value Value to set for the payload property.
      */
     public void setPayload(@jakarta.annotation.Nullable final String value) {

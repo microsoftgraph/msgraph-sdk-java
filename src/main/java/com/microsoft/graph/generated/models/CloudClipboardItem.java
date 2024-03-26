@@ -26,7 +26,7 @@ public class CloudClipboardItem extends Entity implements Parsable {
         return new CloudClipboardItem();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class CloudClipboardItem extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expires and after that the object is no longer available. The default and also maximum TTL is 12 hours after the creation, but it might change for performance optimization.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class CloudClipboardItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Set by the server if not provided in the client's request. DateTime in UTC when the object was modified by the client.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class CloudClipboardItem extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the payloads property value. The payloads property
+     * Gets the payloads property value. A cloudClipboardItem can have multiple cloudClipboardItemPayload objects in the payloads. A window can place more than one clipboard object on the clipboard. Each one represents the same information in a different clipboard format.
      * @return a {@link java.util.List<CloudClipboardItemPayload>}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class CloudClipboardItem extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("payloads", this.getPayloads());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expires and after that the object is no longer available. The default and also maximum TTL is 12 hours after the creation, but it might change for performance optimization.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Set by the server if not provided in the client's request. DateTime in UTC when the object was modified by the client.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the payloads property value. The payloads property
+     * Sets the payloads property value. A cloudClipboardItem can have multiple cloudClipboardItemPayload objects in the payloads. A window can place more than one clipboard object on the clipboard. Each one represents the same information in a different clipboard format.
      * @param value Value to set for the payloads property.
      */
     public void setPayloads(@jakarta.annotation.Nullable final java.util.List<CloudClipboardItemPayload> value) {

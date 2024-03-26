@@ -136,7 +136,7 @@ public class Room extends Place implements Parsable {
         return this.backingStore.get("nickname");
     }
     /**
-     * Gets the tags property value. Specifies additional features of the room, for example, details like the type of view or furniture type.
+     * Gets the tags property value. Specifies other features of the room, for example, details like the type of view or furniture type.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -250,7 +250,7 @@ public class Room extends Place implements Parsable {
         this.backingStore.set("nickname", value);
     }
     /**
-     * Sets the tags property value. Specifies additional features of the room, for example, details like the type of view or furniture type.
+     * Sets the tags property value. Specifies other features of the room, for example, details like the type of view or furniture type.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {

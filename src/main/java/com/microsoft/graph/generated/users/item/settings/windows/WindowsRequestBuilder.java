@@ -60,19 +60,21 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/settings/windows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get windows from users
+     * Get a list of windowsSetting objects and their properties for the signed in user.
      * @return a {@link WindowsSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/usersettings-list-windows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsSettingCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get windows from users
+     * Get a list of windowsSetting objects and their properties for the signed in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/usersettings-list-windows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsSettingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsSetting::createFromDiscriminatorValue);
     }
     /**
-     * Get windows from users
+     * Get a list of windowsSetting objects and their properties for the signed in user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get windows from users
+     * Get a list of windowsSetting objects and their properties for the signed in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         return new WindowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get windows from users
+     * Get a list of windowsSetting objects and their properties for the signed in user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

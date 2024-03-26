@@ -213,14 +213,12 @@ public class MobileApp extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeCollectionOfObjectValues("categories", this.getCategories());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("developer", this.getDeveloper());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("informationUrl", this.getInformationUrl());
         writer.writeBooleanValue("isFeatured", this.getIsFeatured());
         writer.writeObjectValue("largeIcon", this.getLargeIcon());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeStringValue("owner", this.getOwner());
         writer.writeStringValue("privacyInformationUrl", this.getPrivacyInformationUrl());

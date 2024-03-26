@@ -35,7 +35,7 @@ public class CloudClipboardRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the items property value. The items property
+     * Gets the items property value. Represents a collection of Cloud Clipboard items.
      * @return a {@link java.util.List<CloudClipboardItem>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class CloudClipboardRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("items", this.getItems());
     }
     /**
-     * Sets the items property value. The items property
+     * Sets the items property value. Represents a collection of Cloud Clipboard items.
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<CloudClipboardItem> value) {

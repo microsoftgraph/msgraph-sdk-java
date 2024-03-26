@@ -51,7 +51,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("ignoreVersionDetection");
     }
     /**
-     * Gets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image)
+     * Gets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image). This collection can contain a maximum of 500 elements.
      * @return a {@link java.util.List<MacOSIncludedApp>}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class MacOSDmgApp extends MobileLobApp implements Parsable {
         this.backingStore.set("ignoreVersionDetection", value);
     }
     /**
-     * Sets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image)
+     * Sets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the includedApps property.
      */
     public void setIncludedApps(@jakarta.annotation.Nullable final java.util.List<MacOSIncludedApp> value) {
