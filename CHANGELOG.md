@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [6.5.1] - 2024-03-29
+
+### Changed
+
+- Fixes a misalignment issue with kiota dependencies.
+
 ## [6.5.0] - 2024-03-26
 
 ### Added
