@@ -7,6 +7,7 @@ import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
+import com.microsoft.graph.security.labels.LabelsRequestBuilder;
 import com.microsoft.graph.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
@@ -71,6 +72,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public IncidentsRequestBuilder incidents() {
         return new IncidentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the labels property of the microsoft.graph.security entity.
+     * @return a {@link LabelsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LabelsRequestBuilder labels() {
+        return new LabelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the runHuntingQuery method.

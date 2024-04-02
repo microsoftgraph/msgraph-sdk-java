@@ -81,7 +81,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookCategory::createFromDiscriminatorValue);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName property once you have created the category.
      * @param body The request body
      * @return a {@link OutlookCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -92,7 +92,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName property once you have created the category.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookCategory}
@@ -148,7 +148,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName property once you have created the category.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName propertyonce you have created the category.
+     * Update the writable property, color, of the specified outlookCategory object. You can't modify the displayName property once you have created the category.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -1,6 +1,7 @@
 package com.microsoft.graph.invitations.item;
 
 import com.microsoft.graph.invitations.item.inviteduser.InvitedUserRequestBuilder;
+import com.microsoft.graph.invitations.item.invitedusersponsors.InvitedUserSponsorsRequestBuilder;
 import com.microsoft.graph.models.Invitation;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +29,14 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public InvitedUserRequestBuilder invitedUser() {
         return new InvitedUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the invitedUserSponsors property of the microsoft.graph.invitation entity.
+     * @return a {@link InvitedUserSponsorsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public InvitedUserSponsorsRequestBuilder invitedUserSponsors() {
+        return new InvitedUserSponsorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link InvitationItemRequestBuilder} and sets the default values.
