@@ -17,7 +17,7 @@ jobs:
           distribution: 'temurin'
           java-version: 21
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3.2.0
+        uses: android-actions/setup-android@v3.2.1
       - name: Add execution right to the script
         run: chmod +x gradlew
         working-directory: ./android
