@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:6.5.0'
+    implementation 'com.microsoft.graph:microsoft-graph:6.6.0'
     // This dependency is only needed if you are using a TokenCredential object for authentication
     implementation 'com.azure:azure-identity:1.11.0'
 }
@@ -35,7 +35,7 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>6.5.0</version>
+  <version>6.6.0</version>
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using a TokenCredential object for authentication -->
@@ -116,6 +116,7 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
+
 
 
 
