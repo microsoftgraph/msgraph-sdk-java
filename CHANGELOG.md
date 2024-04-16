@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [6.6.0] - 2024-04-16
+
+### Added
+
+- Weekly generated v1.0 models and request builders using Kiota
+
 ## [6.5.1] - 2024-03-29
 
 ### Changed

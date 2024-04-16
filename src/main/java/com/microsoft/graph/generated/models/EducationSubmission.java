@@ -114,7 +114,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("returnedDateTime");
     }
     /**
-     * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
+     * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reassigned.
      * @return a {@link EducationSubmissionStatus}
      */
     @jakarta.annotation.Nullable
@@ -238,7 +238,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this.backingStore.set("returnedDateTime", value);
     }
     /**
-     * Sets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
+     * Sets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reassigned.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationSubmissionStatus value) {

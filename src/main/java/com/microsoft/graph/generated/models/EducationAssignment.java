@@ -215,7 +215,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. Moment when the assignment was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the lastModifiedDateTime property value. The date and time on which the assignment was modified. A student submission doesn't modify the assignment; only teachers can update assignments. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -446,7 +446,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Moment when the assignment was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the lastModifiedDateTime property value. The date and time on which the assignment was modified. A student submission doesn't modify the assignment; only teachers can update assignments. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

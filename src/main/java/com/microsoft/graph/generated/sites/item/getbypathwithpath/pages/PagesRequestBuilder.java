@@ -38,19 +38,21 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')/pages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get pages from sites
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @return a {@link BaseSitePageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BaseSitePageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get pages from sites
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BaseSitePageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BaseSitePageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,21 +62,23 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BaseSitePageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to pages for sites
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @return a {@link BaseSitePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sitepage-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BaseSitePage post(@jakarta.annotation.Nonnull final BaseSitePage body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to pages for sites
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BaseSitePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sitepage-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BaseSitePage post(@jakarta.annotation.Nonnull final BaseSitePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -85,7 +89,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BaseSitePage::createFromDiscriminatorValue);
     }
     /**
-     * Get pages from sites
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +97,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get pages from sites
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -105,7 +109,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to pages for sites
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -114,7 +118,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to pages for sites
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -122,7 +126,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BaseSitePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')/pages", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -139,7 +143,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return new PagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get pages from sites
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

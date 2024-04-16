@@ -42,6 +42,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("countryLetterCode", (n) -> { this.setCountryLetterCode(n.getStringValue()); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(GeoLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("stream", (n) -> { this.setStream(n.getObjectValue(Stream::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -52,6 +53,14 @@ public class IpEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nullable
     public String getIpAddress() {
         return this.backingStore.get("ipAddress");
+    }
+    /**
+     * Gets the location property value. The location property
+     * @return a {@link GeoLocation}
+     */
+    @jakarta.annotation.Nullable
+    public GeoLocation getLocation() {
+        return this.backingStore.get("location");
     }
     /**
      * Gets the stream property value. The stream property
@@ -70,6 +79,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("countryLetterCode", this.getCountryLetterCode());
         writer.writeStringValue("ipAddress", this.getIpAddress());
+        writer.writeObjectValue("location", this.getLocation());
         writer.writeObjectValue("stream", this.getStream());
     }
     /**
@@ -85,6 +95,13 @@ public class IpEvidence extends AlertEvidence implements Parsable {
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ipAddress", value);
+    }
+    /**
+     * Sets the location property value. The location property
+     * @param value Value to set for the location property.
+     */
+    public void setLocation(@jakarta.annotation.Nullable final GeoLocation value) {
+        this.backingStore.set("location", value);
     }
     /**
      * Sets the stream property value. The stream property

@@ -45,7 +45,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the pageLayout property value. The pageLayout property
+     * Gets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
      * @return a {@link PageLayoutType}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
         return this.backingStore.get("pageLayout");
     }
     /**
-     * Gets the publishingState property value. The publishingState property
+     * Gets the publishingState property value. The publishing status and the MM.mm version of the page.
      * @return a {@link PublicationFacet}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
         return this.backingStore.get("publishingState");
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Title of the sitePage.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,21 +80,21 @@ public class BaseSitePage extends BaseItem implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the pageLayout property value. The pageLayout property
+     * Sets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
      * @param value Value to set for the pageLayout property.
      */
     public void setPageLayout(@jakarta.annotation.Nullable final PageLayoutType value) {
         this.backingStore.set("pageLayout", value);
     }
     /**
-     * Sets the publishingState property value. The publishingState property
+     * Sets the publishingState property value. The publishing status and the MM.mm version of the page.
      * @param value Value to set for the publishingState property.
      */
     public void setPublishingState(@jakarta.annotation.Nullable final PublicationFacet value) {
         this.backingStore.set("publishingState", value);
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Title of the sitePage.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

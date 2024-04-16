@@ -7,6 +7,7 @@ import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
+import com.microsoft.graph.security.labels.LabelsRequestBuilder;
 import com.microsoft.graph.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
@@ -71,6 +72,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public IncidentsRequestBuilder incidents() {
         return new IncidentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the labels property of the microsoft.graph.security entity.
+     * @return a {@link LabelsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LabelsRequestBuilder labels() {
+        return new LabelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the runHuntingQuery method.
@@ -229,7 +238,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Security body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

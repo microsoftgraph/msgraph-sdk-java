@@ -28,12 +28,21 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
         return new ResetPasscodeActionResult();
     }
     /**
+     * Gets the errorCode property value. RotateBitLockerKeys action error code. Valid values 0 to 2147483647
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getErrorCode() {
+        return this.backingStore.get("errorCode");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getIntegerValue()); });
         deserializerMap.put("passcode", (n) -> { this.setPasscode(n.getStringValue()); });
         return deserializerMap;
     }
@@ -52,7 +61,15 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeIntegerValue("errorCode", this.getErrorCode());
         writer.writeStringValue("passcode", this.getPasscode());
+    }
+    /**
+     * Sets the errorCode property value. RotateBitLockerKeys action error code. Valid values 0 to 2147483647
+     * @param value Value to set for the errorCode property.
+     */
+    public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the passcode property value. Newly generated passcode for the device

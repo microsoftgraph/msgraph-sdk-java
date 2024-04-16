@@ -68,7 +68,7 @@ public class MetaDataKeyStringPair implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. Key of the meta data.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class MetaDataKeyStringPair implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value of the meta data.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class MetaDataKeyStringPair implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. Key of the meta data.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class MetaDataKeyStringPair implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value of the meta data.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

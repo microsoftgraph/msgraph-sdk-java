@@ -371,7 +371,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("servicePrincipalLockConfiguration");
     }
     /**
-     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you might need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
+     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg (default), AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you might need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -427,7 +427,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("tokenLifetimePolicies");
     }
     /**
-     * Gets the uniqueName property value. The uniqueName property
+     * Gets the uniqueName property value. The unique identifier that can be assigned to an application and used as an alternate key. Immutable. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -757,7 +757,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("servicePrincipalLockConfiguration", value);
     }
     /**
-     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you might need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
+     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg (default), AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you might need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
      * @param value Value to set for the signInAudience property.
      */
     public void setSignInAudience(@jakarta.annotation.Nullable final String value) {
@@ -806,7 +806,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("tokenLifetimePolicies", value);
     }
     /**
-     * Sets the uniqueName property value. The uniqueName property
+     * Sets the uniqueName property value. The unique identifier that can be assigned to an application and used as an alternate key. Immutable. Read-only.
      * @param value Value to set for the uniqueName property.
      */
     public void setUniqueName(@jakarta.annotation.Nullable final String value) {

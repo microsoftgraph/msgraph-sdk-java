@@ -81,23 +81,23 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CustomCalloutExtension::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @return a {@link CustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomCalloutExtension patch(@jakarta.annotation.Nonnull final CustomCalloutExtension body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomCalloutExtension patch(@jakarta.annotation.Nonnull final CustomCalloutExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog%2Did}/customWorkflowExtensions/{customCalloutExtension%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -148,7 +148,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +165,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CustomCalloutExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog%2Did}/customWorkflowExtensions/{customCalloutExtension%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

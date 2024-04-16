@@ -61,8 +61,9 @@ public class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, Bac
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
+        deserializerMap.put("timespan", (n) -> { this.setTimespan(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -74,12 +75,21 @@ public class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, Bac
         return this.backingStore.get("query");
     }
     /**
+     * Gets the timespan property value. The timespan property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getTimespan() {
+        return this.backingStore.get("timespan");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("query", this.getQuery());
+        writer.writeStringValue("timespan", this.getTimespan());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +113,12 @@ public class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, Bac
      */
     public void setQuery(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("query", value);
+    }
+    /**
+     * Sets the timespan property value. The timespan property
+     * @param value Value to set for the timespan property.
+     */
+    public void setTimespan(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("timespan", value);
     }
 }

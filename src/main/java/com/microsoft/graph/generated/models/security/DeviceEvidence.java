@@ -63,6 +63,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(DeviceHealthStatus::forValue)); });
         deserializerMap.put("ipInterfaces", (n) -> { this.setIpInterfaces(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("lastExternalIpAddress", (n) -> { this.setLastExternalIpAddress(n.getStringValue()); });
+        deserializerMap.put("lastIpAddress", (n) -> { this.setLastIpAddress(n.getStringValue()); });
         deserializerMap.put("loggedOnUsers", (n) -> { this.setLoggedOnUsers(n.getCollectionOfObjectValues(LoggedOnUser::createFromDiscriminatorValue)); });
         deserializerMap.put("mdeDeviceId", (n) -> { this.setMdeDeviceId(n.getStringValue()); });
         deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(OnboardingStatus::forValue)); });
@@ -98,6 +100,22 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<String> getIpInterfaces() {
         return this.backingStore.get("ipInterfaces");
+    }
+    /**
+     * Gets the lastExternalIpAddress property value. The lastExternalIpAddress property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLastExternalIpAddress() {
+        return this.backingStore.get("lastExternalIpAddress");
+    }
+    /**
+     * Gets the lastIpAddress property value. The lastIpAddress property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLastIpAddress() {
+        return this.backingStore.get("lastIpAddress");
     }
     /**
      * Gets the loggedOnUsers property value. Users that were logged on the machine during the time of the alert.
@@ -192,6 +210,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
         writer.writeCollectionOfPrimitiveValues("ipInterfaces", this.getIpInterfaces());
+        writer.writeStringValue("lastExternalIpAddress", this.getLastExternalIpAddress());
+        writer.writeStringValue("lastIpAddress", this.getLastIpAddress());
         writer.writeCollectionOfObjectValues("loggedOnUsers", this.getLoggedOnUsers());
         writer.writeStringValue("mdeDeviceId", this.getMdeDeviceId());
         writer.writeEnumValue("onboardingStatus", this.getOnboardingStatus());
@@ -244,6 +264,20 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     public void setIpInterfaces(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("ipInterfaces", value);
+    }
+    /**
+     * Sets the lastExternalIpAddress property value. The lastExternalIpAddress property
+     * @param value Value to set for the lastExternalIpAddress property.
+     */
+    public void setLastExternalIpAddress(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("lastExternalIpAddress", value);
+    }
+    /**
+     * Sets the lastIpAddress property value. The lastIpAddress property
+     * @param value Value to set for the lastIpAddress property.
+     */
+    public void setLastIpAddress(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("lastIpAddress", value);
     }
     /**
      * Sets the loggedOnUsers property value. Users that were logged on the machine during the time of the alert.

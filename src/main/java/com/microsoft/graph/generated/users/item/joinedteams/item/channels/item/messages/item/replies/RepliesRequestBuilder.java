@@ -93,23 +93,23 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ChatMessageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @return a {@link ChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessage post(@jakarta.annotation.Nonnull final ChatMessage body) {
         return post(body, null);
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessage post(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +140,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +149,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -157,7 +157,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/channels/{channel%2Did}/messages/{chatMessage%2Did}/replies", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -36,7 +36,7 @@ public class CanvasLayout extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the horizontalSections property value. The horizontalSections property
+     * Gets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
      * @return a {@link java.util.List<HorizontalSection>}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class CanvasLayout extends Entity implements Parsable {
         return this.backingStore.get("horizontalSections");
     }
     /**
-     * Gets the verticalSection property value. The verticalSection property
+     * Gets the verticalSection property value. Vertical section on the SharePoint page.
      * @return a {@link VerticalSection}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class CanvasLayout extends Entity implements Parsable {
         writer.writeObjectValue("verticalSection", this.getVerticalSection());
     }
     /**
-     * Sets the horizontalSections property value. The horizontalSections property
+     * Sets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
      * @param value Value to set for the horizontalSections property.
      */
     public void setHorizontalSections(@jakarta.annotation.Nullable final java.util.List<HorizontalSection> value) {
         this.backingStore.set("horizontalSections", value);
     }
     /**
-     * Sets the verticalSection property value. The verticalSection property
+     * Sets the verticalSection property value. Vertical section on the SharePoint page.
      * @param value Value to set for the verticalSection property.
      */
     public void setVerticalSection(@jakarta.annotation.Nullable final VerticalSection value) {

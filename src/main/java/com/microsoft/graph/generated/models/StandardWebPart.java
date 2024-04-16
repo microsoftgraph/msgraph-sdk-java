@@ -26,7 +26,7 @@ public class StandardWebPart extends WebPart implements Parsable {
         return new StandardWebPart();
     }
     /**
-     * Gets the containerTextWebPartId property value. The containerTextWebPartId property
+     * Gets the containerTextWebPartId property value. The instance identifier of the container text webPart. It only works for inline standard webPart in rich text webParts.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class StandardWebPart extends WebPart implements Parsable {
         return this.backingStore.get("containerTextWebPartId");
     }
     /**
-     * Gets the data property value. The data property
+     * Gets the data property value. Data of the webPart.
      * @return a {@link WebPartData}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class StandardWebPart extends WebPart implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the webPartType property value. The webPartType property
+     * Gets the webPartType property value. A Guid that indicates the webPart type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class StandardWebPart extends WebPart implements Parsable {
         writer.writeStringValue("webPartType", this.getWebPartType());
     }
     /**
-     * Sets the containerTextWebPartId property value. The containerTextWebPartId property
+     * Sets the containerTextWebPartId property value. The instance identifier of the container text webPart. It only works for inline standard webPart in rich text webParts.
      * @param value Value to set for the containerTextWebPartId property.
      */
     public void setContainerTextWebPartId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("containerTextWebPartId", value);
     }
     /**
-     * Sets the data property value. The data property
+     * Sets the data property value. Data of the webPart.
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final WebPartData value) {
         this.backingStore.set("data", value);
     }
     /**
-     * Sets the webPartType property value. The webPartType property
+     * Sets the webPartType property value. A Guid that indicates the webPart type.
      * @param value Value to set for the webPartType property.
      */
     public void setWebPartType(@jakarta.annotation.Nullable final String value) {

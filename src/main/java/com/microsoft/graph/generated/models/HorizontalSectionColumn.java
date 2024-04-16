@@ -36,7 +36,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the webparts property value. The webparts property
+     * Gets the webparts property value. The collection of WebParts in this column.
      * @return a {@link java.util.List<WebPart>}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
         return this.backingStore.get("webparts");
     }
     /**
-     * Gets the width property value. The width property
+     * Gets the width property value. Width of the column. A horizontal section is divided into 12 grids. A column should have a value of 1-12 to represent its range spans. For example, there can be two columns both have a width of 6 in a section.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
         writer.writeIntegerValue("width", this.getWidth());
     }
     /**
-     * Sets the webparts property value. The webparts property
+     * Sets the webparts property value. The collection of WebParts in this column.
      * @param value Value to set for the webparts property.
      */
     public void setWebparts(@jakarta.annotation.Nullable final java.util.List<WebPart> value) {
         this.backingStore.set("webparts", value);
     }
     /**
-     * Sets the width property value. The width property
+     * Sets the width property value. Width of the column. A horizontal section is divided into 12 grids. A column should have a value of 1-12 to represent its range spans. For example, there can be two columns both have a width of 6 in a section.
      * @param value Value to set for the width property.
      */
     public void setWidth(@jakarta.annotation.Nullable final Integer value) {

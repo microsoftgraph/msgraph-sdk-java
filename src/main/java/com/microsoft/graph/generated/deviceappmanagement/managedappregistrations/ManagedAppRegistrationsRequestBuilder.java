@@ -69,21 +69,21 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppRegistrations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the iosManagedAppRegistration objects.
+     * List properties and relationships of the androidManagedAppRegistration objects.
      * @return a {@link ManagedAppRegistrationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppRegistrationCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the iosManagedAppRegistration objects.
+     * List properties and relationships of the androidManagedAppRegistration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedAppRegistrationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppRegistrationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedAppRegistration::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the iosManagedAppRegistration objects.
+     * List properties and relationships of the androidManagedAppRegistration objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +128,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the iosManagedAppRegistration objects.
+     * List properties and relationships of the androidManagedAppRegistration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedAppRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/managedAppRegistrations", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -174,7 +174,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         return new ManagedAppRegistrationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the iosManagedAppRegistration objects.
+     * List properties and relationships of the androidManagedAppRegistration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

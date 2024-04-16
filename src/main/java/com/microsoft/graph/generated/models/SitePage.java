@@ -25,7 +25,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return new SitePage();
     }
     /**
-     * Gets the canvasLayout property value. The canvasLayout property
+     * Gets the canvasLayout property value. Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
      * @return a {@link CanvasLayout}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the promotionKind property value. The promotionKind property
+     * Gets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
      * @return a {@link PagePromotionType}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return this.backingStore.get("promotionKind");
     }
     /**
-     * Gets the reactions property value. The reactions property
+     * Gets the reactions property value. Reactions information for the page.
      * @return a {@link ReactionsFacet}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return this.backingStore.get("reactions");
     }
     /**
-     * Gets the showComments property value. The showComments property
+     * Gets the showComments property value. Determines whether or not to show comments at the bottom of the page.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return this.backingStore.get("showComments");
     }
     /**
-     * Gets the showRecommendedPages property value. The showRecommendedPages property
+     * Gets the showRecommendedPages property value. Determines whether or not to show recommended pages at the bottom of the page.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return this.backingStore.get("showRecommendedPages");
     }
     /**
-     * Gets the thumbnailWebUrl property value. The thumbnailWebUrl property
+     * Gets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return this.backingStore.get("thumbnailWebUrl");
     }
     /**
-     * Gets the titleArea property value. The titleArea property
+     * Gets the titleArea property value. Title area on the SharePoint page.
      * @return a {@link TitleArea}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return this.backingStore.get("titleArea");
     }
     /**
-     * Gets the webParts property value. The webParts property
+     * Gets the webParts property value. Collection of webparts on the SharePoint page.
      * @return a {@link java.util.List<WebPart>}
      */
     @jakarta.annotation.Nullable
@@ -122,56 +122,56 @@ public class SitePage extends BaseSitePage implements Parsable {
         writer.writeCollectionOfObjectValues("webParts", this.getWebParts());
     }
     /**
-     * Sets the canvasLayout property value. The canvasLayout property
+     * Sets the canvasLayout property value. Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
      * @param value Value to set for the canvasLayout property.
      */
     public void setCanvasLayout(@jakarta.annotation.Nullable final CanvasLayout value) {
         this.backingStore.set("canvasLayout", value);
     }
     /**
-     * Sets the promotionKind property value. The promotionKind property
+     * Sets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
      * @param value Value to set for the promotionKind property.
      */
     public void setPromotionKind(@jakarta.annotation.Nullable final PagePromotionType value) {
         this.backingStore.set("promotionKind", value);
     }
     /**
-     * Sets the reactions property value. The reactions property
+     * Sets the reactions property value. Reactions information for the page.
      * @param value Value to set for the reactions property.
      */
     public void setReactions(@jakarta.annotation.Nullable final ReactionsFacet value) {
         this.backingStore.set("reactions", value);
     }
     /**
-     * Sets the showComments property value. The showComments property
+     * Sets the showComments property value. Determines whether or not to show comments at the bottom of the page.
      * @param value Value to set for the showComments property.
      */
     public void setShowComments(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("showComments", value);
     }
     /**
-     * Sets the showRecommendedPages property value. The showRecommendedPages property
+     * Sets the showRecommendedPages property value. Determines whether or not to show recommended pages at the bottom of the page.
      * @param value Value to set for the showRecommendedPages property.
      */
     public void setShowRecommendedPages(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("showRecommendedPages", value);
     }
     /**
-     * Sets the thumbnailWebUrl property value. The thumbnailWebUrl property
+     * Sets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
      * @param value Value to set for the thumbnailWebUrl property.
      */
     public void setThumbnailWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("thumbnailWebUrl", value);
     }
     /**
-     * Sets the titleArea property value. The titleArea property
+     * Sets the titleArea property value. Title area on the SharePoint page.
      * @param value Value to set for the titleArea property.
      */
     public void setTitleArea(@jakarta.annotation.Nullable final TitleArea value) {
         this.backingStore.set("titleArea", value);
     }
     /**
-     * Sets the webParts property value. The webParts property
+     * Sets the webParts property value. Collection of webparts on the SharePoint page.
      * @param value Value to set for the webParts property.
      */
     public void setWebParts(@jakarta.annotation.Nullable final java.util.List<WebPart> value) {

@@ -197,6 +197,14 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("enrolledDateTime");
     }
     /**
+     * Gets the enrollmentProfileName property value. Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getEnrollmentProfileName() {
+        return this.backingStore.get("enrollmentProfileName");
+    }
+    /**
      * Gets the ethernetMacAddress property value. Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a {@link String}
      */
@@ -256,6 +264,7 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("easDeviceId", (n) -> { this.setEasDeviceId(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("enrolledDateTime", (n) -> { this.setEnrolledDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("enrollmentProfileName", (n) -> { this.setEnrollmentProfileName(n.getStringValue()); });
         deserializerMap.put("ethernetMacAddress", (n) -> { this.setEthernetMacAddress(n.getStringValue()); });
         deserializerMap.put("exchangeAccessState", (n) -> { this.setExchangeAccessState(n.getEnumValue(DeviceManagementExchangeAccessState::forValue)); });
         deserializerMap.put("exchangeAccessStateReason", (n) -> { this.setExchangeAccessStateReason(n.getEnumValue(DeviceManagementExchangeAccessStateReason::forValue)); });
@@ -738,6 +747,13 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     public void setEnrolledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("enrolledDateTime", value);
+    }
+    /**
+     * Sets the enrollmentProfileName property value. Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+     * @param value Value to set for the enrollmentProfileName property.
+     */
+    public void setEnrollmentProfileName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("enrollmentProfileName", value);
     }
     /**
      * Sets the ethernetMacAddress property value. Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.

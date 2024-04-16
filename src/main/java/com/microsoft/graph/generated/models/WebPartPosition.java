@@ -56,7 +56,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the columnId property value. The columnId property
+     * Gets the columnId property value. Indicates the identifier of the column where the web part is located.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the horizontalSectionId property value. The horizontalSectionId property
+     * Gets the horizontalSectionId property value. Indicates the horizontal section where the web part is located.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("horizontalSectionId");
     }
     /**
-     * Gets the isInVerticalSection property value. The isInVerticalSection property
+     * Gets the isInVerticalSection property value. Indicates whether the web part is located in the vertical section.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the webPartIndex property value. The webPartIndex property
+     * Gets the webPartIndex property value. Index of the current web part. Represents the order of the web part in this column or section.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the columnId property value. The columnId property
+     * Sets the columnId property value. Indicates the identifier of the column where the web part is located.
      * @param value Value to set for the columnId property.
      */
     public void setColumnId(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("columnId", value);
     }
     /**
-     * Sets the horizontalSectionId property value. The horizontalSectionId property
+     * Sets the horizontalSectionId property value. Indicates the horizontal section where the web part is located.
      * @param value Value to set for the horizontalSectionId property.
      */
     public void setHorizontalSectionId(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("horizontalSectionId", value);
     }
     /**
-     * Sets the isInVerticalSection property value. The isInVerticalSection property
+     * Sets the isInVerticalSection property value. Indicates whether the web part is located in the vertical section.
      * @param value Value to set for the isInVerticalSection property.
      */
     public void setIsInVerticalSection(@jakarta.annotation.Nullable final Boolean value) {
@@ -166,7 +166,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the webPartIndex property value. The webPartIndex property
+     * Sets the webPartIndex property value. Index of the current web part. Represents the order of the web part in this column or section.
      * @param value Value to set for the webPartIndex property.
      */
     public void setWebPartIndex(@jakarta.annotation.Nullable final Double value) {

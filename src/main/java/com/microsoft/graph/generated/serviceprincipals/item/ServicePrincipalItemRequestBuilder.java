@@ -15,6 +15,7 @@ import com.microsoft.graph.serviceprincipals.item.createdobjects.CreatedObjectsR
 import com.microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.DelegatedPermissionClassificationsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.endpoints.EndpointsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.federatedidentitycredentialswithname.FederatedIdentityCredentialsWithNameRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -309,6 +310,16 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
+     * @param name Alternate key of federatedIdentityCredential
+     * @return a {@link FederatedIdentityCredentialsWithNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public FederatedIdentityCredentialsWithNameRequestBuilder federatedIdentityCredentialsWithName(@jakarta.annotation.Nonnull final String name) {
+        Objects.requireNonNull(name);
+        return new FederatedIdentityCredentialsWithNameRequestBuilder(pathParameters, requestAdapter, name);
+    }
+    /**
      * Retrieve the properties and relationships of a servicePrincipal object.
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -333,21 +344,23 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
-     * Update entity in servicePrincipals
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipal patch(@jakarta.annotation.Nonnull final ServicePrincipal body) {
         return patch(body, null);
     }
     /**
-     * Update entity in servicePrincipals
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipal patch(@jakarta.annotation.Nonnull final ServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -372,7 +385,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -398,7 +411,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update entity in servicePrincipals
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -407,7 +420,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update entity in servicePrincipals
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -415,7 +428,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

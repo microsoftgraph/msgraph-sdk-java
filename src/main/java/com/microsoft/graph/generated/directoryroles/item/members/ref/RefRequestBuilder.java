@@ -27,7 +27,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RefRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/members/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/members/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link RefRequestBuilder} and sets the default values.
@@ -35,7 +35,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RefRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/members/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/members/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
      * Remove a member from a directoryRole. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
@@ -139,7 +139,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/directoryRoles/{directoryRole%2Did}/members/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
