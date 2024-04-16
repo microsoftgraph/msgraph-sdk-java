@@ -35,6 +35,7 @@ public class Invitation extends Entity implements Parsable {
         deserializerMap.put("invitedUserDisplayName", (n) -> { this.setInvitedUserDisplayName(n.getStringValue()); });
         deserializerMap.put("invitedUserEmailAddress", (n) -> { this.setInvitedUserEmailAddress(n.getStringValue()); });
         deserializerMap.put("invitedUserMessageInfo", (n) -> { this.setInvitedUserMessageInfo(n.getObjectValue(InvitedUserMessageInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedUserSponsors", (n) -> { this.setInvitedUserSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("invitedUserType", (n) -> { this.setInvitedUserType(n.getStringValue()); });
         deserializerMap.put("inviteRedeemUrl", (n) -> { this.setInviteRedeemUrl(n.getStringValue()); });
         deserializerMap.put("inviteRedirectUrl", (n) -> { this.setInviteRedirectUrl(n.getStringValue()); });
@@ -60,7 +61,7 @@ public class Invitation extends Entity implements Parsable {
         return this.backingStore.get("invitedUserDisplayName");
     }
     /**
-     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -68,12 +69,20 @@ public class Invitation extends Entity implements Parsable {
         return this.backingStore.get("invitedUserEmailAddress");
     }
     /**
-     * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
+     * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language, and cc recipient list.
      * @return a {@link InvitedUserMessageInfo}
      */
     @jakarta.annotation.Nullable
     public InvitedUserMessageInfo getInvitedUserMessageInfo() {
         return this.backingStore.get("invitedUserMessageInfo");
+    }
+    /**
+     * Gets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * @return a {@link java.util.List<DirectoryObject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DirectoryObject> getInvitedUserSponsors() {
+        return this.backingStore.get("invitedUserSponsors");
     }
     /**
      * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator.
@@ -134,6 +143,7 @@ public class Invitation extends Entity implements Parsable {
         writer.writeStringValue("invitedUserDisplayName", this.getInvitedUserDisplayName());
         writer.writeStringValue("invitedUserEmailAddress", this.getInvitedUserEmailAddress());
         writer.writeObjectValue("invitedUserMessageInfo", this.getInvitedUserMessageInfo());
+        writer.writeCollectionOfObjectValues("invitedUserSponsors", this.getInvitedUserSponsors());
         writer.writeStringValue("invitedUserType", this.getInvitedUserType());
         writer.writeStringValue("inviteRedeemUrl", this.getInviteRedeemUrl());
         writer.writeStringValue("inviteRedirectUrl", this.getInviteRedirectUrl());
@@ -156,18 +166,25 @@ public class Invitation extends Entity implements Parsable {
         this.backingStore.set("invitedUserDisplayName", value);
     }
     /**
-     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
      * @param value Value to set for the invitedUserEmailAddress property.
      */
     public void setInvitedUserEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("invitedUserEmailAddress", value);
     }
     /**
-     * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
+     * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language, and cc recipient list.
      * @param value Value to set for the invitedUserMessageInfo property.
      */
     public void setInvitedUserMessageInfo(@jakarta.annotation.Nullable final InvitedUserMessageInfo value) {
         this.backingStore.set("invitedUserMessageInfo", value);
+    }
+    /**
+     * Sets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * @param value Value to set for the invitedUserSponsors property.
+     */
+    public void setInvitedUserSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.backingStore.set("invitedUserSponsors", value);
     }
     /**
      * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator.

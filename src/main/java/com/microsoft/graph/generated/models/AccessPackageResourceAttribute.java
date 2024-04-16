@@ -69,12 +69,30 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("destination", (n) -> { this.setDestination(n.getObjectValue(AccessPackageResourceAttributeDestination::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEditable", (n) -> { this.setIsEditable(n.getBooleanValue()); });
+        deserializerMap.put("isPersistedOnAssignmentRemoval", (n) -> { this.setIsPersistedOnAssignmentRemoval(n.getBooleanValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(AccessPackageResourceAttributeSource::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isEditable property value. The isEditable property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsEditable() {
+        return this.backingStore.get("isEditable");
+    }
+    /**
+     * Gets the isPersistedOnAssignmentRemoval property value. The isPersistedOnAssignmentRemoval property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsPersistedOnAssignmentRemoval() {
+        return this.backingStore.get("isPersistedOnAssignmentRemoval");
     }
     /**
      * Gets the name property value. The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.
@@ -107,6 +125,8 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("destination", this.getDestination());
+        writer.writeBooleanValue("isEditable", this.getIsEditable());
+        writer.writeBooleanValue("isPersistedOnAssignmentRemoval", this.getIsPersistedOnAssignmentRemoval());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("source", this.getSource());
@@ -133,6 +153,20 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Bac
      */
     public void setDestination(@jakarta.annotation.Nullable final AccessPackageResourceAttributeDestination value) {
         this.backingStore.set("destination", value);
+    }
+    /**
+     * Sets the isEditable property value. The isEditable property
+     * @param value Value to set for the isEditable property.
+     */
+    public void setIsEditable(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isEditable", value);
+    }
+    /**
+     * Sets the isPersistedOnAssignmentRemoval property value. The isPersistedOnAssignmentRemoval property
+     * @param value Value to set for the isPersistedOnAssignmentRemoval property.
+     */
+    public void setIsPersistedOnAssignmentRemoval(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isPersistedOnAssignmentRemoval", value);
     }
     /**
      * Sets the name property value. The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.

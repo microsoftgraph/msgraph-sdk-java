@@ -56,7 +56,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore;
     }
     /**
-     * Gets the dataVersion property value. The dataVersion property
+     * Gets the dataVersion property value. Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("dataVersion");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the web part.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. Properties bag of the web part.
      * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("properties");
     }
     /**
-     * Gets the serverProcessedContent property value. The serverProcessedContent property
+     * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @return a {@link ServerProcessedContent}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("serverProcessedContent");
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Title of the web part.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,14 +148,14 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore = value;
     }
     /**
-     * Sets the dataVersion property value. The dataVersion property
+     * Sets the dataVersion property value. Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
      * @param value Value to set for the dataVersion property.
      */
     public void setDataVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("dataVersion", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the web part.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -169,21 +169,21 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. Properties bag of the web part.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final Json value) {
         this.backingStore.set("properties", value);
     }
     /**
-     * Sets the serverProcessedContent property value. The serverProcessedContent property
+     * Sets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @param value Value to set for the serverProcessedContent property.
      */
     public void setServerProcessedContent(@jakarta.annotation.Nullable final ServerProcessedContent value) {
         this.backingStore.set("serverProcessedContent", value);
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Title of the web part.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

@@ -102,6 +102,7 @@ public class LearningContent extends Entity implements Parsable {
         deserializerMap.put("isSearchable", (n) -> { this.setIsSearchable(n.getBooleanValue()); });
         deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("level", (n) -> { this.setLevel(n.getEnumValue(Level::forValue)); });
         deserializerMap.put("numberOfPages", (n) -> { this.setNumberOfPages(n.getIntegerValue()); });
         deserializerMap.put("skillTags", (n) -> { this.setSkillTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("sourceName", (n) -> { this.setSourceName(n.getStringValue()); });
@@ -156,6 +157,14 @@ public class LearningContent extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the level property value. The level property
+     * @return a {@link Level}
+     */
+    @jakarta.annotation.Nullable
+    public Level getLevel() {
+        return this.backingStore.get("level");
     }
     /**
      * Gets the numberOfPages property value. The number of pages of the learning content, for example, 9. Optional.
@@ -217,6 +226,7 @@ public class LearningContent extends Entity implements Parsable {
         writer.writeBooleanValue("isSearchable", this.getIsSearchable());
         writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeEnumValue("level", this.getLevel());
         writer.writeIntegerValue("numberOfPages", this.getNumberOfPages());
         writer.writeCollectionOfPrimitiveValues("skillTags", this.getSkillTags());
         writer.writeStringValue("sourceName", this.getSourceName());
@@ -313,6 +323,13 @@ public class LearningContent extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the level property value. The level property
+     * @param value Value to set for the level property.
+     */
+    public void setLevel(@jakarta.annotation.Nullable final Level value) {
+        this.backingStore.set("level", value);
     }
     /**
      * Sets the numberOfPages property value. The number of pages of the learning content, for example, 9. Optional.

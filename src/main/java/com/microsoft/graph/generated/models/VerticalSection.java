@@ -25,7 +25,7 @@ public class VerticalSection extends Entity implements Parsable {
         return new VerticalSection();
     }
     /**
-     * Gets the emphasis property value. The emphasis property
+     * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @return a {@link SectionEmphasisType}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class VerticalSection extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the webparts property value. The webparts property
+     * Gets the webparts property value. The set of web parts in this section.
      * @return a {@link java.util.List<WebPart>}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class VerticalSection extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("webparts", this.getWebparts());
     }
     /**
-     * Sets the emphasis property value. The emphasis property
+     * Sets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @param value Value to set for the emphasis property.
      */
     public void setEmphasis(@jakarta.annotation.Nullable final SectionEmphasisType value) {
         this.backingStore.set("emphasis", value);
     }
     /**
-     * Sets the webparts property value. The webparts property
+     * Sets the webparts property value. The set of web parts in this section.
      * @param value Value to set for the webparts property.
      */
     public void setWebparts(@jakarta.annotation.Nullable final java.util.List<WebPart> value) {

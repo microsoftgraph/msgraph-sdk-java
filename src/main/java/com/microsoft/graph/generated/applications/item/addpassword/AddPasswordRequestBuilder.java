@@ -36,7 +36,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/addPassword", rawUrl);
     }
     /**
-     * Adds a strong password or secret to an application.
+     * Adds a strong password or secret to an application. You can also add passwords while creating the application.
      * @param body The request body
      * @return a {@link PasswordCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a strong password or secret to an application.
+     * Adds a strong password or secret to an application. You can also add passwords while creating the application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PasswordCredential}
@@ -63,7 +63,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordCredential::createFromDiscriminatorValue);
     }
     /**
-     * Adds a strong password or secret to an application.
+     * Adds a strong password or secret to an application. You can also add passwords while creating the application.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class AddPasswordRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a strong password or secret to an application.
+     * Adds a strong password or secret to an application. You can also add passwords while creating the application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

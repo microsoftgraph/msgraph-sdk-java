@@ -4,6 +4,7 @@ import com.microsoft.graph.models.LicenseDetails;
 import com.microsoft.graph.models.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.licensedetails.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.licensedetails.getteamslicensingdetails.GetTeamsLicensingDetailsRequestBuilder;
 import com.microsoft.graph.users.item.licensedetails.item.LicenseDetailsItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -30,6 +31,14 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getTeamsLicensingDetails method.
+     * @return a {@link GetTeamsLicensingDetailsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetTeamsLicensingDetailsRequestBuilder getTeamsLicensingDetails() {
+        return new GetTeamsLicensingDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the licenseDetails property of the microsoft.graph.user entity.
@@ -146,7 +155,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/licenseDetails", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

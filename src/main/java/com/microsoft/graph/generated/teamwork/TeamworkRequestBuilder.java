@@ -82,19 +82,21 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get teamwork
+     * Get the properties and relationships of a teamwork object, such as the region of the organization and whether Microsoft Teams is enabled.
      * @return a {@link Teamwork}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Teamwork get() {
         return get(null);
     }
     /**
-     * Get teamwork
+     * Get the properties and relationships of a teamwork object, such as the region of the organization and whether Microsoft Teams is enabled.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Teamwork}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Teamwork get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,7 +131,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Teamwork::createFromDiscriminatorValue);
     }
     /**
-     * Get teamwork
+     * Get the properties and relationships of a teamwork object, such as the region of the organization and whether Microsoft Teams is enabled.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +139,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get teamwork
+     * Get the properties and relationships of a teamwork object, such as the region of the organization and whether Microsoft Teams is enabled.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +168,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Teamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/teamwork", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -183,7 +185,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         return new TeamworkRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get teamwork
+     * Get the properties and relationships of a teamwork object, such as the region of the organization and whether Microsoft Teams is enabled.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

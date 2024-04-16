@@ -36,7 +36,7 @@ public class TextWebPart extends WebPart implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the innerHtml property value. The innerHtml property
+     * Gets the innerHtml property value. The HTML string in text web part.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TextWebPart extends WebPart implements Parsable {
         writer.writeStringValue("innerHtml", this.getInnerHtml());
     }
     /**
-     * Sets the innerHtml property value. The innerHtml property
+     * Sets the innerHtml property value. The HTML string in text web part.
      * @param value Value to set for the innerHtml property.
      */
     public void setInnerHtml(@jakarta.annotation.Nullable final String value) {

@@ -56,7 +56,7 @@ public class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore;
     }
     /**
-     * Gets the commentCount property value. The commentCount property
+     * Gets the commentCount property value. Count of comments.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the likeCount property value. The likeCount property
+     * Gets the likeCount property value. Count of likes.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the shareCount property value. The shareCount property
+     * Gets the shareCount property value. Count of shares.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the commentCount property value. The commentCount property
+     * Sets the commentCount property value. Count of comments.
      * @param value Value to set for the commentCount property.
      */
     public void setCommentCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("commentCount", value);
     }
     /**
-     * Sets the likeCount property value. The likeCount property
+     * Sets the likeCount property value. Count of likes.
      * @param value Value to set for the likeCount property.
      */
     public void setLikeCount(@jakarta.annotation.Nullable final Integer value) {
@@ -149,7 +149,7 @@ public class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the shareCount property value. The shareCount property
+     * Sets the shareCount property value. Count of shares.
      * @param value Value to set for the shareCount property.
      */
     public void setShareCount(@jakarta.annotation.Nullable final Integer value) {
