@@ -21,13 +21,13 @@ function Update-ReadmeVersion([string]$readmeFilePath, [version]$version) {
 	$readmeLines = $readmeFileContent -split "`n"
 	$readmeLines[$gradleLineNumber] = $readmeLines[$gradleLineNumber] -replace "\d{1,}\.\d{1,}\.\d{1,}", $version.ToString()
 	$readmeFileContent = $readmeLines -join "`n"
-	Set-Content -Path $readmeFilePath $readmeFileContent
+	Set-Content -Path $readmeFilePath $readmeFileContent -NoNewline
 }
 
 function Update-TelemetryVersion([string]$telemetryFilePath, [version]$version) {
 	$telemetryFileContent = Get-Content -Path $telemetryFilePath -Raw
 	$telemetryFileContent = $telemetryFileContent -replace "\d{1,}\.\d{1,}\.\d{1,}", $version.ToString()
-	Set-Content -Path $telemetryFilePath $telemetryFileContent
+	Set-Content -Path $telemetryFilePath $telemetryFileContent -NoNewline
 }
 
 function Update-PackageVersion([string]$propertiesFilePath, [version]$version) {
@@ -35,7 +35,7 @@ function Update-PackageVersion([string]$propertiesFilePath, [version]$version) {
 	$propertiesFileContent = $propertiesFileContent -replace "mavenMajorVersion\s+=\s+\d{1,}", "mavenMajorVersion = $($version.Major)"
 	$propertiesFileContent = $propertiesFileContent -replace "mavenMinorVersion\s+=\s+\d{1,}", "mavenMinorVersion = $($version.Minor)"
 	$propertiesFileContent = $propertiesFileContent -replace "mavenPatchVersion\s+=\s+\d{1,}", "mavenPatchVersion = $($version.Build)"
-	Set-Content -Path $propertiesFilePath $propertiesFileContent
+	Set-Content -Path $propertiesFilePath $propertiesFileContent -NoNewline
 }
 function Get-CurrentTelemetryVersion([string]$telemetryFilePath) {
 	$telemetryFileContent = Get-Content -Path $telemetryFilePath -Raw
