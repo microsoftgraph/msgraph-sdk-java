@@ -1,5 +1,5 @@
 {
-  "bootstrap-sha": "TODO: Update this value",
+  "bootstrap-sha": "6342ecd17b3c26f5d27b33ff49a2ceedc206f140",
   "exclude-paths": [
     ".git",
     ".idea",
