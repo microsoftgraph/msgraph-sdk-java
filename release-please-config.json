@@ -1,0 +1,29 @@
+{
+  "bootstrap-sha": "TODO: Update this value",
+  "exclude-paths": [
+    ".git",
+    ".idea",
+    ".github",
+    ".vscode"
+  ],
+  "release-type": "java",
+  "include-component-in-tag": false,
+  "include-v-in-tag": true,
+  "packages": {
+    ".": {
+      "package-name": "com.microsoft.graph.microsoft-graph",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "gradle.properties"
+        },
+        {
+          "type": "pom",
+          "path": "pom.xml"
+        }
+      ]
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
