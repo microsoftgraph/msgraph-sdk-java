@@ -115,7 +115,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("enrollmentProfileName");
     }
     /**
-     * Gets the enrollmentType property value. The enrollmentType property
+     * Gets the enrollmentType property value. Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManaged");
     }
     /**
-     * Gets the isRooted property value. The isRooted property
+     * Gets the isRooted property value. true if the device is rooted; false if the device is jail-broken. This property can only be updated by Intune.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("isRooted");
     }
     /**
-     * Gets the managementType property value. The managementType property
+     * Gets the managementType property value. The management channel of the device. This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -461,7 +461,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("enrollmentProfileName", value);
     }
     /**
-     * Sets the enrollmentType property value. The enrollmentType property
+     * Sets the enrollmentType property value. Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
      * @param value Value to set for the enrollmentType property.
      */
     public void setEnrollmentType(@jakarta.annotation.Nullable final String value) {
@@ -489,14 +489,14 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("isManaged", value);
     }
     /**
-     * Sets the isRooted property value. The isRooted property
+     * Sets the isRooted property value. true if the device is rooted; false if the device is jail-broken. This property can only be updated by Intune.
      * @param value Value to set for the isRooted property.
      */
     public void setIsRooted(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isRooted", value);
     }
     /**
-     * Sets the managementType property value. The managementType property
+     * Sets the managementType property value. The management channel of the device. This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      * @param value Value to set for the managementType property.
      */
     public void setManagementType(@jakarta.annotation.Nullable final String value) {

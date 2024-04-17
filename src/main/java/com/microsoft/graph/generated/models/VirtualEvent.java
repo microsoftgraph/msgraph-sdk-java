@@ -56,7 +56,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
+     * Gets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
      * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("sessions");
     }
     /**
-     * Gets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
+     * Gets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
      * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class VirtualEvent extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
+     * Sets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
@@ -154,7 +154,7 @@ public class VirtualEvent extends Entity implements Parsable {
         this.backingStore.set("sessions", value);
     }
     /**
-     * Sets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows.
+     * Sets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {

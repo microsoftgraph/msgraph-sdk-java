@@ -93,7 +93,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ChannelCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
+     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @return a {@link Channel}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -104,7 +104,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
+     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Channel}
@@ -140,7 +140,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
+     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +149,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
+     * Create a new channel in a team, as specified in the request body. When you create a channel, the maximum length of the channel's displayName is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -157,7 +157,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Channel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/channels", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -64,7 +64,7 @@ public class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get horizontalSections from groups
+     * Collection of horizontal sections on the SharePoint page.
      * @return a {@link HorizontalSection}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get horizontalSections from groups
+     * Collection of horizontal sections on the SharePoint page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HorizontalSection}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -125,13 +125,13 @@ public class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/horizontalSections/{horizontalSection%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get horizontalSections from groups
+     * Collection of horizontal sections on the SharePoint page.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get horizontalSections from groups
+     * Collection of horizontal sections on the SharePoint page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -168,7 +168,7 @@ public class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final HorizontalSection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/horizontalSections/{horizontalSection%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -191,7 +191,7 @@ public class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get horizontalSections from groups
+     * Collection of horizontal sections on the SharePoint page.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

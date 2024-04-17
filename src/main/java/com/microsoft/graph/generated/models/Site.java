@@ -161,7 +161,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("operations");
     }
     /**
-     * Gets the pages property value. The pages property
+     * Gets the pages property value. The collection of pages in the baseSitePages list in this site.
      * @return a {@link java.util.List<BaseSitePage>}
      */
     @jakarta.annotation.Nullable
@@ -345,7 +345,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("operations", value);
     }
     /**
-     * Sets the pages property value. The pages property
+     * Sets the pages property value. The collection of pages in the baseSitePages list in this site.
      * @param value Value to set for the pages property.
      */
     public void setPages(@jakarta.annotation.Nullable final java.util.List<BaseSitePage> value) {

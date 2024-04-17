@@ -49,9 +49,27 @@ public class Teamwork extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deletedChats", (n) -> { this.setDeletedChats(n.getCollectionOfObjectValues(DeletedChat::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedTeams", (n) -> { this.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
+        deserializerMap.put("isTeamsEnabled", (n) -> { this.setIsTeamsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
         deserializerMap.put("teamsAppSettings", (n) -> { this.setTeamsAppSettings(n.getObjectValue(TeamsAppSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("workforceIntegrations", (n) -> { this.setWorkforceIntegrations(n.getCollectionOfObjectValues(WorkforceIntegration::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isTeamsEnabled property value. Indicates whether Microsoft Teams is enabled for the organization.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsTeamsEnabled() {
+        return this.backingStore.get("isTeamsEnabled");
+    }
+    /**
+     * Gets the region property value. Represents the region of the organization. > The region property contains the organization's or the user's region. The property contains the user's region (if available) for users who have a valid multigeo license. For users without multigeo licenses, the region property contains the organization's region.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRegion() {
+        return this.backingStore.get("region");
     }
     /**
      * Gets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
@@ -78,6 +96,8 @@ public class Teamwork extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("deletedChats", this.getDeletedChats());
         writer.writeCollectionOfObjectValues("deletedTeams", this.getDeletedTeams());
+        writer.writeBooleanValue("isTeamsEnabled", this.getIsTeamsEnabled());
+        writer.writeStringValue("region", this.getRegion());
         writer.writeObjectValue("teamsAppSettings", this.getTeamsAppSettings());
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
     }
@@ -94,6 +114,20 @@ public class Teamwork extends Entity implements Parsable {
      */
     public void setDeletedTeams(@jakarta.annotation.Nullable final java.util.List<DeletedTeam> value) {
         this.backingStore.set("deletedTeams", value);
+    }
+    /**
+     * Sets the isTeamsEnabled property value. Indicates whether Microsoft Teams is enabled for the organization.
+     * @param value Value to set for the isTeamsEnabled property.
+     */
+    public void setIsTeamsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isTeamsEnabled", value);
+    }
+    /**
+     * Sets the region property value. Represents the region of the organization. > The region property contains the organization's or the user's region. The property contains the user's region (if available) for users who have a valid multigeo license. For users without multigeo licenses, the region property contains the organization's region.
+     * @param value Value to set for the region property.
+     */
+    public void setRegion(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("region", value);
     }
     /**
      * Sets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.

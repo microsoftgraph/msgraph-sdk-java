@@ -143,7 +143,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/groups/{group%2Did1}/sets/{set%2Did}/children/{term%2Did}/relations/{relation%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -186,7 +186,7 @@ public class RelationItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Relation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/groups/{group%2Did1}/sets/{set%2Did}/children/{term%2Did}/relations/{relation%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

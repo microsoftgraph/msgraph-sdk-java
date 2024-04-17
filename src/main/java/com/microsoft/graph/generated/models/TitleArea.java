@@ -48,7 +48,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
-     * Gets the alternativeText property value. The alternativeText property
+     * Gets the alternativeText property value. Alternative text on the title area.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the enableGradientEffect property value. The enableGradientEffect property
+     * Gets the enableGradientEffect property value. Indicates whether the title area has a gradient effect enabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the imageWebUrl property value. The imageWebUrl property
+     * Gets the imageWebUrl property value. URL of the image in the title area.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("imageWebUrl");
     }
     /**
-     * Gets the layout property value. The layout property
+     * Gets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
      * @return a {@link TitleAreaLayoutType}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the serverProcessedContent property value. The serverProcessedContent property
+     * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @return a {@link ServerProcessedContent}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("serverProcessedContent");
     }
     /**
-     * Gets the showAuthor property value. The showAuthor property
+     * Gets the showAuthor property value. Indicates whether the author should be shown in title area.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("showAuthor");
     }
     /**
-     * Gets the showPublishedDate property value. The showPublishedDate property
+     * Gets the showPublishedDate property value. Indicates whether the published date should be shown in title area.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("showPublishedDate");
     }
     /**
-     * Gets the showTextBlockAboveTitle property value. The showTextBlockAboveTitle property
+     * Gets the showTextBlockAboveTitle property value. Indicates whether the text block above title should be shown in title area.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("showTextBlockAboveTitle");
     }
     /**
-     * Gets the textAboveTitle property value. The textAboveTitle property
+     * Gets the textAboveTitle property value. The text above title line.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("textAboveTitle");
     }
     /**
-     * Gets the textAlignment property value. The textAlignment property
+     * Gets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
      * @return a {@link TitleAreaTextAlignmentType}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the alternativeText property value. The alternativeText property
+     * Sets the alternativeText property value. Alternative text on the title area.
      * @param value Value to set for the alternativeText property.
      */
     public void setAlternativeText(@jakarta.annotation.Nullable final String value) {
@@ -205,21 +205,21 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the enableGradientEffect property value. The enableGradientEffect property
+     * Sets the enableGradientEffect property value. Indicates whether the title area has a gradient effect enabled.
      * @param value Value to set for the enableGradientEffect property.
      */
     public void setEnableGradientEffect(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("enableGradientEffect", value);
     }
     /**
-     * Sets the imageWebUrl property value. The imageWebUrl property
+     * Sets the imageWebUrl property value. URL of the image in the title area.
      * @param value Value to set for the imageWebUrl property.
      */
     public void setImageWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("imageWebUrl", value);
     }
     /**
-     * Sets the layout property value. The layout property
+     * Sets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
      * @param value Value to set for the layout property.
      */
     public void setLayout(@jakarta.annotation.Nullable final TitleAreaLayoutType value) {
@@ -233,42 +233,42 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the serverProcessedContent property value. The serverProcessedContent property
+     * Sets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @param value Value to set for the serverProcessedContent property.
      */
     public void setServerProcessedContent(@jakarta.annotation.Nullable final ServerProcessedContent value) {
         this.backingStore.set("serverProcessedContent", value);
     }
     /**
-     * Sets the showAuthor property value. The showAuthor property
+     * Sets the showAuthor property value. Indicates whether the author should be shown in title area.
      * @param value Value to set for the showAuthor property.
      */
     public void setShowAuthor(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("showAuthor", value);
     }
     /**
-     * Sets the showPublishedDate property value. The showPublishedDate property
+     * Sets the showPublishedDate property value. Indicates whether the published date should be shown in title area.
      * @param value Value to set for the showPublishedDate property.
      */
     public void setShowPublishedDate(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("showPublishedDate", value);
     }
     /**
-     * Sets the showTextBlockAboveTitle property value. The showTextBlockAboveTitle property
+     * Sets the showTextBlockAboveTitle property value. Indicates whether the text block above title should be shown in title area.
      * @param value Value to set for the showTextBlockAboveTitle property.
      */
     public void setShowTextBlockAboveTitle(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("showTextBlockAboveTitle", value);
     }
     /**
-     * Sets the textAboveTitle property value. The textAboveTitle property
+     * Sets the textAboveTitle property value. The text above title line.
      * @param value Value to set for the textAboveTitle property.
      */
     public void setTextAboveTitle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("textAboveTitle", value);
     }
     /**
-     * Sets the textAlignment property value. The textAlignment property
+     * Sets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
      * @param value Value to set for the textAlignment property.
      */
     public void setTextAlignment(@jakarta.annotation.Nullable final TitleAreaTextAlignmentType value) {

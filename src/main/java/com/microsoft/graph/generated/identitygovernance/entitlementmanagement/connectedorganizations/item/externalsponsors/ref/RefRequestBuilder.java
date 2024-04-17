@@ -27,7 +27,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RefRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}/externalSponsors/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}/externalSponsors/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link RefRequestBuilder} and sets the default values.
@@ -35,7 +35,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RefRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}/externalSponsors/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}/externalSponsors/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
      * Remove a user or a group from the connected organization's external sponsors. The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
@@ -139,7 +139,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}/externalSponsors/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

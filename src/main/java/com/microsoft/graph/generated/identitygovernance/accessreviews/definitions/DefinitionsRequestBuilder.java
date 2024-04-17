@@ -159,7 +159,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identityGovernance/accessReviews/definitions", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -63,6 +63,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         deserializerMap.put("azureStorageUriExpirationDateTime", (n) -> { this.setAzureStorageUriExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("isCommitted", (n) -> { this.setIsCommitted(n.getBooleanValue()); });
+        deserializerMap.put("isDependency", (n) -> { this.setIsDependency(n.getBooleanValue()); });
         deserializerMap.put("manifest", (n) -> { this.setManifest(n.getByteArrayValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
@@ -77,6 +78,14 @@ public class MobileAppContentFile extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsCommitted() {
         return this.backingStore.get("isCommitted");
+    }
+    /**
+     * Gets the isDependency property value. Indicates whether this content file is a dependency for the main content file. TRUE means that the content file is a dependency, FALSE means that the content file is not a dependency and is the main content file. Defaults to FALSE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDependency() {
+        return this.backingStore.get("isDependency");
     }
     /**
      * Gets the manifest property value. The manifest information.
@@ -125,6 +134,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("isDependency", this.getIsDependency());
         writer.writeByteArrayValue("manifest", this.getManifest());
         writer.writeStringValue("name", this.getName());
         writer.writeLongValue("size", this.getSize());
@@ -158,6 +168,13 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     public void setIsCommitted(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCommitted", value);
+    }
+    /**
+     * Sets the isDependency property value. Indicates whether this content file is a dependency for the main content file. TRUE means that the content file is a dependency, FALSE means that the content file is not a dependency and is the main content file. Defaults to FALSE.
+     * @param value Value to set for the isDependency property.
+     */
+    public void setIsDependency(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDependency", value);
     }
     /**
      * Sets the manifest property value. The manifest information.

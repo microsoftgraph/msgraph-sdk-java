@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.Incident;
+import com.microsoft.graph.models.security.LabelsRoot;
 import com.microsoft.graph.models.security.ThreatIntelligence;
 import com.microsoft.graph.models.security.TriggersRoot;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
@@ -74,6 +75,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
+        deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScores", (n) -> { this.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
         deserializerMap.put("subjectRightsRequests", (n) -> { this.setSubjectRightsRequests(n.getCollectionOfObjectValues(SubjectRightsRequest::createFromDiscriminatorValue)); });
@@ -89,6 +91,14 @@ public class Security extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<Incident> getIncidents() {
         return this.backingStore.get("incidents");
+    }
+    /**
+     * Gets the labels property value. The labels property
+     * @return a {@link LabelsRoot}
+     */
+    @jakarta.annotation.Nullable
+    public LabelsRoot getLabels() {
+        return this.backingStore.get("labels");
     }
     /**
      * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
@@ -150,6 +160,7 @@ public class Security extends Entity implements Parsable {
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
         writer.writeObjectValue("cases", this.getCases());
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
+        writer.writeObjectValue("labels", this.getLabels());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
         writer.writeCollectionOfObjectValues("subjectRightsRequests", this.getSubjectRightsRequests());
@@ -191,6 +202,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setIncidents(@jakarta.annotation.Nullable final java.util.List<Incident> value) {
         this.backingStore.set("incidents", value);
+    }
+    /**
+     * Sets the labels property value. The labels property
+     * @param value Value to set for the labels property.
+     */
+    public void setLabels(@jakarta.annotation.Nullable final LabelsRoot value) {
+        this.backingStore.set("labels", value);
     }
     /**
      * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property

@@ -70,7 +70,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the htmlStrings property value. The htmlStrings property
+     * Gets the htmlStrings property value. A key-value map where keys are string identifiers and values are rich text with HTML format. SharePoint servers treat the values as HTML content and run services like safety checks, search index and link fixup on them.
      * @return a {@link java.util.List<MetaDataKeyStringPair>}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("htmlStrings");
     }
     /**
-     * Gets the imageSources property value. The imageSources property
+     * Gets the imageSources property value. A key-value map where keys are string identifiers and values are image sources. SharePoint servers treat the values as image sources and run services like search index and link fixup on them.
      * @return a {@link java.util.List<MetaDataKeyStringPair>}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("imageSources");
     }
     /**
-     * Gets the links property value. The links property
+     * Gets the links property value. A key-value map where keys are string identifiers and values are links. SharePoint servers treat the values as links and run services like link fixup on them.
      * @return a {@link java.util.List<MetaDataKeyStringPair>}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the searchablePlainTexts property value. The searchablePlainTexts property
+     * Gets the searchablePlainTexts property value. A key-value map where keys are string identifiers and values are strings that should be search indexed.
      * @return a {@link java.util.List<MetaDataKeyStringPair>}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class ServerProcessedContent implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the htmlStrings property value. The htmlStrings property
+     * Sets the htmlStrings property value. A key-value map where keys are string identifiers and values are rich text with HTML format. SharePoint servers treat the values as HTML content and run services like safety checks, search index and link fixup on them.
      * @param value Value to set for the htmlStrings property.
      */
     public void setHtmlStrings(@jakarta.annotation.Nullable final java.util.List<MetaDataKeyStringPair> value) {
         this.backingStore.set("htmlStrings", value);
     }
     /**
-     * Sets the imageSources property value. The imageSources property
+     * Sets the imageSources property value. A key-value map where keys are string identifiers and values are image sources. SharePoint servers treat the values as image sources and run services like search index and link fixup on them.
      * @param value Value to set for the imageSources property.
      */
     public void setImageSources(@jakarta.annotation.Nullable final java.util.List<MetaDataKeyStringPair> value) {
         this.backingStore.set("imageSources", value);
     }
     /**
-     * Sets the links property value. The links property
+     * Sets the links property value. A key-value map where keys are string identifiers and values are links. SharePoint servers treat the values as links and run services like link fixup on them.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final java.util.List<MetaDataKeyStringPair> value) {
@@ -166,7 +166,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the searchablePlainTexts property value. The searchablePlainTexts property
+     * Sets the searchablePlainTexts property value. A key-value map where keys are string identifiers and values are strings that should be search indexed.
      * @param value Value to set for the searchablePlainTexts property.
      */
     public void setSearchablePlainTexts(@jakarta.annotation.Nullable final java.util.List<MetaDataKeyStringPair> value) {

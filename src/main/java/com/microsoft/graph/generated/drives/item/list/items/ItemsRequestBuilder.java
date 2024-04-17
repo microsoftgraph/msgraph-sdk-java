@@ -1,6 +1,8 @@
 package com.microsoft.graph.drives.item.list.items;
 
 import com.microsoft.graph.drives.item.list.items.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.list.items.delta.DeltaRequestBuilder;
+import com.microsoft.graph.drives.item.list.items.deltawithtoken.DeltaWithTokenRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.ListItemItemRequestBuilder;
 import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.ListItemCollectionResponse;
@@ -32,6 +34,14 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param listItemId The unique identifier of listItem
      * @return a {@link ListItemItemRequestBuilder}
@@ -58,6 +68,16 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      */
     public ItemsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items{?%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+    }
+    /**
+     * Provides operations to call the delta method.
+     * @param token Usage: token='{token}'
+     * @return a {@link DeltaWithTokenRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaWithTokenRequestBuilder deltaWithToken(@jakarta.annotation.Nonnull final String token) {
+        Objects.requireNonNull(token);
+        return new DeltaWithTokenRequestBuilder(pathParameters, requestAdapter, token);
     }
     /**
      * Get the collection of [items][item] in a [list][].
@@ -148,7 +168,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ListItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/drives/{drive%2Did}/list/items", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

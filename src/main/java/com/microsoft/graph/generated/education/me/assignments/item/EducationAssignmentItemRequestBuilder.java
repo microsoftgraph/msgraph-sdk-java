@@ -1,6 +1,8 @@
 package com.microsoft.graph.education.me.assignments.item;
 
+import com.microsoft.graph.education.me.assignments.item.activate.ActivateRequestBuilder;
 import com.microsoft.graph.education.me.assignments.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.education.me.assignments.item.deactivate.DeactivateRequestBuilder;
 import com.microsoft.graph.education.me.assignments.item.gradingcategory.GradingCategoryRequestBuilder;
 import com.microsoft.graph.education.me.assignments.item.publish.PublishRequestBuilder;
 import com.microsoft.graph.education.me.assignments.item.resources.ResourcesRequestBuilder;
@@ -29,12 +31,28 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the activate method.
+     * @return a {@link ActivateRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ActivateRequestBuilder activate() {
+        return new ActivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the categories property of the microsoft.graph.educationAssignment entity.
      * @return a {@link CategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the deactivate method.
+     * @return a {@link DeactivateRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeactivateRequestBuilder deactivate() {
+        return new DeactivateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the gradingCategory property of the microsoft.graph.educationAssignment entity.
@@ -188,7 +206,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -231,7 +249,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

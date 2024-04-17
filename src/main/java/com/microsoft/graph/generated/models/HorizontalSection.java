@@ -25,7 +25,7 @@ public class HorizontalSection extends Entity implements Parsable {
         return new HorizontalSection();
     }
     /**
-     * Gets the columns property value. The columns property
+     * Gets the columns property value. The set of vertical columns in this section.
      * @return a {@link java.util.List<HorizontalSectionColumn>}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class HorizontalSection extends Entity implements Parsable {
         return this.backingStore.get("columns");
     }
     /**
-     * Gets the emphasis property value. The emphasis property
+     * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @return a {@link SectionEmphasisType}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class HorizontalSection extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the layout property value. The layout property
+     * Gets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
      * @return a {@link HorizontalSectionLayoutType}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class HorizontalSection extends Entity implements Parsable {
         writer.writeEnumValue("layout", this.getLayout());
     }
     /**
-     * Sets the columns property value. The columns property
+     * Sets the columns property value. The set of vertical columns in this section.
      * @param value Value to set for the columns property.
      */
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<HorizontalSectionColumn> value) {
         this.backingStore.set("columns", value);
     }
     /**
-     * Sets the emphasis property value. The emphasis property
+     * Sets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @param value Value to set for the emphasis property.
      */
     public void setEmphasis(@jakarta.annotation.Nullable final SectionEmphasisType value) {
         this.backingStore.set("emphasis", value);
     }
     /**
-     * Sets the layout property value. The layout property
+     * Sets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
      * @param value Value to set for the layout property.
      */
     public void setLayout(@jakarta.annotation.Nullable final HorizontalSectionLayoutType value) {

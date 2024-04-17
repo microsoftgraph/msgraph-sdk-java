@@ -615,7 +615,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("transitiveMembers");
     }
     /**
-     * Gets the uniqueName property value. The uniqueName property
+     * Gets the uniqueName property value. The unique identifier that can be assigned to a group and used as an alternate key. Immutable. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1162,7 +1162,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("transitiveMembers", value);
     }
     /**
-     * Sets the uniqueName property value. The uniqueName property
+     * Sets the uniqueName property value. The unique identifier that can be assigned to a group and used as an alternate key. Immutable. Read-only.
      * @param value Value to set for the uniqueName property.
      */
     public void setUniqueName(@jakarta.annotation.Nullable final String value) {

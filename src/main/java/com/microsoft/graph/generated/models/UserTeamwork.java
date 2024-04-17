@@ -41,6 +41,8 @@ public class UserTeamwork extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("associatedTeams", (n) -> { this.setAssociatedTeams(n.getCollectionOfObjectValues(AssociatedTeamInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("installedApps", (n) -> { this.setInstalledApps(n.getCollectionOfObjectValues(UserScopeTeamsAppInstallation::createFromDiscriminatorValue)); });
+        deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -52,6 +54,22 @@ public class UserTeamwork extends Entity implements Parsable {
         return this.backingStore.get("installedApps");
     }
     /**
+     * Gets the locale property value. The chosen locale of a user in Microsoft Teams.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLocale() {
+        return this.backingStore.get("locale");
+    }
+    /**
+     * Gets the region property value. The region of the user in Microsoft Teams.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRegion() {
+        return this.backingStore.get("region");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -60,6 +78,8 @@ public class UserTeamwork extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("associatedTeams", this.getAssociatedTeams());
         writer.writeCollectionOfObjectValues("installedApps", this.getInstalledApps());
+        writer.writeStringValue("locale", this.getLocale());
+        writer.writeStringValue("region", this.getRegion());
     }
     /**
      * Sets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
@@ -74,5 +94,19 @@ public class UserTeamwork extends Entity implements Parsable {
      */
     public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<UserScopeTeamsAppInstallation> value) {
         this.backingStore.set("installedApps", value);
+    }
+    /**
+     * Sets the locale property value. The chosen locale of a user in Microsoft Teams.
+     * @param value Value to set for the locale property.
+     */
+    public void setLocale(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("locale", value);
+    }
+    /**
+     * Sets the region property value. The region of the user in Microsoft Teams.
+     * @param value Value to set for the region property.
+     */
+    public void setRegion(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("region", value);
     }
 }

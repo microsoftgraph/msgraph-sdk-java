@@ -33,7 +33,7 @@ public class MessageRule extends Entity implements Parsable {
         return this.backingStore.get("actions");
     }
     /**
-     * Gets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
+     * Gets the conditions property value. Conditions that when fulfilled trigger the corresponding actions for that rule.
      * @return a {@link MessageRulePredicates}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class MessageRule extends Entity implements Parsable {
         this.backingStore.set("actions", value);
     }
     /**
-     * Sets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
+     * Sets the conditions property value. Conditions that when fulfilled trigger the corresponding actions for that rule.
      * @param value Value to set for the conditions property.
      */
     public void setConditions(@jakarta.annotation.Nullable final MessageRulePredicates value) {

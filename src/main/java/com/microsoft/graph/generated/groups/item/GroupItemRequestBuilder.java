@@ -468,23 +468,23 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a group object.
+     * Create a new group object if it doesn't exist, or update the properties of an existing group object.You can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group patch(@jakarta.annotation.Nonnull final Group body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a group object.
+     * Create a new group object if it doesn't exist, or update the properties of an existing group object.You can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group patch(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -509,7 +509,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -535,7 +535,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a group object.
+     * Create a new group object if it doesn't exist, or update the properties of an existing group object.You can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -544,7 +544,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a group object.
+     * Create a new group object if it doesn't exist, or update the properties of an existing group object.You can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -552,7 +552,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -158,7 +158,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("redirectIncidentId");
     }
     /**
-     * Gets the resolvingComment property value. The resolvingComment property
+     * Gets the resolvingComment property value. User input that explains the resolution of the incident and the classification choice. This property contains free editable text.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -315,7 +315,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("redirectIncidentId", value);
     }
     /**
-     * Sets the resolvingComment property value. The resolvingComment property
+     * Sets the resolvingComment property value. User input that explains the resolution of the incident and the classification choice. This property contains free editable text.
      * @param value Value to set for the resolvingComment property.
      */
     public void setResolvingComment(@jakarta.annotation.Nullable final String value) {

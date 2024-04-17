@@ -25,7 +25,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return new RelyingPartyDetailedSummary();
     }
     /**
-     * Gets the failedSignInCount property value. The failedSignInCount property
+     * Gets the failedSignInCount property value. Number of failed sign ins on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("migrationStatus");
     }
     /**
-     * Gets the migrationValidationDetails property value. The migrationValidationDetails property
+     * Gets the migrationValidationDetails property value. Specifies all the validations checks done on applications config details.
      * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("migrationValidationDetails");
     }
     /**
-     * Gets the relyingPartyId property value. The relyingPartyId property
+     * Gets the relyingPartyId property value. Identifies the relying party to this federation service. It's used when issuing claims to the relying party. Supports $orderby, $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("relyingPartyId");
     }
     /**
-     * Gets the relyingPartyName property value. The relyingPartyName property
+     * Gets the relyingPartyName property value. Name of the relying party's website or other entity on the Internet that uses an identity provider to authenticate a user who wants to log in. Supports $orderby, $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("relyingPartyName");
     }
     /**
-     * Gets the replyUrls property value. The replyUrls property
+     * Gets the replyUrls property value. Specifies where the relying party expects to receive the token.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("replyUrls");
     }
     /**
-     * Gets the serviceId property value. The serviceId property
+     * Gets the serviceId property value. Uniquely identifies the Active Directory forest. Supports $orderby, $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("serviceId");
     }
     /**
-     * Gets the signInSuccessRate property value. The signInSuccessRate property
+     * Gets the signInSuccessRate property value. Calculated as Number of successful / (Number of successful + Number of failed sign ins) or successfulSignInCount / totalSignInCount on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("signInSuccessRate");
     }
     /**
-     * Gets the successfulSignInCount property value. The successfulSignInCount property
+     * Gets the successfulSignInCount property value. Number of successful sign ins on AD FS. Supports $orderby, $filter (eq).
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("successfulSignInCount");
     }
     /**
-     * Gets the totalSignInCount property value. The totalSignInCount property
+     * Gets the totalSignInCount property value. Number of successful + failed sign ins on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("totalSignInCount");
     }
     /**
-     * Gets the uniqueUserCount property value. The uniqueUserCount property
+     * Gets the uniqueUserCount property value. Number of unique users that signed into the application. Supports $orderby, $filter (eq).
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         writer.writeLongValue("uniqueUserCount", this.getUniqueUserCount());
     }
     /**
-     * Sets the failedSignInCount property value. The failedSignInCount property
+     * Sets the failedSignInCount property value. Number of failed sign ins on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @param value Value to set for the failedSignInCount property.
      */
     public void setFailedSignInCount(@jakarta.annotation.Nullable final Long value) {
@@ -166,63 +166,63 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         this.backingStore.set("migrationStatus", value);
     }
     /**
-     * Sets the migrationValidationDetails property value. The migrationValidationDetails property
+     * Sets the migrationValidationDetails property value. Specifies all the validations checks done on applications config details.
      * @param value Value to set for the migrationValidationDetails property.
      */
     public void setMigrationValidationDetails(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.backingStore.set("migrationValidationDetails", value);
     }
     /**
-     * Sets the relyingPartyId property value. The relyingPartyId property
+     * Sets the relyingPartyId property value. Identifies the relying party to this federation service. It's used when issuing claims to the relying party. Supports $orderby, $filter (eq).
      * @param value Value to set for the relyingPartyId property.
      */
     public void setRelyingPartyId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("relyingPartyId", value);
     }
     /**
-     * Sets the relyingPartyName property value. The relyingPartyName property
+     * Sets the relyingPartyName property value. Name of the relying party's website or other entity on the Internet that uses an identity provider to authenticate a user who wants to log in. Supports $orderby, $filter (eq).
      * @param value Value to set for the relyingPartyName property.
      */
     public void setRelyingPartyName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("relyingPartyName", value);
     }
     /**
-     * Sets the replyUrls property value. The replyUrls property
+     * Sets the replyUrls property value. Specifies where the relying party expects to receive the token.
      * @param value Value to set for the replyUrls property.
      */
     public void setReplyUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("replyUrls", value);
     }
     /**
-     * Sets the serviceId property value. The serviceId property
+     * Sets the serviceId property value. Uniquely identifies the Active Directory forest. Supports $orderby, $filter (eq).
      * @param value Value to set for the serviceId property.
      */
     public void setServiceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("serviceId", value);
     }
     /**
-     * Sets the signInSuccessRate property value. The signInSuccessRate property
+     * Sets the signInSuccessRate property value. Calculated as Number of successful / (Number of successful + Number of failed sign ins) or successfulSignInCount / totalSignInCount on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @param value Value to set for the signInSuccessRate property.
      */
     public void setSignInSuccessRate(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("signInSuccessRate", value);
     }
     /**
-     * Sets the successfulSignInCount property value. The successfulSignInCount property
+     * Sets the successfulSignInCount property value. Number of successful sign ins on AD FS. Supports $orderby, $filter (eq).
      * @param value Value to set for the successfulSignInCount property.
      */
     public void setSuccessfulSignInCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("successfulSignInCount", value);
     }
     /**
-     * Sets the totalSignInCount property value. The totalSignInCount property
+     * Sets the totalSignInCount property value. Number of successful + failed sign ins on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @param value Value to set for the totalSignInCount property.
      */
     public void setTotalSignInCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalSignInCount", value);
     }
     /**
-     * Sets the uniqueUserCount property value. The uniqueUserCount property
+     * Sets the uniqueUserCount property value. Number of unique users that signed into the application. Supports $orderby, $filter (eq).
      * @param value Value to set for the uniqueUserCount property.
      */
     public void setUniqueUserCount(@jakarta.annotation.Nullable final Long value) {
