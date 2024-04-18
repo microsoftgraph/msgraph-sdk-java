@@ -19,8 +19,9 @@
           "path": "gradle.properties"
         },
         {
-          "type": "pom",
-          "path": "pom.xml"
+          "type": "xml",
+          "path": "pom.xml",
+          "xpath": "//project/version"
         }
       ]
     }
