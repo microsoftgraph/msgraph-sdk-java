@@ -19,6 +19,14 @@
           "path": "gradle.properties"
         },
         {
+          "type": "generic",
+          "path": "README.md"
+        },
+        {
+          "type": "generic",
+          "path": "src/main/java/com/microsoft/graph/info/Constants.java"
+        },
+        {
           "type": "xml",
           "path": "pom.xml",
           "xpath": "//project/version"
