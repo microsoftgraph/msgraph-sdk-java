@@ -22,14 +22,12 @@ jobs:
           event: push
           name: drop
           path: drop
-      - name: Github Release
-        uses: anton-yurchenko/git-release@v6.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DRAFT_RELEASE: "false"
-          PRE_RELEASE: "false"
-          CHANGELOG_FILE: "CHANGELOG.md"
-          ALLOW_EMPTY_CHANGELOG: "true"
+      # This action works with an existing release (created by the release bot) and uploads the build artifacts
+      - name: GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          args: |
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_unmatched_files: true
+          files: |
             drop/build/**/*.jar

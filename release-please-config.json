@@ -1,0 +1,38 @@
+{
+  "bootstrap-sha": "6342ecd17b3c26f5d27b33ff49a2ceedc206f140",
+  "exclude-paths": [
+    ".git",
+    ".idea",
+    ".github",
+    ".vscode"
+  ],
+  "release-type": "java",
+  "include-component-in-tag": false,
+  "include-v-in-tag": true,
+  "packages": {
+    ".": {
+      "package-name": "com.microsoft.graph.microsoft-graph",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "gradle.properties"
+        },
+        {
+          "type": "generic",
+          "path": "README.md"
+        },
+        {
+          "type": "generic",
+          "path": "src/main/java/com/microsoft/graph/info/Constants.java"
+        },
+        {
+          "type": "xml",
+          "path": "pom.xml",
+          "xpath": "//project/version"
+        }
+      ]
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}

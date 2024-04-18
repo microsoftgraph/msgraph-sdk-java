@@ -94,27 +94,3 @@ jobs:
             gradle.properties
             **/gradle/**
             Scripts/**
-
-  create_Tag:
-    needs: maven_Release
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    env:
-      RELEASE_TAG: ""
-    steps:
-      - uses: actions/checkout@v4
-      - name: Get Version
-        id: GetVersion
-        run: .\Scripts\getLatestVersion.ps1
-        shell: pwsh
-      - name: Create tag
-        uses: rickstaa/action-create-tag@v1.7.2
-        with:
-          tag: ${{ steps.GetVersion.outputs.tag }}
-      - name: Queue Git Release
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: Git Release
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          ref: ${{ steps.GetVersion.outputs.tag }}
