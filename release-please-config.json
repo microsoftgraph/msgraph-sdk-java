@@ -14,18 +14,9 @@
       "package-name": "com.microsoft.graph.microsoft-graph",
       "changelog-path": "CHANGELOG.md",
       "extra-files": [
-        {
-          "type": "generic",
-          "path": "gradle.properties"
-        },
-        {
-          "type": "generic",
-          "path": "README.md"
-        },
-        {
-          "type": "generic",
-          "path": "src/main/java/com/microsoft/graph/info/Constants.java"
-        },
+        "gradle.properties",
+        "README.md",
+        "src/main/java/com/microsoft/graph/info/Constants.java",
         {
           "type": "xml",
           "path": "pom.xml",
