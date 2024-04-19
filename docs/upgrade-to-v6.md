@@ -431,52 +431,8 @@ Using batched requests can make your code a lot faster, if you need to query sev
 ### Large File Upload Enhancements
 
 In v6 we have enhanced our large file upload experience by adding the ability to pause and resume large file uploads. This functionality is described in detail [here](https://learn.microsoft.com/en-us/graph/api/driveitem-createuploadsession?view=graph-rest-1.0&preserve-view=true).
-The sytax for uploading a large file has changed in v6, use the following example to get you started using the new LargeFileUpload task. 
-Large File Upload example:  
-```java
-//Initialize the file input stream and get the file size
-InputStream file = new FileInputStream("File-Path");
-long fileSize = file.available();
 
-// Set the DriveItemUploadableProperties
-// This is used to populate the request to create an upload session
-DriveItemUploadableProperties driveItemUploadableProperties = new DriveItemUploadableProperties();
-driveItemUploadableProperties.setName("HelloWorld.txt");
-driveItemUploadableProperties.setFileSize(fileSize);
-Map<String, Object> additionalData = new HashMap<>();
-additionalData.put("@microsoft.graph.conflictBehavior", "replace");
-driveItemUploadableProperties.setAdditionalData(additionalData);
-
-// Finish setting up the request body 
-CreateUploadSessionPostRequestBody uploadSessionPostRequestBody = new CreateUploadSessionPostRequestBody();
-uploadSessionPostRequestBody.setItem(driveItemUploadableProperties);
-
-// Create the upload session
-String myDriveId = graphClient.me().drive().get().getId();
-UploadSession uploadSession = graphClient.drives()
-                                        .byDriveId(myDriveId)
-                                        .items()
-                                        .byDriveItemId("root/Folder/HelloWorld.txt")
-                                        .createUploadSession().post(uploadSessionPostRequestBody);
-// Create the large file upload task
-LargeFileUploadTask<DriveItemUploadableProperties> uploadTask = 
-                                    new LargeFileUploadTask(graphClient.getRequestAdapter(), 
-                                        uploadSession, 
-                                        file, 
-                                        fileSize, 
-                                        DriveItemUploadableProperties::createFromDiscriminatorValue);
-try{
-    UploadResult<DriveItemUploadableProperties> uploadResult = uploadTask.upload();
-} catch(ApiException | InterruptedException exception) {
-    System.out.println(exception.getMessage());
-    
-
-}
-
-// If your application encounters a connection interruption or a 5.x.x HTTP status during upload, you can resume the upload.
-// Handle logic
-uploadTask.resume();
-```
+See the [docs](https://learn.microsoft.com/en-us/graph/sdks/large-file-upload?view=graph-rest-1.0&tabs=java) for Large File Upload examples.
 
 ### Per-Request Options
 
