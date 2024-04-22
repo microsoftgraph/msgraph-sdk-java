@@ -1,12 +1,12 @@
 {
-  "bootstrap-sha": "6342ecd17b3c26f5d27b33ff49a2ceedc206f140",
+  "bootstrap-sha": "ec09380911904bc7e58bf31bdb17e59a8e355b6c",
   "exclude-paths": [
     ".git",
     ".idea",
     ".github",
     ".vscode"
   ],
-  "release-type": "java",
+  "release-type": "simple",
   "include-component-in-tag": false,
   "include-v-in-tag": true,
   "packages": {
