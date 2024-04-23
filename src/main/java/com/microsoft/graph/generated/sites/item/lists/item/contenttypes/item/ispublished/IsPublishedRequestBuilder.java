@@ -35,19 +35,21 @@ public class IsPublishedRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/isPublished()", rawUrl);
     }
     /**
-     * Invoke function isPublished
+     * Check the publishing status of a contentType in a content type hub site.
      * @return a {@link IsPublishedGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-ispublished?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IsPublishedGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function isPublished
+     * Check the publishing status of a contentType in a content type hub site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IsPublishedGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-ispublished?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IsPublishedGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -57,7 +59,7 @@ public class IsPublishedRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IsPublishedGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function isPublished
+     * Check the publishing status of a contentType in a content type hub site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +67,7 @@ public class IsPublishedRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function isPublished
+     * Check the publishing status of a contentType in a content type hub site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

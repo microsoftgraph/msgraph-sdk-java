@@ -60,21 +60,19 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @return a {@link EdiscoverySearchCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearchCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoverySearchCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearchCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoverySearchCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new ediscoverySearch object.
+     * Create new navigation property to searches for security
      * @param body The request body
      * @return a {@link EdiscoverySearch}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearch post(@jakarta.annotation.Nonnull final EdiscoverySearch body) {
         return post(body, null);
     }
     /**
-     * Create a new ediscoverySearch object.
+     * Create new navigation property to searches for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoverySearch}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearch post(@jakarta.annotation.Nonnull final EdiscoverySearch body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoverySearch::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Returns a list of eDiscoverySearch objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new ediscoverySearch object.
+     * Create new navigation property to searches for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new ediscoverySearch object.
+     * Create new navigation property to searches for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return new SearchesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
+     * Returns a list of eDiscoverySearch objects associated with this case.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

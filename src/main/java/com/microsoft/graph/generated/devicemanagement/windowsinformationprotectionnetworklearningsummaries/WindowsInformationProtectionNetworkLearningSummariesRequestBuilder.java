@@ -60,21 +60,19 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsInformationProtectionNetworkLearningSummaries{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
+     * The windows information protection network learning summaries.
      * @return a {@link WindowsInformationProtectionNetworkLearningSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummaryCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
+     * The windows information protection network learning summaries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsInformationProtectionNetworkLearningSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummaryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionNetworkLearningSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new windowsInformationProtectionNetworkLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
      * @param body The request body
      * @return a {@link WindowsInformationProtectionNetworkLearningSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummary post(@jakarta.annotation.Nonnull final WindowsInformationProtectionNetworkLearningSummary body) {
         return post(body, null);
     }
     /**
-     * Create a new windowsInformationProtectionNetworkLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsInformationProtectionNetworkLearningSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummary post(@jakarta.annotation.Nonnull final WindowsInformationProtectionNetworkLearningSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionNetworkLearningSummary::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
+     * The windows information protection network learning summaries.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
+     * The windows information protection network learning summaries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return requestInfo;
     }
     /**
-     * Create a new windowsInformationProtectionNetworkLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new windowsInformationProtectionNetworkLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return new WindowsInformationProtectionNetworkLearningSummariesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
+     * The windows information protection network learning summaries.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

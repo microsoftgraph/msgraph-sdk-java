@@ -37,18 +37,16 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/accessAssignments/{delegatedAdminAccessAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a delegatedAdminAccessAssignment object.
+     * Delete navigation property accessAssignments for tenantRelationships
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a delegatedAdminAccessAssignment object.
+     * Delete navigation property accessAssignments for tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object.
+     * The access assignments associated with the delegated admin relationship.
      * @return a {@link DelegatedAdminAccessAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignment get() {
         return get(null);
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object.
+     * The access assignments associated with the delegated admin relationship.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminAccessAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object.
+     * Update the navigation property accessAssignments in tenantRelationships
      * @param body The request body
      * @return a {@link DelegatedAdminAccessAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignment patch(@jakarta.annotation.Nonnull final DelegatedAdminAccessAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object.
+     * Update the navigation property accessAssignments in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminAccessAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignment patch(@jakarta.annotation.Nonnull final DelegatedAdminAccessAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete a delegatedAdminAccessAssignment object.
+     * Delete navigation property accessAssignments for tenantRelationships
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a delegatedAdminAccessAssignment object.
+     * Delete navigation property accessAssignments for tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object.
+     * The access assignments associated with the delegated admin relationship.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object.
+     * The access assignments associated with the delegated admin relationship.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object.
+     * Update the navigation property accessAssignments in tenantRelationships
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminAccessAssignment object.
+     * Update the navigation property accessAssignments in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a delegatedAdminAccessAssignment object.
+     * The access assignments associated with the delegated admin relationship.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/historyDefinitions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Represents a collection of access review history data and the scopes used to collect that data.
      * @return a {@link AccessReviewHistoryDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Represents a collection of access review history data and the scopes used to collect that data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewHistoryDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewHistoryDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create new navigation property to historyDefinitions for identityGovernance
      * @param body The request body
      * @return a {@link AccessReviewHistoryDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryDefinition post(@jakarta.annotation.Nonnull final AccessReviewHistoryDefinition body) {
         return post(body, null);
     }
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create new navigation property to historyDefinitions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewHistoryDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryDefinition post(@jakarta.annotation.Nonnull final AccessReviewHistoryDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewHistoryDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Represents a collection of access review history data and the scopes used to collect that data.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Represents a collection of access review history data and the scopes used to collect that data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create new navigation property to historyDefinitions for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new accessReviewHistoryDefinition object.
+     * Create new navigation property to historyDefinitions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
         return new HistoryDefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+     * Represents a collection of access review history data and the scopes used to collect that data.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

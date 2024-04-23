@@ -69,21 +69,19 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of event objects.
+     * The group's calendar events.
      * @return a {@link EventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EventCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of event objects.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,23 +91,21 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new event.
+     * Create new navigation property to events for groups
      * @param body The request body
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Event post(@jakarta.annotation.Nonnull final Event body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new event.
+     * Create new navigation property to events for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Event post(@jakarta.annotation.Nonnull final Event body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -120,7 +116,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Event::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of event objects.
+     * The group's calendar events.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +124,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of event objects.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new event.
+     * Create new navigation property to events for groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +145,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new event.
+     * Create new navigation property to events for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -174,7 +170,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return new EventsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of event objects.
+     * The group's calendar events.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

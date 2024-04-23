@@ -69,21 +69,19 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * The task lists in the users mailbox.
      * @return a {@link TodoTaskListCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TodoTaskListCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * The task lists in the users mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TodoTaskListCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TodoTaskListCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,23 +91,21 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TodoTaskListCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new lists object.
+     * Create new navigation property to lists for users
      * @param body The request body
      * @return a {@link TodoTaskList}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TodoTaskList post(@jakarta.annotation.Nonnull final TodoTaskList body) {
         return post(body, null);
     }
     /**
-     * Create a new lists object.
+     * Create new navigation property to lists for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TodoTaskList}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TodoTaskList post(@jakarta.annotation.Nonnull final TodoTaskList body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -120,7 +116,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TodoTaskList::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * The task lists in the users mailbox.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +124,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * The task lists in the users mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new lists object.
+     * Create new navigation property to lists for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +145,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new lists object.
+     * Create new navigation property to lists for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -174,7 +170,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return new ListsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * The task lists in the users mailbox.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -46,18 +46,16 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/partners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
+     * Delete navigation property partners for policies
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
+     * Delete navigation property partners for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration.
+     * Defines partner-specific configurations for external Microsoft Entra organizations.
      * @return a {@link CrossTenantAccessPolicyConfigurationPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration.
+     * Defines partner-specific configurations for external Microsoft Entra organizations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantAccessPolicyConfigurationPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,23 +86,21 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a partner-specific configuration.
+     * Update the navigation property partners in policies
      * @param body The request body
      * @return a {@link CrossTenantAccessPolicyConfigurationPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner patch(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a partner-specific configuration.
+     * Update the navigation property partners in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantAccessPolicyConfigurationPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner patch(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -117,7 +111,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
+     * Delete navigation property partners for policies
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +119,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
+     * Delete navigation property partners for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +131,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration.
+     * Defines partner-specific configurations for external Microsoft Entra organizations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +139,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration.
+     * Defines partner-specific configurations for external Microsoft Entra organizations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a partner-specific configuration.
+     * Update the navigation property partners in policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a partner-specific configuration.
+     * Update the navigation property partners in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -197,7 +191,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a partner-specific configuration.
+     * Defines partner-specific configurations for external Microsoft Entra organizations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

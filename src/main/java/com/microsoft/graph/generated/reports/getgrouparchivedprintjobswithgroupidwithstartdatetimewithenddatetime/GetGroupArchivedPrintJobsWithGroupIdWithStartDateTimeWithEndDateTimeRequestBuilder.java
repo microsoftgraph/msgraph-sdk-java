@@ -43,19 +43,21 @@ public class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTim
         super(requestAdapter, "{+baseurl}/reports/getGroupArchivedPrintJobs(groupId='{groupId}',startDateTime={startDateTime},endDateTime={endDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getGroupArchivedPrintJobs
+     * Get a list of archived print jobs for a particular group.
      * @return a {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reports-getgrouparchivedprintjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getGroupArchivedPrintJobs
+     * Get a list of archived print jobs for a particular group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reports-getgrouparchivedprintjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -65,7 +67,7 @@ public class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTim
         return this.requestAdapter.send(requestInfo, errorMapping, GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getGroupArchivedPrintJobs
+     * Get a list of archived print jobs for a particular group.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +75,7 @@ public class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTim
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getGroupArchivedPrintJobs
+     * Get a list of archived print jobs for a particular group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -95,7 +97,7 @@ public class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTim
         return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getGroupArchivedPrintJobs
+     * Get a list of archived print jobs for a particular group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

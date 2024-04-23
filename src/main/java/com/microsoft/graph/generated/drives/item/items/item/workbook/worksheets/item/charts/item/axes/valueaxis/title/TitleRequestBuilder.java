@@ -64,21 +64,19 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of chartaxistitle object.
+     * Represents the axis title. Read-only.
      * @return a {@link WorkbookChartAxisTitle}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartaxistitle-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisTitle get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of chartaxistitle object.
+     * Represents the axis title. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartAxisTitle}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartaxistitle-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisTitle get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,23 +86,21 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartAxisTitle::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of chartaxistitle object.
+     * Update the navigation property title in drives
      * @param body The request body
      * @return a {@link WorkbookChartAxisTitle}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartaxistitle-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisTitle patch(@jakarta.annotation.Nonnull final WorkbookChartAxisTitle body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of chartaxistitle object.
+     * Update the navigation property title in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartAxisTitle}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartaxistitle-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartAxisTitle patch(@jakarta.annotation.Nonnull final WorkbookChartAxisTitle body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -135,7 +131,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of chartaxistitle object.
+     * Represents the axis title. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +139,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of chartaxistitle object.
+     * Represents the axis title. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chartaxistitle object.
+     * Update the navigation property title in drives
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -164,7 +160,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chartaxistitle object.
+     * Update the navigation property title in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -195,7 +191,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of chartaxistitle object.
+     * Represents the axis title. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

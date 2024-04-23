@@ -68,21 +68,19 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenIssuancePolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * Get tokenIssuancePolicies from applications
      * @return a {@link TokenIssuancePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TokenIssuancePolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * Get tokenIssuancePolicies from applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TokenIssuancePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TokenIssuancePolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +90,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TokenIssuancePolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * Get tokenIssuancePolicies from applications
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +98,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * Get tokenIssuancePolicies from applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +120,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return new TokenIssuancePoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * Get tokenIssuancePolicies from applications
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

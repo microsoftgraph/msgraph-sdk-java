@@ -37,18 +37,16 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningCourseActivities/{learningCourseActivity%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete navigation property learningCourseActivities for employeeExperience
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete navigation property learningCourseActivities for employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -79,23 +77,21 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, LearningCourseActivity::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the navigation property learningCourseActivities in employeeExperience
      * @param body The request body
      * @return a {@link LearningCourseActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningCourseActivity patch(@jakarta.annotation.Nonnull final LearningCourseActivity body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the navigation property learningCourseActivities in employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LearningCourseActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningCourseActivity patch(@jakarta.annotation.Nonnull final LearningCourseActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -106,7 +102,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, LearningCourseActivity::createFromDiscriminatorValue);
     }
     /**
-     * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete navigation property learningCourseActivities for employeeExperience
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +110,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete navigation property learningCourseActivities for employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the navigation property learningCourseActivities in employeeExperience
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the navigation property learningCourseActivities in employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

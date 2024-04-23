@@ -37,21 +37,19 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/alerts/{alert%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of an alert object.
+     * Get alerts from security
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Alert get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an alert object.
+     * Get alerts from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Alert get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,23 +59,21 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Alert::createFromDiscriminatorValue);
     }
     /**
-     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
+     * Update the navigation property alerts in security
      * @param body The request body
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Alert patch(@jakarta.annotation.Nonnull final Alert body) {
         return patch(body, null);
     }
     /**
-     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
+     * Update the navigation property alerts in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Alert patch(@jakarta.annotation.Nonnull final Alert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -88,7 +84,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Alert::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of an alert object.
+     * Get alerts from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +92,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an alert object.
+     * Get alerts from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -108,7 +104,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
+     * Update the navigation property alerts in security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -117,7 +113,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
+     * Update the navigation property alerts in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -142,7 +138,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return new AlertItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of an alert object.
+     * Get alerts from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

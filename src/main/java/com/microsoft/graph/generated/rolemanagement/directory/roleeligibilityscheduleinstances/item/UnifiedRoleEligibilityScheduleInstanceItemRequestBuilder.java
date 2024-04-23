@@ -91,21 +91,19 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the instance of a role eligibility.
+     * Instances for role eligibility requests.
      * @return a {@link UnifiedRoleEligibilityScheduleInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance get() {
         return get(null);
     }
     /**
-     * Get the instance of a role eligibility.
+     * Instances for role eligibility requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilityScheduleInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +158,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Get the instance of a role eligibility.
+     * Instances for role eligibility requests.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -168,7 +166,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Get the instance of a role eligibility.
+     * Instances for role eligibility requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -220,7 +218,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the instance of a role eligibility.
+     * Instances for role eligibility requests.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -71,21 +71,19 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new DeltaWithTokenRequestBuilder(pathParameters, requestAdapter, token);
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @return a {@link ListItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListItemCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ListItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,23 +93,21 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ListItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for shares
      * @param body The request body
      * @return a {@link ListItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListItem post(@jakarta.annotation.Nonnull final ListItem body) {
         return post(body, null);
     }
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ListItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListItem post(@jakarta.annotation.Nonnull final ListItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -122,7 +118,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ListItem::createFromDiscriminatorValue);
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +126,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +138,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for shares
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +147,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -176,7 +172,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new ItemsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,21 +55,19 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
+     * Retrieve a list of daily print usage summaries, grouped by user.
      * @return a {@link PrintUsageByUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintUsageByUser get() {
         return get(null);
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
+     * Retrieve a list of daily print usage summaries, grouped by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintUsageByUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintUsageByUser get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
+     * Retrieve a list of daily print usage summaries, grouped by user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
+     * Retrieve a list of daily print usage summaries, grouped by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
+     * Retrieve a list of daily print usage summaries, grouped by user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

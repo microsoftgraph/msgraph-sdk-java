@@ -60,21 +60,19 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/people/profileCardProperties{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      * @return a {@link ProfileCardPropertyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfileCardPropertyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfileCardPropertyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfileCardPropertyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfileCardPropertyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API.
+     * Create new navigation property to profileCardProperties for admin
      * @param body The request body
      * @return a {@link ProfileCardProperty}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-post-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfileCardProperty post(@jakarta.annotation.Nonnull final ProfileCardProperty body) {
         return post(body, null);
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API.
+     * Create new navigation property to profileCardProperties for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfileCardProperty}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-post-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfileCardProperty post(@jakarta.annotation.Nonnull final ProfileCardProperty body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfileCardProperty::createFromDiscriminatorValue);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API.
+     * Create new navigation property to profileCardProperties for admin
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information about how to add properties to the profile card for an organization, see Add or remove custom attributes on a profile card using the profile card API.
+     * Create new navigation property to profileCardProperties for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return new ProfileCardPropertiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

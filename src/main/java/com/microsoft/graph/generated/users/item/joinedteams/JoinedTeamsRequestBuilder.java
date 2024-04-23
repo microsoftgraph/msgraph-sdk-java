@@ -69,21 +69,19 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of.
+     * Get joinedTeams from users
      * @return a {@link TeamCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of.
+     * Get joinedTeams from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +116,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of.
+     * Get joinedTeams from users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +124,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of.
+     * Get joinedTeams from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +170,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
         return new JoinedTeamsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the teams in Microsoft Teams that the user is a direct member of.
+     * Get joinedTeams from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

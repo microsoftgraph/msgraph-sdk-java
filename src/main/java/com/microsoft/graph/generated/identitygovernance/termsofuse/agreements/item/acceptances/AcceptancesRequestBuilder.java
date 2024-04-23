@@ -60,21 +60,19 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}/acceptances{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Read-only. Information about acceptances of this agreement.
      * @return a {@link AgreementAcceptanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AgreementAcceptanceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Read-only. Information about acceptances of this agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AgreementAcceptanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AgreementAcceptanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementAcceptance::createFromDiscriminatorValue);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Read-only. Information about acceptances of this agreement.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Read-only. Information about acceptances of this agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
         return new AcceptancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Read-only. Information about acceptances of this agreement.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

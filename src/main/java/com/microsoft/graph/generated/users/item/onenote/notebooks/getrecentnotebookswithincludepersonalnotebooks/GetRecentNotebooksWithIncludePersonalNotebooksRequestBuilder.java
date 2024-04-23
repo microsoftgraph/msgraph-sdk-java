@@ -38,19 +38,21 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extend
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks={includePersonalNotebooks}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getRecentNotebooks
+     * Get a list of recentNotebook instances that have been accessed by the signed-in user.
      * @return a {@link GetRecentNotebooksWithIncludePersonalNotebooksGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/notebook-getrecentnotebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetRecentNotebooksWithIncludePersonalNotebooksGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getRecentNotebooks
+     * Get a list of recentNotebook instances that have been accessed by the signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetRecentNotebooksWithIncludePersonalNotebooksGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/notebook-getrecentnotebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetRecentNotebooksWithIncludePersonalNotebooksGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extend
         return this.requestAdapter.send(requestInfo, errorMapping, GetRecentNotebooksWithIncludePersonalNotebooksGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getRecentNotebooks
+     * Get a list of recentNotebook instances that have been accessed by the signed-in user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getRecentNotebooks
+     * Get a list of recentNotebook instances that have been accessed by the signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +92,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extend
         return new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getRecentNotebooks
+     * Get a list of recentNotebook instances that have been accessed by the signed-in user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

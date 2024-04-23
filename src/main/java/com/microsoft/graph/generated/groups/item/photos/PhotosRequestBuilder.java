@@ -50,21 +50,19 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @return a {@link ProfilePhotoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfilePhotoCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfilePhotoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfilePhotoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -74,7 +72,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfilePhotoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -82,7 +80,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -104,7 +102,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return new PhotosRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

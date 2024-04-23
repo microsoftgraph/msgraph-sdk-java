@@ -60,21 +60,19 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/conversations{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the list of conversations in this group.
+     * The group's conversations.
      * @return a {@link ConversationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the list of conversations in this group.
+     * The group's conversations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConversationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create new navigation property to conversations for groups
      * @param body The request body
      * @return a {@link Conversation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Conversation post(@jakarta.annotation.Nonnull final Conversation body) {
         return post(body, null);
     }
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create new navigation property to conversations for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Conversation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Conversation post(@jakarta.annotation.Nonnull final Conversation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Conversation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of conversations in this group.
+     * The group's conversations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of conversations in this group.
+     * The group's conversations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create new navigation property to conversations for groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create new navigation property to conversations for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return new ConversationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of conversations in this group.
+     * The group's conversations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

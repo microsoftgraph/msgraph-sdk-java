@@ -119,18 +119,16 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/items/{listItem%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Removes an item from a [list][].
+     * Delete navigation property items for sites
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Removes an item from a [list][].
+     * Delete navigation property items for sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -139,21 +137,19 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * All items contained in the list.
      * @return a {@link ListItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListItem get() {
         return get(null);
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * All items contained in the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ListItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -202,7 +198,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ListItem::createFromDiscriminatorValue);
     }
     /**
-     * Removes an item from a [list][].
+     * Delete navigation property items for sites
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -210,7 +206,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Removes an item from a [list][].
+     * Delete navigation property items for sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -222,7 +218,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * All items contained in the list.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -230,7 +226,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * All items contained in the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -282,7 +278,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * All items contained in the list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

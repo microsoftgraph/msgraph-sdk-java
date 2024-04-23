@@ -57,18 +57,16 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
+     * Delete navigation property learningProviders for employeeExperience
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
+     * Delete navigation property learningProviders for employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -77,21 +75,19 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a learningProvider object.
+     * A collection of learning providers.
      * @return a {@link LearningProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningProvider get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a learningProvider object.
+     * A collection of learning providers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LearningProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningProvider get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,23 +117,21 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
     }
     /**
-     * Update the properties of a learningProvider object.
+     * Update the navigation property learningProviders in employeeExperience
      * @param body The request body
      * @return a {@link LearningProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningProvider patch(@jakarta.annotation.Nonnull final LearningProvider body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a learningProvider object.
+     * Update the navigation property learningProviders in employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LearningProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningProvider patch(@jakarta.annotation.Nonnull final LearningProvider body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -148,7 +142,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LearningProvider::createFromDiscriminatorValue);
     }
     /**
-     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
+     * Delete navigation property learningProviders for employeeExperience
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -156,7 +150,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
+     * Delete navigation property learningProviders for employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -168,7 +162,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a learningProvider object.
+     * A collection of learning providers.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -176,7 +170,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a learningProvider object.
+     * A collection of learning providers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -188,7 +182,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a learningProvider object.
+     * Update the navigation property learningProviders in employeeExperience
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -197,7 +191,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a learningProvider object.
+     * Update the navigation property learningProviders in employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -228,7 +222,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a learningProvider object.
+     * A collection of learning providers.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

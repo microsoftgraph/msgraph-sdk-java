@@ -60,21 +60,19 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/extensionProperties{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @return a {@link ExtensionPropertyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExtensionPropertyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExtensionPropertyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExtensionPropertyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExtensionPropertyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param body The request body
      * @return a {@link ExtensionProperty}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExtensionProperty post(@jakarta.annotation.Nonnull final ExtensionProperty body) {
         return post(body, null);
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExtensionProperty}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExtensionProperty post(@jakarta.annotation.Nonnull final ExtensionProperty body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExtensionProperty::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
         return new ExtensionPropertiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

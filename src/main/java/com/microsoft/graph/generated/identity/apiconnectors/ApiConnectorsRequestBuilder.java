@@ -60,21 +60,19 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/apiConnectors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @return a {@link IdentityApiConnectorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityApiConnectorCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityApiConnectorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityApiConnectorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityApiConnectorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param body The request body
      * @return a {@link IdentityApiConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityApiConnector post(@jakarta.annotation.Nonnull final IdentityApiConnector body) {
         return post(body, null);
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityApiConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityApiConnector post(@jakarta.annotation.Nonnull final IdentityApiConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityApiConnector::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
         return new ApiConnectorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

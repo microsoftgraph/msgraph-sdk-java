@@ -69,21 +69,19 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of worksheet objects.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @return a {@link WorkbookWorksheetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of worksheet objects.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookWorksheetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +116,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookWorksheet::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of worksheet objects.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +124,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of worksheet objects.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +170,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
         return new WorksheetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of worksheet objects.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

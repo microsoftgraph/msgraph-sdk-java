@@ -60,21 +60,19 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/deviceManagement/notificationMessageTemplates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the notificationMessageTemplate objects.
+     * The Notification Message Templates.
      * @return a {@link NotificationMessageTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NotificationMessageTemplateCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the notificationMessageTemplate objects.
+     * The Notification Message Templates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link NotificationMessageTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NotificationMessageTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, NotificationMessageTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new notificationMessageTemplate object.
+     * Create new navigation property to notificationMessageTemplates for deviceManagement
      * @param body The request body
      * @return a {@link NotificationMessageTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NotificationMessageTemplate post(@jakarta.annotation.Nonnull final NotificationMessageTemplate body) {
         return post(body, null);
     }
     /**
-     * Create a new notificationMessageTemplate object.
+     * Create new navigation property to notificationMessageTemplates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link NotificationMessageTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NotificationMessageTemplate post(@jakarta.annotation.Nonnull final NotificationMessageTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, NotificationMessageTemplate::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the notificationMessageTemplate objects.
+     * The Notification Message Templates.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the notificationMessageTemplate objects.
+     * The Notification Message Templates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new notificationMessageTemplate object.
+     * Create new navigation property to notificationMessageTemplates for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new notificationMessageTemplate object.
+     * Create new navigation property to notificationMessageTemplates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
         return new NotificationMessageTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the notificationMessageTemplate objects.
+     * The Notification Message Templates.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

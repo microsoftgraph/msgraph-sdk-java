@@ -36,19 +36,21 @@ public class GetOrderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/getOrder()", rawUrl);
     }
     /**
-     * Invoke function getOrder
+     * Get the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @return a {@link AssignmentOrder}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-getorder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AssignmentOrder get() {
         return get(null);
     }
     /**
-     * Invoke function getOrder
+     * Get the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AssignmentOrder}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-getorder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AssignmentOrder get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetOrderRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AssignmentOrder::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getOrder
+     * Get the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetOrderRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getOrder
+     * Get the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

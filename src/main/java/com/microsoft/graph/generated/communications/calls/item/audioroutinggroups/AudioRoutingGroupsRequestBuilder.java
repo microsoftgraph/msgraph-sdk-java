@@ -60,21 +60,19 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/audioRoutingGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects.
+     * Get audioRoutingGroups from communications
      * @return a {@link AudioRoutingGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AudioRoutingGroupCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects.
+     * Get audioRoutingGroups from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AudioRoutingGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AudioRoutingGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AudioRoutingGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new audioRoutingGroup.
+     * Create new navigation property to audioRoutingGroups for communications
      * @param body The request body
      * @return a {@link AudioRoutingGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AudioRoutingGroup post(@jakarta.annotation.Nonnull final AudioRoutingGroup body) {
         return post(body, null);
     }
     /**
-     * Create a new audioRoutingGroup.
+     * Create new navigation property to audioRoutingGroups for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AudioRoutingGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AudioRoutingGroup post(@jakarta.annotation.Nonnull final AudioRoutingGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AudioRoutingGroup::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects.
+     * Get audioRoutingGroups from communications
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects.
+     * Get audioRoutingGroups from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new audioRoutingGroup.
+     * Create new navigation property to audioRoutingGroups for communications
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new audioRoutingGroup.
+     * Create new navigation property to audioRoutingGroups for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return new AudioRoutingGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of audioRoutingGroup objects.
+     * Get audioRoutingGroups from communications
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

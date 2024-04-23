@@ -60,21 +60,19 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/acronyms{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the acronym objects and their properties.
+     * Administrative answer in Microsoft Search results to define common acronyms in an organization.
      * @return a {@link AcronymCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-list-acronyms?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AcronymCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the acronym objects and their properties.
+     * Administrative answer in Microsoft Search results to define common acronyms in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AcronymCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-list-acronyms?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AcronymCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AcronymCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new acronym object.
+     * Create new navigation property to acronyms for search
      * @param body The request body
      * @return a {@link Acronym}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-post-acronyms?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Acronym post(@jakarta.annotation.Nonnull final Acronym body) {
         return post(body, null);
     }
     /**
-     * Create a new acronym object.
+     * Create new navigation property to acronyms for search
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Acronym}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-post-acronyms?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Acronym post(@jakarta.annotation.Nonnull final Acronym body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Acronym::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the acronym objects and their properties.
+     * Administrative answer in Microsoft Search results to define common acronyms in an organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the acronym objects and their properties.
+     * Administrative answer in Microsoft Search results to define common acronyms in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new acronym object.
+     * Create new navigation property to acronyms for search
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new acronym object.
+     * Create new navigation property to acronyms for search
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
         return new AcronymsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the acronym objects and their properties.
+     * Administrative answer in Microsoft Search results to define common acronyms in an organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

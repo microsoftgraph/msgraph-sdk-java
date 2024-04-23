@@ -38,19 +38,21 @@ public class GetSharePointSiteUsageStorageWithPeriodRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/reports/getSharePointSiteUsageStorage(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getSharePointSiteUsageStorage
+     * Get the trend of storage allocated and consumed during the reporting period.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getsharepointsiteusagestorage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getSharePointSiteUsageStorage
+     * Get the trend of storage allocated and consumed during the reporting period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getsharepointsiteusagestorage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetSharePointSiteUsageStorageWithPeriodRequestBuilder extends BaseR
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getSharePointSiteUsageStorage
+     * Get the trend of storage allocated and consumed during the reporting period.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetSharePointSiteUsageStorageWithPeriodRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getSharePointSiteUsageStorage
+     * Get the trend of storage allocated and consumed during the reporting period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -71,21 +71,19 @@ public class AssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * The assignment schedules to activate a just-in-time access.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentScheduleCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * The assignment schedules to activate a just-in-time access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentScheduleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +118,7 @@ public class AssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentSchedule::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * The assignment schedules to activate a just-in-time access.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +126,7 @@ public class AssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * The assignment schedules to activate a just-in-time access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -174,7 +172,7 @@ public class AssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return new AssignmentSchedulesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentSchedule objects and their properties.
+     * The assignment schedules to activate a just-in-time access.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

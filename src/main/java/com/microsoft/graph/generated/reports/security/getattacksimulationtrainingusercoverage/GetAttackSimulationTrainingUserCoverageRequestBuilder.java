@@ -36,19 +36,21 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/reports/security/getAttackSimulationTrainingUserCoverage(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getAttackSimulationTrainingUserCoverage
+     * List training coverage for tenant users in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @return a {@link GetAttackSimulationTrainingUserCoverageGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationtrainingusercoverage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAttackSimulationTrainingUserCoverageGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getAttackSimulationTrainingUserCoverage
+     * List training coverage for tenant users in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAttackSimulationTrainingUserCoverageGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationtrainingusercoverage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAttackSimulationTrainingUserCoverageGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, GetAttackSimulationTrainingUserCoverageGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getAttackSimulationTrainingUserCoverage
+     * List training coverage for tenant users in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getAttackSimulationTrainingUserCoverage
+     * List training coverage for tenant users in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
         return new GetAttackSimulationTrainingUserCoverageRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getAttackSimulationTrainingUserCoverage
+     * List training coverage for tenant users in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -78,21 +78,19 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyUsers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the riskyUser objects and their properties.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @return a {@link RiskyUserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyUserCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the riskyUser objects and their properties.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RiskyUserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyUserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +125,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyUser::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the riskyUser objects and their properties.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +133,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the riskyUser objects and their properties.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +179,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
         return new RiskyUsersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the riskyUser objects and their properties.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

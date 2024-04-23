@@ -71,21 +71,19 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
+     * Schedules for role eligibility operations.
      * @return a {@link UnifiedRoleEligibilityScheduleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
+     * Schedules for role eligibility operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilityScheduleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +118,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue);
     }
     /**
-     * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
+     * Schedules for role eligibility operations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +126,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
+     * Schedules for role eligibility operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -174,7 +172,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
         return new RoleEligibilitySchedulesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
+     * Schedules for role eligibility operations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

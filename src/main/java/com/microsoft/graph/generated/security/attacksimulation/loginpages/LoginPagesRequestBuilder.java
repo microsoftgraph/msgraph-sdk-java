@@ -60,21 +60,19 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/loginPages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the loginPage objects and their properties.
+     * Represents an attack simulation training login page.
      * @return a {@link LoginPageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LoginPageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the loginPage objects and their properties.
+     * Represents an attack simulation training login page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LoginPageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LoginPageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LoginPage::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the loginPage objects and their properties.
+     * Represents an attack simulation training login page.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the loginPage objects and their properties.
+     * Represents an attack simulation training login page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return new LoginPagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the loginPage objects and their properties.
+     * Represents an attack simulation training login page.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

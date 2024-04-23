@@ -46,18 +46,16 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/pinnedMessages/{pinnedChatMessageInfo%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Unpin a message from a chat.
+     * Delete navigation property pinnedMessages for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Unpin a message from a chat.
+     * Delete navigation property pinnedMessages for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -113,7 +111,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, PinnedChatMessageInfo::createFromDiscriminatorValue);
     }
     /**
-     * Unpin a message from a chat.
+     * Delete navigation property pinnedMessages for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +119,7 @@ public class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Unpin a message from a chat.
+     * Delete navigation property pinnedMessages for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

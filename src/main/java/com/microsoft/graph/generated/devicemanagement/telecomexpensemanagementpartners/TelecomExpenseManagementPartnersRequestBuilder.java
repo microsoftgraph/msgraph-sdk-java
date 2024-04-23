@@ -60,21 +60,19 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/deviceManagement/telecomExpenseManagementPartners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the telecomExpenseManagementPartner objects.
+     * The telecom expense management partners.
      * @return a {@link TelecomExpenseManagementPartnerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartnerCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the telecomExpenseManagementPartner objects.
+     * The telecom expense management partners.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TelecomExpenseManagementPartnerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartnerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, TelecomExpenseManagementPartnerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new telecomExpenseManagementPartner object.
+     * Create new navigation property to telecomExpenseManagementPartners for deviceManagement
      * @param body The request body
      * @return a {@link TelecomExpenseManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartner post(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body) {
         return post(body, null);
     }
     /**
-     * Create a new telecomExpenseManagementPartner object.
+     * Create new navigation property to telecomExpenseManagementPartners for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TelecomExpenseManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartner post(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, TelecomExpenseManagementPartner::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the telecomExpenseManagementPartner objects.
+     * The telecom expense management partners.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the telecomExpenseManagementPartner objects.
+     * The telecom expense management partners.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Create a new telecomExpenseManagementPartner object.
+     * Create new navigation property to telecomExpenseManagementPartners for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new telecomExpenseManagementPartner object.
+     * Create new navigation property to telecomExpenseManagementPartners for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
         return new TelecomExpenseManagementPartnersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the telecomExpenseManagementPartner objects.
+     * The telecom expense management partners.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -37,21 +37,19 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/lastIndexOperation{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      * @return a {@link EdiscoveryIndexOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-lastindexoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryIndexOperation get() {
         return get(null);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryIndexOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-lastindexoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryIndexOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,7 +59,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryIndexOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +67,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +89,7 @@ public class LastIndexOperationRequestBuilder extends BaseRequestBuilder {
         return new LastIndexOperationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
+     * Operation entity that represents the latest indexing for the custodian.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

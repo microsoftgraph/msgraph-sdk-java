@@ -60,21 +60,19 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/connectors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of print connectors.
+     * The list of available print connectors.
      * @return a {@link PrintConnectorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintConnectorCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of print connectors.
+     * The list of available print connectors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintConnectorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintConnectorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintConnector::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of print connectors.
+     * The list of available print connectors.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of print connectors.
+     * The list of available print connectors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
         return new ConnectorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of print connectors.
+     * The list of available print connectors.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

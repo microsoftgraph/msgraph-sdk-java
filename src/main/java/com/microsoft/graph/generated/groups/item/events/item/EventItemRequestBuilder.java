@@ -136,18 +136,16 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events/{event%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete an event object.
+     * Delete navigation property events for groups
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-event?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an event object.
+     * Delete navigation property events for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-event?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -156,21 +154,19 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get an event object.
+     * The group's calendar events.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-get-event?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Event get() {
         return get(null);
     }
     /**
-     * Get an event object.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-get-event?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Event get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -205,7 +201,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Event::createFromDiscriminatorValue);
     }
     /**
-     * Delete an event object.
+     * Delete navigation property events for groups
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -213,7 +209,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an event object.
+     * Delete navigation property events for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -225,7 +221,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get an event object.
+     * The group's calendar events.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -233,7 +229,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an event object.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -285,7 +281,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an event object.
+     * The group's calendar events.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

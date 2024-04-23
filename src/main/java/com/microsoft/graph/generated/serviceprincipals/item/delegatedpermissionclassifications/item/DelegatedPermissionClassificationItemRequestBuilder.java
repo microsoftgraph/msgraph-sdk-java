@@ -37,18 +37,16 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/delegatedPermissionClassifications/{delegatedPermissionClassification%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
+     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
+     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -104,7 +102,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedPermissionClassification::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
+     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +110,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
+     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

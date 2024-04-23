@@ -60,21 +60,19 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      * @return a {@link BookingStaffMemberBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingStaffMemberBaseCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingStaffMemberBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingStaffMemberBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingStaffMemberBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness.
+     * Create new navigation property to staffMembers for solutions
      * @param body The request body
      * @return a {@link BookingStaffMemberBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingStaffMemberBase post(@jakarta.annotation.Nonnull final BookingStaffMemberBase body) {
         return post(body, null);
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness.
+     * Create new navigation property to staffMembers for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingStaffMemberBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingStaffMemberBase post(@jakarta.annotation.Nonnull final BookingStaffMemberBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingStaffMemberBase::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness.
+     * Create new navigation property to staffMembers for solutions
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingStaffMember in the specified bookingBusiness.
+     * Create new navigation property to staffMembers for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
         return new StaffMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

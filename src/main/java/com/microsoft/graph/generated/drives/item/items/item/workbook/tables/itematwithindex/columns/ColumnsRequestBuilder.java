@@ -38,21 +38,19 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/itemAt(index={index})/columns{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      * @return a {@link WorkbookTableColumnCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableColumnCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookTableColumnCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableColumnCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -62,23 +60,21 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableColumnCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Create new navigation property to columns for drives
      * @param body The request body
      * @return a {@link WorkbookTableColumn}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableColumn post(@jakarta.annotation.Nonnull final WorkbookTableColumn body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Create new navigation property to columns for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookTableColumn}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTableColumn post(@jakarta.annotation.Nonnull final WorkbookTableColumn body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -89,7 +85,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTableColumn::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +93,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -109,7 +105,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Create new navigation property to columns for drives
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -118,7 +114,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new TableColumn.
+     * Create new navigation property to columns for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -143,7 +139,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of tablecolumn objects.
+     * Represents a collection of all the columns in the table. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

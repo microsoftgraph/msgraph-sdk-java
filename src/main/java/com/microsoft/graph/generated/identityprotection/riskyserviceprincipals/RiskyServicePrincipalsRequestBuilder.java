@@ -78,21 +78,19 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Microsoft Entra service principals that are at risk.
      * @return a {@link RiskyServicePrincipalCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipalCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Microsoft Entra service principals that are at risk.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RiskyServicePrincipalCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-riskyserviceprincipals?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipalCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +125,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyServicePrincipal::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Microsoft Entra service principals that are at risk.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +133,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Microsoft Entra service principals that are at risk.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +179,7 @@ public class RiskyServicePrincipalsRequestBuilder extends BaseRequestBuilder {
         return new RiskyServicePrincipalsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of riskyServicePrincipal objects.
+     * Microsoft Entra service principals that are at risk.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

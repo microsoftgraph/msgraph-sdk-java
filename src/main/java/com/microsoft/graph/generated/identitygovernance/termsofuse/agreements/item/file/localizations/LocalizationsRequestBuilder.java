@@ -60,21 +60,19 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}/file/localizations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * The localized version of the terms of use agreement files attached to the agreement.
      * @return a {@link AgreementFileLocalizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AgreementFileLocalizationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * The localized version of the terms of use agreement files attached to the agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AgreementFileLocalizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AgreementFileLocalizationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementFileLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * The localized version of the terms of use agreement files attached to the agreement.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * The localized version of the terms of use agreement files attached to the agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return new LocalizationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the default and localized agreement files.
+     * The localized version of the terms of use agreement files attached to the agreement.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

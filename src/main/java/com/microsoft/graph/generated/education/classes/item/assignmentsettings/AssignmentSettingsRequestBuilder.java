@@ -86,23 +86,21 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignmentSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the navigation property assignmentSettings in education
      * @param body The request body
      * @return a {@link EducationAssignmentSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentSettings patch(@jakarta.annotation.Nonnull final EducationAssignmentSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the navigation property assignmentSettings in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationAssignmentSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentSettings patch(@jakarta.annotation.Nonnull final EducationAssignmentSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -153,7 +151,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the navigation property assignmentSettings in education
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -162,7 +160,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the navigation property assignmentSettings in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

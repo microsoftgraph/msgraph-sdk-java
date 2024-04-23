@@ -69,21 +69,19 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the educationSchool objects and their properties.
+     * Get schools from education
      * @return a {@link EducationSchoolCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSchoolCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the educationSchool objects and their properties.
+     * Get schools from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSchoolCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSchoolCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,23 +91,21 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSchoolCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new educationSchool object.
+     * Create new navigation property to schools for education
      * @param body The request body
      * @return a {@link EducationSchool}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSchool post(@jakarta.annotation.Nonnull final EducationSchool body) {
         return post(body, null);
     }
     /**
-     * Create a new educationSchool object.
+     * Create new navigation property to schools for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSchool}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSchool post(@jakarta.annotation.Nonnull final EducationSchool body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -120,7 +116,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSchool::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the educationSchool objects and their properties.
+     * Get schools from education
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +124,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the educationSchool objects and their properties.
+     * Get schools from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new educationSchool object.
+     * Create new navigation property to schools for education
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +145,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new educationSchool object.
+     * Create new navigation property to schools for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -174,7 +170,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
         return new SchoolsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the educationSchool objects and their properties.
+     * Get schools from education
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -69,21 +69,19 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}/childFolders/{contactFolder%2Did1}/contacts{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * The contacts in the folder. Navigation property. Read-only. Nullable.
      * @return a {@link ContactCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-list-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContactCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * The contacts in the folder. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContactCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-list-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContactCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,23 +91,21 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContactCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Create new navigation property to contacts for users
      * @param body The request body
      * @return a {@link Contact}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Contact post(@jakarta.annotation.Nonnull final Contact body) {
         return post(body, null);
     }
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Create new navigation property to contacts for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Contact}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Contact post(@jakarta.annotation.Nonnull final Contact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -120,7 +116,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Contact::createFromDiscriminatorValue);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * The contacts in the folder. Navigation property. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +124,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * The contacts in the folder. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Create new navigation property to contacts for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +145,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * Create new navigation property to contacts for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -174,7 +170,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return new ContactsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a contact collection from the default Contacts folder of the signed-in user (.../me/contacts), or from the specified contact folder.
+     * The contacts in the folder. Navigation property. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

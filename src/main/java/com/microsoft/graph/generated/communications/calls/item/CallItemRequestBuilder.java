@@ -208,18 +208,16 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * Delete navigation property calls for communications
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * Delete navigation property calls for communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -228,21 +226,19 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Get calls from communications
      * @return a {@link Call}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Call get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Get calls from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Call}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Call get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -277,7 +273,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Call::createFromDiscriminatorValue);
     }
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * Delete navigation property calls for communications
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -285,7 +281,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
+     * Delete navigation property calls for communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -297,7 +293,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Get calls from communications
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -305,7 +301,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Get calls from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -357,7 +353,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a call object.
+     * Get calls from communications
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

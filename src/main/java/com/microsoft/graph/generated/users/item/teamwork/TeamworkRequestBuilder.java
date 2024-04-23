@@ -82,21 +82,19 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
+     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @return a {@link UserTeamwork}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserTeamwork get() {
         return get(null);
     }
     /**
-     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
+     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserTeamwork}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserTeamwork get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
+     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -159,7 +157,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
+     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -211,7 +209,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
+     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/departments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the departmentTemplate objects and their properties.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @return a {@link DepartmentTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-departments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DepartmentTemplateCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the departmentTemplate objects and their properties.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DepartmentTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-departments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DepartmentTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DepartmentTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new departmentTemplate object.
+     * Create new navigation property to departments for security
      * @param body The request body
      * @return a {@link DepartmentTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-departments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DepartmentTemplate post(@jakarta.annotation.Nonnull final DepartmentTemplate body) {
         return post(body, null);
     }
     /**
-     * Create a new departmentTemplate object.
+     * Create new navigation property to departments for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DepartmentTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-departments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DepartmentTemplate post(@jakarta.annotation.Nonnull final DepartmentTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DepartmentTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the departmentTemplate objects and their properties.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the departmentTemplate objects and their properties.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new departmentTemplate object.
+     * Create new navigation property to departments for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new departmentTemplate object.
+     * Create new navigation property to departments for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
         return new DepartmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the departmentTemplate objects and their properties.
+     * Specifies the department or business unit of an organization to which a label belongs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

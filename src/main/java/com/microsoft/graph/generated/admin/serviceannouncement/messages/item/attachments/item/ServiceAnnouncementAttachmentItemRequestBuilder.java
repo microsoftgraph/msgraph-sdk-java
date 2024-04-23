@@ -64,21 +64,19 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a serviceAnnouncementAttachment object.
+     * A collection of serviceAnnouncementAttachments.
      * @return a {@link ServiceAnnouncementAttachment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncementattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServiceAnnouncementAttachment get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a serviceAnnouncementAttachment object.
+     * A collection of serviceAnnouncementAttachments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServiceAnnouncementAttachment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncementattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServiceAnnouncementAttachment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +131,7 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a serviceAnnouncementAttachment object.
+     * A collection of serviceAnnouncementAttachments.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +139,7 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a serviceAnnouncementAttachment object.
+     * A collection of serviceAnnouncementAttachments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -193,7 +191,7 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a serviceAnnouncementAttachment object.
+     * A collection of serviceAnnouncementAttachments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

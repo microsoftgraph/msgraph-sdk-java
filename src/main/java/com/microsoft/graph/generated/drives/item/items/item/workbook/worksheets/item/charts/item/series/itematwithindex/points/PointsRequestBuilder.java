@@ -38,21 +38,19 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/itemAt(index={index})/points{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      * @return a {@link WorkbookChartPointCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPointCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartPointCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPointCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -62,23 +60,21 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartPointCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param body The request body
      * @return a {@link WorkbookChartPoint}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPoint post(@jakarta.annotation.Nonnull final WorkbookChartPoint body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartPoint}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPoint post(@jakarta.annotation.Nonnull final WorkbookChartPoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -89,7 +85,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartPoint::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +93,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -109,7 +105,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -118,7 +114,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -143,7 +139,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return new PointsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of chartpoints objects.
+     * Represents a collection of all points in the series. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/schedulingGroups{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of schedulingGroups in this schedule.
+     * The logical grouping of users in the schedule (usually by role).
      * @return a {@link SchedulingGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SchedulingGroupCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of schedulingGroups in this schedule.
+     * The logical grouping of users in the schedule (usually by role).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SchedulingGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SchedulingGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SchedulingGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new schedulingGroup.
+     * Create new navigation property to schedulingGroups for groups
      * @param body The request body
      * @return a {@link SchedulingGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SchedulingGroup post(@jakarta.annotation.Nonnull final SchedulingGroup body) {
         return post(body, null);
     }
     /**
-     * Create a new schedulingGroup.
+     * Create new navigation property to schedulingGroups for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SchedulingGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SchedulingGroup post(@jakarta.annotation.Nonnull final SchedulingGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SchedulingGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of schedulingGroups in this schedule.
+     * The logical grouping of users in the schedule (usually by role).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of schedulingGroups in this schedule.
+     * The logical grouping of users in the schedule (usually by role).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new schedulingGroup.
+     * Create new navigation property to schedulingGroups for groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new schedulingGroup.
+     * Create new navigation property to schedulingGroups for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return new SchedulingGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of schedulingGroups in this schedule.
+     * The logical grouping of users in the schedule (usually by role).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

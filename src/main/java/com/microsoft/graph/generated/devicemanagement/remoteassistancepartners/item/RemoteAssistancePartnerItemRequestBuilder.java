@@ -55,18 +55,16 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/remoteAssistancePartners/{remoteAssistancePartner%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a remoteAssistancePartner.
+     * Delete navigation property remoteAssistancePartners for deviceManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a remoteAssistancePartner.
+     * Delete navigation property remoteAssistancePartners for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +73,19 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the remoteAssistancePartner object.
+     * The remote assist partners.
      * @return a {@link RemoteAssistancePartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteAssistancePartner get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the remoteAssistancePartner object.
+     * The remote assist partners.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RemoteAssistancePartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteAssistancePartner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,23 +95,21 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, RemoteAssistancePartner::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a remoteAssistancePartner object.
+     * Update the navigation property remoteAssistancePartners in deviceManagement
      * @param body The request body
      * @return a {@link RemoteAssistancePartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteAssistancePartner patch(@jakarta.annotation.Nonnull final RemoteAssistancePartner body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a remoteAssistancePartner object.
+     * Update the navigation property remoteAssistancePartners in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RemoteAssistancePartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteAssistancePartner patch(@jakarta.annotation.Nonnull final RemoteAssistancePartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +120,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, RemoteAssistancePartner::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a remoteAssistancePartner.
+     * Delete navigation property remoteAssistancePartners for deviceManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +128,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a remoteAssistancePartner.
+     * Delete navigation property remoteAssistancePartners for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +140,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the remoteAssistancePartner object.
+     * The remote assist partners.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +148,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the remoteAssistancePartner object.
+     * The remote assist partners.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the properties of a remoteAssistancePartner object.
+     * Update the navigation property remoteAssistancePartners in deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a remoteAssistancePartner object.
+     * Update the navigation property remoteAssistancePartners in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -206,7 +200,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the remoteAssistancePartner object.
+     * The remote assist partners.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

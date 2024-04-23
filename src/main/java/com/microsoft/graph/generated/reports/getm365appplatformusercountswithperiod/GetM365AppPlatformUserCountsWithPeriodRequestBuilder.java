@@ -38,19 +38,21 @@ public class GetM365AppPlatformUserCountsWithPeriodRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/reports/getM365AppPlatformUserCounts(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getM365AppPlatformUserCounts
+     * Get a report that provides the trend of active users across all apps for each platform (Windows, Mac, web, and mobile) in your organization.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getm365appplatformusercounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getM365AppPlatformUserCounts
+     * Get a report that provides the trend of active users across all apps for each platform (Windows, Mac, web, and mobile) in your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getm365appplatformusercounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetM365AppPlatformUserCountsWithPeriodRequestBuilder extends BaseRe
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getM365AppPlatformUserCounts
+     * Get a report that provides the trend of active users across all apps for each platform (Windows, Mac, web, and mobile) in your organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetM365AppPlatformUserCountsWithPeriodRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getM365AppPlatformUserCounts
+     * Get a report that provides the trend of active users across all apps for each platform (Windows, Mac, web, and mobile) in your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

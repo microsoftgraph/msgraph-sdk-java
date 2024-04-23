@@ -38,19 +38,21 @@ public class GetTeamsUserActivityCountsWithPeriodRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/reports/getTeamsUserActivityCounts(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getTeamsUserActivityCounts
+     * Get the number of Microsoft Teams activities by activity type. The activities are performed by Microsoft Teams licensed users.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getteamsuseractivitycounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getTeamsUserActivityCounts
+     * Get the number of Microsoft Teams activities by activity type. The activities are performed by Microsoft Teams licensed users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getteamsuseractivitycounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetTeamsUserActivityCountsWithPeriodRequestBuilder extends BaseRequ
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getTeamsUserActivityCounts
+     * Get the number of Microsoft Teams activities by activity type. The activities are performed by Microsoft Teams licensed users.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetTeamsUserActivityCountsWithPeriodRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getTeamsUserActivityCounts
+     * Get the number of Microsoft Teams activities by activity type. The activities are performed by Microsoft Teams licensed users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

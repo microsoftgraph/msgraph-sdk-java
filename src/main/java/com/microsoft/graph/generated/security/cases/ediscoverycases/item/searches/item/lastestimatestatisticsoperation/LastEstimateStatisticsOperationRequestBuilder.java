@@ -37,21 +37,19 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/lastEstimateStatisticsOperation{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      * @return a {@link EdiscoveryEstimateOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryEstimateOperation get() {
         return get(null);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryEstimateOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryEstimateOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,7 +59,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryEstimateOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +67,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +89,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return new LastEstimateStatisticsOperationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the last  ediscoveryEstimateOperation objects and their properties.
+     * The last estimate operation associated with the eDiscovery search.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

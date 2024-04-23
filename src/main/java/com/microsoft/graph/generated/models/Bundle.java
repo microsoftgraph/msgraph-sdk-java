@@ -48,7 +48,7 @@ public class Bundle implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
-     * Gets the album property value. If the bundle is an [album][], then the album property is included
+     * Gets the album property value. If the bundle is an album, then the album property is included
      * @return a {@link Album}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class Bundle implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the album property value. If the bundle is an [album][], then the album property is included
+     * Sets the album property value. If the bundle is an album, then the album property is included
      * @param value Value to set for the album property.
      */
     public void setAlbum(@jakarta.annotation.Nullable final Album value) {

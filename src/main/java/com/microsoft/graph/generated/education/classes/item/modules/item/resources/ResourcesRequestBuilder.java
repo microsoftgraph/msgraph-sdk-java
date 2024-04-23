@@ -60,21 +60,19 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/modules/{educationModule%2Did}/resources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @return a {@link EducationModuleResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationModuleResourceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationModuleResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationModuleResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationModuleResourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a resource in a module. Only teachers can perform this operation. You can create the following types of module resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create new navigation property to resources for education
      * @param body The request body
      * @return a {@link EducationModuleResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-post-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationModuleResource post(@jakarta.annotation.Nonnull final EducationModuleResource body) {
         return post(body, null);
     }
     /**
-     * Create a resource in a module. Only teachers can perform this operation. You can create the following types of module resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create new navigation property to resources for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationModuleResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-post-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationModuleResource post(@jakarta.annotation.Nonnull final EducationModuleResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationModuleResource::createFromDiscriminatorValue);
     }
     /**
-     * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a resource in a module. Only teachers can perform this operation. You can create the following types of module resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create new navigation property to resources for education
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a resource in a module. Only teachers can perform this operation. You can create the following types of module resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create new navigation property to resources for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return new ResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

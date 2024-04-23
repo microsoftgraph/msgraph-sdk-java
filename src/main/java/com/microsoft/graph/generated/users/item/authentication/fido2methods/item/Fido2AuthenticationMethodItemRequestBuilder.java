@@ -37,18 +37,16 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/fido2Methods/{fido2AuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Delete navigation property fido2Methods for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Delete navigation property fido2Methods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Represents the FIDO2 security keys registered to a user for authentication.
      * @return a {@link Fido2AuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Fido2AuthenticationMethod get() {
         return get(null);
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Represents the FIDO2 security keys registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Fido2AuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Fido2AuthenticationMethod get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +77,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, Fido2AuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Delete navigation property fido2Methods for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +85,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Delete navigation property fido2Methods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -101,7 +97,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Represents the FIDO2 security keys registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +105,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Represents the FIDO2 security keys registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +133,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Represents the FIDO2 security keys registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

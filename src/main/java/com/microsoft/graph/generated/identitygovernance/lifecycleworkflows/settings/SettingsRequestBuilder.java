@@ -37,21 +37,19 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/settings{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * The settings of the lifecycle workflows instance.
      * @return a {@link LifecycleManagementSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LifecycleManagementSettings get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * The settings of the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LifecycleManagementSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LifecycleManagementSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,23 +59,21 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LifecycleManagementSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a lifecycleManagementSettings object.
+     * Update the navigation property settings in identityGovernance
      * @param body The request body
      * @return a {@link LifecycleManagementSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LifecycleManagementSettings patch(@jakarta.annotation.Nonnull final LifecycleManagementSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a lifecycleManagementSettings object.
+     * Update the navigation property settings in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LifecycleManagementSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LifecycleManagementSettings patch(@jakarta.annotation.Nonnull final LifecycleManagementSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -88,7 +84,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LifecycleManagementSettings::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * The settings of the lifecycle workflows instance.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +92,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * The settings of the lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -108,7 +104,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a lifecycleManagementSettings object.
+     * Update the navigation property settings in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -117,7 +113,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a lifecycleManagementSettings object.
+     * Update the navigation property settings in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -142,7 +138,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return new SettingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a lifecycleManagementSettings object.
+     * The settings of the lifecycle workflows instance.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

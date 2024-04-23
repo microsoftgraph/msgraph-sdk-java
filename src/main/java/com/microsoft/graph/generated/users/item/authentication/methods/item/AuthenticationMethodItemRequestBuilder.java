@@ -46,21 +46,19 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/methods/{authenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object.
+     * Represents all authentication methods registered to a user.
      * @return a {@link AuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethod get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object.
+     * Represents all authentication methods registered to a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethod get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +93,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object.
+     * Represents all authentication methods registered to a user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +101,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object.
+     * Represents all authentication methods registered to a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -149,7 +147,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         return new AuthenticationMethodItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of an authenticationMethod object.
+     * Represents all authentication methods registered to a user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

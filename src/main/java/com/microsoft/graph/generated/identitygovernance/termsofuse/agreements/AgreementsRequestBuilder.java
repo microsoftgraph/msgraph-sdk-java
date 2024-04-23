@@ -60,21 +60,19 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of agreement objects.
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @return a {@link AgreementCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AgreementCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of agreement objects.
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AgreementCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AgreementCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new agreement object.
+     * Create new navigation property to agreements for identityGovernance
      * @param body The request body
      * @return a {@link Agreement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Agreement post(@jakarta.annotation.Nonnull final Agreement body) {
         return post(body, null);
     }
     /**
-     * Create a new agreement object.
+     * Create new navigation property to agreements for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Agreement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Agreement post(@jakarta.annotation.Nonnull final Agreement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Agreement::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of agreement objects.
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of agreement objects.
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new agreement object.
+     * Create new navigation property to agreements for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new agreement object.
+     * Create new navigation property to agreements for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return new AgreementsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of agreement objects.
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

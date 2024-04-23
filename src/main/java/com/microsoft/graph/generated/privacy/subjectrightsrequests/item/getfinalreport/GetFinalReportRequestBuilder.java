@@ -36,11 +36,12 @@ public class GetFinalReportRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/getFinalReport()", rawUrl);
     }
     /**
-     * Invoke function getFinalReport
+     * Get the final report for a subject rights request. The report is a text file that contains information about the files that were included by the privacy administrator.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
+     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-getfinalreport?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -48,12 +49,13 @@ public class GetFinalReportRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Invoke function getFinalReport
+     * Get the final report for a subject rights request. The report is a text file that contains information about the files that were included by the privacy administrator.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
+     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-getfinalreport?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -64,7 +66,7 @@ public class GetFinalReportRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getFinalReport
+     * Get the final report for a subject rights request. The report is a text file that contains information about the files that were included by the privacy administrator.
      * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
@@ -75,7 +77,7 @@ public class GetFinalReportRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getFinalReport
+     * Get the final report for a subject rights request. The report is a text file that contains information about the files that were included by the privacy administrator.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated

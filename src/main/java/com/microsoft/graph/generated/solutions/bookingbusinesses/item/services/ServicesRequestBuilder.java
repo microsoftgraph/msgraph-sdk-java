@@ -60,21 +60,19 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/services{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of bookingService objects in the specified bookingBusiness.
+     * All the services offered by this business. Read-only. Nullable.
      * @return a {@link BookingServiceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-services?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingServiceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of bookingService objects in the specified bookingBusiness.
+     * All the services offered by this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingServiceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-services?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingServiceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingServiceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new bookingService for the specified bookingBusiness.
+     * Create new navigation property to services for solutions
      * @param body The request body
      * @return a {@link BookingService}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-services?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingService post(@jakarta.annotation.Nonnull final BookingService body) {
         return post(body, null);
     }
     /**
-     * Create a new bookingService for the specified bookingBusiness.
+     * Create new navigation property to services for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingService}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-services?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingService post(@jakarta.annotation.Nonnull final BookingService body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingService::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of bookingService objects in the specified bookingBusiness.
+     * All the services offered by this business. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingService objects in the specified bookingBusiness.
+     * All the services offered by this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingService for the specified bookingBusiness.
+     * Create new navigation property to services for solutions
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingService for the specified bookingBusiness.
+     * Create new navigation property to services for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ServicesRequestBuilder extends BaseRequestBuilder {
         return new ServicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingService objects in the specified bookingBusiness.
+     * All the services offered by this business. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/acceptanceStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
+     * The list of acceptance statuses for this T&C policy.
      * @return a {@link TermsAndConditionsAcceptanceStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditionsAcceptanceStatusCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
+     * The list of acceptance statuses for this T&C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermsAndConditionsAcceptanceStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditionsAcceptanceStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditionsAcceptanceStatusCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new termsAndConditionsAcceptanceStatus object.
+     * Create new navigation property to acceptanceStatuses for deviceManagement
      * @param body The request body
      * @return a {@link TermsAndConditionsAcceptanceStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditionsAcceptanceStatus post(@jakarta.annotation.Nonnull final TermsAndConditionsAcceptanceStatus body) {
         return post(body, null);
     }
     /**
-     * Create a new termsAndConditionsAcceptanceStatus object.
+     * Create new navigation property to acceptanceStatuses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermsAndConditionsAcceptanceStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditionsAcceptanceStatus post(@jakarta.annotation.Nonnull final TermsAndConditionsAcceptanceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
+     * The list of acceptance statuses for this T&C policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
+     * The list of acceptance statuses for this T&C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new termsAndConditionsAcceptanceStatus object.
+     * Create new navigation property to acceptanceStatuses for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new termsAndConditionsAcceptanceStatus object.
+     * Create new navigation property to acceptanceStatuses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return new AcceptanceStatusesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
+     * The list of acceptance statuses for this T&C policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

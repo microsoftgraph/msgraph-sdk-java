@@ -55,21 +55,19 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * The collection of long-running operations on the site.
      * @return a {@link RichLongRunningOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RichLongRunningOperation get() {
         return get(null);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * The collection of long-running operations on the site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RichLongRunningOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RichLongRunningOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * The collection of long-running operations on the site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * The collection of long-running operations on the site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the status of a rich long-running operation on a site or a list.
+     * The collection of long-running operations on the site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

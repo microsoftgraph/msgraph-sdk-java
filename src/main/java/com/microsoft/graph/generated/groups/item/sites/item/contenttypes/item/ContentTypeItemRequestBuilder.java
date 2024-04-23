@@ -127,18 +127,16 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/contentTypes/{contentType%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Delete navigation property contentTypes for groups
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Delete navigation property contentTypes for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -147,21 +145,19 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * The collection of content types defined for this site.
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentType get() {
         return get(null);
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * The collection of content types defined for this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentType get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -171,23 +167,21 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentType::createFromDiscriminatorValue);
     }
     /**
-     * Update a [content type][contentType].
+     * Update the navigation property contentTypes in groups
      * @param body The request body
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentType patch(@jakarta.annotation.Nonnull final ContentType body) {
         return patch(body, null);
     }
     /**
-     * Update a [content type][contentType].
+     * Update the navigation property contentTypes in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentType patch(@jakarta.annotation.Nonnull final ContentType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -198,7 +192,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentType::createFromDiscriminatorValue);
     }
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Delete navigation property contentTypes for groups
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -206,7 +200,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a [content type][contentType] from a [list][] or a [site][].
+     * Delete navigation property contentTypes for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -218,7 +212,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * The collection of content types defined for this site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -226,7 +220,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * The collection of content types defined for this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -238,7 +232,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update a [content type][contentType].
+     * Update the navigation property contentTypes in groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -247,7 +241,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a [content type][contentType].
+     * Update the navigation property contentTypes in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -278,7 +272,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
+     * The collection of content types defined for this site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -133,12 +133,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object.
+     * Get subjectRightsRequests from privacy
      * @return a {@link SubjectRightsRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
-     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -146,13 +145,12 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object.
+     * Get subjectRightsRequests from privacy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SubjectRightsRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
-     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -163,13 +161,12 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SubjectRightsRequest::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a subjectRightsRequest object.
+     * Update the navigation property subjectRightsRequests in privacy
      * @param body The request body
      * @return a {@link SubjectRightsRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
-     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -177,14 +174,13 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a subjectRightsRequest object.
+     * Update the navigation property subjectRightsRequests in privacy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SubjectRightsRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
-     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -222,7 +218,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object.
+     * Get subjectRightsRequests from privacy
      * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
@@ -233,7 +229,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object.
+     * Get subjectRightsRequests from privacy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -248,7 +244,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a subjectRightsRequest object.
+     * Update the navigation property subjectRightsRequests in privacy
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -260,7 +256,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a subjectRightsRequest object.
+     * Update the navigation property subjectRightsRequests in privacy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -297,7 +293,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a subjectRightsRequest object.
+     * Get subjectRightsRequests from privacy
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

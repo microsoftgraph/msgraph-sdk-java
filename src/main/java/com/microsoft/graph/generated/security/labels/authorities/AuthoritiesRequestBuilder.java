@@ -60,21 +60,19 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/authorities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties.
+     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
      * @return a {@link AuthorityTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorityTemplateCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties.
+     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthorityTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorityTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthorityTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new authorityTemplate object.
+     * Create new navigation property to authorities for security
      * @param body The request body
      * @return a {@link AuthorityTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorityTemplate post(@jakarta.annotation.Nonnull final AuthorityTemplate body) {
         return post(body, null);
     }
     /**
-     * Create a new authorityTemplate object.
+     * Create new navigation property to authorities for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthorityTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorityTemplate post(@jakarta.annotation.Nonnull final AuthorityTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthorityTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties.
+     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties.
+     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new authorityTemplate object.
+     * Create new navigation property to authorities for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new authorityTemplate object.
+     * Create new navigation property to authorities for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
         return new AuthoritiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the authorityTemplate objects and their properties.
+     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendar/calendarPermissions{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
+     * The permissions of the users with whom the calendar is shared.
      * @return a {@link CalendarPermissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CalendarPermissionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
+     * The permissions of the users with whom the calendar is shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CalendarPermissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CalendarPermissionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarPermissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
+     * Create new navigation property to calendarPermissions for groups
      * @param body The request body
      * @return a {@link CalendarPermission}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-post-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CalendarPermission post(@jakarta.annotation.Nonnull final CalendarPermission body) {
         return post(body, null);
     }
     /**
-     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
+     * Create new navigation property to calendarPermissions for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CalendarPermission}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-post-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CalendarPermission post(@jakarta.annotation.Nonnull final CalendarPermission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarPermission::createFromDiscriminatorValue);
     }
     /**
-     * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
+     * The permissions of the users with whom the calendar is shared.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
+     * The permissions of the users with whom the calendar is shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
+     * Create new navigation property to calendarPermissions for groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
+     * Create new navigation property to calendarPermissions for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return new CalendarPermissionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
+     * The permissions of the users with whom the calendar is shared.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

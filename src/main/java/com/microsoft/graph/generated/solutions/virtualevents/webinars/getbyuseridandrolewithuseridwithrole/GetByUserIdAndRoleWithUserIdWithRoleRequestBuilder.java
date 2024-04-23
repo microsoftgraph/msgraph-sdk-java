@@ -40,19 +40,21 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/getByUserIdAndRole(userId='{userId}',role='{role}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getByUserIdAndRole
+     * Get a virtualEventWebinar collection where the specified user is either the organizer or a coorganizer.
      * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-getbyuseridandrole?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetByUserIdAndRoleWithUserIdWithRoleGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getByUserIdAndRole
+     * Get a virtualEventWebinar collection where the specified user is either the organizer or a coorganizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-getbyuseridandrole?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetByUserIdAndRoleWithUserIdWithRoleGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -62,7 +64,7 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, GetByUserIdAndRoleWithUserIdWithRoleGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getByUserIdAndRole
+     * Get a virtualEventWebinar collection where the specified user is either the organizer or a coorganizer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +72,7 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getByUserIdAndRole
+     * Get a virtualEventWebinar collection where the specified user is either the organizer or a coorganizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -92,7 +94,7 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
         return new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getByUserIdAndRole
+     * Get a virtualEventWebinar collection where the specified user is either the organizer or a coorganizer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

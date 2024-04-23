@@ -55,18 +55,16 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a permissionGrantPolicy object.
+     * Delete navigation property permissionGrantPolicies for policies
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a permissionGrantPolicy object.
+     * Delete navigation property permissionGrantPolicies for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +73,19 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a single permissionGrantPolicy object.
+     * The policy that specifies the conditions under which consent can be granted.
      * @return a {@link PermissionGrantPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionGrantPolicy get() {
         return get(null);
     }
     /**
-     * Retrieve a single permissionGrantPolicy object.
+     * The policy that specifies the conditions under which consent can be granted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionGrantPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionGrantPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,23 +95,21 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionGrantPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update properties of a  permissionGrantPolicy.
+     * Update the navigation property permissionGrantPolicies in policies
      * @param body The request body
      * @return a {@link PermissionGrantPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionGrantPolicy patch(@jakarta.annotation.Nonnull final PermissionGrantPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update properties of a  permissionGrantPolicy.
+     * Update the navigation property permissionGrantPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionGrantPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionGrantPolicy patch(@jakarta.annotation.Nonnull final PermissionGrantPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +120,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionGrantPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a permissionGrantPolicy object.
+     * Delete navigation property permissionGrantPolicies for policies
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +128,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a permissionGrantPolicy object.
+     * Delete navigation property permissionGrantPolicies for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +140,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Retrieve a single permissionGrantPolicy object.
+     * The policy that specifies the conditions under which consent can be granted.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +148,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a single permissionGrantPolicy object.
+     * The policy that specifies the conditions under which consent can be granted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update properties of a  permissionGrantPolicy.
+     * Update the navigation property permissionGrantPolicies in policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update properties of a  permissionGrantPolicy.
+     * Update the navigation property permissionGrantPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -206,7 +200,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a single permissionGrantPolicy object.
+     * The policy that specifies the conditions under which consent can be granted.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

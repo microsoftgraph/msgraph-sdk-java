@@ -60,21 +60,19 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      * @return a {@link OrganizationalBrandingLocalizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBrandingLocalizationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OrganizationalBrandingLocalizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBrandingLocalizationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OrganizationalBrandingLocalizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
+     * Create new navigation property to localizations for organization
      * @param body The request body
      * @return a {@link OrganizationalBrandingLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBrandingLocalization post(@jakarta.annotation.Nonnull final OrganizationalBrandingLocalization body) {
         return post(body, null);
     }
     /**
-     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
+     * Create new navigation property to localizations for organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OrganizationalBrandingLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBrandingLocalization post(@jakarta.annotation.Nonnull final OrganizationalBrandingLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OrganizationalBrandingLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
+     * Create new navigation property to localizations for organization
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
+     * Create new navigation property to localizations for organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return new LocalizationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve all localization branding objects, including the default branding.
+     * Add different branding based on a locale.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -82,23 +82,21 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LearningCourseActivityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
+     * Create new navigation property to learningCourseActivities for employeeExperience
      * @param body The request body
      * @return a {@link LearningCourseActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperienceuser-post-learningcourseactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningCourseActivity post(@jakarta.annotation.Nonnull final LearningCourseActivity body) {
         return post(body, null);
     }
     /**
-     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
+     * Create new navigation property to learningCourseActivities for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LearningCourseActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperienceuser-post-learningcourseactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningCourseActivity post(@jakarta.annotation.Nonnull final LearningCourseActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -129,7 +127,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
+     * Create new navigation property to learningCourseActivities for employeeExperience
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +136,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
+     * Create new navigation property to learningCourseActivities for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

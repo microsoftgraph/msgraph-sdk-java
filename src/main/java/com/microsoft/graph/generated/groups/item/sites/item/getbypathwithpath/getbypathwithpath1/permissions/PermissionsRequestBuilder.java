@@ -38,21 +38,19 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/getByPath(path='{path}')/getByPath(path='{path1}')/permissions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      * @return a {@link PermissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -62,23 +60,21 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new permission object on a site. 
+     * Create new navigation property to permissions for groups
      * @param body The request body
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final Permission body) {
         return post(body, null);
     }
     /**
-     * Create a new permission object on a site. 
+     * Create new navigation property to permissions for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final Permission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -89,7 +85,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Permission::createFromDiscriminatorValue);
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +93,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -109,7 +105,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new permission object on a site. 
+     * Create new navigation property to permissions for groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -118,7 +114,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new permission object on a site. 
+     * Create new navigation property to permissions for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -143,7 +139,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return new PermissionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the permission resources from the permissions navigation property on a site.
+     * The permissions associated with the site. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -115,18 +115,16 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes the worksheet from the workbook.
+     * Delete navigation property worksheets for drives
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes the worksheet from the workbook.
+     * Delete navigation property worksheets for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -135,21 +133,19 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @return a {@link WorkbookWorksheet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookWorksheet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,23 +155,21 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookWorksheet::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of worksheet object.
+     * Update the navigation property worksheets in drives
      * @param body The request body
      * @return a {@link WorkbookWorksheet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet patch(@jakarta.annotation.Nonnull final WorkbookWorksheet body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of worksheet object.
+     * Update the navigation property worksheets in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookWorksheet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheet patch(@jakarta.annotation.Nonnull final WorkbookWorksheet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -196,7 +190,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return new RangeWithAddressRequestBuilder(pathParameters, requestAdapter, address);
     }
     /**
-     * Deletes the worksheet from the workbook.
+     * Delete navigation property worksheets for drives
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -204,7 +198,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes the worksheet from the workbook.
+     * Delete navigation property worksheets for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -216,7 +210,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -224,7 +218,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -236,7 +230,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of worksheet object.
+     * Update the navigation property worksheets in drives
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -245,7 +239,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of worksheet object.
+     * Update the navigation property worksheets in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -286,7 +280,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

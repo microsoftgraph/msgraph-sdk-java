@@ -68,21 +68,19 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/allowedUsers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @return a {@link UserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +90,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +98,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +120,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
         return new AllowedUsersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

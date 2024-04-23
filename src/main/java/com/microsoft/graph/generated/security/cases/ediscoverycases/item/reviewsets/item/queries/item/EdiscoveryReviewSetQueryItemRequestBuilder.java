@@ -55,18 +55,16 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an ediscoveryReviewSetQuery object.
+     * Delete navigation property queries for security
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-delete-queries?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an ediscoveryReviewSetQuery object.
+     * Delete navigation property queries for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-delete-queries?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +73,19 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
+     * Represents queries within the review set.
      * @return a {@link EdiscoveryReviewSetQuery}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSetQuery get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
+     * Represents queries within the review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryReviewSetQuery}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSetQuery get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,23 +95,21 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewSetQuery::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an ediscoveryReviewSetQuery object.
+     * Update the navigation property queries in security
      * @param body The request body
      * @return a {@link EdiscoveryReviewSetQuery}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSetQuery patch(@jakarta.annotation.Nonnull final EdiscoveryReviewSetQuery body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an ediscoveryReviewSetQuery object.
+     * Update the navigation property queries in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryReviewSetQuery}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSetQuery patch(@jakarta.annotation.Nonnull final EdiscoveryReviewSetQuery body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +120,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewSetQuery::createFromDiscriminatorValue);
     }
     /**
-     * Delete an ediscoveryReviewSetQuery object.
+     * Delete navigation property queries for security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +128,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an ediscoveryReviewSetQuery object.
+     * Delete navigation property queries for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +140,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
+     * Represents queries within the review set.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +148,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
+     * Represents queries within the review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the properties of an ediscoveryReviewSetQuery object.
+     * Update the navigation property queries in security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an ediscoveryReviewSetQuery object.
+     * Update the navigation property queries in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -206,7 +200,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
+     * Represents queries within the review set.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

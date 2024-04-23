@@ -64,21 +64,19 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object.
+     * The customer who has a delegated admin relationship with a Microsoft partner.
      * @return a {@link DelegatedAdminCustomer}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadmincustomer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminCustomer get() {
         return get(null);
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object.
+     * The customer who has a delegated admin relationship with a Microsoft partner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminCustomer}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadmincustomer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminCustomer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +131,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object.
+     * The customer who has a delegated admin relationship with a Microsoft partner.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +139,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object.
+     * The customer who has a delegated admin relationship with a Microsoft partner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -193,7 +191,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a delegatedAdminCustomer object.
+     * The customer who has a delegated admin relationship with a Microsoft partner.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

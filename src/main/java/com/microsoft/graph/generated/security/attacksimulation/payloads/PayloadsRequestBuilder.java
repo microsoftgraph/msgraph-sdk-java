@@ -60,21 +60,19 @@ public class PayloadsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/payloads{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
+     * Represents an attack simulation training campaign payload in a tenant.
      * @return a {@link PayloadCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-payloads?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PayloadCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
+     * Represents an attack simulation training campaign payload in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PayloadCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-payloads?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PayloadCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class PayloadsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Payload::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
+     * Represents an attack simulation training campaign payload in a tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class PayloadsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
+     * Represents an attack simulation training campaign payload in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class PayloadsRequestBuilder extends BaseRequestBuilder {
         return new PayloadsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
+     * Represents an attack simulation training campaign payload in a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

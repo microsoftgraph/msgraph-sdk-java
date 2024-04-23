@@ -35,7 +35,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/unpublish", rawUrl);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType from a content type hub site.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType from a content type hub site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-unpublish?view=graph-rest-1.0">Find more info here</a>
@@ -55,7 +55,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType from a content type hub site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType from a content type hub site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

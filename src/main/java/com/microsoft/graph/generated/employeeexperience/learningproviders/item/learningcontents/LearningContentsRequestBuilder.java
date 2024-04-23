@@ -60,21 +60,19 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Learning catalog items for the provider.
      * @return a {@link LearningContentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningContentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Learning catalog items for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LearningContentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LearningContentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LearningContent::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Learning catalog items for the provider.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Learning catalog items for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return new LearningContentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
+     * Learning catalog items for the provider.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

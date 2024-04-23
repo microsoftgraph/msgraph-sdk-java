@@ -37,18 +37,16 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods/{softwareOathAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete navigation property softwareOathMethods for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete navigation property softwareOathMethods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      * @return a {@link SoftwareOathAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SoftwareOathAuthenticationMethod get() {
         return get(null);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SoftwareOathAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SoftwareOathAuthenticationMethod get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +77,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, SoftwareOathAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete navigation property softwareOathMethods for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +85,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete navigation property softwareOathMethods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -101,7 +97,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +105,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +133,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List the cloudPC devices in a tenant.
+     * A collection of cloud-managed virtual desktops.
      * @return a {@link CloudPCCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPCCollectionResponse get() {
         return get(null);
     }
     /**
-     * List the cloudPC devices in a tenant.
+     * A collection of cloud-managed virtual desktops.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPCCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPCCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPC::createFromDiscriminatorValue);
     }
     /**
-     * List the cloudPC devices in a tenant.
+     * A collection of cloud-managed virtual desktops.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the cloudPC devices in a tenant.
+     * A collection of cloud-managed virtual desktops.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return new CloudPCsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the cloudPC devices in a tenant.
+     * A collection of cloud-managed virtual desktops.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

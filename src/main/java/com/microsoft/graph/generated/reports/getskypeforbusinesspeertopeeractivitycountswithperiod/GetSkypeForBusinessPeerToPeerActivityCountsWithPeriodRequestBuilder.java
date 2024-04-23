@@ -38,19 +38,21 @@ public class GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder
         super(requestAdapter, "{+baseurl}/reports/getSkypeForBusinessPeerToPeerActivityCounts(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getSkypeForBusinessPeerToPeerActivityCounts
+     * Get usage trends on the number and type of sessions held in your organization. Types of sessions include IM, audio, video, application sharing, and file transfer.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinesspeertopeeractivitycounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getSkypeForBusinessPeerToPeerActivityCounts
+     * Get usage trends on the number and type of sessions held in your organization. Types of sessions include IM, audio, video, application sharing, and file transfer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinesspeertopeeractivitycounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getSkypeForBusinessPeerToPeerActivityCounts
+     * Get usage trends on the number and type of sessions held in your organization. Types of sessions include IM, audio, video, application sharing, and file transfer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getSkypeForBusinessPeerToPeerActivityCounts
+     * Get usage trends on the number and type of sessions held in your organization. Types of sessions include IM, audio, video, application sharing, and file transfer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -39,6 +39,7 @@ public class DeviceConfigurationUserActivityRequestBuilder extends BaseRequestBu
      * Metadata for the device configuration user activity report
      * @return a {@link Report}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-deviceconfigurationuseractivity?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Report get() {
@@ -49,6 +50,7 @@ public class DeviceConfigurationUserActivityRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Report}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-deviceconfigurationuseractivity?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Report get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

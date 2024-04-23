@@ -38,19 +38,21 @@ public class GetOneDriveActivityUserCountsWithPeriodRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/reports/getOneDriveActivityUserCounts(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getOneDriveActivityUserCounts
+     * Get the trend in the number of active OneDrive users.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getonedriveactivityusercounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getOneDriveActivityUserCounts
+     * Get the trend in the number of active OneDrive users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getonedriveactivityusercounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetOneDriveActivityUserCountsWithPeriodRequestBuilder extends BaseR
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getOneDriveActivityUserCounts
+     * Get the trend in the number of active OneDrive users.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetOneDriveActivityUserCountsWithPeriodRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getOneDriveActivityUserCounts
+     * Get the trend in the number of active OneDrive users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

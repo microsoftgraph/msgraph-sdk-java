@@ -82,18 +82,16 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a b2xIdentityUserFlow object.
+     * Delete navigation property b2xUserFlows for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a b2xIdentityUserFlow object.
+     * Delete navigation property b2xUserFlows for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -102,21 +100,19 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @return a {@link B2xIdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2xIdentityUserFlow get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link B2xIdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2xIdentityUserFlow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +147,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, B2xIdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
-     * Delete a b2xIdentityUserFlow object.
+     * Delete navigation property b2xUserFlows for identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -159,7 +155,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a b2xIdentityUserFlow object.
+     * Delete navigation property b2xUserFlows for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -171,7 +167,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +175,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -231,7 +227,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

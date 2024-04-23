@@ -100,18 +100,16 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete navigation property localizations for organization
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete navigation property localizations for organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -120,21 +118,19 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Add different branding based on a locale.
      * @return a {@link OrganizationalBrandingLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBrandingLocalization get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Add different branding based on a locale.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OrganizationalBrandingLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBrandingLocalization get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,23 +140,21 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return this.requestAdapter.send(requestInfo, errorMapping, OrganizationalBrandingLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the navigation property localizations in organization
      * @param body The request body
      * @return a {@link OrganizationalBrandingLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBrandingLocalization patch(@jakarta.annotation.Nonnull final OrganizationalBrandingLocalization body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the navigation property localizations in organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OrganizationalBrandingLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationalBrandingLocalization patch(@jakarta.annotation.Nonnull final OrganizationalBrandingLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -171,7 +165,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return this.requestAdapter.send(requestInfo, errorMapping, OrganizationalBrandingLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete navigation property localizations for organization
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +173,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
+     * Delete navigation property localizations for organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +185,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Add different branding based on a locale.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -199,7 +193,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Add different branding based on a locale.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -211,7 +205,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the navigation property localizations in organization
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -220,7 +214,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
+     * Update the navigation property localizations in organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -251,7 +245,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
+     * Add different branding based on a locale.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

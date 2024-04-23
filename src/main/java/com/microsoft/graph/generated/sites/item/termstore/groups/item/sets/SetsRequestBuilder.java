@@ -60,21 +60,19 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/groups/{group%2Did}/sets{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @return a {@link SetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-list-sets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SetCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/termstore-group-list-sets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Set::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return new SetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

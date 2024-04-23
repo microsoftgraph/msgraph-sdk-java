@@ -59,21 +59,19 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      * @return a {@link SoftwareOathAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SoftwareOathAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SoftwareOathAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SoftwareOathAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SoftwareOathAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
         return new SoftwareOathMethodsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of a user's software OATH token authentication method objects and their properties.
+     * The software OATH TOTP applications registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

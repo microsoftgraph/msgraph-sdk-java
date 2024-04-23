@@ -82,21 +82,19 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSet object.
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @return a {@link EdiscoveryReviewSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSet get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSet object.
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryReviewSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewSet get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,7 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSet object.
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -159,7 +157,7 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSet object.
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -211,7 +209,7 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an ediscoveryReviewSet object.
+     * Returns a list of eDiscoveryReviewSet objects in the case.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

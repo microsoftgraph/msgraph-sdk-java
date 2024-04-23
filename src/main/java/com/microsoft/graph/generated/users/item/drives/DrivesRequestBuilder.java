@@ -59,21 +59,19 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/drives{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * A collection of drives available for this user. Read-only.
      * @return a {@link DriveCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * A collection of drives available for this user. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * A collection of drives available for this user. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * A collection of drives available for this user. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return new DrivesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * A collection of drives available for this user. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

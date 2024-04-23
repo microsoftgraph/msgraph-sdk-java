@@ -39,19 +39,21 @@ public class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/reports/getSharePointActivityUserDetail(date={date})", rawUrl);
     }
     /**
-     * Invoke function getSharePointActivityUserDetail
+     * Get details about SharePoint activity by user.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getsharepointactivityuserdetail?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getSharePointActivityUserDetail
+     * Get details about SharePoint activity by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getsharepointactivityuserdetail?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseR
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getSharePointActivityUserDetail
+     * Get details about SharePoint activity by user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +71,7 @@ public class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getSharePointActivityUserDetail
+     * Get details about SharePoint activity by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

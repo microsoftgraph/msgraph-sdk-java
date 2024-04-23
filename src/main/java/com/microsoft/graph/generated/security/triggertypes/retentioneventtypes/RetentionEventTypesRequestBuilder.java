@@ -60,21 +60,19 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/triggerTypes/retentionEventTypes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the retentionEventType objects and their properties.
+     * Get retentionEventTypes from security
      * @return a {@link RetentionEventTypeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionEventTypeCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the retentionEventType objects and their properties.
+     * Get retentionEventTypes from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RetentionEventTypeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionEventTypeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionEventTypeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new retentionEventType object.
+     * Create new navigation property to retentionEventTypes for security
      * @param body The request body
      * @return a {@link RetentionEventType}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionEventType post(@jakarta.annotation.Nonnull final RetentionEventType body) {
         return post(body, null);
     }
     /**
-     * Create a new retentionEventType object.
+     * Create new navigation property to retentionEventTypes for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RetentionEventType}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionEventType post(@jakarta.annotation.Nonnull final RetentionEventType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionEventType::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the retentionEventType objects and their properties.
+     * Get retentionEventTypes from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the retentionEventType objects and their properties.
+     * Get retentionEventTypes from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new retentionEventType object.
+     * Create new navigation property to retentionEventTypes for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new retentionEventType object.
+     * Create new navigation property to retentionEventTypes for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
         return new RetentionEventTypesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the retentionEventType objects and their properties.
+     * Get retentionEventTypes from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
