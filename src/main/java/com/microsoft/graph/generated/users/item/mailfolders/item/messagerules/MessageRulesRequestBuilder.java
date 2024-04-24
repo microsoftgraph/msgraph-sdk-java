@@ -60,21 +60,19 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/messageRules{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      * @return a {@link MessageRuleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MessageRuleCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MessageRuleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MessageRuleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MessageRuleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a messageRule object by specifying a set of conditions and actions. Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
+     * Create new navigation property to messageRules for users
      * @param body The request body
      * @return a {@link MessageRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MessageRule post(@jakarta.annotation.Nonnull final MessageRule body) {
         return post(body, null);
     }
     /**
-     * Create a messageRule object by specifying a set of conditions and actions. Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
+     * Create new navigation property to messageRules for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MessageRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MessageRule post(@jakarta.annotation.Nonnull final MessageRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MessageRule::createFromDiscriminatorValue);
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a messageRule object by specifying a set of conditions and actions. Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
+     * Create new navigation property to messageRules for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a messageRule object by specifying a set of conditions and actions. Outlook carries out those actions if an incoming message in the user's Inbox meets the specified conditions.
+     * Create new navigation property to messageRules for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return new MessageRulesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the messageRule objects defined for the user's inbox.
+     * The collection of rules that apply to the user's Inbox folder.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

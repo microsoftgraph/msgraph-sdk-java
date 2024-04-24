@@ -60,21 +60,19 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/columns{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this content type.
      * @return a {@link ColumnDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ColumnDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ColumnDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ColumnDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for groups
      * @param body The request body
      * @return a {@link ColumnDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ColumnDefinition post(@jakarta.annotation.Nonnull final ColumnDefinition body) {
         return post(body, null);
     }
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ColumnDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ColumnDefinition post(@jakarta.annotation.Nonnull final ColumnDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this content type.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this content type.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

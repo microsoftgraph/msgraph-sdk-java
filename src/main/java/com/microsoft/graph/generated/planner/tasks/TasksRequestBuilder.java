@@ -60,21 +60,19 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/tasks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of plannertask objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @return a {@link PlannerTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerTaskCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of plannertask objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerTaskCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerTaskCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new plannerTask.
+     * Create new navigation property to tasks for planner
      * @param body The request body
      * @return a {@link PlannerTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planner-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerTask post(@jakarta.annotation.Nonnull final PlannerTask body) {
         return post(body, null);
     }
     /**
-     * Create a new plannerTask.
+     * Create new navigation property to tasks for planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planner-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerTask post(@jakarta.annotation.Nonnull final PlannerTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerTask::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of plannertask objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of plannertask objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new plannerTask.
+     * Create new navigation property to tasks for planner
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new plannerTask.
+     * Create new navigation property to tasks for planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return new TasksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of plannertask objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

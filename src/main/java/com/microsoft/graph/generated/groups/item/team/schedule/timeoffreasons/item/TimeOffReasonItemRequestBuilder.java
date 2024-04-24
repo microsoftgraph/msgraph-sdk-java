@@ -37,18 +37,16 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffReasons/{timeOffReason%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeoff reason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Delete navigation property timeOffReasons for groups
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeoff reason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Delete navigation property timeOffReasons for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a timeOffReason object by ID.
+     * The set of reasons for a time off in the schedule.
      * @return a {@link TimeOffReason}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffReason get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a timeOffReason object by ID.
+     * The set of reasons for a time off in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeOffReason}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffReason get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReason::createFromDiscriminatorValue);
     }
     /**
-     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns 404 Not found.
+     * Update the navigation property timeOffReasons in groups
      * @param body The request body
      * @return a {@link TimeOffReason}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffReason patch(@jakarta.annotation.Nonnull final TimeOffReason body) {
         return patch(body, null);
     }
     /**
-     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns 404 Not found.
+     * Update the navigation property timeOffReasons in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeOffReason}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffReason patch(@jakarta.annotation.Nonnull final TimeOffReason body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReason::createFromDiscriminatorValue);
     }
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeoff reason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Delete navigation property timeOffReasons for groups
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeoff reason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Delete navigation property timeOffReasons for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a timeOffReason object by ID.
+     * The set of reasons for a time off in the schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a timeOffReason object by ID.
+     * The set of reasons for a time off in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns 404 Not found.
+     * Update the navigation property timeOffReasons in groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns 404 Not found.
+     * Update the navigation property timeOffReasons in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a timeOffReason object by ID.
+     * The set of reasons for a time off in the schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

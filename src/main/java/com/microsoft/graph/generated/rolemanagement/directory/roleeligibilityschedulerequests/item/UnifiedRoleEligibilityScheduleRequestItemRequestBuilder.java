@@ -109,21 +109,19 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
+     * Requests for role eligibilities for principals through PIM.
      * @return a {@link UnifiedRoleEligibilityScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest get() {
         return get(null);
     }
     /**
-     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
+     * Requests for role eligibilities for principals through PIM.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilityScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -178,7 +176,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
+     * Requests for role eligibilities for principals through PIM.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -186,7 +184,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
+     * Requests for role eligibilities for principals through PIM.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -238,7 +236,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.
+     * Requests for role eligibilities for principals through PIM.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

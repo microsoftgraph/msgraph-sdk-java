@@ -55,21 +55,19 @@ public class AttributeSetItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an attributeSet object.
+     * Group of related custom security attribute definitions.
      * @return a {@link AttributeSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/attributeset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttributeSet get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an attributeSet object.
+     * Group of related custom security attribute definitions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AttributeSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/attributeset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttributeSet get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class AttributeSetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AttributeSet::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an attributeSet object.
+     * Update the navigation property attributeSets in directory
      * @param body The request body
      * @return a {@link AttributeSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/attributeset-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttributeSet patch(@jakarta.annotation.Nonnull final AttributeSet body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an attributeSet object.
+     * Update the navigation property attributeSets in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AttributeSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/attributeset-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttributeSet patch(@jakarta.annotation.Nonnull final AttributeSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class AttributeSetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an attributeSet object.
+     * Group of related custom security attribute definitions.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class AttributeSetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an attributeSet object.
+     * Group of related custom security attribute definitions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class AttributeSetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an attributeSet object.
+     * Update the navigation property attributeSets in directory
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class AttributeSetItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an attributeSet object.
+     * Update the navigation property attributeSets in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class AttributeSetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an attributeSet object.
+     * Group of related custom security attribute definitions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -35,18 +35,16 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/featureRolloutPolicies/{featureRolloutPolicy%2Did}/appliesTo/{directoryObject%2Did}/$ref", rawUrl);
     }
     /**
-     * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.
+     * Delete ref of navigation property appliesTo for policies
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-delete-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.
+     * Delete ref of navigation property appliesTo for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-delete-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +53,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.
+     * Delete ref of navigation property appliesTo for policies
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +61,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.
+     * Delete ref of navigation property appliesTo for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

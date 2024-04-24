@@ -64,21 +64,19 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of an sslCertificate object.
+     * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      * @return a {@link SslCertificate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-sslcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SslCertificate get() {
         return get(null);
     }
     /**
-     * Get the properties and relationships of an sslCertificate object.
+     * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SslCertificate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-sslcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SslCertificate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +131,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of an sslCertificate object.
+     * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +139,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of an sslCertificate object.
+     * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -193,7 +191,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of an sslCertificate object.
+     * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

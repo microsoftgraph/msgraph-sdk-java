@@ -60,21 +60,19 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/notebooks/{notebook%2Did}/sectionGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @return a {@link SectionGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SectionGroupCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SectionGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SectionGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SectionGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for users
      * @param body The request body
      * @return a {@link SectionGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/notebook-post-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SectionGroup post(@jakarta.annotation.Nonnull final SectionGroup body) {
         return post(body, null);
     }
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SectionGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/notebook-post-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SectionGroup post(@jakarta.annotation.Nonnull final SectionGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SectionGroup::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
         return new SectionGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

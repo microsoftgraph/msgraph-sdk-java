@@ -35,7 +35,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/permissions/{permission%2Did}/grant", rawUrl);
     }
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param body The request body
      * @return a {@link GrantPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GrantPostResponse}
@@ -62,7 +62,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GrantPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -71,7 +71,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

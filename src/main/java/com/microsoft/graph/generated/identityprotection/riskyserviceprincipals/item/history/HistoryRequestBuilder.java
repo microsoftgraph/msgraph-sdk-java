@@ -60,21 +60,19 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}/history{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Represents the risk history of Microsoft Entra service principals.
      * @return a {@link RiskyServicePrincipalHistoryItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipalHistoryItemCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Represents the risk history of Microsoft Entra service principals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RiskyServicePrincipalHistoryItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyServicePrincipalHistoryItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyServicePrincipalHistoryItem::createFromDiscriminatorValue);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Represents the risk history of Microsoft Entra service principals.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Represents the risk history of Microsoft Entra service principals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return new HistoryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the risk history of a riskyServicePrincipal object.
+     * Represents the risk history of Microsoft Entra service principals.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

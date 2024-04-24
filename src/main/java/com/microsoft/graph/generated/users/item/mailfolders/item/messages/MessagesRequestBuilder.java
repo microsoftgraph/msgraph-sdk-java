@@ -69,21 +69,19 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/messages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      * @return a {@link MessageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MessageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MessageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MessageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,23 +91,21 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MessageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Create new navigation property to messages for users
      * @param body The request body
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Message post(@jakarta.annotation.Nonnull final Message body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Create new navigation property to messages for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Message post(@jakarta.annotation.Nonnull final Message body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -120,7 +116,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Message::createFromDiscriminatorValue);
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +124,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Create new navigation property to messages for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +145,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new Message in a mailfolder.
+     * Create new navigation property to messages for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -174,7 +170,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return new MessagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+     * The collection of messages in the mailFolder.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

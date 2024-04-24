@@ -60,7 +60,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostSslCertificates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      * @return a {@link HostSslCertificateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostSslCertificateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostSslCertificate::createFromDiscriminatorValue);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return new HostSslCertificatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

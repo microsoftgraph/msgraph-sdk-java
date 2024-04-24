@@ -63,7 +63,6 @@ public class MonthlyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of monthly print usage summaries, grouped by printer.
      * @return a {@link PrintUsageByPrinterCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyprinter?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintUsageByPrinterCollectionResponse get() {
@@ -74,7 +73,6 @@ public class MonthlyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintUsageByPrinterCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-monthlyprintusagebyprinter?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintUsageByPrinterCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

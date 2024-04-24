@@ -36,7 +36,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/contentTypes/addCopy", rawUrl);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type from a site to a list.
      * @param body The request body
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type from a site to a list.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentType}
@@ -63,7 +63,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentType::createFromDiscriminatorValue);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type from a site to a list.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class AddCopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type from a site to a list.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

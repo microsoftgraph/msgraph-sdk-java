@@ -55,18 +55,16 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/items/{externalItem%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an externalItem object.
+     * Delete navigation property items for connections
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an externalItem object.
+     * Delete navigation property items for connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +73,19 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Get items from connections
      * @return a {@link ExternalItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalItem get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Get items from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +120,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalItem::createFromDiscriminatorValue);
     }
     /**
-     * Delete an externalItem object.
+     * Delete navigation property items for connections
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +128,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an externalItem object.
+     * Delete navigation property items for connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -144,7 +140,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Get items from connections
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +148,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Get items from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -204,7 +200,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Get items from connections
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

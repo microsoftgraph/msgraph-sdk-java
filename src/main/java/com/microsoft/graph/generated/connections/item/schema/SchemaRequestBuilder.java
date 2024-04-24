@@ -37,21 +37,19 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/schema{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a schema object.
+     * Get schema from connections
      * @return a {@link Schema}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Schema get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a schema object.
+     * Get schema from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Schema}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Schema get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,23 +59,21 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Schema::createFromDiscriminatorValue);
     }
     /**
-     * Create a new schema object.
+     * Update the navigation property schema in connections
      * @param body The request body
      * @return a {@link Schema}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-patch-schema?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Schema patch(@jakarta.annotation.Nonnull final Schema body) {
         return patch(body, null);
     }
     /**
-     * Create a new schema object.
+     * Update the navigation property schema in connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Schema}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-patch-schema?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Schema patch(@jakarta.annotation.Nonnull final Schema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -88,7 +84,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Schema::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a schema object.
+     * Get schema from connections
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +92,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a schema object.
+     * Get schema from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -108,7 +104,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new schema object.
+     * Update the navigation property schema in connections
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -117,7 +113,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new schema object.
+     * Update the navigation property schema in connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -142,7 +138,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return new SchemaRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a schema object.
+     * Get schema from connections
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

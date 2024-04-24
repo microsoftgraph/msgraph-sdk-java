@@ -35,7 +35,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/contentTypes/{contentType%2Did}/associateWithHubSites", rawUrl);
     }
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type present in a content type hub with a list of hub sites.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/contenttype-associatewithhubsites?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +44,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type present in a content type hub with a list of hub sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type present in a content type hub with a list of hub sites.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type present in a content type hub with a list of hub sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -60,21 +60,19 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/appManagementPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects.
+     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @return a {@link AppManagementPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppManagementPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects.
+     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppManagementPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppManagementPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppManagementPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an appManagementPolicy object.
+     * Create new navigation property to appManagementPolicies for policies
      * @param body The request body
      * @return a {@link AppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppManagementPolicy post(@jakarta.annotation.Nonnull final AppManagementPolicy body) {
         return post(body, null);
     }
     /**
-     * Create an appManagementPolicy object.
+     * Create new navigation property to appManagementPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppManagementPolicy post(@jakarta.annotation.Nonnull final AppManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppManagementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects.
+     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects.
+     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an appManagementPolicy object.
+     * Create new navigation property to appManagementPolicies for policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an appManagementPolicy object.
+     * Create new navigation property to appManagementPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return new AppManagementPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of appManagementPolicy objects.
+     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

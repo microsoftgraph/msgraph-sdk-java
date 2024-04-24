@@ -71,21 +71,19 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @return a {@link AccessPackageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,23 +93,21 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
+     * Create new navigation property to accessPackages for identityGovernance
      * @param body The request body
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackage post(@jakarta.annotation.Nonnull final AccessPackage body) {
         return post(body, null);
     }
     /**
-     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
+     * Create new navigation property to accessPackages for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackage post(@jakarta.annotation.Nonnull final AccessPackage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -122,7 +118,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackage::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +126,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +138,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
+     * Create new navigation property to accessPackages for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +147,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
+     * Create new navigation property to accessPackages for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -176,7 +172,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return new AccessPackagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

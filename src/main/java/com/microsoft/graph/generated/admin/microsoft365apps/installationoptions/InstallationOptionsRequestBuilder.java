@@ -55,21 +55,19 @@ public class InstallationOptionsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an m365AppsInstallationOptions object.
+     * A container for tenant-level settings for Microsoft 365 applications.
      * @return a {@link M365AppsInstallationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/m365appsinstallationoptions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public M365AppsInstallationOptions get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an m365AppsInstallationOptions object.
+     * A container for tenant-level settings for Microsoft 365 applications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link M365AppsInstallationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/m365appsinstallationoptions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public M365AppsInstallationOptions get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class InstallationOptionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, M365AppsInstallationOptions::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an m365AppsInstallationOptions object.
+     * Update the navigation property installationOptions in admin
      * @param body The request body
      * @return a {@link M365AppsInstallationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/m365appsinstallationoptions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public M365AppsInstallationOptions patch(@jakarta.annotation.Nonnull final M365AppsInstallationOptions body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an m365AppsInstallationOptions object.
+     * Update the navigation property installationOptions in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link M365AppsInstallationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/m365appsinstallationoptions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public M365AppsInstallationOptions patch(@jakarta.annotation.Nonnull final M365AppsInstallationOptions body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class InstallationOptionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an m365AppsInstallationOptions object.
+     * A container for tenant-level settings for Microsoft 365 applications.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class InstallationOptionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an m365AppsInstallationOptions object.
+     * A container for tenant-level settings for Microsoft 365 applications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class InstallationOptionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an m365AppsInstallationOptions object.
+     * Update the navigation property installationOptions in admin
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class InstallationOptionsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an m365AppsInstallationOptions object.
+     * Update the navigation property installationOptions in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class InstallationOptionsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an m365AppsInstallationOptions object.
+     * A container for tenant-level settings for Microsoft 365 applications.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

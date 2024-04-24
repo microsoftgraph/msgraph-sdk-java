@@ -60,21 +60,19 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/languages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      * @return a {@link UserFlowLanguageConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserFlowLanguageConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserFlowLanguageConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserFlowLanguageConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserFlowLanguageConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return new LanguagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of languages supported for customization in a B2X user flow.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

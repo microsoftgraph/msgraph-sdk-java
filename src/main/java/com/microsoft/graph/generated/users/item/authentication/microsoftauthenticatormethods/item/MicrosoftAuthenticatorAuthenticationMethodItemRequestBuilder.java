@@ -46,18 +46,16 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Delete navigation property microsoftAuthenticatorMethods for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Delete navigation property microsoftAuthenticatorMethods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @return a {@link MicrosoftAuthenticatorAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethod get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MicrosoftAuthenticatorAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethod get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +86,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return this.requestAdapter.send(requestInfo, errorMapping, MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Delete navigation property microsoftAuthenticatorMethods for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +94,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Delete navigation property microsoftAuthenticatorMethods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -110,7 +106,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +114,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

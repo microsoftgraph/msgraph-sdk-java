@@ -68,21 +68,19 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/users{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      * @return a {@link EducationUserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationUserCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationUserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-list-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationUserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +90,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +98,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +120,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return new UsersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the educationUser resources associated with an educationSchool.
+     * Users in the school. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

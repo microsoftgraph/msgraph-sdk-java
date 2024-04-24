@@ -60,21 +60,19 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/certificateBasedAuthConfiguration{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @return a {@link CertificateBasedAuthConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateBasedAuthConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedAuthConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create new navigation property to certificateBasedAuthConfiguration for organization
      * @param body The request body
      * @return a {@link CertificateBasedAuthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-post-certificatebasedauthconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthConfiguration post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body) {
         return post(body, null);
     }
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create new navigation property to certificateBasedAuthConfiguration for organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateBasedAuthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-post-certificatebasedauthconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthConfiguration post(@jakarta.annotation.Nonnull final CertificateBasedAuthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedAuthConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create new navigation property to certificateBasedAuthConfiguration for organization
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create new navigation property to certificateBasedAuthConfiguration for organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
         return new CertificateBasedAuthConfigurationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

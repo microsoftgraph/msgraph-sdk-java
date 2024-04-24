@@ -60,7 +60,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/comments/{workbookComment%2Did}/replies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of workbookCommentReply object.
+     * Get replies from drives
      * @return a {@link WorkbookCommentReplyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of workbookCommentReply object.
+     * Get replies from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookCommentReplyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookCommentReply::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of workbookCommentReply object.
+     * Get replies from drives
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of workbookCommentReply object.
+     * Get replies from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return new RepliesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of workbookCommentReply object.
+     * Get replies from drives
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

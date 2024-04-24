@@ -136,18 +136,16 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes the table.
+     * Delete navigation property tables for drives
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/table-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes the table.
+     * Delete navigation property tables for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/table-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -156,21 +154,19 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of table object.
+     * Represents a collection of tables associated with the workbook. Read-only.
      * @return a {@link WorkbookTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/table-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTable get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of table object.
+     * Represents a collection of tables associated with the workbook. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/table-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTable get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -180,23 +176,21 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTable::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of table object.
+     * Update the navigation property tables in drives
      * @param body The request body
      * @return a {@link WorkbookTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/table-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTable patch(@jakarta.annotation.Nonnull final WorkbookTable body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of table object.
+     * Update the navigation property tables in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/table-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookTable patch(@jakarta.annotation.Nonnull final WorkbookTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +201,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTable::createFromDiscriminatorValue);
     }
     /**
-     * Deletes the table.
+     * Delete navigation property tables for drives
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -215,7 +209,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes the table.
+     * Delete navigation property tables for drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -227,7 +221,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of table object.
+     * Represents a collection of tables associated with the workbook. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -235,7 +229,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of table object.
+     * Represents a collection of tables associated with the workbook. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -247,7 +241,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of table object.
+     * Update the navigation property tables in drives
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -256,7 +250,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of table object.
+     * Update the navigation property tables in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -287,7 +281,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of table object.
+     * Represents a collection of tables associated with the workbook. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

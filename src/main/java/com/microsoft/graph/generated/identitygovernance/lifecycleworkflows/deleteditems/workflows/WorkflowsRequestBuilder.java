@@ -59,21 +59,19 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Deleted workflows that end up in the deletedItemsContainer.
      * @return a {@link WorkflowCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-deleteditems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkflowCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Deleted workflows that end up in the deletedItemsContainer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkflowCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-deleteditems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkflowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkflowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Deleted workflows that end up in the deletedItemsContainer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Deleted workflows that end up in the deletedItemsContainer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class WorkflowsRequestBuilder extends BaseRequestBuilder {
         return new WorkflowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Deleted workflows that end up in the deletedItemsContainer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

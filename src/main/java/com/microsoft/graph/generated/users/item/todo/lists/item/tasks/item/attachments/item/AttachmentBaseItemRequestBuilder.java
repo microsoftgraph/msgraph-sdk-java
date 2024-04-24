@@ -46,18 +46,16 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/attachments/{attachmentBase%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete a taskFileAttachment object from a todoTask resource.
+     * Delete navigation property attachments for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a taskFileAttachment object from a todoTask resource.
+     * Delete navigation property attachments for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * A collection of file attachments for the task.
      * @return a {@link AttachmentBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttachmentBase get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * A collection of file attachments for the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AttachmentBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttachmentBase get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +86,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AttachmentBase::createFromDiscriminatorValue);
     }
     /**
-     * Delete a taskFileAttachment object from a todoTask resource.
+     * Delete navigation property attachments for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +94,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a taskFileAttachment object from a todoTask resource.
+     * Delete navigation property attachments for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -110,7 +106,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * A collection of file attachments for the task.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +114,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * A collection of file attachments for the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * A collection of file attachments for the task.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

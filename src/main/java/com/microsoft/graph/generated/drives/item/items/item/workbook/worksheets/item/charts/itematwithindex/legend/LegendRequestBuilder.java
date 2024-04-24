@@ -55,21 +55,19 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object.
+     * Represents the legend for the chart. Read-only.
      * @return a {@link WorkbookChartLegend}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLegend get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object.
+     * Represents the legend for the chart. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartLegend}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLegend get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartLegend::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of chartlegend object.
+     * Update the navigation property legend in drives
      * @param body The request body
      * @return a {@link WorkbookChartLegend}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLegend patch(@jakarta.annotation.Nonnull final WorkbookChartLegend body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of chartlegend object.
+     * Update the navigation property legend in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartLegend}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartLegend patch(@jakarta.annotation.Nonnull final WorkbookChartLegend body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object.
+     * Represents the legend for the chart. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object.
+     * Represents the legend for the chart. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of chartlegend object.
+     * Update the navigation property legend in drives
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of chartlegend object.
+     * Update the navigation property legend in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of chartlegend object.
+     * Represents the legend for the chart. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

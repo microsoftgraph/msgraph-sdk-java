@@ -89,7 +89,6 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get() {
@@ -100,7 +99,6 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

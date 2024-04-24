@@ -55,18 +55,16 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete contactFolder other than the default contactFolder.
+     * Delete navigation property contactFolders for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete contactFolder other than the default contactFolder.
+     * Delete navigation property contactFolders for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +73,19 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * The user's contacts folders. Read-only. Nullable.
      * @return a {@link ContactFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContactFolder get() {
         return get(null);
     }
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * The user's contacts folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContactFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContactFolder get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,23 +95,21 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContactFolder::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of contactfolder object.
+     * Update the navigation property contactFolders in users
      * @param body The request body
      * @return a {@link ContactFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContactFolder patch(@jakarta.annotation.Nonnull final ContactFolder body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of contactfolder object.
+     * Update the navigation property contactFolders in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContactFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContactFolder patch(@jakarta.annotation.Nonnull final ContactFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +120,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContactFolder::createFromDiscriminatorValue);
     }
     /**
-     * Delete contactFolder other than the default contactFolder.
+     * Delete navigation property contactFolders for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +128,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete contactFolder other than the default contactFolder.
+     * Delete navigation property contactFolders for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +140,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * The user's contacts folders. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +148,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * The user's contacts folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of contactfolder object.
+     * Update the navigation property contactFolders in users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of contactfolder object.
+     * Update the navigation property contactFolders in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -206,7 +200,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * The user's contacts folders. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -36,19 +36,21 @@ public class GetCompatibleHubContentTypesRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/contentTypes/getCompatibleHubContentTypes(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getCompatibleHubContentTypes
+     * Get a list of compatible content types from the content type hub that can be added to a target site or a list. This method is part of the content type publishing changes to optimize the syncing of published content types to sites and lists, effectively switching from a 'push everywhere' to 'pull as needed' approach. The method allows users to pull content types directly from the content type hub to a site or list. For more information, see contentType: addCopyFromContentTypeHub and the blog post Syntex Product Updates  August 2021.
      * @return a {@link GetCompatibleHubContentTypesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-getcompatiblehubcontenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCompatibleHubContentTypesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getCompatibleHubContentTypes
+     * Get a list of compatible content types from the content type hub that can be added to a target site or a list. This method is part of the content type publishing changes to optimize the syncing of published content types to sites and lists, effectively switching from a 'push everywhere' to 'pull as needed' approach. The method allows users to pull content types directly from the content type hub to a site or list. For more information, see contentType: addCopyFromContentTypeHub and the blog post Syntex Product Updates  August 2021.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetCompatibleHubContentTypesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-getcompatiblehubcontenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCompatibleHubContentTypesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetCompatibleHubContentTypesRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, GetCompatibleHubContentTypesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getCompatibleHubContentTypes
+     * Get a list of compatible content types from the content type hub that can be added to a target site or a list. This method is part of the content type publishing changes to optimize the syncing of published content types to sites and lists, effectively switching from a 'push everywhere' to 'pull as needed' approach. The method allows users to pull content types directly from the content type hub to a site or list. For more information, see contentType: addCopyFromContentTypeHub and the blog post Syntex Product Updates  August 2021.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetCompatibleHubContentTypesRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getCompatibleHubContentTypes
+     * Get a list of compatible content types from the content type hub that can be added to a target site or a list. This method is part of the content type publishing changes to optimize the syncing of published content types to sites and lists, effectively switching from a 'push everywhere' to 'pull as needed' approach. The method allows users to pull content types directly from the content type hub to a site or list. For more information, see contentType: addCopyFromContentTypeHub and the blog post Syntex Product Updates  August 2021.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetCompatibleHubContentTypesRequestBuilder extends BaseRequestBuild
         return new GetCompatibleHubContentTypesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getCompatibleHubContentTypes
+     * Get a list of compatible content types from the content type hub that can be added to a target site or a list. This method is part of the content type publishing changes to optimize the syncing of published content types to sites and lists, effectively switching from a 'push everywhere' to 'pull as needed' approach. The method allows users to pull content types directly from the content type hub to a site or list. For more information, see contentType: addCopyFromContentTypeHub and the blog post Syntex Product Updates  August 2021.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

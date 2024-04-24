@@ -64,18 +64,16 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Uninstall an app from the personal scope of the specified user.
+     * Delete navigation property installedApps for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Uninstall an app from the personal scope of the specified user.
+     * Delete navigation property installedApps for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -84,21 +82,19 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @return a {@link UserScopeTeamsAppInstallation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallation get() {
         return get(null);
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserScopeTeamsAppInstallation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +129,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
-     * Uninstall an app from the personal scope of the specified user.
+     * Delete navigation property installedApps for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +137,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Uninstall an app from the personal scope of the specified user.
+     * Delete navigation property installedApps for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -153,7 +149,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -161,7 +157,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -213,7 +209,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the app installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

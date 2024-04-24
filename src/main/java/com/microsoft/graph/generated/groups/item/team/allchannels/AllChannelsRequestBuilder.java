@@ -59,21 +59,19 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/allChannels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels).
+     * List of channels either hosted in or shared with the team (incoming channels).
      * @return a {@link ChannelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/team-list-allchannels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChannelCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels).
+     * List of channels either hosted in or shared with the team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChannelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/team-list-allchannels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChannelCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ChannelCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels).
+     * List of channels either hosted in or shared with the team (incoming channels).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels).
+     * List of channels either hosted in or shared with the team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         return new AllChannelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of channels either in this team or shared with this team (incoming channels).
+     * List of channels either hosted in or shared with the team (incoming channels).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

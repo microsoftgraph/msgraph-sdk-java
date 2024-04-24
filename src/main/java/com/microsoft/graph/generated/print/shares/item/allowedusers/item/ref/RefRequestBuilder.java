@@ -35,18 +35,16 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/allowedUsers/{user%2Did}/$ref", rawUrl);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +53,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +61,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

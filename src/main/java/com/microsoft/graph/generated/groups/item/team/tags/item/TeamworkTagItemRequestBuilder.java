@@ -46,18 +46,16 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/tags/{teamworkTag%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a tag object permanently.
+     * Delete navigation property tags for groups
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a tag object permanently.
+     * Delete navigation property tags for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a tag object.
+     * The tags associated with the team.
      * @return a {@link TeamworkTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkTag get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a tag object.
+     * The tags associated with the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkTag get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,23 +86,21 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkTag::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a tag object.
+     * Update the navigation property tags in groups
      * @param body The request body
      * @return a {@link TeamworkTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkTag patch(@jakarta.annotation.Nonnull final TeamworkTag body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a tag object.
+     * Update the navigation property tags in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkTag patch(@jakarta.annotation.Nonnull final TeamworkTag body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -117,7 +111,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkTag::createFromDiscriminatorValue);
     }
     /**
-     * Delete a tag object permanently.
+     * Delete navigation property tags for groups
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +119,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a tag object permanently.
+     * Delete navigation property tags for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +131,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a tag object.
+     * The tags associated with the team.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +139,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a tag object.
+     * The tags associated with the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a tag object.
+     * Update the navigation property tags in groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tag object.
+     * Update the navigation property tags in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -197,7 +191,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a tag object.
+     * The tags associated with the team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/taskDefinitions/{printTaskDefinition%2Did}/tasks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @return a {@link PrintTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printtaskdefinition-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintTaskCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printtaskdefinition-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintTaskCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintTask::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return new TasksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
+     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

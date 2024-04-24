@@ -100,18 +100,16 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
+     * Delete navigation property jobs for applications
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
+     * Delete navigation property jobs for applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -120,21 +118,19 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationJob get() {
         return get(null);
     }
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationJob get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -169,7 +165,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJob::createFromDiscriminatorValue);
     }
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
+     * Delete navigation property jobs for applications
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -177,7 +173,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
+     * Delete navigation property jobs for applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -189,7 +185,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -197,7 +193,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -249,7 +245,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

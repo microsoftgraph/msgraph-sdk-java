@@ -126,7 +126,6 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * Users and groups that are members of this administrative unit. Supports $expand.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get() {
@@ -137,7 +136,6 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,6 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObject post(@jakarta.annotation.Nonnull final DirectoryObject body) {
@@ -163,7 +160,6 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObject post(@jakarta.annotation.Nonnull final DirectoryObject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -69,21 +69,19 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * The list of printers registered in the tenant.
      * @return a {@link PrinterCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/print-list-printers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrinterCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * The list of printers registered in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrinterCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/print-list-printers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrinterCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +116,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Printer::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * The list of printers registered in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +124,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * The list of printers registered in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +170,7 @@ public class PrintersRequestBuilder extends BaseRequestBuilder {
         return new PrintersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * The list of printers registered in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

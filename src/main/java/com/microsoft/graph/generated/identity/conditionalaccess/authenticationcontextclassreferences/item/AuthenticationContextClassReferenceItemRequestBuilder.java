@@ -37,18 +37,16 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences/{authenticationContextClassReference%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete navigation property authenticationContextClassReferences for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete navigation property authenticationContextClassReferences for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object.
+     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
      * @return a {@link AuthenticationContextClassReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcontextclassreference-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationContextClassReference get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object.
+     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationContextClassReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcontextclassreference-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationContextClassReference get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationContextClassReference::createFromDiscriminatorValue);
     }
     /**
-     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
+     * Update the navigation property authenticationContextClassReferences in identity
      * @param body The request body
      * @return a {@link AuthenticationContextClassReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcontextclassreference-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationContextClassReference patch(@jakarta.annotation.Nonnull final AuthenticationContextClassReference body) {
         return patch(body, null);
     }
     /**
-     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
+     * Update the navigation property authenticationContextClassReferences in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationContextClassReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcontextclassreference-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationContextClassReference patch(@jakarta.annotation.Nonnull final AuthenticationContextClassReference body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationContextClassReference::createFromDiscriminatorValue);
     }
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete navigation property authenticationContextClassReferences for identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete navigation property authenticationContextClassReferences for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object.
+     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object.
+     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
+     * Update the navigation property authenticationContextClassReferences in identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
+     * Update the navigation property authenticationContextClassReferences in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a authenticationContextClassReference object.
+     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

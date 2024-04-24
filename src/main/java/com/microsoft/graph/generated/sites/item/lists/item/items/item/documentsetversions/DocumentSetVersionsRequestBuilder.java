@@ -60,21 +60,19 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/items/{listItem%2Did}/documentSetVersions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the versions of a document set item in a list.
+     * Version information for a document set version created by a user.
      * @return a {@link DocumentSetVersionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DocumentSetVersionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the versions of a document set item in a list.
+     * Version information for a document set version created by a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DocumentSetVersionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DocumentSetVersionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DocumentSetVersionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new version of a document set item in a list.
+     * Create new navigation property to documentSetVersions for sites
      * @param body The request body
      * @return a {@link DocumentSetVersion}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DocumentSetVersion post(@jakarta.annotation.Nonnull final DocumentSetVersion body) {
         return post(body, null);
     }
     /**
-     * Create a new version of a document set item in a list.
+     * Create new navigation property to documentSetVersions for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DocumentSetVersion}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DocumentSetVersion post(@jakarta.annotation.Nonnull final DocumentSetVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DocumentSetVersion::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the versions of a document set item in a list.
+     * Version information for a document set version created by a user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the versions of a document set item in a list.
+     * Version information for a document set version created by a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new version of a document set item in a list.
+     * Create new navigation property to documentSetVersions for sites
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new version of a document set item in a list.
+     * Create new navigation property to documentSetVersions for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
         return new DocumentSetVersionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the versions of a document set item in a list.
+     * Version information for a document set version created by a user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

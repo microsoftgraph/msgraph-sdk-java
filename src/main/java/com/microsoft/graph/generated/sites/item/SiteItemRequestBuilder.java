@@ -202,7 +202,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      * @return a {@link Site}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/site-get?view=graph-rest-1.0">Find more info here</a>
@@ -212,7 +212,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Site}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -285,7 +285,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Site::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -293,7 +293,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -339,7 +339,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return new SiteItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

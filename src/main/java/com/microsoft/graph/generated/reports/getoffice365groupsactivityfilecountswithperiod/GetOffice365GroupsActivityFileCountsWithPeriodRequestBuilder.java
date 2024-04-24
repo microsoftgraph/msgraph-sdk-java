@@ -38,19 +38,21 @@ public class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder extend
         super(requestAdapter, "{+baseurl}/reports/getOffice365GroupsActivityFileCounts(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getOffice365GroupsActivityFileCounts
+     * Get the total number of files and how many of them were active across all group sites associated with a Microsoft 365 group.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getoffice365groupsactivityfilecounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getOffice365GroupsActivityFileCounts
+     * Get the total number of files and how many of them were active across all group sites associated with a Microsoft 365 group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getoffice365groupsactivityfilecounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder extend
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getOffice365GroupsActivityFileCounts
+     * Get the total number of files and how many of them were active across all group sites associated with a Microsoft 365 group.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getOffice365GroupsActivityFileCounts
+     * Get the total number of files and how many of them were active across all group sites associated with a Microsoft 365 group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

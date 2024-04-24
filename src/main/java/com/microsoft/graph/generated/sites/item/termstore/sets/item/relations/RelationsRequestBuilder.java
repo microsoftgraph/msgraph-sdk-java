@@ -60,21 +60,19 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/sets/{set%2Did}/relations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the different relation of a [term] or [set] from the relations navigation property.
+     * Indicates which terms have been pinned or reused directly under the set.
      * @return a {@link RelationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RelationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the different relation of a [term] or [set] from the relations navigation property.
+     * Indicates which terms have been pinned or reused directly under the set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RelationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RelationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Relation::createFromDiscriminatorValue);
     }
     /**
-     * Get the different relation of a [term] or [set] from the relations navigation property.
+     * Indicates which terms have been pinned or reused directly under the set.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the different relation of a [term] or [set] from the relations navigation property.
+     * Indicates which terms have been pinned or reused directly under the set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return new RelationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the different relation of a [term] or [set] from the relations navigation property.
+     * Indicates which terms have been pinned or reused directly under the set.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

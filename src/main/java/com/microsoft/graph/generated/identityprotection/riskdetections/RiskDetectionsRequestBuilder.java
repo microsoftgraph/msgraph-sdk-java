@@ -60,21 +60,19 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskDetections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the riskDetection objects and their properties.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @return a {@link RiskDetectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskDetectionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the riskDetection objects and their properties.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RiskDetectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskDetectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RiskDetection::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the riskDetection objects and their properties.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the riskDetection objects and their properties.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return new RiskDetectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the riskDetection objects and their properties.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

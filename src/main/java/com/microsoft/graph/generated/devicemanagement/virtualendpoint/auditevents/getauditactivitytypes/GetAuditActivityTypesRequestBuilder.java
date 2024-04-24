@@ -36,19 +36,21 @@ public class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/auditEvents/getAuditActivityTypes(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getAuditActivityTypes
+     * Get auditactivity typesby tenant ID.
      * @return a {@link GetAuditActivityTypesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcauditevent-getauditactivitytypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAuditActivityTypesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getAuditActivityTypes
+     * Get auditactivity typesby tenant ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAuditActivityTypesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcauditevent-getauditactivitytypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAuditActivityTypesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GetAuditActivityTypesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getAuditActivityTypes
+     * Get auditactivity typesby tenant ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getAuditActivityTypes
+     * Get auditactivity typesby tenant ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder {
         return new GetAuditActivityTypesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getAuditActivityTypes
+     * Get auditactivity typesby tenant ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

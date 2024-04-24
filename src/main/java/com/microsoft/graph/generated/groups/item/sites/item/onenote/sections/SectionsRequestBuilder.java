@@ -60,21 +60,19 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/sections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of onenoteSection objects.
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @return a {@link OnenoteSectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnenoteSectionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of onenoteSection objects.
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenoteSectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnenoteSectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnenoteSection::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of onenoteSection objects.
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of onenoteSection objects.
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return new SectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of onenoteSection objects.
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

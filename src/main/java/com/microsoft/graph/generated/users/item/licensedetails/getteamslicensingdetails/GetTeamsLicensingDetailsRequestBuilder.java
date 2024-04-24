@@ -36,19 +36,21 @@ public class GetTeamsLicensingDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/licenseDetails/getTeamsLicensingDetails()", rawUrl);
     }
     /**
-     * Invoke function getTeamsLicensingDetails
+     * Get the license status of a user in Microsoft Teams.
      * @return a {@link TeamsLicensingDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/licensedetails-getteamslicensingdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsLicensingDetails get() {
         return get(null);
     }
     /**
-     * Invoke function getTeamsLicensingDetails
+     * Get the license status of a user in Microsoft Teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsLicensingDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/licensedetails-getteamslicensingdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsLicensingDetails get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetTeamsLicensingDetailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsLicensingDetails::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getTeamsLicensingDetails
+     * Get the license status of a user in Microsoft Teams.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetTeamsLicensingDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getTeamsLicensingDetails
+     * Get the license status of a user in Microsoft Teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

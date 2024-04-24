@@ -37,18 +37,16 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/modules/{educationModule%2Did}/resources/{educationModuleResource%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
+     * Delete navigation property resources for education
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
+     * Delete navigation property resources for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @return a {@link EducationModuleResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationModuleResource get() {
         return get(null);
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationModuleResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationModuleResource get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, EducationModuleResource::createFromDiscriminatorValue);
     }
     /**
-     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
+     * Update the navigation property resources in education
      * @param body The request body
      * @return a {@link EducationModuleResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationModuleResource patch(@jakarta.annotation.Nonnull final EducationModuleResource body) {
         return patch(body, null);
     }
     /**
-     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
+     * Update the navigation property resources in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationModuleResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationModuleResource patch(@jakarta.annotation.Nonnull final EducationModuleResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, EducationModuleResource::createFromDiscriminatorValue);
     }
     /**
-     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
+     * Delete navigation property resources for education
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
+     * Delete navigation property resources for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
+     * Update the navigation property resources in education
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
+     * Update the navigation property resources in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

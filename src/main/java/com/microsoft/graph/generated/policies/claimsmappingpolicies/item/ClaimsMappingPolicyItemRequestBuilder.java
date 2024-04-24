@@ -46,18 +46,16 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/claimsMappingPolicies/{claimsMappingPolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a claimsMappingPolicy object.
+     * Delete navigation property claimsMappingPolicies for policies
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a claimsMappingPolicy object.
+     * Delete navigation property claimsMappingPolicies for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object.
+     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      * @return a {@link ClaimsMappingPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ClaimsMappingPolicy get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object.
+     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ClaimsMappingPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ClaimsMappingPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,23 +86,21 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ClaimsMappingPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a claimsMappingPolicy object.
+     * Update the navigation property claimsMappingPolicies in policies
      * @param body The request body
      * @return a {@link ClaimsMappingPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ClaimsMappingPolicy patch(@jakarta.annotation.Nonnull final ClaimsMappingPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a claimsMappingPolicy object.
+     * Update the navigation property claimsMappingPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ClaimsMappingPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ClaimsMappingPolicy patch(@jakarta.annotation.Nonnull final ClaimsMappingPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -117,7 +111,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ClaimsMappingPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a claimsMappingPolicy object.
+     * Delete navigation property claimsMappingPolicies for policies
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +119,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a claimsMappingPolicy object.
+     * Delete navigation property claimsMappingPolicies for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +131,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object.
+     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +139,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object.
+     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a claimsMappingPolicy object.
+     * Update the navigation property claimsMappingPolicies in policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a claimsMappingPolicy object.
+     * Update the navigation property claimsMappingPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -197,7 +191,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a claimsMappingPolicy object.
+     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

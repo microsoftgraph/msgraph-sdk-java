@@ -59,21 +59,19 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/templates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @return a {@link ConditionalAccessTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-templates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessTemplateCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConditionalAccessTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-templates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return new TemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the conditionalAccessTemplate objects and their properties.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

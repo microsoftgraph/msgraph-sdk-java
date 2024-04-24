@@ -59,21 +59,19 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/cookies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of hostCookie resources.
+     * The hostCookies that are associated with this host.
      * @return a {@link HostCookieCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-cookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostCookieCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of hostCookie resources.
+     * The hostCookies that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostCookieCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-cookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostCookieCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostCookieCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of hostCookie resources.
+     * The hostCookies that are associated with this host.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of hostCookie resources.
+     * The hostCookies that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class CookiesRequestBuilder extends BaseRequestBuilder {
         return new CookiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of hostCookie resources.
+     * The hostCookies that are associated with this host.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

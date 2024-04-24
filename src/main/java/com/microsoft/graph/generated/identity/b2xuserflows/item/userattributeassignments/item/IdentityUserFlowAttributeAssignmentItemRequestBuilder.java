@@ -46,18 +46,16 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/{identityUserFlowAttributeAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object.
+     * Delete navigation property userAttributeAssignments for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object.
+     * Delete navigation property userAttributeAssignments for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
+     * The user attribute assignments included in the user flow.
      * @return a {@link IdentityUserFlowAttributeAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeAssignment get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
+     * The user attribute assignments included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlowAttributeAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,23 +86,21 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object.
+     * Update the navigation property userAttributeAssignments in identity
      * @param body The request body
      * @return a {@link IdentityUserFlowAttributeAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeAssignment patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object.
+     * Update the navigation property userAttributeAssignments in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlowAttributeAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeAssignment patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -117,7 +111,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object.
+     * Delete navigation property userAttributeAssignments for identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +119,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an identityUserFlowAttributeAssignment object.
+     * Delete navigation property userAttributeAssignments for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +131,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
+     * The user attribute assignments included in the user flow.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +139,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
+     * The user attribute assignments included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object.
+     * Update the navigation property userAttributeAssignments in identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a identityUserFlowAttributeAssignment object.
+     * Update the navigation property userAttributeAssignments in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -197,7 +191,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
+     * The user attribute assignments included in the user flow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

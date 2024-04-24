@@ -55,21 +55,19 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * A collection of stages in the approval decision.
      * @return a {@link ApprovalStage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStage get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * A collection of stages in the approval decision.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovalStage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApprovalStage::createFromDiscriminatorValue);
     }
     /**
-     * Approve or deny an approvalStage object in an approval.
+     * Update the navigation property stages in identityGovernance
      * @param body The request body
      * @return a {@link ApprovalStage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStage patch(@jakarta.annotation.Nonnull final ApprovalStage body) {
         return patch(body, null);
     }
     /**
-     * Approve or deny an approvalStage object in an approval.
+     * Update the navigation property stages in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovalStage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStage patch(@jakarta.annotation.Nonnull final ApprovalStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * A collection of stages in the approval decision.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * A collection of stages in the approval decision.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Approve or deny an approvalStage object in an approval.
+     * Update the navigation property stages in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Approve or deny an approvalStage object in an approval.
+     * Update the navigation property stages in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * A collection of stages in the approval decision.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

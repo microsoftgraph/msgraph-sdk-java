@@ -38,19 +38,21 @@ public class GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder ex
         super(requestAdapter, "{+baseurl}/reports/getSkypeForBusinessDeviceUsageUserCounts(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getSkypeForBusinessDeviceUsageUserCounts
+     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You'll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessdeviceusageusercounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getSkypeForBusinessDeviceUsageUserCounts
+     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You'll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessdeviceusageusercounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder ex
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getSkypeForBusinessDeviceUsageUserCounts
+     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You'll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder ex
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getSkypeForBusinessDeviceUsageUserCounts
+     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You'll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

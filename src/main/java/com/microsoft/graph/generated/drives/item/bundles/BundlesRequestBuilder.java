@@ -60,7 +60,7 @@ public class BundlesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/bundles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @return a {@link DriveItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class BundlesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class BundlesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class BundlesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class BundlesRequestBuilder extends BaseRequestBuilder {
         return new BundlesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

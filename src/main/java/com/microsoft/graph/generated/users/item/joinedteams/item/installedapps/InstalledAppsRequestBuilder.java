@@ -60,21 +60,19 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/installedApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of apps installed in the specified team.
+     * The apps installed in this team.
      * @return a {@link TeamsAppInstallationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/team-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppInstallationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of apps installed in the specified team.
+     * The apps installed in this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAppInstallationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/team-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppInstallationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppInstallationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Install an app to the specified team.
+     * Create new navigation property to installedApps for users
      * @param body The request body
      * @return a {@link TeamsAppInstallation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/team-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppInstallation post(@jakarta.annotation.Nonnull final TeamsAppInstallation body) {
         return post(body, null);
     }
     /**
-     * Install an app to the specified team.
+     * Create new navigation property to installedApps for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAppInstallation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/team-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppInstallation post(@jakarta.annotation.Nonnull final TeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of apps installed in the specified team.
+     * The apps installed in this team.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of apps installed in the specified team.
+     * The apps installed in this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Install an app to the specified team.
+     * Create new navigation property to installedApps for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Install an app to the specified team.
+     * Create new navigation property to installedApps for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return new InstalledAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of apps installed in the specified team.
+     * The apps installed in this team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

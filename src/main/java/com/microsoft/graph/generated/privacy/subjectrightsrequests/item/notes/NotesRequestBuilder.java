@@ -66,12 +66,11 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * List of notes associated with the request.
      * @return a {@link AuthoredNoteCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
-     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -79,13 +78,12 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthoredNoteCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
-     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -96,13 +94,12 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthoredNoteCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new authoredNote object.
+     * Create new navigation property to notes for privacy
      * @param body The request body
      * @return a {@link AuthoredNote}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
-     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -110,14 +107,13 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new authoredNote object.
+     * Create new navigation property to notes for privacy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthoredNote}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
-     * @see <a href="https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -129,7 +125,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthoredNote::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * List of notes associated with the request.
      * @return a {@link RequestInformation}
      * @deprecated
      * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
@@ -140,7 +136,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -155,7 +151,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new authoredNote object.
+     * Create new navigation property to notes for privacy
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -167,7 +163,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new authoredNote object.
+     * Create new navigation property to notes for privacy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -198,7 +194,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return new NotesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of authored notes assoicated with a subject rights request. 
+     * List of notes associated with the request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

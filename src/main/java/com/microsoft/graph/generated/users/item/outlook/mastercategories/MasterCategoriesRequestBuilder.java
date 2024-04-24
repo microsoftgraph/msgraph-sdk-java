@@ -60,21 +60,19 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/masterCategories{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get all the categories that have been defined for a user.
+     * A list of categories defined for the user.
      * @return a {@link OutlookCategoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OutlookCategoryCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get all the categories that have been defined for a user.
+     * A list of categories defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookCategoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OutlookCategoryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookCategoryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param body The request body
      * @return a {@link OutlookCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OutlookCategory post(@jakarta.annotation.Nonnull final OutlookCategory body) {
         return post(body, null);
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OutlookCategory post(@jakarta.annotation.Nonnull final OutlookCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookCategory::createFromDiscriminatorValue);
     }
     /**
-     * Get all the categories that have been defined for a user.
+     * A list of categories defined for the user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the categories that have been defined for a user.
+     * A list of categories defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
         return new MasterCategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the categories that have been defined for a user.
+     * A list of categories defined for the user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

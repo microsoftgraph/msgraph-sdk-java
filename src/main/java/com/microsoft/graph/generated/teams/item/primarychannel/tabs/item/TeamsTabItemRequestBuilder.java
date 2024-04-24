@@ -46,18 +46,16 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/primaryChannel/tabs/{teamsTab%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Removes (unpins) a tab from the specified channel within a team. 
+     * Delete navigation property tabs for teams
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Removes (unpins) a tab from the specified channel within a team. 
+     * Delete navigation property tabs for teams
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
+     * A collection of all the tabs in the channel. A navigation property.
      * @return a {@link TeamsTab}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsTab get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
+     * A collection of all the tabs in the channel. A navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsTab}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsTab get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,23 +86,21 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsTab::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
+     * Update the navigation property tabs in teams
      * @param body The request body
      * @return a {@link TeamsTab}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsTab patch(@jakarta.annotation.Nonnull final TeamsTab body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
+     * Update the navigation property tabs in teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsTab}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsTab patch(@jakarta.annotation.Nonnull final TeamsTab body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -117,7 +111,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsTab::createFromDiscriminatorValue);
     }
     /**
-     * Removes (unpins) a tab from the specified channel within a team. 
+     * Delete navigation property tabs for teams
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +119,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Removes (unpins) a tab from the specified channel within a team. 
+     * Delete navigation property tabs for teams
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +131,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
+     * A collection of all the tabs in the channel. A navigation property.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +139,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
+     * A collection of all the tabs in the channel. A navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
+     * Update the navigation property tabs in teams
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
+     * Update the navigation property tabs in teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -197,7 +191,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
+     * A collection of all the tabs in the channel. A navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

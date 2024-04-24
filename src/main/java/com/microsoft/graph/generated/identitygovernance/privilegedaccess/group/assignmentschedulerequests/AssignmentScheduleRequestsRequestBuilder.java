@@ -71,21 +71,19 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
+     * The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
+     * The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,23 +93,21 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
+     * Create new navigation property to assignmentScheduleRequests for identityGovernance
      * @param body The request body
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-assignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentScheduleRequest post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body) {
         return post(body, null);
     }
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
+     * Create new navigation property to assignmentScheduleRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-assignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentScheduleRequest post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -122,7 +118,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleRequest::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
+     * The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +126,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
+     * The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +138,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
+     * Create new navigation property to assignmentScheduleRequests for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +147,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
+     * Create new navigation property to assignmentScheduleRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -176,7 +172,7 @@ public class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
         return new AssignmentScheduleRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
+     * The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

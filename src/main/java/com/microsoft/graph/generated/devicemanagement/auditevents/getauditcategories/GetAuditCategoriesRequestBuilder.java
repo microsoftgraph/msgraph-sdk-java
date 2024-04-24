@@ -36,19 +36,21 @@ public class GetAuditCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/auditEvents/getAuditCategories(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getAuditCategories
+     * Not yet documented
      * @return a {@link GetAuditCategoriesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-getauditcategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAuditCategoriesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getAuditCategories
+     * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAuditCategoriesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-getauditcategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAuditCategoriesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetAuditCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GetAuditCategoriesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getAuditCategories
+     * Not yet documented
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetAuditCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getAuditCategories
+     * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetAuditCategoriesRequestBuilder extends BaseRequestBuilder {
         return new GetAuditCategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getAuditCategories
+     * Not yet documented
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

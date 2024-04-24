@@ -66,7 +66,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("azureTenantId");
     }
     /**
-     * Gets the category property value. Category of the alert (for example, credentialTheft, ransomware, etc.).
+     * Gets the category property value. Category of the alert (for example, credentialTheft, ransomware).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("detectionIds");
     }
     /**
-     * Gets the eventDateTime property value. Time at which the event(s) that served as the trigger(s) to generate the alert occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     * Gets the eventDateTime property value. Time at which the event or events that served as the trigger to generate the alert occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("eventDateTime");
     }
     /**
-     * Gets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. (supports update)
+     * Gets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
      * @return a {@link AlertFeedback}
      */
     @jakarta.annotation.Nullable
@@ -314,7 +314,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("severity");
     }
     /**
-     * Gets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search, etc.
+     * Gets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -330,7 +330,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW', etc.) (supports update).
+     * Gets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW') (supports update).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -468,7 +468,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("azureTenantId", value);
     }
     /**
-     * Sets the category property value. Category of the alert (for example, credentialTheft, ransomware, etc.).
+     * Sets the category property value. Category of the alert (for example, credentialTheft, ransomware).
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
@@ -524,14 +524,14 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("detectionIds", value);
     }
     /**
-     * Sets the eventDateTime property value. Time at which the event(s) that served as the trigger(s) to generate the alert occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     * Sets the eventDateTime property value. Time at which the event or events that served as the trigger to generate the alert occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("eventDateTime", value);
     }
     /**
-     * Sets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. (supports update)
+     * Sets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final AlertFeedback value) {
@@ -643,7 +643,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("severity", value);
     }
     /**
-     * Sets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search, etc.
+     * Sets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search.
      * @param value Value to set for the sourceMaterials property.
      */
     public void setSourceMaterials(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -657,7 +657,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW', etc.) (supports update).
+     * Sets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW') (supports update).
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {

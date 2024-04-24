@@ -39,18 +39,16 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials(name='{name}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete navigation property federatedIdentityCredentials for applications
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete navigation property federatedIdentityCredentials for applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -59,21 +57,19 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredential get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredential get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,23 +79,21 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the navigation property federatedIdentityCredentials in applications
      * @param body The request body
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredential patch(@jakarta.annotation.Nonnull final FederatedIdentityCredential body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the navigation property federatedIdentityCredentials in applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredential patch(@jakarta.annotation.Nonnull final FederatedIdentityCredential body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -110,7 +104,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete navigation property federatedIdentityCredentials for applications
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +112,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete navigation property federatedIdentityCredentials for applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -130,7 +124,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +132,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -150,7 +144,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the navigation property federatedIdentityCredentials in applications
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -159,7 +153,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the navigation property federatedIdentityCredentials in applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -190,7 +184,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

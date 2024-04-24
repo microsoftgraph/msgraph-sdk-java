@@ -36,19 +36,21 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/templates/{synchronizationTemplate%2Did}/schema/functions(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function functions
+     * List all the functions currently supported in the attributeMappingSource.
      * @return a {@link FunctionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-functions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FunctionsGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function functions
+     * List all the functions currently supported in the attributeMappingSource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FunctionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-functions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FunctionsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FunctionsGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function functions
+     * List all the functions currently supported in the attributeMappingSource.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function functions
+     * List all the functions currently supported in the attributeMappingSource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
         return new FunctionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function functions
+     * List all the functions currently supported in the attributeMappingSource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

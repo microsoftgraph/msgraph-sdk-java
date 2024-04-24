@@ -60,21 +60,19 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/emailMethods{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
+     * The email address registered to a user for authentication.
      * @return a {@link EmailAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EmailAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
+     * The email address registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmailAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EmailAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
+     * Create new navigation property to emailMethods for users
      * @param body The request body
      * @return a {@link EmailAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EmailAuthenticationMethod post(@jakarta.annotation.Nonnull final EmailAuthenticationMethod body) {
         return post(body, null);
     }
     /**
-     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
+     * Create new navigation property to emailMethods for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmailAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EmailAuthenticationMethod post(@jakarta.annotation.Nonnull final EmailAuthenticationMethod body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
+     * The email address registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
+     * The email address registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
+     * Create new navigation property to emailMethods for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
+     * Create new navigation property to emailMethods for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return new EmailMethodsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
+     * The email address registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

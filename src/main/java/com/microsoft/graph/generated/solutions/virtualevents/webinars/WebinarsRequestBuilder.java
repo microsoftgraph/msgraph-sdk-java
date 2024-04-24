@@ -62,21 +62,19 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of all virtualEventWebinar objects created in the tenant.
+     * Get webinars from solutions
      * @return a {@link VirtualEventWebinarCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventsroot-list-webinars?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinarCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of all virtualEventWebinar objects created in the tenant.
+     * Get webinars from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventWebinarCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventsroot-list-webinars?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinarCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +131,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventWebinar::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of all virtualEventWebinar objects created in the tenant.
+     * Get webinars from solutions
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +139,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of all virtualEventWebinar objects created in the tenant.
+     * Get webinars from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -187,7 +185,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return new WebinarsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of all virtualEventWebinar objects created in the tenant.
+     * Get webinars from solutions
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

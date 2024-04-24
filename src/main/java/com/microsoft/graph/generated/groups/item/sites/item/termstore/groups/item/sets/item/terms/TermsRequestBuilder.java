@@ -60,7 +60,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/groups/{group%2Did1}/sets/{set%2Did}/terms{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      * @return a {@link TermCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Term::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return new TermsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

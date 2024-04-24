@@ -91,18 +91,16 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a iosMobileAppConfiguration.
+     * Delete navigation property mobileAppConfigurations for deviceAppManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a iosMobileAppConfiguration.
+     * Delete navigation property mobileAppConfigurations for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -111,21 +109,19 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * The Managed Device Mobile Application Configurations.
      * @return a {@link ManagedDeviceMobileAppConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * The Managed Device Mobile Application Configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDeviceMobileAppConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,23 +131,21 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a iosMobileAppConfiguration object.
+     * Update the navigation property mobileAppConfigurations in deviceAppManagement
      * @param body The request body
      * @return a {@link ManagedDeviceMobileAppConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a iosMobileAppConfiguration object.
+     * Update the navigation property mobileAppConfigurations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDeviceMobileAppConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -162,7 +156,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a iosMobileAppConfiguration.
+     * Delete navigation property mobileAppConfigurations for deviceAppManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -170,7 +164,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a iosMobileAppConfiguration.
+     * Delete navigation property mobileAppConfigurations for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +176,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * The Managed Device Mobile Application Configurations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -190,7 +184,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * The Managed Device Mobile Application Configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -202,7 +196,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Update the properties of a iosMobileAppConfiguration object.
+     * Update the navigation property mobileAppConfigurations in deviceAppManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -211,7 +205,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a iosMobileAppConfiguration object.
+     * Update the navigation property mobileAppConfigurations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -242,7 +236,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
+     * The Managed Device Mobile Application Configurations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -63,7 +63,6 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @return a {@link BookingAppointmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingAppointmentCollectionResponse get() {
@@ -74,7 +73,6 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingAppointmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingAppointmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

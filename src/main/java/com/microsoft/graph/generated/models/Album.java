@@ -56,7 +56,7 @@ public class Album implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the coverImageItemId property value. Unique identifier of the [driveItem][] that is the cover of the album.
+     * Gets the coverImageItemId property value. Unique identifier of the driveItem that is the cover of the album.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class Album implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the coverImageItemId property value. Unique identifier of the [driveItem][] that is the cover of the album.
+     * Sets the coverImageItemId property value. Unique identifier of the driveItem that is the cover of the album.
      * @param value Value to set for the coverImageItemId property.
      */
     public void setCoverImageItemId(@jakarta.annotation.Nullable final String value) {

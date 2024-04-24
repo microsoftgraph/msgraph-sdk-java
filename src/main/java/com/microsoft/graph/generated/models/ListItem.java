@@ -50,7 +50,7 @@ public class ListItem extends BaseItem implements Parsable {
         return this.backingStore.get("documentSetVersions");
     }
     /**
-     * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a driveItem
      * @return a {@link DriveItem}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class ListItem extends BaseItem implements Parsable {
         this.backingStore.set("documentSetVersions", value);
     }
     /**
-     * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a driveItem
      * @param value Value to set for the driveItem property.
      */
     public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {

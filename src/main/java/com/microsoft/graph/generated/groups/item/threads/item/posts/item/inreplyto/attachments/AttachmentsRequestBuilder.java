@@ -69,21 +69,19 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/threads/{conversationThread%2Did}/posts/{post%2Did}/inReplyTo/attachments{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      * @return a {@link AttachmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttachmentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AttachmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/post-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttachmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +116,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Attachment::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +124,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +170,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return new AttachmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of attachment objects attached to a post.
+     * Read-only. Nullable. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

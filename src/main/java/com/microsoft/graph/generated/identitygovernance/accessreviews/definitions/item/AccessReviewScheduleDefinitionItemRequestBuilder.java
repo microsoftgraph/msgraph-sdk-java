@@ -55,18 +55,16 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes an accessReviewScheduleDefinition object.
+     * Delete navigation property definitions for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes an accessReviewScheduleDefinition object.
+     * Delete navigation property definitions for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +73,19 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
+     * Represents the template and scheduling for an access review.
      * @return a {@link AccessReviewScheduleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewScheduleDefinition get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
+     * Represents the template and scheduling for an access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewScheduleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewScheduleDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +120,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Deletes an accessReviewScheduleDefinition object.
+     * Delete navigation property definitions for identityGovernance
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +128,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an accessReviewScheduleDefinition object.
+     * Delete navigation property definitions for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -144,7 +140,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
+     * Represents the template and scheduling for an access review.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +148,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
+     * Represents the template and scheduling for an access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -204,7 +200,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
+     * Represents the template and scheduling for an access review.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

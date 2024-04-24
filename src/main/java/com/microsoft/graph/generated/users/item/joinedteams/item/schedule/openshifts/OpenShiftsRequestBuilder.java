@@ -60,21 +60,19 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/openShifts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @return a {@link OpenShiftCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/openshift-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OpenShiftCollectionResponse get() {
         return get(null);
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OpenShiftCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/openshift-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OpenShiftCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OpenShiftCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for users
      * @param body The request body
      * @return a {@link OpenShift}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OpenShift post(@jakarta.annotation.Nonnull final OpenShift body) {
         return post(body, null);
     }
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OpenShift}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OpenShift post(@jakarta.annotation.Nonnull final OpenShift body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OpenShift::createFromDiscriminatorValue);
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class OpenShiftsRequestBuilder extends BaseRequestBuilder {
         return new OpenShiftsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

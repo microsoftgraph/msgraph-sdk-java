@@ -55,21 +55,19 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object.
+     * Get secureScoreControlProfiles from security
      * @return a {@link SecureScoreControlProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SecureScoreControlProfile get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object.
+     * Get secureScoreControlProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SecureScoreControlProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SecureScoreControlProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, SecureScoreControlProfile::createFromDiscriminatorValue);
     }
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
+     * Update the navigation property secureScoreControlProfiles in security
      * @param body The request body
      * @return a {@link SecureScoreControlProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SecureScoreControlProfile patch(@jakarta.annotation.Nonnull final SecureScoreControlProfile body) {
         return patch(body, null);
     }
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
+     * Update the navigation property secureScoreControlProfiles in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SecureScoreControlProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SecureScoreControlProfile patch(@jakarta.annotation.Nonnull final SecureScoreControlProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object.
+     * Get secureScoreControlProfiles from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object.
+     * Get secureScoreControlProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
+     * Update the navigation property secureScoreControlProfiles in security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
+     * Update the navigation property secureScoreControlProfiles in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an securescorecontrolprofile object.
+     * Get secureScoreControlProfiles from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

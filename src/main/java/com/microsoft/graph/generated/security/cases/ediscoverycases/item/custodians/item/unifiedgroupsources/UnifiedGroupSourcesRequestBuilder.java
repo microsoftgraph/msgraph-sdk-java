@@ -60,21 +60,19 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/unifiedGroupSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
+     * Data source entity for groups associated with the custodian.
      * @return a {@link UnifiedGroupSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedGroupSourceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
+     * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedGroupSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedGroupSourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedGroupSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
+     * Create new navigation property to unifiedGroupSources for security
      * @param body The request body
      * @return a {@link UnifiedGroupSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedGroupSource post(@jakarta.annotation.Nonnull final UnifiedGroupSource body) {
         return post(body, null);
     }
     /**
-     * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
+     * Create new navigation property to unifiedGroupSources for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedGroupSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedGroupSource post(@jakarta.annotation.Nonnull final UnifiedGroupSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedGroupSource::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
+     * Data source entity for groups associated with the custodian.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
+     * Data source entity for groups associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
+     * Create new navigation property to unifiedGroupSources for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
+     * Create new navigation property to unifiedGroupSources for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return new UnifiedGroupSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
+     * Data source entity for groups associated with the custodian.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

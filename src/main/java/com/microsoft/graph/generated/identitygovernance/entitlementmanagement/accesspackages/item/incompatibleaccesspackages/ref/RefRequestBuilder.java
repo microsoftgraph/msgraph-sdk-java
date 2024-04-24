@@ -38,18 +38,16 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/incompatibleAccessPackages/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Delete ref of navigation property incompatibleAccessPackages for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-incompatibleaccesspackage?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Delete ref of navigation property incompatibleAccessPackages for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-incompatibleaccesspackage?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -58,21 +56,19 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StringCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StringCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,20 +78,18 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add an accessPackage to the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Create new navigation property ref to incompatibleAccessPackages for identityGovernance
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-post-incompatibleaccesspackage?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body) {
         post(body, null);
     }
     /**
-     * Add an accessPackage to the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Create new navigation property ref to incompatibleAccessPackages for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-post-incompatibleaccesspackage?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -105,7 +99,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Delete ref of navigation property incompatibleAccessPackages for identityGovernance
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +107,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Delete ref of navigation property incompatibleAccessPackages for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -125,7 +119,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +127,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -145,7 +139,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add an accessPackage to the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Create new navigation property ref to incompatibleAccessPackages for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -154,7 +148,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add an accessPackage to the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Create new navigation property ref to incompatibleAccessPackages for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -179,7 +173,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Delete ref of navigation property incompatibleAccessPackages for identityGovernance
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters implements QueryParameters {
@@ -211,7 +205,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

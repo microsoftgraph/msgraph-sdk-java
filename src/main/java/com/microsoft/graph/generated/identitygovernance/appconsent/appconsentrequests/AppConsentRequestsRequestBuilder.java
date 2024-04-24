@@ -71,21 +71,19 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @return a {@link AppConsentRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppConsentRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppConsentRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppConsentRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +118,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppConsentRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +126,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -174,7 +172,7 @@ public class AppConsentRequestsRequestBuilder extends BaseRequestBuilder {
         return new AppConsentRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

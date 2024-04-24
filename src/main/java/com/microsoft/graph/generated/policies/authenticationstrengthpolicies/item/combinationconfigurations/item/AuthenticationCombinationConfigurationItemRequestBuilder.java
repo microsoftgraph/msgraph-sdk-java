@@ -37,18 +37,16 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies/{authenticationStrengthPolicy%2Did}/combinationConfigurations/{authenticationCombinationConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete navigation property combinationConfigurations for policies
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete navigation property combinationConfigurations for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @return a {@link AuthenticationCombinationConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationCombinationConfiguration get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationCombinationConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationCombinationConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationCombinationConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
+     * Update the navigation property combinationConfigurations in policies
      * @param body The request body
      * @return a {@link AuthenticationCombinationConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationCombinationConfiguration patch(@jakarta.annotation.Nonnull final AuthenticationCombinationConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
+     * Update the navigation property combinationConfigurations in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationCombinationConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationCombinationConfiguration patch(@jakarta.annotation.Nonnull final AuthenticationCombinationConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationCombinationConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete navigation property combinationConfigurations for policies
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
+     * Delete navigation property combinationConfigurations for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
+     * Update the navigation property combinationConfigurations in policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
+     * Update the navigation property combinationConfigurations in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an authenticationCombinationConfiguration object.
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

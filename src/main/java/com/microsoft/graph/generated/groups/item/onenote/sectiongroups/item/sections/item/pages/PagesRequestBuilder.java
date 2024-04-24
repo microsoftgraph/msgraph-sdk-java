@@ -60,21 +60,19 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/onenote/sectionGroups/{sectionGroup%2Did}/sections/{onenoteSection%2Did}/pages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of page objects from the specified section.
+     * The collection of pages in the section.  Read-only. Nullable.
      * @return a {@link OnenotePageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnenotePageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of page objects from the specified section.
+     * The collection of pages in the section.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenotePageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnenotePageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnenotePageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new page in the specified section.
+     * Create new navigation property to pages for groups
      * @param body The request body
      * @return a {@link OnenotePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnenotePage post(@jakarta.annotation.Nonnull final OnenotePage body) {
         return post(body, null);
     }
     /**
-     * Create a new page in the specified section.
+     * Create new navigation property to pages for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenotePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnenotePage post(@jakarta.annotation.Nonnull final OnenotePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnenotePage::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of page objects from the specified section.
+     * The collection of pages in the section.  Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of page objects from the specified section.
+     * The collection of pages in the section.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new page in the specified section.
+     * Create new navigation property to pages for groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new page in the specified section.
+     * Create new navigation property to pages for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return new PagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of page objects from the specified section.
+     * The collection of pages in the section.  Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

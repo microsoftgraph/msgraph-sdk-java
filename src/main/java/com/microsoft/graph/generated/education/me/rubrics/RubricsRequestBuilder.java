@@ -60,21 +60,19 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/rubrics{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of educationRubric objects.
+     * When set, the grading rubric attached to the assignment.
      * @return a {@link EducationRubricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationRubricCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of educationRubric objects.
+     * When set, the grading rubric attached to the assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationRubricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationRubricCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationRubricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new educationRubric object.
+     * Create new navigation property to rubrics for education
      * @param body The request body
      * @return a {@link EducationRubric}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationRubric post(@jakarta.annotation.Nonnull final EducationRubric body) {
         return post(body, null);
     }
     /**
-     * Create a new educationRubric object.
+     * Create new navigation property to rubrics for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationRubric}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationRubric post(@jakarta.annotation.Nonnull final EducationRubric body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationRubric::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of educationRubric objects.
+     * When set, the grading rubric attached to the assignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of educationRubric objects.
+     * When set, the grading rubric attached to the assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new educationRubric object.
+     * Create new navigation property to rubrics for education
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new educationRubric object.
+     * Create new navigation property to rubrics for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return new RubricsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of educationRubric objects.
+     * When set, the grading rubric attached to the assignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

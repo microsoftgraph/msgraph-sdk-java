@@ -37,21 +37,19 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDeviceOverview{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read properties and relationships of the managedDeviceOverview object.
+     * Device overview
      * @return a {@link ManagedDeviceOverview}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceOverview get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceOverview object.
+     * Device overview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDeviceOverview}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceOverview get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,7 +59,7 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceOverview::createFromDiscriminatorValue);
     }
     /**
-     * Read properties and relationships of the managedDeviceOverview object.
+     * Device overview
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +67,7 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceOverview object.
+     * Device overview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +89,7 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         return new ManagedDeviceOverviewRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read properties and relationships of the managedDeviceOverview object.
+     * Device overview
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

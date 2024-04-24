@@ -60,21 +60,19 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffReasons{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      * @return a {@link TimeOffReasonCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffReasonCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeOffReasonCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffReasonCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReasonCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new timeOffReason.
+     * Create new navigation property to timeOffReasons for groups
      * @param body The request body
      * @return a {@link TimeOffReason}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffReason post(@jakarta.annotation.Nonnull final TimeOffReason body) {
         return post(body, null);
     }
     /**
-     * Create a new timeOffReason.
+     * Create new navigation property to timeOffReasons for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeOffReason}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffReason post(@jakarta.annotation.Nonnull final TimeOffReason body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReason::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new timeOffReason.
+     * Create new navigation property to timeOffReasons for groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new timeOffReason.
+     * Create new navigation property to timeOffReasons for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
         return new TimeOffReasonsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of timeOffReasons in a schedule.
+     * The set of reasons for a time off in the schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

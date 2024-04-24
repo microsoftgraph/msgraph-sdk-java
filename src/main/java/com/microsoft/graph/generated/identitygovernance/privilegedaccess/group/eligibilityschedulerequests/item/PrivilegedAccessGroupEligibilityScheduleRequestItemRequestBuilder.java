@@ -91,21 +91,19 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
+     * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
      * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilityScheduleRequest get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
+     * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilityScheduleRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +158,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
+     * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -168,7 +166,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
+     * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -220,7 +218,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder e
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
+     * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

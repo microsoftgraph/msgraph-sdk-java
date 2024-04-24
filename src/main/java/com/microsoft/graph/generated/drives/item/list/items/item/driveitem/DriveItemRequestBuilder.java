@@ -46,7 +46,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items/{listItem%2Did}/driveItem{?%24expand,%24select}", rawUrl);
     }
     /**
-     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * For document libraries, the driveItem relationship exposes the listItem as a driveItem
      * @return a {@link DriveItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -55,7 +55,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * For document libraries, the driveItem relationship exposes the listItem as a driveItem
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -68,7 +68,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * For document libraries, the driveItem relationship exposes the listItem as a driveItem
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * For document libraries, the driveItem relationship exposes the listItem as a driveItem
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +98,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return new DriveItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * For document libraries, the driveItem relationship exposes the listItem as a driveItem
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

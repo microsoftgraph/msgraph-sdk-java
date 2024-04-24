@@ -64,21 +64,19 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
+     * The assignment of a role management policy to a role definition object.
      * @return a {@link UnifiedRoleManagementPolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignment get() {
         return get(null);
     }
     /**
-     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
+     * The assignment of a role management policy to a role definition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleManagementPolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +131,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
+     * The assignment of a role management policy to a role definition object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +139,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
+     * The assignment of a role management policy to a role definition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -193,7 +191,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
+     * The assignment of a role management policy to a role definition object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -36,7 +36,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/copy", rawUrl);
     }
     /**
-     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
+     * Asynchronously creates a copy of an driveItem (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @return a {@link DriveItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
+     * Asynchronously creates a copy of an driveItem (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveItem}
@@ -63,7 +63,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
+     * Asynchronously creates a copy of an driveItem (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
+     * Asynchronously creates a copy of an driveItem (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

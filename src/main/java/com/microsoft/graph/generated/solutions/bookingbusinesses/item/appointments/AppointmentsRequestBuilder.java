@@ -60,21 +60,19 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/appointments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness.
+     * All the appointments of this business. Read-only. Nullable.
      * @return a {@link BookingAppointmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingAppointmentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness.
+     * All the appointments of this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingAppointmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingAppointmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingAppointmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness.
+     * Create new navigation property to appointments for solutions
      * @param body The request body
      * @return a {@link BookingAppointment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingAppointment post(@jakarta.annotation.Nonnull final BookingAppointment body) {
         return post(body, null);
     }
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness.
+     * Create new navigation property to appointments for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingAppointment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingAppointment post(@jakarta.annotation.Nonnull final BookingAppointment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingAppointment::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness.
+     * All the appointments of this business. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness.
+     * All the appointments of this business. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness.
+     * Create new navigation property to appointments for solutions
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new bookingAppointment for the specified bookingBusiness.
+     * Create new navigation property to appointments for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return new AppointmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingAppointment objects for the specified bookingBusiness.
+     * All the appointments of this business. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

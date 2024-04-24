@@ -36,19 +36,21 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/primaryChannel/doesUserHaveAccess(userId='@userId',tenantId='@tenantId',userPrincipalName='@userPrincipalName'){?tenantId*,userId*,userPrincipalName*}", rawUrl);
     }
     /**
-     * Invoke function doesUserHaveAccess
+     * Determine whether a user has access to a shared channel.
      * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-doesuserhaveaccess?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function doesUserHaveAccess
+     * Determine whether a user has access to a shared channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-doesuserhaveaccess?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         return this.requestAdapter.send(requestInfo, errorMapping, DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function doesUserHaveAccess
+     * Determine whether a user has access to a shared channel.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function doesUserHaveAccess
+     * Determine whether a user has access to a shared channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function doesUserHaveAccess
+     * Determine whether a user has access to a shared channel.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

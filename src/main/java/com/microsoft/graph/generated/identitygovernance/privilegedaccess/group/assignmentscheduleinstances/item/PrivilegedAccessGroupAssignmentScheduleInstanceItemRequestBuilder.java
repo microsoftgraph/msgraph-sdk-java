@@ -82,21 +82,19 @@ public class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder e
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object.
+     * The instances of assignment schedules to activate a just-in-time access.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentScheduleInstance get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object.
+     * The instances of assignment schedules to activate a just-in-time access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentScheduleInstance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder e
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object.
+     * The instances of assignment schedules to activate a just-in-time access.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -159,7 +157,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder e
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object.
+     * The instances of assignment schedules to activate a just-in-time access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -211,7 +209,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder e
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleInstance object.
+     * The instances of assignment schedules to activate a just-in-time access.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -82,23 +82,21 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for external
      * @param body The request body
      * @return a {@link Identity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Identity post(@jakarta.annotation.Nonnull final Identity body) {
         return post(body, null);
     }
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Identity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Identity post(@jakarta.annotation.Nonnull final Identity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -129,7 +127,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for external
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +136,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

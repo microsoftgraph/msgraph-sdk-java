@@ -55,21 +55,19 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      * @return a {@link ManagedDeviceMobileAppConfigurationUserSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDeviceMobileAppConfigurationUserSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfigurationUserSummary::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
+     * Update the navigation property userStatusSummary in deviceAppManagement
      * @param body The request body
      * @return a {@link ManagedDeviceMobileAppConfigurationUserSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserSummary body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
+     * Update the navigation property userStatusSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDeviceMobileAppConfigurationUserSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
+     * Update the navigation property userStatusSummary in deviceAppManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
+     * Update the navigation property userStatusSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

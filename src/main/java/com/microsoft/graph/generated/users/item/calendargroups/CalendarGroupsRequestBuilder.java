@@ -60,21 +60,19 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the user's calendar groups.
+     * The user's calendar groups. Read-only. Nullable.
      * @return a {@link CalendarGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-calendargroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CalendarGroupCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the user's calendar groups.
+     * The user's calendar groups. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CalendarGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-calendargroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CalendarGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new CalendarGroup.
+     * Create new navigation property to calendarGroups for users
      * @param body The request body
      * @return a {@link CalendarGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-post-calendargroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CalendarGroup post(@jakarta.annotation.Nonnull final CalendarGroup body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new CalendarGroup.
+     * Create new navigation property to calendarGroups for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CalendarGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-post-calendargroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CalendarGroup post(@jakarta.annotation.Nonnull final CalendarGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get the user's calendar groups.
+     * The user's calendar groups. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the user's calendar groups.
+     * The user's calendar groups. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new CalendarGroup.
+     * Create new navigation property to calendarGroups for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new CalendarGroup.
+     * Create new navigation property to calendarGroups for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return new CalendarGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the user's calendar groups.
+     * The user's calendar groups. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

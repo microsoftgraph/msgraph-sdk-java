@@ -59,21 +59,19 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/taughtClasses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the educationClass resources owned by an educationUser.
+     * Classes for which the user is a teacher.
      * @return a {@link EducationClassCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-taughtclasses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationClassCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the educationClass resources owned by an educationUser.
+     * Classes for which the user is a teacher.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationClassCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-taughtclasses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationClassCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationClassCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the educationClass resources owned by an educationUser.
+     * Classes for which the user is a teacher.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the educationClass resources owned by an educationUser.
+     * Classes for which the user is a teacher.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         return new TaughtClassesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the educationClass resources owned by an educationUser.
+     * Classes for which the user is a teacher.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

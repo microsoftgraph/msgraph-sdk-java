@@ -292,7 +292,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("subscriptions");
     }
     /**
-     * Gets the thumbnails property value. Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
+     * Gets the thumbnails property value. Collection of thumbnailSet objects associated with the item. For more information, see getting thumbnails. Read-only. Nullable.
      * @return a {@link java.util.List<ThumbnailSet>}
      */
     @jakarta.annotation.Nullable
@@ -300,7 +300,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("thumbnails");
     }
     /**
-     * Gets the versions property value. The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     * Gets the versions property value. The list of previous versions of the item. For more info, see getting previous versions. Read-only. Nullable.
      * @return a {@link java.util.List<DriveItemVersion>}
      */
     @jakarta.annotation.Nullable
@@ -569,14 +569,14 @@ public class DriveItem extends BaseItem implements Parsable {
         this.backingStore.set("subscriptions", value);
     }
     /**
-     * Sets the thumbnails property value. Collection of [thumbnailSet][] objects associated with the item. For more information, see [getting thumbnails][]. Read-only. Nullable.
+     * Sets the thumbnails property value. Collection of thumbnailSet objects associated with the item. For more information, see getting thumbnails. Read-only. Nullable.
      * @param value Value to set for the thumbnails property.
      */
     public void setThumbnails(@jakarta.annotation.Nullable final java.util.List<ThumbnailSet> value) {
         this.backingStore.set("thumbnails", value);
     }
     /**
-     * Sets the versions property value. The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     * Sets the versions property value. The list of previous versions of the item. For more info, see getting previous versions. Read-only. Nullable.
      * @param value Value to set for the versions property.
      */
     public void setVersions(@jakarta.annotation.Nullable final java.util.List<DriveItemVersion> value) {

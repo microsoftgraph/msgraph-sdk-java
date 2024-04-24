@@ -60,21 +60,19 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/informationProtection/threatAssessmentRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      * @return a {@link ThreatAssessmentRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ThreatAssessmentRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatAssessmentRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create new navigation property to threatAssessmentRequests for informationProtection
      * @param body The request body
      * @return a {@link ThreatAssessmentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequest post(@jakarta.annotation.Nonnull final ThreatAssessmentRequest body) {
         return post(body, null);
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create new navigation property to threatAssessmentRequests for informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ThreatAssessmentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatAssessmentRequest post(@jakarta.annotation.Nonnull final ThreatAssessmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatAssessmentRequest::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create new navigation property to threatAssessmentRequests for informationProtection
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new threat assessment request. A threat assessment request can be one of the following types:
+     * Create new navigation property to threatAssessmentRequests for informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
         return new ThreatAssessmentRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
+     * Get threatAssessmentRequests from informationProtection
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

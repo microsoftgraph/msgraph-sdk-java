@@ -39,19 +39,21 @@ public class GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder extends
         super(requestAdapter, "{+baseurl}/reports/getSkypeForBusinessActivityUserDetail(date={date})", rawUrl);
     }
     /**
-     * Invoke function getSkypeForBusinessActivityUserDetail
+     * Get details about Skype for Business activity by user.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessactivityuserdetail?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getSkypeForBusinessActivityUserDetail
+     * Get details about Skype for Business activity by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessactivityuserdetail?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder extends
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getSkypeForBusinessActivityUserDetail
+     * Get details about Skype for Business activity by user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +71,7 @@ public class GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder extends
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getSkypeForBusinessActivityUserDetail
+     * Get details about Skype for Business activity by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

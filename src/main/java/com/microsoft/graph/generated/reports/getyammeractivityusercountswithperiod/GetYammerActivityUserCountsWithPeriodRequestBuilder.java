@@ -38,19 +38,21 @@ public class GetYammerActivityUserCountsWithPeriodRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/reports/getYammerActivityUserCounts(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getYammerActivityUserCounts
+     * Get the trends on the number of unique users who posted, read, and liked Yammer messages.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getyammeractivityusercounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getYammerActivityUserCounts
+     * Get the trends on the number of unique users who posted, read, and liked Yammer messages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getyammeractivityusercounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetYammerActivityUserCountsWithPeriodRequestBuilder extends BaseReq
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getYammerActivityUserCounts
+     * Get the trends on the number of unique users who posted, read, and liked Yammer messages.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetYammerActivityUserCountsWithPeriodRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getYammerActivityUserCounts
+     * Get the trends on the number of unique users who posted, read, and liked Yammer messages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

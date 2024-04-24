@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.7.0] - 2024-04-24
+
+### Added
+
+- Weekly generated v1.0 models and request builders using Kiota
+
 ## [6.6.0] - 2024-04-16
 
 ### Added

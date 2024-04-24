@@ -60,21 +60,19 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/installedApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @return a {@link UserScopeTeamsAppInstallationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserScopeTeamsAppInstallationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Install an app in the personal scope of the specified user.
+     * Create new navigation property to installedApps for users
      * @param body The request body
      * @return a {@link UserScopeTeamsAppInstallation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallation post(@jakarta.annotation.Nonnull final UserScopeTeamsAppInstallation body) {
         return post(body, null);
     }
     /**
-     * Install an app in the personal scope of the specified user.
+     * Create new navigation property to installedApps for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserScopeTeamsAppInstallation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserScopeTeamsAppInstallation post(@jakarta.annotation.Nonnull final UserScopeTeamsAppInstallation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserScopeTeamsAppInstallation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Install an app in the personal scope of the specified user.
+     * Create new navigation property to installedApps for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Install an app in the personal scope of the specified user.
+     * Create new navigation property to installedApps for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return new InstalledAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of apps installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

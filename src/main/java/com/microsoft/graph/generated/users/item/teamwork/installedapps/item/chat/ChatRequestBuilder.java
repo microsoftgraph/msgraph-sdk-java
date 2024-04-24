@@ -37,21 +37,19 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}/chat{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * The chat between the user and Teams app.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Chat get() {
         return get(null);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * The chat between the user and Teams app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Chat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -61,7 +59,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Chat::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * The chat between the user and Teams app.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +67,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * The chat between the user and Teams app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +89,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return new ChatRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * The chat between the user and Teams app.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

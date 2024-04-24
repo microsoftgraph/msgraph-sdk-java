@@ -60,21 +60,19 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/resourceOperations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      * @return a {@link ResourceOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceOperationCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ResourceOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ResourceOperationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new resourceOperation object.
+     * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @return a {@link ResourceOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceOperation post(@jakarta.annotation.Nonnull final ResourceOperation body) {
         return post(body, null);
     }
     /**
-     * Create a new resourceOperation object.
+     * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ResourceOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceOperation post(@jakarta.annotation.Nonnull final ResourceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ResourceOperation::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new resourceOperation object.
+     * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new resourceOperation object.
+     * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return new ResourceOperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

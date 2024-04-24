@@ -60,21 +60,19 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/siteSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Data source entity for SharePoint sites associated with the custodian.
      * @return a {@link SiteSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteSourceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Data source entity for SharePoint sites associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteSourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new siteSource object associated with an eDiscovery custodian.
+     * Create new navigation property to siteSources for security
      * @param body The request body
      * @return a {@link SiteSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteSource post(@jakarta.annotation.Nonnull final SiteSource body) {
         return post(body, null);
     }
     /**
-     * Create a new siteSource object associated with an eDiscovery custodian.
+     * Create new navigation property to siteSources for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteSource post(@jakarta.annotation.Nonnull final SiteSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteSource::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Data source entity for SharePoint sites associated with the custodian.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Data source entity for SharePoint sites associated with the custodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new siteSource object associated with an eDiscovery custodian.
+     * Create new navigation property to siteSources for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new siteSource object associated with an eDiscovery custodian.
+     * Create new navigation property to siteSources for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return new SiteSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Data source entity for SharePoint sites associated with the custodian.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

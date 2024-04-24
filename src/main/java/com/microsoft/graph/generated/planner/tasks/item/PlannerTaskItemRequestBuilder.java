@@ -73,18 +73,16 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/tasks/{plannerTask%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a plannerTask object.
+     * Delete navigation property tasks for planner
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannertask-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a plannerTask object.
+     * Delete navigation property tasks for planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannertask-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -93,21 +91,19 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of plannerTask object.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @return a {@link PlannerTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannertask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerTask get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of plannerTask object.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannertask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerTask get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +117,6 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link PlannerTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannertask-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerTask patch(@jakarta.annotation.Nonnull final PlannerTask body) {
@@ -133,7 +128,6 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannertask-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerTask patch(@jakarta.annotation.Nonnull final PlannerTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -144,7 +138,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerTask::createFromDiscriminatorValue);
     }
     /**
-     * Delete a plannerTask object.
+     * Delete navigation property tasks for planner
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +146,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a plannerTask object.
+     * Delete navigation property tasks for planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -164,7 +158,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of plannerTask object.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -172,7 +166,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of plannerTask object.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -224,7 +218,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of plannerTask object.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -100,18 +100,16 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an onlineMeeting object.
+     * Delete navigation property onlineMeetings for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an onlineMeeting object.
+     * Delete navigation property onlineMeetings for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -120,21 +118,19 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeeting get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeeting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,23 +140,21 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnlineMeeting::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
+     * Update the navigation property onlineMeetings in users
      * @param body The request body
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeeting patch(@jakarta.annotation.Nonnull final OnlineMeeting body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
+     * Update the navigation property onlineMeetings in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeeting patch(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -171,7 +165,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnlineMeeting::createFromDiscriminatorValue);
     }
     /**
-     * Delete an onlineMeeting object.
+     * Delete navigation property onlineMeetings for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +173,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an onlineMeeting object.
+     * Delete navigation property onlineMeetings for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +185,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -199,7 +193,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -211,7 +205,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
+     * Update the navigation property onlineMeetings in users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -220,7 +214,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
+     * Update the navigation property onlineMeetings in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -251,7 +245,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) is an online meeting artifact. For details, see Online meeting artifacts and permissions.
+     * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

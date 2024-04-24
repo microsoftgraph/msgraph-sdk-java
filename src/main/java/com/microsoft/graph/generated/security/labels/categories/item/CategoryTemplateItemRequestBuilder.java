@@ -46,18 +46,16 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a categoryTemplate object.
+     * Delete navigation property categories for security
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a categoryTemplate object.
+     * Delete navigation property categories for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object.
+     * Specifies a group of similar types of content in a particular department.
      * @return a {@link CategoryTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CategoryTemplate get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object.
+     * Specifies a group of similar types of content in a particular department.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CategoryTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CategoryTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,7 +111,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CategoryTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Delete a categoryTemplate object.
+     * Delete navigation property categories for security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +119,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a categoryTemplate object.
+     * Delete navigation property categories for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -135,7 +131,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object.
+     * Specifies a group of similar types of content in a particular department.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +139,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object.
+     * Specifies a group of similar types of content in a particular department.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -195,7 +191,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a categoryTemplate object.
+     * Specifies a group of similar types of content in a particular department.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

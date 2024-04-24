@@ -26,7 +26,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         return new PermissionGrantPolicy();
     }
     /**
-     * Gets the excludes property value. Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
+     * Gets the excludes property value. Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
      * @return a {@link java.util.List<PermissionGrantConditionSet>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Gets the includes property value. Condition sets that are included in this permission grant policy. Automatically expanded on GET.
      * @return a {@link java.util.List<PermissionGrantConditionSet>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         writer.writeCollectionOfObjectValues("includes", this.getIncludes());
     }
     /**
-     * Sets the excludes property value. Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
+     * Sets the excludes property value. Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
      * @param value Value to set for the excludes property.
      */
     public void setExcludes(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
         this.backingStore.set("excludes", value);
     }
     /**
-     * Sets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Sets the includes property value. Condition sets that are included in this permission grant policy. Automatically expanded on GET.
      * @param value Value to set for the includes property.
      */
     public void setIncludes(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {

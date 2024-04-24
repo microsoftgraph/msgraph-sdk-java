@@ -64,18 +64,16 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a browserSiteList object.
+     * Delete navigation property siteLists for admin
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a browserSiteList object.
+     * Delete navigation property siteLists for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -84,21 +82,19 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
+     * A collection of site lists to support Internet Explorer mode.
      * @return a {@link BrowserSiteList}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSiteList get() {
         return get(null);
     }
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
+     * A collection of site lists to support Internet Explorer mode.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BrowserSiteList}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSiteList get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -108,23 +104,21 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BrowserSiteList::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a browserSiteList object.
+     * Update the navigation property siteLists in admin
      * @param body The request body
      * @return a {@link BrowserSiteList}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSiteList patch(@jakarta.annotation.Nonnull final BrowserSiteList body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a browserSiteList object.
+     * Update the navigation property siteLists in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BrowserSiteList}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSiteList patch(@jakarta.annotation.Nonnull final BrowserSiteList body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -135,7 +129,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BrowserSiteList::createFromDiscriminatorValue);
     }
     /**
-     * Delete a browserSiteList object.
+     * Delete navigation property siteLists for admin
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +137,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a browserSiteList object.
+     * Delete navigation property siteLists for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -155,7 +149,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
+     * A collection of site lists to support Internet Explorer mode.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +157,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
+     * A collection of site lists to support Internet Explorer mode.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a browserSiteList object.
+     * Update the navigation property siteLists in admin
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -184,7 +178,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a browserSiteList object.
+     * Update the navigation property siteLists in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -215,7 +209,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
+     * A collection of site lists to support Internet Explorer mode.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

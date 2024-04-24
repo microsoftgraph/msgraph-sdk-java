@@ -36,19 +36,21 @@ public class UsersRegisteredByMethodRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/authenticationMethods/usersRegisteredByMethod()", rawUrl);
     }
     /**
-     * Invoke function usersRegisteredByMethod
+     * Get the number of users registered for each authentication method.
      * @return a {@link UserRegistrationMethodSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodsroot-usersregisteredbymethod?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserRegistrationMethodSummary get() {
         return get(null);
     }
     /**
-     * Invoke function usersRegisteredByMethod
+     * Get the number of users registered for each authentication method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserRegistrationMethodSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodsroot-usersregisteredbymethod?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserRegistrationMethodSummary get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class UsersRegisteredByMethodRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserRegistrationMethodSummary::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function usersRegisteredByMethod
+     * Get the number of users registered for each authentication method.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class UsersRegisteredByMethodRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function usersRegisteredByMethod
+     * Get the number of users registered for each authentication method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

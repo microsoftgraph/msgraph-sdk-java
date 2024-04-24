@@ -59,21 +59,19 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/whoisRecords/{whoisRecord%2Did}/history{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources.
+     * The collection of historical records associated to this WHOIS object.
      * @return a {@link WhoisHistoryRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-whoisrecord-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WhoisHistoryRecordCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources.
+     * The collection of historical records associated to this WHOIS object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WhoisHistoryRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-whoisrecord-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WhoisHistoryRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WhoisHistoryRecordCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources.
+     * The collection of historical records associated to this WHOIS object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources.
+     * The collection of historical records associated to this WHOIS object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
         return new HistoryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources.
+     * The collection of historical records associated to this WHOIS object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

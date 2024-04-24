@@ -114,21 +114,19 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
+     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @return a {@link ServiceUpdateMessageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateMessageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
+     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServiceUpdateMessageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServiceUpdateMessageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -163,7 +161,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceUpdateMessage::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
+     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +169,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
+     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -217,7 +215,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return new MessagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the serviceUpdateMessage resources from the messages navigation property. This operation retrieves all service update messages that exist for the tenant.
+     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

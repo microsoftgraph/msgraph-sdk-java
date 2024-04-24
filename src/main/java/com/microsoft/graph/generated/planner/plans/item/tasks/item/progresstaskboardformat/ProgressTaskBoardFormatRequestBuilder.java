@@ -55,21 +55,19 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @return a {@link PlannerProgressTaskBoardTaskFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerProgressTaskBoardTaskFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,6 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link PlannerProgressTaskBoardTaskFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat patch(@jakarta.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body) {
@@ -95,7 +92,6 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerProgressTaskBoardTaskFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat patch(@jakarta.annotation.Nonnull final PlannerProgressTaskBoardTaskFormat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -186,7 +182,7 @@ public class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

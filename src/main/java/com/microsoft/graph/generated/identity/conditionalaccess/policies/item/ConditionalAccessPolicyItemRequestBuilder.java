@@ -37,18 +37,16 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/policies/{conditionalAccessPolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete navigation property policies for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete navigation property policies for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicy get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the navigation property policies in identity
      * @param body The request body
      * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicy patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the navigation property policies in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicy patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete navigation property policies for identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a conditionalAccessPolicy object.
+     * Delete navigation property policies for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the navigation property policies in identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a conditionalAccessPolicy object.
+     * Update the navigation property policies in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

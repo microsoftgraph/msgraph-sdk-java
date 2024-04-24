@@ -73,21 +73,19 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a passiveDnsRecord object.
+     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @return a {@link PassiveDnsRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-passivednsrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PassiveDnsRecord get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a passiveDnsRecord object.
+     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PassiveDnsRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-passivednsrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PassiveDnsRecord get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +140,7 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a passiveDnsRecord object.
+     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +148,7 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a passiveDnsRecord object.
+     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -202,7 +200,7 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a passiveDnsRecord object.
+     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

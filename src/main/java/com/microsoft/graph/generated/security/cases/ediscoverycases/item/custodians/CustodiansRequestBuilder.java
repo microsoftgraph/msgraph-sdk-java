@@ -78,21 +78,19 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @return a {@link EdiscoveryCustodianCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodianCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryCustodianCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodianCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,23 +100,21 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCustodianCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create new navigation property to custodians for security
      * @param body The request body
      * @return a {@link EdiscoveryCustodian}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodian post(@jakarta.annotation.Nonnull final EdiscoveryCustodian body) {
         return post(body, null);
     }
     /**
-     * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create new navigation property to custodians for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryCustodian}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodian post(@jakarta.annotation.Nonnull final EdiscoveryCustodian body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -129,7 +125,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryCustodian::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +133,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -149,7 +145,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create new navigation property to custodians for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -158,7 +154,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create new navigation property to custodians for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -183,7 +179,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return new CustodiansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the custodian objects and their properties.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

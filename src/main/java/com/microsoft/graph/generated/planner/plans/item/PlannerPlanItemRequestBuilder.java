@@ -64,18 +64,16 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans/{plannerPlan%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a plannerPlan object.
+     * Delete navigation property plans for planner
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a plannerPlan object.
+     * Delete navigation property plans for planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -84,21 +82,19 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a plannerplan object.
+     * Read-only. Nullable. Returns a collection of the specified plans
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlan get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a plannerplan object.
+     * Read-only. Nullable. Returns a collection of the specified plans
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlan get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -108,23 +104,21 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a plannerPlan object.
+     * Update the navigation property plans in planner
      * @param body The request body
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlan patch(@jakarta.annotation.Nonnull final PlannerPlan body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a plannerPlan object.
+     * Update the navigation property plans in planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlan patch(@jakarta.annotation.Nonnull final PlannerPlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -135,7 +129,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
-     * Delete a plannerPlan object.
+     * Delete navigation property plans for planner
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +137,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a plannerPlan object.
+     * Delete navigation property plans for planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -155,7 +149,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a plannerplan object.
+     * Read-only. Nullable. Returns a collection of the specified plans
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +157,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a plannerplan object.
+     * Read-only. Nullable. Returns a collection of the specified plans
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a plannerPlan object.
+     * Update the navigation property plans in planner
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -184,7 +178,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a plannerPlan object.
+     * Update the navigation property plans in planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -215,7 +209,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a plannerplan object.
+     * Read-only. Nullable. Returns a collection of the specified plans
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

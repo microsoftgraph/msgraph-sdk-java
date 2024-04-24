@@ -21,7 +21,7 @@ repositories {
 dependencies {
     // Include the sdk as a dependency
     // x-release-please-start-version
-    implementation 'com.microsoft.graph:microsoft-graph:6.6.0'
+    implementation 'com.microsoft.graph:microsoft-graph:6.7.0'
     // x-release-please-end
     // This dependency is only needed if you are using a TokenCredential object for authentication
     implementation 'com.azure:azure-identity:1.11.0'
@@ -120,6 +120,7 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
+
 
 
 

@@ -59,21 +59,19 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/oauth2PermissionGrants{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
+     * Get oauth2PermissionGrants from users
      * @return a {@link OAuth2PermissionGrantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-oauth2permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OAuth2PermissionGrantCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
+     * Get oauth2PermissionGrants from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OAuth2PermissionGrantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-oauth2permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OAuth2PermissionGrantCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OAuth2PermissionGrantCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
+     * Get oauth2PermissionGrants from users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
+     * Get oauth2PermissionGrants from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return new Oauth2PermissionGrantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
+     * Get oauth2PermissionGrants from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

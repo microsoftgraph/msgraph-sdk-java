@@ -59,21 +59,19 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/accessPackagesIncompatibleWith{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
+     * The access packages that are incompatible with this package. Read-only.
      * @return a {@link AccessPackageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
+     * The access packages that are incompatible with this package. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
+     * The access packages that are incompatible with this package. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
+     * The access packages that are incompatible with this package. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return new AccessPackagesIncompatibleWithRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
+     * The access packages that are incompatible with this package. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

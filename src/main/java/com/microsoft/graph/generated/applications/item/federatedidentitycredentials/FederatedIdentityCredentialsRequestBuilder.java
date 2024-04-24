@@ -60,21 +60,19 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @return a {@link FederatedIdentityCredentialCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredentialCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredentialCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredentialCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredentialCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create new navigation property to federatedIdentityCredentials for applications
      * @param body The request body
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredential post(@jakarta.annotation.Nonnull final FederatedIdentityCredential body) {
         return post(body, null);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create new navigation property to federatedIdentityCredentials for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredential post(@jakarta.annotation.Nonnull final FederatedIdentityCredential body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create new navigation property to federatedIdentityCredentials for applications
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create new navigation property to federatedIdentityCredentials for applications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return new FederatedIdentityCredentialsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

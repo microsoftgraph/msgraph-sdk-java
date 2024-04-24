@@ -94,7 +94,7 @@ public class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
+     * Gets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in ISO 8601 format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
+     * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in ISO 8601 format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
      * @param value Value to set for the roundTripTime property.
      */
     public void setRoundTripTime(@jakarta.annotation.Nullable final PeriodAndDuration value) {

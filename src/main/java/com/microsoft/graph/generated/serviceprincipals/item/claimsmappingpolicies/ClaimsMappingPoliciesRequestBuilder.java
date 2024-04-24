@@ -68,21 +68,19 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/claimsMappingPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      * @return a {@link ClaimsMappingPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ClaimsMappingPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ClaimsMappingPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ClaimsMappingPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +90,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ClaimsMappingPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +98,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +120,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return new ClaimsMappingPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
+     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

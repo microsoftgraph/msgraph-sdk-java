@@ -59,21 +59,19 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflowTemplates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties.
+     * The workflow templates in the lifecycle workflow instance.
      * @return a {@link WorkflowTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflowtemplates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkflowTemplateCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties.
+     * The workflow templates in the lifecycle workflow instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkflowTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-workflowtemplates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkflowTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkflowTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties.
+     * The workflow templates in the lifecycle workflow instance.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties.
+     * The workflow templates in the lifecycle workflow instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class WorkflowTemplatesRequestBuilder extends BaseRequestBuilder {
         return new WorkflowTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the workflowTemplate objects and their properties.
+     * The workflow templates in the lifecycle workflow instance.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

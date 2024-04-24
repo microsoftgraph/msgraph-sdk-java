@@ -71,21 +71,19 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties.
+     * Represents the template and scheduling for an access review.
      * @return a {@link AccessReviewScheduleDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewScheduleDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties.
+     * Represents the template and scheduling for an access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewScheduleDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewScheduleDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,23 +93,21 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new accessReviewScheduleDefinition object.
+     * Create new navigation property to definitions for identityGovernance
      * @param body The request body
      * @return a {@link AccessReviewScheduleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewScheduleDefinition post(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body) {
         return post(body, null);
     }
     /**
-     * Create a new accessReviewScheduleDefinition object.
+     * Create new navigation property to definitions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewScheduleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewScheduleDefinition post(@jakarta.annotation.Nonnull final AccessReviewScheduleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -122,7 +118,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewScheduleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties.
+     * Represents the template and scheduling for an access review.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +126,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties.
+     * Represents the template and scheduling for an access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +138,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new accessReviewScheduleDefinition object.
+     * Create new navigation property to definitions for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +147,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new accessReviewScheduleDefinition object.
+     * Create new navigation property to definitions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -176,7 +172,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return new DefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the accessReviewScheduleDefinition objects and their properties.
+     * Represents the template and scheduling for an access review.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

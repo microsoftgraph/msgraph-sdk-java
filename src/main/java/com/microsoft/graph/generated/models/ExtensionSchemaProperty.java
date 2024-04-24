@@ -84,7 +84,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table in the Supported property data types section for more details.
+     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer, or String. For more information, see Supported property data types.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table in the Supported property data types section for more details.
+     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer, or String. For more information, see Supported property data types.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

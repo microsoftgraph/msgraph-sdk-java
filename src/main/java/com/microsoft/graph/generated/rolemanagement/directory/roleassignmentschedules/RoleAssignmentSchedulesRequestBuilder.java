@@ -71,21 +71,19 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get the schedules for active role assignment operations.
+     * Schedules for active role assignment operations.
      * @return a {@link UnifiedRoleAssignmentScheduleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentScheduleCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the schedules for active role assignment operations.
+     * Schedules for active role assignment operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentScheduleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentScheduleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +118,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue);
     }
     /**
-     * Get the schedules for active role assignment operations.
+     * Schedules for active role assignment operations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +126,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the schedules for active role assignment operations.
+     * Schedules for active role assignment operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -174,7 +172,7 @@ public class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder {
         return new RoleAssignmentSchedulesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the schedules for active role assignment operations.
+     * Schedules for active role assignment operations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

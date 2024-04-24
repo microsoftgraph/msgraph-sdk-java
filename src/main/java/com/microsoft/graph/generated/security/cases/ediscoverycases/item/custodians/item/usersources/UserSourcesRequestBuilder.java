@@ -60,21 +60,19 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/userSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a {@link UserSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserSourceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserSourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian.
+     * Create new navigation property to userSources for security
      * @param body The request body
      * @return a {@link UserSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserSource post(@jakarta.annotation.Nonnull final UserSource body) {
         return post(body, null);
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian.
+     * Create new navigation property to userSources for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserSource post(@jakarta.annotation.Nonnull final UserSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSource::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian.
+     * Create new navigation property to userSources for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userSource object associated with an eDiscovery custodian.
+     * Create new navigation property to userSources for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return new UserSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

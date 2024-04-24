@@ -68,21 +68,19 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/teachers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * All teachers in the class. Nullable.
      * @return a {@link EducationUserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationUserCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * All teachers in the class. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationUserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationUserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +90,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * All teachers in the class. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +98,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * All teachers in the class. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +120,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
         return new TeachersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+     * All teachers in the class. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

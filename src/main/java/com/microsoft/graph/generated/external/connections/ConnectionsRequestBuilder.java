@@ -60,21 +60,19 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the externalConnection objects and their properties.
+     * Get connections from external
      * @return a {@link ExternalConnectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalConnectionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the externalConnection objects and their properties.
+     * Get connections from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalConnectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalConnectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalConnectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new externalConnection object.
+     * Create new navigation property to connections for external
      * @param body The request body
      * @return a {@link ExternalConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalConnection post(@jakarta.annotation.Nonnull final ExternalConnection body) {
         return post(body, null);
     }
     /**
-     * Create a new externalConnection object.
+     * Create new navigation property to connections for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalConnection post(@jakarta.annotation.Nonnull final ExternalConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalConnection::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the externalConnection objects and their properties.
+     * Get connections from external
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the externalConnection objects and their properties.
+     * Get connections from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new externalConnection object.
+     * Create new navigation property to connections for external
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new externalConnection object.
+     * Create new navigation property to connections for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
         return new ConnectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the externalConnection objects and their properties.
+     * Get connections from external
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

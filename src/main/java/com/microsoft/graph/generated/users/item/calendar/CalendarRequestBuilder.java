@@ -84,41 +84,19 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar{?%24select}", rawUrl);
     }
     /**
-     * Delete a calendar other than the default calendar.
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-delete?view=graph-rest-1.0">Find more info here</a>
-     */
-    public void delete() {
-        delete(null);
-    }
-    /**
-     * Delete a calendar other than the default calendar.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-delete?view=graph-rest-1.0">Find more info here</a>
-     */
-    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
-    }
-    /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Calendar get() {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Calendar get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,23 +106,21 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Calendar::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param body The request body
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Calendar patch(@jakarta.annotation.Nonnull final Calendar body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Calendar patch(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,27 +131,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Calendar::createFromDiscriminatorValue);
     }
     /**
-     * Delete a calendar other than the default calendar.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() {
-        return toDeleteRequestInformation(null);
-    }
-    /**
-     * Delete a calendar other than the default calendar.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -183,7 +139,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -195,7 +151,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -204,7 +160,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -229,13 +185,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return new CalendarRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
-    }
-    /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

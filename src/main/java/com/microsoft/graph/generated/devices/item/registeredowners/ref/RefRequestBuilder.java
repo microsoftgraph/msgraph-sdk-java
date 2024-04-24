@@ -38,18 +38,16 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}/registeredOwners/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Remove a user as a registered owner of the device.
+     * Delete ref of navigation property registeredOwners for devices
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-delete-registeredowners?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a user as a registered owner of the device.
+     * Delete ref of navigation property registeredOwners for devices
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-delete-registeredowners?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -61,7 +59,6 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-list-registeredowners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StringCollectionResponse get() {
@@ -72,7 +69,6 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-list-registeredowners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StringCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,20 +78,18 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a user as a registered owner of the device.
+     * Create new navigation property ref to registeredOwners for devices
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-post-registeredowners?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body) {
         post(body, null);
     }
     /**
-     * Add a user as a registered owner of the device.
+     * Create new navigation property ref to registeredOwners for devices
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-post-registeredowners?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -105,7 +99,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove a user as a registered owner of the device.
+     * Delete ref of navigation property registeredOwners for devices
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +107,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a user as a registered owner of the device.
+     * Delete ref of navigation property registeredOwners for devices
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -145,7 +139,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a user as a registered owner of the device.
+     * Create new navigation property ref to registeredOwners for devices
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -154,7 +148,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a user as a registered owner of the device.
+     * Create new navigation property ref to registeredOwners for devices
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -179,7 +173,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Remove a user as a registered owner of the device.
+     * Delete ref of navigation property registeredOwners for devices
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters implements QueryParameters {

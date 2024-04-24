@@ -60,21 +60,19 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @return a {@link AuthenticationStrengthPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationStrengthPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create new navigation property to authenticationStrengthPolicies for policies
      * @param body The request body
      * @return a {@link AuthenticationStrengthPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicy post(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body) {
         return post(body, null);
     }
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create new navigation property to authenticationStrengthPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationStrengthPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicy post(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create new navigation property to authenticationStrengthPolicies for policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create new navigation property to authenticationStrengthPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return new AuthenticationStrengthPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

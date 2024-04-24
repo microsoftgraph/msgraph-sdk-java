@@ -60,21 +60,19 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of all registration records of a webinar.
+     * Registration records of the webinar.
      * @return a {@link VirtualEventRegistrationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-list-registrations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistrationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of all registration records of a webinar.
+     * Registration records of the webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventRegistrationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-list-registrations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistrationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventRegistration::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of all registration records of a webinar.
+     * Registration records of the webinar.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of all registration records of a webinar.
+     * Registration records of the webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return new RegistrationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of all registration records of a webinar.
+     * Registration records of the webinar.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

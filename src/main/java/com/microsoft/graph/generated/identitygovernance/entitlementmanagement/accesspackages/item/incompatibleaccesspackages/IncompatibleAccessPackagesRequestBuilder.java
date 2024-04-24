@@ -68,21 +68,19 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/incompatibleAccessPackages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @return a {@link AccessPackageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +90,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +98,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +120,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
         return new IncompatibleAccessPackagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
+     * The access packages whose assigned users are ineligible to be assigned this access package.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

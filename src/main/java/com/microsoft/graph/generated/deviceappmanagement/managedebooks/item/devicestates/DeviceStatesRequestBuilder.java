@@ -60,21 +60,19 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/deviceStates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceInstallState objects.
+     * The list of installation states for this eBook.
      * @return a {@link DeviceInstallStateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceInstallStateCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the deviceInstallState objects.
+     * The list of installation states for this eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceInstallStateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceInstallStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceInstallStateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new deviceInstallState object.
+     * Create new navigation property to deviceStates for deviceAppManagement
      * @param body The request body
      * @return a {@link DeviceInstallState}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceInstallState post(@jakarta.annotation.Nonnull final DeviceInstallState body) {
         return post(body, null);
     }
     /**
-     * Create a new deviceInstallState object.
+     * Create new navigation property to deviceStates for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceInstallState}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceInstallState post(@jakarta.annotation.Nonnull final DeviceInstallState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceInstallState::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the deviceInstallState objects.
+     * The list of installation states for this eBook.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceInstallState objects.
+     * The list of installation states for this eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new deviceInstallState object.
+     * Create new navigation property to deviceStates for deviceAppManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deviceInstallState object.
+     * Create new navigation property to deviceStates for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class DeviceStatesRequestBuilder extends BaseRequestBuilder {
         return new DeviceStatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the deviceInstallState objects.
+     * The list of installation states for this eBook.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
