@@ -38,7 +38,7 @@ Add the dependency in `dependencies` in pom.xml
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
   <!--x-release-please-start-version-->
-  <version>6.6.0</version>
+  <version>6.7.0</version>
   <!--x-release-please-end-->
 </dependency>
 <dependency>
