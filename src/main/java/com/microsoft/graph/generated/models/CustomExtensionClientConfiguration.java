@@ -61,10 +61,19 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("maximumRetries", (n) -> { this.setMaximumRetries(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("timeoutInMilliseconds", (n) -> { this.setTimeoutInMilliseconds(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the maximumRetries property value. The max number of retries that Microsoft Entra ID makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getMaximumRetries() {
+        return this.backingStore.get("maximumRetries");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,6 +97,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeIntegerValue("maximumRetries", this.getMaximumRetries());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("timeoutInMilliseconds", this.getTimeoutInMilliseconds());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +116,13 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the maximumRetries property value. The max number of retries that Microsoft Entra ID makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
+     * @param value Value to set for the maximumRetries property.
+     */
+    public void setMaximumRetries(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("maximumRetries", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

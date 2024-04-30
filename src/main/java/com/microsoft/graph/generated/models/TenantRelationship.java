@@ -77,11 +77,20 @@ public class TenantRelationship implements AdditionalDataHolder, BackedModel, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("delegatedAdminCustomers", (n) -> { this.setDelegatedAdminCustomers(n.getCollectionOfObjectValues(DelegatedAdminCustomer::createFromDiscriminatorValue)); });
         deserializerMap.put("delegatedAdminRelationships", (n) -> { this.setDelegatedAdminRelationships(n.getCollectionOfObjectValues(DelegatedAdminRelationship::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiTenantOrganization", (n) -> { this.setMultiTenantOrganization(n.getObjectValue(MultiTenantOrganization::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the multiTenantOrganization property value. Defines an organization with more than one instance of Microsoft Entra ID.
+     * @return a {@link MultiTenantOrganization}
+     */
+    @jakarta.annotation.Nullable
+    public MultiTenantOrganization getMultiTenantOrganization() {
+        return this.backingStore.get("multiTenantOrganization");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -99,6 +108,7 @@ public class TenantRelationship implements AdditionalDataHolder, BackedModel, Pa
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("delegatedAdminCustomers", this.getDelegatedAdminCustomers());
         writer.writeCollectionOfObjectValues("delegatedAdminRelationships", this.getDelegatedAdminRelationships());
+        writer.writeObjectValue("multiTenantOrganization", this.getMultiTenantOrganization());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -130,6 +140,13 @@ public class TenantRelationship implements AdditionalDataHolder, BackedModel, Pa
      */
     public void setDelegatedAdminRelationships(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminRelationship> value) {
         this.backingStore.set("delegatedAdminRelationships", value);
+    }
+    /**
+     * Sets the multiTenantOrganization property value. Defines an organization with more than one instance of Microsoft Entra ID.
+     * @param value Value to set for the multiTenantOrganization property.
+     */
+    public void setMultiTenantOrganization(@jakarta.annotation.Nullable final MultiTenantOrganization value) {
+        this.backingStore.set("multiTenantOrganization", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

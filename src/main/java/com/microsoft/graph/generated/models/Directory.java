@@ -86,6 +86,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("deviceLocalCredentials", (n) -> { this.setDeviceLocalCredentials(n.getCollectionOfObjectValues(DeviceLocalCredentialInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
+        deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -95,6 +96,14 @@ public class Directory extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {
         return this.backingStore.get("onPremisesSynchronization");
+    }
+    /**
+     * Gets the subscriptions property value. The subscriptions property
+     * @return a {@link java.util.List<CompanySubscription>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CompanySubscription> getSubscriptions() {
+        return this.backingStore.get("subscriptions");
     }
     /**
      * Serializes information the current object
@@ -110,6 +119,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceLocalCredentials", this.getDeviceLocalCredentials());
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
+        writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
     }
     /**
      * Sets the administrativeUnits property value. Conceptual container for user and group directory objects.
@@ -159,5 +169,12 @@ public class Directory extends Entity implements Parsable {
      */
     public void setOnPremisesSynchronization(@jakarta.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
         this.backingStore.set("onPremisesSynchronization", value);
+    }
+    /**
+     * Sets the subscriptions property value. The subscriptions property
+     * @param value Value to set for the subscriptions property.
+     */
+    public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<CompanySubscription> value) {
+        this.backingStore.set("subscriptions", value);
     }
 }

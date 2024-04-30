@@ -50,7 +50,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isOptional property value. If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.
+     * Gets the isOptional property value. If false, the customer must configure this record at the DNS host for Microsoft Online Services to operate correctly with the domain.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
         writer.writeIntegerValue("ttl", this.getTtl());
     }
     /**
-     * Sets the isOptional property value. If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.
+     * Sets the isOptional property value. If false, the customer must configure this record at the DNS host for Microsoft Online Services to operate correctly with the domain.
      * @param value Value to set for the isOptional property.
      */
     public void setIsOptional(@jakarta.annotation.Nullable final Boolean value) {

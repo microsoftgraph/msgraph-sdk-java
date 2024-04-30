@@ -25,7 +25,7 @@ public class Domain extends Entity implements Parsable {
         return new Domain();
     }
     /**
-     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
+     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("availabilityStatus");
     }
     /**
-     * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
+     * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class Domain extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isAdminManaged property value. The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
+     * Gets the isAdminManaged property value. The value of the property is false if the DNS record management of the domain is delegated to Microsoft 365. Otherwise, the value is true. Not nullable
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("isAdminManaged");
     }
     /**
-     * Gets the isDefault property value. true if this is the default domain that is used for user creation. There is only one default domain per company. Not nullable
+     * Gets the isDefault property value. true if this is the default domain that is used for user creation. There's only one default domain per company. Not nullable
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("isDefault");
     }
     /**
-     * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There is only one initial domain per company. Not nullable
+     * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There's only one initial domain per company. Not nullable
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("model");
     }
     /**
-     * Gets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
+     * Gets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password will expire. If the property isn't set, a default value of 14 days is used.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("passwordNotificationWindowInDays");
     }
     /**
-     * Gets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.
+     * Gets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property isn't set, a default value of 90 days is used.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("state");
     }
     /**
-     * Gets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
+     * Gets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values that you can add or remove using the API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -212,7 +212,7 @@ public class Domain extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("verificationDnsRecords", this.getVerificationDnsRecords());
     }
     /**
-     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.
+     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final String value) {
@@ -226,7 +226,7 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("availabilityStatus", value);
     }
     /**
-     * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
+     * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @param value Value to set for the domainNameReferences property.
      */
     public void setDomainNameReferences(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
@@ -240,21 +240,21 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("federationConfiguration", value);
     }
     /**
-     * Sets the isAdminManaged property value. The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
+     * Sets the isAdminManaged property value. The value of the property is false if the DNS record management of the domain is delegated to Microsoft 365. Otherwise, the value is true. Not nullable
      * @param value Value to set for the isAdminManaged property.
      */
     public void setIsAdminManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAdminManaged", value);
     }
     /**
-     * Sets the isDefault property value. true if this is the default domain that is used for user creation. There is only one default domain per company. Not nullable
+     * Sets the isDefault property value. true if this is the default domain that is used for user creation. There's only one default domain per company. Not nullable
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDefault", value);
     }
     /**
-     * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There is only one initial domain per company. Not nullable
+     * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There's only one initial domain per company. Not nullable
      * @param value Value to set for the isInitial property.
      */
     public void setIsInitial(@jakarta.annotation.Nullable final Boolean value) {
@@ -289,14 +289,14 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("model", value);
     }
     /**
-     * Sets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
+     * Sets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password will expire. If the property isn't set, a default value of 14 days is used.
      * @param value Value to set for the passwordNotificationWindowInDays property.
      */
     public void setPasswordNotificationWindowInDays(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("passwordNotificationWindowInDays", value);
     }
     /**
-     * Sets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.
+     * Sets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property isn't set, a default value of 90 days is used.
      * @param value Value to set for the passwordValidityPeriodInDays property.
      */
     public void setPasswordValidityPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
@@ -317,7 +317,7 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
+     * Sets the supportedServices property value. The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values that you can add or remove using the API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable.
      * @param value Value to set for the supportedServices property.
      */
     public void setSupportedServices(@jakarta.annotation.Nullable final java.util.List<String> value) {

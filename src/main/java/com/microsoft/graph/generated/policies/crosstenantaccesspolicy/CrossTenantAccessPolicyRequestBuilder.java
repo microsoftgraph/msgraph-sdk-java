@@ -4,6 +4,7 @@ import com.microsoft.graph.models.CrossTenantAccessPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.defaultescaped.DefaultRequestBuilder;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.PartnersRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.templates.TemplatesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PartnersRequestBuilder partners() {
         return new PartnersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the templates property of the microsoft.graph.crossTenantAccessPolicy entity.
+     * @return a {@link TemplatesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TemplatesRequestBuilder templates() {
+        return new TemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CrossTenantAccessPolicyRequestBuilder} and sets the default values.

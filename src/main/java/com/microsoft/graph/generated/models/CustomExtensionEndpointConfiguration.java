@@ -36,6 +36,7 @@ public class CustomExtensionEndpointConfiguration implements AdditionalDataHolde
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.httpRequestEndpoint": return new HttpRequestEndpoint();
                 case "#microsoft.graph.logicAppTriggerEndpointConfiguration": return new LogicAppTriggerEndpointConfiguration();
             }
         }

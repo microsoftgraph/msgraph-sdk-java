@@ -95,7 +95,7 @@ public class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("isInitial");
     }
     /**
-     * Gets the name property value. The domain name; for example, contoso.com`.
+     * Gets the name property value. The domain name; for example, contoso.com.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("isInitial", value);
     }
     /**
-     * Sets the name property value. The domain name; for example, contoso.com`.
+     * Sets the name property value. The domain name; for example, contoso.com.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

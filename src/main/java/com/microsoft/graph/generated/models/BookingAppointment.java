@@ -45,6 +45,38 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("anonymousJoinWebUrl");
     }
     /**
+     * Gets the customerEmailAddress property value. The customerEmailAddress property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCustomerEmailAddress() {
+        return this.backingStore.get("customerEmailAddress");
+    }
+    /**
+     * Gets the customerName property value. The customerName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCustomerName() {
+        return this.backingStore.get("customerName");
+    }
+    /**
+     * Gets the customerNotes property value. Notes from the customer associated with this appointment.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCustomerNotes() {
+        return this.backingStore.get("customerNotes");
+    }
+    /**
+     * Gets the customerPhone property value. The customerPhone property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCustomerPhone() {
+        return this.backingStore.get("customerPhone");
+    }
+    /**
      * Gets the customers property value. A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @return a {@link java.util.List<BookingCustomerInformationBase>}
      */
@@ -85,6 +117,10 @@ public class BookingAppointment extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
         deserializerMap.put("anonymousJoinWebUrl", (n) -> { this.setAnonymousJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("customerEmailAddress", (n) -> { this.setCustomerEmailAddress(n.getStringValue()); });
+        deserializerMap.put("customerName", (n) -> { this.setCustomerName(n.getStringValue()); });
+        deserializerMap.put("customerNotes", (n) -> { this.setCustomerNotes(n.getStringValue()); });
+        deserializerMap.put("customerPhone", (n) -> { this.setCustomerPhone(n.getStringValue()); });
         deserializerMap.put("customers", (n) -> { this.setCustomers(n.getCollectionOfObjectValues(BookingCustomerInformationBase::createFromDiscriminatorValue)); });
         deserializerMap.put("customerTimeZone", (n) -> { this.setCustomerTimeZone(n.getStringValue()); });
         deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
@@ -262,6 +298,10 @@ public class BookingAppointment extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
         writer.writeStringValue("anonymousJoinWebUrl", this.getAnonymousJoinWebUrl());
+        writer.writeStringValue("customerEmailAddress", this.getCustomerEmailAddress());
+        writer.writeStringValue("customerName", this.getCustomerName());
+        writer.writeStringValue("customerNotes", this.getCustomerNotes());
+        writer.writeStringValue("customerPhone", this.getCustomerPhone());
         writer.writeCollectionOfObjectValues("customers", this.getCustomers());
         writer.writeStringValue("customerTimeZone", this.getCustomerTimeZone());
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
@@ -296,6 +336,34 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     public void setAnonymousJoinWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("anonymousJoinWebUrl", value);
+    }
+    /**
+     * Sets the customerEmailAddress property value. The customerEmailAddress property
+     * @param value Value to set for the customerEmailAddress property.
+     */
+    public void setCustomerEmailAddress(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("customerEmailAddress", value);
+    }
+    /**
+     * Sets the customerName property value. The customerName property
+     * @param value Value to set for the customerName property.
+     */
+    public void setCustomerName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("customerName", value);
+    }
+    /**
+     * Sets the customerNotes property value. Notes from the customer associated with this appointment.
+     * @param value Value to set for the customerNotes property.
+     */
+    public void setCustomerNotes(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("customerNotes", value);
+    }
+    /**
+     * Sets the customerPhone property value. The customerPhone property
+     * @param value Value to set for the customerPhone property.
+     */
+    public void setCustomerPhone(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("customerPhone", value);
     }
     /**
      * Sets the customers property value. A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.

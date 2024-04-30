@@ -159,7 +159,7 @@ public class LearningContent extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the level property value. The level property
+     * Gets the level property value. The difficulty level of the learning content. Possible values are: Beginner, Intermediate, Advanced, unknownFutureValue. Optional.
      * @return a {@link Level}
      */
     @jakarta.annotation.Nullable
@@ -325,7 +325,7 @@ public class LearningContent extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the level property value. The level property
+     * Sets the level property value. The difficulty level of the learning content. Possible values are: Beginner, Intermediate, Advanced, unknownFutureValue. Optional.
      * @param value Value to set for the level property.
      */
     public void setLevel(@jakarta.annotation.Nullable final Level value) {

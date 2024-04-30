@@ -63,6 +63,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("isEmailNotificationEnabled", (n) -> { this.setIsEmailNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("membershipStatus", (n) -> { this.setMembershipStatus(n.getEnumValue(BookingStaffMembershipStatus::forValue)); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(BookingStaffRole::forValue)); });
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
         deserializerMap.put("useBusinessHours", (n) -> { this.setUseBusinessHours(n.getBooleanValue()); });
@@ -76,6 +77,14 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     @jakarta.annotation.Nullable
     public Boolean getIsEmailNotificationEnabled() {
         return this.backingStore.get("isEmailNotificationEnabled");
+    }
+    /**
+     * Gets the membershipStatus property value. The membershipStatus property
+     * @return a {@link BookingStaffMembershipStatus}
+     */
+    @jakarta.annotation.Nullable
+    public BookingStaffMembershipStatus getMembershipStatus() {
+        return this.backingStore.get("membershipStatus");
     }
     /**
      * Gets the role property value. The role property
@@ -120,6 +129,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeBooleanValue("isEmailNotificationEnabled", this.getIsEmailNotificationEnabled());
+        writer.writeEnumValue("membershipStatus", this.getMembershipStatus());
         writer.writeEnumValue("role", this.getRole());
         writer.writeStringValue("timeZone", this.getTimeZone());
         writer.writeBooleanValue("useBusinessHours", this.getUseBusinessHours());
@@ -152,6 +162,13 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     public void setIsEmailNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEmailNotificationEnabled", value);
+    }
+    /**
+     * Sets the membershipStatus property value. The membershipStatus property
+     * @param value Value to set for the membershipStatus property.
+     */
+    public void setMembershipStatus(@jakarta.annotation.Nullable final BookingStaffMembershipStatus value) {
+        this.backingStore.set("membershipStatus", value);
     }
     /**
      * Sets the role property value. The role property
