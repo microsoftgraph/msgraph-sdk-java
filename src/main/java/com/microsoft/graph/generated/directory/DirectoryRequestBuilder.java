@@ -7,6 +7,8 @@ import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
 import com.microsoft.graph.directory.devicelocalcredentials.DeviceLocalCredentialsRequestBuilder;
 import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
 import com.microsoft.graph.directory.onpremisessynchronization.OnPremisesSynchronizationRequestBuilder;
+import com.microsoft.graph.directory.subscriptions.SubscriptionsRequestBuilder;
+import com.microsoft.graph.directory.subscriptionswithcommercesubscriptionid.SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 import com.microsoft.graph.models.Directory;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -84,6 +86,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         return new OnPremisesSynchronizationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.directory entity.
+     * @return a {@link SubscriptionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SubscriptionsRequestBuilder subscriptions() {
+        return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -145,6 +155,16 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Directory::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.directory entity.
+     * @param commerceSubscriptionId Alternate key of companySubscription
+     * @return a {@link SubscriptionsWithCommerceSubscriptionIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SubscriptionsWithCommerceSubscriptionIdRequestBuilder subscriptionsWithCommerceSubscriptionId(@jakarta.annotation.Nonnull final String commerceSubscriptionId) {
+        Objects.requireNonNull(commerceSubscriptionId);
+        return new SubscriptionsWithCommerceSubscriptionIdRequestBuilder(pathParameters, requestAdapter, commerceSubscriptionId);
     }
     /**
      * Get directory

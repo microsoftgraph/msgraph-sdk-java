@@ -1,8 +1,10 @@
 package com.microsoft.graph.identity;
 
 import com.microsoft.graph.identity.apiconnectors.ApiConnectorsRequestBuilder;
+import com.microsoft.graph.identity.authenticationeventlisteners.AuthenticationEventListenersRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.B2xUserFlowsRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.ConditionalAccessRequestBuilder;
+import com.microsoft.graph.identity.customauthenticationextensions.CustomAuthenticationExtensionsRequestBuilder;
 import com.microsoft.graph.identity.identityproviders.IdentityProvidersRequestBuilder;
 import com.microsoft.graph.identity.userflowattributes.UserFlowAttributesRequestBuilder;
 import com.microsoft.graph.models.IdentityContainer;
@@ -34,6 +36,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
         return new ApiConnectorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the authenticationEventListeners property of the microsoft.graph.identityContainer entity.
+     * @return a {@link AuthenticationEventListenersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AuthenticationEventListenersRequestBuilder authenticationEventListeners() {
+        return new AuthenticationEventListenersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
      * @return a {@link B2xUserFlowsRequestBuilder}
      */
@@ -48,6 +58,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ConditionalAccessRequestBuilder conditionalAccess() {
         return new ConditionalAccessRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the customAuthenticationExtensions property of the microsoft.graph.identityContainer entity.
+     * @return a {@link CustomAuthenticationExtensionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CustomAuthenticationExtensionsRequestBuilder customAuthenticationExtensions() {
+        return new CustomAuthenticationExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.

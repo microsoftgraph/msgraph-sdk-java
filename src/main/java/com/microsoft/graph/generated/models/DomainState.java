@@ -86,7 +86,7 @@ public class DomainState implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification
+     * Gets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class DomainState implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("operation");
     }
     /**
-     * Gets the status property value. Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+     * Gets the status property value. Current status of the operation.  Scheduled - Operation is scheduled but hasn't started.  InProgress - Task is in progress.  Failed - The operation failed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -143,14 +143,14 @@ public class DomainState implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification
+     * Sets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification.
      * @param value Value to set for the operation property.
      */
     public void setOperation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operation", value);
     }
     /**
-     * Sets the status property value. Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+     * Sets the status property value. Current status of the operation.  Scheduled - Operation is scheduled but hasn't started.  InProgress - Task is in progress.  Failed - The operation failed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {

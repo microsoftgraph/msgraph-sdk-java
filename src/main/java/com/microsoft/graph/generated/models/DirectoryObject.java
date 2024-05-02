@@ -46,6 +46,7 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.groupSettingTemplate": return new GroupSettingTemplate();
                 case "#microsoft.graph.homeRealmDiscoveryPolicy": return new HomeRealmDiscoveryPolicy();
                 case "#microsoft.graph.identitySecurityDefaultsEnforcementPolicy": return new IdentitySecurityDefaultsEnforcementPolicy();
+                case "#microsoft.graph.multiTenantOrganizationMember": return new MultiTenantOrganizationMember();
                 case "#microsoft.graph.organization": return new Organization();
                 case "#microsoft.graph.orgContact": return new OrgContact();
                 case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();

@@ -101,7 +101,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -109,6 +109,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         deserializerMap.put("b2bDirectConnectOutbound", (n) -> { this.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("identitySynchronization", (n) -> { this.setIdentitySynchronization(n.getObjectValue(CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
+        deserializerMap.put("isInMultiTenantOrganization", (n) -> { this.setIsInMultiTenantOrganization(n.getBooleanValue()); });
         deserializerMap.put("isServiceProvider", (n) -> { this.setIsServiceProvider(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
@@ -129,6 +130,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
         return this.backingStore.get("inboundTrust");
+    }
+    /**
+     * Gets the isInMultiTenantOrganization property value. Identifies whether a tenant is a member of a multitenant organization.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsInMultiTenantOrganization() {
+        return this.backingStore.get("isInMultiTenantOrganization");
     }
     /**
      * Gets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
@@ -167,6 +176,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
         writer.writeObjectValue("identitySynchronization", this.getIdentitySynchronization());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
+        writer.writeBooleanValue("isInMultiTenantOrganization", this.getIsInMultiTenantOrganization());
         writer.writeBooleanValue("isServiceProvider", this.getIsServiceProvider());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
@@ -235,6 +245,13 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
         this.backingStore.set("inboundTrust", value);
+    }
+    /**
+     * Sets the isInMultiTenantOrganization property value. Identifies whether a tenant is a member of a multitenant organization.
+     * @param value Value to set for the isInMultiTenantOrganization property.
+     */
+    public void setIsInMultiTenantOrganization(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isInMultiTenantOrganization", value);
     }
     /**
      * Sets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.

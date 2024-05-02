@@ -33,6 +33,14 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("apiConnectors");
     }
     /**
+     * Gets the authenticationEventListeners property value. Represents listeners for custom authentication extension events in Azure AD for workforce and customers.
+     * @return a {@link java.util.List<AuthenticationEventListener>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AuthenticationEventListener> getAuthenticationEventListeners() {
+        return this.backingStore.get("authenticationEventListeners");
+    }
+    /**
      * Gets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      * @return a {@link java.util.List<B2xIdentityUserFlow>}
      */
@@ -49,6 +57,14 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("conditionalAccess");
     }
     /**
+     * Gets the customAuthenticationExtensions property value. Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * @return a {@link java.util.List<CustomAuthenticationExtension>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CustomAuthenticationExtension> getCustomAuthenticationExtensions() {
+        return this.backingStore.get("customAuthenticationExtensions");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -56,8 +72,10 @@ public class IdentityContainer extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("apiConnectors", (n) -> { this.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationEventListeners", (n) -> { this.setAuthenticationEventListeners(n.getCollectionOfObjectValues(AuthenticationEventListener::createFromDiscriminatorValue)); });
         deserializerMap.put("b2xUserFlows", (n) -> { this.setB2xUserFlows(n.getCollectionOfObjectValues(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
         deserializerMap.put("conditionalAccess", (n) -> { this.setConditionalAccess(n.getObjectValue(ConditionalAccessRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("customAuthenticationExtensions", (n) -> { this.setCustomAuthenticationExtensions(n.getCollectionOfObjectValues(CustomAuthenticationExtension::createFromDiscriminatorValue)); });
         deserializerMap.put("identityProviders", (n) -> { this.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("userFlowAttributes", (n) -> { this.setUserFlowAttributes(n.getCollectionOfObjectValues(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -86,8 +104,10 @@ public class IdentityContainer extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("apiConnectors", this.getApiConnectors());
+        writer.writeCollectionOfObjectValues("authenticationEventListeners", this.getAuthenticationEventListeners());
         writer.writeCollectionOfObjectValues("b2xUserFlows", this.getB2xUserFlows());
         writer.writeObjectValue("conditionalAccess", this.getConditionalAccess());
+        writer.writeCollectionOfObjectValues("customAuthenticationExtensions", this.getCustomAuthenticationExtensions());
         writer.writeCollectionOfObjectValues("identityProviders", this.getIdentityProviders());
         writer.writeCollectionOfObjectValues("userFlowAttributes", this.getUserFlowAttributes());
     }
@@ -97,6 +117,13 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public void setApiConnectors(@jakarta.annotation.Nullable final java.util.List<IdentityApiConnector> value) {
         this.backingStore.set("apiConnectors", value);
+    }
+    /**
+     * Sets the authenticationEventListeners property value. Represents listeners for custom authentication extension events in Azure AD for workforce and customers.
+     * @param value Value to set for the authenticationEventListeners property.
+     */
+    public void setAuthenticationEventListeners(@jakarta.annotation.Nullable final java.util.List<AuthenticationEventListener> value) {
+        this.backingStore.set("authenticationEventListeners", value);
     }
     /**
      * Sets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
@@ -111,6 +138,13 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public void setConditionalAccess(@jakarta.annotation.Nullable final ConditionalAccessRoot value) {
         this.backingStore.set("conditionalAccess", value);
+    }
+    /**
+     * Sets the customAuthenticationExtensions property value. Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * @param value Value to set for the customAuthenticationExtensions property.
+     */
+    public void setCustomAuthenticationExtensions(@jakarta.annotation.Nullable final java.util.List<CustomAuthenticationExtension> value) {
+        this.backingStore.set("customAuthenticationExtensions", value);
     }
     /**
      * Sets the identityProviders property value. The identityProviders property

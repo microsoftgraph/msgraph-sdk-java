@@ -51,6 +51,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         deserializerMap.put("allowedCloudEndpoints", (n) -> { this.setAllowedCloudEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("default", (n) -> { this.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
         deserializerMap.put("partners", (n) -> { this.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
+        deserializerMap.put("templates", (n) -> { this.setTemplates(n.getObjectValue(PolicyTemplate::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -62,6 +63,14 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("partners");
     }
     /**
+     * Gets the templates property value. Represents the base policy in the directory for multitenant organization settings.
+     * @return a {@link PolicyTemplate}
+     */
+    @jakarta.annotation.Nullable
+    public PolicyTemplate getTemplates() {
+        return this.backingStore.get("templates");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -71,6 +80,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
         writer.writeCollectionOfPrimitiveValues("allowedCloudEndpoints", this.getAllowedCloudEndpoints());
         writer.writeObjectValue("default", this.getDefault());
         writer.writeCollectionOfObjectValues("partners", this.getPartners());
+        writer.writeObjectValue("templates", this.getTemplates());
     }
     /**
      * Sets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
@@ -92,5 +102,12 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      */
     public void setPartners(@jakarta.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {
         this.backingStore.set("partners", value);
+    }
+    /**
+     * Sets the templates property value. Represents the base policy in the directory for multitenant organization settings.
+     * @param value Value to set for the templates property.
+     */
+    public void setTemplates(@jakarta.annotation.Nullable final PolicyTemplate value) {
+        this.backingStore.set("templates", value);
     }
 }
