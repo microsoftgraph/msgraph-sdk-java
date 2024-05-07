@@ -60,19 +60,21 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/vulnerabilities/{vulnerability%2Did}/components{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Components related to this vulnerability article.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @return a {@link VulnerabilityComponentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-vulnerability-list-components?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VulnerabilityComponentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Components related to this vulnerability article.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VulnerabilityComponentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-vulnerability-list-components?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VulnerabilityComponentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VulnerabilityComponent::createFromDiscriminatorValue);
     }
     /**
-     * Components related to this vulnerability article.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Components related to this vulnerability article.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return new ComponentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Components related to this vulnerability article.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

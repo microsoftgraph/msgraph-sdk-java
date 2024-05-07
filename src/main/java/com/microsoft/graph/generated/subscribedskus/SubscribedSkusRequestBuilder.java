@@ -40,7 +40,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SubscribedSkusRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/subscribedSkus{?%24orderby,%24search,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/subscribedSkus{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link SubscribedSkusRequestBuilder} and sets the default values.
@@ -48,7 +48,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SubscribedSkusRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/subscribedSkus{?%24orderby,%24search,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/subscribedSkus{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Microsoft Entra admin center or the Microsoft 365 admin center against their Microsoft Graph skuId and skuPartNumber properties, see Product names and service plan identifiers for licensing.
@@ -159,6 +159,16 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
+         * Include count of items
+         */
+        @jakarta.annotation.Nullable
+        public Boolean count;
+        /**
+         * Filter items by property values
+         */
+        @jakarta.annotation.Nullable
+        public String filter;
+        /**
          * Order items by property values
          */
         @jakarta.annotation.Nullable
@@ -174,13 +184,27 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public String[] select;
         /**
+         * Skip the first n items
+         */
+        @jakarta.annotation.Nullable
+        public Integer skip;
+        /**
+         * Show only the first n items
+         */
+        @jakarta.annotation.Nullable
+        public Integer top;
+        /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24count", count);
+            allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24search", search);
+            allQueryParams.put("%24skip", skip);
+            allQueryParams.put("%24top", top);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
             return allQueryParams;

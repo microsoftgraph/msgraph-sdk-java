@@ -100,19 +100,21 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A collection of cloud-managed virtual desktops.
+     * Read the properties and relationships of a specific cloudPC object.
      * @return a {@link CloudPC}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPC get() {
         return get(null);
     }
     /**
-     * A collection of cloud-managed virtual desktops.
+     * Read the properties and relationships of a specific cloudPC object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPC}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPC get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -167,7 +169,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of cloud-managed virtual desktops.
+     * Read the properties and relationships of a specific cloudPC object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +177,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of cloud-managed virtual desktops.
+     * Read the properties and relationships of a specific cloudPC object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -227,7 +229,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of cloud-managed virtual desktops.
+     * Read the properties and relationships of a specific cloudPC object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

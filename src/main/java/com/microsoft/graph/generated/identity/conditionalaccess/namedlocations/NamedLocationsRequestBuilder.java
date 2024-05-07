@@ -60,19 +60,21 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/namedLocations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      * @return a {@link NamedLocationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NamedLocationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link NamedLocationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NamedLocationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, NamedLocationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to namedLocations for identity
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @return a {@link NamedLocation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NamedLocation post(@jakarta.annotation.Nonnull final NamedLocation body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to namedLocations for identity
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link NamedLocation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NamedLocation post(@jakarta.annotation.Nonnull final NamedLocation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, NamedLocation::createFromDiscriminatorValue);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to namedLocations for identity
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to namedLocations for identity
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return new NamedLocationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

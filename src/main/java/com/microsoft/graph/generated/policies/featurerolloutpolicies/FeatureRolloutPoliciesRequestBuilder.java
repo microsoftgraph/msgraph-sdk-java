@@ -60,19 +60,21 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/featureRolloutPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @return a {@link FeatureRolloutPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FeatureRolloutPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FeatureRolloutPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FeatureRolloutPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FeatureRolloutPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @return a {@link FeatureRolloutPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FeatureRolloutPolicy post(@jakarta.annotation.Nonnull final FeatureRolloutPolicy body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FeatureRolloutPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FeatureRolloutPolicy post(@jakarta.annotation.Nonnull final FeatureRolloutPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FeatureRolloutPolicy::createFromDiscriminatorValue);
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return new FeatureRolloutPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

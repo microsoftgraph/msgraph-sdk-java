@@ -35,7 +35,7 @@ public class FilePlanAppliedCategory extends FilePlanDescriptorBase implements P
         return deserializerMap;
     }
     /**
-     * Gets the subcategory property value. The subcategory property
+     * Gets the subcategory property value. Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
      * @return a {@link FilePlanSubcategory}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class FilePlanAppliedCategory extends FilePlanDescriptorBase implements P
         writer.writeObjectValue("subcategory", this.getSubcategory());
     }
     /**
-     * Sets the subcategory property value. The subcategory property
+     * Sets the subcategory property value. Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
      * @param value Value to set for the subcategory property.
      */
     public void setSubcategory(@jakarta.annotation.Nullable final FilePlanSubcategory value) {

@@ -69,19 +69,21 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/deviceManagement/importedWindowsAutopilotDeviceIdentities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @return a {@link ImportedWindowsAutopilotDeviceIdentityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityCollectionResponse get() {
         return get(null);
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ImportedWindowsAutopilotDeviceIdentityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,21 +93,23 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, ImportedWindowsAutopilotDeviceIdentityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @return a {@link ImportedWindowsAutopilotDeviceIdentity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentity post(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ImportedWindowsAutopilotDeviceIdentity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentity post(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +120,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue);
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +128,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +149,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +174,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return new ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

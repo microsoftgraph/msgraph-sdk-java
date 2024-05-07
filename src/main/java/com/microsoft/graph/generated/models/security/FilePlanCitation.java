@@ -25,7 +25,7 @@ public class FilePlanCitation extends FilePlanDescriptorBase implements Parsable
         return new FilePlanCitation();
     }
     /**
-     * Gets the citationJurisdiction property value. The citationJurisdiction property
+     * Gets the citationJurisdiction property value. Represents the jurisdiction or agency that published the filePlanCitation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class FilePlanCitation extends FilePlanDescriptorBase implements Parsable
         return this.backingStore.get("citationJurisdiction");
     }
     /**
-     * Gets the citationUrl property value. The citationUrl property
+     * Gets the citationUrl property value. Represents the URL to the published filePlanCitation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class FilePlanCitation extends FilePlanDescriptorBase implements Parsable
         writer.writeStringValue("citationUrl", this.getCitationUrl());
     }
     /**
-     * Sets the citationJurisdiction property value. The citationJurisdiction property
+     * Sets the citationJurisdiction property value. Represents the jurisdiction or agency that published the filePlanCitation.
      * @param value Value to set for the citationJurisdiction property.
      */
     public void setCitationJurisdiction(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("citationJurisdiction", value);
     }
     /**
-     * Sets the citationUrl property value. The citationUrl property
+     * Sets the citationUrl property value. Represents the URL to the published filePlanCitation.
      * @param value Value to set for the citationUrl property.
      */
     public void setCitationUrl(@jakarta.annotation.Nullable final String value) {

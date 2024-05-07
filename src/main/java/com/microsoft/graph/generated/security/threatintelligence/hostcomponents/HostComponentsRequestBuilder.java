@@ -60,7 +60,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostComponents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostComponent object.
      * @return a {@link HostComponentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostComponent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostComponentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostComponent::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostComponent object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostComponent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class HostComponentsRequestBuilder extends BaseRequestBuilder {
         return new HostComponentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostComponent object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

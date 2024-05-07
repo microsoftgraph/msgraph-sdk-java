@@ -60,19 +60,21 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/tabs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      * @return a {@link TeamsTabCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsTabCollectionResponse get() {
         return get(null);
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsTabCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsTabCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsTabCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to tabs for chats
+     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @return a {@link TeamsTab}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsTab post(@jakarta.annotation.Nonnull final TeamsTab body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to tabs for chats
+     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsTab}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsTab post(@jakarta.annotation.Nonnull final TeamsTab body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsTab::createFromDiscriminatorValue);
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to tabs for chats
+     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to tabs for chats
+     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return new TabsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

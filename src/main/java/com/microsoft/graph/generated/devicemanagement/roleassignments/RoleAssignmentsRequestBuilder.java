@@ -60,19 +60,21 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleAssignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The Role Assignments.
+     * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
      * @return a {@link DeviceAndAppManagementRoleAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementRoleAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
-     * The Role Assignments.
+     * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceAndAppManagementRoleAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementRoleAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceAndAppManagementRoleAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to roleAssignments for deviceManagement
+     * Create a new deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @return a {@link DeviceAndAppManagementRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementRoleAssignment post(@jakarta.annotation.Nonnull final DeviceAndAppManagementRoleAssignment body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to roleAssignments for deviceManagement
+     * Create a new deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceAndAppManagementRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementRoleAssignment post(@jakarta.annotation.Nonnull final DeviceAndAppManagementRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceAndAppManagementRoleAssignment::createFromDiscriminatorValue);
     }
     /**
-     * The Role Assignments.
+     * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Role Assignments.
+     * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to roleAssignments for deviceManagement
+     * Create a new deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to roleAssignments for deviceManagement
+     * Create a new deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return new RoleAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The Role Assignments.
+     * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

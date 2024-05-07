@@ -37,16 +37,18 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/bookmarks/{bookmark%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property bookmarks for search
+     * Delete a bookmark object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property bookmarks for search
+     * Delete a bookmark object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Administrative answer in Microsoft Search results for common search queries in an organization.
+     * Read the properties and relationships of a bookmark object.
      * @return a {@link Bookmark}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bookmark get() {
         return get(null);
     }
     /**
-     * Administrative answer in Microsoft Search results for common search queries in an organization.
+     * Read the properties and relationships of a bookmark object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Bookmark}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bookmark get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Bookmark::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property bookmarks in search
+     * Update the properties of a bookmark object.
      * @param body The request body
      * @return a {@link Bookmark}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bookmark patch(@jakarta.annotation.Nonnull final Bookmark body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property bookmarks in search
+     * Update the properties of a bookmark object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Bookmark}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/search-bookmark-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bookmark patch(@jakarta.annotation.Nonnull final Bookmark body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Bookmark::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property bookmarks for search
+     * Delete a bookmark object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property bookmarks for search
+     * Delete a bookmark object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Administrative answer in Microsoft Search results for common search queries in an organization.
+     * Read the properties and relationships of a bookmark object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Administrative answer in Microsoft Search results for common search queries in an organization.
+     * Read the properties and relationships of a bookmark object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property bookmarks in search
+     * Update the properties of a bookmark object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property bookmarks in search
+     * Update the properties of a bookmark object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class BookmarkItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Administrative answer in Microsoft Search results for common search queries in an organization.
+     * Read the properties and relationships of a bookmark object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

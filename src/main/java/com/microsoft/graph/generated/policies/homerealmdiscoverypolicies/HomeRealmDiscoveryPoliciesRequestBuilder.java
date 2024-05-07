@@ -60,19 +60,21 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/policies/homeRealmDiscoveryPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The policy to control Microsoft Entra authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @return a {@link HomeRealmDiscoveryPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HomeRealmDiscoveryPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * The policy to control Microsoft Entra authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HomeRealmDiscoveryPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HomeRealmDiscoveryPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, HomeRealmDiscoveryPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a {@link HomeRealmDiscoveryPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-post-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HomeRealmDiscoveryPolicy post(@jakarta.annotation.Nonnull final HomeRealmDiscoveryPolicy body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HomeRealmDiscoveryPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-post-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HomeRealmDiscoveryPolicy post(@jakarta.annotation.Nonnull final HomeRealmDiscoveryPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, HomeRealmDiscoveryPolicy::createFromDiscriminatorValue);
     }
     /**
-     * The policy to control Microsoft Entra authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The policy to control Microsoft Entra authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return new HomeRealmDiscoveryPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The policy to control Microsoft Entra authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

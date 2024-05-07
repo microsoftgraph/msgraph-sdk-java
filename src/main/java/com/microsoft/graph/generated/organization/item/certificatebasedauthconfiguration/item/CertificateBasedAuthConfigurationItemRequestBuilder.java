@@ -37,16 +37,18 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property certificateBasedAuthConfiguration for organization
+     * Delete a certificateBasedAuthConfiguration object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property certificateBasedAuthConfiguration for organization
+     * Delete a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @return a {@link CertificateBasedAuthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthConfiguration get() {
         return get(null);
     }
     /**
-     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateBasedAuthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +81,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedAuthConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property certificateBasedAuthConfiguration for organization
+     * Delete a certificateBasedAuthConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +89,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property certificateBasedAuthConfiguration for organization
+     * Delete a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -97,7 +101,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +109,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -133,7 +137,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

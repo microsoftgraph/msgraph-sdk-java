@@ -59,19 +59,21 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/articles/{article%2Did}/indicators{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Indicators related to this article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      * @return a {@link ArticleIndicatorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-article-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ArticleIndicatorCollectionResponse get() {
         return get(null);
     }
     /**
-     * Indicators related to this article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ArticleIndicatorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-article-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ArticleIndicatorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ArticleIndicatorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Indicators related to this article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Indicators related to this article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return new IndicatorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Indicators related to this article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -58,7 +58,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EventsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link EventsRequestBuilder} and sets the default values.
@@ -66,22 +66,24 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EventsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The group's calendar events.
+     * Retrieve a list of event objects.
      * @return a {@link EventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EventCollectionResponse get() {
         return get(null);
     }
     /**
-     * The group's calendar events.
+     * Retrieve a list of event objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,21 +93,23 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to events for groups
+     * Use this API to create a new event.
      * @param body The request body
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Event post(@jakarta.annotation.Nonnull final Event body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to events for groups
+     * Use this API to create a new event.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Event post(@jakarta.annotation.Nonnull final Event body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +120,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Event::createFromDiscriminatorValue);
     }
     /**
-     * The group's calendar events.
+     * Retrieve a list of event objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +128,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The group's calendar events.
+     * Retrieve a list of event objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to events for groups
+     * Use this API to create a new event.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +149,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to events for groups
+     * Use this API to create a new event.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +174,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
         return new EventsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The group's calendar events.
+     * Retrieve a list of event objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -189,6 +193,11 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public String[] orderby;
+        /**
+         * Search items by search phrases
+         */
+        @jakarta.annotation.Nullable
+        public String search;
         /**
          * Select properties to be returned
          */
@@ -213,6 +222,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
             final Map<String, Object> allQueryParams = new HashMap();
             allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
+            allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
             allQueryParams.put("%24orderby", orderby);

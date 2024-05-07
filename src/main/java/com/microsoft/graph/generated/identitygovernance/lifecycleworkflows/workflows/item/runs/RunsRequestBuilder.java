@@ -61,19 +61,21 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/runs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Workflow runs.
+     * Get a list of the run objects and their properties for a lifecycle workflow.
      * @return a {@link RunCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RunCollectionResponse get() {
         return get(null);
     }
     /**
-     * Workflow runs.
+     * Get a list of the run objects and their properties for a lifecycle workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RunCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RunCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +97,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
-     * Workflow runs.
+     * Get a list of the run objects and their properties for a lifecycle workflow.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +105,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Workflow runs.
+     * Get a list of the run objects and their properties for a lifecycle workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -125,7 +127,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return new RunsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Workflow runs.
+     * Get a list of the run objects and their properties for a lifecycle workflow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

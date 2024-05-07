@@ -37,16 +37,18 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}/localizedNotificationMessages/{localizedNotificationMessage%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property localizedNotificationMessages for deviceManagement
+     * Deletes a localizedNotificationMessage.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property localizedNotificationMessages for deviceManagement
+     * Deletes a localizedNotificationMessage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The list of localized messages for this Notification Message Template.
+     * Read properties and relationships of the localizedNotificationMessage object.
      * @return a {@link LocalizedNotificationMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LocalizedNotificationMessage get() {
         return get(null);
     }
     /**
-     * The list of localized messages for this Notification Message Template.
+     * Read properties and relationships of the localizedNotificationMessage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LocalizedNotificationMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LocalizedNotificationMessage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, LocalizedNotificationMessage::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property localizedNotificationMessages in deviceManagement
+     * Update the properties of a localizedNotificationMessage object.
      * @param body The request body
      * @return a {@link LocalizedNotificationMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LocalizedNotificationMessage patch(@jakarta.annotation.Nonnull final LocalizedNotificationMessage body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property localizedNotificationMessages in deviceManagement
+     * Update the properties of a localizedNotificationMessage object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LocalizedNotificationMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LocalizedNotificationMessage patch(@jakarta.annotation.Nonnull final LocalizedNotificationMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, LocalizedNotificationMessage::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property localizedNotificationMessages for deviceManagement
+     * Deletes a localizedNotificationMessage.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property localizedNotificationMessages for deviceManagement
+     * Deletes a localizedNotificationMessage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * The list of localized messages for this Notification Message Template.
+     * Read properties and relationships of the localizedNotificationMessage object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * The list of localized messages for this Notification Message Template.
+     * Read properties and relationships of the localizedNotificationMessage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the navigation property localizedNotificationMessages in deviceManagement
+     * Update the properties of a localizedNotificationMessage object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property localizedNotificationMessages in deviceManagement
+     * Update the properties of a localizedNotificationMessage object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of localized messages for this Notification Message Template.
+     * Read properties and relationships of the localizedNotificationMessage object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

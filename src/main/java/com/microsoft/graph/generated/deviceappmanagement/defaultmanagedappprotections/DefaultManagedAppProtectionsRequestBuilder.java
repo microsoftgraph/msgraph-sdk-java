@@ -60,19 +60,21 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/deviceAppManagement/defaultManagedAppProtections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      * @return a {@link DefaultManagedAppProtectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DefaultManagedAppProtectionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DefaultManagedAppProtectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DefaultManagedAppProtectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, DefaultManagedAppProtectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
+     * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @return a {@link DefaultManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DefaultManagedAppProtection post(@jakarta.annotation.Nonnull final DefaultManagedAppProtection body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
+     * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DefaultManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DefaultManagedAppProtection post(@jakarta.annotation.Nonnull final DefaultManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, DefaultManagedAppProtection::createFromDiscriminatorValue);
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
+     * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
+     * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return new DefaultManagedAppProtectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

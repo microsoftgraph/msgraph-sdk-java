@@ -69,19 +69,21 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
+     * List existing jobs for a given application instance (service principal).
      * @return a {@link SynchronizationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationJobCollectionResponse get() {
         return get(null);
     }
     /**
-     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
+     * List existing jobs for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,21 +93,23 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to jobs for servicePrincipals
+     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationJob post(@jakarta.annotation.Nonnull final SynchronizationJob body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to jobs for servicePrincipals
+     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationJob post(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +120,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJob::createFromDiscriminatorValue);
     }
     /**
-     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
+     * List existing jobs for a given application instance (service principal).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +128,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
+     * List existing jobs for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to jobs for servicePrincipals
+     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +149,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to jobs for servicePrincipals
+     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +174,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return new JobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
+     * List existing jobs for a given application instance (service principal).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

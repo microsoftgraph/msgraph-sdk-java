@@ -60,19 +60,21 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/scopedMembers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @return a {@link ScopedRoleMembershipCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScopedRoleMembershipCollectionResponse get() {
         return get(null);
     }
     /**
-     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ScopedRoleMembershipCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScopedRoleMembershipCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembership::createFromDiscriminatorValue);
     }
     /**
-     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ScopedMembersRequestBuilder extends BaseRequestBuilder {
         return new ScopedMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

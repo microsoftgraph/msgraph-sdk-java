@@ -55,19 +55,21 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents tenant-wide settings for all Teams apps in the tenant.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @return a {@link TeamsAppSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppSettings get() {
         return get(null);
     }
     /**
-     * Represents tenant-wide settings for all Teams apps in the tenant.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAppSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param body The request body
      * @return a {@link TeamsAppSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppSettings patch(@jakarta.annotation.Nonnull final TeamsAppSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAppSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppSettings patch(@jakarta.annotation.Nonnull final TeamsAppSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents tenant-wide settings for all Teams apps in the tenant.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents tenant-wide settings for all Teams apps in the tenant.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents tenant-wide settings for all Teams apps in the tenant.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

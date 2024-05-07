@@ -64,16 +64,18 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceAppManagement/androidManagedAppProtections/{androidManagedAppProtection%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property androidManagedAppProtections for deviceAppManagement
+     * Deletes a androidManagedAppProtection.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property androidManagedAppProtections for deviceAppManagement
+     * Deletes a androidManagedAppProtection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -82,19 +84,21 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Android managed app policies.
+     * Read properties and relationships of the androidManagedAppProtection object.
      * @return a {@link AndroidManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AndroidManagedAppProtection get() {
         return get(null);
     }
     /**
-     * Android managed app policies.
+     * Read properties and relationships of the androidManagedAppProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AndroidManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AndroidManagedAppProtection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,21 +108,23 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, AndroidManagedAppProtection::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property androidManagedAppProtections in deviceAppManagement
+     * Update the properties of a androidManagedAppProtection object.
      * @param body The request body
      * @return a {@link AndroidManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AndroidManagedAppProtection patch(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property androidManagedAppProtections in deviceAppManagement
+     * Update the properties of a androidManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AndroidManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AndroidManagedAppProtection patch(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -129,7 +135,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, AndroidManagedAppProtection::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property androidManagedAppProtections for deviceAppManagement
+     * Deletes a androidManagedAppProtection.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +143,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property androidManagedAppProtections for deviceAppManagement
+     * Deletes a androidManagedAppProtection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -149,7 +155,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Android managed app policies.
+     * Read properties and relationships of the androidManagedAppProtection object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +163,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Android managed app policies.
+     * Read properties and relationships of the androidManagedAppProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -169,7 +175,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the navigation property androidManagedAppProtections in deviceAppManagement
+     * Update the properties of a androidManagedAppProtection object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -178,7 +184,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property androidManagedAppProtections in deviceAppManagement
+     * Update the properties of a androidManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -209,7 +215,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Android managed app policies.
+     * Read properties and relationships of the androidManagedAppProtection object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

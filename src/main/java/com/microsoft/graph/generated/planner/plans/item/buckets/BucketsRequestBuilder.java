@@ -60,19 +60,21 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans/{plannerPlan%2Did}/buckets{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read-only. Nullable. Collection of buckets in the plan.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @return a {@link PlannerBucketCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerBucketCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read-only. Nullable. Collection of buckets in the plan.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerBucketCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerBucketCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerBucket::createFromDiscriminatorValue);
     }
     /**
-     * Read-only. Nullable. Collection of buckets in the plan.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Collection of buckets in the plan.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return new BucketsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read-only. Nullable. Collection of buckets in the plan.
+     * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

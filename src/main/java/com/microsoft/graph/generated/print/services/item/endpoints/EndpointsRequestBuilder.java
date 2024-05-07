@@ -60,19 +60,21 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/services/{printService%2Did}/endpoints{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve a list of endpoints exposed by a print service.
      * @return a {@link PrintServiceEndpointCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintServiceEndpointCollectionResponse get() {
         return get(null);
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve a list of endpoints exposed by a print service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintServiceEndpointCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintServiceEndpointCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintServiceEndpoint::createFromDiscriminatorValue);
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve a list of endpoints exposed by a print service.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve a list of endpoints exposed by a print service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         return new EndpointsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve a list of endpoints exposed by a print service.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

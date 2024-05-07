@@ -58,7 +58,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MailFoldersRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top,includeHiddenFolders*}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,includeHiddenFolders*}", pathParameters);
     }
     /**
      * Instantiates a new {@link MailFoldersRequestBuilder} and sets the default values.
@@ -66,7 +66,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MailFoldersRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top,includeHiddenFolders*}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,includeHiddenFolders*}", rawUrl);
     }
     /**
      * The user's mail folders. Read-only. Nullable.
@@ -200,6 +200,11 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public String[] orderby;
         /**
+         * Search items by search phrases
+         */
+        @jakarta.annotation.Nullable
+        public String search;
+        /**
          * Select properties to be returned
          */
         @jakarta.annotation.Nullable
@@ -224,6 +229,7 @@ public class MailFoldersRequestBuilder extends BaseRequestBuilder {
             allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("includeHiddenFolders", includeHiddenFolders);
+            allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
             allQueryParams.put("%24expand", expand);

@@ -10,7 +10,8 @@ public enum EducationSubmissionStatus implements ValuedEnum {
     Released("released"),
     Returned("returned"),
     UnknownFutureValue("unknownFutureValue"),
-    Reassigned("reassigned");
+    Reassigned("reassigned"),
+    Excused("excused");
     public final String value;
     EducationSubmissionStatus(final String value) {
         this.value = value;
@@ -27,6 +28,7 @@ public enum EducationSubmissionStatus implements ValuedEnum {
             case "returned": return Returned;
             case "unknownFutureValue": return UnknownFutureValue;
             case "reassigned": return Reassigned;
+            case "excused": return Excused;
             default: return null;
         }
     }

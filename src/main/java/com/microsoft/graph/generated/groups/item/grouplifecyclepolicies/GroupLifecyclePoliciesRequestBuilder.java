@@ -60,19 +60,21 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/groupLifecyclePolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of lifecycle policies for this group. Read-only. Nullable.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @return a {@link GroupLifecyclePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupLifecyclePolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of lifecycle policies for this group. Read-only. Nullable.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GroupLifecyclePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupLifecyclePolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupLifecyclePolicy::createFromDiscriminatorValue);
     }
     /**
-     * The collection of lifecycle policies for this group. Read-only. Nullable.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of lifecycle policies for this group. Read-only. Nullable.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
         return new GroupLifecyclePoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of lifecycle policies for this group. Read-only. Nullable.
+     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

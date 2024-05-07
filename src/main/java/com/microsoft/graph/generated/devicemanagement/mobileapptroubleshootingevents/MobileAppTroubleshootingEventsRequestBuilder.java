@@ -60,19 +60,21 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/mobileAppTroubleshootingEvents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @return a {@link MobileAppTroubleshootingEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppTroubleshootingEventCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileAppTroubleshootingEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppTroubleshootingEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, MobileAppTroubleshootingEventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @return a {@link MobileAppTroubleshootingEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppTroubleshootingEvent post(@jakarta.annotation.Nonnull final MobileAppTroubleshootingEvent body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileAppTroubleshootingEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppTroubleshootingEvent post(@jakarta.annotation.Nonnull final MobileAppTroubleshootingEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, MobileAppTroubleshootingEvent::createFromDiscriminatorValue);
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return new MobileAppTroubleshootingEventsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

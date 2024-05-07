@@ -82,16 +82,18 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * Deletes a targetedManagedAppConfiguration.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * Deletes a targetedManagedAppConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -100,19 +102,21 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @return a {@link TargetedManagedAppConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration get() {
         return get(null);
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TargetedManagedAppConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,21 +126,23 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @return a {@link TargetedManagedAppConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration patch(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TargetedManagedAppConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration patch(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -147,7 +153,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * Deletes a targetedManagedAppConfiguration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +161,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * Deletes a targetedManagedAppConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -167,7 +173,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +181,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -187,7 +193,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -196,7 +202,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -227,7 +233,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

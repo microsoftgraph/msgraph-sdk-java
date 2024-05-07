@@ -60,19 +60,21 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/deviceStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Device configuration installation status by device.
+     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
      * @return a {@link DeviceConfigurationDeviceStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceStatusCollectionResponse get() {
         return get(null);
     }
     /**
-     * Device configuration installation status by device.
+     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceConfigurationDeviceStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationDeviceStatusCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to deviceStatuses for deviceManagement
+     * Create a new deviceConfigurationDeviceStatus object.
      * @param body The request body
      * @return a {@link DeviceConfigurationDeviceStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceStatus post(@jakarta.annotation.Nonnull final DeviceConfigurationDeviceStatus body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to deviceStatuses for deviceManagement
+     * Create a new deviceConfigurationDeviceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceConfigurationDeviceStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceStatus post(@jakarta.annotation.Nonnull final DeviceConfigurationDeviceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationDeviceStatus::createFromDiscriminatorValue);
     }
     /**
-     * Device configuration installation status by device.
+     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Device configuration installation status by device.
+     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to deviceStatuses for deviceManagement
+     * Create a new deviceConfigurationDeviceStatus object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deviceStatuses for deviceManagement
+     * Create a new deviceConfigurationDeviceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
         return new DeviceStatusesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Device configuration installation status by device.
+     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

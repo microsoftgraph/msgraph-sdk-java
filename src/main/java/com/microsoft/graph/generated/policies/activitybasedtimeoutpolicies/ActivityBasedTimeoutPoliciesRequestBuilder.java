@@ -60,19 +60,21 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/policies/activityBasedTimeoutPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @return a {@link ActivityBasedTimeoutPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityBasedTimeoutPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ActivityBasedTimeoutPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityBasedTimeoutPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to activityBasedTimeoutPolicies for policies
+     * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @return a {@link ActivityBasedTimeoutPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-post-activitybasedtimeoutpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityBasedTimeoutPolicy post(@jakarta.annotation.Nonnull final ActivityBasedTimeoutPolicy body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to activityBasedTimeoutPolicies for policies
+     * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ActivityBasedTimeoutPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-post-activitybasedtimeoutpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityBasedTimeoutPolicy post(@jakarta.annotation.Nonnull final ActivityBasedTimeoutPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityBasedTimeoutPolicy::createFromDiscriminatorValue);
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get a list of activityBasedTimeoutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create new navigation property to activityBasedTimeoutPolicies for policies
+     * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to activityBasedTimeoutPolicies for policies
+     * Create a new activityBasedTimeoutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
         return new ActivityBasedTimeoutPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get a list of activityBasedTimeoutPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

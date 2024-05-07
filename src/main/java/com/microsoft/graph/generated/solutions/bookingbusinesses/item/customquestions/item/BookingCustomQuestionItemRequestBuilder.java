@@ -37,16 +37,18 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customQuestions/{bookingCustomQuestion%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @return a {@link BookingCustomQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingCustomQuestion get() {
         return get(null);
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingCustomQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingCustomQuestion get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomQuestion::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @return a {@link BookingCustomQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingCustomQuestion patch(@jakarta.annotation.Nonnull final BookingCustomQuestion body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingCustomQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingCustomQuestion patch(@jakarta.annotation.Nonnull final BookingCustomQuestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCustomQuestion::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

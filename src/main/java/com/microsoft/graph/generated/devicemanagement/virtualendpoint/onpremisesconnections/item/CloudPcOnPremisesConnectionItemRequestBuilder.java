@@ -46,16 +46,18 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property onPremisesConnections for deviceManagement
+     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property onPremisesConnections for deviceManagement
+     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
      * @return a {@link CloudPcOnPremisesConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnection get() {
         return get(null);
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcOnPremisesConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcOnPremisesConnection::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property onPremisesConnections in deviceManagement
+     * Update the properties of a cloudPcOnPremisesConnection object.
      * @param body The request body
      * @return a {@link CloudPcOnPremisesConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnection patch(@jakarta.annotation.Nonnull final CloudPcOnPremisesConnection body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property onPremisesConnections in deviceManagement
+     * Update the properties of a cloudPcOnPremisesConnection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcOnPremisesConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnection patch(@jakarta.annotation.Nonnull final CloudPcOnPremisesConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcOnPremisesConnection::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property onPremisesConnections for deviceManagement
+     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property onPremisesConnections for deviceManagement
+     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the navigation property onPremisesConnections in deviceManagement
+     * Update the properties of a cloudPcOnPremisesConnection object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property onPremisesConnections in deviceManagement
+     * Update the properties of a cloudPcOnPremisesConnection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,19 +60,21 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/partners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Defines partner-specific configurations for external Microsoft Entra organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations.
      * @return a {@link CrossTenantAccessPolicyConfigurationPartnerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartnerCollectionResponse get() {
         return get(null);
     }
     /**
-     * Defines partner-specific configurations for external Microsoft Entra organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantAccessPolicyConfigurationPartnerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartnerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartnerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body The request body
      * @return a {@link CrossTenantAccessPolicyConfigurationPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-post-partners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner post(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantAccessPolicyConfigurationPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-post-partners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner post(@jakarta.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
-     * Defines partner-specific configurations for external Microsoft Entra organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Defines partner-specific configurations for external Microsoft Entra organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
         return new PartnersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Defines partner-specific configurations for external Microsoft Entra organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

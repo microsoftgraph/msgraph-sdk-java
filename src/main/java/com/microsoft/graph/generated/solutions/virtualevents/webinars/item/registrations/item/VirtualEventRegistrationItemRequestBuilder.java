@@ -55,19 +55,21 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Registration records of the webinar.
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @return a {@link VirtualEventRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistration get() {
         return get(null);
     }
     /**
-     * Registration records of the webinar.
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Registration records of the webinar.
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Registration records of the webinar.
+     * Get the properties and relationships of a virtualEventRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Registration records of the webinar.
+     * Get the properties and relationships of a virtualEventRegistration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -64,19 +64,21 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Schema of a custom security attributes (key-value pairs).
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @return a {@link CustomSecurityAttributeDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomSecurityAttributeDefinition get() {
         return get(null);
     }
     /**
-     * Schema of a custom security attributes (key-value pairs).
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomSecurityAttributeDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomSecurityAttributeDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +88,23 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, CustomSecurityAttributeDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property customSecurityAttributeDefinitions in directory
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a {@link CustomSecurityAttributeDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomSecurityAttributeDefinition patch(@jakarta.annotation.Nonnull final CustomSecurityAttributeDefinition body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property customSecurityAttributeDefinitions in directory
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomSecurityAttributeDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customsecurityattributedefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomSecurityAttributeDefinition patch(@jakarta.annotation.Nonnull final CustomSecurityAttributeDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -131,7 +135,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Schema of a custom security attributes (key-value pairs).
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +143,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Schema of a custom security attributes (key-value pairs).
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Update the navigation property customSecurityAttributeDefinitions in directory
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +164,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customSecurityAttributeDefinitions in directory
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +195,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Schema of a custom security attributes (key-value pairs).
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

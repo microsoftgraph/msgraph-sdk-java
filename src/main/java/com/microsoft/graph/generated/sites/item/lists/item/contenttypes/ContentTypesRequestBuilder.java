@@ -87,19 +87,21 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of content types present in this list.
+     * Get the collection of contentType resources in a list.
      * @return a {@link ContentTypeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/list-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentTypeCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of content types present in this list.
+     * Get the collection of contentType resources in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentTypeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/list-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentTypeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +136,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentType::createFromDiscriminatorValue);
     }
     /**
-     * The collection of content types present in this list.
+     * Get the collection of contentType resources in a list.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +144,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of content types present in this list.
+     * Get the collection of contentType resources in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -188,7 +190,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return new ContentTypesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of content types present in this list.
+     * Get the collection of contentType resources in a list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

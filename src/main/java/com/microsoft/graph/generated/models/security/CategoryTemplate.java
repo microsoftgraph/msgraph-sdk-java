@@ -35,7 +35,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the subcategories property value. The subcategories property
+     * Gets the subcategories property value. Represents all subcategories under a particular category.
      * @return a {@link java.util.List<SubcategoryTemplate>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
         writer.writeCollectionOfObjectValues("subcategories", this.getSubcategories());
     }
     /**
-     * Sets the subcategories property value. The subcategories property
+     * Sets the subcategories property value. Represents all subcategories under a particular category.
      * @param value Value to set for the subcategories property.
      */
     public void setSubcategories(@jakarta.annotation.Nullable final java.util.List<SubcategoryTemplate> value) {

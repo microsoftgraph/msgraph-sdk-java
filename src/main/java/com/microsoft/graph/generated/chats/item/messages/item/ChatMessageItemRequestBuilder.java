@@ -109,19 +109,21 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A collection of all the messages in the chat. Nullable.
+     * Retrieve a single message or a message reply in a channel or a chat.
      * @return a {@link ChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessage get() {
         return get(null);
     }
     /**
-     * A collection of all the messages in the chat. Nullable.
+     * Retrieve a single message or a message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -176,7 +178,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of all the messages in the chat. Nullable.
+     * Retrieve a single message or a message reply in a channel or a chat.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -184,7 +186,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the messages in the chat. Nullable.
+     * Retrieve a single message or a message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -236,7 +238,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of all the messages in the chat. Nullable.
+     * Retrieve a single message or a message reply in a channel or a chat.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

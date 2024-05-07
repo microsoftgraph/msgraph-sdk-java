@@ -55,19 +55,21 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Defines an organization with more than one instance of Microsoft Entra ID.
+     * Get properties of the multitenant organization.
      * @return a {@link MultiTenantOrganization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization get() {
         return get(null);
     }
     /**
-     * Defines an organization with more than one instance of Microsoft Entra ID.
+     * Get properties of the multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property multiTenantOrganization in tenantRelationships
+     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param body The request body
      * @return a {@link MultiTenantOrganization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization put(@jakarta.annotation.Nonnull final MultiTenantOrganization body) {
         return put(body, null);
     }
     /**
-     * Update the navigation property multiTenantOrganization in tenantRelationships
+     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization put(@jakarta.annotation.Nonnull final MultiTenantOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Defines an organization with more than one instance of Microsoft Entra ID.
+     * Get properties of the multitenant organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Defines an organization with more than one instance of Microsoft Entra ID.
+     * Get properties of the multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property multiTenantOrganization in tenantRelationships
+     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -131,7 +135,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update the navigation property multiTenantOrganization in tenantRelationships
+     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -156,7 +160,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return new MultiTenantOrganizationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Defines an organization with more than one instance of Microsoft Entra ID.
+     * Get properties of the multitenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

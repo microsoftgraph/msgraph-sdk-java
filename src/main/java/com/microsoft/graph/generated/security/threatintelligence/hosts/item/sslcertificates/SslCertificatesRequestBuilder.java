@@ -59,19 +59,21 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/sslCertificates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The hostSslCertificates that are associated with this host.
+     * Get a list of hostSslCertificate objects from the host navigation property.
      * @return a {@link HostSslCertificateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-sslcertificates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostSslCertificateCollectionResponse get() {
         return get(null);
     }
     /**
-     * The hostSslCertificates that are associated with this host.
+     * Get a list of hostSslCertificate objects from the host navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostSslCertificateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-sslcertificates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostSslCertificateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostSslCertificateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The hostSslCertificates that are associated with this host.
+     * Get a list of hostSslCertificate objects from the host navigation property.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The hostSslCertificates that are associated with this host.
+     * Get a list of hostSslCertificate objects from the host navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         return new SslCertificatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The hostSslCertificates that are associated with this host.
+     * Get a list of hostSslCertificate objects from the host navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

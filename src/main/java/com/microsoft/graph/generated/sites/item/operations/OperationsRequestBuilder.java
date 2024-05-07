@@ -60,19 +60,21 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/operations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get a list of rich long-running operations associated with a site.
      * @return a {@link RichLongRunningOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RichLongRunningOperationCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get a list of rich long-running operations associated with a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RichLongRunningOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RichLongRunningOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RichLongRunningOperation::createFromDiscriminatorValue);
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get a list of rich long-running operations associated with a site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get a list of rich long-running operations associated with a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get a list of rich long-running operations associated with a site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,19 +60,21 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}/sharedCookies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a list of the browserSharedCookie objects and their properties.
      * @return a {@link BrowserSharedCookieCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-list-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieCollectionResponse get() {
         return get(null);
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a list of the browserSharedCookie objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BrowserSharedCookieCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-list-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookieCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BrowserSharedCookieCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to sharedCookies for admin
+     * Create a new browserSharedCookie object in a browserSiteList.
      * @param body The request body
      * @return a {@link BrowserSharedCookie}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-post-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookie post(@jakarta.annotation.Nonnull final BrowserSharedCookie body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to sharedCookies for admin
+     * Create a new browserSharedCookie object in a browserSiteList.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BrowserSharedCookie}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-post-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowserSharedCookie post(@jakarta.annotation.Nonnull final BrowserSharedCookie body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BrowserSharedCookie::createFromDiscriminatorValue);
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a list of the browserSharedCookie objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a list of the browserSharedCookie objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to sharedCookies for admin
+     * Create a new browserSharedCookie object in a browserSiteList.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to sharedCookies for admin
+     * Create a new browserSharedCookie object in a browserSiteList.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class SharedCookiesRequestBuilder extends BaseRequestBuilder {
         return new SharedCookiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a list of the browserSharedCookie objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

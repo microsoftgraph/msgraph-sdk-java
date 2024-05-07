@@ -60,19 +60,21 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/tokenIssuancePolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
+     * Get a list of tokenIssuancePolicy objects.
      * @return a {@link TokenIssuancePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TokenIssuancePolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
+     * Get a list of tokenIssuancePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TokenIssuancePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TokenIssuancePolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TokenIssuancePolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to tokenIssuancePolicies for policies
+     * Create a new tokenIssuancePolicy object.
      * @param body The request body
      * @return a {@link TokenIssuancePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-post-tokenissuancepolicy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TokenIssuancePolicy post(@jakarta.annotation.Nonnull final TokenIssuancePolicy body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to tokenIssuancePolicies for policies
+     * Create a new tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TokenIssuancePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-post-tokenissuancepolicy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TokenIssuancePolicy post(@jakarta.annotation.Nonnull final TokenIssuancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TokenIssuancePolicy::createFromDiscriminatorValue);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
+     * Get a list of tokenIssuancePolicy objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
+     * Get a list of tokenIssuancePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to tokenIssuancePolicies for policies
+     * Create a new tokenIssuancePolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to tokenIssuancePolicies for policies
+     * Create a new tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return new TokenIssuancePoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
+     * Get a list of tokenIssuancePolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

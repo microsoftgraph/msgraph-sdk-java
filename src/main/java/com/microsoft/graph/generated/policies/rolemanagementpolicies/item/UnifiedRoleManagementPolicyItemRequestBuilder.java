@@ -73,19 +73,21 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Retrieve the details of a role management policy.
      * @return a {@link UnifiedRoleManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicy get() {
         return get(null);
     }
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Retrieve the details of a role management policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Retrieve the details of a role management policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +150,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Retrieve the details of a role management policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +202,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Retrieve the details of a role management policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

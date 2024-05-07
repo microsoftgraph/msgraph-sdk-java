@@ -60,19 +60,21 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/sharedWithTeams{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      * @return a {@link SharedWithChannelTeamInfoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharedWithChannelTeamInfoCollectionResponse get() {
         return get(null);
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharedWithChannelTeamInfoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharedWithChannelTeamInfoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SharedWithChannelTeamInfo::createFromDiscriminatorValue);
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return new SharedWithTeamsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

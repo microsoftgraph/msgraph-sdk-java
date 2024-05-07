@@ -59,19 +59,21 @@ public class WindowsHelloForBusinessMethodsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/windowsHelloForBusinessMethods{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Get a list of the windowsHelloForBusinessAuthenticationMethod objects and their properties.
      * @return a {@link WindowsHelloForBusinessAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsHelloForBusinessAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Get a list of the windowsHelloForBusinessAuthenticationMethod objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsHelloForBusinessAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsHelloForBusinessAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class WindowsHelloForBusinessMethodsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsHelloForBusinessAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Get a list of the windowsHelloForBusinessAuthenticationMethod objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class WindowsHelloForBusinessMethodsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Get a list of the windowsHelloForBusinessAuthenticationMethod objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class WindowsHelloForBusinessMethodsRequestBuilder extends BaseRequestBui
         return new WindowsHelloForBusinessMethodsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Get a list of the windowsHelloForBusinessAuthenticationMethod objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

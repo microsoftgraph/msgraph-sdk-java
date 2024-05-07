@@ -59,19 +59,21 @@ public class PassiveDnsReverseRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/passiveDnsReverse{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Reverse passive DNS retrieval about this host.
+     * Get a collection of passiveDnsRecord resources from a reverse passive DNS retrieval.  A reverse DNS lookup queries the hostname of a host using an IP address.
      * @return a {@link PassiveDnsRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivednsreverse?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PassiveDnsRecordCollectionResponse get() {
         return get(null);
     }
     /**
-     * Reverse passive DNS retrieval about this host.
+     * Get a collection of passiveDnsRecord resources from a reverse passive DNS retrieval.  A reverse DNS lookup queries the hostname of a host using an IP address.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PassiveDnsRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivednsreverse?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PassiveDnsRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class PassiveDnsReverseRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PassiveDnsRecordCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Reverse passive DNS retrieval about this host.
+     * Get a collection of passiveDnsRecord resources from a reverse passive DNS retrieval.  A reverse DNS lookup queries the hostname of a host using an IP address.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class PassiveDnsReverseRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Reverse passive DNS retrieval about this host.
+     * Get a collection of passiveDnsRecord resources from a reverse passive DNS retrieval.  A reverse DNS lookup queries the hostname of a host using an IP address.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class PassiveDnsReverseRequestBuilder extends BaseRequestBuilder {
         return new PassiveDnsReverseRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Reverse passive DNS retrieval about this host.
+     * Get a collection of passiveDnsRecord resources from a reverse passive DNS retrieval.  A reverse DNS lookup queries the hostname of a host using an IP address.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

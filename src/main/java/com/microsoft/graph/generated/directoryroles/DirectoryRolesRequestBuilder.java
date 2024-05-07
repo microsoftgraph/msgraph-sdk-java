@@ -85,7 +85,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryRolesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directoryRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link DirectoryRolesRequestBuilder} and sets the default values.
@@ -93,7 +93,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryRolesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directoryRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Microsoft Entra admin center, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Microsoft Entra ID, use List directoryRoleTemplates.
@@ -241,6 +241,11 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public Integer skip;
         /**
+         * Show only the first n items
+         */
+        @jakarta.annotation.Nullable
+        public Integer top;
+        /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}
          */
@@ -251,6 +256,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
+            allQueryParams.put("%24top", top);
             allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);

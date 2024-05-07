@@ -55,16 +55,18 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property termsAndConditions for deviceManagement
+     * Deletes a termsAndConditions.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property termsAndConditions for deviceManagement
+     * Deletes a termsAndConditions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -73,19 +75,21 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      * @return a {@link TermsAndConditions}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditions get() {
         return get(null);
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermsAndConditions}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditions get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,21 +99,23 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditions::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property termsAndConditions in deviceManagement
+     * Update the properties of a termsAndConditions object.
      * @param body The request body
      * @return a {@link TermsAndConditions}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditions patch(@jakarta.annotation.Nonnull final TermsAndConditions body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property termsAndConditions in deviceManagement
+     * Update the properties of a termsAndConditions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermsAndConditions}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditions patch(@jakarta.annotation.Nonnull final TermsAndConditions body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -120,7 +126,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditions::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property termsAndConditions for deviceManagement
+     * Deletes a termsAndConditions.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +134,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property termsAndConditions for deviceManagement
+     * Deletes a termsAndConditions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +146,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +154,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property termsAndConditions in deviceManagement
+     * Update the properties of a termsAndConditions object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -169,7 +175,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property termsAndConditions in deviceManagement
+     * Update the properties of a termsAndConditions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -200,7 +206,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

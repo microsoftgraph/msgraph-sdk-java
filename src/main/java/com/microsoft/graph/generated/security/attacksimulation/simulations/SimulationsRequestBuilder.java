@@ -60,19 +60,21 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get a list of attack simulation campaigns for a tenant.
      * @return a {@link SimulationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SimulationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get a list of attack simulation campaigns for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SimulationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SimulationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SimulationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to simulations for security
+     * Create an attack simulation campaign for a tenant.
      * @param body The request body
      * @return a {@link Simulation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-post-simulation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Simulation post(@jakarta.annotation.Nonnull final Simulation body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to simulations for security
+     * Create an attack simulation campaign for a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Simulation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-post-simulation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Simulation post(@jakarta.annotation.Nonnull final Simulation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Simulation::createFromDiscriminatorValue);
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get a list of attack simulation campaigns for a tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get a list of attack simulation campaigns for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to simulations for security
+     * Create an attack simulation campaign for a tenant.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to simulations for security
+     * Create an attack simulation campaign for a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class SimulationsRequestBuilder extends BaseRequestBuilder {
         return new SimulationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get a list of attack simulation campaigns for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

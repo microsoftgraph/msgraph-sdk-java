@@ -55,19 +55,21 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @return a {@link OpenShiftChangeRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OpenShiftChangeRequest get() {
         return get(null);
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OpenShiftChangeRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OpenShiftChangeRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -41,7 +41,7 @@ public class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithT
         super(requestAdapter, "{+baseurl}/communications/callRecords/microsoft.graph.callRecords.getDirectRoutingCalls(fromDateTime={fromDateTime},toDateTime={toDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getDirectRoutingCalls
+     * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      * @return a {@link GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -50,7 +50,7 @@ public class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithT
         return get(null);
     }
     /**
-     * Invoke function getDirectRoutingCalls
+     * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -63,7 +63,7 @@ public class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithT
         return this.requestAdapter.send(requestInfo, errorMapping, GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getDirectRoutingCalls
+     * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithT
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getDirectRoutingCalls
+     * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +93,7 @@ public class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithT
         return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getDirectRoutingCalls
+     * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,19 +55,21 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The settings that control the behavior of Microsoft Entra entitlement management.
+     * Retrieve the properties of an entitlementManagementSettings object.
      * @return a {@link EntitlementManagementSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSettings get() {
         return get(null);
     }
     /**
-     * The settings that control the behavior of Microsoft Entra entitlement management.
+     * Retrieve the properties of an entitlementManagementSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EntitlementManagementSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EntitlementManagementSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property settings in identityGovernance
+     * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param body The request body
      * @return a {@link EntitlementManagementSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSettings patch(@jakarta.annotation.Nonnull final EntitlementManagementSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property settings in identityGovernance
+     * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EntitlementManagementSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSettings patch(@jakarta.annotation.Nonnull final EntitlementManagementSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The settings that control the behavior of Microsoft Entra entitlement management.
+     * Retrieve the properties of an entitlementManagementSettings object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The settings that control the behavior of Microsoft Entra entitlement management.
+     * Retrieve the properties of an entitlementManagementSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property settings in identityGovernance
+     * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property settings in identityGovernance
+     * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The settings that control the behavior of Microsoft Entra entitlement management.
+     * Retrieve the properties of an entitlementManagementSettings object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

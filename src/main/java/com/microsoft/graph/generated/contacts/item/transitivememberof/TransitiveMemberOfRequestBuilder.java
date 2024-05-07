@@ -77,19 +77,21 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/transitiveMemberOf{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
+     * Get groups that this organizational contact is a member of. The API request is transitive, and returns all groups the organizational contact is a nested member of.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get() {
         return get(null);
     }
     /**
-     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
+     * Get groups that this organizational contact is a member of. The API request is transitive, and returns all groups the organizational contact is a nested member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +101,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
+     * Get groups that this organizational contact is a member of. The API request is transitive, and returns all groups the organizational contact is a nested member of.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +109,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
+     * Get groups that this organizational contact is a member of. The API request is transitive, and returns all groups the organizational contact is a nested member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -129,7 +131,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
         return new TransitiveMemberOfRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
+     * Get groups that this organizational contact is a member of. The API request is transitive, and returns all groups the organizational contact is a nested member of.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

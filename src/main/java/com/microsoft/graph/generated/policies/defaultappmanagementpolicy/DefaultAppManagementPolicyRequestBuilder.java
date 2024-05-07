@@ -55,19 +55,21 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @return a {@link TenantAppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantAppManagementPolicy get() {
         return get(null);
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantAppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantAppManagementPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, TenantAppManagementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property defaultAppManagementPolicy in policies
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @return a {@link TenantAppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantAppManagementPolicy patch(@jakarta.annotation.Nonnull final TenantAppManagementPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property defaultAppManagementPolicy in policies
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantAppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantAppManagementPolicy patch(@jakarta.annotation.Nonnull final TenantAppManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the navigation property defaultAppManagementPolicy in policies
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property defaultAppManagementPolicy in policies
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

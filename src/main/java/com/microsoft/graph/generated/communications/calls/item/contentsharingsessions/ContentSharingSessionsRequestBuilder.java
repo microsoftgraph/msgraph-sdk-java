@@ -60,19 +60,21 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/contentSharingSessions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve a list of contentSharingSession objects in a call.
      * @return a {@link ContentSharingSessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/call-list-contentsharingsessions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentSharingSessionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve a list of contentSharingSession objects in a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentSharingSessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/call-list-contentsharingsessions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentSharingSessionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentSharingSession::createFromDiscriminatorValue);
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve a list of contentSharingSession objects in a call.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve a list of contentSharingSession objects in a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder {
         return new ContentSharingSessionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve a list of contentSharingSession objects in a call.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

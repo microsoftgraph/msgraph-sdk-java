@@ -60,19 +60,21 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/retentionLabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Get a list of the retentionLabel objects and their properties.
      * @return a {@link RetentionLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionLabelCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Get a list of the retentionLabel objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RetentionLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionLabelCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionLabelCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to retentionLabels for security
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @return a {@link RetentionLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionLabel post(@jakarta.annotation.Nonnull final RetentionLabel body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to retentionLabels for security
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RetentionLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetentionLabel post(@jakarta.annotation.Nonnull final RetentionLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionLabel::createFromDiscriminatorValue);
     }
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Get a list of the retentionLabel objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Get a list of the retentionLabel objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to retentionLabels for security
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to retentionLabels for security
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return new RetentionLabelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Get a list of the retentionLabel objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

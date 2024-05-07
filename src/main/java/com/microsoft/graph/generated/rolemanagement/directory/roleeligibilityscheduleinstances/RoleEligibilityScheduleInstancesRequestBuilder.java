@@ -71,19 +71,21 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instances of role eligibilities.
      * @return a {@link UnifiedRoleEligibilityScheduleInstanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstanceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instances of role eligibilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilityScheduleInstanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +120,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue);
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instances of role eligibilities.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +128,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instances of role eligibilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +174,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
         return new RoleEligibilityScheduleInstancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instances of role eligibilities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

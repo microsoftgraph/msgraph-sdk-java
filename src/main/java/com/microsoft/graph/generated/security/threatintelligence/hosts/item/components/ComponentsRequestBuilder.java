@@ -59,19 +59,21 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/components{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The hostComponents that are associated with this host.
+     * Get a list of hostComponent resources.
      * @return a {@link HostComponentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-components?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostComponentCollectionResponse get() {
         return get(null);
     }
     /**
-     * The hostComponents that are associated with this host.
+     * Get a list of hostComponent resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostComponentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-components?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostComponentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostComponentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The hostComponents that are associated with this host.
+     * Get a list of hostComponent resources.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The hostComponents that are associated with this host.
+     * Get a list of hostComponent resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class ComponentsRequestBuilder extends BaseRequestBuilder {
         return new ComponentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The hostComponents that are associated with this host.
+     * Get a list of hostComponent resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -46,19 +46,21 @@ public class GraphSitePageRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/graph.sitePage{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the items of type microsoft.graph.sitePage in the microsoft.graph.baseSitePage collection
+     * Returns the metadata for a sitePage in the site pages list in a site.
      * @return a {@link SitePageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sitepage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SitePageCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the items of type microsoft.graph.sitePage in the microsoft.graph.baseSitePage collection
+     * Returns the metadata for a sitePage in the site pages list in a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SitePageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sitepage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SitePageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -68,7 +70,7 @@ public class GraphSitePageRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SitePageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the items of type microsoft.graph.sitePage in the microsoft.graph.baseSitePage collection
+     * Returns the metadata for a sitePage in the site pages list in a site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +78,7 @@ public class GraphSitePageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the items of type microsoft.graph.sitePage in the microsoft.graph.baseSitePage collection
+     * Returns the metadata for a sitePage in the site pages list in a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +100,7 @@ public class GraphSitePageRequestBuilder extends BaseRequestBuilder {
         return new GraphSitePageRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the items of type microsoft.graph.sitePage in the microsoft.graph.baseSitePage collection
+     * Returns the metadata for a sitePage in the site pages list in a site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

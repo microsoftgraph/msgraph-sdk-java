@@ -60,7 +60,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPairs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPair object.
      * @return a {@link HostPairCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPair object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostPairCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostPair::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPair object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPair object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return new HostPairsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPair object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

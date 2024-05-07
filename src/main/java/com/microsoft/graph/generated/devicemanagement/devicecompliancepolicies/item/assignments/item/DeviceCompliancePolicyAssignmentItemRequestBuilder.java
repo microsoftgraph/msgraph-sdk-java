@@ -37,16 +37,18 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/assignments/{deviceCompliancePolicyAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a deviceCompliancePolicyAssignment.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a deviceCompliancePolicyAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * Read properties and relationships of the deviceCompliancePolicyAssignment object.
      * @return a {@link DeviceCompliancePolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyAssignment get() {
         return get(null);
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * Read properties and relationships of the deviceCompliancePolicyAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCompliancePolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicyAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @return a {@link DeviceCompliancePolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyAssignment patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicyAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCompliancePolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyAssignment patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicyAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a deviceCompliancePolicyAssignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a deviceCompliancePolicyAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * Read properties and relationships of the deviceCompliancePolicyAssignment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * Read properties and relationships of the deviceCompliancePolicyAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * Read properties and relationships of the deviceCompliancePolicyAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,7 +60,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/subdomains{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a subdomain object.
      * @return a {@link SubdomainCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a subdomain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SubdomainCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Subdomain::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a subdomain object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a subdomain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return new SubdomainsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a subdomain object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -37,16 +37,18 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}/assignments/{enrollmentConfigurationAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a enrollmentConfigurationAssignment.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a enrollmentConfigurationAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The list of group assignments for the device configuration profile
+     * Read properties and relationships of the enrollmentConfigurationAssignment object.
      * @return a {@link EnrollmentConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EnrollmentConfigurationAssignment get() {
         return get(null);
     }
     /**
-     * The list of group assignments for the device configuration profile
+     * Read properties and relationships of the enrollmentConfigurationAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EnrollmentConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EnrollmentConfigurationAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, EnrollmentConfigurationAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a enrollmentConfigurationAssignment object.
      * @param body The request body
      * @return a {@link EnrollmentConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EnrollmentConfigurationAssignment patch(@jakarta.annotation.Nonnull final EnrollmentConfigurationAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a enrollmentConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EnrollmentConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EnrollmentConfigurationAssignment patch(@jakarta.annotation.Nonnull final EnrollmentConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, EnrollmentConfigurationAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a enrollmentConfigurationAssignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a enrollmentConfigurationAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * The list of group assignments for the device configuration profile
+     * Read properties and relationships of the enrollmentConfigurationAssignment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * The list of group assignments for the device configuration profile
+     * Read properties and relationships of the enrollmentConfigurationAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a enrollmentConfigurationAssignment object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a enrollmentConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of group assignments for the device configuration profile
+     * Read properties and relationships of the enrollmentConfigurationAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

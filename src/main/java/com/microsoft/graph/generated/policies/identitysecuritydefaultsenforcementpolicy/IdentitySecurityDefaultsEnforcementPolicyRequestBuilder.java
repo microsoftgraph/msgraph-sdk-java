@@ -55,19 +55,21 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The policy that represents the security defaults that protect against common attacks.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @return a {@link IdentitySecurityDefaultsEnforcementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy get() {
         return get(null);
     }
     /**
-     * The policy that represents the security defaults that protect against common attacks.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentitySecurityDefaultsEnforcementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return this.requestAdapter.send(requestInfo, errorMapping, IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param body The request body
      * @return a {@link IdentitySecurityDefaultsEnforcementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy patch(@jakarta.annotation.Nonnull final IdentitySecurityDefaultsEnforcementPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentitySecurityDefaultsEnforcementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy patch(@jakarta.annotation.Nonnull final IdentitySecurityDefaultsEnforcementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * The policy that represents the security defaults that protect against common attacks.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that represents the security defaults that protect against common attacks.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy that represents the security defaults that protect against common attacks.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

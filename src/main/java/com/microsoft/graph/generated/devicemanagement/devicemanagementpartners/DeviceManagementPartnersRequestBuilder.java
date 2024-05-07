@@ -60,19 +60,21 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceManagementPartners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The list of Device Management Partners configured by the tenant.
+     * List properties and relationships of the deviceManagementPartner objects.
      * @return a {@link DeviceManagementPartnerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPartnerCollectionResponse get() {
         return get(null);
     }
     /**
-     * The list of Device Management Partners configured by the tenant.
+     * List properties and relationships of the deviceManagementPartner objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagementPartnerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPartnerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementPartnerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to deviceManagementPartners for deviceManagement
+     * Create a new deviceManagementPartner object.
      * @param body The request body
      * @return a {@link DeviceManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPartner post(@jakarta.annotation.Nonnull final DeviceManagementPartner body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to deviceManagementPartners for deviceManagement
+     * Create a new deviceManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPartner post(@jakarta.annotation.Nonnull final DeviceManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementPartner::createFromDiscriminatorValue);
     }
     /**
-     * The list of Device Management Partners configured by the tenant.
+     * List properties and relationships of the deviceManagementPartner objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of Device Management Partners configured by the tenant.
+     * List properties and relationships of the deviceManagementPartner objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to deviceManagementPartners for deviceManagement
+     * Create a new deviceManagementPartner object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deviceManagementPartners for deviceManagement
+     * Create a new deviceManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return new DeviceManagementPartnersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The list of Device Management Partners configured by the tenant.
+     * List properties and relationships of the deviceManagementPartner objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

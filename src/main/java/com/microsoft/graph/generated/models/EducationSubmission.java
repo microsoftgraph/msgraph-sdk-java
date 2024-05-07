@@ -26,12 +26,30 @@ public class EducationSubmission extends Entity implements Parsable {
         return new EducationSubmission();
     }
     /**
+     * Gets the excusedBy property value. The excusedBy property
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getExcusedBy() {
+        return this.backingStore.get("excusedBy");
+    }
+    /**
+     * Gets the excusedDateTime property value. The excusedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getExcusedDateTime() {
+        return this.backingStore.get("excusedDateTime");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("excusedBy", (n) -> { this.setExcusedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("excusedDateTime", (n) -> { this.setExcusedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("outcomes", (n) -> { this.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
         deserializerMap.put("reassignedBy", (n) -> { this.setReassignedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("reassignedDateTime", (n) -> { this.setReassignedDateTime(n.getOffsetDateTimeValue()); });
@@ -180,6 +198,20 @@ public class EducationSubmission extends Entity implements Parsable {
         writer.writeObjectValue("recipient", this.getRecipient());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
         writer.writeCollectionOfObjectValues("submittedResources", this.getSubmittedResources());
+    }
+    /**
+     * Sets the excusedBy property value. The excusedBy property
+     * @param value Value to set for the excusedBy property.
+     */
+    public void setExcusedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("excusedBy", value);
+    }
+    /**
+     * Sets the excusedDateTime property value. The excusedDateTime property
+     * @param value Value to set for the excusedDateTime property.
+     */
+    public void setExcusedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("excusedDateTime", value);
     }
     /**
      * Sets the outcomes property value. The outcomes property

@@ -55,19 +55,21 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @return a {@link AdminConsentRequestPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminConsentRequestPolicy get() {
         return get(null);
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdminConsentRequestPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminConsentRequestPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, AdminConsentRequestPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @return a {@link AdminConsentRequestPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminConsentRequestPolicy patch(@jakarta.annotation.Nonnull final AdminConsentRequestPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdminConsentRequestPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminConsentRequestPolicy patch(@jakarta.annotation.Nonnull final AdminConsentRequestPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

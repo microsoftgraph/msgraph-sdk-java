@@ -37,16 +37,18 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/temporaryAccessPassMethods/{temporaryAccessPassAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property temporaryAccessPassMethods for users
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property temporaryAccessPassMethods for users
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @return a {@link TemporaryAccessPassAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TemporaryAccessPassAuthenticationMethod get() {
         return get(null);
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TemporaryAccessPassAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TemporaryAccessPassAuthenticationMethod get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +81,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property temporaryAccessPassMethods for users
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +89,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property temporaryAccessPassMethods for users
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -97,7 +101,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +109,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -133,7 +137,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

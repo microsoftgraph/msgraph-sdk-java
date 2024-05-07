@@ -55,19 +55,21 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get shiftPreferences from users
+     * Retrieve the properties and relationships of a shiftPreferences object by ID.
      * @return a {@link ShiftPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/shiftpreferences-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ShiftPreferences get() {
         return get(null);
     }
     /**
-     * Get shiftPreferences from users
+     * Retrieve the properties and relationships of a shiftPreferences object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ShiftPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/shiftpreferences-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ShiftPreferences get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ShiftPreferences::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property shiftPreferences in users
+     * Update the properties and relationships of a shiftPreferences object.
      * @param body The request body
      * @return a {@link ShiftPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/shiftpreferences-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ShiftPreferences patch(@jakarta.annotation.Nonnull final ShiftPreferences body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property shiftPreferences in users
+     * Update the properties and relationships of a shiftPreferences object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ShiftPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/shiftpreferences-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ShiftPreferences patch(@jakarta.annotation.Nonnull final ShiftPreferences body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get shiftPreferences from users
+     * Retrieve the properties and relationships of a shiftPreferences object by ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get shiftPreferences from users
+     * Retrieve the properties and relationships of a shiftPreferences object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property shiftPreferences in users
+     * Update the properties and relationships of a shiftPreferences object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property shiftPreferences in users
+     * Update the properties and relationships of a shiftPreferences object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get shiftPreferences from users
+     * Retrieve the properties and relationships of a shiftPreferences object by ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

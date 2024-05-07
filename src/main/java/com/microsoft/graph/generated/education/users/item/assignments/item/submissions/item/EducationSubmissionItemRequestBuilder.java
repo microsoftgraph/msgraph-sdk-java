@@ -1,5 +1,6 @@
 package com.microsoft.graph.education.users.item.assignments.item.submissions.item;
 
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.excuse.ExcuseRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.outcomes.OutcomesRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.reassign.ReassignRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.resources.ResourcesRequestBuilder;
@@ -28,6 +29,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the excuse method.
+     * @return a {@link ExcuseRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExcuseRequestBuilder excuse() {
+        return new ExcuseRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
      * @return a {@link OutcomesRequestBuilder}

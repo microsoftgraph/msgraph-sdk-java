@@ -36,7 +36,7 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/security/microsoft.graph.security.runHuntingQuery", rawUrl);
     }
     /**
-     * Invoke action runHuntingQuery
+     * Queries a specified set of event, activity, or entity data supported by Microsoft 365 Defender to proactively look for specific threats in your environment. This is the method for advanced hunting in Microsoft 365 Defender. This method includes a query in Kusto Query Language (KQL). It specifies a data table in the advanced hunting schema and a piped sequence of operators to filter or search that data, and format the query output in specific ways.  Find out more about hunting for threats across devices, emails, apps, and identities. Learn about KQL. For information on using advanced hunting in the Microsoft 365 Defender portal, see Proactively hunt for threats with advanced hunting in Microsoft 365 Defender.
      * @param body The request body
      * @return a {@link HuntingQueryResults}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
         return post(body, null);
     }
     /**
-     * Invoke action runHuntingQuery
+     * Queries a specified set of event, activity, or entity data supported by Microsoft 365 Defender to proactively look for specific threats in your environment. This is the method for advanced hunting in Microsoft 365 Defender. This method includes a query in Kusto Query Language (KQL). It specifies a data table in the advanced hunting schema and a piped sequence of operators to filter or search that data, and format the query output in specific ways.  Find out more about hunting for threats across devices, emails, apps, and identities. Learn about KQL. For information on using advanced hunting in the Microsoft 365 Defender portal, see Proactively hunt for threats with advanced hunting in Microsoft 365 Defender.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HuntingQueryResults}
@@ -61,7 +61,7 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, HuntingQueryResults::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action runHuntingQuery
+     * Queries a specified set of event, activity, or entity data supported by Microsoft 365 Defender to proactively look for specific threats in your environment. This is the method for advanced hunting in Microsoft 365 Defender. This method includes a query in Kusto Query Language (KQL). It specifies a data table in the advanced hunting schema and a piped sequence of operators to filter or search that data, and format the query output in specific ways.  Find out more about hunting for threats across devices, emails, apps, and identities. Learn about KQL. For information on using advanced hunting in the Microsoft 365 Defender portal, see Proactively hunt for threats with advanced hunting in Microsoft 365 Defender.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +70,7 @@ public class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action runHuntingQuery
+     * Queries a specified set of event, activity, or entity data supported by Microsoft 365 Defender to proactively look for specific threats in your environment. This is the method for advanced hunting in Microsoft 365 Defender. This method includes a query in Kusto Query Language (KQL). It specifies a data table in the advanced hunting schema and a piped sequence of operators to filter or search that data, and format the query output in specific ways.  Find out more about hunting for threats across devices, emails, apps, and identities. Learn about KQL. For information on using advanced hunting in the Microsoft 365 Defender portal, see Proactively hunt for threats with advanced hunting in Microsoft 365 Defender.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

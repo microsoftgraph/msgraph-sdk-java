@@ -60,19 +60,21 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/trainings{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents details about attack simulation trainings.
+     * Get a list of the training objects and their properties.
      * @return a {@link TrainingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-trainings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrainingCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents details about attack simulation trainings.
+     * Get a list of the training objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TrainingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-trainings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrainingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Training::createFromDiscriminatorValue);
     }
     /**
-     * Represents details about attack simulation trainings.
+     * Get a list of the training objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents details about attack simulation trainings.
+     * Get a list of the training objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         return new TrainingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents details about attack simulation trainings.
+     * Get a list of the training objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

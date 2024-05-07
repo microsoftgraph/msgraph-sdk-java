@@ -59,7 +59,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ItemsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items{?%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link ItemsRequestBuilder} and sets the default values.
@@ -67,7 +67,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ItemsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items{?%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/items{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Provides operations to call the delta method.
@@ -186,6 +186,11 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
+         * Include count of items
+         */
+        @jakarta.annotation.Nullable
+        public Boolean count;
+        /**
          * Expand related entities
          */
         @jakarta.annotation.Nullable
@@ -227,6 +232,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);

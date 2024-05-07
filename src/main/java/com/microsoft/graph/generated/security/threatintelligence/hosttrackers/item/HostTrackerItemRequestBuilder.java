@@ -64,19 +64,21 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostTracker object.
      * @return a {@link HostTracker}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostTracker get() {
         return get(null);
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostTracker object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostTracker}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostTracker get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostTracker object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostTracker object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class HostTrackerItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostTracker object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

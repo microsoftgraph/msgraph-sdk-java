@@ -44,21 +44,23 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/secrets", rawUrl);
     }
     /**
-     * Update property secrets value.
+     * Provide credentials for establishing connectivity with the target system.
      * @param body The request body
      * @return a {@link SecretsPutResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-serviceprincipal-put-synchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
         return put(body, null);
     }
     /**
-     * Update property secrets value.
+     * Provide credentials for establishing connectivity with the target system.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SecretsPutResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-serviceprincipal-put-synchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -69,7 +71,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SecretsPutResponse::createFromDiscriminatorValue);
     }
     /**
-     * Update property secrets value.
+     * Provide credentials for establishing connectivity with the target system.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -78,7 +80,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update property secrets value.
+     * Provide credentials for establishing connectivity with the target system.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

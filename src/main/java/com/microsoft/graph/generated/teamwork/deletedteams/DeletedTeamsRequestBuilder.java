@@ -69,19 +69,21 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/deletedTeams{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The deleted team.
+     * Get a list of the deletedTeam objects and their properties.
      * @return a {@link DeletedTeamCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-deletedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeletedTeamCollectionResponse get() {
         return get(null);
     }
     /**
-     * The deleted team.
+     * Get a list of the deletedTeam objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeletedTeamCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-deletedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeletedTeamCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +118,7 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeletedTeam::createFromDiscriminatorValue);
     }
     /**
-     * The deleted team.
+     * Get a list of the deletedTeam objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +126,7 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The deleted team.
+     * Get a list of the deletedTeam objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +172,7 @@ public class DeletedTeamsRequestBuilder extends BaseRequestBuilder {
         return new DeletedTeamsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The deleted team.
+     * Get a list of the deletedTeam objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

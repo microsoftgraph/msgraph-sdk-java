@@ -57,7 +57,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CalendarViewRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendarView?endDateTime={endDateTime}&startDateTime={startDateTime}{&%24count,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendarView?endDateTime={endDateTime}&startDateTime={startDateTime}{&%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link CalendarViewRequestBuilder} and sets the default values.
@@ -65,22 +65,24 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CalendarViewRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendarView?endDateTime={endDateTime}&startDateTime={startDateTime}{&%24count,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendarView?endDateTime={endDateTime}&startDateTime={startDateTime}{&%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The calendar view for the calendar. Read-only.
+     * Get the occurrences, exceptions, and single instances of events in a calendar view defined by a time range,from the default calendar of a group.
      * @return a {@link EventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EventCollectionResponse get() {
         return get(null);
     }
     /**
-     * The calendar view for the calendar. Read-only.
+     * Get the occurrences, exceptions, and single instances of events in a calendar view defined by a time range,from the default calendar of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +92,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The calendar view for the calendar. Read-only.
+     * Get the occurrences, exceptions, and single instances of events in a calendar view defined by a time range,from the default calendar of a group.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +100,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The calendar view for the calendar. Read-only.
+     * Get the occurrences, exceptions, and single instances of events in a calendar view defined by a time range,from the default calendar of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -120,7 +122,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return new CalendarViewRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The calendar view for the calendar. Read-only.
+     * Get the occurrences, exceptions, and single instances of events in a calendar view defined by a time range,from the default calendar of a group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -144,6 +146,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public String[] orderby;
+        /**
+         * Search items by search phrases
+         */
+        @jakarta.annotation.Nullable
+        public String search;
         /**
          * Select properties to be returned
          */
@@ -174,6 +181,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
             allQueryParams.put("%24count", count);
             allQueryParams.put("endDateTime", endDateTime);
             allQueryParams.put("%24filter", filter);
+            allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("startDateTime", startDateTime);
             allQueryParams.put("%24top", top);

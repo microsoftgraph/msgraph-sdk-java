@@ -37,16 +37,18 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsInformationProtectionAppLearningSummaries/{windowsInformationProtectionAppLearningSummary%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property windowsInformationProtectionAppLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionAppLearningSummary.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property windowsInformationProtectionAppLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionAppLearningSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The windows information protection app learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionAppLearningSummary object.
      * @return a {@link WindowsInformationProtectionAppLearningSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLearningSummary get() {
         return get(null);
     }
     /**
-     * The windows information protection app learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionAppLearningSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsInformationProtectionAppLearningSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLearningSummary get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property windowsInformationProtectionAppLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionAppLearningSummary object.
      * @param body The request body
      * @return a {@link WindowsInformationProtectionAppLearningSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLearningSummary patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLearningSummary body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property windowsInformationProtectionAppLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionAppLearningSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsInformationProtectionAppLearningSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLearningSummary patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLearningSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property windowsInformationProtectionAppLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionAppLearningSummary.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property windowsInformationProtectionAppLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionAppLearningSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         return requestInfo;
     }
     /**
-     * The windows information protection app learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionAppLearningSummary object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         return toGetRequestInformation(null);
     }
     /**
-     * The windows information protection app learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionAppLearningSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         return requestInfo;
     }
     /**
-     * Update the navigation property windowsInformationProtectionAppLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionAppLearningSummary object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property windowsInformationProtectionAppLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionAppLearningSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder ex
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The windows information protection app learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionAppLearningSummary object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

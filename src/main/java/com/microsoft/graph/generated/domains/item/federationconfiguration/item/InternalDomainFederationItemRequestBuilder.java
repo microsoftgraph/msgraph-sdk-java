@@ -37,16 +37,18 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/federationConfiguration/{internalDomainFederation%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property federationConfiguration for domains
+     * Delete an internalDomainFederation object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property federationConfiguration for domains
+     * Delete an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @return a {@link InternalDomainFederation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InternalDomainFederation get() {
         return get(null);
     }
     /**
-     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InternalDomainFederation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InternalDomainFederation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, InternalDomainFederation::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property federationConfiguration in domains
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @return a {@link InternalDomainFederation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InternalDomainFederation patch(@jakarta.annotation.Nonnull final InternalDomainFederation body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property federationConfiguration in domains
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InternalDomainFederation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InternalDomainFederation patch(@jakarta.annotation.Nonnull final InternalDomainFederation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, InternalDomainFederation::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property federationConfiguration for domains
+     * Delete an internalDomainFederation object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property federationConfiguration for domains
+     * Delete an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the navigation property federationConfiguration in domains
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property federationConfiguration in domains
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

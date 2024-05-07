@@ -60,7 +60,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostCookies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostCookie object.
      * @return a {@link HostCookieCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostCookie object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostCookieCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostCookie::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostCookie object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostCookie object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class HostCookiesRequestBuilder extends BaseRequestBuilder {
         return new HostCookiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostCookie object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

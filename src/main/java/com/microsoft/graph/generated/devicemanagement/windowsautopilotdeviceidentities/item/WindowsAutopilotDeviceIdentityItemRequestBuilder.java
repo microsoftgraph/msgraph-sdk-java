@@ -64,16 +64,18 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsAutopilotDeviceIdentities/{windowsAutopilotDeviceIdentity%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a windowsAutopilotDeviceIdentity.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a windowsAutopilotDeviceIdentity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -82,19 +84,21 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      * @return a {@link WindowsAutopilotDeviceIdentity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeviceIdentity get() {
         return get(null);
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsAutopilotDeviceIdentity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeviceIdentity get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,7 +133,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a windowsAutopilotDeviceIdentity.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +141,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a windowsAutopilotDeviceIdentity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -149,7 +153,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +161,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -209,7 +213,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
