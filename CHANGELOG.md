@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.9.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.8.0...v6.9.0) (2024-05-09)
+
+
+### Features
+
+* **generation:** update request builders and models ([b02e9e8](https://github.com/microsoftgraph/msgraph-sdk-java/commit/b02e9e8d94b1142d1b9d2d1b5e46102a574d86d4))
+
+
+### Bug Fixes
+
+* downgrade jakarta.annotation-api, bump java core and kiota libs for java 8 compatibility ([8a03b30](https://github.com/microsoftgraph/msgraph-sdk-java/commit/8a03b30d6ae2c333531f9ad4234a3de2987e7d05))
+
 ## [6.8.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.7.0...v6.8.0) (2024-05-02)
 
 
