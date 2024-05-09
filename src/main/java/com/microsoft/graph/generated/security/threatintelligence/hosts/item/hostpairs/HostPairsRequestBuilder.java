@@ -59,19 +59,21 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/hostPairs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @return a {@link HostPairCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-hostpairs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostPairCollectionResponse get() {
         return get(null);
     }
     /**
-     * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostPairCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-hostpairs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostPairCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostPairCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return new HostPairsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
+     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

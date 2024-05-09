@@ -55,19 +55,21 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @return a {@link SwapShiftsChangeRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SwapShiftsChangeRequest get() {
         return get(null);
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SwapShiftsChangeRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SwapShiftsChangeRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,19 +55,21 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+     * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object.
      * @return a {@link PlannerBucketTaskBoardTaskFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat get() {
         return get(null);
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+     * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerBucketTaskBoardTaskFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerBucketTaskBoardTaskFormat::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property bucketTaskBoardFormat in planner
+     * Update the properties of a plannerBucketTaskBoardTaskFormat object.
      * @param body The request body
      * @return a {@link PlannerBucketTaskBoardTaskFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat patch(@jakarta.annotation.Nonnull final PlannerBucketTaskBoardTaskFormat body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property bucketTaskBoardFormat in planner
+     * Update the properties of a plannerBucketTaskBoardTaskFormat object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerBucketTaskBoardTaskFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat patch(@jakarta.annotation.Nonnull final PlannerBucketTaskBoardTaskFormat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+     * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+     * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property bucketTaskBoardFormat in planner
+     * Update the properties of a plannerBucketTaskBoardTaskFormat object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property bucketTaskBoardFormat in planner
+     * Update the properties of a plannerBucketTaskBoardTaskFormat object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+     * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

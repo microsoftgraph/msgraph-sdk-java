@@ -69,7 +69,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @return a {@link CallCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -78,7 +78,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CallCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -91,21 +91,23 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CallCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to calls for communications
+     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param body The request body
      * @return a {@link Call}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Call post(@jakarta.annotation.Nonnull final Call body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to calls for communications
+     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Call}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Call post(@jakarta.annotation.Nonnull final Call body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +118,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Call::createFromDiscriminatorValue);
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +126,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to calls for communications
+     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +147,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to calls for communications
+     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +172,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
         return new CallsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

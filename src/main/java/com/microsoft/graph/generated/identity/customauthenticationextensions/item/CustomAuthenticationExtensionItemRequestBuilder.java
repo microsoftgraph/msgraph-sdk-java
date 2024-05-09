@@ -46,16 +46,18 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions/{customAuthenticationExtension%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property customAuthenticationExtensions for identity
+     * Delete a customAuthenticationExtension object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property customAuthenticationExtensions for identity
+     * Delete a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Read the properties and relationships of a customAuthenticationExtension object.
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension get() {
         return get(null);
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Read the properties and relationships of a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtension::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object.
      * @param body The request body
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtension::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property customAuthenticationExtensions for identity
+     * Delete a customAuthenticationExtension object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property customAuthenticationExtensions for identity
+     * Delete a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Read the properties and relationships of a customAuthenticationExtension object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Read the properties and relationships of a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Read the properties and relationships of a customAuthenticationExtension object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

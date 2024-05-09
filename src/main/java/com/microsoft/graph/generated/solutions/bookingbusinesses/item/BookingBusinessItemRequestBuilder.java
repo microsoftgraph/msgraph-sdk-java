@@ -118,16 +118,18 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property bookingBusinesses for solutions
+     * Delete a bookingBusiness object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property bookingBusinesses for solutions
+     * Delete a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -136,19 +138,21 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get bookingBusinesses from solutions
+     * Get the properties and relationships of a bookingBusiness object.
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingBusiness get() {
         return get(null);
     }
     /**
-     * Get bookingBusinesses from solutions
+     * Get the properties and relationships of a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingBusiness get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -158,21 +162,23 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingBusiness::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property bookingBusinesses in solutions
+     * Update the properties of a bookingBusiness object.
      * @param body The request body
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingBusiness patch(@jakarta.annotation.Nonnull final BookingBusiness body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property bookingBusinesses in solutions
+     * Update the properties of a bookingBusiness object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BookingBusiness patch(@jakarta.annotation.Nonnull final BookingBusiness body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -183,7 +189,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingBusiness::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property bookingBusinesses for solutions
+     * Delete a bookingBusiness object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -191,7 +197,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property bookingBusinesses for solutions
+     * Delete a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -203,7 +209,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get bookingBusinesses from solutions
+     * Get the properties and relationships of a bookingBusiness object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -211,7 +217,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get bookingBusinesses from solutions
+     * Get the properties and relationships of a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -223,7 +229,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property bookingBusinesses in solutions
+     * Update the properties of a bookingBusiness object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -232,7 +238,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property bookingBusinesses in solutions
+     * Update the properties of a bookingBusiness object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -263,7 +269,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get bookingBusinesses from solutions
+     * Get the properties and relationships of a bookingBusiness object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

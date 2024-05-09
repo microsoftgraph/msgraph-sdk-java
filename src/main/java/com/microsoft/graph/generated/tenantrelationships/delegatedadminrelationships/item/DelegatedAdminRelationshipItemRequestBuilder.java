@@ -64,16 +64,18 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property delegatedAdminRelationships for tenantRelationships
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property delegatedAdminRelationships for tenantRelationships
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -82,19 +84,21 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Read the properties of a delegatedAdminRelationship object.
      * @return a {@link DelegatedAdminRelationship}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationship get() {
         return get(null);
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Read the properties of a delegatedAdminRelationship object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminRelationship}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationship get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,21 +108,23 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property delegatedAdminRelationships in tenantRelationships
+     * Update the properties of a delegatedAdminRelationship object.  The following restrictions apply:- You can update this relationship when its status property is created.- You can update the autoExtendDuration property when status is either created or active.- You can only remove the Microsoft Entra Global Administrator role when the status property is active, which indicates a long-running operation.
      * @param body The request body
      * @return a {@link DelegatedAdminRelationship}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationship patch(@jakarta.annotation.Nonnull final DelegatedAdminRelationship body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property delegatedAdminRelationships in tenantRelationships
+     * Update the properties of a delegatedAdminRelationship object.  The following restrictions apply:- You can update this relationship when its status property is created.- You can update the autoExtendDuration property when status is either created or active.- You can only remove the Microsoft Entra Global Administrator role when the status property is active, which indicates a long-running operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminRelationship}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationship patch(@jakarta.annotation.Nonnull final DelegatedAdminRelationship body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -129,7 +135,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminRelationship::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property delegatedAdminRelationships for tenantRelationships
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +143,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property delegatedAdminRelationships for tenantRelationships
+     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -149,7 +155,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Read the properties of a delegatedAdminRelationship object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +163,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Read the properties of a delegatedAdminRelationship object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -169,7 +175,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the navigation property delegatedAdminRelationships in tenantRelationships
+     * Update the properties of a delegatedAdminRelationship object.  The following restrictions apply:- You can update this relationship when its status property is created.- You can update the autoExtendDuration property when status is either created or active.- You can only remove the Microsoft Entra Global Administrator role when the status property is active, which indicates a long-running operation.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -178,7 +184,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property delegatedAdminRelationships in tenantRelationships
+     * Update the properties of a delegatedAdminRelationship object.  The following restrictions apply:- You can update this relationship when its status property is created.- You can update the autoExtendDuration property when status is either created or active.- You can only remove the Microsoft Entra Global Administrator role when the status property is active, which indicates a long-running operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -209,7 +215,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Read the properties of a delegatedAdminRelationship object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

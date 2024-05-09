@@ -136,16 +136,18 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property workflows for identityGovernance
+     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property workflows for identityGovernance
+     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -154,19 +156,21 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The workflows in the lifecycle workflows instance.
+     * Read the properties and relationships of a workflow object.
      * @return a {@link Workflow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Workflow get() {
         return get(null);
     }
     /**
-     * The workflows in the lifecycle workflows instance.
+     * Read the properties and relationships of a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Workflow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Workflow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -176,21 +180,23 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Workflow::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property workflows in identityGovernance
+     * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param body The request body
      * @return a {@link Workflow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Workflow patch(@jakarta.annotation.Nonnull final Workflow body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property workflows in identityGovernance
+     * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Workflow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Workflow patch(@jakarta.annotation.Nonnull final Workflow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -201,7 +207,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Workflow::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property workflows for identityGovernance
+     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -209,7 +215,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property workflows for identityGovernance
+     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -221,7 +227,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The workflows in the lifecycle workflows instance.
+     * Read the properties and relationships of a workflow object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -229,7 +235,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The workflows in the lifecycle workflows instance.
+     * Read the properties and relationships of a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -241,7 +247,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property workflows in identityGovernance
+     * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -250,7 +256,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property workflows in identityGovernance
+     * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -281,7 +287,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The workflows in the lifecycle workflows instance.
+     * Read the properties and relationships of a workflow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

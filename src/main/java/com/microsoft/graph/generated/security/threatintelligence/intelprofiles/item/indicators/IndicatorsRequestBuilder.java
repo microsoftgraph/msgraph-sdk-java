@@ -59,19 +59,21 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/intelProfiles/{intelligenceProfile%2Did}/indicators{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Includes an assemblage of high-fidelity network indicators of compromise.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @return a {@link IntelligenceProfileIndicatorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IntelligenceProfileIndicatorCollectionResponse get() {
         return get(null);
     }
     /**
-     * Includes an assemblage of high-fidelity network indicators of compromise.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IntelligenceProfileIndicatorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IntelligenceProfileIndicatorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IntelligenceProfileIndicatorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Includes an assemblage of high-fidelity network indicators of compromise.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Includes an assemblage of high-fidelity network indicators of compromise.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return new IndicatorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Includes an assemblage of high-fidelity network indicators of compromise.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

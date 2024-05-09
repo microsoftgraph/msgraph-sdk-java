@@ -69,19 +69,21 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/auditEvents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of Cloud PC audit events.
+     * List all the cloudPcAuditEvent objects for the tenant.
      * @return a {@link CloudPcAuditEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditEventCollectionResponse get() {
         return get(null);
     }
     /**
-     * A collection of Cloud PC audit events.
+     * List all the cloudPcAuditEvent objects for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcAuditEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +118,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcAuditEvent::createFromDiscriminatorValue);
     }
     /**
-     * A collection of Cloud PC audit events.
+     * List all the cloudPcAuditEvent objects for the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +126,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of Cloud PC audit events.
+     * List all the cloudPcAuditEvent objects for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +172,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return new AuditEventsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of Cloud PC audit events.
+     * List all the cloudPcAuditEvent objects for the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

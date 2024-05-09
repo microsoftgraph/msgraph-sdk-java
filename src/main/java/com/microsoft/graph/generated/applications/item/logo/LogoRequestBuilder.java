@@ -37,6 +37,24 @@ public class LogoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The main logo for the application. Not nullable.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     */
+    public void delete() {
+        delete(null);
+    }
+    /**
+     * The main logo for the application. Not nullable.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     */
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
+     * The main logo for the application. Not nullable.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -81,6 +99,26 @@ public class LogoRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
+    }
+    /**
+     * The main logo for the application. Not nullable.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * The main logo for the application. Not nullable.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        return requestInfo;
     }
     /**
      * The main logo for the application. Not nullable.
@@ -135,6 +173,12 @@ public class LogoRequestBuilder extends BaseRequestBuilder {
     public LogoRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new LogoRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

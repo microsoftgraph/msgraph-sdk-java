@@ -60,19 +60,21 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/policies/roleManagementPolicyAssignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups.
      * @return a {@link UnifiedRoleManagementPolicyAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleManagementPolicyAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicyAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue);
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBu
         return new RoleManagementPolicyAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

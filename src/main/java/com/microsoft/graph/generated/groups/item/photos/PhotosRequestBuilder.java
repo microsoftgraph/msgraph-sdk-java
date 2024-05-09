@@ -39,7 +39,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link PhotosRequestBuilder} and sets the default values.
@@ -47,22 +47,24 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/photos{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The profile photos owned by the group. Read-only. Nullable.
+     * Retrieve a list of profilePhoto objects.
      * @return a {@link ProfilePhotoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfilePhotoCollectionResponse get() {
         return get(null);
     }
     /**
-     * The profile photos owned by the group. Read-only. Nullable.
+     * Retrieve a list of profilePhoto objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfilePhotoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfilePhotoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -72,7 +74,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfilePhotoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The profile photos owned by the group. Read-only. Nullable.
+     * Retrieve a list of profilePhoto objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -80,7 +82,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The profile photos owned by the group. Read-only. Nullable.
+     * Retrieve a list of profilePhoto objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -102,10 +104,15 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         return new PhotosRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The profile photos owned by the group. Read-only. Nullable.
+     * Retrieve a list of profilePhoto objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
+        /**
+         * Include count of items
+         */
+        @jakarta.annotation.Nullable
+        public Boolean count;
         /**
          * Filter items by property values
          */
@@ -116,6 +123,11 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public String[] orderby;
+        /**
+         * Search items by search phrases
+         */
+        @jakarta.annotation.Nullable
+        public String search;
         /**
          * Select properties to be returned
          */
@@ -138,7 +150,9 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
+            allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
             allQueryParams.put("%24orderby", orderby);

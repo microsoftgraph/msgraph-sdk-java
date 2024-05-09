@@ -37,16 +37,18 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/assignments/{termsAndConditionsAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @return a {@link TermsAndConditionsAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditionsAssignment get() {
         return get(null);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermsAndConditionsAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditionsAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditionsAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @return a {@link TermsAndConditionsAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditionsAssignment patch(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermsAndConditionsAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermsAndConditionsAssignment patch(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditionsAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

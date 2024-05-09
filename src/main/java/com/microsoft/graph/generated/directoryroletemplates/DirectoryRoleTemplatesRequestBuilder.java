@@ -85,7 +85,7 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryRoleTemplatesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryRoleTemplates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directoryRoleTemplates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link DirectoryRoleTemplatesRequestBuilder} and sets the default values.
@@ -93,7 +93,7 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryRoleTemplatesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directoryRoleTemplates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directoryRoleTemplates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Retrieve a list of directoryRoleTemplate objects.
@@ -239,6 +239,11 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public Integer skip;
         /**
+         * Show only the first n items
+         */
+        @jakarta.annotation.Nullable
+        public Integer top;
+        /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}
          */
@@ -249,6 +254,7 @@ public class DirectoryRoleTemplatesRequestBuilder extends BaseRequestBuilder {
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
+            allQueryParams.put("%24top", top);
             allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);

@@ -38,7 +38,7 @@ public class GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/reports/getTeamsDeviceUsageUserDetail(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getTeamsDeviceUsageUserDetail
+     * Get details about Microsoft Teams device usage by user.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -47,7 +47,7 @@ public class GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder extends BaseR
         return get(null);
     }
     /**
-     * Invoke function getTeamsDeviceUsageUserDetail
+     * Get details about Microsoft Teams device usage by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder extends BaseR
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getTeamsDeviceUsageUserDetail
+     * Get details about Microsoft Teams device usage by user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getTeamsDeviceUsageUserDetail
+     * Get details about Microsoft Teams device usage by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

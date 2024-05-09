@@ -64,16 +64,18 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies/{authenticationStrengthPolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property authenticationStrengthPolicies for policies
+     * Delete a custom authenticationStrengthPolicy object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property authenticationStrengthPolicies for policies
+     * Delete a custom authenticationStrengthPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -82,19 +84,21 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
+     * Read the properties and relationships of an authenticationStrengthPolicy object.
      * @return a {@link AuthenticationStrengthPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicy get() {
         return get(null);
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
+     * Read the properties and relationships of an authenticationStrengthPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationStrengthPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,21 +108,23 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property authenticationStrengthPolicies in policies
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
      * @param body The request body
      * @return a {@link AuthenticationStrengthPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicy patch(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property authenticationStrengthPolicies in policies
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationStrengthPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthPolicy patch(@jakarta.annotation.Nonnull final AuthenticationStrengthPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -129,7 +135,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationStrengthPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property authenticationStrengthPolicies for policies
+     * Delete a custom authenticationStrengthPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +143,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property authenticationStrengthPolicies for policies
+     * Delete a custom authenticationStrengthPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -149,7 +155,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
+     * Read the properties and relationships of an authenticationStrengthPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +163,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
+     * Read the properties and relationships of an authenticationStrengthPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -169,7 +175,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the navigation property authenticationStrengthPolicies in policies
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -178,7 +184,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property authenticationStrengthPolicies in policies
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -209,7 +215,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
+     * Read the properties and relationships of an authenticationStrengthPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

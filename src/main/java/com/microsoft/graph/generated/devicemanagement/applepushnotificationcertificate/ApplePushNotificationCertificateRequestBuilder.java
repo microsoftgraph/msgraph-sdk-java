@@ -64,19 +64,21 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      * @return a {@link ApplePushNotificationCertificate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplePushNotificationCertificate get() {
         return get(null);
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApplePushNotificationCertificate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplePushNotificationCertificate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +88,23 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, ApplePushNotificationCertificate::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * Update the properties of a applePushNotificationCertificate object.
      * @param body The request body
      * @return a {@link ApplePushNotificationCertificate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplePushNotificationCertificate patch(@jakarta.annotation.Nonnull final ApplePushNotificationCertificate body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * Update the properties of a applePushNotificationCertificate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApplePushNotificationCertificate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplePushNotificationCertificate patch(@jakarta.annotation.Nonnull final ApplePushNotificationCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -131,7 +135,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +143,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * Update the properties of a applePushNotificationCertificate object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +164,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * Update the properties of a applePushNotificationCertificate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +195,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

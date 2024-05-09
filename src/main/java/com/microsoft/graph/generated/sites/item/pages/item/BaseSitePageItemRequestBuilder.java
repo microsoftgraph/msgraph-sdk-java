@@ -64,16 +64,18 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property pages for sites
+     * Delete a baseSitePage from the site pages list in a site.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property pages for sites
+     * Delete a baseSitePage from the site pages list in a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -82,19 +84,21 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of pages in the baseSitePages list in this site.
+     * Get the metadata for a baseSitePage in the site pages list in a site.
      * @return a {@link BaseSitePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BaseSitePage get() {
         return get(null);
     }
     /**
-     * The collection of pages in the baseSitePages list in this site.
+     * Get the metadata for a baseSitePage in the site pages list in a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BaseSitePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BaseSitePage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,7 +133,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BaseSitePage::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property pages for sites
+     * Delete a baseSitePage from the site pages list in a site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +141,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property pages for sites
+     * Delete a baseSitePage from the site pages list in a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -149,7 +153,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of pages in the baseSitePages list in this site.
+     * Get the metadata for a baseSitePage in the site pages list in a site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +161,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of pages in the baseSitePages list in this site.
+     * Get the metadata for a baseSitePage in the site pages list in a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -209,7 +213,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of pages in the baseSitePages list in this site.
+     * Get the metadata for a baseSitePage in the site pages list in a site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

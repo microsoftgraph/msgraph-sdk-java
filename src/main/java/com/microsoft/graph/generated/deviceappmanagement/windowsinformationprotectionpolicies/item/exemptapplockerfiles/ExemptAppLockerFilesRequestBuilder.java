@@ -60,19 +60,21 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy%2Did}/exemptAppLockerFiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Another way to input exempt apps through xml files
+     * List properties and relationships of the windowsInformationProtectionAppLockerFile objects.
      * @return a {@link WindowsInformationProtectionAppLockerFileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFileCollectionResponse get() {
         return get(null);
     }
     /**
-     * Another way to input exempt apps through xml files
+     * List properties and relationships of the windowsInformationProtectionAppLockerFile objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsInformationProtectionAppLockerFileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLockerFileCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to exemptAppLockerFiles for deviceAppManagement
+     * Create a new windowsInformationProtectionAppLockerFile object.
      * @param body The request body
      * @return a {@link WindowsInformationProtectionAppLockerFile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to exemptAppLockerFiles for deviceAppManagement
+     * Create a new windowsInformationProtectionAppLockerFile object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsInformationProtectionAppLockerFile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile post(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue);
     }
     /**
-     * Another way to input exempt apps through xml files
+     * List properties and relationships of the windowsInformationProtectionAppLockerFile objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Another way to input exempt apps through xml files
+     * List properties and relationships of the windowsInformationProtectionAppLockerFile objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to exemptAppLockerFiles for deviceAppManagement
+     * Create a new windowsInformationProtectionAppLockerFile object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to exemptAppLockerFiles for deviceAppManagement
+     * Create a new windowsInformationProtectionAppLockerFile object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder {
         return new ExemptAppLockerFilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Another way to input exempt apps through xml files
+     * List properties and relationships of the windowsInformationProtectionAppLockerFile objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

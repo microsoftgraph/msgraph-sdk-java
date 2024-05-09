@@ -91,19 +91,21 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The synchronization schema configured for the job.
+     * Retrieve the schema for a given synchronization job or template.
      * @return a {@link SynchronizationSchema}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema get() {
         return get(null);
     }
     /**
-     * The synchronization schema configured for the job.
+     * Retrieve the schema for a given synchronization job or template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationSchema}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,21 +115,23 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationSchema::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property schema in servicePrincipals
+     * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param body The request body
      * @return a {@link SynchronizationSchema}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema patch(@jakarta.annotation.Nonnull final SynchronizationSchema body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property schema in servicePrincipals
+     * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationSchema}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationSchema patch(@jakarta.annotation.Nonnull final SynchronizationSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -158,7 +162,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The synchronization schema configured for the job.
+     * Retrieve the schema for a given synchronization job or template.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +170,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The synchronization schema configured for the job.
+     * Retrieve the schema for a given synchronization job or template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -178,7 +182,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property schema in servicePrincipals
+     * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -187,7 +191,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property schema in servicePrincipals
+     * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -218,7 +222,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The synchronization schema configured for the job.
+     * Retrieve the schema for a given synchronization job or template.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

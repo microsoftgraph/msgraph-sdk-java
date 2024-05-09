@@ -60,19 +60,21 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/reports/exportJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Entity representing a job to export a report
+     * List properties and relationships of the deviceManagementExportJob objects.
      * @return a {@link DeviceManagementExportJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExportJobCollectionResponse get() {
         return get(null);
     }
     /**
-     * Entity representing a job to export a report
+     * List properties and relationships of the deviceManagementExportJob objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagementExportJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExportJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementExportJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to exportJobs for deviceManagement
+     * Create a new deviceManagementExportJob object.
      * @param body The request body
      * @return a {@link DeviceManagementExportJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExportJob post(@jakarta.annotation.Nonnull final DeviceManagementExportJob body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to exportJobs for deviceManagement
+     * Create a new deviceManagementExportJob object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagementExportJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExportJob post(@jakarta.annotation.Nonnull final DeviceManagementExportJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementExportJob::createFromDiscriminatorValue);
     }
     /**
-     * Entity representing a job to export a report
+     * List properties and relationships of the deviceManagementExportJob objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Entity representing a job to export a report
+     * List properties and relationships of the deviceManagementExportJob objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to exportJobs for deviceManagement
+     * Create a new deviceManagementExportJob object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to exportJobs for deviceManagement
+     * Create a new deviceManagementExportJob object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return new ExportJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Entity representing a job to export a report
+     * List properties and relationships of the deviceManagementExportJob objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

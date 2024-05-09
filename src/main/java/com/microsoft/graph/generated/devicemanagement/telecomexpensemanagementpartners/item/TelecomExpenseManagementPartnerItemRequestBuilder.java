@@ -37,16 +37,18 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/deviceManagement/telecomExpenseManagementPartners/{telecomExpenseManagementPartner%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property telecomExpenseManagementPartners for deviceManagement
+     * Deletes a telecomExpenseManagementPartner.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property telecomExpenseManagementPartners for deviceManagement
+     * Deletes a telecomExpenseManagementPartner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      * @return a {@link TelecomExpenseManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartner get() {
         return get(null);
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TelecomExpenseManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, TelecomExpenseManagementPartner::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * Update the properties of a telecomExpenseManagementPartner object.
      * @param body The request body
      * @return a {@link TelecomExpenseManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartner patch(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * Update the properties of a telecomExpenseManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TelecomExpenseManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TelecomExpenseManagementPartner patch(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, TelecomExpenseManagementPartner::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property telecomExpenseManagementPartners for deviceManagement
+     * Deletes a telecomExpenseManagementPartner.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property telecomExpenseManagementPartners for deviceManagement
+     * Deletes a telecomExpenseManagementPartner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * Update the properties of a telecomExpenseManagementPartner object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * Update the properties of a telecomExpenseManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

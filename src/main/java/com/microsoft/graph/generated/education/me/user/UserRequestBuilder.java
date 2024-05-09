@@ -55,19 +55,21 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/user{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The directory user that corresponds to this user.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User get() {
         return get(null);
     }
     /**
-     * The directory user that corresponds to this user.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * The directory user that corresponds to this user.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +87,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The directory user that corresponds to this user.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -107,7 +109,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return new UserRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The directory user that corresponds to this user.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

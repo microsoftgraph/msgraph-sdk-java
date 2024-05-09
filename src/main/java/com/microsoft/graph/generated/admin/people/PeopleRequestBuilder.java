@@ -55,19 +55,21 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/people{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Represents a setting to control people-related admin settings in the tenant.
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @return a {@link PeopleAdminSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PeopleAdminSettings get() {
         return get(null);
     }
     /**
-     * Represents a setting to control people-related admin settings in the tenant.
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PeopleAdminSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PeopleAdminSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PeopleAdminSettings::createFromDiscriminatorValue);
     }
     /**
-     * Represents a setting to control people-related admin settings in the tenant.
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +87,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a setting to control people-related admin settings in the tenant.
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -107,7 +109,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         return new PeopleRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents a setting to control people-related admin settings in the tenant.
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

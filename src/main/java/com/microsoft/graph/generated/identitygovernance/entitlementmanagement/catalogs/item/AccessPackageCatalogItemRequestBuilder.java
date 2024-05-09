@@ -82,16 +82,18 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property catalogs for identityGovernance
+     * Delete an accessPackageCatalog.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property catalogs for identityGovernance
+     * Delete an accessPackageCatalog.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -100,19 +102,21 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A container for access packages.
+     * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @return a {@link AccessPackageCatalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog get() {
         return get(null);
     }
     /**
-     * A container for access packages.
+     * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageCatalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,21 +126,23 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCatalog::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property catalogs in identityGovernance
+     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a {@link AccessPackageCatalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog patch(@jakarta.annotation.Nonnull final AccessPackageCatalog body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property catalogs in identityGovernance
+     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageCatalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog patch(@jakarta.annotation.Nonnull final AccessPackageCatalog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -147,7 +153,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCatalog::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property catalogs for identityGovernance
+     * Delete an accessPackageCatalog.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +161,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property catalogs for identityGovernance
+     * Delete an accessPackageCatalog.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -167,7 +173,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A container for access packages.
+     * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +181,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A container for access packages.
+     * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -187,7 +193,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property catalogs in identityGovernance
+     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -196,7 +202,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property catalogs in identityGovernance
+     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -227,7 +233,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A container for access packages.
+     * Retrieve the properties and relationships of an accessPackageCatalog object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

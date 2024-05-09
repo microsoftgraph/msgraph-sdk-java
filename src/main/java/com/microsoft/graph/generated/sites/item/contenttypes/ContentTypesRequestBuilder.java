@@ -87,19 +87,21 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/contentTypes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of contentType resources in a site.
      * @return a {@link ContentTypeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentTypeCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of contentType resources in a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentTypeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentTypeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,21 +111,23 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentTypeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to contentTypes for sites
+     * Create a new contentType in a site.
      * @param body The request body
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentType post(@jakarta.annotation.Nonnull final ContentType body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to contentTypes for sites
+     * Create a new contentType in a site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentType post(@jakarta.annotation.Nonnull final ContentType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentType::createFromDiscriminatorValue);
     }
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of contentType resources in a site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +146,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of contentType resources in a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -154,7 +158,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to contentTypes for sites
+     * Create a new contentType in a site.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -163,7 +167,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to contentTypes for sites
+     * Create a new contentType in a site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +192,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
         return new ContentTypesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of contentType resources in a site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

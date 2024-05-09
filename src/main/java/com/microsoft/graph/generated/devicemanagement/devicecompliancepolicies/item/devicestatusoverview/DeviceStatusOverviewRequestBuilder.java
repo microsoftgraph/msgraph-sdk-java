@@ -55,19 +55,21 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Device compliance devices status overview
+     * Read properties and relationships of the deviceComplianceDeviceOverview object.
      * @return a {@link DeviceComplianceDeviceOverview}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceDeviceOverview get() {
         return get(null);
     }
     /**
-     * Device compliance devices status overview
+     * Read properties and relationships of the deviceComplianceDeviceOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceComplianceDeviceOverview}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceDeviceOverview get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceDeviceOverview::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property deviceStatusOverview in deviceManagement
+     * Update the properties of a deviceComplianceDeviceOverview object.
      * @param body The request body
      * @return a {@link DeviceComplianceDeviceOverview}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceDeviceOverview patch(@jakarta.annotation.Nonnull final DeviceComplianceDeviceOverview body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property deviceStatusOverview in deviceManagement
+     * Update the properties of a deviceComplianceDeviceOverview object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceComplianceDeviceOverview}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceDeviceOverview patch(@jakarta.annotation.Nonnull final DeviceComplianceDeviceOverview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Device compliance devices status overview
+     * Read properties and relationships of the deviceComplianceDeviceOverview object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Device compliance devices status overview
+     * Read properties and relationships of the deviceComplianceDeviceOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceStatusOverview in deviceManagement
+     * Update the properties of a deviceComplianceDeviceOverview object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceStatusOverview in deviceManagement
+     * Update the properties of a deviceComplianceDeviceOverview object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Device compliance devices status overview
+     * Read properties and relationships of the deviceComplianceDeviceOverview object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

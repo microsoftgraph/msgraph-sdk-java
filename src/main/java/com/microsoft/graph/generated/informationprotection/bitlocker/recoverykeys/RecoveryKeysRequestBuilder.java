@@ -59,19 +59,21 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/informationProtection/bitlocker/recoveryKeys{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The recovery keys associated with the bitlocker entity.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @return a {@link BitlockerRecoveryKeyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BitlockerRecoveryKeyCollectionResponse get() {
         return get(null);
     }
     /**
-     * The recovery keys associated with the bitlocker entity.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BitlockerRecoveryKeyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BitlockerRecoveryKeyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BitlockerRecoveryKeyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The recovery keys associated with the bitlocker entity.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The recovery keys associated with the bitlocker entity.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         return new RecoveryKeysRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The recovery keys associated with the bitlocker entity.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

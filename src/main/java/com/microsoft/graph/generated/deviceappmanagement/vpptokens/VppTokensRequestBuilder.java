@@ -60,19 +60,21 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/vppTokens{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List of Vpp tokens for this organization.
+     * List properties and relationships of the vppToken objects.
      * @return a {@link VppTokenCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VppTokenCollectionResponse get() {
         return get(null);
     }
     /**
-     * List of Vpp tokens for this organization.
+     * List properties and relationships of the vppToken objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VppTokenCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VppTokenCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VppTokenCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to vppTokens for deviceAppManagement
+     * Create a new vppToken object.
      * @param body The request body
      * @return a {@link VppToken}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VppToken post(@jakarta.annotation.Nonnull final VppToken body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to vppTokens for deviceAppManagement
+     * Create a new vppToken object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VppToken}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VppToken post(@jakarta.annotation.Nonnull final VppToken body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VppToken::createFromDiscriminatorValue);
     }
     /**
-     * List of Vpp tokens for this organization.
+     * List properties and relationships of the vppToken objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of Vpp tokens for this organization.
+     * List properties and relationships of the vppToken objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to vppTokens for deviceAppManagement
+     * Create a new vppToken object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to vppTokens for deviceAppManagement
+     * Create a new vppToken object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return new VppTokensRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List of Vpp tokens for this organization.
+     * List properties and relationships of the vppToken objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

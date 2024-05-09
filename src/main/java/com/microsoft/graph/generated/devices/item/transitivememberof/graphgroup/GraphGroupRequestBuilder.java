@@ -46,19 +46,21 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}/transitiveMemberOf/graph.group{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the items of type microsoft.graph.group in the microsoft.graph.directoryObject collection
+     * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
      * @return a {@link GroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/device-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the items of type microsoft.graph.group in the microsoft.graph.directoryObject collection
+     * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/device-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -68,7 +70,7 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the items of type microsoft.graph.group in the microsoft.graph.directoryObject collection
+     * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +78,7 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the items of type microsoft.graph.group in the microsoft.graph.directoryObject collection
+     * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +100,7 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         return new GraphGroupRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the items of type microsoft.graph.group in the microsoft.graph.directoryObject collection
+     * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

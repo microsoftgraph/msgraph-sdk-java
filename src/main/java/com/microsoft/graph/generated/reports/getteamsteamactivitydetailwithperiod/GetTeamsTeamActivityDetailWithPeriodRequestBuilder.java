@@ -38,7 +38,7 @@ public class GetTeamsTeamActivityDetailWithPeriodRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/reports/getTeamsTeamActivityDetail(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getTeamsTeamActivityDetail
+     * Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -47,7 +47,7 @@ public class GetTeamsTeamActivityDetailWithPeriodRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Invoke function getTeamsTeamActivityDetail
+     * Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class GetTeamsTeamActivityDetailWithPeriodRequestBuilder extends BaseRequ
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getTeamsTeamActivityDetail
+     * Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class GetTeamsTeamActivityDetailWithPeriodRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getTeamsTeamActivityDetail
+     * Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

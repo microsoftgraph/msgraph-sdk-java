@@ -46,16 +46,18 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/userStateSummary/{userInstallStateSummary%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property userStateSummary for deviceAppManagement
+     * Deletes a userInstallStateSummary.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property userStateSummary for deviceAppManagement
+     * Deletes a userInstallStateSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the userInstallStateSummary object.
      * @return a {@link UserInstallStateSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserInstallStateSummary get() {
         return get(null);
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the userInstallStateSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserInstallStateSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserInstallStateSummary get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, UserInstallStateSummary::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property userStateSummary in deviceAppManagement
+     * Update the properties of a userInstallStateSummary object.
      * @param body The request body
      * @return a {@link UserInstallStateSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserInstallStateSummary patch(@jakarta.annotation.Nonnull final UserInstallStateSummary body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property userStateSummary in deviceAppManagement
+     * Update the properties of a userInstallStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserInstallStateSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-userinstallstatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserInstallStateSummary patch(@jakarta.annotation.Nonnull final UserInstallStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, UserInstallStateSummary::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property userStateSummary for deviceAppManagement
+     * Deletes a userInstallStateSummary.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property userStateSummary for deviceAppManagement
+     * Deletes a userInstallStateSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the userInstallStateSummary object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the userInstallStateSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property userStateSummary in deviceAppManagement
+     * Update the properties of a userInstallStateSummary object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property userStateSummary in deviceAppManagement
+     * Update the properties of a userInstallStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the userInstallStateSummary object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

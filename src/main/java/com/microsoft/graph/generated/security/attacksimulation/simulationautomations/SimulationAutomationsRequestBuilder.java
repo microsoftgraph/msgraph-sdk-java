@@ -60,19 +60,21 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulationAutomations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get a list of attack simulation automations for a tenant.
      * @return a {@link SimulationAutomationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SimulationAutomationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get a list of attack simulation automations for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SimulationAutomationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SimulationAutomationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SimulationAutomation::createFromDiscriminatorValue);
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get a list of attack simulation automations for a tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get a list of attack simulation automations for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class SimulationAutomationsRequestBuilder extends BaseRequestBuilder {
         return new SimulationAutomationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get a list of attack simulation automations for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

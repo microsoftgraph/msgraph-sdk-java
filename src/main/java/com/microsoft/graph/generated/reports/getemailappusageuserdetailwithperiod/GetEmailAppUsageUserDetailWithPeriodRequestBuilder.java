@@ -38,7 +38,7 @@ public class GetEmailAppUsageUserDetailWithPeriodRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/reports/getEmailAppUsageUserDetail(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getEmailAppUsageUserDetail
+     * Get details about which activities users performed on the various email apps.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -47,7 +47,7 @@ public class GetEmailAppUsageUserDetailWithPeriodRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Invoke function getEmailAppUsageUserDetail
+     * Get details about which activities users performed on the various email apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class GetEmailAppUsageUserDetailWithPeriodRequestBuilder extends BaseRequ
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getEmailAppUsageUserDetail
+     * Get details about which activities users performed on the various email apps.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class GetEmailAppUsageUserDetailWithPeriodRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getEmailAppUsageUserDetail
+     * Get details about which activities users performed on the various email apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -41,7 +41,7 @@ public class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime
         super(requestAdapter, "{+baseurl}/communications/callRecords/microsoft.graph.callRecords.getPstnCalls(fromDateTime={fromDateTime},toDateTime={toDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getPstnCalls
+     * Get log of PSTN calls as a collection of pstnCallLogRow entries.
      * @return a {@link GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -50,7 +50,7 @@ public class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime
         return get(null);
     }
     /**
-     * Invoke function getPstnCalls
+     * Get log of PSTN calls as a collection of pstnCallLogRow entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -63,7 +63,7 @@ public class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime
         return this.requestAdapter.send(requestInfo, errorMapping, GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getPstnCalls
+     * Get log of PSTN calls as a collection of pstnCallLogRow entries.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getPstnCalls
+     * Get log of PSTN calls as a collection of pstnCallLogRow entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +93,7 @@ public class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime
         return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getPstnCalls
+     * Get log of PSTN calls as a collection of pstnCallLogRow entries.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

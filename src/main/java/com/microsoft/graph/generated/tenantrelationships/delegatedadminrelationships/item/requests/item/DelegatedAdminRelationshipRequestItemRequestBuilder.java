@@ -55,19 +55,21 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @return a {@link DelegatedAdminRelationshipRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequest get() {
         return get(null);
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminRelationshipRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

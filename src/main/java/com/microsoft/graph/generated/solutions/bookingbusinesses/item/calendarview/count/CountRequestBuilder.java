@@ -25,7 +25,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/$count{?%24filter,%24search}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/$count?end={end}&start={start}{&%24filter,%24search}", pathParameters);
     }
     /**
      * Instantiates a new {@link CountRequestBuilder} and sets the default values.
@@ -33,7 +33,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/$count{?%24filter,%24search}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/$count?end={end}&start={start}{&%24filter,%24search}", rawUrl);
     }
     /**
      * Get the number of the resource
@@ -93,6 +93,11 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
+         * The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+         */
+        @jakarta.annotation.Nullable
+        public String end;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -103,14 +108,21 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public String search;
         /**
+         * The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
+         */
+        @jakarta.annotation.Nullable
+        public String start;
+        /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("end", end);
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24search", search);
+            allQueryParams.put("start", start);
             return allQueryParams;
         }
     }

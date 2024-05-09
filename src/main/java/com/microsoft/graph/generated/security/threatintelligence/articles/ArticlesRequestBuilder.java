@@ -60,19 +60,21 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/articles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A list of article objects.
+     * Get a list of article objects, including their properties and relationships.
      * @return a {@link ArticleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-threatintelligence-list-articles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ArticleCollectionResponse get() {
         return get(null);
     }
     /**
-     * A list of article objects.
+     * Get a list of article objects, including their properties and relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ArticleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-threatintelligence-list-articles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ArticleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Article::createFromDiscriminatorValue);
     }
     /**
-     * A list of article objects.
+     * Get a list of article objects, including their properties and relationships.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A list of article objects.
+     * Get a list of article objects, including their properties and relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ArticlesRequestBuilder extends BaseRequestBuilder {
         return new ArticlesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A list of article objects.
+     * Get a list of article objects, including their properties and relationships.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

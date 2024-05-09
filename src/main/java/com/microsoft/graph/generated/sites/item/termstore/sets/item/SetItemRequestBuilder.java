@@ -73,16 +73,18 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/sets/{set%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property sets for sites
+     * Delete a set object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property sets for sites
+     * Delete a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -91,19 +93,21 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @return a {@link Set}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Set get() {
         return get(null);
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Set}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Set get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,21 +117,23 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Set::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property sets in sites
+     * Update the properties of a set object.
      * @param body The request body
      * @return a {@link Set}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Set patch(@jakarta.annotation.Nonnull final Set body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property sets in sites
+     * Update the properties of a set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Set}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Set patch(@jakarta.annotation.Nonnull final Set body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -138,7 +144,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Set::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property sets for sites
+     * Delete a set object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +152,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property sets for sites
+     * Delete a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -158,7 +164,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +172,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -178,7 +184,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property sets in sites
+     * Update the properties of a set object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -187,7 +193,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property sets in sites
+     * Update the properties of a set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -218,7 +224,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

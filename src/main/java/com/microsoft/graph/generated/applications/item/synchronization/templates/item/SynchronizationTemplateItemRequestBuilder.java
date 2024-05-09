@@ -86,21 +86,23 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property templates in applications
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @return a {@link SynchronizationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationTemplate patch(@jakarta.annotation.Nonnull final SynchronizationTemplate body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property templates in applications
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SynchronizationTemplate patch(@jakarta.annotation.Nonnull final SynchronizationTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -151,7 +153,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property templates in applications
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +162,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property templates in applications
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

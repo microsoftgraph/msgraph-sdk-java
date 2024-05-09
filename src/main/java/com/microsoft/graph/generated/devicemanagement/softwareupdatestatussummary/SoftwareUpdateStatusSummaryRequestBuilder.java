@@ -37,19 +37,21 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/softwareUpdateStatusSummary{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      * @return a {@link SoftwareUpdateStatusSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-softwareupdatestatussummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SoftwareUpdateStatusSummary get() {
         return get(null);
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SoftwareUpdateStatusSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-softwareupdatestatussummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SoftwareUpdateStatusSummary get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, SoftwareUpdateStatusSummary::createFromDiscriminatorValue);
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         return new SoftwareUpdateStatusSummaryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

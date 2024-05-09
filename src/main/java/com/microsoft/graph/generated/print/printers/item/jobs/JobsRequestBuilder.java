@@ -60,19 +60,21 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/jobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve a list of print jobs associated with the printer.
      * @return a {@link PrintJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintJobCollectionResponse get() {
         return get(null);
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve a list of print jobs associated with the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to jobs for print
+     * Create a new printJob for a printer.  Also creates a new printDocument associated with the printJob.
      * @param body The request body
      * @return a {@link PrintJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintJob post(@jakarta.annotation.Nonnull final PrintJob body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to jobs for print
+     * Create a new printJob for a printer.  Also creates a new printDocument associated with the printJob.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintJob post(@jakarta.annotation.Nonnull final PrintJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintJob::createFromDiscriminatorValue);
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve a list of print jobs associated with the printer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve a list of print jobs associated with the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to jobs for print
+     * Create a new printJob for a printer.  Also creates a new printDocument associated with the printJob.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to jobs for print
+     * Create a new printJob for a printer.  Also creates a new printDocument associated with the printJob.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return new JobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve a list of print jobs associated with the printer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

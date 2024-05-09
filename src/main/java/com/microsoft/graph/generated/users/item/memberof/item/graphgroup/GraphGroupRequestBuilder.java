@@ -37,19 +37,21 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/memberOf/{directoryObject%2Did}/graph.group{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+     * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group get() {
         return get(null);
     }
     /**
-     * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+     * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
-     * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+     * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+     * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class GraphGroupRequestBuilder extends BaseRequestBuilder {
         return new GraphGroupRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+     * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

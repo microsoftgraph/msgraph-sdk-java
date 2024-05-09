@@ -25,7 +25,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
         return new FeatureRolloutPolicy();
     }
     /**
-     * Gets the appliesTo property value. Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Gets the appliesTo property value. Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
     }
     /**
-     * Sets the appliesTo property value. Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Sets the appliesTo property value. Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

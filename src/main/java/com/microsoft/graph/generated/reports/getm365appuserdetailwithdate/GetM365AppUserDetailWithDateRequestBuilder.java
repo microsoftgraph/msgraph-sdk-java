@@ -39,7 +39,7 @@ public class GetM365AppUserDetailWithDateRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/reports/getM365AppUserDetail(date={date})", rawUrl);
     }
     /**
-     * Invoke function getM365AppUserDetail
+     * Get a report that provides the details about which apps and platforms users have used.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -48,7 +48,7 @@ public class GetM365AppUserDetailWithDateRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Invoke function getM365AppUserDetail
+     * Get a report that provides the details about which apps and platforms users have used.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,7 +61,7 @@ public class GetM365AppUserDetailWithDateRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getM365AppUserDetail
+     * Get a report that provides the details about which apps and platforms users have used.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class GetM365AppUserDetailWithDateRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getM365AppUserDetail
+     * Get a report that provides the details about which apps and platforms users have used.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

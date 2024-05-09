@@ -64,19 +64,21 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @return a {@link AuthenticationMethodsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy get() {
         return get(null);
     }
     /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationMethodsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +88,23 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodsPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property authenticationMethodsPolicy in policies
+     * Update the properties of an authenticationMethodsPolicy object.
      * @param body The request body
      * @return a {@link AuthenticationMethodsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy patch(@jakarta.annotation.Nonnull final AuthenticationMethodsPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property authenticationMethodsPolicy in policies
+     * Update the properties of an authenticationMethodsPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationMethodsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy patch(@jakarta.annotation.Nonnull final AuthenticationMethodsPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -131,7 +135,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +143,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property authenticationMethodsPolicy in policies
+     * Update the properties of an authenticationMethodsPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +164,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property authenticationMethodsPolicy in policies
+     * Update the properties of an authenticationMethodsPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +195,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

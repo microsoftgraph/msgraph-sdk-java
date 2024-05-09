@@ -55,19 +55,21 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @return a {@link ManagedAppStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppStatus get() {
         return get(null);
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedAppStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppStatus get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

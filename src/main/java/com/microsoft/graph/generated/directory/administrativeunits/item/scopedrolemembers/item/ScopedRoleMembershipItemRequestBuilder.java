@@ -37,16 +37,18 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}/scopedRoleMembers/{scopedRoleMembership%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property scopedRoleMembers for directory
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property scopedRoleMembers for directory
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @return a {@link ScopedRoleMembership}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScopedRoleMembership get() {
         return get(null);
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ScopedRoleMembership}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScopedRoleMembership get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembership::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property scopedRoleMembers for directory
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property scopedRoleMembers for directory
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +186,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

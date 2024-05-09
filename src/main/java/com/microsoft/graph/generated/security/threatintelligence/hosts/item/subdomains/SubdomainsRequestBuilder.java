@@ -59,19 +59,21 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/subdomains{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The subdomains that are associated with this host.
+     * Get the list of subdomain resources associated with a host.
      * @return a {@link SubdomainCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-subdomains?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SubdomainCollectionResponse get() {
         return get(null);
     }
     /**
-     * The subdomains that are associated with this host.
+     * Get the list of subdomain resources associated with a host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SubdomainCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-subdomains?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SubdomainCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SubdomainCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The subdomains that are associated with this host.
+     * Get the list of subdomain resources associated with a host.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The subdomains that are associated with this host.
+     * Get the list of subdomain resources associated with a host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return new SubdomainsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The subdomains that are associated with this host.
+     * Get the list of subdomain resources associated with a host.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,19 +60,21 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/operations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Get a list of the caseOperation objects and their properties.
      * @return a {@link CaseOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CaseOperationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Get a list of the caseOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CaseOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CaseOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CaseOperation::createFromDiscriminatorValue);
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Get a list of the caseOperation objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Get a list of the caseOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Get a list of the caseOperation objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

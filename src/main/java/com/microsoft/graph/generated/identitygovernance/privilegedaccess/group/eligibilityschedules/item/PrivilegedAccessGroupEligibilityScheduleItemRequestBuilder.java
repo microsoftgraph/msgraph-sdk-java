@@ -73,19 +73,21 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The eligibility schedules to activate a just-in-time access.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @return a {@link PrivilegedAccessGroupEligibilitySchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilitySchedule get() {
         return get(null);
     }
     /**
-     * The eligibility schedules to activate a just-in-time access.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroupEligibilitySchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilitySchedule get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
         return requestInfo;
     }
     /**
-     * The eligibility schedules to activate a just-in-time access.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +150,7 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * The eligibility schedules to activate a just-in-time access.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +202,7 @@ public class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The eligibility schedules to activate a just-in-time access.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

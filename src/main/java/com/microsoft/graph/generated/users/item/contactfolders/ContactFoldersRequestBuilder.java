@@ -58,7 +58,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContactFoldersRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link ContactFoldersRequestBuilder} and sets the default values.
@@ -66,7 +66,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContactFoldersRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * The user's contacts folders. Read-only. Nullable.
@@ -195,6 +195,11 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public String[] orderby;
         /**
+         * Search items by search phrases
+         */
+        @jakarta.annotation.Nullable
+        public String search;
+        /**
          * Select properties to be returned
          */
         @jakarta.annotation.Nullable
@@ -218,6 +223,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
             final Map<String, Object> allQueryParams = new HashMap();
             allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
+            allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
             allQueryParams.put("%24expand", expand);

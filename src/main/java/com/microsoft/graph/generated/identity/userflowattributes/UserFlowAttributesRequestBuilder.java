@@ -60,19 +60,21 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @return a {@link IdentityUserFlowAttributeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlowAttributeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a {@link IdentityUserFlowAttribute}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute post(@jakarta.annotation.Nonnull final IdentityUserFlowAttribute body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlowAttribute}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute post(@jakarta.annotation.Nonnull final IdentityUserFlowAttribute body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttribute::createFromDiscriminatorValue);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return new UserFlowAttributesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

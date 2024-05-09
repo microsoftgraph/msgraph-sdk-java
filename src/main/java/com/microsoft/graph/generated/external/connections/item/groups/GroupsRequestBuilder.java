@@ -60,7 +60,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/groups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      * @return a {@link ExternalGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -82,21 +82,23 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to groups for external
+     * Create a new externalGroup object.
      * @param body The request body
      * @return a {@link ExternalGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalGroup post(@jakarta.annotation.Nonnull final ExternalGroup body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to groups for external
+     * Create a new externalGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalGroup post(@jakarta.annotation.Nonnull final ExternalGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +129,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to groups for external
+     * Create a new externalGroup object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to groups for external
+     * Create a new externalGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +163,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return new GroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

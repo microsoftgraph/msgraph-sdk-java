@@ -60,19 +60,21 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppCategories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @return a {@link MobileAppCategoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppCategoryCollectionResponse get() {
         return get(null);
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileAppCategoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppCategoryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileAppCategoryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param body The request body
      * @return a {@link MobileAppCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppCategory post(@jakarta.annotation.Nonnull final MobileAppCategory body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileAppCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppCategory post(@jakarta.annotation.Nonnull final MobileAppCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileAppCategory::createFromDiscriminatorValue);
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return new MobileAppCategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

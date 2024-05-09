@@ -37,16 +37,18 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/tenants/{multiTenantOrganizationMember%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios:
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-delete-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-delete-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Defines tenants added to a multitenant organization.
+     * Get a tenant and its properties in the multitenant organization.
      * @return a {@link MultiTenantOrganizationMember}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMember get() {
         return get(null);
     }
     /**
-     * Defines tenants added to a multitenant organization.
+     * Get a tenant and its properties in the multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganizationMember}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMember get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganizationMember::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios:
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Defines tenants added to a multitenant organization.
+     * Get a tenant and its properties in the multitenant organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Defines tenants added to a multitenant organization.
+     * Get a tenant and its properties in the multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +186,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Defines tenants added to a multitenant organization.
+     * Get a tenant and its properties in the multitenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

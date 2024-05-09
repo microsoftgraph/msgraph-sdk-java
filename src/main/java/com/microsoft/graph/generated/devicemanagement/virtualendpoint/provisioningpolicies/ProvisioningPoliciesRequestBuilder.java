@@ -60,19 +60,21 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of Cloud PC provisioning policies.
+     * List properties and relationships of the cloudPcProvisioningPolicy objects.
      * @return a {@link CloudPcProvisioningPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * A collection of Cloud PC provisioning policies.
+     * List properties and relationships of the cloudPcProvisioningPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcProvisioningPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcProvisioningPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to provisioningPolicies for deviceManagement
+     * Create a new cloudPcProvisioningPolicy object.
      * @param body The request body
      * @return a {@link CloudPcProvisioningPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningPolicy post(@jakarta.annotation.Nonnull final CloudPcProvisioningPolicy body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to provisioningPolicies for deviceManagement
+     * Create a new cloudPcProvisioningPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcProvisioningPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningPolicy post(@jakarta.annotation.Nonnull final CloudPcProvisioningPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcProvisioningPolicy::createFromDiscriminatorValue);
     }
     /**
-     * A collection of Cloud PC provisioning policies.
+     * List properties and relationships of the cloudPcProvisioningPolicy objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of Cloud PC provisioning policies.
+     * List properties and relationships of the cloudPcProvisioningPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to provisioningPolicies for deviceManagement
+     * Create a new cloudPcProvisioningPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to provisioningPolicies for deviceManagement
+     * Create a new cloudPcProvisioningPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return new ProvisioningPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of Cloud PC provisioning policies.
+     * List properties and relationships of the cloudPcProvisioningPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -69,7 +69,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/featureRolloutPolicies/{featureRolloutPolicy%2Did}/appliesTo{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -78,7 +78,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -91,21 +91,23 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to appliesTo for policies
+     * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param body The request body
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-post-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObject post(@jakarta.annotation.Nonnull final DirectoryObject body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to appliesTo for policies
+     * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-post-appliesto?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObject post(@jakarta.annotation.Nonnull final DirectoryObject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +118,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +126,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to appliesTo for policies
+     * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +147,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to appliesTo for policies
+     * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +172,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
         return new AppliesToRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

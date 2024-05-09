@@ -39,7 +39,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link PhotosRequestBuilder} and sets the default values.
@@ -47,7 +47,7 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotosRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * The collection of the user's profile photos in different sizes. Read-only.
@@ -107,6 +107,11 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
+         * Include count of items
+         */
+        @jakarta.annotation.Nullable
+        public Boolean count;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -116,6 +121,11 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public String[] orderby;
+        /**
+         * Search items by search phrases
+         */
+        @jakarta.annotation.Nullable
+        public String search;
         /**
          * Select properties to be returned
          */
@@ -138,7 +148,9 @@ public class PhotosRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
+            allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
             allQueryParams.put("%24orderby", orderby);

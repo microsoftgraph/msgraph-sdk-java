@@ -64,19 +64,21 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @return a {@link IntelligenceProfileIndicator}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofileindicator-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IntelligenceProfileIndicator get() {
         return get(null);
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IntelligenceProfileIndicator}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofileindicator-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IntelligenceProfileIndicator get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

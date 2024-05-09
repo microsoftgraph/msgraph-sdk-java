@@ -60,19 +60,21 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @return a {@link CloudPcOnPremisesConnectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionCollectionResponse get() {
         return get(null);
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcOnPremisesConnectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcOnPremisesConnectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to onPremisesConnections for deviceManagement
+     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @return a {@link CloudPcOnPremisesConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnection post(@jakarta.annotation.Nonnull final CloudPcOnPremisesConnection body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to onPremisesConnections for deviceManagement
+     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcOnPremisesConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnection post(@jakarta.annotation.Nonnull final CloudPcOnPremisesConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcOnPremisesConnection::createFromDiscriminatorValue);
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to onPremisesConnections for deviceManagement
+     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to onPremisesConnections for deviceManagement
+     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
         return new OnPremisesConnectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+     * List properties and relationships of the cloudPcOnPremisesConnection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

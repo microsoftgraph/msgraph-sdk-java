@@ -55,19 +55,21 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @return a {@link OnPremisesDirectorySynchronization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronization get() {
         return get(null);
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnPremisesDirectorySynchronization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronization get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return this.requestAdapter.send(requestInfo, errorMapping, OnPremisesDirectorySynchronization::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property onPremisesSynchronization in directory
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @return a {@link OnPremisesDirectorySynchronization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronization patch(@jakarta.annotation.Nonnull final OnPremisesDirectorySynchronization body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property onPremisesSynchronization in directory
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnPremisesDirectorySynchronization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronization patch(@jakarta.annotation.Nonnull final OnPremisesDirectorySynchronization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Update the navigation property onPremisesSynchronization in directory
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property onPremisesSynchronization in directory
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

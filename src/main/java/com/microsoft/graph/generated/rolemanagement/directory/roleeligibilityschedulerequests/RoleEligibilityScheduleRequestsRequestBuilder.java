@@ -71,19 +71,21 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
      * @return a {@link UnifiedRoleEligibilityScheduleRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilityScheduleRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,21 +95,23 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to roleEligibilityScheduleRequests for roleManagement
+     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @return a {@link UnifiedRoleEligibilityScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest post(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleRequest body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to roleEligibilityScheduleRequests for roleManagement
+     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilityScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest post(@jakarta.annotation.Nonnull final UnifiedRoleEligibilityScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -118,7 +122,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleEligibilityScheduleRequest::createFromDiscriminatorValue);
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +130,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -138,7 +142,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Create new navigation property to roleEligibilityScheduleRequests for roleManagement
+     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -147,7 +151,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to roleEligibilityScheduleRequests for roleManagement
+     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -172,7 +176,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
         return new RoleEligibilityScheduleRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

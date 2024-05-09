@@ -109,19 +109,21 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve the properties and relationships of a print job.
      * @return a {@link PrintJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintJob get() {
         return get(null);
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve the properties and relationships of a print job.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintJob get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,21 +133,23 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintJob::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property jobs in print
+     * Update a print job. Only the configuration property can be updated. Updating a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created. For details about how to register a task trigger, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @return a {@link PrintJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printjob-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintJob patch(@jakarta.annotation.Nonnull final PrintJob body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property jobs in print
+     * Update a print job. Only the configuration property can be updated. Updating a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created. For details about how to register a task trigger, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/printjob-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PrintJob patch(@jakarta.annotation.Nonnull final PrintJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -176,7 +180,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve the properties and relationships of a print job.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -184,7 +188,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve the properties and relationships of a print job.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -196,7 +200,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property jobs in print
+     * Update a print job. Only the configuration property can be updated. Updating a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created. For details about how to register a task trigger, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -205,7 +209,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property jobs in print
+     * Update a print job. Only the configuration property can be updated. Updating a print job will only succeed if there is a printTask in a processing state on the associated print job, started by a trigger that the requesting app created. For details about how to register a task trigger, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -236,7 +240,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of jobs that are queued for printing by the printer/printerShare.
+     * Retrieve the properties and relationships of a print job.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

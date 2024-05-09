@@ -60,7 +60,7 @@ public class ManifestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/partners/billing/manifests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents metadata for the exported data.
+     * Read the properties and relationships of a manifest object.
      * @return a {@link ManifestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class ManifestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents metadata for the exported data.
+     * Read the properties and relationships of a manifest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManifestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class ManifestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Manifest::createFromDiscriminatorValue);
     }
     /**
-     * Represents metadata for the exported data.
+     * Read the properties and relationships of a manifest object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ManifestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents metadata for the exported data.
+     * Read the properties and relationships of a manifest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class ManifestsRequestBuilder extends BaseRequestBuilder {
         return new ManifestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents metadata for the exported data.
+     * Read the properties and relationships of a manifest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

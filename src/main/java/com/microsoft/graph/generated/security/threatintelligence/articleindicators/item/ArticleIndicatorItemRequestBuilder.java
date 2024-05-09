@@ -64,19 +64,21 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      * @return a {@link ArticleIndicator}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-articleindicator-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ArticleIndicator get() {
         return get(null);
     }
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ArticleIndicator}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-articleindicator-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ArticleIndicator get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -64,19 +64,21 @@ public class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+     * Retrieve the properties and relationships of chatMessageHostedContent object.
      * @return a {@link ChatMessageHostedContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessagehostedcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessageHostedContent get() {
         return get(null);
     }
     /**
-     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+     * Retrieve the properties and relationships of chatMessageHostedContent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChatMessageHostedContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessagehostedcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessageHostedContent get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+     * Retrieve the properties and relationships of chatMessageHostedContent object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+     * Retrieve the properties and relationships of chatMessageHostedContent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+     * Retrieve the properties and relationships of chatMessageHostedContent object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

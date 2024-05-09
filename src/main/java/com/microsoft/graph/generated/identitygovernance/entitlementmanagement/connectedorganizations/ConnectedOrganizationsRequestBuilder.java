@@ -60,19 +60,21 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve a list of connectedOrganization objects.
      * @return a {@link ConnectedOrganizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganizationCollectionResponse get() {
         return get(null);
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve a list of connectedOrganization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConnectedOrganizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganizationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectedOrganizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to connectedOrganizations for identityGovernance
+     * Create a new connectedOrganization object.
      * @param body The request body
      * @return a {@link ConnectedOrganization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganization post(@jakarta.annotation.Nonnull final ConnectedOrganization body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to connectedOrganizations for identityGovernance
+     * Create a new connectedOrganization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConnectedOrganization}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganization post(@jakarta.annotation.Nonnull final ConnectedOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectedOrganization::createFromDiscriminatorValue);
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve a list of connectedOrganization objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve a list of connectedOrganization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to connectedOrganizations for identityGovernance
+     * Create a new connectedOrganization object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to connectedOrganizations for identityGovernance
+     * Create a new connectedOrganization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
         return new ConnectedOrganizationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve a list of connectedOrganization objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

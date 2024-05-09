@@ -45,21 +45,23 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/alerts_v2/{alert%2Did}/comments", rawUrl);
     }
     /**
-     * Sets a new value for the collection of alertComment.
+     * Create a comment for an existing alert based on the specified alert id property.
      * @param body The request body
      * @return a {@link java.util.List<AlertComment>}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-alert-post-comments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertComment> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body) {
         return post(body, null);
     }
     /**
-     * Sets a new value for the collection of alertComment.
+     * Create a comment for an existing alert based on the specified alert id property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link java.util.List<AlertComment>}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-alert-post-comments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertComment> post(@jakarta.annotation.Nonnull final java.util.List<AlertComment> body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -70,7 +72,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendCollection(requestInfo, errorMapping, AlertComment::createFromDiscriminatorValue);
     }
     /**
-     * Sets a new value for the collection of alertComment.
+     * Create a comment for an existing alert based on the specified alert id property.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -79,7 +81,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Sets a new value for the collection of alertComment.
+     * Create a comment for an existing alert based on the specified alert id property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

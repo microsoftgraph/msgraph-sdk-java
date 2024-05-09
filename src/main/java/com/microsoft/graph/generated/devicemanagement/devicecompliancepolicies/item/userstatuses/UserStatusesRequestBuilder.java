@@ -60,19 +60,21 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/userStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List of DeviceComplianceUserStatus.
+     * List properties and relationships of the deviceComplianceUserStatus objects.
      * @return a {@link DeviceComplianceUserStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserStatusCollectionResponse get() {
         return get(null);
     }
     /**
-     * List of DeviceComplianceUserStatus.
+     * List properties and relationships of the deviceComplianceUserStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceComplianceUserStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceUserStatusCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to userStatuses for deviceManagement
+     * Create a new deviceComplianceUserStatus object.
      * @param body The request body
      * @return a {@link DeviceComplianceUserStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserStatus post(@jakarta.annotation.Nonnull final DeviceComplianceUserStatus body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to userStatuses for deviceManagement
+     * Create a new deviceComplianceUserStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceComplianceUserStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserStatus post(@jakarta.annotation.Nonnull final DeviceComplianceUserStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceUserStatus::createFromDiscriminatorValue);
     }
     /**
-     * List of DeviceComplianceUserStatus.
+     * List properties and relationships of the deviceComplianceUserStatus objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of DeviceComplianceUserStatus.
+     * List properties and relationships of the deviceComplianceUserStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to userStatuses for deviceManagement
+     * Create a new deviceComplianceUserStatus object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to userStatuses for deviceManagement
+     * Create a new deviceComplianceUserStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return new UserStatusesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List of DeviceComplianceUserStatus.
+     * List properties and relationships of the deviceComplianceUserStatus objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

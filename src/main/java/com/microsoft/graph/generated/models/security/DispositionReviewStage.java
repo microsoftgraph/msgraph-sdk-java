@@ -54,7 +54,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
         return this.backingStore.get("reviewersEmailAddresses");
     }
     /**
-     * Gets the stageNumber property value. The sequence number for each stage of the disposition review.
+     * Gets the stageNumber property value. The unique sequence number for each stage of the disposition review.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
         this.backingStore.set("reviewersEmailAddresses", value);
     }
     /**
-     * Sets the stageNumber property value. The sequence number for each stage of the disposition review.
+     * Sets the stageNumber property value. The unique sequence number for each stage of the disposition review.
      * @param value Value to set for the stageNumber property.
      */
     public void setStageNumber(@jakarta.annotation.Nullable final String value) {

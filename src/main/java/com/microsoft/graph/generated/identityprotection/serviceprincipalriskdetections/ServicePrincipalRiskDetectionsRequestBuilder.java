@@ -60,19 +60,21 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identityProtection/servicePrincipalRiskDetections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      * @return a {@link ServicePrincipalRiskDetectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalRiskDetectionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipalRiskDetectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalRiskDetectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipalRiskDetection::createFromDiscriminatorValue);
     }
     /**
-     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
         return new ServicePrincipalRiskDetectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
+     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

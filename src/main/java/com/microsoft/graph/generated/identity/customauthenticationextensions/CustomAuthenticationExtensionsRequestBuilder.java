@@ -69,19 +69,21 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @return a {@link CustomAuthenticationExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtensionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAuthenticationExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtensionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,21 +93,23 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtensionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to customAuthenticationExtensions for identity
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension post(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to customAuthenticationExtensions for identity
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension post(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +120,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtension::createFromDiscriminatorValue);
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +128,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create new navigation property to customAuthenticationExtensions for identity
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +149,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to customAuthenticationExtensions for identity
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +174,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return new CustomAuthenticationExtensionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

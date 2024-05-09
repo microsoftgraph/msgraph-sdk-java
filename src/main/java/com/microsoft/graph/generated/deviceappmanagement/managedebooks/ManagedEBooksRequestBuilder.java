@@ -60,19 +60,21 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the iosVppEBook objects.
      * @return a {@link ManagedEBookCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBookCollectionResponse get() {
         return get(null);
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the iosVppEBook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedEBookCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBookCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedEBookCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to managedEBooks for deviceAppManagement
+     * Create a new iosVppEBook object.
      * @param body The request body
      * @return a {@link ManagedEBook}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBook post(@jakarta.annotation.Nonnull final ManagedEBook body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to managedEBooks for deviceAppManagement
+     * Create a new iosVppEBook object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedEBook}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBook post(@jakarta.annotation.Nonnull final ManagedEBook body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedEBook::createFromDiscriminatorValue);
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the iosVppEBook objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the iosVppEBook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to managedEBooks for deviceAppManagement
+     * Create a new iosVppEBook object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to managedEBooks for deviceAppManagement
+     * Create a new iosVppEBook object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return new ManagedEBooksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the iosVppEBook objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

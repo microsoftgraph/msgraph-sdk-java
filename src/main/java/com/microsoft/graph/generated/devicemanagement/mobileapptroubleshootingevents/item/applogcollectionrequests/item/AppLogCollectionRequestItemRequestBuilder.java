@@ -46,16 +46,18 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEvent%2Did}/appLogCollectionRequests/{appLogCollectionRequest%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property appLogCollectionRequests for deviceManagement
+     * Deletes a appLogCollectionRequest.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property appLogCollectionRequests for deviceManagement
+     * Deletes a appLogCollectionRequest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * Read properties and relationships of the appLogCollectionRequest object.
      * @return a {@link AppLogCollectionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppLogCollectionRequest get() {
         return get(null);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * Read properties and relationships of the appLogCollectionRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppLogCollectionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppLogCollectionRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, AppLogCollectionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property appLogCollectionRequests in deviceManagement
+     * Update the properties of a appLogCollectionRequest object.
      * @param body The request body
      * @return a {@link AppLogCollectionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppLogCollectionRequest patch(@jakarta.annotation.Nonnull final AppLogCollectionRequest body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property appLogCollectionRequests in deviceManagement
+     * Update the properties of a appLogCollectionRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppLogCollectionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppLogCollectionRequest patch(@jakarta.annotation.Nonnull final AppLogCollectionRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, AppLogCollectionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property appLogCollectionRequests for deviceManagement
+     * Deletes a appLogCollectionRequest.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property appLogCollectionRequests for deviceManagement
+     * Deletes a appLogCollectionRequest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * Read properties and relationships of the appLogCollectionRequest object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * Read properties and relationships of the appLogCollectionRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property appLogCollectionRequests in deviceManagement
+     * Update the properties of a appLogCollectionRequest object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property appLogCollectionRequests in deviceManagement
+     * Update the properties of a appLogCollectionRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * Read properties and relationships of the appLogCollectionRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

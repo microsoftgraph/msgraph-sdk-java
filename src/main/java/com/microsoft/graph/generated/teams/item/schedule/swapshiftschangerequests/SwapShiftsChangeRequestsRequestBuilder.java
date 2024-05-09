@@ -60,19 +60,21 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/swapShiftsChangeRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @return a {@link SwapShiftsChangeRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SwapShiftsChangeRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SwapShiftsChangeRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SwapShiftsChangeRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SwapShiftsChangeRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teams
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @return a {@link SwapShiftsChangeRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SwapShiftsChangeRequest post(@jakarta.annotation.Nonnull final SwapShiftsChangeRequest body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teams
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SwapShiftsChangeRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SwapShiftsChangeRequest post(@jakarta.annotation.Nonnull final SwapShiftsChangeRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SwapShiftsChangeRequest::createFromDiscriminatorValue);
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teams
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to swapShiftsChangeRequests for teams
+     * Create an instance of a swapShiftsChangeRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder {
         return new SwapShiftsChangeRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve a list of swapShiftsChangeRequest objects in the team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

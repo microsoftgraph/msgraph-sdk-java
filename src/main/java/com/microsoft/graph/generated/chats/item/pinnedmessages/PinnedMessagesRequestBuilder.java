@@ -60,19 +60,21 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/pinnedMessages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of all the pinned messages in the chat. Nullable.
+     * Get a list of pinnedChatMessages in a chat.
      * @return a {@link PinnedChatMessageInfoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PinnedChatMessageInfoCollectionResponse get() {
         return get(null);
     }
     /**
-     * A collection of all the pinned messages in the chat. Nullable.
+     * Get a list of pinnedChatMessages in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PinnedChatMessageInfoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PinnedChatMessageInfoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PinnedChatMessageInfoCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to pinnedMessages for chats
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param body The request body
      * @return a {@link PinnedChatMessageInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PinnedChatMessageInfo post(@jakarta.annotation.Nonnull final PinnedChatMessageInfo body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to pinnedMessages for chats
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PinnedChatMessageInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PinnedChatMessageInfo post(@jakarta.annotation.Nonnull final PinnedChatMessageInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PinnedChatMessageInfo::createFromDiscriminatorValue);
     }
     /**
-     * A collection of all the pinned messages in the chat. Nullable.
+     * Get a list of pinnedChatMessages in a chat.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the pinned messages in the chat. Nullable.
+     * Get a list of pinnedChatMessages in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to pinnedMessages for chats
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to pinnedMessages for chats
+     * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
         return new PinnedMessagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of all the pinned messages in the chat. Nullable.
+     * Get a list of pinnedChatMessages in a chat.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

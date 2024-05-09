@@ -37,11 +37,12 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/alerts/{alert%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * @see <a href="https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -49,12 +50,13 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * @see <a href="https://learn.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -65,12 +67,13 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Alert::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property alerts in security
+     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * @see <a href="https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,13 +81,14 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the navigation property alerts in security
+     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * @see <a href="https://learn.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -96,7 +100,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Alert::createFromDiscriminatorValue);
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
@@ -107,7 +111,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -122,7 +126,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property alerts in security
+     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -134,7 +138,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property alerts in security
+     * Update an editable alert property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +169,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return new AlertItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

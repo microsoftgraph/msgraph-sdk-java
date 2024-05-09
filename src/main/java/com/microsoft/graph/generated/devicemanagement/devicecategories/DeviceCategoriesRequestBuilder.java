@@ -60,19 +60,21 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCategories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The list of device categories with the tenant.
+     * List properties and relationships of the deviceCategory objects.
      * @return a {@link DeviceCategoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicecategory-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCategoryCollectionResponse get() {
         return get(null);
     }
     /**
-     * The list of device categories with the tenant.
+     * List properties and relationships of the deviceCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCategoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicecategory-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCategoryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCategoryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to deviceCategories for deviceManagement
+     * Create a new deviceCategory object.
      * @param body The request body
      * @return a {@link DeviceCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicecategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCategory post(@jakarta.annotation.Nonnull final DeviceCategory body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to deviceCategories for deviceManagement
+     * Create a new deviceCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicecategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCategory post(@jakarta.annotation.Nonnull final DeviceCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCategory::createFromDiscriminatorValue);
     }
     /**
-     * The list of device categories with the tenant.
+     * List properties and relationships of the deviceCategory objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of device categories with the tenant.
+     * List properties and relationships of the deviceCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to deviceCategories for deviceManagement
+     * Create a new deviceCategory object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deviceCategories for deviceManagement
+     * Create a new deviceCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return new DeviceCategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The list of device categories with the tenant.
+     * List properties and relationships of the deviceCategory objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

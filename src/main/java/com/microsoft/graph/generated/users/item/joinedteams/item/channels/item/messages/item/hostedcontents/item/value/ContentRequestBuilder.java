@@ -4,7 +4,6 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -26,7 +25,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContentRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/channels/{channel%2Did}/messages/{chatMessage%2Did}/hostedContents/{chatMessageHostedContent%2Did}/$value{?%24format*}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/channels/{channel%2Did}/messages/{chatMessage%2Did}/hostedContents/{chatMessageHostedContent%2Did}/$value", pathParameters);
     }
     /**
      * Instantiates a new {@link ContentRequestBuilder} and sets the default values.
@@ -34,10 +33,28 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContentRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/channels/{channel%2Did}/messages/{chatMessage%2Did}/hostedContents/{chatMessageHostedContent%2Did}/$value{?%24format*}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/channels/{channel%2Did}/messages/{chatMessage%2Did}/hostedContents/{chatMessageHostedContent%2Did}/$value", rawUrl);
     }
     /**
-     * Get media content for the navigation property hostedContents from users
+     * The unique identifier for an entity. Read-only.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     */
+    public void delete() {
+        delete(null);
+    }
+    /**
+     * The unique identifier for an entity. Read-only.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     */
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
+     * The unique identifier for an entity. Read-only.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +63,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get media content for the navigation property hostedContents from users
+     * The unique identifier for an entity. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +76,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Update media content for the navigation property hostedContents in users
+     * The unique identifier for an entity. Read-only.
      * @param body Binary request body
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -69,7 +86,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * Update media content for the navigation property hostedContents in users
+     * The unique identifier for an entity. Read-only.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
@@ -84,7 +101,27 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get media content for the navigation property hostedContents from users
+     * The unique identifier for an entity. Read-only.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * The unique identifier for an entity. Read-only.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        return requestInfo;
+    }
+    /**
+     * The unique identifier for an entity. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -92,19 +129,19 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get media content for the navigation property hostedContents from users
+     * The unique identifier for an entity. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json");
         return requestInfo;
     }
     /**
-     * Update media content for the navigation property hostedContents in users
+     * The unique identifier for an entity. Read-only.
      * @param body Binary request body
      * @return a {@link RequestInformation}
      */
@@ -113,7 +150,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update media content for the navigation property hostedContents in users
+     * The unique identifier for an entity. Read-only.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -138,36 +175,16 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return new ContentRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get media content for the navigation property hostedContents from users
+     * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters implements QueryParameters {
-        /**
-         * Format of the content
-         */
-        @jakarta.annotation.Nullable
-        public String format;
-        /**
-         * Extracts the query parameters into a map for the URI template parsing.
-         * @return a {@link Map<String, Object>}
-         */
-        @jakarta.annotation.Nonnull
-        public Map<String, Object> toQueryParameters() {
-            final Map<String, Object> allQueryParams = new HashMap();
-            allQueryParams.put("%24format", format);
-            return allQueryParams;
-        }
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /**
-         * Request query parameters
-         */
-        @jakarta.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

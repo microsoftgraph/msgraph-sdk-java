@@ -60,19 +60,21 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/excludes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
      * @return a {@link PermissionGrantConditionSetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list-excludes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionGrantConditionSetCollectionResponse get() {
         return get(null);
     }
     /**
-     * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionGrantConditionSetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list-excludes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionGrantConditionSetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionGrantConditionSetCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to excludes for policies
+     * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the excludes collection of a  permissionGrantPolicy.
      * @param body The request body
      * @return a {@link PermissionGrantConditionSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-excludes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionGrantConditionSet post(@jakarta.annotation.Nonnull final PermissionGrantConditionSet body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to excludes for policies
+     * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the excludes collection of a  permissionGrantPolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionGrantConditionSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-excludes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionGrantConditionSet post(@jakarta.annotation.Nonnull final PermissionGrantConditionSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionGrantConditionSet::createFromDiscriminatorValue);
     }
     /**
-     * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to excludes for policies
+     * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the excludes collection of a  permissionGrantPolicy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to excludes for policies
+     * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the excludes collection of a  permissionGrantPolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return new ExcludesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -59,19 +59,21 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/versions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The workflow versions that are available.
+     * Get a list of the workflowVersion objects and their properties.
      * @return a {@link WorkflowVersionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkflowVersionCollectionResponse get() {
         return get(null);
     }
     /**
-     * The workflow versions that are available.
+     * Get a list of the workflowVersion objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkflowVersionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkflowVersionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkflowVersionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The workflow versions that are available.
+     * Get a list of the workflowVersion objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The workflow versions that are available.
+     * Get a list of the workflowVersion objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
         return new VersionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The workflow versions that are available.
+     * Get a list of the workflowVersion objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

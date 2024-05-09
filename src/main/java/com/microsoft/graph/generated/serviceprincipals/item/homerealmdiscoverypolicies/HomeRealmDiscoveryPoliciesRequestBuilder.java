@@ -68,19 +68,21 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/homeRealmDiscoveryPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      * @return a {@link HomeRealmDiscoveryPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HomeRealmDiscoveryPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HomeRealmDiscoveryPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-homerealmdiscoverypolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HomeRealmDiscoveryPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +92,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, HomeRealmDiscoveryPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +100,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -120,7 +122,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
         return new HomeRealmDiscoveryPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
+     * List the homeRealmDiscoveryPolicy objects that are assigned to a servicePrincipal.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -82,21 +82,23 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to emailMethods for users
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param body The request body
      * @return a {@link EmailAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EmailAuthenticationMethod post(@jakarta.annotation.Nonnull final EmailAuthenticationMethod body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to emailMethods for users
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmailAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EmailAuthenticationMethod post(@jakarta.annotation.Nonnull final EmailAuthenticationMethod body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -127,7 +129,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to emailMethods for users
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to emailMethods for users
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

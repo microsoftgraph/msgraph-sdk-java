@@ -82,19 +82,21 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @return a {@link CrossTenantAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicy get() {
         return get(null);
     }
     /**
-     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,21 +106,23 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property crossTenantAccessPolicy in policies
+     * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @return a {@link CrossTenantAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicy patch(@jakarta.annotation.Nonnull final CrossTenantAccessPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property crossTenantAccessPolicy in policies
+     * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicy patch(@jakarta.annotation.Nonnull final CrossTenantAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +161,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -169,7 +173,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property crossTenantAccessPolicy in policies
+     * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -178,7 +182,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property crossTenantAccessPolicy in policies
+     * Update the properties of a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -209,7 +213,7 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

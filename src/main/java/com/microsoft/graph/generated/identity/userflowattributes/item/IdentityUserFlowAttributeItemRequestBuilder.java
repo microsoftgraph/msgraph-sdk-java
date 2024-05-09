@@ -37,16 +37,18 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes/{identityUserFlowAttribute%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete a custom identityUserFlowAttribute.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete a custom identityUserFlowAttribute.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @return a {@link IdentityUserFlowAttribute}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute get() {
         return get(null);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlowAttribute}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttribute::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a {@link IdentityUserFlowAttribute}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttribute body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlowAttribute}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttribute body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttribute::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete a custom identityUserFlowAttribute.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete a custom identityUserFlowAttribute.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a custom identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

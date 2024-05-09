@@ -69,19 +69,21 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/tags{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Get a list of eDiscoveryReviewTag objects and their properties.
      * @return a {@link EdiscoveryReviewTagCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewTagCollectionResponse get() {
         return get(null);
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Get a list of eDiscoveryReviewTag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryReviewTagCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewTagCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,21 +93,23 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewTagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to tags for security
+     * Create a new ediscoveryReviewTag object.
      * @param body The request body
      * @return a {@link EdiscoveryReviewTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewTag post(@jakarta.annotation.Nonnull final EdiscoveryReviewTag body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to tags for security
+     * Create a new ediscoveryReviewTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryReviewTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewTag post(@jakarta.annotation.Nonnull final EdiscoveryReviewTag body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +120,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewTag::createFromDiscriminatorValue);
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Get a list of eDiscoveryReviewTag objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +128,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Get a list of eDiscoveryReviewTag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to tags for security
+     * Create a new ediscoveryReviewTag object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +149,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to tags for security
+     * Create a new ediscoveryReviewTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +174,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return new TagsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Get a list of eDiscoveryReviewTag objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

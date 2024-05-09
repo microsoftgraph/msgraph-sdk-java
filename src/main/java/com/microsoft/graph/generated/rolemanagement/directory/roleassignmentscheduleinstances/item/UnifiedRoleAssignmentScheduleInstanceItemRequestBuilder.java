@@ -100,19 +100,21 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      * @return a {@link UnifiedRoleAssignmentScheduleInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentScheduleInstance get() {
         return get(null);
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentScheduleInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentScheduleInstance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -167,7 +169,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +177,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -227,7 +229,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

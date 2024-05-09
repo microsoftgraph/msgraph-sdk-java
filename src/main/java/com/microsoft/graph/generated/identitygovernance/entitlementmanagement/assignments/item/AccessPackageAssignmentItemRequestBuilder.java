@@ -91,19 +91,21 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      * @return a {@link AccessPackageAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignment get() {
         return get(null);
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -158,7 +160,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +168,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -218,7 +220,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

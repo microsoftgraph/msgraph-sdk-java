@@ -49,7 +49,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials{?%24count,%24filter,%24orderby,%24search,%24select,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceLocalCredentialsRequestBuilder} and sets the default values.
@@ -57,22 +57,24 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials{?%24count,%24filter,%24orderby,%24search,%24select,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @return a {@link DeviceLocalCredentialInfoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceLocalCredentialInfoCollectionResponse get() {
         return get(null);
     }
     /**
-     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceLocalCredentialInfoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceLocalCredentialInfoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLocalCredentialInfo::createFromDiscriminatorValue);
     }
     /**
-     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return new DeviceLocalCredentialsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -191,6 +193,11 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public String[] select;
         /**
+         * Skip the first n items
+         */
+        @jakarta.annotation.Nullable
+        public Integer skip;
+        /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
@@ -205,6 +212,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
             allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24search", search);
+            allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);

@@ -60,19 +60,21 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/accessAssignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @return a {@link DelegatedAdminAccessAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminAccessAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a {@link DelegatedAdminAccessAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-post-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignment post(@jakarta.annotation.Nonnull final DelegatedAdminAccessAssignment body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminAccessAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-post-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessAssignment post(@jakarta.annotation.Nonnull final DelegatedAdminAccessAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DelegatedAdminAccessAssignment::createFromDiscriminatorValue);
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return new AccessAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

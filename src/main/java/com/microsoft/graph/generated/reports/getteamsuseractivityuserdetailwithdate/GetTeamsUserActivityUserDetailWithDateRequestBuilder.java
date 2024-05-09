@@ -39,7 +39,7 @@ public class GetTeamsUserActivityUserDetailWithDateRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/reports/getTeamsUserActivityUserDetail(date={date})", rawUrl);
     }
     /**
-     * Invoke function getTeamsUserActivityUserDetail
+     * Get details about Microsoft Teams user activity by user.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -48,7 +48,7 @@ public class GetTeamsUserActivityUserDetailWithDateRequestBuilder extends BaseRe
         return get(null);
     }
     /**
-     * Invoke function getTeamsUserActivityUserDetail
+     * Get details about Microsoft Teams user activity by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,7 +61,7 @@ public class GetTeamsUserActivityUserDetailWithDateRequestBuilder extends BaseRe
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getTeamsUserActivityUserDetail
+     * Get details about Microsoft Teams user activity by user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class GetTeamsUserActivityUserDetailWithDateRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getTeamsUserActivityUserDetail
+     * Get details about Microsoft Teams user activity by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -60,19 +60,21 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/sets/{set%2Did}/children{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @return a {@link TermCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermCollectionResponse get() {
         return get(null);
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TermCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TermCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body The request body
      * @return a {@link Term}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Term post(@jakarta.annotation.Nonnull final Term body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Term}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Term post(@jakarta.annotation.Nonnull final Term body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Term::createFromDiscriminatorValue);
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to children for sites
+     * Create a new term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return new ChildrenRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

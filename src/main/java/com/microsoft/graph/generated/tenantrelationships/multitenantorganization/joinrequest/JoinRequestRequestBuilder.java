@@ -37,19 +37,21 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/joinRequest{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Defines the status of a tenant joining a multitenant organization.
+     * Get the status of a tenant joining a multitenant organization.
      * @return a {@link MultiTenantOrganizationJoinRequestRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationJoinRequestRecord get() {
         return get(null);
     }
     /**
-     * Defines the status of a tenant joining a multitenant organization.
+     * Get the status of a tenant joining a multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganizationJoinRequestRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationJoinRequestRecord get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,21 +61,23 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganizationJoinRequestRecord::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property joinRequest in tenantRelationships
+     * Join a multitenant organization, after the owner of the multitenant organization has added your tenant to the multitenant organization as pending. Before a tenant added to a multitenant organization can participate in the multitenant organization, the administrator of the joining tenant must submit a join request. To allow for asynchronous processing, you must wait up to 2 hours before joining a multitenant organization is completed.
      * @param body The request body
      * @return a {@link MultiTenantOrganizationJoinRequestRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationJoinRequestRecord patch(@jakarta.annotation.Nonnull final MultiTenantOrganizationJoinRequestRecord body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property joinRequest in tenantRelationships
+     * Join a multitenant organization, after the owner of the multitenant organization has added your tenant to the multitenant organization as pending. Before a tenant added to a multitenant organization can participate in the multitenant organization, the administrator of the joining tenant must submit a join request. To allow for asynchronous processing, you must wait up to 2 hours before joining a multitenant organization is completed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganizationJoinRequestRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationJoinRequestRecord patch(@jakarta.annotation.Nonnull final MultiTenantOrganizationJoinRequestRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -84,7 +88,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganizationJoinRequestRecord::createFromDiscriminatorValue);
     }
     /**
-     * Defines the status of a tenant joining a multitenant organization.
+     * Get the status of a tenant joining a multitenant organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +96,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Defines the status of a tenant joining a multitenant organization.
+     * Get the status of a tenant joining a multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -104,7 +108,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property joinRequest in tenantRelationships
+     * Join a multitenant organization, after the owner of the multitenant organization has added your tenant to the multitenant organization as pending. Before a tenant added to a multitenant organization can participate in the multitenant organization, the administrator of the joining tenant must submit a join request. To allow for asynchronous processing, you must wait up to 2 hours before joining a multitenant organization is completed.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -113,7 +117,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property joinRequest in tenantRelationships
+     * Join a multitenant organization, after the owner of the multitenant organization has added your tenant to the multitenant organization as pending. Before a tenant added to a multitenant organization can participate in the multitenant organization, the administrator of the joining tenant must submit a join request. To allow for asynchronous processing, you must wait up to 2 hours before joining a multitenant organization is completed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -138,7 +142,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
         return new JoinRequestRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Defines the status of a tenant joining a multitenant organization.
+     * Get the status of a tenant joining a multitenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

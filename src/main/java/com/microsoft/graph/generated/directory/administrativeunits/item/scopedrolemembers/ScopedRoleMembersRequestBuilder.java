@@ -60,19 +60,21 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}/scopedRoleMembers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * List Microsoft Entra role assignments with administrative unit scope.
      * @return a {@link ScopedRoleMembershipCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScopedRoleMembershipCollectionResponse get() {
         return get(null);
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * List Microsoft Entra role assignments with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ScopedRoleMembershipCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScopedRoleMembershipCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembershipCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to scopedRoleMembers for directory
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope.
      * @param body The request body
      * @return a {@link ScopedRoleMembership}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-post-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScopedRoleMembership post(@jakarta.annotation.Nonnull final ScopedRoleMembership body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to scopedRoleMembers for directory
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ScopedRoleMembership}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-post-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScopedRoleMembership post(@jakarta.annotation.Nonnull final ScopedRoleMembership body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ScopedRoleMembership::createFromDiscriminatorValue);
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * List Microsoft Entra role assignments with administrative unit scope.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * List Microsoft Entra role assignments with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to scopedRoleMembers for directory
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to scopedRoleMembers for directory
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder {
         return new ScopedRoleMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Scoped-role members of this administrative unit.
+     * List Microsoft Entra role assignments with administrative unit scope.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,19 +60,21 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/timeOffRequests{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The time off requests in the schedule.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @return a {@link TimeOffRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * The time off requests in the schedule.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeOffRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timeoffrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeOffRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffRequest::createFromDiscriminatorValue);
     }
     /**
-     * The time off requests in the schedule.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The time off requests in the schedule.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class TimeOffRequestsRequestBuilder extends BaseRequestBuilder {
         return new TimeOffRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The time off requests in the schedule.
+     * Retrieve a list of timeOffRequest objects in the team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
