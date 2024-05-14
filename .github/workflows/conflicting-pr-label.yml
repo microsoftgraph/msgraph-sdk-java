@@ -6,10 +6,10 @@ name: PullRequestConflicting
 # events but only for the master branch
 on:
   push:
-    branches: [master, dev, support/5.x.x]
+    branches: [dev, support/5.x.x]
   pull_request:
     types: [synchronize]
-    branches: [master, dev, support/5.x.x]
+    branches: [dev, support/5.x.x]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
