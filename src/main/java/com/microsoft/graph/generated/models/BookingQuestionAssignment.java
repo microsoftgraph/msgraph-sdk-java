@@ -68,7 +68,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, BackedMo
         return deserializerMap;
     }
     /**
-     * Gets the isRequired property value. The ID of the custom question.
+     * Gets the isRequired property value. Indicates whether it's mandatory to answer the custom question.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the questionId property value. Indicates whether it's mandatory to answer the custom question.
+     * Gets the questionId property value. The ID of the custom question.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the isRequired property value. The ID of the custom question.
+     * Sets the isRequired property value. Indicates whether it's mandatory to answer the custom question.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
@@ -132,7 +132,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the questionId property value. Indicates whether it's mandatory to answer the custom question.
+     * Sets the questionId property value. The ID of the custom question.
      * @param value Value to set for the questionId property.
      */
     public void setQuestionId(@jakarta.annotation.Nullable final String value) {

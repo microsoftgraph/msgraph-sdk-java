@@ -50,7 +50,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the expirationDateTime property value. Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
+     * Gets the expirationDateTime property value. Optional. UTC DateTime when the activityHistoryItem will undergo hard-delete. Can be set by the client.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastActiveDateTime property value. Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
+     * Gets the lastActiveDateTime property value. Optional. UTC DateTime when the activityHistoryItem (activity session) was last understood as active or finished - if null, activityHistoryItem status should be Ongoing.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the startedDateTime property value. Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
+     * Gets the startedDateTime property value. Required. UTC DateTime when the activityHistoryItem (activity session) was started. Required for timeline history.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -154,14 +154,14 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the expirationDateTime property value. Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
+     * Sets the expirationDateTime property value. Optional. UTC DateTime when the activityHistoryItem will undergo hard-delete. Can be set by the client.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the lastActiveDateTime property value. Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
+     * Sets the lastActiveDateTime property value. Optional. UTC DateTime when the activityHistoryItem (activity session) was last understood as active or finished - if null, activityHistoryItem status should be Ongoing.
      * @param value Value to set for the lastActiveDateTime property.
      */
     public void setLastActiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -175,7 +175,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the startedDateTime property value. Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
+     * Sets the startedDateTime property value. Required. UTC DateTime when the activityHistoryItem (activity session) was started. Required for timeline history.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

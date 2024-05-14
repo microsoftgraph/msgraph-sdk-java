@@ -2,6 +2,7 @@ package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.CasesRoot;
+import com.microsoft.graph.models.security.IdentityContainer;
 import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.LabelsRoot;
 import com.microsoft.graph.models.security.ThreatIntelligence;
@@ -74,6 +75,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("identities", (n) -> { this.setIdentities(n.getObjectValue(IdentityContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
         deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
@@ -83,6 +85,14 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getObjectValue(TriggersRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("triggerTypes", (n) -> { this.setTriggerTypes(n.getObjectValue(TriggerTypesRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identities property value. The identities property
+     * @return a {@link IdentityContainer}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityContainer getIdentities() {
+        return this.backingStore.get("identities");
     }
     /**
      * Gets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
@@ -159,6 +169,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("alerts_v2", this.getAlertsV2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
         writer.writeObjectValue("cases", this.getCases());
+        writer.writeObjectValue("identities", this.getIdentities());
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeObjectValue("labels", this.getLabels());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
@@ -195,6 +206,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setCases(@jakarta.annotation.Nullable final CasesRoot value) {
         this.backingStore.set("cases", value);
+    }
+    /**
+     * Sets the identities property value. The identities property
+     * @param value Value to set for the identities property.
+     */
+    public void setIdentities(@jakarta.annotation.Nullable final IdentityContainer value) {
+        this.backingStore.set("identities", value);
     }
     /**
      * Sets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.

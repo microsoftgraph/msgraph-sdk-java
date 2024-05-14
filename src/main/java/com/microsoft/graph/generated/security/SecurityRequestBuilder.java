@@ -6,6 +6,7 @@ import com.microsoft.graph.security.alerts_v2.AlertsV2RequestBuilder;
 import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.security.cases.CasesRequestBuilder;
+import com.microsoft.graph.security.identities.IdentitiesRequestBuilder;
 import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
 import com.microsoft.graph.security.labels.LabelsRequestBuilder;
 import com.microsoft.graph.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
@@ -64,6 +65,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CasesRequestBuilder cases() {
         return new CasesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the identities property of the microsoft.graph.security entity.
+     * @return a {@link IdentitiesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IdentitiesRequestBuilder identities() {
+        return new IdentitiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the incidents property of the microsoft.graph.security entity.

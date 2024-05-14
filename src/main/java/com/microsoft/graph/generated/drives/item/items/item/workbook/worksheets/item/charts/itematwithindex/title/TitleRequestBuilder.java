@@ -55,7 +55,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @return a {@link WorkbookChartTitle}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartTitle}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

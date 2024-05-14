@@ -81,6 +81,14 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("cdnList");
     }
     /**
+     * Gets the contentCustomization property value. The contentCustomization property
+     * @return a {@link ContentCustomization}
+     */
+    @jakarta.annotation.Nullable
+    public ContentCustomization getContentCustomization() {
+        return this.backingStore.get("contentCustomization");
+    }
+    /**
      * Gets the customAccountResetCredentialsUrl property value. A custom URL for resetting account credentials. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
      * @return a {@link String}
      */
@@ -197,6 +205,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         deserializerMap.put("bannerLogo", (n) -> { this.setBannerLogo(n.getByteArrayValue()); });
         deserializerMap.put("bannerLogoRelativeUrl", (n) -> { this.setBannerLogoRelativeUrl(n.getStringValue()); });
         deserializerMap.put("cdnList", (n) -> { this.setCdnList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("contentCustomization", (n) -> { this.setContentCustomization(n.getObjectValue(ContentCustomization::createFromDiscriminatorValue)); });
         deserializerMap.put("customAccountResetCredentialsUrl", (n) -> { this.setCustomAccountResetCredentialsUrl(n.getStringValue()); });
         deserializerMap.put("customCannotAccessYourAccountText", (n) -> { this.setCustomCannotAccessYourAccountText(n.getStringValue()); });
         deserializerMap.put("customCannotAccessYourAccountUrl", (n) -> { this.setCustomCannotAccessYourAccountUrl(n.getStringValue()); });
@@ -324,6 +333,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         writer.writeByteArrayValue("bannerLogo", this.getBannerLogo());
         writer.writeStringValue("bannerLogoRelativeUrl", this.getBannerLogoRelativeUrl());
         writer.writeCollectionOfPrimitiveValues("cdnList", this.getCdnList());
+        writer.writeObjectValue("contentCustomization", this.getContentCustomization());
         writer.writeStringValue("customAccountResetCredentialsUrl", this.getCustomAccountResetCredentialsUrl());
         writer.writeStringValue("customCannotAccessYourAccountText", this.getCustomCannotAccessYourAccountText());
         writer.writeStringValue("customCannotAccessYourAccountUrl", this.getCustomCannotAccessYourAccountUrl());
@@ -390,6 +400,13 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     public void setCdnList(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("cdnList", value);
+    }
+    /**
+     * Sets the contentCustomization property value. The contentCustomization property
+     * @param value Value to set for the contentCustomization property.
+     */
+    public void setContentCustomization(@jakarta.annotation.Nullable final ContentCustomization value) {
+        this.backingStore.set("contentCustomization", value);
     }
     /**
      * Sets the customAccountResetCredentialsUrl property value. A custom URL for resetting account credentials. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
