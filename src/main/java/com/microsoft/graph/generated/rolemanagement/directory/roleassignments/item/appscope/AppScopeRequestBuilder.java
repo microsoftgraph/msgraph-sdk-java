@@ -55,7 +55,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      * @return a {@link AppScope}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppScope}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class AppScopeRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

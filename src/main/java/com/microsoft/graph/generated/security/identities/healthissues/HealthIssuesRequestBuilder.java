@@ -1,10 +1,10 @@
-package com.microsoft.graph.devicemanagement.deviceconfigurations;
+package com.microsoft.graph.security.identities.healthissues;
 
-import com.microsoft.graph.devicemanagement.deviceconfigurations.count.CountRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceconfigurations.item.DeviceConfigurationItemRequestBuilder;
-import com.microsoft.graph.models.DeviceConfiguration;
-import com.microsoft.graph.models.DeviceConfigurationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.HealthIssue;
+import com.microsoft.graph.models.security.HealthIssueCollectionResponse;
+import com.microsoft.graph.security.identities.healthissues.count.CountRequestBuilder;
+import com.microsoft.graph.security.identities.healthissues.item.HealthIssueItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -19,10 +19,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity.
+ * Provides operations to manage the healthIssues property of the microsoft.graph.security.identityContainer entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
+public class HealthIssuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
@@ -32,86 +32,82 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity.
-     * @param deviceConfigurationId The unique identifier of deviceConfiguration
-     * @return a {@link DeviceConfigurationItemRequestBuilder}
+     * Provides operations to manage the healthIssues property of the microsoft.graph.security.identityContainer entity.
+     * @param healthIssueId The unique identifier of healthIssue
+     * @return a {@link HealthIssueItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DeviceConfigurationItemRequestBuilder byDeviceConfigurationId(@jakarta.annotation.Nonnull final String deviceConfigurationId) {
-        Objects.requireNonNull(deviceConfigurationId);
+    public HealthIssueItemRequestBuilder byHealthIssueId(@jakarta.annotation.Nonnull final String healthIssueId) {
+        Objects.requireNonNull(healthIssueId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("deviceConfiguration%2Did", deviceConfigurationId);
-        return new DeviceConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
+        urlTplParams.put("healthIssue%2Did", healthIssueId);
+        return new HealthIssueItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new {@link DeviceConfigurationsRequestBuilder} and sets the default values.
+     * Instantiates a new {@link HealthIssuesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DeviceConfigurationsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+    public HealthIssuesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/security/identities/healthIssues{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new {@link DeviceConfigurationsRequestBuilder} and sets the default values.
+     * Instantiates a new {@link HealthIssuesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DeviceConfigurationsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+    public HealthIssuesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/security/identities/healthIssues{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the windowsPhone81CustomConfiguration objects.
-     * @return a {@link DeviceConfigurationCollectionResponse}
+     * Get healthIssues from security
+     * @return a {@link HealthIssueCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81customconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public DeviceConfigurationCollectionResponse get() {
+    public HealthIssueCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the windowsPhone81CustomConfiguration objects.
+     * Get healthIssues from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeviceConfigurationCollectionResponse}
+     * @return a {@link HealthIssueCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81customconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public DeviceConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public HealthIssueCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, HealthIssueCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new androidCustomConfiguration object.
+     * Create new navigation property to healthIssues for security
      * @param body The request body
-     * @return a {@link DeviceConfiguration}
+     * @return a {@link HealthIssue}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcustomconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public DeviceConfiguration post(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
+    public HealthIssue post(@jakarta.annotation.Nonnull final HealthIssue body) {
         return post(body, null);
     }
     /**
-     * Create a new androidCustomConfiguration object.
+     * Create new navigation property to healthIssues for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeviceConfiguration}
+     * @return a {@link HealthIssue}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcustomconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public DeviceConfiguration post(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public HealthIssue post(@jakarta.annotation.Nonnull final HealthIssue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfiguration::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, HealthIssue::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the windowsPhone81CustomConfiguration objects.
+     * Get healthIssues from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the windowsPhone81CustomConfiguration objects.
+     * Get healthIssues from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,22 +127,22 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new androidCustomConfiguration object.
+     * Create new navigation property to healthIssues for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final HealthIssue body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new androidCustomConfiguration object.
+     * Create new navigation property to healthIssues for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final HealthIssue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
@@ -157,15 +153,15 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link DeviceConfigurationsRequestBuilder}
+     * @return a {@link HealthIssuesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DeviceConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public HealthIssuesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new DeviceConfigurationsRequestBuilder(rawUrl, requestAdapter);
+        return new HealthIssuesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the windowsPhone81CustomConfiguration objects.
+     * Get healthIssues from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

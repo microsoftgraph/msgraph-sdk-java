@@ -1,7 +1,8 @@
-package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itematwithindex.datalabels;
+package com.microsoft.graph.security.identities;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.WorkbookChartDataLabels;
+import com.microsoft.graph.models.security.IdentityContainer;
+import com.microsoft.graph.security.identities.healthissues.HealthIssuesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,35 +17,43 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the dataLabels property of the microsoft.graph.workbookChart entity.
+ * Provides operations to manage the identities property of the microsoft.graph.security entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DataLabelsRequestBuilder extends BaseRequestBuilder {
+public class IdentitiesRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link DataLabelsRequestBuilder} and sets the default values.
+     * Provides operations to manage the healthIssues property of the microsoft.graph.security.identityContainer entity.
+     * @return a {@link HealthIssuesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public HealthIssuesRequestBuilder healthIssues() {
+        return new HealthIssuesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Instantiates a new {@link IdentitiesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DataLabelsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/itemAt(index={index})/dataLabels{?%24expand,%24select}", pathParameters);
+    public IdentitiesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/security/identities{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link DataLabelsRequestBuilder} and sets the default values.
+     * Instantiates a new {@link IdentitiesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DataLabelsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/itemAt(index={index})/dataLabels{?%24expand,%24select}", rawUrl);
+    public IdentitiesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/security/identities{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property dataLabels for drives
+     * Delete navigation property identities for security
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property dataLabels for drives
+     * Delete navigation property identities for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -55,54 +64,54 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the data labels on the chart. Read-only.
-     * @return a {@link WorkbookChartDataLabels}
+     * Get identities from security
+     * @return a {@link IdentityContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WorkbookChartDataLabels get() {
+    public IdentityContainer get() {
         return get(null);
     }
     /**
-     * Represents the data labels on the chart. Read-only.
+     * Get identities from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link WorkbookChartDataLabels}
+     * @return a {@link IdentityContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WorkbookChartDataLabels get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public IdentityContainer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartDataLabels::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityContainer::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property dataLabels in drives
+     * Update the navigation property identities in security
      * @param body The request body
-     * @return a {@link WorkbookChartDataLabels}
+     * @return a {@link IdentityContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WorkbookChartDataLabels patch(@jakarta.annotation.Nonnull final WorkbookChartDataLabels body) {
+    public IdentityContainer patch(@jakarta.annotation.Nonnull final IdentityContainer body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property dataLabels in drives
+     * Update the navigation property identities in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link WorkbookChartDataLabels}
+     * @return a {@link IdentityContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WorkbookChartDataLabels patch(@jakarta.annotation.Nonnull final WorkbookChartDataLabels body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public IdentityContainer patch(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartDataLabels::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, IdentityContainer::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property dataLabels for drives
+     * Delete navigation property identities for security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +119,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property dataLabels for drives
+     * Delete navigation property identities for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +131,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the data labels on the chart. Read-only.
+     * Get identities from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +139,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the data labels on the chart. Read-only.
+     * Get identities from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,22 +151,22 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property dataLabels in drives
+     * Update the navigation property identities in security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookChartDataLabels body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityContainer body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property dataLabels in drives
+     * Update the navigation property identities in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookChartDataLabels body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
@@ -168,12 +177,12 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link DataLabelsRequestBuilder}
+     * @return a {@link IdentitiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DataLabelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public IdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new DataLabelsRequestBuilder(rawUrl, requestAdapter);
+        return new IdentitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -182,7 +191,7 @@ public class DataLabelsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the data labels on the chart. Read-only.
+     * Get identities from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

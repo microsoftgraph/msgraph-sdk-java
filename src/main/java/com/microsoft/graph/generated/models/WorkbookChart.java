@@ -33,7 +33,7 @@ public class WorkbookChart extends Entity implements Parsable {
         return this.backingStore.get("axes");
     }
     /**
-     * Gets the dataLabels property value. Represents the datalabels on the chart. Read-only.
+     * Gets the dataLabels property value. Represents the data labels on the chart. Read-only.
      * @return a {@link WorkbookChartDataLabels}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class WorkbookChart extends Entity implements Parsable {
         return this.backingStore.get("series");
     }
     /**
-     * Gets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Gets the title property value. Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @return a {@link WorkbookChartTitle}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class WorkbookChart extends Entity implements Parsable {
         this.backingStore.set("axes", value);
     }
     /**
-     * Sets the dataLabels property value. Represents the datalabels on the chart. Read-only.
+     * Sets the dataLabels property value. Represents the data labels on the chart. Read-only.
      * @param value Value to set for the dataLabels property.
      */
     public void setDataLabels(@jakarta.annotation.Nullable final WorkbookChartDataLabels value) {
@@ -218,7 +218,7 @@ public class WorkbookChart extends Entity implements Parsable {
         this.backingStore.set("series", value);
     }
     /**
-     * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final WorkbookChartTitle value) {
