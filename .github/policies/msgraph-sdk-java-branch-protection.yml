@@ -9,7 +9,7 @@ resource: repository
 configuration:
   branchProtectionRules:
 
-  - branchNamePattern: dev
+  - branchNamePattern: main
     # This branch pattern applies to the following branches as of 06/12/2023 10:31:15:
     # dev
 
