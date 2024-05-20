@@ -2,26 +2,28 @@ name: Maven Preview/Release and Github Release
 
 on:
   push:
-    branches: [dev, support/5.x.x]
+    branches: [dev]
     paths-ignore:
      - '.gradle/wrapper'
      - '.gitignore'
      - 'LICENSE'
      - 'THIRD PARTY NOTICES'
      - '*.md'
-  workflow_dispatch: 
+    tags:
+    - "v[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
 
-env: 
+env:
   PREVIEW_TASK: publishSnapshotPublicationToSonatypeSnapshotRepository
   PUBLISH_TASK:  publishMavenCentralReleasePublicationToSonatypeRepository
 
 jobs:
   maven_Preview:
     if: ${{ github.ref == 'refs/heads/dev' }}
-    environment: 
+    environment:
       name: maven_central_snapshot
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v4
       - name: Set up JDK
         uses: actions/setup-java@v4
@@ -34,7 +36,7 @@ jobs:
       - name: Download File
         run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
-        env:  
+        env:
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
           OUTPUT_PATH: '.\local.properties'
       - name: Download File
@@ -47,9 +49,9 @@ jobs:
         run: chmod +x gradlew
       - name: Publish
         run: ./gradlew $PREVIEW_TASK
-  
+
   maven_Release:
-    if: ${{ github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/support/5.x.x' }}
+    if: startsWith(github.ref, 'refs/tags/')
     environment:
       name: maven_central_release
     runs-on: ubuntu-latest
@@ -66,13 +68,13 @@ jobs:
       - name: Download File
         run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
-        env:  
+        env:
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
-          OUTPUT_PATH: '.\local.properties' 
+          OUTPUT_PATH: '.\local.properties'
       - name: Download File
-        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
-        env:  
+        env:
           ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
           OUTPUT_PATH: '.\secring.gpg'
       - name: Grant execute permission for gradlew
