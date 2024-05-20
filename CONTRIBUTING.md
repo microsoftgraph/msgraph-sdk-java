@@ -11,7 +11,7 @@ The best way to get started with a contribution is to start a dialog with the ow
 
 ## Submit pull requests for trivial changes
 
-If you are making a change that does not affect the interface components and does not affect other downstream callers, feel free to make a pull request against the __dev__ branch.  The dev branch will be updated frequently.
+If you are making a change that does not affect the interface components and does not affect other downstream callers, feel free to make a pull request against the __main__ branch. The main branch will be updated frequently.
 
 Revisions of this nature will result in a 0.0.X change of the version number.
 
