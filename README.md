@@ -98,7 +98,7 @@ For more detailed documentation, see:
 * [Collections](https://docs.microsoft.com/graph/sdks/paging)
 * [Making requests](https://docs.microsoft.com/graph/sdks/create-requests)
 * [Known issues](https://github.com/MicrosoftGraph/msgraph-sdk-java/issues)
-* [Contributions](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md)
+* [Contributions](https://github.com/microsoftgraph/msgraph-sdk-java/blob/main/CONTRIBUTING.md)
 
 ## 5. Issues
 
@@ -106,7 +106,7 @@ For known issues, see [issues](https://github.com/MicrosoftGraph/msgraph-sdk-jav
 
 ## 6. Contributions
 
-The Microsoft Graph SDK is open for contribution. To contribute to this project, see [Contributing](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md).
+The Microsoft Graph SDK is open for contribution. To contribute to this project, see [Contributing](https://github.com/microsoftgraph/msgraph-sdk-java/blob/main/CONTRIBUTING.md).
 
 ## 7. Supported Java versions
 

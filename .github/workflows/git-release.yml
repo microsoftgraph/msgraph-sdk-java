@@ -18,7 +18,7 @@ jobs:
         with:
           workflow: preview-and-release.yml
           workflow_conclusion: success
-          branch: dev
+          branch: main
           event: push
           name: drop
           path: drop

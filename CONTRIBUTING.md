@@ -11,7 +11,7 @@ The best way to get started with a contribution is to start a dialog with the ow
 
 ## Submit pull requests for trivial changes
 
-If you are making a change that does not affect the interface components and does not affect other downstream callers, feel free to make a pull request against the __dev__ branch.  The dev branch will be updated frequently.
+If you are making a change that does not affect the interface components and does not affect other downstream callers, feel free to make a pull request against the __main__ branch. The main branch will be updated frequently.
 
 Revisions of this nature will result in a 0.0.X change of the version number.
 
@@ -60,7 +60,7 @@ Adding a footer with the prefix **BREAKING CHANGE:** will cause an increment of 
 
 This project follows the [all contributors](https://github.com/kentcdodds/all-contributors) specification. When making a contribution, please add yourself to the table of contributors:
 
- 1. In section 7. of the [README.md](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/README.md), after the last "|", copy and paste a new blank contributor element
+ 1. In section 7. of the [README.md](https://github.com/microsoftgraph/msgraph-sdk-java/blob/main/README.md), after the last "|", copy and paste a new blank contributor element
     ```html
     [<img src="https://avatars.githubusercontent.com/u/<your-uid>?v=4" width="100px;"/><br />
     <sub><b>Your Name</b></sub>](your website or github page)<br />

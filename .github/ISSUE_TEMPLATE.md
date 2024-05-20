@@ -12,7 +12,6 @@ Before you open this issue, did you:
 - Search StackOverflow for an answer?
 - Capture the repro steps and gather the information requested in the steps below to reproduce your scenario?
 - Review the samples under github.com/microsoftgraph? They can help for some scenarios.
-- Take a look at the functional tests in this repo? They may have an example for you. See the [functional tests](https://github.com/microsoftgraph/msgraph-sdk-java/tree/master/src/test/java/com/microsoft/graph/functional)
 
 Please provide the following before submitting this issue:
 - Expected behavior. Please provide **links to the specific [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)** you used to determine the expected behavior. 
