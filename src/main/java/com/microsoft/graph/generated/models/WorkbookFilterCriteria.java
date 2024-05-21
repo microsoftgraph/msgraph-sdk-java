@@ -56,7 +56,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the color property value. The color property
+     * Gets the color property value. The color applied to the cell.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("color");
     }
     /**
-     * Gets the criterion1 property value. The criterion1 property
+     * Gets the criterion1 property value. A custom criterion.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("criterion1");
     }
     /**
-     * Gets the criterion2 property value. The criterion2 property
+     * Gets the criterion2 property value. A custom criterion.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("criterion2");
     }
     /**
-     * Gets the dynamicCriteria property value. The dynamicCriteria property
+     * Gets the dynamicCriteria property value. A dynamic formula specified in a custom filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the filterOn property value. The filterOn property
+     * Gets the filterOn property value. Indicates whether a filter is applied to a column.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("filterOn");
     }
     /**
-     * Gets the icon property value. The icon property
+     * Gets the icon property value. An icon applied to a cell via conditional formatting.
      * @return a {@link WorkbookIcon}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the operator property value. The operator property
+     * Gets the operator property value. An operator in a cell; for example, =, >, <, <=, or <>.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("operator");
     }
     /**
-     * Gets the values property value. The values property
+     * Gets the values property value. The values that appear in the cell.
      * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
@@ -178,42 +178,42 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the color property value. The color property
+     * Sets the color property value. The color applied to the cell.
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("color", value);
     }
     /**
-     * Sets the criterion1 property value. The criterion1 property
+     * Sets the criterion1 property value. A custom criterion.
      * @param value Value to set for the criterion1 property.
      */
     public void setCriterion1(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("criterion1", value);
     }
     /**
-     * Sets the criterion2 property value. The criterion2 property
+     * Sets the criterion2 property value. A custom criterion.
      * @param value Value to set for the criterion2 property.
      */
     public void setCriterion2(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("criterion2", value);
     }
     /**
-     * Sets the dynamicCriteria property value. The dynamicCriteria property
+     * Sets the dynamicCriteria property value. A dynamic formula specified in a custom filter.
      * @param value Value to set for the dynamicCriteria property.
      */
     public void setDynamicCriteria(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("dynamicCriteria", value);
     }
     /**
-     * Sets the filterOn property value. The filterOn property
+     * Sets the filterOn property value. Indicates whether a filter is applied to a column.
      * @param value Value to set for the filterOn property.
      */
     public void setFilterOn(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("filterOn", value);
     }
     /**
-     * Sets the icon property value. The icon property
+     * Sets the icon property value. An icon applied to a cell via conditional formatting.
      * @param value Value to set for the icon property.
      */
     public void setIcon(@jakarta.annotation.Nullable final WorkbookIcon value) {
@@ -227,14 +227,14 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the operator property value. The operator property
+     * Sets the operator property value. An operator in a cell; for example, =, >, <, <=, or <>.
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operator", value);
     }
     /**
-     * Sets the values property value. The values property
+     * Sets the values property value. The values that appear in the cell.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {

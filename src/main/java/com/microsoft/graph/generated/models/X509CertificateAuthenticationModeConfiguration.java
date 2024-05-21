@@ -61,10 +61,11 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(X509CertificateRule::createFromDiscriminatorValue)); });
         deserializerMap.put("x509CertificateAuthenticationDefaultMode", (n) -> { this.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationMode::forValue)); });
+        deserializerMap.put("x509CertificateDefaultRequiredAffinityLevel", (n) -> { this.setX509CertificateDefaultRequiredAffinityLevel(n.getEnumValue(X509CertificateAffinityLevel::forValue)); });
         return deserializerMap;
     }
     /**
@@ -92,6 +93,14 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
         return this.backingStore.get("x509CertificateAuthenticationDefaultMode");
     }
     /**
+     * Gets the x509CertificateDefaultRequiredAffinityLevel property value. The x509CertificateDefaultRequiredAffinityLevel property
+     * @return a {@link X509CertificateAffinityLevel}
+     */
+    @jakarta.annotation.Nullable
+    public X509CertificateAffinityLevel getX509CertificateDefaultRequiredAffinityLevel() {
+        return this.backingStore.get("x509CertificateDefaultRequiredAffinityLevel");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,6 +109,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("rules", this.getRules());
         writer.writeEnumValue("x509CertificateAuthenticationDefaultMode", this.getX509CertificateAuthenticationDefaultMode());
+        writer.writeEnumValue("x509CertificateDefaultRequiredAffinityLevel", this.getX509CertificateDefaultRequiredAffinityLevel());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -137,5 +147,12 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     public void setX509CertificateAuthenticationDefaultMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
         this.backingStore.set("x509CertificateAuthenticationDefaultMode", value);
+    }
+    /**
+     * Sets the x509CertificateDefaultRequiredAffinityLevel property value. The x509CertificateDefaultRequiredAffinityLevel property
+     * @param value Value to set for the x509CertificateDefaultRequiredAffinityLevel property.
+     */
+    public void setX509CertificateDefaultRequiredAffinityLevel(@jakarta.annotation.Nullable final X509CertificateAffinityLevel value) {
+        this.backingStore.set("x509CertificateDefaultRequiredAffinityLevel", value);
     }
 }

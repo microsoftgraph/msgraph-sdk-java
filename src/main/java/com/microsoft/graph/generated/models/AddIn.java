@@ -70,7 +70,7 @@ public class AddIn implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The unique identifier for the addIn object.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class AddIn implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. The collection of key-value pairs that define parameters that the consuming service can use or call. You must specify this property when performing a POST or a PATCH operation on the addIns collection. Required.
      * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class AddIn implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("properties");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The unique name for the functionality exposed by the app.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class AddIn implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The unique identifier for the addIn object.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
@@ -143,14 +143,14 @@ public class AddIn implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. The collection of key-value pairs that define parameters that the consuming service can use or call. You must specify this property when performing a POST or a PATCH operation on the addIns collection. Required.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.backingStore.set("properties", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The unique name for the functionality exposed by the app.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

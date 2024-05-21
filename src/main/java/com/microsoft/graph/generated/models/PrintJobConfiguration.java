@@ -141,7 +141,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("finishings");
     }
     /**
-     * Gets the fitPdfToPage property value. The fitPdfToPage property
+     * Gets the fitPdfToPage property value. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("margin");
     }
     /**
-     * Gets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
+     * Gets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("mediaSize");
     }
     /**
-     * Gets the mediaType property value. The mediaType property
+     * Gets the mediaType property value. The default media (such as paper) type to print the document on.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("mediaType");
     }
     /**
-     * Gets the multipageLayout property value. The multipageLayout property
+     * Gets the multipageLayout property value. The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
      * @return a {@link PrintMultipageLayout}
      */
     @jakarta.annotation.Nullable
@@ -197,7 +197,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the orientation property value. The orientation property
+     * Gets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
      * @return a {@link PrintOrientation}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("orientation");
     }
     /**
-     * Gets the outputBin property value. The outputBin property
+     * Gets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -213,7 +213,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("outputBin");
     }
     /**
-     * Gets the pageRanges property value. The pageRanges property
+     * Gets the pageRanges property value. The page ranges to print. Read-only.
      * @return a {@link java.util.List<IntegerRange>}
      */
     @jakarta.annotation.Nullable
@@ -221,7 +221,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("pageRanges");
     }
     /**
-     * Gets the pagesPerSheet property value. The pagesPerSheet property
+     * Gets the pagesPerSheet property value. The number of document pages to print on each sheet.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -229,7 +229,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("pagesPerSheet");
     }
     /**
-     * Gets the quality property value. The quality property
+     * Gets the quality property value. The print quality to use when printing the job. Valid values are described in the table below. Read-only.
      * @return a {@link PrintQuality}
      */
     @jakarta.annotation.Nullable
@@ -237,7 +237,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("quality");
     }
     /**
-     * Gets the scaling property value. The scaling property
+     * Gets the scaling property value. Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
      * @return a {@link PrintScaling}
      */
     @jakarta.annotation.Nullable
@@ -337,7 +337,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("finishings", value);
     }
     /**
-     * Sets the fitPdfToPage property value. The fitPdfToPage property
+     * Sets the fitPdfToPage property value. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
      * @param value Value to set for the fitPdfToPage property.
      */
     public void setFitPdfToPage(@jakarta.annotation.Nullable final Boolean value) {
@@ -358,21 +358,21 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("margin", value);
     }
     /**
-     * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
+     * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
      * @param value Value to set for the mediaSize property.
      */
     public void setMediaSize(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mediaSize", value);
     }
     /**
-     * Sets the mediaType property value. The mediaType property
+     * Sets the mediaType property value. The default media (such as paper) type to print the document on.
      * @param value Value to set for the mediaType property.
      */
     public void setMediaType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mediaType", value);
     }
     /**
-     * Sets the multipageLayout property value. The multipageLayout property
+     * Sets the multipageLayout property value. The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
      * @param value Value to set for the multipageLayout property.
      */
     public void setMultipageLayout(@jakarta.annotation.Nullable final PrintMultipageLayout value) {
@@ -386,42 +386,42 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the orientation property value. The orientation property
+     * Sets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
      * @param value Value to set for the orientation property.
      */
     public void setOrientation(@jakarta.annotation.Nullable final PrintOrientation value) {
         this.backingStore.set("orientation", value);
     }
     /**
-     * Sets the outputBin property value. The outputBin property
+     * Sets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
      * @param value Value to set for the outputBin property.
      */
     public void setOutputBin(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("outputBin", value);
     }
     /**
-     * Sets the pageRanges property value. The pageRanges property
+     * Sets the pageRanges property value. The page ranges to print. Read-only.
      * @param value Value to set for the pageRanges property.
      */
     public void setPageRanges(@jakarta.annotation.Nullable final java.util.List<IntegerRange> value) {
         this.backingStore.set("pageRanges", value);
     }
     /**
-     * Sets the pagesPerSheet property value. The pagesPerSheet property
+     * Sets the pagesPerSheet property value. The number of document pages to print on each sheet.
      * @param value Value to set for the pagesPerSheet property.
      */
     public void setPagesPerSheet(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("pagesPerSheet", value);
     }
     /**
-     * Sets the quality property value. The quality property
+     * Sets the quality property value. The print quality to use when printing the job. Valid values are described in the table below. Read-only.
      * @param value Value to set for the quality property.
      */
     public void setQuality(@jakarta.annotation.Nullable final PrintQuality value) {
         this.backingStore.set("quality", value);
     }
     /**
-     * Sets the scaling property value. The scaling property
+     * Sets the scaling property value. Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
      * @param value Value to set for the scaling property.
      */
     public void setScaling(@jakarta.annotation.Nullable final PrintScaling value) {

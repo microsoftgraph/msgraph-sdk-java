@@ -51,7 +51,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("alertPolicyId");
     }
     /**
-     * Gets the alertWebUrl property value. The alertWebUrl property
+     * Gets the alertWebUrl property value. URL for the Microsoft 365 Defender portal alert page.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -228,7 +228,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("mitreTechniques");
     }
     /**
-     * Gets the productName property value. The productName property
+     * Gets the productName property value. The name of the product which published this alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -385,7 +385,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("alertPolicyId", value);
     }
     /**
-     * Sets the alertWebUrl property value. The alertWebUrl property
+     * Sets the alertWebUrl property value. URL for the Microsoft 365 Defender portal alert page.
      * @param value Value to set for the alertWebUrl property.
      */
     public void setAlertWebUrl(@jakarta.annotation.Nullable final String value) {
@@ -504,7 +504,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("mitreTechniques", value);
     }
     /**
-     * Sets the productName property value. The productName property
+     * Sets the productName property value. The name of the product which published this alert.
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {

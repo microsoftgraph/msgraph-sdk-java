@@ -84,7 +84,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Backe
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the riskEventTypes property value. The riskEventTypes property
+     * Gets the riskEventTypes property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Backe
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the riskEventTypes property value. The riskEventTypes property
+     * Sets the riskEventTypes property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
      * @param value Value to set for the riskEventTypes property.
      */
     public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {

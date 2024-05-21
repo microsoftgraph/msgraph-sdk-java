@@ -166,7 +166,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("service");
     }
     /**
-     * Gets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
+     * Gets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage, elevationOfPrivilege, maliciousInsider, passwordCracking, phishingOrWhaling, spoofing).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("threats");
     }
     /**
-     * Gets the tier property value. The tier property
+     * Gets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -182,7 +182,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("tier");
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Title of the control.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("title");
     }
     /**
-     * Gets the userImpact property value. The userImpact property
+     * Gets the userImpact property value. User impact of implementing control (low, moderate, high).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("userImpact");
     }
     /**
-     * Gets the vendorInformation property value. The vendorInformation property
+     * Gets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      * @return a {@link SecurityVendorInformation}
      */
     @jakarta.annotation.Nullable
@@ -331,35 +331,35 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.backingStore.set("service", value);
     }
     /**
-     * Sets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
+     * Sets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage, elevationOfPrivilege, maliciousInsider, passwordCracking, phishingOrWhaling, spoofing).
      * @param value Value to set for the threats property.
      */
     public void setThreats(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("threats", value);
     }
     /**
-     * Sets the tier property value. The tier property
+     * Sets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
      * @param value Value to set for the tier property.
      */
     public void setTier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("tier", value);
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Title of the control.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("title", value);
     }
     /**
-     * Sets the userImpact property value. The userImpact property
+     * Sets the userImpact property value. User impact of implementing control (low, moderate, high).
      * @param value Value to set for the userImpact property.
      */
     public void setUserImpact(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userImpact", value);
     }
     /**
-     * Sets the vendorInformation property value. The vendorInformation property
+     * Sets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      * @param value Value to set for the vendorInformation property.
      */
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {

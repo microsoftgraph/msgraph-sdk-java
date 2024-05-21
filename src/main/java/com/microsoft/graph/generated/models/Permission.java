@@ -54,7 +54,7 @@ public class Permission extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the grantedTo property value. The grantedTo property
+     * Gets the grantedTo property value. For user type permissions, the details of the users and applications for this permission. Read-only.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class Permission extends Entity implements Parsable {
         return this.backingStore.get("grantedTo");
     }
     /**
-     * Gets the grantedToIdentities property value. The grantedToIdentities property
+     * Gets the grantedToIdentities property value. For type permissions, the details of the users to whom permission was granted. Read-only.
      * @return a {@link java.util.List<IdentitySet>}
      */
     @jakarta.annotation.Nullable
@@ -160,14 +160,14 @@ public class Permission extends Entity implements Parsable {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the grantedTo property value. The grantedTo property
+     * Sets the grantedTo property value. For user type permissions, the details of the users and applications for this permission. Read-only.
      * @param value Value to set for the grantedTo property.
      */
     public void setGrantedTo(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("grantedTo", value);
     }
     /**
-     * Sets the grantedToIdentities property value. The grantedToIdentities property
+     * Sets the grantedToIdentities property value. For type permissions, the details of the users to whom permission was granted. Read-only.
      * @param value Value to set for the grantedToIdentities property.
      */
     public void setGrantedToIdentities(@jakarta.annotation.Nullable final java.util.List<IdentitySet> value) {

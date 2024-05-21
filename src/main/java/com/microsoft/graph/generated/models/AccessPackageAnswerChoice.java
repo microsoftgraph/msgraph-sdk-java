@@ -93,7 +93,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the text property value. The text property
+     * Gets the text property value. The string to display for this answer; if an Accept-Language header is provided, and there is a matching localization in localizations, this string will be the matching localized string; otherwise, this string remains as the default non-localized string. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the text property value. The text property
+     * Sets the text property value. The string to display for this answer; if an Accept-Language header is provided, and there is a matching localization in localizations, this string will be the matching localized string; otherwise, this string remains as the default non-localized string. Required.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {

@@ -138,21 +138,21 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the androidCompliancePolicy object.
+     * Read properties and relationships of the windows81CompliancePolicy object.
      * @return a {@link DeviceCompliancePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicy get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the androidCompliancePolicy object.
+     * Read properties and relationships of the windows81CompliancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCompliancePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -162,23 +162,23 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a windowsPhone81CompliancePolicy object.
+     * Update the properties of a androidWorkProfileCompliancePolicy object.
      * @param body The request body
      * @return a {@link DeviceCompliancePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81compliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidworkprofilecompliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicy patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a windowsPhone81CompliancePolicy object.
+     * Update the properties of a androidWorkProfileCompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCompliancePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81compliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidworkprofilecompliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicy patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -209,7 +209,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the androidCompliancePolicy object.
+     * Read properties and relationships of the windows81CompliancePolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -217,7 +217,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the androidCompliancePolicy object.
+     * Read properties and relationships of the windows81CompliancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -229,7 +229,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a windowsPhone81CompliancePolicy object.
+     * Update the properties of a androidWorkProfileCompliancePolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -238,7 +238,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a windowsPhone81CompliancePolicy object.
+     * Update the properties of a androidWorkProfileCompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -269,7 +269,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the androidCompliancePolicy object.
+     * Read properties and relationships of the windows81CompliancePolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

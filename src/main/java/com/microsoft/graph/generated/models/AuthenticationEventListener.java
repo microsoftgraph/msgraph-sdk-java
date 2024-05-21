@@ -32,7 +32,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
         return new AuthenticationEventListener();
     }
     /**
-     * Gets the authenticationEventsFlowId property value. The authenticationEventsFlowId property
+     * Gets the authenticationEventsFlowId property value. Indicates the authenticationEventListener is associated with an authenticationEventsFlow. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
         writer.writeObjectValue("conditions", this.getConditions());
     }
     /**
-     * Sets the authenticationEventsFlowId property value. The authenticationEventsFlowId property
+     * Sets the authenticationEventsFlowId property value. Indicates the authenticationEventListener is associated with an authenticationEventsFlow. Read-only.
      * @param value Value to set for the authenticationEventsFlowId property.
      */
     public void setAuthenticationEventsFlowId(@jakarta.annotation.Nullable final String value) {

@@ -96,7 +96,7 @@ public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("sharedDateTime");
     }
     /**
-     * Gets the sharingReference property value. The sharingReference property
+     * Gets the sharingReference property value. Reference properties of the document, such as the URL and type of the document. Read-only
      * @return a {@link ResourceReference}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("sharingSubject");
     }
     /**
-     * Gets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
+     * Gets the sharingType property value. Determines the way the document was shared. Can be by a 1Link1, 1Attachment1, 1Group1, 1Site1.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("sharedDateTime", value);
     }
     /**
-     * Sets the sharingReference property value. The sharingReference property
+     * Sets the sharingReference property value. Reference properties of the document, such as the URL and type of the document. Read-only
      * @param value Value to set for the sharingReference property.
      */
     public void setSharingReference(@jakarta.annotation.Nullable final ResourceReference value) {
@@ -183,7 +183,7 @@ public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("sharingSubject", value);
     }
     /**
-     * Sets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
+     * Sets the sharingType property value. Determines the way the document was shared. Can be by a 1Link1, 1Attachment1, 1Group1, 1Site1.
      * @param value Value to set for the sharingType property.
      */
     public void setSharingType(@jakarta.annotation.Nullable final String value) {

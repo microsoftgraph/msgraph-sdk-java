@@ -60,7 +60,7 @@ public class RetentionEvent extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the eventPropagationResults property value. The eventPropagationResults property
+     * Gets the eventPropagationResults property value. Represents the success status of a created event and additional information.
      * @return a {@link java.util.List<EventPropagationResult>}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class RetentionEvent extends Entity implements Parsable {
         return this.backingStore.get("eventQueries");
     }
     /**
-     * Gets the eventStatus property value. The eventStatus property
+     * Gets the eventStatus property value. Status of event propogation to the scoped locations after the event has been created.
      * @return a {@link RetentionEventStatus}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class RetentionEvent extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the eventPropagationResults property value. The eventPropagationResults property
+     * Sets the eventPropagationResults property value. Represents the success status of a created event and additional information.
      * @param value Value to set for the eventPropagationResults property.
      */
     public void setEventPropagationResults(@jakarta.annotation.Nullable final java.util.List<EventPropagationResult> value) {
@@ -207,7 +207,7 @@ public class RetentionEvent extends Entity implements Parsable {
         this.backingStore.set("eventQueries", value);
     }
     /**
-     * Sets the eventStatus property value. The eventStatus property
+     * Sets the eventStatus property value. Status of event propogation to the scoped locations after the event has been created.
      * @param value Value to set for the eventStatus property.
      */
     public void setEventStatus(@jakarta.annotation.Nullable final RetentionEventStatus value) {

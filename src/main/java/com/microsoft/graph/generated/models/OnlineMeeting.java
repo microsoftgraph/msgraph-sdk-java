@@ -27,7 +27,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return new OnlineMeeting();
     }
     /**
-     * Gets the attendeeReport property value. The attendeeReport property
+     * Gets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("attendeeReport");
     }
     /**
-     * Gets the broadcastSettings property value. The broadcastSettings property
+     * Gets the broadcastSettings property value. Settings related to a live event.
      * @return a {@link BroadcastMeetingSettings}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isBroadcast property value. The isBroadcast property
+     * Gets the isBroadcast property value. Indicates if this is a Teams live event.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -144,14 +144,14 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         writer.writeCollectionOfObjectValues("transcripts", this.getTranscripts());
     }
     /**
-     * Sets the attendeeReport property value. The attendeeReport property
+     * Sets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @param value Value to set for the attendeeReport property.
      */
     public void setAttendeeReport(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("attendeeReport", value);
     }
     /**
-     * Sets the broadcastSettings property value. The broadcastSettings property
+     * Sets the broadcastSettings property value. Settings related to a live event.
      * @param value Value to set for the broadcastSettings property.
      */
     public void setBroadcastSettings(@jakarta.annotation.Nullable final BroadcastMeetingSettings value) {
@@ -179,7 +179,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("externalId", value);
     }
     /**
-     * Sets the isBroadcast property value. The isBroadcast property
+     * Sets the isBroadcast property value. Indicates if this is a Teams live event.
      * @param value Value to set for the isBroadcast property.
      */
     public void setIsBroadcast(@jakarta.annotation.Nullable final Boolean value) {

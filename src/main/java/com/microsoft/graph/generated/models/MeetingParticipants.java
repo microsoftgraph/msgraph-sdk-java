@@ -48,7 +48,7 @@ public class MeetingParticipants implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
-     * Gets the attendees property value. The attendees property
+     * Gets the attendees property value. Information about the meeting attendees.
      * @return a {@link java.util.List<MeetingParticipantInfo>}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class MeetingParticipants implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the organizer property value. The organizer property
+     * Gets the organizer property value. Information about the meeting organizer.
      * @return a {@link MeetingParticipantInfo}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class MeetingParticipants implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the attendees property value. The attendees property
+     * Sets the attendees property value. Information about the meeting attendees.
      * @param value Value to set for the attendees property.
      */
     public void setAttendees(@jakarta.annotation.Nullable final java.util.List<MeetingParticipantInfo> value) {
@@ -132,7 +132,7 @@ public class MeetingParticipants implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the organizer property value. The organizer property
+     * Sets the organizer property value. Information about the meeting organizer.
      * @param value Value to set for the organizer property.
      */
     public void setOrganizer(@jakarta.annotation.Nullable final MeetingParticipantInfo value) {

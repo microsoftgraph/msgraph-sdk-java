@@ -80,7 +80,7 @@ public class AttributeDefinition implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("caseExact");
     }
     /**
-     * Gets the defaultValue property value. The defaultValue property
+     * Gets the defaultValue property value. The default value of the attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class AttributeDefinition implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("caseExact", value);
     }
     /**
-     * Sets the defaultValue property value. The defaultValue property
+     * Sets the defaultValue property value. The default value of the attribute.
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {

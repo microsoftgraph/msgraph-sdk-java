@@ -61,10 +61,13 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getStringValue()); });
+        deserializerMap.put("issuerSubjectIdentifier", (n) -> { this.setIssuerSubjectIdentifier(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyOidIdentifier", (n) -> { this.setPolicyOidIdentifier(n.getStringValue()); });
         deserializerMap.put("x509CertificateAuthenticationMode", (n) -> { this.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateAuthenticationMode::forValue)); });
+        deserializerMap.put("x509CertificateRequiredAffinityLevel", (n) -> { this.setX509CertificateRequiredAffinityLevel(n.getEnumValue(X509CertificateAffinityLevel::forValue)); });
         deserializerMap.put("x509CertificateRuleType", (n) -> { this.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleType::forValue)); });
         return deserializerMap;
     }
@@ -77,6 +80,14 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("identifier");
     }
     /**
+     * Gets the issuerSubjectIdentifier property value. The issuerSubjectIdentifier property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getIssuerSubjectIdentifier() {
+        return this.backingStore.get("issuerSubjectIdentifier");
+    }
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return a {@link String}
      */
@@ -85,12 +96,28 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the policyOidIdentifier property value. The policyOidIdentifier property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPolicyOidIdentifier() {
+        return this.backingStore.get("policyOidIdentifier");
+    }
+    /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @return a {@link X509CertificateAuthenticationMode}
      */
     @jakarta.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationMode() {
         return this.backingStore.get("x509CertificateAuthenticationMode");
+    }
+    /**
+     * Gets the x509CertificateRequiredAffinityLevel property value. The x509CertificateRequiredAffinityLevel property
+     * @return a {@link X509CertificateAffinityLevel}
+     */
+    @jakarta.annotation.Nullable
+    public X509CertificateAffinityLevel getX509CertificateRequiredAffinityLevel() {
+        return this.backingStore.get("x509CertificateRequiredAffinityLevel");
     }
     /**
      * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
@@ -107,8 +134,11 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("identifier", this.getIdentifier());
+        writer.writeStringValue("issuerSubjectIdentifier", this.getIssuerSubjectIdentifier());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("policyOidIdentifier", this.getPolicyOidIdentifier());
         writer.writeEnumValue("x509CertificateAuthenticationMode", this.getX509CertificateAuthenticationMode());
+        writer.writeEnumValue("x509CertificateRequiredAffinityLevel", this.getX509CertificateRequiredAffinityLevel());
         writer.writeEnumValue("x509CertificateRuleType", this.getX509CertificateRuleType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -135,6 +165,13 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("identifier", value);
     }
     /**
+     * Sets the issuerSubjectIdentifier property value. The issuerSubjectIdentifier property
+     * @param value Value to set for the issuerSubjectIdentifier property.
+     */
+    public void setIssuerSubjectIdentifier(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("issuerSubjectIdentifier", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
@@ -142,11 +179,25 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
+     * Sets the policyOidIdentifier property value. The policyOidIdentifier property
+     * @param value Value to set for the policyOidIdentifier property.
+     */
+    public void setPolicyOidIdentifier(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("policyOidIdentifier", value);
+    }
+    /**
      * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @param value Value to set for the x509CertificateAuthenticationMode property.
      */
     public void setX509CertificateAuthenticationMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
         this.backingStore.set("x509CertificateAuthenticationMode", value);
+    }
+    /**
+     * Sets the x509CertificateRequiredAffinityLevel property value. The x509CertificateRequiredAffinityLevel property
+     * @param value Value to set for the x509CertificateRequiredAffinityLevel property.
+     */
+    public void setX509CertificateRequiredAffinityLevel(@jakarta.annotation.Nullable final X509CertificateAffinityLevel value) {
+        this.backingStore.set("x509CertificateRequiredAffinityLevel", value);
     }
     /**
      * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
