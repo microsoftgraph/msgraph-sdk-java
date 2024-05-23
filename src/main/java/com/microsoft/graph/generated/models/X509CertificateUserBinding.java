@@ -61,9 +61,10 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("trustAffinityLevel", (n) -> { this.setTrustAffinityLevel(n.getEnumValue(X509CertificateAffinityLevel::forValue)); });
         deserializerMap.put("userProperty", (n) -> { this.setUserProperty(n.getStringValue()); });
         deserializerMap.put("x509CertificateField", (n) -> { this.setX509CertificateField(n.getStringValue()); });
         return deserializerMap;
@@ -83,6 +84,14 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.backingStore.get("priority");
+    }
+    /**
+     * Gets the trustAffinityLevel property value. The trustAffinityLevel property
+     * @return a {@link X509CertificateAffinityLevel}
+     */
+    @jakarta.annotation.Nullable
+    public X509CertificateAffinityLevel getTrustAffinityLevel() {
+        return this.backingStore.get("trustAffinityLevel");
     }
     /**
      * Gets the userProperty property value. Defines the Microsoft Entra user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
@@ -108,6 +117,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("priority", this.getPriority());
+        writer.writeEnumValue("trustAffinityLevel", this.getTrustAffinityLevel());
         writer.writeStringValue("userProperty", this.getUserProperty());
         writer.writeStringValue("x509CertificateField", this.getX509CertificateField());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -140,6 +150,13 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("priority", value);
+    }
+    /**
+     * Sets the trustAffinityLevel property value. The trustAffinityLevel property
+     * @param value Value to set for the trustAffinityLevel property.
+     */
+    public void setTrustAffinityLevel(@jakarta.annotation.Nullable final X509CertificateAffinityLevel value) {
+        this.backingStore.set("trustAffinityLevel", value);
     }
     /**
      * Sets the userProperty property value. Defines the Microsoft Entra user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.

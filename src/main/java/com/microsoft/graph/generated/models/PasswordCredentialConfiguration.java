@@ -71,7 +71,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         return deserializerMap;
     }
     /**
-     * Gets the maxLifetime property value. The maxLifetime property
+     * Gets the maxLifetime property value. Value that can be used as the maximum number for setting password expiration time in days, hours, minutes or seconds. Defined in ISO 8601 format for Durations. For example, 'P4DT12H30M5S' represents a duration of four days, twelve hours, thirty minutes, and five seconds. This property is required when restriction type is set to passwordLifetime.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         this.backingStore = value;
     }
     /**
-     * Sets the maxLifetime property value. The maxLifetime property
+     * Sets the maxLifetime property value. Value that can be used as the maximum number for setting password expiration time in days, hours, minutes or seconds. Defined in ISO 8601 format for Durations. For example, 'P4DT12H30M5S' represents a duration of four days, twelve hours, thirty minutes, and five seconds. This property is required when restriction type is set to passwordLifetime.
      * @param value Value to set for the maxLifetime property.
      */
     public void setMaxLifetime(@jakarta.annotation.Nullable final PeriodAndDuration value) {

@@ -181,7 +181,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("recordAutomatically");
     }
     /**
-     * Gets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
+     * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
      * @return a {@link MeetingChatHistoryDefaultMode}
      */
     @jakarta.annotation.Nullable
@@ -345,7 +345,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("recordAutomatically", value);
     }
     /**
-     * Sets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
+     * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
      * @param value Value to set for the shareMeetingChatHistoryDefault property.
      */
     public void setShareMeetingChatHistoryDefault(@jakarta.annotation.Nullable final MeetingChatHistoryDefaultMode value) {

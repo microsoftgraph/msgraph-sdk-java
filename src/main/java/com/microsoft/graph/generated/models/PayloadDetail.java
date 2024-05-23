@@ -63,7 +63,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the coachmarks property value. Payload coachmark details.
+     * Gets the coachmarks property value. The coachmarks property
      * @return a {@link java.util.List<PayloadCoachmark>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the coachmarks property value. Payload coachmark details.
+     * Sets the coachmarks property value. The coachmarks property
      * @param value Value to set for the coachmarks property.
      */
     public void setCoachmarks(@jakarta.annotation.Nullable final java.util.List<PayloadCoachmark> value) {

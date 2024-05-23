@@ -34,7 +34,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         return this.backingStore.get("description");
     }
     /**
-     * Gets the exportFileMetadata property value. The exportFileMetadata property
+     * Gets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size.
      * @return a {@link java.util.List<ExportFileMetadata>}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the exportFileMetadata property value. The exportFileMetadata property
+     * Sets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size.
      * @param value Value to set for the exportFileMetadata property.
      */
     public void setExportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ExportFileMetadata> value) {

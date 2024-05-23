@@ -35,7 +35,7 @@ public class TaskDefinition extends Entity implements Parsable {
         return this.backingStore.get("category");
     }
     /**
-     * Gets the continueOnError property value. The continueOnError property
+     * Gets the continueOnError property value. Defines if the workflow will continue if the task has an error.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class TaskDefinition extends Entity implements Parsable {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the continueOnError property value. The continueOnError property
+     * Sets the continueOnError property value. Defines if the workflow will continue if the task has an error.
      * @param value Value to set for the continueOnError property.
      */
     public void setContinueOnError(@jakarta.annotation.Nullable final Boolean value) {

@@ -117,7 +117,7 @@ public class SubscribedSku extends Entity implements Parsable {
         return this.backingStore.get("skuPartNumber");
     }
     /**
-     * Gets the subscriptionIds property value. The subscriptionIds property
+     * Gets the subscriptionIds property value. A list of all subscription IDs associated with this SKU.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class SubscribedSku extends Entity implements Parsable {
         this.backingStore.set("skuPartNumber", value);
     }
     /**
-     * Sets the subscriptionIds property value. The subscriptionIds property
+     * Sets the subscriptionIds property value. A list of all subscription IDs associated with this SKU.
      * @param value Value to set for the subscriptionIds property.
      */
     public void setSubscriptionIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

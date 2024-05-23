@@ -58,7 +58,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the customKeyIdentifier property value. The customKeyIdentifier property
+     * Gets the customKeyIdentifier property value. Custom key identifier.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("customKeyIdentifier");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The friendly name for the key.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. The date and time at which the credential expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. The value for the key credential. Should be a Base-64 encoded value.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("key");
     }
     /**
-     * Gets the keyId property value. The keyId property
+     * Gets the keyId property value. The unique identifier (GUID) for the key.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The date and time at which the credential becomes valid. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the thumbprint property value. The thumbprint property
+     * Gets the thumbprint property value. The thumbprint value for the key.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("thumbprint");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of key credential. AsymmetricX509Cert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("type");
     }
     /**
-     * Gets the usage property value. The usage property
+     * Gets the usage property value. A string that describes the purpose for which the key can be used. The possible value is Verify.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -190,35 +190,35 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the customKeyIdentifier property value. The customKeyIdentifier property
+     * Sets the customKeyIdentifier property value. Custom key identifier.
      * @param value Value to set for the customKeyIdentifier property.
      */
     public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("customKeyIdentifier", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The friendly name for the key.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. The date and time at which the credential expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. The value for the key credential. Should be a Base-64 encoded value.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("key", value);
     }
     /**
-     * Sets the keyId property value. The keyId property
+     * Sets the keyId property value. The unique identifier (GUID) for the key.
      * @param value Value to set for the keyId property.
      */
     public void setKeyId(@jakarta.annotation.Nullable final UUID value) {
@@ -232,28 +232,28 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The date and time at which the credential becomes valid. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the thumbprint property value. The thumbprint property
+     * Sets the thumbprint property value. The thumbprint value for the key.
      * @param value Value to set for the thumbprint property.
      */
     public void setThumbprint(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("thumbprint", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of key credential. AsymmetricX509Cert.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("type", value);
     }
     /**
-     * Sets the usage property value. The usage property
+     * Sets the usage property value. A string that describes the purpose for which the key can be used. The possible value is Verify.
      * @param value Value to set for the usage property.
      */
     public void setUsage(@jakarta.annotation.Nullable final String value) {

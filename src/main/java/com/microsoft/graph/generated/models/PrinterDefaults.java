@@ -139,7 +139,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("fitPdfToPage");
     }
     /**
-     * Gets the inputBin property value. The inputBin property
+     * Gets the inputBin property value. The default input bin that serves as the paper source.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -317,7 +317,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("fitPdfToPage", value);
     }
     /**
-     * Sets the inputBin property value. The inputBin property
+     * Sets the inputBin property value. The default input bin that serves as the paper source.
      * @param value Value to set for the inputBin property.
      */
     public void setInputBin(@jakarta.annotation.Nullable final String value) {

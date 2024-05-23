@@ -96,7 +96,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the tollFreeNumber property value. The tollFreeNumber property
+     * Gets the tollFreeNumber property value. The toll-free number that connects to the Audio Conference Provider.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("tollFreeNumbers");
     }
     /**
-     * Gets the tollNumber property value. The tollNumber property
+     * Gets the tollNumber property value. The toll number that connects to the Audio Conference Provider.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -179,7 +179,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the tollFreeNumber property value. The tollFreeNumber property
+     * Sets the tollFreeNumber property value. The toll-free number that connects to the Audio Conference Provider.
      * @param value Value to set for the tollFreeNumber property.
      */
     public void setTollFreeNumber(@jakarta.annotation.Nullable final String value) {
@@ -193,7 +193,7 @@ public class AudioConferencing implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("tollFreeNumbers", value);
     }
     /**
-     * Sets the tollNumber property value. The tollNumber property
+     * Sets the tollNumber property value. The toll number that connects to the Audio Conference Provider.
      * @param value Value to set for the tollNumber property.
      */
     public void setTollNumber(@jakarta.annotation.Nullable final String value) {

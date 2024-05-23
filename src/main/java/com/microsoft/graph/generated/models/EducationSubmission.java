@@ -26,7 +26,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return new EducationSubmission();
     }
     /**
-     * Gets the excusedBy property value. The excusedBy property
+     * Gets the excusedBy property value. The user that marked the submission as excused.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("excusedBy");
     }
     /**
-     * Gets the excusedDateTime property value. The excusedDateTime property
+     * Gets the excusedDateTime property value. The time that the submission was excused. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("returnedDateTime");
     }
     /**
-     * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reassigned.
+     * Gets the status property value. Read-only. Possible values are: excused, reassigned, returned, submitted and working. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: excused and reassigned.
      * @return a {@link EducationSubmissionStatus}
      */
     @jakarta.annotation.Nullable
@@ -200,14 +200,14 @@ public class EducationSubmission extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("submittedResources", this.getSubmittedResources());
     }
     /**
-     * Sets the excusedBy property value. The excusedBy property
+     * Sets the excusedBy property value. The user that marked the submission as excused.
      * @param value Value to set for the excusedBy property.
      */
     public void setExcusedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("excusedBy", value);
     }
     /**
-     * Sets the excusedDateTime property value. The excusedDateTime property
+     * Sets the excusedDateTime property value. The time that the submission was excused. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the excusedDateTime property.
      */
     public void setExcusedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -270,7 +270,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this.backingStore.set("returnedDateTime", value);
     }
     /**
-     * Sets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reassigned.
+     * Sets the status property value. Read-only. Possible values are: excused, reassigned, returned, submitted and working. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: excused and reassigned.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationSubmissionStatus value) {

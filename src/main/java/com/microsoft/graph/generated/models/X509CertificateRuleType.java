@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum X509CertificateRuleType implements ValuedEnum {
     IssuerSubject("issuerSubject"),
     PolicyOID("policyOID"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    IssuerSubjectAndPolicyOID("issuerSubjectAndPolicyOID");
     public final String value;
     X509CertificateRuleType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum X509CertificateRuleType implements ValuedEnum {
             case "issuerSubject": return IssuerSubject;
             case "policyOID": return PolicyOID;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "issuerSubjectAndPolicyOID": return IssuerSubjectAndPolicyOID;
             default: return null;
         }
     }
