@@ -17,6 +17,9 @@ env:
   PREVIEW_TASK: publishSnapshotPublicationToSonatypeSnapshotRepository
   PUBLISH_TASK:  publishMavenCentralReleasePublicationToSonatypeRepository
 
+permissions:
+  contents: write
+
 jobs:
   maven_Preview:
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -96,3 +99,10 @@ jobs:
             gradle.properties
             **/gradle/**
             Scripts/**
+      - name: GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_unmatched_files: true
+          files: |
+            build/**/*.jar
