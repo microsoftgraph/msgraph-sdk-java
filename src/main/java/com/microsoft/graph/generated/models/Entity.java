@@ -247,6 +247,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.authenticationCombinationConfiguration": return new AuthenticationCombinationConfiguration();
             case "#microsoft.graph.authenticationContextClassReference": return new AuthenticationContextClassReference();
             case "#microsoft.graph.authenticationEventListener": return new AuthenticationEventListener();
+            case "#microsoft.graph.authenticationEventsFlow": return new AuthenticationEventsFlow();
             case "#microsoft.graph.authenticationFlowsPolicy": return new AuthenticationFlowsPolicy();
             case "#microsoft.graph.authenticationMethod": return new AuthenticationMethod();
             case "#microsoft.graph.authenticationMethodConfiguration": return new AuthenticationMethodConfiguration();
@@ -457,6 +458,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.externalConnectors.identity": return new Identity();
             case "#microsoft.graph.externalConnectors.schema": return new Schema();
             case "#microsoft.graph.externalDomainName": return new ExternalDomainName();
+            case "#microsoft.graph.externalUsersSelfServiceSignUpEventsFlow": return new ExternalUsersSelfServiceSignUpEventsFlow();
             case "#microsoft.graph.featureRolloutPolicy": return new FeatureRolloutPolicy();
             case "#microsoft.graph.federatedIdentityCredential": return new FederatedIdentityCredential();
             case "#microsoft.graph.fido2AuthenticationMethod": return new Fido2AuthenticationMethod();
@@ -465,6 +467,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.fieldValueSet": return new FieldValueSet();
             case "#microsoft.graph.fileAssessmentRequest": return new FileAssessmentRequest();
             case "#microsoft.graph.fileAttachment": return new FileAttachment();
+            case "#microsoft.graph.fileStorage": return new FileStorage();
+            case "#microsoft.graph.fileStorageContainer": return new FileStorageContainer();
             case "#microsoft.graph.filterOperatorSchema": return new FilterOperatorSchema();
             case "#microsoft.graph.governanceInsight": return new GovernanceInsight();
             case "#microsoft.graph.group": return new Group();
@@ -611,6 +615,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.oAuth2PermissionGrant": return new OAuth2PermissionGrant();
             case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
             case "#microsoft.graph.officeGraphInsights": return new OfficeGraphInsights();
+            case "#microsoft.graph.onAttributeCollectionListener": return new OnAttributeCollectionListener();
+            case "#microsoft.graph.onAuthenticationMethodLoadStartListener": return new OnAuthenticationMethodLoadStartListener();
             case "#microsoft.graph.onenote": return new Onenote();
             case "#microsoft.graph.onenoteEntityBaseModel": return new OnenoteEntityBaseModel();
             case "#microsoft.graph.onenoteEntityHierarchyModel": return new OnenoteEntityHierarchyModel();
@@ -619,12 +625,14 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.onenotePage": return new OnenotePage();
             case "#microsoft.graph.onenoteResource": return new OnenoteResource();
             case "#microsoft.graph.onenoteSection": return new OnenoteSection();
+            case "#microsoft.graph.onInteractiveAuthFlowStartListener": return new OnInteractiveAuthFlowStartListener();
             case "#microsoft.graph.onlineMeeting": return new OnlineMeeting();
             case "#microsoft.graph.onlineMeetingBase": return new OnlineMeetingBase();
             case "#microsoft.graph.onPremisesConditionalAccessSettings": return new OnPremisesConditionalAccessSettings();
             case "#microsoft.graph.onPremisesDirectorySynchronization": return new OnPremisesDirectorySynchronization();
             case "#microsoft.graph.onTokenIssuanceStartCustomExtension": return new OnTokenIssuanceStartCustomExtension();
             case "#microsoft.graph.onTokenIssuanceStartListener": return new OnTokenIssuanceStartListener();
+            case "#microsoft.graph.onUserCreateStartListener": return new OnUserCreateStartListener();
             case "#microsoft.graph.openShift": return new OpenShift();
             case "#microsoft.graph.openShiftChangeRequest": return new OpenShiftChangeRequest();
             case "#microsoft.graph.openTypeExtension": return new OpenTypeExtension();
@@ -658,14 +666,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.permission": return new Permission();
             case "#microsoft.graph.permissionGrantConditionSet": return new PermissionGrantConditionSet();
             case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
-            case "#microsoft.graph.person": return new Person();
-            case "#microsoft.graph.phoneAuthenticationMethod": return new PhoneAuthenticationMethod();
-            case "#microsoft.graph.pinnedChatMessageInfo": return new PinnedChatMessageInfo();
-            case "#microsoft.graph.place": return new Place();
-            case "#microsoft.graph.planner": return new Planner();
-            case "#microsoft.graph.plannerAssignedToTaskBoardTaskFormat": return new PlannerAssignedToTaskBoardTaskFormat();
-            case "#microsoft.graph.plannerBucket": return new PlannerBucket();
-            case "#microsoft.graph.plannerBucketTaskBoardTaskFormat": return new PlannerBucketTaskBoardTaskFormat();
         }
         return null;
     }
@@ -677,6 +677,14 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.person": return new Person();
+            case "#microsoft.graph.phoneAuthenticationMethod": return new PhoneAuthenticationMethod();
+            case "#microsoft.graph.pinnedChatMessageInfo": return new PinnedChatMessageInfo();
+            case "#microsoft.graph.place": return new Place();
+            case "#microsoft.graph.planner": return new Planner();
+            case "#microsoft.graph.plannerAssignedToTaskBoardTaskFormat": return new PlannerAssignedToTaskBoardTaskFormat();
+            case "#microsoft.graph.plannerBucket": return new PlannerBucket();
+            case "#microsoft.graph.plannerBucketTaskBoardTaskFormat": return new PlannerBucketTaskBoardTaskFormat();
             case "#microsoft.graph.plannerGroup": return new PlannerGroup();
             case "#microsoft.graph.plannerPlan": return new PlannerPlan();
             case "#microsoft.graph.plannerPlanDetails": return new PlannerPlanDetails();

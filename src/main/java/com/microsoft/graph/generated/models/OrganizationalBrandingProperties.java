@@ -41,7 +41,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("backgroundColor");
     }
     /**
-     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("cdnList");
     }
     /**
-     * Gets the contentCustomization property value. The contentCustomization property
+     * Gets the contentCustomization property value. Represents the content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra External ID in external tenants only.
      * @return a {@link ContentCustomization}
      */
     @jakarta.annotation.Nullable
@@ -367,7 +367,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         this.backingStore.set("backgroundColor", value);
     }
     /**
-     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.
      * @param value Value to set for the backgroundImage property.
      */
     public void setBackgroundImage(@jakarta.annotation.Nullable final byte[] value) {
@@ -402,7 +402,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         this.backingStore.set("cdnList", value);
     }
     /**
-     * Sets the contentCustomization property value. The contentCustomization property
+     * Sets the contentCustomization property value. Represents the content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra External ID in external tenants only.
      * @param value Value to set for the contentCustomization property.
      */
     public void setContentCustomization(@jakarta.annotation.Nullable final ContentCustomization value) {

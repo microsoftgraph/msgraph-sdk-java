@@ -2,6 +2,7 @@ package com.microsoft.graph.identity;
 
 import com.microsoft.graph.identity.apiconnectors.ApiConnectorsRequestBuilder;
 import com.microsoft.graph.identity.authenticationeventlisteners.AuthenticationEventListenersRequestBuilder;
+import com.microsoft.graph.identity.authenticationeventsflows.AuthenticationEventsFlowsRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.B2xUserFlowsRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.ConditionalAccessRequestBuilder;
 import com.microsoft.graph.identity.customauthenticationextensions.CustomAuthenticationExtensionsRequestBuilder;
@@ -42,6 +43,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AuthenticationEventListenersRequestBuilder authenticationEventListeners() {
         return new AuthenticationEventListenersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the authenticationEventsFlows property of the microsoft.graph.identityContainer entity.
+     * @return a {@link AuthenticationEventsFlowsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AuthenticationEventsFlowsRequestBuilder authenticationEventsFlows() {
+        return new AuthenticationEventsFlowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
