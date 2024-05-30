@@ -36,6 +36,7 @@ public class Dictionary implements AdditionalDataHolder, BackedModel, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.fileStorageContainerCustomPropertyDictionary": return new FileStorageContainerCustomPropertyDictionary();
                 case "#microsoft.graph.resultTemplateDictionary": return new ResultTemplateDictionary();
             }
         }

@@ -93,7 +93,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("modifiedDateTime");
     }
     /**
-     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
+     * Gets the originId property value. The unique identifier of the resource in the origin system. For a Microsoft Entra group, this is the identifier of the group.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.backingStore.set("modifiedDateTime", value);
     }
     /**
-     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
+     * Sets the originId property value. The unique identifier of the resource in the origin system. For a Microsoft Entra group, this is the identifier of the group.
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {

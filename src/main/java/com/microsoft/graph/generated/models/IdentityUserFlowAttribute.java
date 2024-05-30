@@ -41,7 +41,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
         return this.backingStore.get("dataType");
     }
     /**
-     * Gets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
+     * Gets the description property value. The description of the user flow attribute that's shown to the user at the time of sign up.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
         this.backingStore.set("dataType", value);
     }
     /**
-     * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
+     * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign up.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

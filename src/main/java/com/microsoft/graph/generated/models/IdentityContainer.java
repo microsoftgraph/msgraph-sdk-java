@@ -41,6 +41,14 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("authenticationEventListeners");
     }
     /**
+     * Gets the authenticationEventsFlows property value. Represents the entry point for self-service sign-up and sign-in user flows in both Microsoft Entra workforce and external tenants.
+     * @return a {@link java.util.List<AuthenticationEventsFlow>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AuthenticationEventsFlow> getAuthenticationEventsFlows() {
+        return this.backingStore.get("authenticationEventsFlows");
+    }
+    /**
      * Gets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      * @return a {@link java.util.List<B2xIdentityUserFlow>}
      */
@@ -73,6 +81,7 @@ public class IdentityContainer extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("apiConnectors", (n) -> { this.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationEventListeners", (n) -> { this.setAuthenticationEventListeners(n.getCollectionOfObjectValues(AuthenticationEventListener::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationEventsFlows", (n) -> { this.setAuthenticationEventsFlows(n.getCollectionOfObjectValues(AuthenticationEventsFlow::createFromDiscriminatorValue)); });
         deserializerMap.put("b2xUserFlows", (n) -> { this.setB2xUserFlows(n.getCollectionOfObjectValues(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
         deserializerMap.put("conditionalAccess", (n) -> { this.setConditionalAccess(n.getObjectValue(ConditionalAccessRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("customAuthenticationExtensions", (n) -> { this.setCustomAuthenticationExtensions(n.getCollectionOfObjectValues(CustomAuthenticationExtension::createFromDiscriminatorValue)); });
@@ -105,6 +114,7 @@ public class IdentityContainer extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("apiConnectors", this.getApiConnectors());
         writer.writeCollectionOfObjectValues("authenticationEventListeners", this.getAuthenticationEventListeners());
+        writer.writeCollectionOfObjectValues("authenticationEventsFlows", this.getAuthenticationEventsFlows());
         writer.writeCollectionOfObjectValues("b2xUserFlows", this.getB2xUserFlows());
         writer.writeObjectValue("conditionalAccess", this.getConditionalAccess());
         writer.writeCollectionOfObjectValues("customAuthenticationExtensions", this.getCustomAuthenticationExtensions());
@@ -124,6 +134,13 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public void setAuthenticationEventListeners(@jakarta.annotation.Nullable final java.util.List<AuthenticationEventListener> value) {
         this.backingStore.set("authenticationEventListeners", value);
+    }
+    /**
+     * Sets the authenticationEventsFlows property value. Represents the entry point for self-service sign-up and sign-in user flows in both Microsoft Entra workforce and external tenants.
+     * @param value Value to set for the authenticationEventsFlows property.
+     */
+    public void setAuthenticationEventsFlows(@jakarta.annotation.Nullable final java.util.List<AuthenticationEventsFlow> value) {
+        this.backingStore.set("authenticationEventsFlows", value);
     }
     /**
      * Sets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.

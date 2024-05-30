@@ -66,6 +66,7 @@ import com.microsoft.graph.serviceprincipalswithappid.ServicePrincipalsWithAppId
 import com.microsoft.graph.shares.SharesRequestBuilder;
 import com.microsoft.graph.sites.SitesRequestBuilder;
 import com.microsoft.graph.solutions.SolutionsRequestBuilder;
+import com.microsoft.graph.storage.StorageRequestBuilder;
 import com.microsoft.graph.subscribedskus.SubscribedSkusRequestBuilder;
 import com.microsoft.graph.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.teams.TeamsRequestBuilder;
@@ -573,6 +574,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SolutionsRequestBuilder solutions() {
         return new SolutionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the storage singleton.
+     * @return a {@link StorageRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StorageRequestBuilder storage() {
+        return new StorageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of subscribedSku entities.

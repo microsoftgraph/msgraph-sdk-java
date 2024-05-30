@@ -84,7 +84,7 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("operations");
     }
     /**
-     * Gets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Gets the passwordMethods property value. Represents the password registered to a user for authentication. For security, the password itself is never returned in the object, but action can be taken to reset a password.
      * @return a {@link java.util.List<PasswordAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("phoneMethods");
     }
     /**
-     * Gets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
+     * Gets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return a {@link java.util.List<SoftwareOathAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("operations", value);
     }
     /**
-     * Sets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Sets the passwordMethods property value. Represents the password registered to a user for authentication. For security, the password itself is never returned in the object, but action can be taken to reset a password.
      * @param value Value to set for the passwordMethods property.
      */
     public void setPasswordMethods(@jakarta.annotation.Nullable final java.util.List<PasswordAuthenticationMethod> value) {
@@ -191,7 +191,7 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("phoneMethods", value);
     }
     /**
-     * Sets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
+     * Sets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param value Value to set for the softwareOathMethods property.
      */
     public void setSoftwareOathMethods(@jakarta.annotation.Nullable final java.util.List<SoftwareOathAuthenticationMethod> value) {

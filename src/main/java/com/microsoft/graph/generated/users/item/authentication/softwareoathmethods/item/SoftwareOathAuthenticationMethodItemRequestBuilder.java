@@ -57,7 +57,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return a {@link SoftwareOathAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -66,7 +66,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SoftwareOathAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -99,7 +99,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -135,7 +135,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

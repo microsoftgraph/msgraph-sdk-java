@@ -94,7 +94,7 @@ public class ContentCustomization implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the registrationCampaign property value. The registrationCampaign property
+     * Gets the registrationCampaign property value. Represents content options to customize during MFA proofup interruptions.
      * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class ContentCustomization implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("registrationCampaign");
     }
     /**
-     * Gets the registrationCampaignRelativeUrl property value. The registrationCampaignRelativeUrl property
+     * Gets the registrationCampaignRelativeUrl property value. The relative URL of the content options to customize during MFA proofup interruptions.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -159,14 +159,14 @@ public class ContentCustomization implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the registrationCampaign property value. The registrationCampaign property
+     * Sets the registrationCampaign property value. Represents content options to customize during MFA proofup interruptions.
      * @param value Value to set for the registrationCampaign property.
      */
     public void setRegistrationCampaign(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.backingStore.set("registrationCampaign", value);
     }
     /**
-     * Sets the registrationCampaignRelativeUrl property value. The registrationCampaignRelativeUrl property
+     * Sets the registrationCampaignRelativeUrl property value. The relative URL of the content options to customize during MFA proofup interruptions.
      * @param value Value to set for the registrationCampaignRelativeUrl property.
      */
     public void setRegistrationCampaignRelativeUrl(@jakarta.annotation.Nullable final String value) {

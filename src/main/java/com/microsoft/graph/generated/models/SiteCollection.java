@@ -48,6 +48,14 @@ public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsab
         return value;
     }
     /**
+     * Gets the archivalDetails property value. The archivalDetails property
+     * @return a {@link SiteArchivalDetails}
+     */
+    @jakarta.annotation.Nullable
+    public SiteArchivalDetails getArchivalDetails() {
+        return this.backingStore.get("archivalDetails");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -69,7 +77,8 @@ public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("archivalDetails", (n) -> { this.setArchivalDetails(n.getObjectValue(SiteArchivalDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("dataLocationCode", (n) -> { this.setDataLocationCode(n.getStringValue()); });
         deserializerMap.put("hostname", (n) -> { this.setHostname(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -106,6 +115,7 @@ public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("archivalDetails", this.getArchivalDetails());
         writer.writeStringValue("dataLocationCode", this.getDataLocationCode());
         writer.writeStringValue("hostname", this.getHostname());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -118,6 +128,13 @@ public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the archivalDetails property value. The archivalDetails property
+     * @param value Value to set for the archivalDetails property.
+     */
+    public void setArchivalDetails(@jakarta.annotation.Nullable final SiteArchivalDetails value) {
+        this.backingStore.set("archivalDetails", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.
