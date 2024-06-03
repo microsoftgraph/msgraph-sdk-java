@@ -54,7 +54,7 @@ jobs:
         run: ./gradlew $PREVIEW_TASK
 
   maven_Release:
-    if: startsWith(github.ref, 'refs/tags/')
+    if: startsWith(github.ref, 'refs/tags/') && ${{ github.actor == 'release-please[bot]' }}
     environment:
       name: maven_central_release
     runs-on: ubuntu-latest
