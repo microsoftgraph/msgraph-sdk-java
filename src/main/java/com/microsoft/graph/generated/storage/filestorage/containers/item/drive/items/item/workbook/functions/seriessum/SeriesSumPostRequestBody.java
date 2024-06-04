@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.seriessum;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the coefficients property value. The coefficients property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCoefficients() {
+    public UntypedNode getCoefficients() {
         return this.backingStore.get("coefficients");
     }
     /**
@@ -71,34 +71,34 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("coefficients", (n) -> { this.setCoefficients(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("m", (n) -> { this.setM(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("n", (n) -> { this.setN(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("coefficients", (n) -> { this.setCoefficients(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("m", (n) -> { this.setM(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("n", (n) -> { this.setN(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the m property value. The m property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getM() {
+    public UntypedNode getM() {
         return this.backingStore.get("m");
     }
     /**
      * Gets the n property value. The n property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getN() {
+    public UntypedNode getN() {
         return this.backingStore.get("n");
     }
     /**
      * Gets the x property value. The x property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getX() {
+    public UntypedNode getX() {
         return this.backingStore.get("x");
     }
     /**
@@ -132,28 +132,28 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the coefficients property value. The coefficients property
      * @param value Value to set for the coefficients property.
      */
-    public void setCoefficients(@jakarta.annotation.Nullable final Json value) {
+    public void setCoefficients(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("coefficients", value);
     }
     /**
      * Sets the m property value. The m property
      * @param value Value to set for the m property.
      */
-    public void setM(@jakarta.annotation.Nullable final Json value) {
+    public void setM(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("m", value);
     }
     /**
      * Sets the n property value. The n property
      * @param value Value to set for the n property.
      */
-    public void setN(@jakarta.annotation.Nullable final Json value) {
+    public void setN(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("n", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
-    public void setX(@jakarta.annotation.Nullable final Json value) {
+    public void setX(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("x", value);
     }
 }

@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.accrint;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,18 +58,18 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the basis property value. The basis property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getBasis() {
+    public UntypedNode getBasis() {
         return this.backingStore.get("basis");
     }
     /**
      * Gets the calcMethod property value. The calcMethod property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCalcMethod() {
+    public UntypedNode getCalcMethod() {
         return this.backingStore.get("calcMethod");
     }
     /**
@@ -79,62 +79,62 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
-        deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("calcMethod", (n) -> { this.setCalcMethod(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("firstInterest", (n) -> { this.setFirstInterest(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("frequency", (n) -> { this.setFrequency(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("issue", (n) -> { this.setIssue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("par", (n) -> { this.setPar(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("settlement", (n) -> { this.setSettlement(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("calcMethod", (n) -> { this.setCalcMethod(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("firstInterest", (n) -> { this.setFirstInterest(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("frequency", (n) -> { this.setFrequency(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("issue", (n) -> { this.setIssue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("par", (n) -> { this.setPar(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("settlement", (n) -> { this.setSettlement(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the firstInterest property value. The firstInterest property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFirstInterest() {
+    public UntypedNode getFirstInterest() {
         return this.backingStore.get("firstInterest");
     }
     /**
      * Gets the frequency property value. The frequency property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFrequency() {
+    public UntypedNode getFrequency() {
         return this.backingStore.get("frequency");
     }
     /**
      * Gets the issue property value. The issue property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getIssue() {
+    public UntypedNode getIssue() {
         return this.backingStore.get("issue");
     }
     /**
      * Gets the par property value. The par property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPar() {
+    public UntypedNode getPar() {
         return this.backingStore.get("par");
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRate() {
+    public UntypedNode getRate() {
         return this.backingStore.get("rate");
     }
     /**
      * Gets the settlement property value. The settlement property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSettlement() {
+    public UntypedNode getSettlement() {
         return this.backingStore.get("settlement");
     }
     /**
@@ -172,56 +172,56 @@ public class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
      */
-    public void setBasis(@jakarta.annotation.Nullable final Json value) {
+    public void setBasis(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("basis", value);
     }
     /**
      * Sets the calcMethod property value. The calcMethod property
      * @param value Value to set for the calcMethod property.
      */
-    public void setCalcMethod(@jakarta.annotation.Nullable final Json value) {
+    public void setCalcMethod(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("calcMethod", value);
     }
     /**
      * Sets the firstInterest property value. The firstInterest property
      * @param value Value to set for the firstInterest property.
      */
-    public void setFirstInterest(@jakarta.annotation.Nullable final Json value) {
+    public void setFirstInterest(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("firstInterest", value);
     }
     /**
      * Sets the frequency property value. The frequency property
      * @param value Value to set for the frequency property.
      */
-    public void setFrequency(@jakarta.annotation.Nullable final Json value) {
+    public void setFrequency(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("frequency", value);
     }
     /**
      * Sets the issue property value. The issue property
      * @param value Value to set for the issue property.
      */
-    public void setIssue(@jakarta.annotation.Nullable final Json value) {
+    public void setIssue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("issue", value);
     }
     /**
      * Sets the par property value. The par property
      * @param value Value to set for the par property.
      */
-    public void setPar(@jakarta.annotation.Nullable final Json value) {
+    public void setPar(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("par", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
-    public void setRate(@jakarta.annotation.Nullable final Json value) {
+    public void setRate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("rate", value);
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
      */
-    public void setSettlement(@jakarta.annotation.Nullable final Json value) {
+    public void setSettlement(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("settlement", value);
     }
 }

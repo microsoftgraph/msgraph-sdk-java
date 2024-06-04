@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.datevalue;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class DatevaluePostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the dateText property value. The dateText property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDateText() {
+    public UntypedNode getDateText() {
         return this.backingStore.get("dateText");
     }
     /**
@@ -71,7 +71,7 @@ public class DatevaluePostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("dateText", (n) -> { this.setDateText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("dateText", (n) -> { this.setDateText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -102,7 +102,7 @@ public class DatevaluePostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the dateText property value. The dateText property
      * @param value Value to set for the dateText property.
      */
-    public void setDateText(@jakarta.annotation.Nullable final Json value) {
+    public void setDateText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("dateText", value);
     }
 }

@@ -41,7 +41,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports/microsoft.graph.identityGovernance.summary(startDateTime={startDateTime},endDateTime={endDateTime})", rawUrl);
     }
     /**
-     * Invoke function summary
+     * Get a taskReportSummary object. This API provides a summary of task processing results for a specified time period. Because the volume of task processing results and task reports returned by the List API calls can be overwhelming, this summary allows the administrator to get a quick overview based on counts.
      * @return a {@link TaskReportSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -50,7 +50,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
         return get(null);
     }
     /**
-     * Invoke function summary
+     * Get a taskReportSummary object. This API provides a summary of task processing results for a specified time period. Because the volume of task processing results and task reports returned by the List API calls can be overwhelming, this summary allows the administrator to get a quick overview based on counts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TaskReportSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -63,7 +63,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
         return this.requestAdapter.send(requestInfo, errorMapping, TaskReportSummary::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function summary
+     * Get a taskReportSummary object. This API provides a summary of task processing results for a specified time period. Because the volume of task processing results and task reports returned by the List API calls can be overwhelming, this summary allows the administrator to get a quick overview based on counts.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function summary
+     * Get a taskReportSummary object. This API provides a summary of task processing results for a specified time period. Because the volume of task processing results and task reports returned by the List API calls can be overwhelming, this summary allows the administrator to get a quick overview based on counts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

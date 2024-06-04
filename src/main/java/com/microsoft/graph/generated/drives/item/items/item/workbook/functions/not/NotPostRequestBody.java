@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.not;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,15 +63,15 @@ public class NotPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("logical", (n) -> { this.setLogical(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("logical", (n) -> { this.setLogical(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the logical property value. The logical property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLogical() {
+    public UntypedNode getLogical() {
         return this.backingStore.get("logical");
     }
     /**
@@ -102,7 +102,7 @@ public class NotPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * Sets the logical property value. The logical property
      * @param value Value to set for the logical property.
      */
-    public void setLogical(@jakarta.annotation.Nullable final Json value) {
+    public void setLogical(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("logical", value);
     }
 }

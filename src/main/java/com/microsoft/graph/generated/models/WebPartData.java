@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -81,7 +82,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
         deserializerMap.put("dataVersion", (n) -> { this.setDataVersion(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("properties", (n) -> { this.setProperties(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("properties", (n) -> { this.setProperties(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("serverProcessedContent", (n) -> { this.setServerProcessedContent(n.getObjectValue(ServerProcessedContent::createFromDiscriminatorValue)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
@@ -96,10 +97,10 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the properties property value. Properties bag of the web part.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProperties() {
+    public UntypedNode getProperties() {
         return this.backingStore.get("properties");
     }
     /**
@@ -172,7 +173,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the properties property value. Properties bag of the web part.
      * @param value Value to set for the properties property.
      */
-    public void setProperties(@jakarta.annotation.Nullable final Json value) {
+    public void setProperties(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("properties", value);
     }
     /**

@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.dollar;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class DollarPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the decimals property value. The decimals property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDecimals() {
+    public UntypedNode getDecimals() {
         return this.backingStore.get("decimals");
     }
     /**
@@ -71,16 +71,16 @@ public class DollarPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("decimals", (n) -> { this.setDecimals(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("decimals", (n) -> { this.setDecimals(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the number property value. The number property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber() {
+    public UntypedNode getNumber() {
         return this.backingStore.get("number");
     }
     /**
@@ -112,14 +112,14 @@ public class DollarPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the decimals property value. The decimals property
      * @param value Value to set for the decimals property.
      */
-    public void setDecimals(@jakarta.annotation.Nullable final Json value) {
+    public void setDecimals(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("decimals", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
-    public void setNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number", value);
     }
 }

@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.effect;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,24 +63,24 @@ public class EffectPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("nominalRate", (n) -> { this.setNominalRate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("npery", (n) -> { this.setNpery(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("nominalRate", (n) -> { this.setNominalRate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("npery", (n) -> { this.setNpery(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the nominalRate property value. The nominalRate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNominalRate() {
+    public UntypedNode getNominalRate() {
         return this.backingStore.get("nominalRate");
     }
     /**
      * Gets the npery property value. The npery property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNpery() {
+    public UntypedNode getNpery() {
         return this.backingStore.get("npery");
     }
     /**
@@ -112,14 +112,14 @@ public class EffectPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the nominalRate property value. The nominalRate property
      * @param value Value to set for the nominalRate property.
      */
-    public void setNominalRate(@jakarta.annotation.Nullable final Json value) {
+    public void setNominalRate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("nominalRate", value);
     }
     /**
      * Sets the npery property value. The npery property
      * @param value Value to set for the npery property.
      */
-    public void setNpery(@jakarta.annotation.Nullable final Json value) {
+    public void setNpery(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("npery", value);
     }
 }

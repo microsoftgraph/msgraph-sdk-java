@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.erfc_precise;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,15 +63,15 @@ public class ErfCPrecisePostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("X", (n) -> { this.setX(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("X", (n) -> { this.setX(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the X property value. The X property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getX() {
+    public UntypedNode getX() {
         return this.backingStore.get("x");
     }
     /**
@@ -102,7 +102,7 @@ public class ErfCPrecisePostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the X property value. The X property
      * @param value Value to set for the X property.
      */
-    public void setX(@jakarta.annotation.Nullable final Json value) {
+    public void setX(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("x", value);
     }
 }

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getObjectValue(WorkbookFilter::createFromDiscriminatorValue)); });
         deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -63,10 +64,10 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
@@ -106,7 +107,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
 }

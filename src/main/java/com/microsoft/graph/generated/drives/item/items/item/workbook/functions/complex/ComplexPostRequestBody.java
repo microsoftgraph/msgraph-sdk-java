@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.complex;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,33 +63,33 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("iNum", (n) -> { this.setINum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("realNum", (n) -> { this.setRealNum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("suffix", (n) -> { this.setSuffix(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("iNum", (n) -> { this.setINum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("realNum", (n) -> { this.setRealNum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("suffix", (n) -> { this.setSuffix(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the iNum property value. The iNum property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getINum() {
+    public UntypedNode getINum() {
         return this.backingStore.get("iNum");
     }
     /**
      * Gets the realNum property value. The realNum property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRealNum() {
+    public UntypedNode getRealNum() {
         return this.backingStore.get("realNum");
     }
     /**
      * Gets the suffix property value. The suffix property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSuffix() {
+    public UntypedNode getSuffix() {
         return this.backingStore.get("suffix");
     }
     /**
@@ -122,21 +122,21 @@ public class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the iNum property value. The iNum property
      * @param value Value to set for the iNum property.
      */
-    public void setINum(@jakarta.annotation.Nullable final Json value) {
+    public void setINum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("iNum", value);
     }
     /**
      * Sets the realNum property value. The realNum property
      * @param value Value to set for the realNum property.
      */
-    public void setRealNum(@jakarta.annotation.Nullable final Json value) {
+    public void setRealNum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("realNum", value);
     }
     /**
      * Sets the suffix property value. The suffix property
      * @param value Value to set for the suffix property.
      */
-    public void setSuffix(@jakarta.annotation.Nullable final Json value) {
+    public void setSuffix(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("suffix", value);
     }
 }

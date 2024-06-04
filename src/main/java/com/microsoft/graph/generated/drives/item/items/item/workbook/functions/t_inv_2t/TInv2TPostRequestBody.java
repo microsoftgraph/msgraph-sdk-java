@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.t_inv_2t;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class TInv2TPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the degFreedom property value. The degFreedom property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDegFreedom() {
+    public UntypedNode getDegFreedom() {
         return this.backingStore.get("degFreedom");
     }
     /**
@@ -71,16 +71,16 @@ public class TInv2TPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("degFreedom", (n) -> { this.setDegFreedom(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("degFreedom", (n) -> { this.setDegFreedom(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the probability property value. The probability property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProbability() {
+    public UntypedNode getProbability() {
         return this.backingStore.get("probability");
     }
     /**
@@ -112,14 +112,14 @@ public class TInv2TPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the degFreedom property value. The degFreedom property
      * @param value Value to set for the degFreedom property.
      */
-    public void setDegFreedom(@jakarta.annotation.Nullable final Json value) {
+    public void setDegFreedom(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("degFreedom", value);
     }
     /**
      * Sets the probability property value. The probability property
      * @param value Value to set for the probability property.
      */
-    public void setProbability(@jakarta.annotation.Nullable final Json value) {
+    public void setProbability(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("probability", value);
     }
 }

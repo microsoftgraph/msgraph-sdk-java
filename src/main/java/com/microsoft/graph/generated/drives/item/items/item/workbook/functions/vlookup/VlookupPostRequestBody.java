@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.vlookup;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the colIndexNum property value. The colIndexNum property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getColIndexNum() {
+    public UntypedNode getColIndexNum() {
         return this.backingStore.get("colIndexNum");
     }
     /**
@@ -71,34 +71,34 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("colIndexNum", (n) -> { this.setColIndexNum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("lookupValue", (n) -> { this.setLookupValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("rangeLookup", (n) -> { this.setRangeLookup(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("tableArray", (n) -> { this.setTableArray(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("colIndexNum", (n) -> { this.setColIndexNum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("lookupValue", (n) -> { this.setLookupValue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("rangeLookup", (n) -> { this.setRangeLookup(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("tableArray", (n) -> { this.setTableArray(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the lookupValue property value. The lookupValue property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLookupValue() {
+    public UntypedNode getLookupValue() {
         return this.backingStore.get("lookupValue");
     }
     /**
      * Gets the rangeLookup property value. The rangeLookup property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRangeLookup() {
+    public UntypedNode getRangeLookup() {
         return this.backingStore.get("rangeLookup");
     }
     /**
      * Gets the tableArray property value. The tableArray property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getTableArray() {
+    public UntypedNode getTableArray() {
         return this.backingStore.get("tableArray");
     }
     /**
@@ -132,28 +132,28 @@ public class VlookupPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the colIndexNum property value. The colIndexNum property
      * @param value Value to set for the colIndexNum property.
      */
-    public void setColIndexNum(@jakarta.annotation.Nullable final Json value) {
+    public void setColIndexNum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("colIndexNum", value);
     }
     /**
      * Sets the lookupValue property value. The lookupValue property
      * @param value Value to set for the lookupValue property.
      */
-    public void setLookupValue(@jakarta.annotation.Nullable final Json value) {
+    public void setLookupValue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("lookupValue", value);
     }
     /**
      * Sets the rangeLookup property value. The rangeLookup property
      * @param value Value to set for the rangeLookup property.
      */
-    public void setRangeLookup(@jakarta.annotation.Nullable final Json value) {
+    public void setRangeLookup(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("rangeLookup", value);
     }
     /**
      * Sets the tableArray property value. The tableArray property
      * @param value Value to set for the tableArray property.
      */
-    public void setTableArray(@jakarta.annotation.Nullable final Json value) {
+    public void setTableArray(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("tableArray", value);
     }
 }

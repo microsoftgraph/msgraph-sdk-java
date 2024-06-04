@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.decimal;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,24 +63,24 @@ public class DecimalPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("radix", (n) -> { this.setRadix(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("radix", (n) -> { this.setRadix(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the number property value. The number property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber() {
+    public UntypedNode getNumber() {
         return this.backingStore.get("number");
     }
     /**
      * Gets the radix property value. The radix property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRadix() {
+    public UntypedNode getRadix() {
         return this.backingStore.get("radix");
     }
     /**
@@ -112,14 +112,14 @@ public class DecimalPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
-    public void setNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number", value);
     }
     /**
      * Sets the radix property value. The radix property
      * @param value Value to set for the radix property.
      */
-    public void setRadix(@jakarta.annotation.Nullable final Json value) {
+    public void setRadix(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("radix", value);
     }
 }

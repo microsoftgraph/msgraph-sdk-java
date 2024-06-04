@@ -61,19 +61,21 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The associated individual user execution.
+     * Get user processing results of a workflow run object.
      * @return a {@link UserProcessingResultCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-userprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserProcessingResultCollectionResponse get() {
         return get(null);
     }
     /**
-     * The associated individual user execution.
+     * Get user processing results of a workflow run object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserProcessingResultCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-userprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserProcessingResultCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +97,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
-     * The associated individual user execution.
+     * Get user processing results of a workflow run object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +105,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The associated individual user execution.
+     * Get user processing results of a workflow run object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -125,7 +127,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new UserProcessingResultsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The associated individual user execution.
+     * Get user processing results of a workflow run object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

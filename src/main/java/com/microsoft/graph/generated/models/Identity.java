@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.callrecords.UserIdentity;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -37,6 +38,7 @@ public class Identity implements AdditionalDataHolder, BackedModel, Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.azureCommunicationServicesUserIdentity": return new AzureCommunicationServicesUserIdentity();
+                case "#microsoft.graph.callRecords.userIdentity": return new UserIdentity();
                 case "#microsoft.graph.communicationsApplicationIdentity": return new CommunicationsApplicationIdentity();
                 case "#microsoft.graph.communicationsApplicationInstanceIdentity": return new CommunicationsApplicationInstanceIdentity();
                 case "#microsoft.graph.communicationsEncryptedIdentity": return new CommunicationsEncryptedIdentity();
@@ -81,7 +83,7 @@ public class Identity implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The display name of the identity. The display name might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+     * Gets the displayName property value. The display name of the identity. The display name might not always be available or up to date. For example, if a user changes their display name the API might show the new value in a future response, but the items associated with the user don't show up as having changed when using delta.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +103,7 @@ public class Identity implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. Unique identifier for the identity.
+     * Gets the id property value. Unique identifier for the identity. When the unique identifier is unavailable, the displayName property is provided for the identity, but the id property isn't included in the response.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -143,14 +145,14 @@ public class Identity implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The display name of the identity. The display name might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+     * Sets the displayName property value. The display name of the identity. The display name might not always be available or up to date. For example, if a user changes their display name the API might show the new value in a future response, but the items associated with the user don't show up as having changed when using delta.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the id property value. Unique identifier for the identity.
+     * Sets the id property value. Unique identifier for the identity. When the unique identifier is unavailable, the displayName property is provided for the identity, but the id property isn't included in the response.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.syd;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the cost property value. The cost property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCost() {
+    public UntypedNode getCost() {
         return this.backingStore.get("cost");
     }
     /**
@@ -71,34 +71,34 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("cost", (n) -> { this.setCost(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("life", (n) -> { this.setLife(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("per", (n) -> { this.setPer(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("salvage", (n) -> { this.setSalvage(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("cost", (n) -> { this.setCost(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("life", (n) -> { this.setLife(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("per", (n) -> { this.setPer(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("salvage", (n) -> { this.setSalvage(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the life property value. The life property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLife() {
+    public UntypedNode getLife() {
         return this.backingStore.get("life");
     }
     /**
      * Gets the per property value. The per property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPer() {
+    public UntypedNode getPer() {
         return this.backingStore.get("per");
     }
     /**
      * Gets the salvage property value. The salvage property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSalvage() {
+    public UntypedNode getSalvage() {
         return this.backingStore.get("salvage");
     }
     /**
@@ -132,28 +132,28 @@ public class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
      */
-    public void setCost(@jakarta.annotation.Nullable final Json value) {
+    public void setCost(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("cost", value);
     }
     /**
      * Sets the life property value. The life property
      * @param value Value to set for the life property.
      */
-    public void setLife(@jakarta.annotation.Nullable final Json value) {
+    public void setLife(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("life", value);
     }
     /**
      * Sets the per property value. The per property
      * @param value Value to set for the per property.
      */
-    public void setPer(@jakarta.annotation.Nullable final Json value) {
+    public void setPer(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("per", value);
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
      */
-    public void setSalvage(@jakarta.annotation.Nullable final Json value) {
+    public void setSalvage(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("salvage", value);
     }
 }

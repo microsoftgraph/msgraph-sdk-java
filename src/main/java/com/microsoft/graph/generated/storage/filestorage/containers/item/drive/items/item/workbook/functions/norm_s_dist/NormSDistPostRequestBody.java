@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.norm_s_dist;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class NormSDistPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the cumulative property value. The cumulative property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCumulative() {
+    public UntypedNode getCumulative() {
         return this.backingStore.get("cumulative");
     }
     /**
@@ -71,16 +71,16 @@ public class NormSDistPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("z", (n) -> { this.setZ(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("z", (n) -> { this.setZ(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the z property value. The z property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getZ() {
+    public UntypedNode getZ() {
         return this.backingStore.get("z");
     }
     /**
@@ -112,14 +112,14 @@ public class NormSDistPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
      */
-    public void setCumulative(@jakarta.annotation.Nullable final Json value) {
+    public void setCumulative(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("cumulative", value);
     }
     /**
      * Sets the z property value. The z property
      * @param value Value to set for the z property.
      */
-    public void setZ(@jakarta.annotation.Nullable final Json value) {
+    public void setZ(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("z", value);
     }
 }

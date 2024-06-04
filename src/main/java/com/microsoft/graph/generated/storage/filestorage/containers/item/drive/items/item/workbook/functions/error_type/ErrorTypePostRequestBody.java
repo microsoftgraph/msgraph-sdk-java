@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.error_type;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class ErrorTypePostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the errorVal property value. The errorVal property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getErrorVal() {
+    public UntypedNode getErrorVal() {
         return this.backingStore.get("errorVal");
     }
     /**
@@ -71,7 +71,7 @@ public class ErrorTypePostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("errorVal", (n) -> { this.setErrorVal(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("errorVal", (n) -> { this.setErrorVal(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -102,7 +102,7 @@ public class ErrorTypePostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the errorVal property value. The errorVal property
      * @param value Value to set for the errorVal property.
      */
-    public void setErrorVal(@jakarta.annotation.Nullable final Json value) {
+    public void setErrorVal(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("errorVal", value);
     }
 }

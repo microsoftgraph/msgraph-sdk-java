@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.log;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the base property value. The base property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getBase() {
+    public UntypedNode getBase() {
         return this.backingStore.get("base");
     }
     /**
@@ -71,16 +71,16 @@ public class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("base", (n) -> { this.setBase(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("base", (n) -> { this.setBase(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the number property value. The number property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber() {
+    public UntypedNode getNumber() {
         return this.backingStore.get("number");
     }
     /**
@@ -112,14 +112,14 @@ public class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * Sets the base property value. The base property
      * @param value Value to set for the base property.
      */
-    public void setBase(@jakarta.annotation.Nullable final Json value) {
+    public void setBase(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("base", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
-    public void setNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number", value);
     }
 }

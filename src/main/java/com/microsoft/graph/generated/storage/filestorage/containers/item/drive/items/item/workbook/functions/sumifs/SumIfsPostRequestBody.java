@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.sumifs;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,24 +63,24 @@ public class SumIfsPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("sumRange", (n) -> { this.setSumRange(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("sumRange", (n) -> { this.setSumRange(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the sumRange property value. The sumRange property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSumRange() {
+    public UntypedNode getSumRange() {
         return this.backingStore.get("sumRange");
     }
     /**
      * Gets the values property value. The values property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
@@ -112,14 +112,14 @@ public class SumIfsPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the sumRange property value. The sumRange property
      * @param value Value to set for the sumRange property.
      */
-    public void setSumRange(@jakarta.annotation.Nullable final Json value) {
+    public void setSumRange(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("sumRange", value);
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
 }

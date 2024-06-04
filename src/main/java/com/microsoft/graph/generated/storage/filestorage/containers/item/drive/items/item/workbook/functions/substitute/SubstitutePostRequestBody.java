@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.substitute;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,42 +63,42 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("instanceNum", (n) -> { this.setInstanceNum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("newText", (n) -> { this.setNewText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("oldText", (n) -> { this.setOldText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("instanceNum", (n) -> { this.setInstanceNum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("newText", (n) -> { this.setNewText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("oldText", (n) -> { this.setOldText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the instanceNum property value. The instanceNum property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getInstanceNum() {
+    public UntypedNode getInstanceNum() {
         return this.backingStore.get("instanceNum");
     }
     /**
      * Gets the newText property value. The newText property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNewText() {
+    public UntypedNode getNewText() {
         return this.backingStore.get("newText");
     }
     /**
      * Gets the oldText property value. The oldText property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getOldText() {
+    public UntypedNode getOldText() {
         return this.backingStore.get("oldText");
     }
     /**
      * Gets the text property value. The text property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getText() {
+    public UntypedNode getText() {
         return this.backingStore.get("text");
     }
     /**
@@ -132,28 +132,28 @@ public class SubstitutePostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the instanceNum property value. The instanceNum property
      * @param value Value to set for the instanceNum property.
      */
-    public void setInstanceNum(@jakarta.annotation.Nullable final Json value) {
+    public void setInstanceNum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("instanceNum", value);
     }
     /**
      * Sets the newText property value. The newText property
      * @param value Value to set for the newText property.
      */
-    public void setNewText(@jakarta.annotation.Nullable final Json value) {
+    public void setNewText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("newText", value);
     }
     /**
      * Sets the oldText property value. The oldText property
      * @param value Value to set for the oldText property.
      */
-    public void setOldText(@jakarta.annotation.Nullable final Json value) {
+    public void setOldText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("oldText", value);
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
-    public void setText(@jakarta.annotation.Nullable final Json value) {
+    public void setText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("text", value);
     }
 }

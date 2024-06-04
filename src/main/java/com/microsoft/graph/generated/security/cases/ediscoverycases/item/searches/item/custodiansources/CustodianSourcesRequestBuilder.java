@@ -59,19 +59,21 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/custodianSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Custodian sources that are included in the eDiscovery search.
+     * Get the list of custodial data sources associated with an eDiscovery search.
      * @return a {@link DataSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-custodiansources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DataSourceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Custodian sources that are included in the eDiscovery search.
+     * Get the list of custodial data sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DataSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-custodiansources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DataSourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Custodian sources that are included in the eDiscovery search.
+     * Get the list of custodial data sources associated with an eDiscovery search.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Custodian sources that are included in the eDiscovery search.
+     * Get the list of custodial data sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class CustodianSourcesRequestBuilder extends BaseRequestBuilder {
         return new CustodianSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Custodian sources that are included in the eDiscovery search.
+     * Get the list of custodial data sources associated with an eDiscovery search.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

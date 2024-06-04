@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.confidence_norm;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -50,10 +50,10 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the alpha property value. The alpha property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getAlpha() {
+    public UntypedNode getAlpha() {
         return this.backingStore.get("alpha");
     }
     /**
@@ -71,25 +71,25 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("size", (n) -> { this.setSize(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("standardDev", (n) -> { this.setStandardDev(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("standardDev", (n) -> { this.setStandardDev(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the size property value. The size property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSize() {
+    public UntypedNode getSize() {
         return this.backingStore.get("size");
     }
     /**
      * Gets the standardDev property value. The standardDev property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStandardDev() {
+    public UntypedNode getStandardDev() {
         return this.backingStore.get("standardDev");
     }
     /**
@@ -114,7 +114,7 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
      * Sets the alpha property value. The alpha property
      * @param value Value to set for the alpha property.
      */
-    public void setAlpha(@jakarta.annotation.Nullable final Json value) {
+    public void setAlpha(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("alpha", value);
     }
     /**
@@ -129,14 +129,14 @@ public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Back
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
      */
-    public void setSize(@jakarta.annotation.Nullable final Json value) {
+    public void setSize(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("size", value);
     }
     /**
      * Sets the standardDev property value. The standardDev property
      * @param value Value to set for the standardDev property.
      */
-    public void setStandardDev(@jakarta.annotation.Nullable final Json value) {
+    public void setStandardDev(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("standardDev", value);
     }
 }

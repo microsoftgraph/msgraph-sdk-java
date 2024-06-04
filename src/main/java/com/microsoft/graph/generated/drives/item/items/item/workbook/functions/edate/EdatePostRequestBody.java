@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.edate;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,24 +63,24 @@ public class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("months", (n) -> { this.setMonths(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("months", (n) -> { this.setMonths(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the months property value. The months property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMonths() {
+    public UntypedNode getMonths() {
         return this.backingStore.get("months");
     }
     /**
      * Gets the startDate property value. The startDate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStartDate() {
+    public UntypedNode getStartDate() {
         return this.backingStore.get("startDate");
     }
     /**
@@ -112,14 +112,14 @@ public class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the months property value. The months property
      * @param value Value to set for the months property.
      */
-    public void setMonths(@jakarta.annotation.Nullable final Json value) {
+    public void setMonths(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("months", value);
     }
     /**
      * Sets the startDate property value. The startDate property
      * @param value Value to set for the startDate property.
      */
-    public void setStartDate(@jakarta.annotation.Nullable final Json value) {
+    public void setStartDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("startDate", value);
     }
 }

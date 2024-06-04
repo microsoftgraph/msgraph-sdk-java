@@ -61,7 +61,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Schema::createFromDiscriminatorValue);
     }
     /**
-     * Create a new schema object.
+     * Create a new or update an existing schema for a Microsoft Search connection.
      * @param body The request body
      * @return a {@link Schema}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -72,7 +72,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Create a new schema object.
+     * Create a new or update an existing schema for a Microsoft Search connection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Schema}
@@ -108,7 +108,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new schema object.
+     * Create a new or update an existing schema for a Microsoft Search connection.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -117,7 +117,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new schema object.
+     * Create a new or update an existing schema for a Microsoft Search connection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

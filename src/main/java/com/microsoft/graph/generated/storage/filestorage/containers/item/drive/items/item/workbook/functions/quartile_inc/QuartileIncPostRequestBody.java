@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.quartile_inc;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -50,10 +50,10 @@ public class QuartileIncPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the array property value. The array property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getArray() {
+    public UntypedNode getArray() {
         return this.backingStore.get("array");
     }
     /**
@@ -71,16 +71,16 @@ public class QuartileIncPostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("array", (n) -> { this.setArray(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("quart", (n) -> { this.setQuart(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("array", (n) -> { this.setArray(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("quart", (n) -> { this.setQuart(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the quart property value. The quart property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getQuart() {
+    public UntypedNode getQuart() {
         return this.backingStore.get("quart");
     }
     /**
@@ -104,7 +104,7 @@ public class QuartileIncPostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the array property value. The array property
      * @param value Value to set for the array property.
      */
-    public void setArray(@jakarta.annotation.Nullable final Json value) {
+    public void setArray(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("array", value);
     }
     /**
@@ -119,7 +119,7 @@ public class QuartileIncPostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the quart property value. The quart property
      * @param value Value to set for the quart property.
      */
-    public void setQuart(@jakarta.annotation.Nullable final Json value) {
+    public void setQuart(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("quart", value);
     }
 }

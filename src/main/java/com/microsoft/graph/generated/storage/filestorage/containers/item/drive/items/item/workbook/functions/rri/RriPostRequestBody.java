@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.rri;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,33 +63,33 @@ public class RriPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("fv", (n) -> { this.setFv(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("nper", (n) -> { this.setNper(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("pv", (n) -> { this.setPv(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("fv", (n) -> { this.setFv(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("nper", (n) -> { this.setNper(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("pv", (n) -> { this.setPv(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the fv property value. The fv property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFv() {
+    public UntypedNode getFv() {
         return this.backingStore.get("fv");
     }
     /**
      * Gets the nper property value. The nper property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNper() {
+    public UntypedNode getNper() {
         return this.backingStore.get("nper");
     }
     /**
      * Gets the pv property value. The pv property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPv() {
+    public UntypedNode getPv() {
         return this.backingStore.get("pv");
     }
     /**
@@ -122,21 +122,21 @@ public class RriPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * Sets the fv property value. The fv property
      * @param value Value to set for the fv property.
      */
-    public void setFv(@jakarta.annotation.Nullable final Json value) {
+    public void setFv(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("fv", value);
     }
     /**
      * Sets the nper property value. The nper property
      * @param value Value to set for the nper property.
      */
-    public void setNper(@jakarta.annotation.Nullable final Json value) {
+    public void setNper(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("nper", value);
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
      */
-    public void setPv(@jakarta.annotation.Nullable final Json value) {
+    public void setPv(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("pv", value);
     }
 }

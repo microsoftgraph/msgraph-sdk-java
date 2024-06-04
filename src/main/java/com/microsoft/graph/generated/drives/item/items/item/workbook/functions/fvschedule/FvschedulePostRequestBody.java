@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.fvschedule;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,24 +63,24 @@ public class FvschedulePostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the principal property value. The principal property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPrincipal() {
+    public UntypedNode getPrincipal() {
         return this.backingStore.get("principal");
     }
     /**
      * Gets the schedule property value. The schedule property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSchedule() {
+    public UntypedNode getSchedule() {
         return this.backingStore.get("schedule");
     }
     /**
@@ -112,14 +112,14 @@ public class FvschedulePostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the principal property value. The principal property
      * @param value Value to set for the principal property.
      */
-    public void setPrincipal(@jakarta.annotation.Nullable final Json value) {
+    public void setPrincipal(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("principal", value);
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
      */
-    public void setSchedule(@jakarta.annotation.Nullable final Json value) {
+    public void setSchedule(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("schedule", value);
     }
 }

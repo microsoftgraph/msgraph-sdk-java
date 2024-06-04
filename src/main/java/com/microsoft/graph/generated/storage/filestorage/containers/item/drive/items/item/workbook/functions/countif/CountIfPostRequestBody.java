@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.countif;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the criteria property value. The criteria property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCriteria() {
+    public UntypedNode getCriteria() {
         return this.backingStore.get("criteria");
     }
     /**
@@ -71,16 +71,16 @@ public class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("range", (n) -> { this.setRange(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("range", (n) -> { this.setRange(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the range property value. The range property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRange() {
+    public UntypedNode getRange() {
         return this.backingStore.get("range");
     }
     /**
@@ -112,14 +112,14 @@ public class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the criteria property value. The criteria property
      * @param value Value to set for the criteria property.
      */
-    public void setCriteria(@jakarta.annotation.Nullable final Json value) {
+    public void setCriteria(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("criteria", value);
     }
     /**
      * Sets the range property value. The range property
      * @param value Value to set for the range property.
      */
-    public void setRange(@jakarta.annotation.Nullable final Json value) {
+    public void setRange(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("range", value);
     }
 }

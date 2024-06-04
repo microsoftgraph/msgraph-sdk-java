@@ -1,10 +1,10 @@
 package com.microsoft.graph.models.externalconnectors;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -64,7 +64,7 @@ public class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
-        deserializerMap.put("layout", (n) -> { this.setLayout(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("layout", (n) -> { this.setLayout(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
         deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(PropertyRule::createFromDiscriminatorValue)); });
@@ -79,11 +79,11 @@ public class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("id");
     }
     /**
-     * Gets the layout property value. The layout property
-     * @return a {@link Json}
+     * Gets the layout property value. The definition of the content's appearance, represented by an Adaptive Card, which is a JSON-serialized card object model.
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLayout() {
+    public UntypedNode getLayout() {
         return this.backingStore.get("layout");
     }
     /**
@@ -146,10 +146,10 @@ public class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the layout property value. The layout property
+     * Sets the layout property value. The definition of the content's appearance, represented by an Adaptive Card, which is a JSON-serialized card object model.
      * @param value Value to set for the layout property.
      */
-    public void setLayout(@jakarta.annotation.Nullable final Json value) {
+    public void setLayout(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("layout", value);
     }
     /**

@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.item.setdata;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -64,7 +64,7 @@ public class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("seriesBy", (n) -> { this.setSeriesBy(n.getStringValue()); });
-        deserializerMap.put("sourceData", (n) -> { this.setSourceData(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceData", (n) -> { this.setSourceData(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -77,10 +77,10 @@ public class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the sourceData property value. The sourceData property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSourceData() {
+    public UntypedNode getSourceData() {
         return this.backingStore.get("sourceData");
     }
     /**
@@ -119,7 +119,7 @@ public class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the sourceData property value. The sourceData property
      * @param value Value to set for the sourceData property.
      */
-    public void setSourceData(@jakarta.annotation.Nullable final Json value) {
+    public void setSourceData(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("sourceData", value);
     }
 }

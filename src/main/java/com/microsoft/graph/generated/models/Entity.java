@@ -1,6 +1,9 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.callrecords.CallRecord;
+import com.microsoft.graph.models.callrecords.Organizer;
+import com.microsoft.graph.models.callrecords.Participant;
+import com.microsoft.graph.models.callrecords.ParticipantBase;
 import com.microsoft.graph.models.callrecords.Segment;
 import com.microsoft.graph.models.callrecords.Session;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
@@ -287,6 +290,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.call": return new Call();
             case "#microsoft.graph.callRecording": return new CallRecording();
             case "#microsoft.graph.callRecords.callRecord": return new CallRecord();
+            case "#microsoft.graph.callRecords.organizer": return new Organizer();
+            case "#microsoft.graph.callRecords.participant": return new Participant();
+            case "#microsoft.graph.callRecords.participantBase": return new ParticipantBase();
             case "#microsoft.graph.callRecords.segment": return new Segment();
             case "#microsoft.graph.callRecords.session": return new Session();
             case "#microsoft.graph.callTranscript": return new CallTranscript();
@@ -663,9 +669,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
             case "#microsoft.graph.payload": return new Payload();
             case "#microsoft.graph.peopleAdminSettings": return new PeopleAdminSettings();
-            case "#microsoft.graph.permission": return new Permission();
-            case "#microsoft.graph.permissionGrantConditionSet": return new PermissionGrantConditionSet();
-            case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
         }
         return null;
     }
@@ -677,6 +680,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.permission": return new Permission();
+            case "#microsoft.graph.permissionGrantConditionSet": return new PermissionGrantConditionSet();
+            case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
             case "#microsoft.graph.person": return new Person();
             case "#microsoft.graph.phoneAuthenticationMethod": return new PhoneAuthenticationMethod();
             case "#microsoft.graph.pinnedChatMessageInfo": return new PinnedChatMessageInfo();
@@ -1013,6 +1019,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.windows81CompliancePolicy": return new Windows81CompliancePolicy();
             case "#microsoft.graph.windows81GeneralConfiguration": return new Windows81GeneralConfiguration();
             case "#microsoft.graph.windowsAppX": return new WindowsAppX();
+            case "#microsoft.graph.windowsAutopilotDeploymentProfile": return new WindowsAutopilotDeploymentProfile();
+            case "#microsoft.graph.windowsAutopilotDeploymentProfileAssignment": return new WindowsAutopilotDeploymentProfileAssignment();
             case "#microsoft.graph.windowsAutopilotDeviceIdentity": return new WindowsAutopilotDeviceIdentity();
             case "#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration": return new WindowsDefenderAdvancedThreatProtectionConfiguration();
             case "#microsoft.graph.windowsDeviceMalwareState": return new WindowsDeviceMalwareState();

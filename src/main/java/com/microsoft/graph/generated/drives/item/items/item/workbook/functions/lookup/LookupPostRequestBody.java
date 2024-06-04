@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.lookup;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,33 +63,33 @@ public class LookupPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("lookupValue", (n) -> { this.setLookupValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("lookupVector", (n) -> { this.setLookupVector(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("resultVector", (n) -> { this.setResultVector(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("lookupValue", (n) -> { this.setLookupValue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("lookupVector", (n) -> { this.setLookupVector(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("resultVector", (n) -> { this.setResultVector(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the lookupValue property value. The lookupValue property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLookupValue() {
+    public UntypedNode getLookupValue() {
         return this.backingStore.get("lookupValue");
     }
     /**
      * Gets the lookupVector property value. The lookupVector property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLookupVector() {
+    public UntypedNode getLookupVector() {
         return this.backingStore.get("lookupVector");
     }
     /**
      * Gets the resultVector property value. The resultVector property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getResultVector() {
+    public UntypedNode getResultVector() {
         return this.backingStore.get("resultVector");
     }
     /**
@@ -122,21 +122,21 @@ public class LookupPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the lookupValue property value. The lookupValue property
      * @param value Value to set for the lookupValue property.
      */
-    public void setLookupValue(@jakarta.annotation.Nullable final Json value) {
+    public void setLookupValue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("lookupValue", value);
     }
     /**
      * Sets the lookupVector property value. The lookupVector property
      * @param value Value to set for the lookupVector property.
      */
-    public void setLookupVector(@jakarta.annotation.Nullable final Json value) {
+    public void setLookupVector(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("lookupVector", value);
     }
     /**
      * Sets the resultVector property value. The resultVector property
      * @param value Value to set for the resultVector property.
      */
-    public void setResultVector(@jakarta.annotation.Nullable final Json value) {
+    public void setResultVector(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("resultVector", value);
     }
 }

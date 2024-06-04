@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.dollarfr;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class DollarFrPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the decimalDollar property value. The decimalDollar property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDecimalDollar() {
+    public UntypedNode getDecimalDollar() {
         return this.backingStore.get("decimalDollar");
     }
     /**
@@ -71,16 +71,16 @@ public class DollarFrPostRequestBody implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("decimalDollar", (n) -> { this.setDecimalDollar(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("fraction", (n) -> { this.setFraction(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("decimalDollar", (n) -> { this.setDecimalDollar(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("fraction", (n) -> { this.setFraction(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the fraction property value. The fraction property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFraction() {
+    public UntypedNode getFraction() {
         return this.backingStore.get("fraction");
     }
     /**
@@ -112,14 +112,14 @@ public class DollarFrPostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the decimalDollar property value. The decimalDollar property
      * @param value Value to set for the decimalDollar property.
      */
-    public void setDecimalDollar(@jakarta.annotation.Nullable final Json value) {
+    public void setDecimalDollar(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("decimalDollar", value);
     }
     /**
      * Sets the fraction property value. The fraction property
      * @param value Value to set for the fraction property.
      */
-    public void setFraction(@jakarta.annotation.Nullable final Json value) {
+    public void setFraction(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("fraction", value);
     }
 }

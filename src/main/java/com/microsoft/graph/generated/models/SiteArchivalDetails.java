@@ -48,7 +48,7 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
-     * Gets the archiveStatus property value. The archiveStatus property
+     * Gets the archiveStatus property value. Represents the current archive status of the site collection. Returned only on $select. The possible values are: recentlyArchived, fullyArchived, reactivating, unknownFutureValue.
      * @return a {@link SiteArchiveStatus}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the archiveStatus property value. The archiveStatus property
+     * Sets the archiveStatus property value. Represents the current archive status of the site collection. Returned only on $select. The possible values are: recentlyArchived, fullyArchived, reactivating, unknownFutureValue.
      * @param value Value to set for the archiveStatus property.
      */
     public void setArchiveStatus(@jakarta.annotation.Nullable final SiteArchiveStatus value) {

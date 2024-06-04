@@ -48,7 +48,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
         return value;
     }
     /**
-     * Gets the appId property value. The identifier for an application corresponding to a condition that triggers an authenticationEventListener.
+     * Gets the appId property value. The identifier for an application corresponding to a condition which will trigger an authenticationEventListener.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appId property value. The identifier for an application corresponding to a condition that triggers an authenticationEventListener.
+     * Sets the appId property value. The identifier for an application corresponding to a condition which will trigger an authenticationEventListener.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {

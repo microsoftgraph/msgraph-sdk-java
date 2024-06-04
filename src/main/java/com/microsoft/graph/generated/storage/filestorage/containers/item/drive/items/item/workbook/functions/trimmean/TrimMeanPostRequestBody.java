@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.trimmean;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -50,10 +50,10 @@ public class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the array property value. The array property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getArray() {
+    public UntypedNode getArray() {
         return this.backingStore.get("array");
     }
     /**
@@ -71,16 +71,16 @@ public class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("array", (n) -> { this.setArray(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("percent", (n) -> { this.setPercent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("array", (n) -> { this.setArray(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("percent", (n) -> { this.setPercent(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the percent property value. The percent property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPercent() {
+    public UntypedNode getPercent() {
         return this.backingStore.get("percent");
     }
     /**
@@ -104,7 +104,7 @@ public class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the array property value. The array property
      * @param value Value to set for the array property.
      */
-    public void setArray(@jakarta.annotation.Nullable final Json value) {
+    public void setArray(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("array", value);
     }
     /**
@@ -119,7 +119,7 @@ public class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the percent property value. The percent property
      * @param value Value to set for the percent property.
      */
-    public void setPercent(@jakarta.annotation.Nullable final Json value) {
+    public void setPercent(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("percent", value);
     }
 }

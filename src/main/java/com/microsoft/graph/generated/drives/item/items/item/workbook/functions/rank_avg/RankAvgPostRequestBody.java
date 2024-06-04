@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.rank_avg;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,33 +63,33 @@ public class RankAvgPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("order", (n) -> { this.setOrder(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("ref", (n) -> { this.setRef(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("order", (n) -> { this.setOrder(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("ref", (n) -> { this.setRef(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the number property value. The number property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber() {
+    public UntypedNode getNumber() {
         return this.backingStore.get("number");
     }
     /**
      * Gets the order property value. The order property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getOrder() {
+    public UntypedNode getOrder() {
         return this.backingStore.get("order");
     }
     /**
      * Gets the ref property value. The ref property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRef() {
+    public UntypedNode getRef() {
         return this.backingStore.get("ref");
     }
     /**
@@ -122,21 +122,21 @@ public class RankAvgPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
-    public void setNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number", value);
     }
     /**
      * Sets the order property value. The order property
      * @param value Value to set for the order property.
      */
-    public void setOrder(@jakarta.annotation.Nullable final Json value) {
+    public void setOrder(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("order", value);
     }
     /**
      * Sets the ref property value. The ref property
      * @param value Value to set for the ref property.
      */
-    public void setRef(@jakarta.annotation.Nullable final Json value) {
+    public void setRef(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("ref", value);
     }
 }
