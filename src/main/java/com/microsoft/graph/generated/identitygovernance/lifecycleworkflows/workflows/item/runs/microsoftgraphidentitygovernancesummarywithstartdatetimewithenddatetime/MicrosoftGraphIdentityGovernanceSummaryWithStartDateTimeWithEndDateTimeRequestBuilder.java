@@ -41,7 +41,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/runs/microsoft.graph.identityGovernance.summary(startDateTime={startDateTime},endDateTime={endDateTime})", rawUrl);
     }
     /**
-     * Invoke function summary
+     * Get a summary of runs for a specified time period. Because the amount of runs returned by the List API call can be overwhelming, this summary allows the administrator to get a quick overview based on counts.
      * @return a {@link RunSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -50,7 +50,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
         return get(null);
     }
     /**
-     * Invoke function summary
+     * Get a summary of runs for a specified time period. Because the amount of runs returned by the List API call can be overwhelming, this summary allows the administrator to get a quick overview based on counts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RunSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -63,7 +63,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
         return this.requestAdapter.send(requestInfo, errorMapping, RunSummary::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function summary
+     * Get a summary of runs for a specified time period. Because the amount of runs returned by the List API call can be overwhelming, this summary allows the administrator to get a quick overview based on counts.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDate
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function summary
+     * Get a summary of runs for a specified time period. Because the amount of runs returned by the List API call can be overwhelming, this summary allows the administrator to get a quick overview based on counts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

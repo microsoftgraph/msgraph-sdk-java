@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.findb;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,33 +62,33 @@ public class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("findText", (n) -> { this.setFindText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("startNum", (n) -> { this.setStartNum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("withinText", (n) -> { this.setWithinText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("findText", (n) -> { this.setFindText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("startNum", (n) -> { this.setStartNum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("withinText", (n) -> { this.setWithinText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the findText property value. The findText property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFindText() {
+    public UntypedNode getFindText() {
         return this.backingStore.get("findText");
     }
     /**
      * Gets the startNum property value. The startNum property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStartNum() {
+    public UntypedNode getStartNum() {
         return this.backingStore.get("startNum");
     }
     /**
      * Gets the withinText property value. The withinText property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getWithinText() {
+    public UntypedNode getWithinText() {
         return this.backingStore.get("withinText");
     }
     /**
@@ -122,21 +121,21 @@ public class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the findText property value. The findText property
      * @param value Value to set for the findText property.
      */
-    public void setFindText(@jakarta.annotation.Nullable final Json value) {
+    public void setFindText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("findText", value);
     }
     /**
      * Sets the startNum property value. The startNum property
      * @param value Value to set for the startNum property.
      */
-    public void setStartNum(@jakarta.annotation.Nullable final Json value) {
+    public void setStartNum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("startNum", value);
     }
     /**
      * Sets the withinText property value. The withinText property
      * @param value Value to set for the withinText property.
      */
-    public void setWithinText(@jakarta.annotation.Nullable final Json value) {
+    public void setWithinText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("withinText", value);
     }
 }

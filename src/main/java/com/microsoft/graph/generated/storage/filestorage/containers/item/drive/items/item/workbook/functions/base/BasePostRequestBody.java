@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.base;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,33 +62,33 @@ public class BasePostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("minLength", (n) -> { this.setMinLength(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("radix", (n) -> { this.setRadix(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("minLength", (n) -> { this.setMinLength(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("radix", (n) -> { this.setRadix(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the minLength property value. The minLength property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMinLength() {
+    public UntypedNode getMinLength() {
         return this.backingStore.get("minLength");
     }
     /**
      * Gets the number property value. The number property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber() {
+    public UntypedNode getNumber() {
         return this.backingStore.get("number");
     }
     /**
      * Gets the radix property value. The radix property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRadix() {
+    public UntypedNode getRadix() {
         return this.backingStore.get("radix");
     }
     /**
@@ -122,21 +121,21 @@ public class BasePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the minLength property value. The minLength property
      * @param value Value to set for the minLength property.
      */
-    public void setMinLength(@jakarta.annotation.Nullable final Json value) {
+    public void setMinLength(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("minLength", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
-    public void setNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number", value);
     }
     /**
      * Sets the radix property value. The radix property
      * @param value Value to set for the radix property.
      */
-    public void setRadix(@jakarta.annotation.Nullable final Json value) {
+    public void setRadix(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("radix", value);
     }
 }

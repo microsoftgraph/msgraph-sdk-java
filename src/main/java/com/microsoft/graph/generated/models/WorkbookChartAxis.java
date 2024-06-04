@@ -33,11 +33,11 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartAxisFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("majorGridlines", (n) -> { this.setMajorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
-        deserializerMap.put("majorUnit", (n) -> { this.setMajorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("maximum", (n) -> { this.setMaximum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("minimum", (n) -> { this.setMinimum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("majorUnit", (n) -> { this.setMajorUnit(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("maximum", (n) -> { this.setMaximum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("minimum", (n) -> { this.setMinimum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("minorGridlines", (n) -> { this.setMinorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
-        deserializerMap.put("minorUnit", (n) -> { this.setMinorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("minorUnit", (n) -> { this.setMinorUnit(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getObjectValue(WorkbookChartAxisTitle::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -59,26 +59,26 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     }
     /**
      * Gets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMajorUnit() {
+    public UntypedNode getMajorUnit() {
         return this.backingStore.get("majorUnit");
     }
     /**
      * Gets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMaximum() {
+    public UntypedNode getMaximum() {
         return this.backingStore.get("maximum");
     }
     /**
      * Gets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMinimum() {
+    public UntypedNode getMinimum() {
         return this.backingStore.get("minimum");
     }
     /**
@@ -91,10 +91,10 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     }
     /**
      * Gets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMinorUnit() {
+    public UntypedNode getMinorUnit() {
         return this.backingStore.get("minorUnit");
     }
     /**
@@ -139,21 +139,21 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * Sets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
      * @param value Value to set for the majorUnit property.
      */
-    public void setMajorUnit(@jakarta.annotation.Nullable final Json value) {
+    public void setMajorUnit(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("majorUnit", value);
     }
     /**
      * Sets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      * @param value Value to set for the maximum property.
      */
-    public void setMaximum(@jakarta.annotation.Nullable final Json value) {
+    public void setMaximum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("maximum", value);
     }
     /**
      * Sets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      * @param value Value to set for the minimum property.
      */
-    public void setMinimum(@jakarta.annotation.Nullable final Json value) {
+    public void setMinimum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("minimum", value);
     }
     /**
@@ -167,7 +167,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * Sets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
      * @param value Value to set for the minorUnit property.
      */
-    public void setMinorUnit(@jakarta.annotation.Nullable final Json value) {
+    public void setMinorUnit(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("minorUnit", value);
     }
     /**

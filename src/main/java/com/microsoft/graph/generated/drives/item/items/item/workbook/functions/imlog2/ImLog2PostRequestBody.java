@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.imlog2;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,15 +62,15 @@ public class ImLog2PostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("inumber", (n) -> { this.setInumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("inumber", (n) -> { this.setInumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the inumber property value. The inumber property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getInumber() {
+    public UntypedNode getInumber() {
         return this.backingStore.get("inumber");
     }
     /**
@@ -102,7 +101,7 @@ public class ImLog2PostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the inumber property value. The inumber property
      * @param value Value to set for the inumber property.
      */
-    public void setInumber(@jakarta.annotation.Nullable final Json value) {
+    public void setInumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("inumber", value);
     }
 }

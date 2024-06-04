@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.roman;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("form", (n) -> { this.setForm(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("form", (n) -> { this.setForm(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the form property value. The form property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getForm() {
+    public UntypedNode getForm() {
         return this.backingStore.get("form");
     }
     /**
      * Gets the number property value. The number property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber() {
+    public UntypedNode getNumber() {
         return this.backingStore.get("number");
     }
     /**
@@ -112,14 +111,14 @@ public class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the form property value. The form property
      * @param value Value to set for the form property.
      */
-    public void setForm(@jakarta.annotation.Nullable final Json value) {
+    public void setForm(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("form", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
-    public void setNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number", value);
     }
 }

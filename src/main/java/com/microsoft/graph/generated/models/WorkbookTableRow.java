@@ -32,7 +32,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -45,10 +45,10 @@ public class WorkbookTableRow extends Entity implements Parsable {
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
@@ -72,7 +72,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
 }

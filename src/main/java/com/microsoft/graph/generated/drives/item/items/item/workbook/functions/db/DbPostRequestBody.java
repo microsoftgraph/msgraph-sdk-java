@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.db;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the cost property value. The cost property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCost() {
+    public UntypedNode getCost() {
         return this.backingStore.get("cost");
     }
     /**
@@ -71,43 +70,43 @@ public class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("cost", (n) -> { this.setCost(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("life", (n) -> { this.setLife(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("month", (n) -> { this.setMonth(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("period", (n) -> { this.setPeriod(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("salvage", (n) -> { this.setSalvage(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("cost", (n) -> { this.setCost(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("life", (n) -> { this.setLife(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("month", (n) -> { this.setMonth(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("period", (n) -> { this.setPeriod(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("salvage", (n) -> { this.setSalvage(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the life property value. The life property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLife() {
+    public UntypedNode getLife() {
         return this.backingStore.get("life");
     }
     /**
      * Gets the month property value. The month property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMonth() {
+    public UntypedNode getMonth() {
         return this.backingStore.get("month");
     }
     /**
      * Gets the period property value. The period property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPeriod() {
+    public UntypedNode getPeriod() {
         return this.backingStore.get("period");
     }
     /**
      * Gets the salvage property value. The salvage property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSalvage() {
+    public UntypedNode getSalvage() {
         return this.backingStore.get("salvage");
     }
     /**
@@ -142,35 +141,35 @@ public class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
      */
-    public void setCost(@jakarta.annotation.Nullable final Json value) {
+    public void setCost(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("cost", value);
     }
     /**
      * Sets the life property value. The life property
      * @param value Value to set for the life property.
      */
-    public void setLife(@jakarta.annotation.Nullable final Json value) {
+    public void setLife(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("life", value);
     }
     /**
      * Sets the month property value. The month property
      * @param value Value to set for the month property.
      */
-    public void setMonth(@jakarta.annotation.Nullable final Json value) {
+    public void setMonth(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("month", value);
     }
     /**
      * Sets the period property value. The period property
      * @param value Value to set for the period property.
      */
-    public void setPeriod(@jakarta.annotation.Nullable final Json value) {
+    public void setPeriod(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("period", value);
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
      */
-    public void setSalvage(@jakarta.annotation.Nullable final Json value) {
+    public void setSalvage(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("salvage", value);
     }
 }

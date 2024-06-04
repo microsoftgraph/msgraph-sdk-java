@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.hyperlink;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("friendlyName", (n) -> { this.setFriendlyName(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("linkLocation", (n) -> { this.setLinkLocation(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("friendlyName", (n) -> { this.setFriendlyName(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("linkLocation", (n) -> { this.setLinkLocation(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the friendlyName property value. The friendlyName property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFriendlyName() {
+    public UntypedNode getFriendlyName() {
         return this.backingStore.get("friendlyName");
     }
     /**
      * Gets the linkLocation property value. The linkLocation property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLinkLocation() {
+    public UntypedNode getLinkLocation() {
         return this.backingStore.get("linkLocation");
     }
     /**
@@ -112,14 +111,14 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the friendlyName property value. The friendlyName property
      * @param value Value to set for the friendlyName property.
      */
-    public void setFriendlyName(@jakarta.annotation.Nullable final Json value) {
+    public void setFriendlyName(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("friendlyName", value);
     }
     /**
      * Sets the linkLocation property value. The linkLocation property
      * @param value Value to set for the linkLocation property.
      */
-    public void setLinkLocation(@jakarta.annotation.Nullable final Json value) {
+    public void setLinkLocation(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("linkLocation", value);
     }
 }

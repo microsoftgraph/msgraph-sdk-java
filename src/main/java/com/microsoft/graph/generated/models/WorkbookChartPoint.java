@@ -32,7 +32,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartPointFormat::createFromDiscriminatorValue)); });
-        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -45,10 +45,10 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     }
     /**
      * Gets the value property value. Returns the value of a chart point. Read-only.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValue() {
+    public UntypedNode getValue() {
         return this.backingStore.get("value");
     }
     /**
@@ -72,7 +72,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
      * Sets the value property value. Returns the value of a chart point. Read-only.
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final Json value) {
+    public void setValue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("value", value);
     }
 }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.imdiv;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class ImDivPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("inumber1", (n) -> { this.setInumber1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("inumber2", (n) -> { this.setInumber2(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("inumber1", (n) -> { this.setInumber1(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("inumber2", (n) -> { this.setInumber2(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the inumber1 property value. The inumber1 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getInumber1() {
+    public UntypedNode getInumber1() {
         return this.backingStore.get("inumber1");
     }
     /**
      * Gets the inumber2 property value. The inumber2 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getInumber2() {
+    public UntypedNode getInumber2() {
         return this.backingStore.get("inumber2");
     }
     /**
@@ -112,14 +111,14 @@ public class ImDivPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the inumber1 property value. The inumber1 property
      * @param value Value to set for the inumber1 property.
      */
-    public void setInumber1(@jakarta.annotation.Nullable final Json value) {
+    public void setInumber1(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("inumber1", value);
     }
     /**
      * Sets the inumber2 property value. The inumber2 property
      * @param value Value to set for the inumber2 property.
      */
-    public void setInumber2(@jakarta.annotation.Nullable final Json value) {
+    public void setInumber2(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("inumber2", value);
     }
 }

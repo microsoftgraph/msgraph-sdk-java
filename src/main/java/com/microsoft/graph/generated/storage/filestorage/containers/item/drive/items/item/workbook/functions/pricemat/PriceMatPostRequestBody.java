@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.pricemat;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class PriceMatPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the basis property value. The basis property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getBasis() {
+    public UntypedNode getBasis() {
         return this.backingStore.get("basis");
     }
     /**
@@ -71,52 +70,52 @@ public class PriceMatPostRequestBody implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("issue", (n) -> { this.setIssue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("maturity", (n) -> { this.setMaturity(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("settlement", (n) -> { this.setSettlement(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("yld", (n) -> { this.setYld(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("issue", (n) -> { this.setIssue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("maturity", (n) -> { this.setMaturity(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("settlement", (n) -> { this.setSettlement(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("yld", (n) -> { this.setYld(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the issue property value. The issue property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getIssue() {
+    public UntypedNode getIssue() {
         return this.backingStore.get("issue");
     }
     /**
      * Gets the maturity property value. The maturity property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMaturity() {
+    public UntypedNode getMaturity() {
         return this.backingStore.get("maturity");
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRate() {
+    public UntypedNode getRate() {
         return this.backingStore.get("rate");
     }
     /**
      * Gets the settlement property value. The settlement property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSettlement() {
+    public UntypedNode getSettlement() {
         return this.backingStore.get("settlement");
     }
     /**
      * Gets the yld property value. The yld property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getYld() {
+    public UntypedNode getYld() {
         return this.backingStore.get("yld");
     }
     /**
@@ -152,42 +151,42 @@ public class PriceMatPostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
      */
-    public void setBasis(@jakarta.annotation.Nullable final Json value) {
+    public void setBasis(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("basis", value);
     }
     /**
      * Sets the issue property value. The issue property
      * @param value Value to set for the issue property.
      */
-    public void setIssue(@jakarta.annotation.Nullable final Json value) {
+    public void setIssue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("issue", value);
     }
     /**
      * Sets the maturity property value. The maturity property
      * @param value Value to set for the maturity property.
      */
-    public void setMaturity(@jakarta.annotation.Nullable final Json value) {
+    public void setMaturity(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("maturity", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
-    public void setRate(@jakarta.annotation.Nullable final Json value) {
+    public void setRate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("rate", value);
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
      */
-    public void setSettlement(@jakarta.annotation.Nullable final Json value) {
+    public void setSettlement(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("settlement", value);
     }
     /**
      * Sets the yld property value. The yld property
      * @param value Value to set for the yld property.
      */
-    public void setYld(@jakarta.annotation.Nullable final Json value) {
+    public void setYld(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("yld", value);
     }
 }

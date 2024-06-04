@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.mirr;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,33 +62,33 @@ public class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("financeRate", (n) -> { this.setFinanceRate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("reinvestRate", (n) -> { this.setReinvestRate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("financeRate", (n) -> { this.setFinanceRate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("reinvestRate", (n) -> { this.setReinvestRate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the financeRate property value. The financeRate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFinanceRate() {
+    public UntypedNode getFinanceRate() {
         return this.backingStore.get("financeRate");
     }
     /**
      * Gets the reinvestRate property value. The reinvestRate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getReinvestRate() {
+    public UntypedNode getReinvestRate() {
         return this.backingStore.get("reinvestRate");
     }
     /**
      * Gets the values property value. The values property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
@@ -122,21 +121,21 @@ public class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the financeRate property value. The financeRate property
      * @param value Value to set for the financeRate property.
      */
-    public void setFinanceRate(@jakarta.annotation.Nullable final Json value) {
+    public void setFinanceRate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("financeRate", value);
     }
     /**
      * Sets the reinvestRate property value. The reinvestRate property
      * @param value Value to set for the reinvestRate property.
      */
-    public void setReinvestRate(@jakarta.annotation.Nullable final Json value) {
+    public void setReinvestRate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("reinvestRate", value);
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
 }

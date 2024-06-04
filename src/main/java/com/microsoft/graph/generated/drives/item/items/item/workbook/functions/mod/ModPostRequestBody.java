@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.mod;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class ModPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the divisor property value. The divisor property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDivisor() {
+    public UntypedNode getDivisor() {
         return this.backingStore.get("divisor");
     }
     /**
@@ -71,16 +70,16 @@ public class ModPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("divisor", (n) -> { this.setDivisor(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("divisor", (n) -> { this.setDivisor(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the number property value. The number property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber() {
+    public UntypedNode getNumber() {
         return this.backingStore.get("number");
     }
     /**
@@ -112,14 +111,14 @@ public class ModPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * Sets the divisor property value. The divisor property
      * @param value Value to set for the divisor property.
      */
-    public void setDivisor(@jakarta.annotation.Nullable final Json value) {
+    public void setDivisor(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("divisor", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
-    public void setNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number", value);
     }
 }

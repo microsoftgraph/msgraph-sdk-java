@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.numbervalue;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class NumberValuePostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the decimalSeparator property value. The decimalSeparator property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDecimalSeparator() {
+    public UntypedNode getDecimalSeparator() {
         return this.backingStore.get("decimalSeparator");
     }
     /**
@@ -71,25 +70,25 @@ public class NumberValuePostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("decimalSeparator", (n) -> { this.setDecimalSeparator(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("groupSeparator", (n) -> { this.setGroupSeparator(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("decimalSeparator", (n) -> { this.setDecimalSeparator(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupSeparator", (n) -> { this.setGroupSeparator(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the groupSeparator property value. The groupSeparator property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getGroupSeparator() {
+    public UntypedNode getGroupSeparator() {
         return this.backingStore.get("groupSeparator");
     }
     /**
      * Gets the text property value. The text property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getText() {
+    public UntypedNode getText() {
         return this.backingStore.get("text");
     }
     /**
@@ -122,21 +121,21 @@ public class NumberValuePostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the decimalSeparator property value. The decimalSeparator property
      * @param value Value to set for the decimalSeparator property.
      */
-    public void setDecimalSeparator(@jakarta.annotation.Nullable final Json value) {
+    public void setDecimalSeparator(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("decimalSeparator", value);
     }
     /**
      * Sets the groupSeparator property value. The groupSeparator property
      * @param value Value to set for the groupSeparator property.
      */
-    public void setGroupSeparator(@jakarta.annotation.Nullable final Json value) {
+    public void setGroupSeparator(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("groupSeparator", value);
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
-    public void setText(@jakarta.annotation.Nullable final Json value) {
+    public void setText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("text", value);
     }
 }

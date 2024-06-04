@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.cumipmt;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the endPeriod property value. The endPeriod property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getEndPeriod() {
+    public UntypedNode getEndPeriod() {
         return this.backingStore.get("endPeriod");
     }
     /**
@@ -71,52 +70,52 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("endPeriod", (n) -> { this.setEndPeriod(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("nper", (n) -> { this.setNper(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("pv", (n) -> { this.setPv(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("startPeriod", (n) -> { this.setStartPeriod(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("endPeriod", (n) -> { this.setEndPeriod(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("nper", (n) -> { this.setNper(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("pv", (n) -> { this.setPv(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("startPeriod", (n) -> { this.setStartPeriod(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the nper property value. The nper property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNper() {
+    public UntypedNode getNper() {
         return this.backingStore.get("nper");
     }
     /**
      * Gets the pv property value. The pv property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPv() {
+    public UntypedNode getPv() {
         return this.backingStore.get("pv");
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRate() {
+    public UntypedNode getRate() {
         return this.backingStore.get("rate");
     }
     /**
      * Gets the startPeriod property value. The startPeriod property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStartPeriod() {
+    public UntypedNode getStartPeriod() {
         return this.backingStore.get("startPeriod");
     }
     /**
      * Gets the type property value. The type property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getType() {
+    public UntypedNode getType() {
         return this.backingStore.get("type");
     }
     /**
@@ -152,42 +151,42 @@ public class CumIPmtPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the endPeriod property value. The endPeriod property
      * @param value Value to set for the endPeriod property.
      */
-    public void setEndPeriod(@jakarta.annotation.Nullable final Json value) {
+    public void setEndPeriod(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("endPeriod", value);
     }
     /**
      * Sets the nper property value. The nper property
      * @param value Value to set for the nper property.
      */
-    public void setNper(@jakarta.annotation.Nullable final Json value) {
+    public void setNper(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("nper", value);
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
      */
-    public void setPv(@jakarta.annotation.Nullable final Json value) {
+    public void setPv(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("pv", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
-    public void setRate(@jakarta.annotation.Nullable final Json value) {
+    public void setRate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("rate", value);
     }
     /**
      * Sets the startPeriod property value. The startPeriod property
      * @param value Value to set for the startPeriod property.
      */
-    public void setStartPeriod(@jakarta.annotation.Nullable final Json value) {
+    public void setStartPeriod(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("startPeriod", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
-    public void setType(@jakarta.annotation.Nullable final Json value) {
+    public void setType(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("type", value);
     }
 }

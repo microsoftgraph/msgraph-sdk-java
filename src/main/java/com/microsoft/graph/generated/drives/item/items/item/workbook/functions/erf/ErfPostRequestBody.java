@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.erf;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("lowerLimit", (n) -> { this.setLowerLimit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("upperLimit", (n) -> { this.setUpperLimit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("lowerLimit", (n) -> { this.setLowerLimit(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("upperLimit", (n) -> { this.setUpperLimit(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the lowerLimit property value. The lowerLimit property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLowerLimit() {
+    public UntypedNode getLowerLimit() {
         return this.backingStore.get("lowerLimit");
     }
     /**
      * Gets the upperLimit property value. The upperLimit property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getUpperLimit() {
+    public UntypedNode getUpperLimit() {
         return this.backingStore.get("upperLimit");
     }
     /**
@@ -112,14 +111,14 @@ public class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * Sets the lowerLimit property value. The lowerLimit property
      * @param value Value to set for the lowerLimit property.
      */
-    public void setLowerLimit(@jakarta.annotation.Nullable final Json value) {
+    public void setLowerLimit(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("lowerLimit", value);
     }
     /**
      * Sets the upperLimit property value. The upperLimit property
      * @param value Value to set for the upperLimit property.
      */
-    public void setUpperLimit(@jakarta.annotation.Nullable final Json value) {
+    public void setUpperLimit(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("upperLimit", value);
     }
 }

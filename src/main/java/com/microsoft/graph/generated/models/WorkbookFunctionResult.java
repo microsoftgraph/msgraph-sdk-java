@@ -40,15 +40,15 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("error", (n) -> { this.setError(n.getStringValue()); });
-        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValue() {
+    public UntypedNode getValue() {
         return this.backingStore.get("value");
     }
     /**
@@ -72,7 +72,7 @@ public class WorkbookFunctionResult extends Entity implements Parsable {
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final Json value) {
+    public void setValue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("value", value);
     }
 }

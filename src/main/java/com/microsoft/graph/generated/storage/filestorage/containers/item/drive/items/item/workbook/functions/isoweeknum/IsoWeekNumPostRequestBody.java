@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.isoweeknum;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class IsoWeekNumPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the date property value. The date property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDate() {
+    public UntypedNode getDate() {
         return this.backingStore.get("date");
     }
     /**
@@ -71,7 +70,7 @@ public class IsoWeekNumPostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("date", (n) -> { this.setDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("date", (n) -> { this.setDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -102,7 +101,7 @@ public class IsoWeekNumPostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the date property value. The date property
      * @param value Value to set for the date property.
      */
-    public void setDate(@jakarta.annotation.Nullable final Json value) {
+    public void setDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("date", value);
     }
 }

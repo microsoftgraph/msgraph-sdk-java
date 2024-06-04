@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.worksheets.item.tables.item.rows.add;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -64,7 +63,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -77,10 +76,10 @@ public class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the values property value. The values property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
@@ -119,7 +118,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
 }

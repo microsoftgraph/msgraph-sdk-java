@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.coupncd;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class CoupNcdPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the basis property value. The basis property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getBasis() {
+    public UntypedNode getBasis() {
         return this.backingStore.get("basis");
     }
     /**
@@ -71,34 +70,34 @@ public class CoupNcdPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("frequency", (n) -> { this.setFrequency(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("maturity", (n) -> { this.setMaturity(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("settlement", (n) -> { this.setSettlement(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("frequency", (n) -> { this.setFrequency(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("maturity", (n) -> { this.setMaturity(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("settlement", (n) -> { this.setSettlement(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the frequency property value. The frequency property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFrequency() {
+    public UntypedNode getFrequency() {
         return this.backingStore.get("frequency");
     }
     /**
      * Gets the maturity property value. The maturity property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMaturity() {
+    public UntypedNode getMaturity() {
         return this.backingStore.get("maturity");
     }
     /**
      * Gets the settlement property value. The settlement property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSettlement() {
+    public UntypedNode getSettlement() {
         return this.backingStore.get("settlement");
     }
     /**
@@ -132,28 +131,28 @@ public class CoupNcdPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
      */
-    public void setBasis(@jakarta.annotation.Nullable final Json value) {
+    public void setBasis(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("basis", value);
     }
     /**
      * Sets the frequency property value. The frequency property
      * @param value Value to set for the frequency property.
      */
-    public void setFrequency(@jakarta.annotation.Nullable final Json value) {
+    public void setFrequency(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("frequency", value);
     }
     /**
      * Sets the maturity property value. The maturity property
      * @param value Value to set for the maturity property.
      */
-    public void setMaturity(@jakarta.annotation.Nullable final Json value) {
+    public void setMaturity(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("maturity", value);
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
      */
-    public void setSettlement(@jakarta.annotation.Nullable final Json value) {
+    public void setSettlement(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("settlement", value);
     }
 }

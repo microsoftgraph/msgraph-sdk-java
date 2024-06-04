@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.averageif;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -50,10 +49,10 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the averageRange property value. The averageRange property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getAverageRange() {
+    public UntypedNode getAverageRange() {
         return this.backingStore.get("averageRange");
     }
     /**
@@ -66,10 +65,10 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the criteria property value. The criteria property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCriteria() {
+    public UntypedNode getCriteria() {
         return this.backingStore.get("criteria");
     }
     /**
@@ -79,17 +78,17 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("averageRange", (n) -> { this.setAverageRange(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("range", (n) -> { this.setRange(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("averageRange", (n) -> { this.setAverageRange(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("range", (n) -> { this.setRange(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the range property value. The range property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRange() {
+    public UntypedNode getRange() {
         return this.backingStore.get("range");
     }
     /**
@@ -114,7 +113,7 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the averageRange property value. The averageRange property
      * @param value Value to set for the averageRange property.
      */
-    public void setAverageRange(@jakarta.annotation.Nullable final Json value) {
+    public void setAverageRange(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("averageRange", value);
     }
     /**
@@ -129,14 +128,14 @@ public class AverageIfPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the criteria property value. The criteria property
      * @param value Value to set for the criteria property.
      */
-    public void setCriteria(@jakarta.annotation.Nullable final Json value) {
+    public void setCriteria(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("criteria", value);
     }
     /**
      * Sets the range property value. The range property
      * @param value Value to set for the range property.
      */
-    public void setRange(@jakarta.annotation.Nullable final Json value) {
+    public void setRange(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("range", value);
     }
 }

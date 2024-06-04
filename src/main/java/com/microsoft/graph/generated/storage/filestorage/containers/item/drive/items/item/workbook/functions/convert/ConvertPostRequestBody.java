@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.convert;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,33 +62,33 @@ public class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("fromUnit", (n) -> { this.setFromUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("toUnit", (n) -> { this.setToUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("fromUnit", (n) -> { this.setFromUnit(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("toUnit", (n) -> { this.setToUnit(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the fromUnit property value. The fromUnit property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFromUnit() {
+    public UntypedNode getFromUnit() {
         return this.backingStore.get("fromUnit");
     }
     /**
      * Gets the number property value. The number property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber() {
+    public UntypedNode getNumber() {
         return this.backingStore.get("number");
     }
     /**
      * Gets the toUnit property value. The toUnit property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getToUnit() {
+    public UntypedNode getToUnit() {
         return this.backingStore.get("toUnit");
     }
     /**
@@ -122,21 +121,21 @@ public class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the fromUnit property value. The fromUnit property
      * @param value Value to set for the fromUnit property.
      */
-    public void setFromUnit(@jakarta.annotation.Nullable final Json value) {
+    public void setFromUnit(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("fromUnit", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
-    public void setNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number", value);
     }
     /**
      * Sets the toUnit property value. The toUnit property
      * @param value Value to set for the toUnit property.
      */
-    public void setToUnit(@jakarta.annotation.Nullable final Json value) {
+    public void setToUnit(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("toUnit", value);
     }
 }

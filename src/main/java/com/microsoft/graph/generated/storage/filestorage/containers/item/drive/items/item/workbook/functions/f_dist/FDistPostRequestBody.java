@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.f_dist;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,26 +57,26 @@ public class FDistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the cumulative property value. The cumulative property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCumulative() {
+    public UntypedNode getCumulative() {
         return this.backingStore.get("cumulative");
     }
     /**
      * Gets the degFreedom1 property value. The degFreedom1 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDegFreedom1() {
+    public UntypedNode getDegFreedom1() {
         return this.backingStore.get("degFreedom1");
     }
     /**
      * Gets the degFreedom2 property value. The degFreedom2 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDegFreedom2() {
+    public UntypedNode getDegFreedom2() {
         return this.backingStore.get("degFreedom2");
     }
     /**
@@ -87,18 +86,18 @@ public class FDistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("degFreedom1", (n) -> { this.setDegFreedom1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("degFreedom2", (n) -> { this.setDegFreedom2(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("degFreedom1", (n) -> { this.setDegFreedom1(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("degFreedom2", (n) -> { this.setDegFreedom2(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the x property value. The x property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getX() {
+    public UntypedNode getX() {
         return this.backingStore.get("x");
     }
     /**
@@ -132,28 +131,28 @@ public class FDistPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
      */
-    public void setCumulative(@jakarta.annotation.Nullable final Json value) {
+    public void setCumulative(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("cumulative", value);
     }
     /**
      * Sets the degFreedom1 property value. The degFreedom1 property
      * @param value Value to set for the degFreedom1 property.
      */
-    public void setDegFreedom1(@jakarta.annotation.Nullable final Json value) {
+    public void setDegFreedom1(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("degFreedom1", value);
     }
     /**
      * Sets the degFreedom2 property value. The degFreedom2 property
      * @param value Value to set for the degFreedom2 property.
      */
-    public void setDegFreedom2(@jakarta.annotation.Nullable final Json value) {
+    public void setDegFreedom2(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("degFreedom2", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
-    public void setX(@jakarta.annotation.Nullable final Json value) {
+    public void setX(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("x", value);
     }
 }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.choose;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class ChoosePostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("indexNum", (n) -> { this.setIndexNum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("indexNum", (n) -> { this.setIndexNum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the indexNum property value. The indexNum property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getIndexNum() {
+    public UntypedNode getIndexNum() {
         return this.backingStore.get("indexNum");
     }
     /**
      * Gets the values property value. The values property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
@@ -112,14 +111,14 @@ public class ChoosePostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the indexNum property value. The indexNum property
      * @param value Value to set for the indexNum property.
      */
-    public void setIndexNum(@jakarta.annotation.Nullable final Json value) {
+    public void setIndexNum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("indexNum", value);
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
 }

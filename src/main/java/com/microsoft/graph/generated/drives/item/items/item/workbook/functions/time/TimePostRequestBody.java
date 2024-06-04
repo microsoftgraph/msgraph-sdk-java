@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.time;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,33 +62,33 @@ public class TimePostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("hour", (n) -> { this.setHour(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("minute", (n) -> { this.setMinute(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("second", (n) -> { this.setSecond(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("hour", (n) -> { this.setHour(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("minute", (n) -> { this.setMinute(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("second", (n) -> { this.setSecond(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the hour property value. The hour property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getHour() {
+    public UntypedNode getHour() {
         return this.backingStore.get("hour");
     }
     /**
      * Gets the minute property value. The minute property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMinute() {
+    public UntypedNode getMinute() {
         return this.backingStore.get("minute");
     }
     /**
      * Gets the second property value. The second property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSecond() {
+    public UntypedNode getSecond() {
         return this.backingStore.get("second");
     }
     /**
@@ -122,21 +121,21 @@ public class TimePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the hour property value. The hour property
      * @param value Value to set for the hour property.
      */
-    public void setHour(@jakarta.annotation.Nullable final Json value) {
+    public void setHour(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("hour", value);
     }
     /**
      * Sets the minute property value. The minute property
      * @param value Value to set for the minute property.
      */
-    public void setMinute(@jakarta.annotation.Nullable final Json value) {
+    public void setMinute(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("minute", value);
     }
     /**
      * Sets the second property value. The second property
      * @param value Value to set for the second property.
      */
-    public void setSecond(@jakarta.annotation.Nullable final Json value) {
+    public void setSecond(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("second", value);
     }
 }

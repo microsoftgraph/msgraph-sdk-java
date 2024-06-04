@@ -169,7 +169,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("fileAs");
     }
     /**
-     * Gets the generation property value. The contact's generation.
+     * Gets the generation property value. The contact's suffix.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -498,7 +498,7 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("fileAs", value);
     }
     /**
-     * Sets the generation property value. The contact's generation.
+     * Sets the generation property value. The contact's suffix.
      * @param value Value to set for the generation property.
      */
     public void setGeneration(@jakarta.annotation.Nullable final String value) {

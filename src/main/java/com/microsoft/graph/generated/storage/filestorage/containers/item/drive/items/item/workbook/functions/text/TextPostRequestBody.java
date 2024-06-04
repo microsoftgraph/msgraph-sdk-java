@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.text;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class TextPostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("formatText", (n) -> { this.setFormatText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("formatText", (n) -> { this.setFormatText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the formatText property value. The formatText property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFormatText() {
+    public UntypedNode getFormatText() {
         return this.backingStore.get("formatText");
     }
     /**
      * Gets the value property value. The value property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValue() {
+    public UntypedNode getValue() {
         return this.backingStore.get("value");
     }
     /**
@@ -112,14 +111,14 @@ public class TextPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the formatText property value. The formatText property
      * @param value Value to set for the formatText property.
      */
-    public void setFormatText(@jakarta.annotation.Nullable final Json value) {
+    public void setFormatText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("formatText", value);
     }
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final Json value) {
+    public void setValue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("value", value);
     }
 }

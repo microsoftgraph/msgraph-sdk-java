@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.randbetween;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the bottom property value. The bottom property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getBottom() {
+    public UntypedNode getBottom() {
         return this.backingStore.get("bottom");
     }
     /**
@@ -71,16 +70,16 @@ public class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("bottom", (n) -> { this.setBottom(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("top", (n) -> { this.setTop(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("bottom", (n) -> { this.setBottom(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("top", (n) -> { this.setTop(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the top property value. The top property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getTop() {
+    public UntypedNode getTop() {
         return this.backingStore.get("top");
     }
     /**
@@ -112,14 +111,14 @@ public class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the bottom property value. The bottom property
      * @param value Value to set for the bottom property.
      */
-    public void setBottom(@jakarta.annotation.Nullable final Json value) {
+    public void setBottom(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("bottom", value);
     }
     /**
      * Sets the top property value. The top property
      * @param value Value to set for the top property.
      */
-    public void setTop(@jakarta.annotation.Nullable final Json value) {
+    public void setTop(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("top", value);
     }
 }

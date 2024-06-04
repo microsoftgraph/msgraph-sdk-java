@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.days360;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class Days360PostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the endDate property value. The endDate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getEndDate() {
+    public UntypedNode getEndDate() {
         return this.backingStore.get("endDate");
     }
     /**
@@ -71,25 +70,25 @@ public class Days360PostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("method", (n) -> { this.setMethod(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("method", (n) -> { this.setMethod(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the method property value. The method property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMethod() {
+    public UntypedNode getMethod() {
         return this.backingStore.get("method");
     }
     /**
      * Gets the startDate property value. The startDate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStartDate() {
+    public UntypedNode getStartDate() {
         return this.backingStore.get("startDate");
     }
     /**
@@ -122,21 +121,21 @@ public class Days360PostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the endDate property value. The endDate property
      * @param value Value to set for the endDate property.
      */
-    public void setEndDate(@jakarta.annotation.Nullable final Json value) {
+    public void setEndDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("endDate", value);
     }
     /**
      * Sets the method property value. The method property
      * @param value Value to set for the method property.
      */
-    public void setMethod(@jakarta.annotation.Nullable final Json value) {
+    public void setMethod(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("method", value);
     }
     /**
      * Sets the startDate property value. The startDate property
      * @param value Value to set for the startDate property.
      */
-    public void setStartDate(@jakarta.annotation.Nullable final Json value) {
+    public void setStartDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("startDate", value);
     }
 }

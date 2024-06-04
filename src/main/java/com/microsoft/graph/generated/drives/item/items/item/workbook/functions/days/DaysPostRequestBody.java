@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.days;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class DaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the endDate property value. The endDate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getEndDate() {
+    public UntypedNode getEndDate() {
         return this.backingStore.get("endDate");
     }
     /**
@@ -71,16 +70,16 @@ public class DaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the startDate property value. The startDate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStartDate() {
+    public UntypedNode getStartDate() {
         return this.backingStore.get("startDate");
     }
     /**
@@ -112,14 +111,14 @@ public class DaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the endDate property value. The endDate property
      * @param value Value to set for the endDate property.
      */
-    public void setEndDate(@jakarta.annotation.Nullable final Json value) {
+    public void setEndDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("endDate", value);
     }
     /**
      * Sets the startDate property value. The startDate property
      * @param value Value to set for the startDate property.
      */
-    public void setStartDate(@jakarta.annotation.Nullable final Json value) {
+    public void setStartDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("startDate", value);
     }
 }

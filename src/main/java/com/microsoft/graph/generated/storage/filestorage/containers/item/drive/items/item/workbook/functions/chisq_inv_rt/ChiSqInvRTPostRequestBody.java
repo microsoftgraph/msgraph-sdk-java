@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.chisq_inv_rt;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class ChiSqInvRTPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the degFreedom property value. The degFreedom property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDegFreedom() {
+    public UntypedNode getDegFreedom() {
         return this.backingStore.get("degFreedom");
     }
     /**
@@ -71,16 +70,16 @@ public class ChiSqInvRTPostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("degFreedom", (n) -> { this.setDegFreedom(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("degFreedom", (n) -> { this.setDegFreedom(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the probability property value. The probability property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProbability() {
+    public UntypedNode getProbability() {
         return this.backingStore.get("probability");
     }
     /**
@@ -112,14 +111,14 @@ public class ChiSqInvRTPostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the degFreedom property value. The degFreedom property
      * @param value Value to set for the degFreedom property.
      */
-    public void setDegFreedom(@jakarta.annotation.Nullable final Json value) {
+    public void setDegFreedom(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("degFreedom", value);
     }
     /**
      * Sets the probability property value. The probability property
      * @param value Value to set for the probability property.
      */
-    public void setProbability(@jakarta.annotation.Nullable final Json value) {
+    public void setProbability(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("probability", value);
     }
 }

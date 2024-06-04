@@ -55,19 +55,21 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The details of the bot specified in the Teams app manifest.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @return a {@link TeamworkBot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkbot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkBot get() {
         return get(null);
     }
     /**
-     * The details of the bot specified in the Teams app manifest.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkBot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkbot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkBot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The details of the bot specified in the Teams app manifest.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The details of the bot specified in the Teams app manifest.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class BotRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The details of the bot specified in the Teams app manifest.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

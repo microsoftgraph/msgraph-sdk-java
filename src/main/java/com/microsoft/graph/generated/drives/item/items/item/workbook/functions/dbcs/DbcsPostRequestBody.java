@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.dbcs;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,15 +62,15 @@ public class DbcsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the text property value. The text property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getText() {
+    public UntypedNode getText() {
         return this.backingStore.get("text");
     }
     /**
@@ -102,7 +101,7 @@ public class DbcsPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
-    public void setText(@jakarta.annotation.Nullable final Json value) {
+    public void setText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("text", value);
     }
 }

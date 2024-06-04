@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.binom_dist_range;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,42 +62,42 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("numberS", (n) -> { this.setNumberS(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("numberS2", (n) -> { this.setNumberS2(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("probabilityS", (n) -> { this.setProbabilityS(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("trials", (n) -> { this.setTrials(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("numberS", (n) -> { this.setNumberS(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("numberS2", (n) -> { this.setNumberS2(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("probabilityS", (n) -> { this.setProbabilityS(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("trials", (n) -> { this.setTrials(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the numberS property value. The numberS property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumberS() {
+    public UntypedNode getNumberS() {
         return this.backingStore.get("numberS");
     }
     /**
      * Gets the numberS2 property value. The numberS2 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumberS2() {
+    public UntypedNode getNumberS2() {
         return this.backingStore.get("numberS2");
     }
     /**
      * Gets the probabilityS property value. The probabilityS property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProbabilityS() {
+    public UntypedNode getProbabilityS() {
         return this.backingStore.get("probabilityS");
     }
     /**
      * Gets the trials property value. The trials property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getTrials() {
+    public UntypedNode getTrials() {
         return this.backingStore.get("trials");
     }
     /**
@@ -132,28 +131,28 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Back
      * Sets the numberS property value. The numberS property
      * @param value Value to set for the numberS property.
      */
-    public void setNumberS(@jakarta.annotation.Nullable final Json value) {
+    public void setNumberS(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numberS", value);
     }
     /**
      * Sets the numberS2 property value. The numberS2 property
      * @param value Value to set for the numberS2 property.
      */
-    public void setNumberS2(@jakarta.annotation.Nullable final Json value) {
+    public void setNumberS2(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numberS2", value);
     }
     /**
      * Sets the probabilityS property value. The probabilityS property
      * @param value Value to set for the probabilityS property.
      */
-    public void setProbabilityS(@jakarta.annotation.Nullable final Json value) {
+    public void setProbabilityS(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("probabilityS", value);
     }
     /**
      * Sets the trials property value. The trials property
      * @param value Value to set for the trials property.
      */
-    public void setTrials(@jakarta.annotation.Nullable final Json value) {
+    public void setTrials(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("trials", value);
     }
 }

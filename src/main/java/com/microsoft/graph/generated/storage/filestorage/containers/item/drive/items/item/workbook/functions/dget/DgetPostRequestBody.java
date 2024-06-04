@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.dget;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,26 +57,26 @@ public class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the criteria property value. The criteria property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCriteria() {
+    public UntypedNode getCriteria() {
         return this.backingStore.get("criteria");
     }
     /**
      * Gets the database property value. The database property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDatabase() {
+    public UntypedNode getDatabase() {
         return this.backingStore.get("database");
     }
     /**
      * Gets the field property value. The field property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getField() {
+    public UntypedNode getField() {
         return this.backingStore.get("field");
     }
     /**
@@ -87,9 +86,9 @@ public class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("database", (n) -> { this.setDatabase(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("field", (n) -> { this.setField(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("database", (n) -> { this.setDatabase(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("field", (n) -> { this.setField(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -122,21 +121,21 @@ public class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the criteria property value. The criteria property
      * @param value Value to set for the criteria property.
      */
-    public void setCriteria(@jakarta.annotation.Nullable final Json value) {
+    public void setCriteria(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("criteria", value);
     }
     /**
      * Sets the database property value. The database property
      * @param value Value to set for the database property.
      */
-    public void setDatabase(@jakarta.annotation.Nullable final Json value) {
+    public void setDatabase(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("database", value);
     }
     /**
      * Sets the field property value. The field property
      * @param value Value to set for the field property.
      */
-    public void setField(@jakarta.annotation.Nullable final Json value) {
+    public void setField(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("field", value);
     }
 }

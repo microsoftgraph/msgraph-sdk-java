@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.worksheets.item.charts.add;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -64,7 +63,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("seriesBy", (n) -> { this.setSeriesBy(n.getStringValue()); });
-        deserializerMap.put("sourceData", (n) -> { this.setSourceData(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceData", (n) -> { this.setSourceData(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -78,10 +77,10 @@ public class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the sourceData property value. The sourceData property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSourceData() {
+    public UntypedNode getSourceData() {
         return this.backingStore.get("sourceData");
     }
     /**
@@ -129,7 +128,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * Sets the sourceData property value. The sourceData property
      * @param value Value to set for the sourceData property.
      */
-    public void setSourceData(@jakarta.annotation.Nullable final Json value) {
+    public void setSourceData(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("sourceData", value);
     }
     /**

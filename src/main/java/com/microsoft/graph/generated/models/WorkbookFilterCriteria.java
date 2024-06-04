@@ -102,7 +102,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         deserializerMap.put("icon", (n) -> { this.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("operator", (n) -> { this.setOperator(n.getStringValue()); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -139,10 +139,10 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the values property value. The values that appear in the cell.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
@@ -237,7 +237,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
      * Sets the values property value. The values that appear in the cell.
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
 }

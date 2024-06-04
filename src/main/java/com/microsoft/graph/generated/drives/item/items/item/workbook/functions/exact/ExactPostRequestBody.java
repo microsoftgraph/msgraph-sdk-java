@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.exact;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("text1", (n) -> { this.setText1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("text2", (n) -> { this.setText2(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("text1", (n) -> { this.setText1(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("text2", (n) -> { this.setText2(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the text1 property value. The text1 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getText1() {
+    public UntypedNode getText1() {
         return this.backingStore.get("text1");
     }
     /**
      * Gets the text2 property value. The text2 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getText2() {
+    public UntypedNode getText2() {
         return this.backingStore.get("text2");
     }
     /**
@@ -112,14 +111,14 @@ public class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the text1 property value. The text1 property
      * @param value Value to set for the text1 property.
      */
-    public void setText1(@jakarta.annotation.Nullable final Json value) {
+    public void setText1(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("text1", value);
     }
     /**
      * Sets the text2 property value. The text2 property
      * @param value Value to set for the text2 property.
      */
-    public void setText2(@jakarta.annotation.Nullable final Json value) {
+    public void setText2(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("text2", value);
     }
 }

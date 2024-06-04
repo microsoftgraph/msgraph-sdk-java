@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.beta_inv;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -37,10 +36,10 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the A property value. The A property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getA() {
+    public UntypedNode getA() {
         return this.backingStore.get("a");
     }
     /**
@@ -58,18 +57,18 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the alpha property value. The alpha property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getAlpha() {
+    public UntypedNode getAlpha() {
         return this.backingStore.get("alpha");
     }
     /**
      * Gets the B property value. The B property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getB() {
+    public UntypedNode getB() {
         return this.backingStore.get("b");
     }
     /**
@@ -82,10 +81,10 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the beta property value. The beta property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getBeta() {
+    public UntypedNode getBeta() {
         return this.backingStore.get("beta");
     }
     /**
@@ -95,19 +94,19 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("A", (n) -> { this.setA(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("B", (n) -> { this.setB(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("beta", (n) -> { this.setBeta(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("A", (n) -> { this.setA(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("B", (n) -> { this.setB(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("beta", (n) -> { this.setBeta(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the probability property value. The probability property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProbability() {
+    public UntypedNode getProbability() {
         return this.backingStore.get("probability");
     }
     /**
@@ -127,7 +126,7 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the A property value. The A property
      * @param value Value to set for the A property.
      */
-    public void setA(@jakarta.annotation.Nullable final Json value) {
+    public void setA(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("a", value);
     }
     /**
@@ -141,14 +140,14 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the alpha property value. The alpha property
      * @param value Value to set for the alpha property.
      */
-    public void setAlpha(@jakarta.annotation.Nullable final Json value) {
+    public void setAlpha(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("alpha", value);
     }
     /**
      * Sets the B property value. The B property
      * @param value Value to set for the B property.
      */
-    public void setB(@jakarta.annotation.Nullable final Json value) {
+    public void setB(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("b", value);
     }
     /**
@@ -163,14 +162,14 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the beta property value. The beta property
      * @param value Value to set for the beta property.
      */
-    public void setBeta(@jakarta.annotation.Nullable final Json value) {
+    public void setBeta(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("beta", value);
     }
     /**
      * Sets the probability property value. The probability property
      * @param value Value to set for the probability property.
      */
-    public void setProbability(@jakarta.annotation.Nullable final Json value) {
+    public void setProbability(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("probability", value);
     }
 }

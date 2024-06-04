@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.pduration;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,33 +62,33 @@ public class PdurationPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("fv", (n) -> { this.setFv(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("pv", (n) -> { this.setPv(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("fv", (n) -> { this.setFv(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("pv", (n) -> { this.setPv(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the fv property value. The fv property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFv() {
+    public UntypedNode getFv() {
         return this.backingStore.get("fv");
     }
     /**
      * Gets the pv property value. The pv property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPv() {
+    public UntypedNode getPv() {
         return this.backingStore.get("pv");
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRate() {
+    public UntypedNode getRate() {
         return this.backingStore.get("rate");
     }
     /**
@@ -122,21 +121,21 @@ public class PdurationPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the fv property value. The fv property
      * @param value Value to set for the fv property.
      */
-    public void setFv(@jakarta.annotation.Nullable final Json value) {
+    public void setFv(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("fv", value);
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
      */
-    public void setPv(@jakarta.annotation.Nullable final Json value) {
+    public void setPv(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("pv", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
-    public void setRate(@jakarta.annotation.Nullable final Json value) {
+    public void setRate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("rate", value);
     }
 }

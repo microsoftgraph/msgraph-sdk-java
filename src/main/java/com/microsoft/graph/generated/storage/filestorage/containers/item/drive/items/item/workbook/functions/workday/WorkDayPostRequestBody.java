@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.workday;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the days property value. The days property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDays() {
+    public UntypedNode getDays() {
         return this.backingStore.get("days");
     }
     /**
@@ -71,25 +70,25 @@ public class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("days", (n) -> { this.setDays(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("holidays", (n) -> { this.setHolidays(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("days", (n) -> { this.setDays(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("holidays", (n) -> { this.setHolidays(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the holidays property value. The holidays property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getHolidays() {
+    public UntypedNode getHolidays() {
         return this.backingStore.get("holidays");
     }
     /**
      * Gets the startDate property value. The startDate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStartDate() {
+    public UntypedNode getStartDate() {
         return this.backingStore.get("startDate");
     }
     /**
@@ -122,21 +121,21 @@ public class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the days property value. The days property
      * @param value Value to set for the days property.
      */
-    public void setDays(@jakarta.annotation.Nullable final Json value) {
+    public void setDays(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("days", value);
     }
     /**
      * Sets the holidays property value. The holidays property
      * @param value Value to set for the holidays property.
      */
-    public void setHolidays(@jakarta.annotation.Nullable final Json value) {
+    public void setHolidays(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("holidays", value);
     }
     /**
      * Sets the startDate property value. The startDate property
      * @param value Value to set for the startDate property.
      */
-    public void setStartDate(@jakarta.annotation.Nullable final Json value) {
+    public void setStartDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("startDate", value);
     }
 }

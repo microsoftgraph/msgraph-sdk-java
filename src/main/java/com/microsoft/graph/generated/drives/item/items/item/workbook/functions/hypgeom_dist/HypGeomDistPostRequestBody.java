@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.hypgeom_dist;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the cumulative property value. The cumulative property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCumulative() {
+    public UntypedNode getCumulative() {
         return this.backingStore.get("cumulative");
     }
     /**
@@ -71,43 +70,43 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("numberPop", (n) -> { this.setNumberPop(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("numberSample", (n) -> { this.setNumberSample(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("populationS", (n) -> { this.setPopulationS(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("sampleS", (n) -> { this.setSampleS(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("numberPop", (n) -> { this.setNumberPop(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("numberSample", (n) -> { this.setNumberSample(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("populationS", (n) -> { this.setPopulationS(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("sampleS", (n) -> { this.setSampleS(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the numberPop property value. The numberPop property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumberPop() {
+    public UntypedNode getNumberPop() {
         return this.backingStore.get("numberPop");
     }
     /**
      * Gets the numberSample property value. The numberSample property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumberSample() {
+    public UntypedNode getNumberSample() {
         return this.backingStore.get("numberSample");
     }
     /**
      * Gets the populationS property value. The populationS property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPopulationS() {
+    public UntypedNode getPopulationS() {
         return this.backingStore.get("populationS");
     }
     /**
      * Gets the sampleS property value. The sampleS property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSampleS() {
+    public UntypedNode getSampleS() {
         return this.backingStore.get("sampleS");
     }
     /**
@@ -142,35 +141,35 @@ public class HypGeomDistPostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
      */
-    public void setCumulative(@jakarta.annotation.Nullable final Json value) {
+    public void setCumulative(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("cumulative", value);
     }
     /**
      * Sets the numberPop property value. The numberPop property
      * @param value Value to set for the numberPop property.
      */
-    public void setNumberPop(@jakarta.annotation.Nullable final Json value) {
+    public void setNumberPop(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numberPop", value);
     }
     /**
      * Sets the numberSample property value. The numberSample property
      * @param value Value to set for the numberSample property.
      */
-    public void setNumberSample(@jakarta.annotation.Nullable final Json value) {
+    public void setNumberSample(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numberSample", value);
     }
     /**
      * Sets the populationS property value. The populationS property
      * @param value Value to set for the populationS property.
      */
-    public void setPopulationS(@jakarta.annotation.Nullable final Json value) {
+    public void setPopulationS(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("populationS", value);
     }
     /**
      * Sets the sampleS property value. The sampleS property
      * @param value Value to set for the sampleS property.
      */
-    public void setSampleS(@jakarta.annotation.Nullable final Json value) {
+    public void setSampleS(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("sampleS", value);
     }
 }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.bitor;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("number1", (n) -> { this.setNumber1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("number2", (n) -> { this.setNumber2(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("number1", (n) -> { this.setNumber1(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("number2", (n) -> { this.setNumber2(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the number1 property value. The number1 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber1() {
+    public UntypedNode getNumber1() {
         return this.backingStore.get("number1");
     }
     /**
      * Gets the number2 property value. The number2 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumber2() {
+    public UntypedNode getNumber2() {
         return this.backingStore.get("number2");
     }
     /**
@@ -112,14 +111,14 @@ public class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the number1 property value. The number1 property
      * @param value Value to set for the number1 property.
      */
-    public void setNumber1(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber1(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number1", value);
     }
     /**
      * Sets the number2 property value. The number2 property
      * @param value Value to set for the number2 property.
      */
-    public void setNumber2(@jakarta.annotation.Nullable final Json value) {
+    public void setNumber2(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("number2", value);
     }
 }

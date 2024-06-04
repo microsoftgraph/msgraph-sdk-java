@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.z_test;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -50,10 +49,10 @@ public class ZTestPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the array property value. The array property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getArray() {
+    public UntypedNode getArray() {
         return this.backingStore.get("array");
     }
     /**
@@ -71,25 +70,25 @@ public class ZTestPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("array", (n) -> { this.setArray(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("sigma", (n) -> { this.setSigma(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("array", (n) -> { this.setArray(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("sigma", (n) -> { this.setSigma(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the sigma property value. The sigma property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSigma() {
+    public UntypedNode getSigma() {
         return this.backingStore.get("sigma");
     }
     /**
      * Gets the x property value. The x property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getX() {
+    public UntypedNode getX() {
         return this.backingStore.get("x");
     }
     /**
@@ -114,7 +113,7 @@ public class ZTestPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the array property value. The array property
      * @param value Value to set for the array property.
      */
-    public void setArray(@jakarta.annotation.Nullable final Json value) {
+    public void setArray(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("array", value);
     }
     /**
@@ -129,14 +128,14 @@ public class ZTestPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the sigma property value. The sigma property
      * @param value Value to set for the sigma property.
      */
-    public void setSigma(@jakarta.annotation.Nullable final Json value) {
+    public void setSigma(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("sigma", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
-    public void setX(@jakarta.annotation.Nullable final Json value) {
+    public void setX(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("x", value);
     }
 }

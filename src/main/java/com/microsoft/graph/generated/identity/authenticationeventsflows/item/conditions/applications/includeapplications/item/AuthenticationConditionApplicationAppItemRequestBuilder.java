@@ -37,16 +37,18 @@ public class AuthenticationConditionApplicationAppItemRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/conditions/applications/includeApplications/{authenticationConditionApplication%2DappId}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property includeApplications for identity
+     * Remove or unlink an application from an authenticationEventsFlow object. This disables the customized authentication experience defined for the application.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationconditionapplication-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property includeApplications for identity
+     * Remove or unlink an application from an authenticationEventsFlow object. This disables the customized authentication experience defined for the application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationconditionapplication-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -102,7 +104,7 @@ public class AuthenticationConditionApplicationAppItemRequestBuilder extends Bas
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationConditionApplication::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property includeApplications for identity
+     * Remove or unlink an application from an authenticationEventsFlow object. This disables the customized authentication experience defined for the application.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +112,7 @@ public class AuthenticationConditionApplicationAppItemRequestBuilder extends Bas
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property includeApplications for identity
+     * Remove or unlink an application from an authenticationEventsFlow object. This disables the customized authentication experience defined for the application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

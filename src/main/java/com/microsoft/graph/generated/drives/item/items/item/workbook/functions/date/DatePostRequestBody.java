@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.date;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,10 +57,10 @@ public class DatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the day property value. The day property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDay() {
+    public UntypedNode getDay() {
         return this.backingStore.get("day");
     }
     /**
@@ -71,25 +70,25 @@ public class DatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("day", (n) -> { this.setDay(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("month", (n) -> { this.setMonth(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("year", (n) -> { this.setYear(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("day", (n) -> { this.setDay(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("month", (n) -> { this.setMonth(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("year", (n) -> { this.setYear(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the month property value. The month property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMonth() {
+    public UntypedNode getMonth() {
         return this.backingStore.get("month");
     }
     /**
      * Gets the year property value. The year property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getYear() {
+    public UntypedNode getYear() {
         return this.backingStore.get("year");
     }
     /**
@@ -122,21 +121,21 @@ public class DatePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the day property value. The day property
      * @param value Value to set for the day property.
      */
-    public void setDay(@jakarta.annotation.Nullable final Json value) {
+    public void setDay(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("day", value);
     }
     /**
      * Sets the month property value. The month property
      * @param value Value to set for the month property.
      */
-    public void setMonth(@jakarta.annotation.Nullable final Json value) {
+    public void setMonth(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("month", value);
     }
     /**
      * Sets the year property value. The year property
      * @param value Value to set for the year property.
      */
-    public void setYear(@jakarta.annotation.Nullable final Json value) {
+    public void setYear(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("year", value);
     }
 }

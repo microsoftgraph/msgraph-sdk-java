@@ -36,7 +36,7 @@ public class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/tags/microsoft.graph.security.asHierarchy(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function asHierarchy
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @return a {@link AsHierarchyGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -45,7 +45,7 @@ public class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Invoke function asHierarchy
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AsHierarchyGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, AsHierarchyGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function asHierarchy
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function asHierarchy
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +88,7 @@ public class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequest
         return new MicrosoftGraphSecurityAsHierarchyRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function asHierarchy
+     * List eDiscovery review tags with the tag hierarchy shown.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

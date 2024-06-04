@@ -30,10 +30,10 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     }
     /**
      * Gets the content property value. Status report content.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getContent() {
+    public UntypedNode getContent() {
         return this.backingStore.get("content");
     }
     /**
@@ -43,7 +43,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -59,7 +59,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
      * Sets the content property value. Status report content.
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final Json value) {
+    public void setContent(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("content", value);
     }
 }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.gamma_dist;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -50,10 +49,10 @@ public class GammaDistPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the alpha property value. The alpha property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getAlpha() {
+    public UntypedNode getAlpha() {
         return this.backingStore.get("alpha");
     }
     /**
@@ -66,18 +65,18 @@ public class GammaDistPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the beta property value. The beta property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getBeta() {
+    public UntypedNode getBeta() {
         return this.backingStore.get("beta");
     }
     /**
      * Gets the cumulative property value. The cumulative property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCumulative() {
+    public UntypedNode getCumulative() {
         return this.backingStore.get("cumulative");
     }
     /**
@@ -87,18 +86,18 @@ public class GammaDistPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("beta", (n) -> { this.setBeta(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("beta", (n) -> { this.setBeta(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the x property value. The x property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getX() {
+    public UntypedNode getX() {
         return this.backingStore.get("x");
     }
     /**
@@ -124,7 +123,7 @@ public class GammaDistPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the alpha property value. The alpha property
      * @param value Value to set for the alpha property.
      */
-    public void setAlpha(@jakarta.annotation.Nullable final Json value) {
+    public void setAlpha(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("alpha", value);
     }
     /**
@@ -139,21 +138,21 @@ public class GammaDistPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the beta property value. The beta property
      * @param value Value to set for the beta property.
      */
-    public void setBeta(@jakarta.annotation.Nullable final Json value) {
+    public void setBeta(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("beta", value);
     }
     /**
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
      */
-    public void setCumulative(@jakarta.annotation.Nullable final Json value) {
+    public void setCumulative(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("cumulative", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
-    public void setX(@jakarta.annotation.Nullable final Json value) {
+    public void setX(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("x", value);
     }
 }

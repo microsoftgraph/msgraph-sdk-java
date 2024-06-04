@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.amordegrc;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,26 +57,26 @@ public class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the basis property value. The basis property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getBasis() {
+    public UntypedNode getBasis() {
         return this.backingStore.get("basis");
     }
     /**
      * Gets the cost property value. The cost property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCost() {
+    public UntypedNode getCost() {
         return this.backingStore.get("cost");
     }
     /**
      * Gets the datePurchased property value. The datePurchased property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDatePurchased() {
+    public UntypedNode getDatePurchased() {
         return this.backingStore.get("datePurchased");
     }
     /**
@@ -87,45 +86,45 @@ public class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("cost", (n) -> { this.setCost(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("datePurchased", (n) -> { this.setDatePurchased(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("firstPeriod", (n) -> { this.setFirstPeriod(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("period", (n) -> { this.setPeriod(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("salvage", (n) -> { this.setSalvage(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("cost", (n) -> { this.setCost(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("datePurchased", (n) -> { this.setDatePurchased(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("firstPeriod", (n) -> { this.setFirstPeriod(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("period", (n) -> { this.setPeriod(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("rate", (n) -> { this.setRate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("salvage", (n) -> { this.setSalvage(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the firstPeriod property value. The firstPeriod property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFirstPeriod() {
+    public UntypedNode getFirstPeriod() {
         return this.backingStore.get("firstPeriod");
     }
     /**
      * Gets the period property value. The period property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPeriod() {
+    public UntypedNode getPeriod() {
         return this.backingStore.get("period");
     }
     /**
      * Gets the rate property value. The rate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRate() {
+    public UntypedNode getRate() {
         return this.backingStore.get("rate");
     }
     /**
      * Gets the salvage property value. The salvage property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSalvage() {
+    public UntypedNode getSalvage() {
         return this.backingStore.get("salvage");
     }
     /**
@@ -162,49 +161,49 @@ public class AmorDegrcPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the basis property value. The basis property
      * @param value Value to set for the basis property.
      */
-    public void setBasis(@jakarta.annotation.Nullable final Json value) {
+    public void setBasis(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("basis", value);
     }
     /**
      * Sets the cost property value. The cost property
      * @param value Value to set for the cost property.
      */
-    public void setCost(@jakarta.annotation.Nullable final Json value) {
+    public void setCost(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("cost", value);
     }
     /**
      * Sets the datePurchased property value. The datePurchased property
      * @param value Value to set for the datePurchased property.
      */
-    public void setDatePurchased(@jakarta.annotation.Nullable final Json value) {
+    public void setDatePurchased(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("datePurchased", value);
     }
     /**
      * Sets the firstPeriod property value. The firstPeriod property
      * @param value Value to set for the firstPeriod property.
      */
-    public void setFirstPeriod(@jakarta.annotation.Nullable final Json value) {
+    public void setFirstPeriod(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("firstPeriod", value);
     }
     /**
      * Sets the period property value. The period property
      * @param value Value to set for the period property.
      */
-    public void setPeriod(@jakarta.annotation.Nullable final Json value) {
+    public void setPeriod(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("period", value);
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
      */
-    public void setRate(@jakarta.annotation.Nullable final Json value) {
+    public void setRate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("rate", value);
     }
     /**
      * Sets the salvage property value. The salvage property
      * @param value Value to set for the salvage property.
      */
-    public void setSalvage(@jakarta.annotation.Nullable final Json value) {
+    public void setSalvage(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("salvage", value);
     }
 }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.rightb;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,24 +62,24 @@ public class RightbPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("numBytes", (n) -> { this.setNumBytes(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("numBytes", (n) -> { this.setNumBytes(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the numBytes property value. The numBytes property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumBytes() {
+    public UntypedNode getNumBytes() {
         return this.backingStore.get("numBytes");
     }
     /**
      * Gets the text property value. The text property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getText() {
+    public UntypedNode getText() {
         return this.backingStore.get("text");
     }
     /**
@@ -112,14 +111,14 @@ public class RightbPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the numBytes property value. The numBytes property
      * @param value Value to set for the numBytes property.
      */
-    public void setNumBytes(@jakarta.annotation.Nullable final Json value) {
+    public void setNumBytes(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numBytes", value);
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
-    public void setText(@jakarta.annotation.Nullable final Json value) {
+    public void setText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("text", value);
     }
 }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.binom_inv;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -50,10 +49,10 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the alpha property value. The alpha property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getAlpha() {
+    public UntypedNode getAlpha() {
         return this.backingStore.get("alpha");
     }
     /**
@@ -71,25 +70,25 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("probabilityS", (n) -> { this.setProbabilityS(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("trials", (n) -> { this.setTrials(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("alpha", (n) -> { this.setAlpha(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("probabilityS", (n) -> { this.setProbabilityS(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("trials", (n) -> { this.setTrials(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the probabilityS property value. The probabilityS property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProbabilityS() {
+    public UntypedNode getProbabilityS() {
         return this.backingStore.get("probabilityS");
     }
     /**
      * Gets the trials property value. The trials property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getTrials() {
+    public UntypedNode getTrials() {
         return this.backingStore.get("trials");
     }
     /**
@@ -114,7 +113,7 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the alpha property value. The alpha property
      * @param value Value to set for the alpha property.
      */
-    public void setAlpha(@jakarta.annotation.Nullable final Json value) {
+    public void setAlpha(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("alpha", value);
     }
     /**
@@ -129,14 +128,14 @@ public class BinomInvPostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the probabilityS property value. The probabilityS property
      * @param value Value to set for the probabilityS property.
      */
-    public void setProbabilityS(@jakarta.annotation.Nullable final Json value) {
+    public void setProbabilityS(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("probabilityS", value);
     }
     /**
      * Sets the trials property value. The trials property
      * @param value Value to set for the trials property.
      */
-    public void setTrials(@jakarta.annotation.Nullable final Json value) {
+    public void setTrials(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("trials", value);
     }
 }

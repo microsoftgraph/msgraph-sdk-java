@@ -86,18 +86,18 @@ public class WorkbookRange extends Entity implements Parsable {
         deserializerMap.put("columnHidden", (n) -> { this.setColumnHidden(n.getBooleanValue()); });
         deserializerMap.put("columnIndex", (n) -> { this.setColumnIndex(n.getIntegerValue()); });
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookRangeFormat::createFromDiscriminatorValue)); });
-        deserializerMap.put("formulas", (n) -> { this.setFormulas(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("formulasLocal", (n) -> { this.setFormulasLocal(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("formulasR1C1", (n) -> { this.setFormulasR1C1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("formulas", (n) -> { this.setFormulas(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("formulasLocal", (n) -> { this.setFormulasLocal(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("formulasR1C1", (n) -> { this.setFormulasR1C1(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("hidden", (n) -> { this.setHidden(n.getBooleanValue()); });
-        deserializerMap.put("numberFormat", (n) -> { this.setNumberFormat(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("numberFormat", (n) -> { this.setNumberFormat(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("rowCount", (n) -> { this.setRowCount(n.getIntegerValue()); });
         deserializerMap.put("rowHidden", (n) -> { this.setRowHidden(n.getBooleanValue()); });
         deserializerMap.put("rowIndex", (n) -> { this.setRowIndex(n.getIntegerValue()); });
         deserializerMap.put("sort", (n) -> { this.setSort(n.getObjectValue(WorkbookRangeSort::createFromDiscriminatorValue)); });
-        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("valueTypes", (n) -> { this.setValueTypes(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("valueTypes", (n) -> { this.setValueTypes(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -111,26 +111,26 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the formulas property value. Represents the formula in A1-style notation.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFormulas() {
+    public UntypedNode getFormulas() {
         return this.backingStore.get("formulas");
     }
     /**
      * Gets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFormulasLocal() {
+    public UntypedNode getFormulasLocal() {
         return this.backingStore.get("formulasLocal");
     }
     /**
      * Gets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFormulasR1C1() {
+    public UntypedNode getFormulasR1C1() {
         return this.backingStore.get("formulasR1C1");
     }
     /**
@@ -143,10 +143,10 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the numberFormat property value. Represents Excel's number format code for the given cell.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumberFormat() {
+    public UntypedNode getNumberFormat() {
         return this.backingStore.get("numberFormat");
     }
     /**
@@ -183,26 +183,26 @@ public class WorkbookRange extends Entity implements Parsable {
     }
     /**
      * Gets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getText() {
+    public UntypedNode getText() {
         return this.backingStore.get("text");
     }
     /**
      * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
      * Gets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValueTypes() {
+    public UntypedNode getValueTypes() {
         return this.backingStore.get("valueTypes");
     }
     /**
@@ -294,21 +294,21 @@ public class WorkbookRange extends Entity implements Parsable {
      * Sets the formulas property value. Represents the formula in A1-style notation.
      * @param value Value to set for the formulas property.
      */
-    public void setFormulas(@jakarta.annotation.Nullable final Json value) {
+    public void setFormulas(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("formulas", value);
     }
     /**
      * Sets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
      * @param value Value to set for the formulasLocal property.
      */
-    public void setFormulasLocal(@jakarta.annotation.Nullable final Json value) {
+    public void setFormulasLocal(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("formulasLocal", value);
     }
     /**
      * Sets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
      * @param value Value to set for the formulasR1C1 property.
      */
-    public void setFormulasR1C1(@jakarta.annotation.Nullable final Json value) {
+    public void setFormulasR1C1(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("formulasR1C1", value);
     }
     /**
@@ -322,7 +322,7 @@ public class WorkbookRange extends Entity implements Parsable {
      * Sets the numberFormat property value. Represents Excel's number format code for the given cell.
      * @param value Value to set for the numberFormat property.
      */
-    public void setNumberFormat(@jakarta.annotation.Nullable final Json value) {
+    public void setNumberFormat(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numberFormat", value);
     }
     /**
@@ -357,21 +357,21 @@ public class WorkbookRange extends Entity implements Parsable {
      * Sets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
      * @param value Value to set for the text property.
      */
-    public void setText(@jakarta.annotation.Nullable final Json value) {
+    public void setText(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("text", value);
     }
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
     /**
      * Sets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      * @param value Value to set for the valueTypes property.
      */
-    public void setValueTypes(@jakarta.annotation.Nullable final Json value) {
+    public void setValueTypes(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("valueTypes", value);
     }
     /**

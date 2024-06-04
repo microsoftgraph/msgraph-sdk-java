@@ -1,6 +1,5 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.radians;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -50,10 +49,10 @@ public class RadiansPostRequestBody implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the angle property value. The angle property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getAngle() {
+    public UntypedNode getAngle() {
         return this.backingStore.get("angle");
     }
     /**
@@ -71,7 +70,7 @@ public class RadiansPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("angle", (n) -> { this.setAngle(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("angle", (n) -> { this.setAngle(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -94,7 +93,7 @@ public class RadiansPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the angle property value. The angle property
      * @param value Value to set for the angle property.
      */
-    public void setAngle(@jakarta.annotation.Nullable final Json value) {
+    public void setAngle(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("angle", value);
     }
     /**

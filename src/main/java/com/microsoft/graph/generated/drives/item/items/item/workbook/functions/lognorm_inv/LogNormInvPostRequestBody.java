@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.lognorm_inv;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,33 +62,33 @@ public class LogNormInvPostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("mean", (n) -> { this.setMean(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("standardDev", (n) -> { this.setStandardDev(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("mean", (n) -> { this.setMean(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("standardDev", (n) -> { this.setStandardDev(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the mean property value. The mean property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMean() {
+    public UntypedNode getMean() {
         return this.backingStore.get("mean");
     }
     /**
      * Gets the probability property value. The probability property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProbability() {
+    public UntypedNode getProbability() {
         return this.backingStore.get("probability");
     }
     /**
      * Gets the standardDev property value. The standardDev property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStandardDev() {
+    public UntypedNode getStandardDev() {
         return this.backingStore.get("standardDev");
     }
     /**
@@ -122,21 +121,21 @@ public class LogNormInvPostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the mean property value. The mean property
      * @param value Value to set for the mean property.
      */
-    public void setMean(@jakarta.annotation.Nullable final Json value) {
+    public void setMean(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("mean", value);
     }
     /**
      * Sets the probability property value. The probability property
      * @param value Value to set for the probability property.
      */
-    public void setProbability(@jakarta.annotation.Nullable final Json value) {
+    public void setProbability(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("probability", value);
     }
     /**
      * Sets the standardDev property value. The standardDev property
      * @param value Value to set for the standardDev property.
      */
-    public void setStandardDev(@jakarta.annotation.Nullable final Json value) {
+    public void setStandardDev(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("standardDev", value);
     }
 }
