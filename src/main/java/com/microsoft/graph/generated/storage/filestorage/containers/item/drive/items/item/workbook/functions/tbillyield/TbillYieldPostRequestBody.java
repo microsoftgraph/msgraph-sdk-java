@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.tbillyield;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,33 +63,33 @@ public class TbillYieldPostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("maturity", (n) -> { this.setMaturity(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("pr", (n) -> { this.setPr(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("settlement", (n) -> { this.setSettlement(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("maturity", (n) -> { this.setMaturity(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("pr", (n) -> { this.setPr(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("settlement", (n) -> { this.setSettlement(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the maturity property value. The maturity property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMaturity() {
+    public UntypedNode getMaturity() {
         return this.backingStore.get("maturity");
     }
     /**
      * Gets the pr property value. The pr property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getPr() {
+    public UntypedNode getPr() {
         return this.backingStore.get("pr");
     }
     /**
      * Gets the settlement property value. The settlement property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSettlement() {
+    public UntypedNode getSettlement() {
         return this.backingStore.get("settlement");
     }
     /**
@@ -122,21 +122,21 @@ public class TbillYieldPostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the maturity property value. The maturity property
      * @param value Value to set for the maturity property.
      */
-    public void setMaturity(@jakarta.annotation.Nullable final Json value) {
+    public void setMaturity(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("maturity", value);
     }
     /**
      * Sets the pr property value. The pr property
      * @param value Value to set for the pr property.
      */
-    public void setPr(@jakarta.annotation.Nullable final Json value) {
+    public void setPr(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("pr", value);
     }
     /**
      * Sets the settlement property value. The settlement property
      * @param value Value to set for the settlement property.
      */
-    public void setSettlement(@jakarta.annotation.Nullable final Json value) {
+    public void setSettlement(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("settlement", value);
     }
 }

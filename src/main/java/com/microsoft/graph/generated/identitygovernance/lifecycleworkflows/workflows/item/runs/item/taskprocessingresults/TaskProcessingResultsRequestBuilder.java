@@ -59,19 +59,21 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/runs/{run%2Did}/taskProcessingResults{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The related taskProcessingResults.
+     * Get the taskProcessingResult resources for a run.
      * @return a {@link TaskProcessingResultCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-taskprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TaskProcessingResultCollectionResponse get() {
         return get(null);
     }
     /**
-     * The related taskProcessingResults.
+     * Get the taskProcessingResult resources for a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TaskProcessingResultCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-taskprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TaskProcessingResultCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TaskProcessingResultCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The related taskProcessingResults.
+     * Get the taskProcessingResult resources for a run.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The related taskProcessingResults.
+     * Get the taskProcessingResult resources for a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class TaskProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return new TaskProcessingResultsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The related taskProcessingResults.
+     * Get the taskProcessingResult resources for a run.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

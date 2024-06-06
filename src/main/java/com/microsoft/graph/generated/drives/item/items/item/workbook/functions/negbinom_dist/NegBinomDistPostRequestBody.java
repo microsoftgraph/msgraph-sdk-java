@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.negbinom_dist;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the cumulative property value. The cumulative property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCumulative() {
+    public UntypedNode getCumulative() {
         return this.backingStore.get("cumulative");
     }
     /**
@@ -71,34 +71,34 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("numberF", (n) -> { this.setNumberF(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("numberS", (n) -> { this.setNumberS(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("probabilityS", (n) -> { this.setProbabilityS(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("cumulative", (n) -> { this.setCumulative(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("numberF", (n) -> { this.setNumberF(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("numberS", (n) -> { this.setNumberS(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("probabilityS", (n) -> { this.setProbabilityS(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the numberF property value. The numberF property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumberF() {
+    public UntypedNode getNumberF() {
         return this.backingStore.get("numberF");
     }
     /**
      * Gets the numberS property value. The numberS property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumberS() {
+    public UntypedNode getNumberS() {
         return this.backingStore.get("numberS");
     }
     /**
      * Gets the probabilityS property value. The probabilityS property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProbabilityS() {
+    public UntypedNode getProbabilityS() {
         return this.backingStore.get("probabilityS");
     }
     /**
@@ -132,28 +132,28 @@ public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Backed
      * Sets the cumulative property value. The cumulative property
      * @param value Value to set for the cumulative property.
      */
-    public void setCumulative(@jakarta.annotation.Nullable final Json value) {
+    public void setCumulative(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("cumulative", value);
     }
     /**
      * Sets the numberF property value. The numberF property
      * @param value Value to set for the numberF property.
      */
-    public void setNumberF(@jakarta.annotation.Nullable final Json value) {
+    public void setNumberF(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numberF", value);
     }
     /**
      * Sets the numberS property value. The numberS property
      * @param value Value to set for the numberS property.
      */
-    public void setNumberS(@jakarta.annotation.Nullable final Json value) {
+    public void setNumberS(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numberS", value);
     }
     /**
      * Sets the probabilityS property value. The probabilityS property
      * @param value Value to set for the probabilityS property.
      */
-    public void setProbabilityS(@jakarta.annotation.Nullable final Json value) {
+    public void setProbabilityS(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("probabilityS", value);
     }
 }

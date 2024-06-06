@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.isformula;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,15 +63,15 @@ public class IsFormulaPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("reference", (n) -> { this.setReference(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("reference", (n) -> { this.setReference(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the reference property value. The reference property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getReference() {
+    public UntypedNode getReference() {
         return this.backingStore.get("reference");
     }
     /**
@@ -102,7 +102,7 @@ public class IsFormulaPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the reference property value. The reference property
      * @param value Value to set for the reference property.
      */
-    public void setReference(@jakarta.annotation.Nullable final Json value) {
+    public void setReference(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("reference", value);
     }
 }

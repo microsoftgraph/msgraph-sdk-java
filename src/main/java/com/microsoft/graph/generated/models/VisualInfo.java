@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -73,10 +74,10 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getContent() {
+    public UntypedNode getContent() {
         return this.backingStore.get("content");
     }
     /**
@@ -104,7 +105,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("attribution", (n) -> { this.setAttribution(n.getObjectValue(ImageInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("backgroundColor", (n) -> { this.setBackgroundColor(n.getStringValue()); });
-        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayText", (n) -> { this.setDisplayText(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -165,7 +166,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final Json value) {
+    public void setContent(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("content", value);
     }
     /**

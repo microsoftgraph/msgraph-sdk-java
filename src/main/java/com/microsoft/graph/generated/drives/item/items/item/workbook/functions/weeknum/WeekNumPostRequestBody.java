@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.weeknum;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,24 +63,24 @@ public class WeekNumPostRequestBody implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("returnType", (n) -> { this.setReturnType(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("returnType", (n) -> { this.setReturnType(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the returnType property value. The returnType property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getReturnType() {
+    public UntypedNode getReturnType() {
         return this.backingStore.get("returnType");
     }
     /**
      * Gets the serialNumber property value. The serialNumber property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSerialNumber() {
+    public UntypedNode getSerialNumber() {
         return this.backingStore.get("serialNumber");
     }
     /**
@@ -112,14 +112,14 @@ public class WeekNumPostRequestBody implements AdditionalDataHolder, BackedModel
      * Sets the returnType property value. The returnType property
      * @param value Value to set for the returnType property.
      */
-    public void setReturnType(@jakarta.annotation.Nullable final Json value) {
+    public void setReturnType(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("returnType", value);
     }
     /**
      * Sets the serialNumber property value. The serialNumber property
      * @param value Value to set for the serialNumber property.
      */
-    public void setSerialNumber(@jakarta.annotation.Nullable final Json value) {
+    public void setSerialNumber(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("serialNumber", value);
     }
 }

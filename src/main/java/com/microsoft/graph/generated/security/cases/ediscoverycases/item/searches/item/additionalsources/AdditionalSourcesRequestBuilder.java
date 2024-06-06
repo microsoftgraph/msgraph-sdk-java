@@ -60,19 +60,21 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/additionalSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @return a {@link DataSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DataSourceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DataSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DataSourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to additionalSources for security
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @return a {@link DataSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DataSource post(@jakarta.annotation.Nonnull final DataSource body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to additionalSources for security
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DataSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DataSource post(@jakarta.annotation.Nonnull final DataSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DataSource::createFromDiscriminatorValue);
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to additionalSources for security
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to additionalSources for security
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return new AdditionalSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

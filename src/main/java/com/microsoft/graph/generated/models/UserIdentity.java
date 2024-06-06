@@ -37,7 +37,7 @@ public class UserIdentity extends Identity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ipAddress property value. Indicates the client IP address used by user performing the activity (audit log only).
+     * Gets the ipAddress property value. Indicates the client IP address associated with the user performing the activity (audit log only).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class UserIdentity extends Identity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the ipAddress property value. Indicates the client IP address used by user performing the activity (audit log only).
+     * Sets the ipAddress property value. Indicates the client IP address associated with the user performing the activity (audit log only).
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {

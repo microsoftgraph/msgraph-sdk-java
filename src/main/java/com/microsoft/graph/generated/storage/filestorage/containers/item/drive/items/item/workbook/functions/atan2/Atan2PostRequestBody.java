@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.atan2;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,24 +63,24 @@ public class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("xNum", (n) -> { this.setXNum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("yNum", (n) -> { this.setYNum(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("xNum", (n) -> { this.setXNum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("yNum", (n) -> { this.setYNum(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the xNum property value. The xNum property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getXNum() {
+    public UntypedNode getXNum() {
         return this.backingStore.get("xNum");
     }
     /**
      * Gets the yNum property value. The yNum property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getYNum() {
+    public UntypedNode getYNum() {
         return this.backingStore.get("yNum");
     }
     /**
@@ -112,14 +112,14 @@ public class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the xNum property value. The xNum property
      * @param value Value to set for the xNum property.
      */
-    public void setXNum(@jakarta.annotation.Nullable final Json value) {
+    public void setXNum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("xNum", value);
     }
     /**
      * Sets the yNum property value. The yNum property
      * @param value Value to set for the yNum property.
      */
-    public void setYNum(@jakarta.annotation.Nullable final Json value) {
+    public void setYNum(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("yNum", value);
     }
 }

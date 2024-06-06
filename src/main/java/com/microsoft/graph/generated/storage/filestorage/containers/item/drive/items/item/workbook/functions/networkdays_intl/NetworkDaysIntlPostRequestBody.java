@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.networkdays_intl;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class NetworkDaysIntlPostRequestBody implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the endDate property value. The endDate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getEndDate() {
+    public UntypedNode getEndDate() {
         return this.backingStore.get("endDate");
     }
     /**
@@ -71,34 +71,34 @@ public class NetworkDaysIntlPostRequestBody implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("holidays", (n) -> { this.setHolidays(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("weekend", (n) -> { this.setWeekend(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("holidays", (n) -> { this.setHolidays(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("weekend", (n) -> { this.setWeekend(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the holidays property value. The holidays property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getHolidays() {
+    public UntypedNode getHolidays() {
         return this.backingStore.get("holidays");
     }
     /**
      * Gets the startDate property value. The startDate property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStartDate() {
+    public UntypedNode getStartDate() {
         return this.backingStore.get("startDate");
     }
     /**
      * Gets the weekend property value. The weekend property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getWeekend() {
+    public UntypedNode getWeekend() {
         return this.backingStore.get("weekend");
     }
     /**
@@ -132,28 +132,28 @@ public class NetworkDaysIntlPostRequestBody implements AdditionalDataHolder, Bac
      * Sets the endDate property value. The endDate property
      * @param value Value to set for the endDate property.
      */
-    public void setEndDate(@jakarta.annotation.Nullable final Json value) {
+    public void setEndDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("endDate", value);
     }
     /**
      * Sets the holidays property value. The holidays property
      * @param value Value to set for the holidays property.
      */
-    public void setHolidays(@jakarta.annotation.Nullable final Json value) {
+    public void setHolidays(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("holidays", value);
     }
     /**
      * Sets the startDate property value. The startDate property
      * @param value Value to set for the startDate property.
      */
-    public void setStartDate(@jakarta.annotation.Nullable final Json value) {
+    public void setStartDate(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("startDate", value);
     }
     /**
      * Sets the weekend property value. The weekend property
      * @param value Value to set for the weekend property.
      */
-    public void setWeekend(@jakarta.annotation.Nullable final Json value) {
+    public void setWeekend(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("weekend", value);
     }
 }

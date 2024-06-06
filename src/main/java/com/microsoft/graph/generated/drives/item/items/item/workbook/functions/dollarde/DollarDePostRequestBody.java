@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.dollarde;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,24 +63,24 @@ public class DollarDePostRequestBody implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("fraction", (n) -> { this.setFraction(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("fractionalDollar", (n) -> { this.setFractionalDollar(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("fraction", (n) -> { this.setFraction(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("fractionalDollar", (n) -> { this.setFractionalDollar(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the fraction property value. The fraction property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFraction() {
+    public UntypedNode getFraction() {
         return this.backingStore.get("fraction");
     }
     /**
      * Gets the fractionalDollar property value. The fractionalDollar property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getFractionalDollar() {
+    public UntypedNode getFractionalDollar() {
         return this.backingStore.get("fractionalDollar");
     }
     /**
@@ -112,14 +112,14 @@ public class DollarDePostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the fraction property value. The fraction property
      * @param value Value to set for the fraction property.
      */
-    public void setFraction(@jakarta.annotation.Nullable final Json value) {
+    public void setFraction(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("fraction", value);
     }
     /**
      * Sets the fractionalDollar property value. The fractionalDollar property
      * @param value Value to set for the fractionalDollar property.
      */
-    public void setFractionalDollar(@jakarta.annotation.Nullable final Json value) {
+    public void setFractionalDollar(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("fractionalDollar", value);
     }
 }

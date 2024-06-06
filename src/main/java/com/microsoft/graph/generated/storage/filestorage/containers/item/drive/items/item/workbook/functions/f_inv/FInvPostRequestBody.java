@@ -1,10 +1,10 @@
 package com.microsoft.graph.storage.filestorage.containers.item.drive.items.item.workbook.functions.f_inv;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,18 +58,18 @@ public class FInvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the degFreedom1 property value. The degFreedom1 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDegFreedom1() {
+    public UntypedNode getDegFreedom1() {
         return this.backingStore.get("degFreedom1");
     }
     /**
      * Gets the degFreedom2 property value. The degFreedom2 property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDegFreedom2() {
+    public UntypedNode getDegFreedom2() {
         return this.backingStore.get("degFreedom2");
     }
     /**
@@ -79,17 +79,17 @@ public class FInvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("degFreedom1", (n) -> { this.setDegFreedom1(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("degFreedom2", (n) -> { this.setDegFreedom2(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("degFreedom1", (n) -> { this.setDegFreedom1(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("degFreedom2", (n) -> { this.setDegFreedom2(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("probability", (n) -> { this.setProbability(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the probability property value. The probability property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getProbability() {
+    public UntypedNode getProbability() {
         return this.backingStore.get("probability");
     }
     /**
@@ -122,21 +122,21 @@ public class FInvPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the degFreedom1 property value. The degFreedom1 property
      * @param value Value to set for the degFreedom1 property.
      */
-    public void setDegFreedom1(@jakarta.annotation.Nullable final Json value) {
+    public void setDegFreedom1(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("degFreedom1", value);
     }
     /**
      * Sets the degFreedom2 property value. The degFreedom2 property
      * @param value Value to set for the degFreedom2 property.
      */
-    public void setDegFreedom2(@jakarta.annotation.Nullable final Json value) {
+    public void setDegFreedom2(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("degFreedom2", value);
     }
     /**
      * Sets the probability property value. The probability property
      * @param value Value to set for the probability property.
      */
-    public void setProbability(@jakarta.annotation.Nullable final Json value) {
+    public void setProbability(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("probability", value);
     }
 }

@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.percentrank_inc;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -50,10 +50,10 @@ public class PercentRankIncPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the array property value. The array property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getArray() {
+    public UntypedNode getArray() {
         return this.backingStore.get("array");
     }
     /**
@@ -71,25 +71,25 @@ public class PercentRankIncPostRequestBody implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("array", (n) -> { this.setArray(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("significance", (n) -> { this.setSignificance(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("array", (n) -> { this.setArray(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("significance", (n) -> { this.setSignificance(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("x", (n) -> { this.setX(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the significance property value. The significance property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSignificance() {
+    public UntypedNode getSignificance() {
         return this.backingStore.get("significance");
     }
     /**
      * Gets the x property value. The x property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getX() {
+    public UntypedNode getX() {
         return this.backingStore.get("x");
     }
     /**
@@ -114,7 +114,7 @@ public class PercentRankIncPostRequestBody implements AdditionalDataHolder, Back
      * Sets the array property value. The array property
      * @param value Value to set for the array property.
      */
-    public void setArray(@jakarta.annotation.Nullable final Json value) {
+    public void setArray(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("array", value);
     }
     /**
@@ -129,14 +129,14 @@ public class PercentRankIncPostRequestBody implements AdditionalDataHolder, Back
      * Sets the significance property value. The significance property
      * @param value Value to set for the significance property.
      */
-    public void setSignificance(@jakarta.annotation.Nullable final Json value) {
+    public void setSignificance(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("significance", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
-    public void setX(@jakarta.annotation.Nullable final Json value) {
+    public void setX(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("x", value);
     }
 }

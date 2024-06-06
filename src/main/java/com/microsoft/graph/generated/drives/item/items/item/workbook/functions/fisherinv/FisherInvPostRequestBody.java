@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.fisherinv;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,15 +63,15 @@ public class FisherInvPostRequestBody implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("y", (n) -> { this.setY(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("y", (n) -> { this.setY(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the y property value. The y property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getY() {
+    public UntypedNode getY() {
         return this.backingStore.get("y");
     }
     /**
@@ -102,7 +102,7 @@ public class FisherInvPostRequestBody implements AdditionalDataHolder, BackedMod
      * Sets the y property value. The y property
      * @param value Value to set for the y property.
      */
-    public void setY(@jakarta.annotation.Nullable final Json value) {
+    public void setY(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("y", value);
     }
 }

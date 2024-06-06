@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -59,10 +60,10 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getContentInfo() {
+    public UntypedNode getContentInfo() {
         return this.backingStore.get("contentInfo");
     }
     /**
@@ -108,7 +109,7 @@ public class UserActivity extends Entity implements Parsable {
         deserializerMap.put("activitySourceHost", (n) -> { this.setActivitySourceHost(n.getStringValue()); });
         deserializerMap.put("appActivityId", (n) -> { this.setAppActivityId(n.getStringValue()); });
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
-        deserializerMap.put("contentInfo", (n) -> { this.setContentInfo(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentInfo", (n) -> { this.setContentInfo(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -214,7 +215,7 @@ public class UserActivity extends Entity implements Parsable {
      * Sets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
      * @param value Value to set for the contentInfo property.
      */
-    public void setContentInfo(@jakarta.annotation.Nullable final Json value) {
+    public void setContentInfo(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("contentInfo", value);
     }
     /**

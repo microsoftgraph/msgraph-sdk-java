@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.averageifs;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -50,10 +50,10 @@ public class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the averageRange property value. The averageRange property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getAverageRange() {
+    public UntypedNode getAverageRange() {
         return this.backingStore.get("averageRange");
     }
     /**
@@ -71,16 +71,16 @@ public class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("averageRange", (n) -> { this.setAverageRange(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("averageRange", (n) -> { this.setAverageRange(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the values property value. The values property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValues() {
+    public UntypedNode getValues() {
         return this.backingStore.get("values");
     }
     /**
@@ -104,7 +104,7 @@ public class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the averageRange property value. The averageRange property
      * @param value Value to set for the averageRange property.
      */
-    public void setAverageRange(@jakarta.annotation.Nullable final Json value) {
+    public void setAverageRange(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("averageRange", value);
     }
     /**
@@ -119,7 +119,7 @@ public class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedMo
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
-    public void setValues(@jakarta.annotation.Nullable final Json value) {
+    public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("values", value);
     }
 }

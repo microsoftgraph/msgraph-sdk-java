@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.quotient;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the denominator property value. The denominator property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getDenominator() {
+    public UntypedNode getDenominator() {
         return this.backingStore.get("denominator");
     }
     /**
@@ -71,16 +71,16 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("denominator", (n) -> { this.setDenominator(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("numerator", (n) -> { this.setNumerator(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("denominator", (n) -> { this.setDenominator(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("numerator", (n) -> { this.setNumerator(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the numerator property value. The numerator property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getNumerator() {
+    public UntypedNode getNumerator() {
         return this.backingStore.get("numerator");
     }
     /**
@@ -112,14 +112,14 @@ public class QuotientPostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the denominator property value. The denominator property
      * @param value Value to set for the denominator property.
      */
-    public void setDenominator(@jakarta.annotation.Nullable final Json value) {
+    public void setDenominator(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("denominator", value);
     }
     /**
      * Sets the numerator property value. The numerator property
      * @param value Value to set for the numerator property.
      */
-    public void setNumerator(@jakarta.annotation.Nullable final Json value) {
+    public void setNumerator(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("numerator", value);
     }
 }

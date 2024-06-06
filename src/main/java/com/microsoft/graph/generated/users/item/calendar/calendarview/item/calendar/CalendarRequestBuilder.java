@@ -26,7 +26,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CalendarRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar/calendarView/{event%2Did}/calendar{?%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar/calendarView/{event%2Did}/calendar{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new {@link CalendarRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CalendarRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar/calendarView/{event%2Did}/calendar{?%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar/calendarView/{event%2Did}/calendar{?%24expand,%24select}", rawUrl);
     }
     /**
      * The calendar that contains the event. Navigation property. Read-only.
@@ -94,6 +94,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
          * Select properties to be returned
          */
         @jakarta.annotation.Nullable
@@ -105,6 +110,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24select", select);
             return allQueryParams;
         }

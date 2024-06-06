@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.charts.itematwithindex.setposition;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the endCell property value. The endCell property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getEndCell() {
+    public UntypedNode getEndCell() {
         return this.backingStore.get("endCell");
     }
     /**
@@ -71,16 +71,16 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("endCell", (n) -> { this.setEndCell(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("startCell", (n) -> { this.setStartCell(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("endCell", (n) -> { this.setEndCell(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("startCell", (n) -> { this.setStartCell(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the startCell property value. The startCell property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getStartCell() {
+    public UntypedNode getStartCell() {
         return this.backingStore.get("startCell");
     }
     /**
@@ -112,14 +112,14 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the endCell property value. The endCell property
      * @param value Value to set for the endCell property.
      */
-    public void setEndCell(@jakarta.annotation.Nullable final Json value) {
+    public void setEndCell(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("endCell", value);
     }
     /**
      * Sets the startCell property value. The startCell property
      * @param value Value to set for the startCell property.
      */
-    public void setStartCell(@jakarta.annotation.Nullable final Json value) {
+    public void setStartCell(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("startCell", value);
     }
 }

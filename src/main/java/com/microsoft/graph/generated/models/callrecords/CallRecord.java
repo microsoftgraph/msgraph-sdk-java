@@ -47,7 +47,9 @@ public class CallRecord extends Entity implements Parsable {
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("modalities", (n) -> { this.setModalities(n.getCollectionOfEnumValues(Modality::forValue)); });
         deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("organizer_v2", (n) -> { this.setOrganizerV2(n.getObjectValue(Organizer::createFromDiscriminatorValue)); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("participants_v2", (n) -> { this.setParticipantsV2(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(Session::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CallType::forValue)); });
@@ -79,7 +81,7 @@ public class CallRecord extends Entity implements Parsable {
         return this.backingStore.get("modalities");
     }
     /**
-     * Gets the organizer property value. The organizing party's identity.
+     * Gets the organizer property value. The organizing party's identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -87,12 +89,28 @@ public class CallRecord extends Entity implements Parsable {
         return this.backingStore.get("organizer");
     }
     /**
-     * Gets the participants property value. List of distinct identities involved in the call.
+     * Gets the organizer_v2 property value. Identity of the organizer of the call. This relationship is expanded by default in callRecord methods.
+     * @return a {@link Organizer}
+     */
+    @jakarta.annotation.Nullable
+    public Organizer getOrganizerV2() {
+        return this.backingStore.get("organizerV2");
+    }
+    /**
+     * Gets the participants property value. List of distinct identities involved in the call. Limited to 130 entries. The participants property is deprecated and will stop returning data on June 30, 2026. Going forward, use the participants_v2 relationship.
      * @return a {@link java.util.List<IdentitySet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentitySet> getParticipants() {
         return this.backingStore.get("participants");
+    }
+    /**
+     * Gets the participants_v2 property value. List of distinct participants in the call.
+     * @return a {@link java.util.List<Participant>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Participant> getParticipantsV2() {
+        return this.backingStore.get("participantsV2");
     }
     /**
      * Gets the sessions property value. List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
@@ -138,7 +156,9 @@ public class CallRecord extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfEnumValues("modalities", this.getModalities());
         writer.writeObjectValue("organizer", this.getOrganizer());
+        writer.writeObjectValue("organizer_v2", this.getOrganizerV2());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
+        writer.writeCollectionOfObjectValues("participants_v2", this.getParticipantsV2());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("type", this.getType());
@@ -173,18 +193,32 @@ public class CallRecord extends Entity implements Parsable {
         this.backingStore.set("modalities", value);
     }
     /**
-     * Sets the organizer property value. The organizing party's identity.
+     * Sets the organizer property value. The organizing party's identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
      * @param value Value to set for the organizer property.
      */
     public void setOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("organizer", value);
     }
     /**
-     * Sets the participants property value. List of distinct identities involved in the call.
+     * Sets the organizer_v2 property value. Identity of the organizer of the call. This relationship is expanded by default in callRecord methods.
+     * @param value Value to set for the organizer_v2 property.
+     */
+    public void setOrganizerV2(@jakarta.annotation.Nullable final Organizer value) {
+        this.backingStore.set("organizerV2", value);
+    }
+    /**
+     * Sets the participants property value. List of distinct identities involved in the call. Limited to 130 entries. The participants property is deprecated and will stop returning data on June 30, 2026. Going forward, use the participants_v2 relationship.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<IdentitySet> value) {
         this.backingStore.set("participants", value);
+    }
+    /**
+     * Sets the participants_v2 property value. List of distinct participants in the call.
+     * @param value Value to set for the participants_v2 property.
+     */
+    public void setParticipantsV2(@jakarta.annotation.Nullable final java.util.List<Participant> value) {
+        this.backingStore.set("participantsV2", value);
     }
     /**
      * Sets the sessions property value. List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.

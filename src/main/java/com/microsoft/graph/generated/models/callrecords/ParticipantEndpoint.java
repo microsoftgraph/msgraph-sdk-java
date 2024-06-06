@@ -1,5 +1,6 @@
 package com.microsoft.graph.models.callrecords;
 
+import com.microsoft.graph.models.Identity;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -25,6 +26,14 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     public static ParticipantEndpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ParticipantEndpoint();
+    }
+    /**
+     * Gets the associatedIdentity property value. Identity associated with the endpoint.
+     * @return a {@link Identity}
+     */
+    @jakarta.annotation.Nullable
+    public Identity getAssociatedIdentity() {
+        return this.backingStore.get("associatedIdentity");
     }
     /**
      * Gets the cpuCoresCount property value. CPU number of cores used by the media endpoint.
@@ -65,6 +74,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("associatedIdentity", (n) -> { this.setAssociatedIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("cpuCoresCount", (n) -> { this.setCpuCoresCount(n.getIntegerValue()); });
         deserializerMap.put("cpuName", (n) -> { this.setCpuName(n.getStringValue()); });
         deserializerMap.put("cpuProcessorSpeedInMhz", (n) -> { this.setCpuProcessorSpeedInMhz(n.getIntegerValue()); });
@@ -74,7 +84,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identity property value. Identity associated with the endpoint.
+     * Gets the identity property value. Identity associated with the endpoint. The identity property is deprecated and will stop returning data on June 30, 2026. Going forward, use the associatedIdentity property.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -96,12 +106,20 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("associatedIdentity", this.getAssociatedIdentity());
         writer.writeIntegerValue("cpuCoresCount", this.getCpuCoresCount());
         writer.writeStringValue("cpuName", this.getCpuName());
         writer.writeIntegerValue("cpuProcessorSpeedInMhz", this.getCpuProcessorSpeedInMhz());
         writer.writeObjectValue("feedback", this.getFeedback());
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeStringValue("name", this.getName());
+    }
+    /**
+     * Sets the associatedIdentity property value. Identity associated with the endpoint.
+     * @param value Value to set for the associatedIdentity property.
+     */
+    public void setAssociatedIdentity(@jakarta.annotation.Nullable final Identity value) {
+        this.backingStore.set("associatedIdentity", value);
     }
     /**
      * Sets the cpuCoresCount property value. CPU number of cores used by the media endpoint.
@@ -132,7 +150,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
         this.backingStore.set("feedback", value);
     }
     /**
-     * Sets the identity property value. Identity associated with the endpoint.
+     * Sets the identity property value. Identity associated with the endpoint. The identity property is deprecated and will stop returning data on June 30, 2026. Going forward, use the associatedIdentity property.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {

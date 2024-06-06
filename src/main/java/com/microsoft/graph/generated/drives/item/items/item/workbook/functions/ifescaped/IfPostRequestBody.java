@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.ifescaped;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,33 +63,33 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("logicalTest", (n) -> { this.setLogicalTest(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("valueIfFalse", (n) -> { this.setValueIfFalse(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("valueIfTrue", (n) -> { this.setValueIfTrue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("logicalTest", (n) -> { this.setLogicalTest(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("valueIfFalse", (n) -> { this.setValueIfFalse(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("valueIfTrue", (n) -> { this.setValueIfTrue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the logicalTest property value. The logicalTest property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLogicalTest() {
+    public UntypedNode getLogicalTest() {
         return this.backingStore.get("logicalTest");
     }
     /**
      * Gets the valueIfFalse property value. The valueIfFalse property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValueIfFalse() {
+    public UntypedNode getValueIfFalse() {
         return this.backingStore.get("valueIfFalse");
     }
     /**
      * Gets the valueIfTrue property value. The valueIfTrue property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValueIfTrue() {
+    public UntypedNode getValueIfTrue() {
         return this.backingStore.get("valueIfTrue");
     }
     /**
@@ -122,21 +122,21 @@ public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * Sets the logicalTest property value. The logicalTest property
      * @param value Value to set for the logicalTest property.
      */
-    public void setLogicalTest(@jakarta.annotation.Nullable final Json value) {
+    public void setLogicalTest(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("logicalTest", value);
     }
     /**
      * Sets the valueIfFalse property value. The valueIfFalse property
      * @param value Value to set for the valueIfFalse property.
      */
-    public void setValueIfFalse(@jakarta.annotation.Nullable final Json value) {
+    public void setValueIfFalse(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("valueIfFalse", value);
     }
     /**
      * Sets the valueIfTrue property value. The valueIfTrue property
      * @param value Value to set for the valueIfTrue property.
      */
-    public void setValueIfTrue(@jakarta.annotation.Nullable final Json value) {
+    public void setValueIfTrue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("valueIfTrue", value);
     }
 }

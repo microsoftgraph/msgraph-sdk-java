@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.match;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -63,33 +63,33 @@ public class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("lookupArray", (n) -> { this.setLookupArray(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("lookupValue", (n) -> { this.setLookupValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("matchType", (n) -> { this.setMatchType(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("lookupArray", (n) -> { this.setLookupArray(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("lookupValue", (n) -> { this.setLookupValue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("matchType", (n) -> { this.setMatchType(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the lookupArray property value. The lookupArray property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLookupArray() {
+    public UntypedNode getLookupArray() {
         return this.backingStore.get("lookupArray");
     }
     /**
      * Gets the lookupValue property value. The lookupValue property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getLookupValue() {
+    public UntypedNode getLookupValue() {
         return this.backingStore.get("lookupValue");
     }
     /**
      * Gets the matchType property value. The matchType property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getMatchType() {
+    public UntypedNode getMatchType() {
         return this.backingStore.get("matchType");
     }
     /**
@@ -122,21 +122,21 @@ public class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the lookupArray property value. The lookupArray property
      * @param value Value to set for the lookupArray property.
      */
-    public void setLookupArray(@jakarta.annotation.Nullable final Json value) {
+    public void setLookupArray(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("lookupArray", value);
     }
     /**
      * Sets the lookupValue property value. The lookupValue property
      * @param value Value to set for the lookupValue property.
      */
-    public void setLookupValue(@jakarta.annotation.Nullable final Json value) {
+    public void setLookupValue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("lookupValue", value);
     }
     /**
      * Sets the matchType property value. The matchType property
      * @param value Value to set for the matchType property.
      */
-    public void setMatchType(@jakarta.annotation.Nullable final Json value) {
+    public void setMatchType(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("matchType", value);
     }
 }

@@ -1,10 +1,10 @@
 package com.microsoft.graph.drives.item.items.item.workbook.functions.sumif;
 
-import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -58,10 +58,10 @@ public class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the criteria property value. The criteria property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getCriteria() {
+    public UntypedNode getCriteria() {
         return this.backingStore.get("criteria");
     }
     /**
@@ -71,25 +71,25 @@ public class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("range", (n) -> { this.setRange(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        deserializerMap.put("sumRange", (n) -> { this.setSumRange(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("range", (n) -> { this.setRange(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
+        deserializerMap.put("sumRange", (n) -> { this.setSumRange(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the range property value. The range property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getRange() {
+    public UntypedNode getRange() {
         return this.backingStore.get("range");
     }
     /**
      * Gets the sumRange property value. The sumRange property
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getSumRange() {
+    public UntypedNode getSumRange() {
         return this.backingStore.get("sumRange");
     }
     /**
@@ -122,21 +122,21 @@ public class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * Sets the criteria property value. The criteria property
      * @param value Value to set for the criteria property.
      */
-    public void setCriteria(@jakarta.annotation.Nullable final Json value) {
+    public void setCriteria(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("criteria", value);
     }
     /**
      * Sets the range property value. The range property
      * @param value Value to set for the range property.
      */
-    public void setRange(@jakarta.annotation.Nullable final Json value) {
+    public void setRange(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("range", value);
     }
     /**
      * Sets the sumRange property value. The sumRange property
      * @param value Value to set for the sumRange property.
      */
-    public void setSumRange(@jakarta.annotation.Nullable final Json value) {
+    public void setSumRange(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("sumRange", value);
     }
 }
