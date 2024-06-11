@@ -114,7 +114,7 @@ public class ItemReference implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the path property value. Path that can be used to navigate to the item. Read-only.
+     * Gets the path property value. Percent-encoded path that can be used to navigate to the item. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -213,7 +213,7 @@ public class ItemReference implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the path property value. Path that can be used to navigate to the item. Read-only.
+     * Sets the path property value. Percent-encoded path that can be used to navigate to the item. Read-only.
      * @param value Value to set for the path property.
      */
     public void setPath(@jakarta.annotation.Nullable final String value) {

@@ -28,6 +28,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.fido2CombinationConfiguration": return new Fido2CombinationConfiguration();
+                case "#microsoft.graph.x509CertificateCombinationConfiguration": return new X509CertificateCombinationConfiguration();
             }
         }
         return new AuthenticationCombinationConfiguration();

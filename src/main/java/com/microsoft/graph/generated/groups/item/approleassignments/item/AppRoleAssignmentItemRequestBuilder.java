@@ -57,7 +57,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the app roles a group has been granted for an application. Supports $expand.
+     * Represents the app roles granted to a group for an application. Supports $expand.
      * @return a {@link AppRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -66,7 +66,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents the app roles a group has been granted for an application. Supports $expand.
+     * Represents the app roles granted to a group for an application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -124,7 +124,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the app roles a group has been granted for an application. Supports $expand.
+     * Represents the app roles granted to a group for an application. Supports $expand.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the app roles a group has been granted for an application. Supports $expand.
+     * Represents the app roles granted to a group for an application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +184,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the app roles a group has been granted for an application. Supports $expand.
+     * Represents the app roles granted to a group for an application. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

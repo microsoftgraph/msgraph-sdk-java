@@ -86,7 +86,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isBroadcast property value. Indicates if this is a Teams live event.
+     * Gets the isBroadcast property value. Indicates whether this meeting is a Teams live event.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("isBroadcast");
     }
     /**
-     * Gets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * Gets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
      * @return a {@link MeetingParticipants}
      */
     @jakarta.annotation.Nullable
@@ -179,14 +179,14 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("externalId", value);
     }
     /**
-     * Sets the isBroadcast property value. Indicates if this is a Teams live event.
+     * Sets the isBroadcast property value. Indicates whether this meeting is a Teams live event.
      * @param value Value to set for the isBroadcast property.
      */
     public void setIsBroadcast(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isBroadcast", value);
     }
     /**
-     * Sets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * Sets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final MeetingParticipants value) {

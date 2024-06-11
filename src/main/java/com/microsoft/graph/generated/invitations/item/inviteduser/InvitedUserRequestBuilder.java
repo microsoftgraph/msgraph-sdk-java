@@ -55,7 +55,7 @@ public class InvitedUserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUser{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The user created as part of the invitation creation. Read-Only
+     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class InvitedUserRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user created as part of the invitation creation. Read-Only
+     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,7 +77,7 @@ public class InvitedUserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * The user created as part of the invitation creation. Read-Only
+     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class InvitedUserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user created as part of the invitation creation. Read-Only
+     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -107,7 +107,7 @@ public class InvitedUserRequestBuilder extends BaseRequestBuilder {
         return new InvitedUserRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user created as part of the invitation creation. Read-Only
+     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

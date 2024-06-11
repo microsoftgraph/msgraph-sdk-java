@@ -37,7 +37,7 @@ public class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/createdOnBehalfOf{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder {
         return new CreatedOnBehalfOfRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

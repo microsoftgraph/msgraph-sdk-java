@@ -190,7 +190,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManaged");
     }
     /**
-     * Gets the isRooted property value. true if the device is rooted; false if the device is jail-broken. This property can only be updated by Intune.
+     * Gets the isRooted property value. true if the device is rooted or jail-broken. This property can only be updated by Intune.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -489,7 +489,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("isManaged", value);
     }
     /**
-     * Sets the isRooted property value. true if the device is rooted; false if the device is jail-broken. This property can only be updated by Intune.
+     * Sets the isRooted property value. true if the device is rooted or jail-broken. This property can only be updated by Intune.
      * @param value Value to set for the isRooted property.
      */
     public void setIsRooted(@jakarta.annotation.Nullable final Boolean value) {
