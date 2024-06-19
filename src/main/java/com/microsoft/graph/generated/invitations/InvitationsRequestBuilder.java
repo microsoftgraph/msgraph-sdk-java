@@ -82,7 +82,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InvitationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
+     * Use this API to create a new invitation or reset the redemption status for a guest user who already redeemed their invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param body The request body
      * @return a {@link Invitation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -93,7 +93,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
+     * Use this API to create a new invitation or reset the redemption status for a guest user who already redeemed their invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Invitation}
@@ -129,7 +129,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
+     * Use this API to create a new invitation or reset the redemption status for a guest user who already redeemed their invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +138,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
+     * Use this API to create a new invitation or reset the redemption status for a guest user who already redeemed their invitation. Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

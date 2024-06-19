@@ -27,7 +27,7 @@ public class Group extends DirectoryObject implements Parsable {
         return new Group();
     }
     /**
-     * Gets the acceptedSenders property value. The list of users or groups allowed to create posts or calendar events in this group. If this list is non-empty, then only users or groups listed here are allowed to post.
+     * Gets the acceptedSenders property value. The list of users or groups allowed to create posts or calendar events in this group. If this list is nonempty, then only users or groups listed here are allowed to post.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("allowExternalSenders");
     }
     /**
-     * Gets the appRoleAssignments property value. Represents the app roles a group has been granted for an application. Supports $expand.
+     * Gets the appRoleAssignments property value. Represents the app roles granted to a group for an application. Supports $expand.
      * @return a {@link java.util.List<AppRoleAssignment>}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("assignedLicenses");
     }
     /**
-     * Gets the autoSubscribeNewMembers property value. Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the autoSubscribeNewMembers property value. Indicates if new members added to the group are autosubscribed to receive email notifications. You can set this property in a PATCH request for the group; don't set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("calendarView");
     }
     /**
-     * Gets the classification property value. Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith).
+     * Gets the classification property value. Describes a classification for the group (such as low, medium, or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("conversations");
     }
     /**
-     * Gets the createdDateTime property value. Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
+     * Gets the createdDateTime property value. Timestamp of when the group was created. The value can't be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the createdOnBehalfOf property value. The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * Gets the createdOnBehalfOf property value. The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The display name for the group. This property is required when a group is created and cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
+     * Gets the displayName property value. The display name for the group. This property is required when a group is created and can't be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("events");
     }
     /**
-     * Gets the expirationDateTime property value. Timestamp of when the group is set to expire. It is null for security groups, but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+     * Gets the expirationDateTime property value. Timestamp of when the group is set to expire. It's null for security groups, but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -279,7 +279,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("hasMembersWithLicenseErrors");
     }
     /**
-     * Gets the hideFromAddressLists property value. True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("hideFromAddressLists");
     }
     /**
-     * Gets the hideFromOutlookClients property value. True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the hideFromOutlookClients property value. True if the group isn't displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -303,7 +303,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("isArchived");
     }
     /**
-     * Gets the isAssignableToRole property value. Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true, visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers with at least the Privileged Role Administrator role can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
+     * Gets the isAssignableToRole property value. Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true, visibility must be Hidden, and the group can't be a dynamic group (that is, groupTypes can't contain DynamicMembership). Only callers with at least the Privileged Role Administrator role can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -343,7 +343,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("mailEnabled");
     }
     /**
-     * Gets the mailNickname property value. The mail alias for the group, unique for Microsoft 365 groups in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following: @ () / [] ' ; : <> , SPACE. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the mailNickname property value. The mail alias for the group, unique for Microsoft 365 groups in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following characters: @ () / [] ' ; : <> , SPACE. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -407,7 +407,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesDomainName");
     }
     /**
-     * Gets the onPremisesLastSyncDateTime property value. Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
+     * Gets the onPremisesLastSyncDateTime property value. Indicates the last time at which the group was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -439,7 +439,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesSamAccountName");
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values). Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -447,7 +447,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesSecurityIdentifier");
     }
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Gets the onPremisesSyncEnabled property value. true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -455,7 +455,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesSyncEnabled");
     }
     /**
-     * Gets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
+     * Gets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -527,7 +527,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("rejectedSenders");
     }
     /**
-     * Gets the renewedDateTime property value. Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+     * Gets the renewedDateTime property value. Timestamp of when the group was last renewed. This value can't be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -543,7 +543,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("securityEnabled");
     }
     /**
-     * Gets the securityIdentifier property value. Security identifier of the group, used in Windows scenarios. Returned by default.
+     * Gets the securityIdentifier property value. Security identifier of the group, used in Windows scenarios. Read-only. Returned by default.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -551,7 +551,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("securityIdentifier");
     }
     /**
-     * Gets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * Gets the serviceProvisioningErrors property value. Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a group object.  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a {@link java.util.List<ServiceProvisioningError>}
      */
     @jakarta.annotation.Nullable
@@ -559,7 +559,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("serviceProvisioningErrors");
     }
     /**
-     * Gets the settings property value. Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Gets the settings property value. Settings that can govern this group's behavior, like whether members can invite guests to the group. Nullable.
      * @return a {@link java.util.List<GroupSetting>}
      */
     @jakarta.annotation.Nullable
@@ -583,7 +583,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("team");
     }
     /**
-     * Gets the theme property value. Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+     * Gets the theme property value. Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange, or Red. Returned by default.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -623,7 +623,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("uniqueName");
     }
     /**
-     * Gets the unseenCount property value. Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -631,7 +631,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("unseenCount");
     }
     /**
-     * Gets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default, and the Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
+     * Gets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value isn't specified during group creation on Microsoft Graph, a security group is created as Private by default, and the Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -714,7 +714,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeStringValue("visibility", this.getVisibility());
     }
     /**
-     * Sets the acceptedSenders property value. The list of users or groups allowed to create posts or calendar events in this group. If this list is non-empty, then only users or groups listed here are allowed to post.
+     * Sets the acceptedSenders property value. The list of users or groups allowed to create posts or calendar events in this group. If this list is nonempty, then only users or groups listed here are allowed to post.
      * @param value Value to set for the acceptedSenders property.
      */
     public void setAcceptedSenders(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
@@ -728,7 +728,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("allowExternalSenders", value);
     }
     /**
-     * Sets the appRoleAssignments property value. Represents the app roles a group has been granted for an application. Supports $expand.
+     * Sets the appRoleAssignments property value. Represents the app roles granted to a group for an application. Supports $expand.
      * @param value Value to set for the appRoleAssignments property.
      */
     public void setAppRoleAssignments(@jakarta.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
@@ -749,7 +749,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("assignedLicenses", value);
     }
     /**
-     * Sets the autoSubscribeNewMembers property value. Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the autoSubscribeNewMembers property value. Indicates if new members added to the group are autosubscribed to receive email notifications. You can set this property in a PATCH request for the group; don't set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the autoSubscribeNewMembers property.
      */
     public void setAutoSubscribeNewMembers(@jakarta.annotation.Nullable final Boolean value) {
@@ -770,7 +770,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("calendarView", value);
     }
     /**
-     * Sets the classification property value. Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith).
+     * Sets the classification property value. Describes a classification for the group (such as low, medium, or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith).
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final String value) {
@@ -784,14 +784,14 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("conversations", value);
     }
     /**
-     * Sets the createdDateTime property value. Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
+     * Sets the createdDateTime property value. Timestamp of when the group was created. The value can't be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the createdOnBehalfOf property value. The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * Sets the createdOnBehalfOf property value. The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      * @param value Value to set for the createdOnBehalfOf property.
      */
     public void setCreatedOnBehalfOf(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -805,7 +805,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The display name for the group. This property is required when a group is created and cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
+     * Sets the displayName property value. The display name for the group. This property is required when a group is created and can't be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -833,7 +833,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("events", value);
     }
     /**
-     * Sets the expirationDateTime property value. Timestamp of when the group is set to expire. It is null for security groups, but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+     * Sets the expirationDateTime property value. Timestamp of when the group is set to expire. It's null for security groups, but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -868,14 +868,14 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("hasMembersWithLicenseErrors", value);
     }
     /**
-     * Sets the hideFromAddressLists property value. True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the hideFromAddressLists property.
      */
     public void setHideFromAddressLists(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hideFromAddressLists", value);
     }
     /**
-     * Sets the hideFromOutlookClients property value. True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the hideFromOutlookClients property value. True if the group isn't displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the hideFromOutlookClients property.
      */
     public void setHideFromOutlookClients(@jakarta.annotation.Nullable final Boolean value) {
@@ -889,7 +889,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("isArchived", value);
     }
     /**
-     * Sets the isAssignableToRole property value. Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true, visibility must be Hidden, and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers with at least the Privileged Role Administrator role can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
+     * Sets the isAssignableToRole property value. Indicates whether this group can be assigned to a Microsoft Entra role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true, visibility must be Hidden, and the group can't be a dynamic group (that is, groupTypes can't contain DynamicMembership). Only callers with at least the Privileged Role Administrator role can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Microsoft Entra role assignmentsUsing this feature requires a Microsoft Entra ID P1 license. Returned by default. Supports $filter (eq, ne, not).
      * @param value Value to set for the isAssignableToRole property.
      */
     public void setIsAssignableToRole(@jakarta.annotation.Nullable final Boolean value) {
@@ -924,7 +924,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("mailEnabled", value);
     }
     /**
-     * Sets the mailNickname property value. The mail alias for the group, unique for Microsoft 365 groups in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following: @ () / [] ' ; : <> , SPACE. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the mailNickname property value. The mail alias for the group, unique for Microsoft 365 groups in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following characters: @ () / [] ' ; : <> , SPACE. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the mailNickname property.
      */
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
@@ -980,7 +980,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesDomainName", value);
     }
     /**
-     * Sets the onPremisesLastSyncDateTime property value. Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
+     * Sets the onPremisesLastSyncDateTime property value. Indicates the last time at which the group was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      */
     public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -1008,21 +1008,21 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesSamAccountName", value);
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values). Read-only.
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("onPremisesSecurityIdentifier", value);
     }
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Sets the onPremisesSyncEnabled property value. true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @param value Value to set for the onPremisesSyncEnabled property.
      */
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("onPremisesSyncEnabled", value);
     }
     /**
-     * Sets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
+     * Sets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
@@ -1085,7 +1085,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("rejectedSenders", value);
     }
     /**
-     * Sets the renewedDateTime property value. Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
+     * Sets the renewedDateTime property value. Timestamp of when the group was last renewed. This value can't be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.
      * @param value Value to set for the renewedDateTime property.
      */
     public void setRenewedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -1099,21 +1099,21 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("securityEnabled", value);
     }
     /**
-     * Sets the securityIdentifier property value. Security identifier of the group, used in Windows scenarios. Returned by default.
+     * Sets the securityIdentifier property value. Security identifier of the group, used in Windows scenarios. Read-only. Returned by default.
      * @param value Value to set for the securityIdentifier property.
      */
     public void setSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("securityIdentifier", value);
     }
     /**
-     * Sets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * Sets the serviceProvisioningErrors property value. Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a group object.  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param value Value to set for the serviceProvisioningErrors property.
      */
     public void setServiceProvisioningErrors(@jakarta.annotation.Nullable final java.util.List<ServiceProvisioningError> value) {
         this.backingStore.set("serviceProvisioningErrors", value);
     }
     /**
-     * Sets the settings property value. Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Sets the settings property value. Settings that can govern this group's behavior, like whether members can invite guests to the group. Nullable.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final java.util.List<GroupSetting> value) {
@@ -1134,7 +1134,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("team", value);
     }
     /**
-     * Sets the theme property value. Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+     * Sets the theme property value. Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange, or Red. Returned by default.
      * @param value Value to set for the theme property.
      */
     public void setTheme(@jakarta.annotation.Nullable final String value) {
@@ -1169,14 +1169,14 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("uniqueName", value);
     }
     /**
-     * Sets the unseenCount property value. Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the unseenCount property.
      */
     public void setUnseenCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("unseenCount", value);
     }
     /**
-     * Sets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default, and the Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
+     * Sets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value isn't specified during group creation on Microsoft Graph, a security group is created as Private by default, and the Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
      * @param value Value to set for the visibility property.
      */
     public void setVisibility(@jakarta.annotation.Nullable final String value) {
