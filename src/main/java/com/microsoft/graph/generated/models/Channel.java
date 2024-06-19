@@ -89,7 +89,7 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("filesFolder");
     }
     /**
-     * Gets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
+     * Gets the isFavoriteByDefault property value. Indicates whether the channel should be marked as recommended for all members of the team to show in their channel list. Note: All recommended channels automatically show in the channels list for education and frontline worker users. The property can only be set programmatically via the Create team method. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -218,7 +218,7 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("filesFolder", value);
     }
     /**
-     * Sets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
+     * Sets the isFavoriteByDefault property value. Indicates whether the channel should be marked as recommended for all members of the team to show in their channel list. Note: All recommended channels automatically show in the channels list for education and frontline worker users. The property can only be set programmatically via the Create team method. The default value is false.
      * @param value Value to set for the isFavoriteByDefault property.
      */
     public void setIsFavoriteByDefault(@jakarta.annotation.Nullable final Boolean value) {

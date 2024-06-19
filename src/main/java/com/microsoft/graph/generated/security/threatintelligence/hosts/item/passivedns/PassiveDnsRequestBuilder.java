@@ -59,7 +59,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/passiveDns{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
+     * Get a list of passiveDnsRecord resources associated with a host. This method is a forward DNS lookup that queries the IP address of the specified host using its hostname. 
      * @return a {@link PassiveDnsRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0">Find more info here</a>
@@ -69,7 +69,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
+     * Get a list of passiveDnsRecord resources associated with a host. This method is a forward DNS lookup that queries the IP address of the specified host using its hostname. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PassiveDnsRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -83,7 +83,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PassiveDnsRecordCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
+     * Get a list of passiveDnsRecord resources associated with a host. This method is a forward DNS lookup that queries the IP address of the specified host using its hostname. 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
+     * Get a list of passiveDnsRecord resources associated with a host. This method is a forward DNS lookup that queries the IP address of the specified host using its hostname. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +113,7 @@ public class PassiveDnsRequestBuilder extends BaseRequestBuilder {
         return new PassiveDnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
+     * Get a list of passiveDnsRecord resources associated with a host. This method is a forward DNS lookup that queries the IP address of the specified host using its hostname. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

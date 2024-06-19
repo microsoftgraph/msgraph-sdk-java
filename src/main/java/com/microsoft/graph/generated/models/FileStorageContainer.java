@@ -93,7 +93,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are 'reader', 'writer', 'manager', and 'owner'. Read-write.
+     * Gets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are: reader, writer, manager, and owner. Read-write.
      * @return a {@link java.util.List<Permission>}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("drive", value);
     }
     /**
-     * Sets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are 'reader', 'writer', 'manager', and 'owner'. Read-write.
+     * Sets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are: reader, writer, manager, and owner. Read-write.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {

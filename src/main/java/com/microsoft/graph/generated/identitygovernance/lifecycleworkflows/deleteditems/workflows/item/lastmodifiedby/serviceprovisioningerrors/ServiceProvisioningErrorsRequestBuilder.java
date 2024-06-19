@@ -46,7 +46,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/lastModifiedBy/serviceProvisioningErrors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a {@link ServiceProvisioningErrorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -55,7 +55,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServiceProvisioningErrorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -68,7 +68,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceProvisioningErrorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +98,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return new ServiceProvisioningErrorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.  Supports $filter (eq, not, for isResolved and serviceInstance).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
