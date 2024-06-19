@@ -24,6 +24,9 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
+      - name: Build with Java 8
+        working-directory: ./java-8
+        run: .././gradlew build
       - name: Upload Unit Test Results
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
