@@ -24,4 +24,8 @@ java {
     withSourcesJar()
 }
 
+tasks.jar {
+    zip64(true)
+}
+
 apply from: "../gradle/dependencies.gradle"
