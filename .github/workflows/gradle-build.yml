@@ -61,7 +61,7 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Java 8
         working-directory: ./java-8
-        run: .././gradlew -Dorg.gradle.jvmargs=-Xmx4g build
+        run: .././gradlew build
 
   build:
     needs: [build-java-latest, build-java-8]
