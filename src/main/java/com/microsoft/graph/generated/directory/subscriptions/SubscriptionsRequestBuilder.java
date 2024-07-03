@@ -60,19 +60,21 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/subscriptions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization acquired.
      * @return a {@link CompanySubscriptionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CompanySubscriptionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CompanySubscriptionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CompanySubscriptionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CompanySubscription::createFromDiscriminatorValue);
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization acquired.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return new SubscriptionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization acquired.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

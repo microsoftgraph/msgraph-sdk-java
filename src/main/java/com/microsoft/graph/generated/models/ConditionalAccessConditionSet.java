@@ -110,7 +110,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return deserializerMap;
     }
     /**
-     * Gets the insiderRiskLevels property value. The insiderRiskLevels property
+     * Gets the insiderRiskLevels property value. Insider risk levels included in the policy. The possible values are: minor, moderate, elevated, unknownFutureValue.
      * @return a {@link EnumSet<ConditionalAccessInsiderRiskLevels>}
      */
     @jakarta.annotation.Nullable
@@ -237,7 +237,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         this.backingStore.set("devices", value);
     }
     /**
-     * Sets the insiderRiskLevels property value. The insiderRiskLevels property
+     * Sets the insiderRiskLevels property value. Insider risk levels included in the policy. The possible values are: minor, moderate, elevated, unknownFutureValue.
      * @param value Value to set for the insiderRiskLevels property.
      */
     public void setInsiderRiskLevels(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessInsiderRiskLevels> value) {

@@ -37,7 +37,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the shared property value. Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
+     * Gets the shared property value. Calculated relationship that identifies documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for work or school and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @return a {@link java.util.List<SharedInsight>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
         return this.backingStore.get("shared");
     }
     /**
-     * Gets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     * Gets the trending property value. Calculated relationship that identifies documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for work or school and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @return a {@link java.util.List<Trending>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
         return this.backingStore.get("trending");
     }
     /**
-     * Gets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
+     * Gets the used property value. Calculated relationship that identifies the latest documents viewed or modified by a user, including OneDrive for work or school and SharePoint documents, ranked by recency of use.
      * @return a {@link java.util.List<UsedInsight>}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class OfficeGraphInsights extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("used", this.getUsed());
     }
     /**
-     * Sets the shared property value. Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
+     * Sets the shared property value. Calculated relationship that identifies documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for work or school and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param value Value to set for the shared property.
      */
     public void setShared(@jakarta.annotation.Nullable final java.util.List<SharedInsight> value) {
         this.backingStore.set("shared", value);
     }
     /**
-     * Sets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     * Sets the trending property value. Calculated relationship that identifies documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for work or school and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @param value Value to set for the trending property.
      */
     public void setTrending(@jakarta.annotation.Nullable final java.util.List<Trending> value) {
         this.backingStore.set("trending", value);
     }
     /**
-     * Sets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
+     * Sets the used property value. Calculated relationship that identifies the latest documents viewed or modified by a user, including OneDrive for work or school and SharePoint documents, ranked by recency of use.
      * @param value Value to set for the used property.
      */
     public void setUsed(@jakarta.annotation.Nullable final java.util.List<UsedInsight> value) {
