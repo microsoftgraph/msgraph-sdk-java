@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-java-latest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -47,6 +47,34 @@ jobs:
             gradle.properties
             **/gradle/**
             Scripts/**
+
+  build-java-8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 8
+          distribution: 'temurin'
+      - name: Grant Execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build with Java 8
+        working-directory: ./java-8
+        run: .././gradlew build
+
+  build:
+    needs: [build-java-latest, build-java-8]
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: Determine build status
+        run: |
+          if [ "${{ needs.build-java-latest.result }}" == "success" ] && [ "${{ needs.build-java-8.result }}" == "success" ]; then
+            exit 0
+          else
+            exit 1
+          fi
 
   compare-packages:
     needs: build

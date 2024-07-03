@@ -25,13 +25,13 @@ apply plugin: "com.github.ManifestClasspath"
 android {
     namespace 'com.microsoft.graph'
 
-    compileSdkVersion 34
+    compileSdkVersion 35
 
     defaultConfig {
         versionCode 1
         versionName "1.0"
         minSdkVersion 26
-        targetSdkVersion 34
+        targetSdkVersion 35
     }
 
     buildTypes {
