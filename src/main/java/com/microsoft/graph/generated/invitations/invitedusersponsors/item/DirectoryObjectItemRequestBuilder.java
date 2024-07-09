@@ -1,9 +1,7 @@
-package com.microsoft.graph.invitations.item.inviteduser;
+package com.microsoft.graph.invitations.invitedusersponsors.item;
 
-import com.microsoft.graph.invitations.item.inviteduser.mailboxsettings.MailboxSettingsRequestBuilder;
-import com.microsoft.graph.invitations.item.inviteduser.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -18,66 +16,50 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the invitedUser property of the microsoft.graph.invitation entity.
+ * Provides operations to manage the invitedUserSponsors property of the microsoft.graph.invitation entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class InvitedUserRequestBuilder extends BaseRequestBuilder {
+public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * The mailboxSettings property
-     * @return a {@link MailboxSettingsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public MailboxSettingsRequestBuilder mailboxSettings() {
-        return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * The serviceProvisioningErrors property
-     * @return a {@link ServiceProvisioningErrorsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
-        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Instantiates a new {@link InvitedUserRequestBuilder} and sets the default values.
+     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public InvitedUserRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUser{?%24expand,%24select}", pathParameters);
+    public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/invitations/invitedUserSponsors/{directoryObject%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link InvitedUserRequestBuilder} and sets the default values.
+     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public InvitedUserRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUser{?%24expand,%24select}", rawUrl);
+    public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/invitations/invitedUserSponsors/{directoryObject%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
-     * @return a {@link User}
+     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public User get() {
+    public DirectoryObject get() {
         return get(null);
     }
     /**
-     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
+     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link User}
+     * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public User get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public DirectoryObject get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
+     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +67,7 @@ public class InvitedUserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
+     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -99,15 +81,15 @@ public class InvitedUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link InvitedUserRequestBuilder}
+     * @return a {@link DirectoryObjectItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public InvitedUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public DirectoryObjectItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new InvitedUserRequestBuilder(rawUrl, requestAdapter);
+        return new DirectoryObjectItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
+     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

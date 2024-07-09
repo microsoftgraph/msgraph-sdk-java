@@ -1,4 +1,4 @@
-package com.microsoft.graph.invitations.item.inviteduser.mailboxsettings;
+package com.microsoft.graph.invitations.inviteduser.mailboxsettings;
 
 import com.microsoft.graph.models.MailboxSettings;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Builds and executes requests for operations under /invitations/{invitation-id}/invitedUser/mailboxSettings
+ * Builds and executes requests for operations under /invitations/invitedUser/mailboxSettings
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
@@ -26,7 +26,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MailboxSettingsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUser/mailboxSettings{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/invitations/invitedUser/mailboxSettings{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new {@link MailboxSettingsRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MailboxSettingsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUser/mailboxSettings{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/invitations/invitedUser/mailboxSettings{?%24expand,%24select}", rawUrl);
     }
     /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. Returned only on $select.
