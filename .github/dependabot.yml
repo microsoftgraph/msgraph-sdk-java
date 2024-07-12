@@ -1,9 +1,12 @@
 version: 2
 updates:
 - package-ecosystem: gradle
-  directory: "/"
+  directories:
+    - "/"
+    - "/java-8"
   schedule:
     interval: daily
+    time: "09:00" # 9am UTC
   open-pull-requests-limit: 10
   groups:
     kiota-dependencies:
@@ -13,6 +16,7 @@ updates:
   directory: "/android"
   schedule:
     interval: daily
+    time: "10:00" # 10am UTC. After core projects are updated to prevent duplicate PRs
   open-pull-requests-limit: 10
   groups:
     kiota-dependencies:
