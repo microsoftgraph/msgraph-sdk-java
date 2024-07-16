@@ -1,4 +1,4 @@
-package com.microsoft.graph.invitations.item.invitedusersponsors.count;
+package com.microsoft.graph.invitations.invitedusersponsors.count;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,7 +25,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUserSponsors/$count{?%24filter,%24search}", pathParameters);
+        super(requestAdapter, "{+baseurl}/invitations/invitedUserSponsors/$count{?%24filter,%24search}", pathParameters);
     }
     /**
      * Instantiates a new {@link CountRequestBuilder} and sets the default values.
@@ -33,7 +33,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUserSponsors/$count{?%24filter,%24search}", rawUrl);
+        super(requestAdapter, "{+baseurl}/invitations/invitedUserSponsors/$count{?%24filter,%24search}", rawUrl);
     }
     /**
      * Get the number of the resource

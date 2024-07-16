@@ -110,7 +110,7 @@ public class AccessPackage extends Entity implements Parsable {
         return this.backingStore.get("incompatibleGroups");
     }
     /**
-     * Gets the isHidden property value. Whether the access package is hidden from the requestor.
+     * Gets the isHidden property value. Indicates whether the access package is hidden from the requestor.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class AccessPackage extends Entity implements Parsable {
         this.backingStore.set("incompatibleGroups", value);
     }
     /**
-     * Sets the isHidden property value. Whether the access package is hidden from the requestor.
+     * Sets the isHidden property value. Indicates whether the access package is hidden from the requestor.
      * @param value Value to set for the isHidden property.
      */
     public void setIsHidden(@jakarta.annotation.Nullable final Boolean value) {
