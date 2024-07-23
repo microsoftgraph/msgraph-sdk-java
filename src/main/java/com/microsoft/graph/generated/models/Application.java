@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -177,6 +178,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("isFallbackPublicClient", (n) -> { this.setIsFallbackPublicClient(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("logo", (n) -> { this.setLogo(n.getByteArrayValue()); });
+        deserializerMap.put("nativeAuthenticationApisEnabled", (n) -> { this.setNativeAuthenticationApisEnabled(n.getEnumSetValue(NativeAuthenticationApisEnabled::forValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
         deserializerMap.put("oauth2RequirePostResponse", (n) -> { this.setOauth2RequirePostResponse(n.getBooleanValue()); });
         deserializerMap.put("optionalClaims", (n) -> { this.setOptionalClaims(n.getObjectValue(OptionalClaims::createFromDiscriminatorValue)); });
@@ -265,6 +267,14 @@ public class Application extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public byte[] getLogo() {
         return this.backingStore.get("logo");
+    }
+    /**
+     * Gets the nativeAuthenticationApisEnabled property value. Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: none and all. Default is none. For more information, see Native Authentication.
+     * @return a {@link EnumSet<NativeAuthenticationApisEnabled>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<NativeAuthenticationApisEnabled> getNativeAuthenticationApisEnabled() {
+        return this.backingStore.get("nativeAuthenticationApisEnabled");
     }
     /**
      * Gets the notes property value. Notes relevant for the management of the application.
@@ -480,6 +490,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("isFallbackPublicClient", this.getIsFallbackPublicClient());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeByteArrayValue("logo", this.getLogo());
+        writer.writeEnumSetValue("nativeAuthenticationApisEnabled", this.getNativeAuthenticationApisEnabled());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeBooleanValue("oauth2RequirePostResponse", this.getOauth2RequirePostResponse());
         writer.writeObjectValue("optionalClaims", this.getOptionalClaims());
@@ -664,6 +675,13 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setLogo(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("logo", value);
+    }
+    /**
+     * Sets the nativeAuthenticationApisEnabled property value. Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: none and all. Default is none. For more information, see Native Authentication.
+     * @param value Value to set for the nativeAuthenticationApisEnabled property.
+     */
+    public void setNativeAuthenticationApisEnabled(@jakarta.annotation.Nullable final EnumSet<NativeAuthenticationApisEnabled> value) {
+        this.backingStore.set("nativeAuthenticationApisEnabled", value);
     }
     /**
      * Sets the notes property value. Notes relevant for the management of the application.

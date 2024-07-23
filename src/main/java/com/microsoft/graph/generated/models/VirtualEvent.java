@@ -26,6 +26,7 @@ public class VirtualEvent extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.virtualEventTownhall": return new VirtualEventTownhall();
                 case "#microsoft.graph.virtualEventWebinar": return new VirtualEventWebinar();
             }
         }
@@ -74,10 +75,19 @@ public class VirtualEvent extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("presenters", (n) -> { this.setPresenters(n.getCollectionOfObjectValues(VirtualEventPresenter::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(VirtualEventStatus::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the presenters property value. The presenters property
+     * @return a {@link java.util.List<VirtualEventPresenter>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<VirtualEventPresenter> getPresenters() {
+        return this.backingStore.get("presenters");
     }
     /**
      * Gets the sessions property value. Sessions for the virtual event.
@@ -114,6 +124,7 @@ public class VirtualEvent extends Entity implements Parsable {
         writer.writeObjectValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
+        writer.writeCollectionOfObjectValues("presenters", this.getPresenters());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
@@ -145,6 +156,13 @@ public class VirtualEvent extends Entity implements Parsable {
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("endDateTime", value);
+    }
+    /**
+     * Sets the presenters property value. The presenters property
+     * @param value Value to set for the presenters property.
+     */
+    public void setPresenters(@jakarta.annotation.Nullable final java.util.List<VirtualEventPresenter> value) {
+        this.backingStore.set("presenters", value);
     }
     /**
      * Sets the sessions property value. Sessions for the virtual event.

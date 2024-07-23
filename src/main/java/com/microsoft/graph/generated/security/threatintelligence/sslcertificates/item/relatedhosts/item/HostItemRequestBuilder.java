@@ -37,7 +37,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/sslCertificates/{sslCertificate%2Did}/relatedHosts/{host%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * The host resources related with this sslCertificate.
      * @return a {@link Host}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * The host resources related with this sslCertificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Host}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Host::createFromDiscriminatorValue);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * The host resources related with this sslCertificate.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * The host resources related with this sslCertificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
         return new HostItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * The host resources related with this sslCertificate.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

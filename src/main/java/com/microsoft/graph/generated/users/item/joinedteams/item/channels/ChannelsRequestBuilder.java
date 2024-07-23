@@ -5,6 +5,7 @@ import com.microsoft.graph.models.ChannelCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.joinedteams.item.channels.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.channels.getallretainedmessages.GetAllRetainedMessagesRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.ChannelItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -39,6 +40,14 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllRetainedMessages method.
+     * @return a {@link GetAllRetainedMessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllRetainedMessagesRequestBuilder getAllRetainedMessages() {
+        return new GetAllRetainedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.

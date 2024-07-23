@@ -49,9 +49,19 @@ public class UserSettings extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { this.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
         deserializerMap.put("contributionToContentDiscoveryDisabled", (n) -> { this.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
+        deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(UserInsightsSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
+        deserializerMap.put("storage", (n) -> { this.setStorage(n.getObjectValue(UserStorage::createFromDiscriminatorValue)); });
         deserializerMap.put("windows", (n) -> { this.setWindows(n.getCollectionOfObjectValues(WindowsSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the itemInsights property value. The itemInsights property
+     * @return a {@link UserInsightsSettings}
+     */
+    @jakarta.annotation.Nullable
+    public UserInsightsSettings getItemInsights() {
+        return this.backingStore.get("itemInsights");
     }
     /**
      * Gets the shiftPreferences property value. The shiftPreferences property
@@ -60,6 +70,14 @@ public class UserSettings extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public ShiftPreferences getShiftPreferences() {
         return this.backingStore.get("shiftPreferences");
+    }
+    /**
+     * Gets the storage property value. The storage property
+     * @return a {@link UserStorage}
+     */
+    @jakarta.annotation.Nullable
+    public UserStorage getStorage() {
+        return this.backingStore.get("storage");
     }
     /**
      * Gets the windows property value. The windows property
@@ -78,7 +96,9 @@ public class UserSettings extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeBooleanValue("contributionToContentDiscoveryAsOrganizationDisabled", this.getContributionToContentDiscoveryAsOrganizationDisabled());
         writer.writeBooleanValue("contributionToContentDiscoveryDisabled", this.getContributionToContentDiscoveryDisabled());
+        writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
+        writer.writeObjectValue("storage", this.getStorage());
         writer.writeCollectionOfObjectValues("windows", this.getWindows());
     }
     /**
@@ -96,11 +116,25 @@ public class UserSettings extends Entity implements Parsable {
         this.backingStore.set("contributionToContentDiscoveryDisabled", value);
     }
     /**
+     * Sets the itemInsights property value. The itemInsights property
+     * @param value Value to set for the itemInsights property.
+     */
+    public void setItemInsights(@jakarta.annotation.Nullable final UserInsightsSettings value) {
+        this.backingStore.set("itemInsights", value);
+    }
+    /**
      * Sets the shiftPreferences property value. The shiftPreferences property
      * @param value Value to set for the shiftPreferences property.
      */
     public void setShiftPreferences(@jakarta.annotation.Nullable final ShiftPreferences value) {
         this.backingStore.set("shiftPreferences", value);
+    }
+    /**
+     * Sets the storage property value. The storage property
+     * @param value Value to set for the storage property.
+     */
+    public void setStorage(@jakarta.annotation.Nullable final UserStorage value) {
+        this.backingStore.set("storage", value);
     }
     /**
      * Sets the windows property value. The windows property

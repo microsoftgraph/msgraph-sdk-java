@@ -453,7 +453,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("identities", (n) -> { this.setIdentities(n.getCollectionOfObjectValues(ObjectIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("imAddresses", (n) -> { this.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
-        deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(OfficeGraphInsights::createFromDiscriminatorValue)); });
+        deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
         deserializerMap.put("interests", (n) -> { this.setInterests(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("isResourceAccount", (n) -> { this.setIsResourceAccount(n.getBooleanValue()); });
         deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
@@ -580,10 +580,10 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the insights property value. The insights property
-     * @return a {@link OfficeGraphInsights}
+     * @return a {@link ItemInsights}
      */
     @jakarta.annotation.Nullable
-    public OfficeGraphInsights getInsights() {
+    public ItemInsights getInsights() {
         return this.backingStore.get("insights");
     }
     /**
@@ -1681,7 +1681,7 @@ public class User extends DirectoryObject implements Parsable {
      * Sets the insights property value. The insights property
      * @param value Value to set for the insights property.
      */
-    public void setInsights(@jakarta.annotation.Nullable final OfficeGraphInsights value) {
+    public void setInsights(@jakarta.annotation.Nullable final ItemInsights value) {
         this.backingStore.set("insights", value);
     }
     /**

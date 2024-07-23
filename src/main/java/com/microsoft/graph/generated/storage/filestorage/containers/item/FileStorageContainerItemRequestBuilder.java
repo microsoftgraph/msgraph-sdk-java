@@ -4,6 +4,7 @@ import com.microsoft.graph.models.FileStorageContainer;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.storage.filestorage.containers.item.activate.ActivateRequestBuilder;
 import com.microsoft.graph.storage.filestorage.containers.item.drive.DriveRequestBuilder;
+import com.microsoft.graph.storage.filestorage.containers.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.storage.filestorage.containers.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -38,6 +39,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.fileStorageContainer entity.

@@ -2,6 +2,9 @@ package com.microsoft.graph.solutions.virtualevents.events.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEvent;
+import com.microsoft.graph.solutions.virtualevents.events.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.events.item.presenters.PresentersRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.events.item.publish.PublishRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.events.item.sessions.SessionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -21,6 +24,30 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the cancel method.
+     * @return a {@link CancelRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CancelRequestBuilder cancel() {
+        return new CancelRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the presenters property of the microsoft.graph.virtualEvent entity.
+     * @return a {@link PresentersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PresentersRequestBuilder presenters() {
+        return new PresentersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the publish method.
+     * @return a {@link PublishRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PublishRequestBuilder publish() {
+        return new PublishRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
      * @return a {@link SessionsRequestBuilder}

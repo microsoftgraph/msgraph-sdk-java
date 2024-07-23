@@ -42,7 +42,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
-        deserializerMap.put("restrictions", (n) -> { this.setRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("restrictions", (n) -> { this.setRestrictions(n.getObjectValue(CustomAppManagementConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -55,10 +55,10 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
-     * @return a {@link AppManagementConfiguration}
+     * @return a {@link CustomAppManagementConfiguration}
      */
     @jakarta.annotation.Nullable
-    public AppManagementConfiguration getRestrictions() {
+    public CustomAppManagementConfiguration getRestrictions() {
         return this.backingStore.get("restrictions");
     }
     /**
@@ -90,7 +90,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * Sets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @param value Value to set for the restrictions property.
      */
-    public void setRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
+    public void setRestrictions(@jakarta.annotation.Nullable final CustomAppManagementConfiguration value) {
         this.backingStore.set("restrictions", value);
     }
 }
