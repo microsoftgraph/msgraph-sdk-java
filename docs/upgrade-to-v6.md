@@ -83,10 +83,12 @@ public class CustomTokenProvider implements AccessTokenProvider {
         return token;
     }
 
-    @Override 
+    // Make sure to have the right set of hosts
+    private final AllowedHostsValidator validator = new AllowedHostsValidator("graph.microsoft.com");
+    @Override
     public AllowedHostsValidator getAllowedHostsValidator() {
         // Handle allowed hosts validation logic here
-        return new DefaultAllowedHostsValidator();
+        return validator;
     }
 ```
 Then instantiate the GraphServiceClient as follows: 
