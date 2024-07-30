@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -37,6 +38,14 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         return this.backingStore.get("availabilityIsAffectedByPersonalCalendar");
     }
     /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
+    }
+    /**
      * Gets the displayName property value. The name of the staff member, as displayed to customers. Required.
      * @return a {@link String}
      */
@@ -60,9 +69,11 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("availabilityIsAffectedByPersonalCalendar", (n) -> { this.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("isEmailNotificationEnabled", (n) -> { this.setIsEmailNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("membershipStatus", (n) -> { this.setMembershipStatus(n.getEnumValue(BookingStaffMembershipStatus::forValue)); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(BookingStaffRole::forValue)); });
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
@@ -77,6 +88,14 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     @jakarta.annotation.Nullable
     public Boolean getIsEmailNotificationEnabled() {
         return this.backingStore.get("isEmailNotificationEnabled");
+    }
+    /**
+     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUpdatedDateTime() {
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the membershipStatus property value. The membershipStatus property
@@ -126,9 +145,11 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("availabilityIsAffectedByPersonalCalendar", this.getAvailabilityIsAffectedByPersonalCalendar());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeBooleanValue("isEmailNotificationEnabled", this.getIsEmailNotificationEnabled());
+        writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeEnumValue("membershipStatus", this.getMembershipStatus());
         writer.writeEnumValue("role", this.getRole());
         writer.writeStringValue("timeZone", this.getTimeZone());
@@ -141,6 +162,13 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     public void setAvailabilityIsAffectedByPersonalCalendar(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("availabilityIsAffectedByPersonalCalendar", value);
+    }
+    /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The name of the staff member, as displayed to customers. Required.
@@ -162,6 +190,13 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     public void setIsEmailNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEmailNotificationEnabled", value);
+    }
+    /**
+     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @param value Value to set for the lastUpdatedDateTime property.
+     */
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the membershipStatus property value. The membershipStatus property

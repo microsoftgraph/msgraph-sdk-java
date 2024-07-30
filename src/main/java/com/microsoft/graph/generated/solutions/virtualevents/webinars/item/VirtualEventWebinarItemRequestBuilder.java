@@ -2,7 +2,11 @@ package com.microsoft.graph.solutions.virtualevents.webinars.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEventWebinar;
+import com.microsoft.graph.solutions.virtualevents.webinars.item.presenters.PresentersRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.webinars.item.registrationconfiguration.RegistrationConfigurationRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.webinars.item.registrations.RegistrationsRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.webinars.item.registrationswithemail.RegistrationsWithEmailRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.webinars.item.registrationswithuserid.RegistrationsWithUserIdRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.webinars.item.sessions.SessionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -22,6 +26,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the presenters property of the microsoft.graph.virtualEvent entity.
+     * @return a {@link PresentersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PresentersRequestBuilder presenters() {
+        return new PresentersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the registrationConfiguration property of the microsoft.graph.virtualEventWebinar entity.
+     * @return a {@link RegistrationConfigurationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationConfigurationRequestBuilder registrationConfiguration() {
+        return new RegistrationConfigurationRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the registrations property of the microsoft.graph.virtualEventWebinar entity.
      * @return a {@link RegistrationsRequestBuilder}
@@ -120,6 +140,26 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventWebinar::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventWebinar entity.
+     * @param email Alternate key of virtualEventRegistration
+     * @return a {@link RegistrationsWithEmailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationsWithEmailRequestBuilder registrationsWithEmail(@jakarta.annotation.Nonnull final String email) {
+        Objects.requireNonNull(email);
+        return new RegistrationsWithEmailRequestBuilder(pathParameters, requestAdapter, email);
+    }
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventWebinar entity.
+     * @param userId Alternate key of virtualEventRegistration
+     * @return a {@link RegistrationsWithUserIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationsWithUserIdRequestBuilder registrationsWithUserId(@jakarta.annotation.Nonnull final String userId) {
+        Objects.requireNonNull(userId);
+        return new RegistrationsWithUserIdRequestBuilder(pathParameters, requestAdapter, userId);
     }
     /**
      * Delete navigation property webinars for solutions

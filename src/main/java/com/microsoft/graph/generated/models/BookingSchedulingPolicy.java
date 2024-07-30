@@ -68,19 +68,46 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
+     * Gets the customAvailabilities property value. collection of custom availabilities for a given time range.
+     * @return a {@link java.util.List<BookingsAvailabilityWindow>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<BookingsAvailabilityWindow> getCustomAvailabilities() {
+        return this.backingStore.get("customAvailabilities");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("allowStaffSelection", (n) -> { this.setAllowStaffSelection(n.getBooleanValue()); });
+        deserializerMap.put("customAvailabilities", (n) -> { this.setCustomAvailabilities(n.getCollectionOfObjectValues(BookingsAvailabilityWindow::createFromDiscriminatorValue)); });
+        deserializerMap.put("generalAvailability", (n) -> { this.setGeneralAvailability(n.getObjectValue(BookingsAvailability::createFromDiscriminatorValue)); });
+        deserializerMap.put("isMeetingInviteToCustomersEnabled", (n) -> { this.setIsMeetingInviteToCustomersEnabled(n.getBooleanValue()); });
         deserializerMap.put("maximumAdvance", (n) -> { this.setMaximumAdvance(n.getPeriodAndDurationValue()); });
         deserializerMap.put("minimumLeadTime", (n) -> { this.setMinimumLeadTime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("sendConfirmationsToOwner", (n) -> { this.setSendConfirmationsToOwner(n.getBooleanValue()); });
         deserializerMap.put("timeSlotInterval", (n) -> { this.setTimeSlotInterval(n.getPeriodAndDurationValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the generalAvailability property value. General availability 
+     * @return a {@link BookingsAvailability}
+     */
+    @jakarta.annotation.Nullable
+    public BookingsAvailability getGeneralAvailability() {
+        return this.backingStore.get("generalAvailability");
+    }
+    /**
+     * Gets the isMeetingInviteToCustomersEnabled property value. Enable sending meeting invite to customers. False by default.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsMeetingInviteToCustomersEnabled() {
+        return this.backingStore.get("isMeetingInviteToCustomersEnabled");
     }
     /**
      * Gets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
@@ -129,6 +156,9 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowStaffSelection", this.getAllowStaffSelection());
+        writer.writeCollectionOfObjectValues("customAvailabilities", this.getCustomAvailabilities());
+        writer.writeObjectValue("generalAvailability", this.getGeneralAvailability());
+        writer.writeBooleanValue("isMeetingInviteToCustomersEnabled", this.getIsMeetingInviteToCustomersEnabled());
         writer.writePeriodAndDurationValue("maximumAdvance", this.getMaximumAdvance());
         writer.writePeriodAndDurationValue("minimumLeadTime", this.getMinimumLeadTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -157,6 +187,27 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the customAvailabilities property value. collection of custom availabilities for a given time range.
+     * @param value Value to set for the customAvailabilities property.
+     */
+    public void setCustomAvailabilities(@jakarta.annotation.Nullable final java.util.List<BookingsAvailabilityWindow> value) {
+        this.backingStore.set("customAvailabilities", value);
+    }
+    /**
+     * Sets the generalAvailability property value. General availability 
+     * @param value Value to set for the generalAvailability property.
+     */
+    public void setGeneralAvailability(@jakarta.annotation.Nullable final BookingsAvailability value) {
+        this.backingStore.set("generalAvailability", value);
+    }
+    /**
+     * Sets the isMeetingInviteToCustomersEnabled property value. Enable sending meeting invite to customers. False by default.
+     * @param value Value to set for the isMeetingInviteToCustomersEnabled property.
+     */
+    public void setIsMeetingInviteToCustomersEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isMeetingInviteToCustomersEnabled", value);
     }
     /**
      * Sets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.

@@ -42,7 +42,7 @@ public class SubscribedSku extends Entity implements Parsable {
         return this.backingStore.get("accountName");
     }
     /**
-     * Gets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
+     * Gets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: User, Company.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class SubscribedSku extends Entity implements Parsable {
         return this.backingStore.get("skuId");
     }
     /**
-     * Gets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
+     * Gets the skuPartNumber property value. The SKU part number; for example: AAD_PREMIUM or RMSBASIC. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class SubscribedSku extends Entity implements Parsable {
         this.backingStore.set("accountName", value);
     }
     /**
-     * Sets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
+     * Sets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: User, Company.
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final String value) {
@@ -199,7 +199,7 @@ public class SubscribedSku extends Entity implements Parsable {
         this.backingStore.set("skuId", value);
     }
     /**
-     * Sets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
+     * Sets the skuPartNumber property value. The SKU part number; for example: AAD_PREMIUM or RMSBASIC. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      * @param value Value to set for the skuPartNumber property.
      */
     public void setSkuPartNumber(@jakarta.annotation.Nullable final String value) {

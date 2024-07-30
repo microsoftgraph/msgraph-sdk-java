@@ -2,6 +2,8 @@ package com.microsoft.graph.solutions.virtualevents.webinars.item.registrations.
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEventRegistration;
+import com.microsoft.graph.solutions.virtualevents.webinars.item.registrations.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.webinars.item.registrations.item.sessions.SessionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +22,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the cancel method.
+     * @return a {@link CancelRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CancelRequestBuilder cancel() {
+        return new CancelRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sessions property of the microsoft.graph.virtualEventRegistration entity.
+     * @return a {@link SessionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SessionsRequestBuilder sessions() {
+        return new SessionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link VirtualEventRegistrationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
