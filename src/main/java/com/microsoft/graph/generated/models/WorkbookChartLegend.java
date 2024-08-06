@@ -46,7 +46,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
         return this.backingStore.get("format");
     }
     /**
-     * Gets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
+     * Gets the overlay property value. Indicates whether the chart legend should overlap with the main body of the chart.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
         return this.backingStore.get("position");
     }
     /**
-     * Gets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
+     * Gets the visible property value. Indicates whether the chart legend is visible.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
         this.backingStore.set("format", value);
     }
     /**
-     * Sets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
+     * Sets the overlay property value. Indicates whether the chart legend should overlap with the main body of the chart.
      * @param value Value to set for the overlay property.
      */
     public void setOverlay(@jakarta.annotation.Nullable final Boolean value) {
@@ -103,7 +103,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
         this.backingStore.set("position", value);
     }
     /**
-     * Sets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
+     * Sets the visible property value. Indicates whether the chart legend is visible.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {

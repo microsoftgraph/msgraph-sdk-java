@@ -71,7 +71,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * The list of charts that are part of the worksheet. Read-only.
      * @return a {@link WorkbookChartCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -80,7 +80,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * The list of charts that are part of the worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -138,7 +138,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChart::createFromDiscriminatorValue);
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * The list of charts that are part of the worksheet. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * The list of charts that are part of the worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -192,7 +192,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return new ChartsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * The list of charts that are part of the worksheet. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

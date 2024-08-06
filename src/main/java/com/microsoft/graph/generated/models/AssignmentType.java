@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum AssignmentType implements ValuedEnum {
     Required("required"),
     Recommended("recommended"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    PeerRecommended("peerRecommended");
     public final String value;
     AssignmentType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum AssignmentType implements ValuedEnum {
             case "required": return Required;
             case "recommended": return Recommended;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "peerRecommended": return PeerRecommended;
             default: return null;
         }
     }

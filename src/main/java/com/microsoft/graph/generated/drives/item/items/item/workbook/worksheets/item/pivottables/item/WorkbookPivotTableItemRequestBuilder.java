@@ -73,7 +73,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      * @return a {@link WorkbookPivotTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookPivotTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

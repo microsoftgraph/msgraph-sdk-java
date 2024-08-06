@@ -39,7 +39,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the filter property value. Retrieve the filter applied to the column. Read-only.
+     * Gets the filter property value. The filter applied to the column. Read-only.
      * @return a {@link WorkbookFilter}
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         return this.backingStore.get("filter");
     }
     /**
-     * Gets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
+     * Gets the index property value. The index of the column within the columns collection of the table. Zero-indexed. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         return this.backingStore.get("index");
     }
     /**
-     * Gets the name property value. Returns the name of the table column.
+     * Gets the name property value. The name of the table column.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Gets the values property value. TRepresents the raw values of the specified range. The data returned could be of type string, number, or a Boolean. Cell that contain an error will return the error string.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         writer.writeObjectValue("values", this.getValues());
     }
     /**
-     * Sets the filter property value. Retrieve the filter applied to the column. Read-only.
+     * Sets the filter property value. The filter applied to the column. Read-only.
      * @param value Value to set for the filter property.
      */
     public void setFilter(@jakarta.annotation.Nullable final WorkbookFilter value) {
         this.backingStore.set("filter", value);
     }
     /**
-     * Sets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
+     * Sets the index property value. The index of the column within the columns collection of the table. Zero-indexed. Read-only.
      * @param value Value to set for the index property.
      */
     public void setIndex(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("index", value);
     }
     /**
-     * Sets the name property value. Returns the name of the table column.
+     * Sets the name property value. The name of the table column.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Sets the values property value. TRepresents the raw values of the specified range. The data returned could be of type string, number, or a Boolean. Cell that contain an error will return the error string.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {

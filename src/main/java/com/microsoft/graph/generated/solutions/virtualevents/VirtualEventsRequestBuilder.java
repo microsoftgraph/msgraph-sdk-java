@@ -3,6 +3,7 @@ package com.microsoft.graph.solutions.virtualevents;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEventsRoot;
 import com.microsoft.graph.solutions.virtualevents.events.EventsRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.townhalls.TownhallsRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.webinars.WebinarsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,14 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EventsRequestBuilder events() {
         return new EventsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the townhalls property of the microsoft.graph.virtualEventsRoot entity.
+     * @return a {@link TownhallsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TownhallsRequestBuilder townhalls() {
+        return new TownhallsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the webinars property of the microsoft.graph.virtualEventsRoot entity.

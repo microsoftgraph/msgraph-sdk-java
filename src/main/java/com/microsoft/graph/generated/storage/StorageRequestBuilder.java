@@ -3,6 +3,7 @@ package com.microsoft.graph.storage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Storage;
 import com.microsoft.graph.storage.filestorage.FileStorageRequestBuilder;
+import com.microsoft.graph.storage.settings.SettingsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class StorageRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FileStorageRequestBuilder fileStorage() {
         return new FileStorageRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.storage entity.
+     * @return a {@link SettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SettingsRequestBuilder settings() {
+        return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link StorageRequestBuilder} and sets the default values.

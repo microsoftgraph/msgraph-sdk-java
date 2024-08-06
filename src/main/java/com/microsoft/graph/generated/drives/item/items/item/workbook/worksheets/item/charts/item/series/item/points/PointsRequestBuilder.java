@@ -61,7 +61,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}/points{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      * @return a {@link WorkbookChartPointCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -70,7 +70,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartPointCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -118,7 +118,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookChartPoint::createFromDiscriminatorValue);
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +172,7 @@ public class PointsRequestBuilder extends BaseRequestBuilder {
         return new PointsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

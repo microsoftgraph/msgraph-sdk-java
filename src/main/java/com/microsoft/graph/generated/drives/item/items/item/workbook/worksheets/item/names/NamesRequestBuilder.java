@@ -78,7 +78,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/names{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Returns collection of names that are associated with the worksheet. Read-only.
+     * The list of names that are associated with the worksheet. Read-only.
      * @return a {@link WorkbookNamedItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -87,7 +87,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns collection of names that are associated with the worksheet. Read-only.
+     * The list of names that are associated with the worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookNamedItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -125,7 +125,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
-     * Returns collection of names that are associated with the worksheet. Read-only.
+     * The list of names that are associated with the worksheet. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns collection of names that are associated with the worksheet. Read-only.
+     * The list of names that are associated with the worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -179,7 +179,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return new NamesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Returns collection of names that are associated with the worksheet. Read-only.
+     * The list of names that are associated with the worksheet. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

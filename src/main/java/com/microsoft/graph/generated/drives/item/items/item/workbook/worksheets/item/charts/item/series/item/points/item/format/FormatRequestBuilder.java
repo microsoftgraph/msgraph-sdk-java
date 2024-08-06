@@ -64,7 +64,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Encapsulates the format properties chart point. Read-only.
+     * The format properties of the chart point. Read-only.
      * @return a {@link WorkbookChartPointFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Encapsulates the format properties chart point. Read-only.
+     * The format properties of the chart point. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartPointFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Encapsulates the format properties chart point. Read-only.
+     * The format properties of the chart point. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Encapsulates the format properties chart point. Read-only.
+     * The format properties of the chart point. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Encapsulates the format properties chart point. Read-only.
+     * The format properties of the chart point. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

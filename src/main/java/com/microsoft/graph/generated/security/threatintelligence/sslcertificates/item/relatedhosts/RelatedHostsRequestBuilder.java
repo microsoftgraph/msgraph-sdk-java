@@ -59,19 +59,21 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/sslCertificates/{sslCertificate%2Did}/relatedHosts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * Get a list of related host resources associated with an sslCertificate.
      * @return a {@link HostCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sslcertificate-list-relatedhosts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostCollectionResponse get() {
         return get(null);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * Get a list of related host resources associated with an sslCertificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HostCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sslcertificate-list-relatedhosts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HostCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HostCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * Get a list of related host resources associated with an sslCertificate.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * Get a list of related host resources associated with an sslCertificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         return new RelatedHostsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The hosts related with this sslCertificate.
+     * Get a list of related host resources associated with an sslCertificate.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

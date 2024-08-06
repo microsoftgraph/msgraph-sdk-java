@@ -25,7 +25,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return new ColumnDefinition();
     }
     /**
-     * Gets the boolean property value. This column stores boolean values.
+     * Gets the boolean property value. This column stores Boolean values.
      * @return a {@link BooleanColumn}
      */
     @jakarta.annotation.Nullable
@@ -362,7 +362,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         writer.writeObjectValue("validation", this.getValidation());
     }
     /**
-     * Sets the boolean property value. This column stores boolean values.
+     * Sets the boolean property value. This column stores Boolean values.
      * @param value Value to set for the boolean property.
      */
     public void setBoolean(@jakarta.annotation.Nullable final BooleanColumn value) {
