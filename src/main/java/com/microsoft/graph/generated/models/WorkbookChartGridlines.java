@@ -44,7 +44,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
         return this.backingStore.get("format");
     }
     /**
-     * Gets the visible property value. Boolean value representing if the axis gridlines are visible or not.
+     * Gets the visible property value. Indicates whether the axis gridlines are visible.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
         this.backingStore.set("format", value);
     }
     /**
-     * Sets the visible property value. Boolean value representing if the axis gridlines are visible or not.
+     * Sets the visible property value. Indicates whether the axis gridlines are visible.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {

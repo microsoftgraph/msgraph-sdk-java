@@ -25,7 +25,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         return new WorkbookRangeBorder();
     }
     /**
-     * Gets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange').
+     * Gets the color property value. The HTML color code that represents the color of the border line. Can either be of the form #RRGGBB, for example 'FFA500', or a named HTML color, for example 'orange'.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+     * Gets the sideIndex property value. Indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         return this.backingStore.get("sideIndex");
     }
     /**
-     * Gets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+     * Gets the style property value. Indicates the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         return this.backingStore.get("style");
     }
     /**
-     * Gets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
+     * Gets the weight property value. The weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,28 +82,28 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         writer.writeStringValue("weight", this.getWeight());
     }
     /**
-     * Sets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange').
+     * Sets the color property value. The HTML color code that represents the color of the border line. Can either be of the form #RRGGBB, for example 'FFA500', or a named HTML color, for example 'orange'.
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("color", value);
     }
     /**
-     * Sets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+     * Sets the sideIndex property value. Indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      * @param value Value to set for the sideIndex property.
      */
     public void setSideIndex(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sideIndex", value);
     }
     /**
-     * Sets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+     * Sets the style property value. Indicates the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      * @param value Value to set for the style property.
      */
     public void setStyle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("style", value);
     }
     /**
-     * Sets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
+     * Sets the weight property value. The weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      * @param value Value to set for the weight property.
      */
     public void setWeight(@jakarta.annotation.Nullable final String value) {

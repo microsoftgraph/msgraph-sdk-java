@@ -2,7 +2,9 @@ package com.microsoft.graph.users.item.settings;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserSettings;
+import com.microsoft.graph.users.item.settings.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.users.item.settings.shiftpreferences.ShiftPreferencesRequestBuilder;
+import com.microsoft.graph.users.item.settings.storage.StorageRequestBuilder;
 import com.microsoft.graph.users.item.settings.windows.WindowsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -23,12 +25,28 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the itemInsights property of the microsoft.graph.userSettings entity.
+     * @return a {@link ItemInsightsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ItemInsightsRequestBuilder itemInsights() {
+        return new ItemInsightsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the shiftPreferences property of the microsoft.graph.userSettings entity.
      * @return a {@link ShiftPreferencesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ShiftPreferencesRequestBuilder shiftPreferences() {
         return new ShiftPreferencesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the storage property of the microsoft.graph.userSettings entity.
+     * @return a {@link StorageRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StorageRequestBuilder storage() {
+        return new StorageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the windows property of the microsoft.graph.userSettings entity.

@@ -37,7 +37,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/directory/roleAssignments/{unifiedRoleAssignment%2Did}/principal{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Referencing the assigned principal. Read-only. Supports $expand.
+     * Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Referencing the assigned principal. Read-only. Supports $expand.
+     * Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * Referencing the assigned principal. Read-only. Supports $expand.
+     * Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Referencing the assigned principal. Read-only. Supports $expand.
+     * Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return new PrincipalRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Referencing the assigned principal. Read-only. Supports $expand.
+     * Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

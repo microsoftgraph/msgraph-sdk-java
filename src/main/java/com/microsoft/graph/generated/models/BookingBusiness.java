@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -44,6 +45,14 @@ public class BookingBusiness extends Entity implements Parsable {
         return this.backingStore.get("appointments");
     }
     /**
+     * Gets the bookingPageSettings property value. Settings for the published booking page.
+     * @return a {@link BookingPageSettings}
+     */
+    @jakarta.annotation.Nullable
+    public BookingPageSettings getBookingPageSettings() {
+        return this.backingStore.get("bookingPageSettings");
+    }
+    /**
      * Gets the businessHours property value. The hours of operation for the business.
      * @return a {@link java.util.List<BookingWorkHours>}
      */
@@ -66,6 +75,14 @@ public class BookingBusiness extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<BookingAppointment> getCalendarView() {
         return this.backingStore.get("calendarView");
+    }
+    /**
+     * Gets the createdDateTime property value. The date, time, and time zone when the booking business was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the customers property value. All the customers of this business. Read-only. Nullable.
@@ -116,9 +133,11 @@ public class BookingBusiness extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("appointments", (n) -> { this.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
+        deserializerMap.put("bookingPageSettings", (n) -> { this.setBookingPageSettings(n.getObjectValue(BookingPageSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("businessHours", (n) -> { this.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
         deserializerMap.put("businessType", (n) -> { this.setBusinessType(n.getStringValue()); });
         deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customers", (n) -> { this.setCustomers(n.getCollectionOfObjectValues(BookingCustomerBase::createFromDiscriminatorValue)); });
         deserializerMap.put("customQuestions", (n) -> { this.setCustomQuestions(n.getCollectionOfObjectValues(BookingCustomQuestion::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultCurrencyIso", (n) -> { this.setDefaultCurrencyIso(n.getStringValue()); });
@@ -126,6 +145,7 @@ public class BookingBusiness extends Entity implements Parsable {
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
         deserializerMap.put("isPublished", (n) -> { this.setIsPublished(n.getBooleanValue()); });
         deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
         deserializerMap.put("publicUrl", (n) -> { this.setPublicUrl(n.getStringValue()); });
         deserializerMap.put("schedulingPolicy", (n) -> { this.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
@@ -149,6 +169,14 @@ public class BookingBusiness extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
         return this.backingStore.get("languageTag");
+    }
+    /**
+     * Gets the lastUpdatedDateTime property value. The date, time, and time zone when the booking business was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUpdatedDateTime() {
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
@@ -207,15 +235,18 @@ public class BookingBusiness extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("address", this.getAddress());
         writer.writeCollectionOfObjectValues("appointments", this.getAppointments());
+        writer.writeObjectValue("bookingPageSettings", this.getBookingPageSettings());
         writer.writeCollectionOfObjectValues("businessHours", this.getBusinessHours());
         writer.writeStringValue("businessType", this.getBusinessType());
         writer.writeCollectionOfObjectValues("calendarView", this.getCalendarView());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("customers", this.getCustomers());
         writer.writeCollectionOfObjectValues("customQuestions", this.getCustomQuestions());
         writer.writeStringValue("defaultCurrencyIso", this.getDefaultCurrencyIso());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
         writer.writeStringValue("languageTag", this.getLanguageTag());
+        writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeStringValue("phone", this.getPhone());
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
         writer.writeCollectionOfObjectValues("services", this.getServices());
@@ -237,6 +268,13 @@ public class BookingBusiness extends Entity implements Parsable {
         this.backingStore.set("appointments", value);
     }
     /**
+     * Sets the bookingPageSettings property value. Settings for the published booking page.
+     * @param value Value to set for the bookingPageSettings property.
+     */
+    public void setBookingPageSettings(@jakarta.annotation.Nullable final BookingPageSettings value) {
+        this.backingStore.set("bookingPageSettings", value);
+    }
+    /**
      * Sets the businessHours property value. The hours of operation for the business.
      * @param value Value to set for the businessHours property.
      */
@@ -256,6 +294,13 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     public void setCalendarView(@jakarta.annotation.Nullable final java.util.List<BookingAppointment> value) {
         this.backingStore.set("calendarView", value);
+    }
+    /**
+     * Sets the createdDateTime property value. The date, time, and time zone when the booking business was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the customers property value. All the customers of this business. Read-only. Nullable.
@@ -305,6 +350,13 @@ public class BookingBusiness extends Entity implements Parsable {
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("languageTag", value);
+    }
+    /**
+     * Sets the lastUpdatedDateTime property value. The date, time, and time zone when the booking business was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the lastUpdatedDateTime property.
+     */
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.

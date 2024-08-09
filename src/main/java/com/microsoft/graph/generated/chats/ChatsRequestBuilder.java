@@ -2,6 +2,7 @@ package com.microsoft.graph.chats;
 
 import com.microsoft.graph.chats.count.CountRequestBuilder;
 import com.microsoft.graph.chats.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.chats.getallretainedmessages.GetAllRetainedMessagesRequestBuilder;
 import com.microsoft.graph.chats.item.ChatItemRequestBuilder;
 import com.microsoft.graph.models.Chat;
 import com.microsoft.graph.models.ChatCollectionResponse;
@@ -39,6 +40,14 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllRetainedMessages method.
+     * @return a {@link GetAllRetainedMessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllRetainedMessagesRequestBuilder getAllRetainedMessages() {
+        return new GetAllRetainedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of chat entities.

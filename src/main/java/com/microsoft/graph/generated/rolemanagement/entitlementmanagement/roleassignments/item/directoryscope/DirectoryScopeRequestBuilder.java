@@ -37,7 +37,7 @@ public class DirectoryScopeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleAssignments/{unifiedRoleAssignment%2Did}/directoryScope{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The directory object that is the scope of the assignment. Read-only. Supports $expand.
+     * The directory object that is the scope of the assignment. Read-only. Supports $expand for the directory provider.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class DirectoryScopeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The directory object that is the scope of the assignment. Read-only. Supports $expand.
+     * The directory object that is the scope of the assignment. Read-only. Supports $expand for the directory provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class DirectoryScopeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * The directory object that is the scope of the assignment. Read-only. Supports $expand.
+     * The directory object that is the scope of the assignment. Read-only. Supports $expand for the directory provider.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DirectoryScopeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The directory object that is the scope of the assignment. Read-only. Supports $expand.
+     * The directory object that is the scope of the assignment. Read-only. Supports $expand for the directory provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class DirectoryScopeRequestBuilder extends BaseRequestBuilder {
         return new DirectoryScopeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The directory object that is the scope of the assignment. Read-only. Supports $expand.
+     * The directory object that is the scope of the assignment. Read-only. Supports $expand for the directory provider.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

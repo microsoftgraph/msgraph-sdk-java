@@ -87,7 +87,7 @@ public class Shared implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("owner");
     }
     /**
-     * Gets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
+     * Gets the scope property value. Indicates the scope of how the item is shared. The possible values are: anonymous, organization, or users. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class Shared implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("owner", value);
     }
     /**
-     * Sets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
+     * Sets the scope property value. Indicates the scope of how the item is shared. The possible values are: anonymous, organization, or users. Read-only.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final String value) {

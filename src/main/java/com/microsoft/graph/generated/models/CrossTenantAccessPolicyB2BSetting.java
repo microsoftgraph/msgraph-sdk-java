@@ -32,6 +32,13 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicyB2BSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.crossTenantAccessPolicyTenantRestrictions": return new CrossTenantAccessPolicyTenantRestrictions();
+            }
+        }
         return new CrossTenantAccessPolicyB2BSetting();
     }
     /**

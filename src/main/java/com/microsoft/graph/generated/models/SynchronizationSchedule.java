@@ -79,7 +79,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
+     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601  format for durations. For example, P1M represents a period of one month and PT1M represents a period of one minute.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, BackedMode
         this.backingStore.set("expiration", value);
     }
     /**
-     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
+     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601  format for durations. For example, P1M represents a period of one month and PT1M represents a period of one minute.
      * @param value Value to set for the interval property.
      */
     public void setInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {

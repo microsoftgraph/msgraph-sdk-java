@@ -117,23 +117,21 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy put(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body) {
         return put(body, null);
     }
     /**
-     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy put(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -184,7 +182,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -193,7 +191,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property assignmentPolicies in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

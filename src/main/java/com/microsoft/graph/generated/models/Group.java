@@ -279,7 +279,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("hasMembersWithLicenseErrors");
     }
     /**
-     * Gets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -399,7 +399,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onenote");
     }
     /**
-     * Gets the onPremisesDomainName property value. The onPremisesDomainName property
+     * Gets the onPremisesDomainName property value. Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -415,7 +415,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesLastSyncDateTime");
     }
     /**
-     * Gets the onPremisesNetBiosName property value. The onPremisesNetBiosName property
+     * Gets the onPremisesNetBiosName property value. Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -439,7 +439,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesSamAccountName");
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -868,7 +868,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("hasMembersWithLicenseErrors", value);
     }
     /**
-     * Sets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the hideFromAddressLists property.
      */
     public void setHideFromAddressLists(@jakarta.annotation.Nullable final Boolean value) {
@@ -973,7 +973,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onenote", value);
     }
     /**
-     * Sets the onPremisesDomainName property value. The onPremisesDomainName property
+     * Sets the onPremisesDomainName property value. Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
      * @param value Value to set for the onPremisesDomainName property.
      */
     public void setOnPremisesDomainName(@jakarta.annotation.Nullable final String value) {
@@ -987,7 +987,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesLastSyncDateTime", value);
     }
     /**
-     * Sets the onPremisesNetBiosName property value. The onPremisesNetBiosName property
+     * Sets the onPremisesNetBiosName property value. Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
      * @param value Value to set for the onPremisesNetBiosName property.
      */
     public void setOnPremisesNetBiosName(@jakarta.annotation.Nullable final String value) {
@@ -1008,7 +1008,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesSamAccountName", value);
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values).
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {

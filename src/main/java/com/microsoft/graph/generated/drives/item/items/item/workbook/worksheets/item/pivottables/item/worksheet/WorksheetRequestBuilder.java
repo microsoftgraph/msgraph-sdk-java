@@ -37,7 +37,7 @@ public class WorksheetRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/pivotTables/{workbookPivotTable%2Did}/worksheet{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The worksheet containing the current PivotTable. Read-only.
+     * The worksheet that contains the current pivot table. Read-only.
      * @return a {@link WorkbookWorksheet}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class WorksheetRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The worksheet containing the current PivotTable. Read-only.
+     * The worksheet that contains the current pivot table. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookWorksheet}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class WorksheetRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookWorksheet::createFromDiscriminatorValue);
     }
     /**
-     * The worksheet containing the current PivotTable. Read-only.
+     * The worksheet that contains the current pivot table. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class WorksheetRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The worksheet containing the current PivotTable. Read-only.
+     * The worksheet that contains the current pivot table. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class WorksheetRequestBuilder extends BaseRequestBuilder {
         return new WorksheetRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The worksheet containing the current PivotTable. Read-only.
+     * The worksheet that contains the current pivot table. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

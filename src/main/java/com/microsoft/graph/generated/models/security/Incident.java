@@ -121,6 +121,7 @@ public class Incident extends Entity implements Parsable {
         deserializerMap.put("resolvingComment", (n) -> { this.setResolvingComment(n.getStringValue()); });
         deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(IncidentStatus::forValue)); });
+        deserializerMap.put("summary", (n) -> { this.setSummary(n.getStringValue()); });
         deserializerMap.put("systemTags", (n) -> { this.setSystemTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         return deserializerMap;
@@ -182,6 +183,14 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
+     * Gets the summary property value. The overview of an attack. When applicable, the summary contains details of what occurred, impacted assets, and the type of attack.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSummary() {
+        return this.backingStore.get("summary");
+    }
+    /**
      * Gets the systemTags property value. The system tags associated with the incident.
      * @return a {@link java.util.List<String>}
      */
@@ -220,6 +229,7 @@ public class Incident extends Entity implements Parsable {
         writer.writeStringValue("resolvingComment", this.getResolvingComment());
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeEnumValue("status", this.getStatus());
+        writer.writeStringValue("summary", this.getSummary());
         writer.writeCollectionOfPrimitiveValues("systemTags", this.getSystemTags());
         writer.writeStringValue("tenantId", this.getTenantId());
     }
@@ -334,6 +344,13 @@ public class Incident extends Entity implements Parsable {
      */
     public void setStatus(@jakarta.annotation.Nullable final IncidentStatus value) {
         this.backingStore.set("status", value);
+    }
+    /**
+     * Sets the summary property value. The overview of an attack. When applicable, the summary contains details of what occurred, impacted assets, and the type of attack.
+     * @param value Value to set for the summary property.
+     */
+    public void setSummary(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("summary", value);
     }
     /**
      * Sets the systemTags property value. The system tags associated with the incident.

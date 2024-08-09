@@ -53,7 +53,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
         return this.backingStore.get("text");
     }
     /**
-     * Gets the visible property value. A boolean that specifies the visibility of an axis title.
+     * Gets the visible property value. A Boolean that specifies the visibility of an axis title.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
         this.backingStore.set("text", value);
     }
     /**
-     * Sets the visible property value. A boolean that specifies the visibility of an axis title.
+     * Sets the visible property value. A Boolean that specifies the visibility of an axis title.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {

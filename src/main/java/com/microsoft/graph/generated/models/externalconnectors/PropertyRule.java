@@ -95,7 +95,7 @@ public class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("property");
     }
     /**
-     * Gets the values property value. A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
+     * Gets the values property value. A collection with one or many strings. One or more specified strings are matched with the specified property using the specified operation. Required.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("property", value);
     }
     /**
-     * Sets the values property value. A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
+     * Sets the values property value. A collection with one or many strings. One or more specified strings are matched with the specified property using the specified operation. Required.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final java.util.List<String> value) {

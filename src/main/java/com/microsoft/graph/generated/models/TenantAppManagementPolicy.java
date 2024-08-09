@@ -27,10 +27,10 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the applicationRestrictions property value. Restrictions that apply as default to all application objects in the tenant.
-     * @return a {@link AppManagementConfiguration}
+     * @return a {@link AppManagementApplicationConfiguration}
      */
     @jakarta.annotation.Nullable
-    public AppManagementConfiguration getApplicationRestrictions() {
+    public AppManagementApplicationConfiguration getApplicationRestrictions() {
         return this.backingStore.get("applicationRestrictions");
     }
     /**
@@ -40,9 +40,9 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicationRestrictions", (n) -> { this.setApplicationRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("applicationRestrictions", (n) -> { this.setApplicationRestrictions(n.getObjectValue(AppManagementApplicationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
-        deserializerMap.put("servicePrincipalRestrictions", (n) -> { this.setServicePrincipalRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipalRestrictions", (n) -> { this.setServicePrincipalRestrictions(n.getObjectValue(AppManagementServicePrincipalConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -55,10 +55,10 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
-     * @return a {@link AppManagementConfiguration}
+     * @return a {@link AppManagementServicePrincipalConfiguration}
      */
     @jakarta.annotation.Nullable
-    public AppManagementConfiguration getServicePrincipalRestrictions() {
+    public AppManagementServicePrincipalConfiguration getServicePrincipalRestrictions() {
         return this.backingStore.get("servicePrincipalRestrictions");
     }
     /**
@@ -76,7 +76,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      * Sets the applicationRestrictions property value. Restrictions that apply as default to all application objects in the tenant.
      * @param value Value to set for the applicationRestrictions property.
      */
-    public void setApplicationRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
+    public void setApplicationRestrictions(@jakarta.annotation.Nullable final AppManagementApplicationConfiguration value) {
         this.backingStore.set("applicationRestrictions", value);
     }
     /**
@@ -90,7 +90,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      * Sets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
      * @param value Value to set for the servicePrincipalRestrictions property.
      */
-    public void setServicePrincipalRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
+    public void setServicePrincipalRestrictions(@jakarta.annotation.Nullable final AppManagementServicePrincipalConfiguration value) {
         this.backingStore.set("servicePrincipalRestrictions", value);
     }
 }

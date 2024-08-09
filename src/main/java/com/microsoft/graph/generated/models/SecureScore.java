@@ -58,7 +58,7 @@ public class SecureScore extends Entity implements Parsable {
         return this.backingStore.get("controlScores");
     }
     /**
-     * Gets the createdDateTime property value. The date when the entity is created.
+     * Gets the createdDateTime property value. When the report was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class SecureScore extends Entity implements Parsable {
         this.backingStore.set("controlScores", value);
     }
     /**
-     * Sets the createdDateTime property value. The date when the entity is created.
+     * Sets the createdDateTime property value. When the report was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

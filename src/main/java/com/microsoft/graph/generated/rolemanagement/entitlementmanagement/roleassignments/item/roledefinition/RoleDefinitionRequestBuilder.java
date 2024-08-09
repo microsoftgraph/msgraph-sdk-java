@@ -37,7 +37,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleAssignments/{unifiedRoleAssignment%2Did}/roleDefinition{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand.
+     * The roleDefinition the assignment is for. Supports $expand.
      * @return a {@link UnifiedRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand.
+     * The roleDefinition the assignment is for. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand.
+     * The roleDefinition the assignment is for. Supports $expand.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand.
+     * The roleDefinition the assignment is for. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return new RoleDefinitionRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The roleDefinition the assignment is for.  Supports $expand.
+     * The roleDefinition the assignment is for. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

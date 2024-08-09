@@ -1,7 +1,8 @@
 package com.microsoft.graph.invitations;
 
 import com.microsoft.graph.invitations.count.CountRequestBuilder;
-import com.microsoft.graph.invitations.item.InvitationItemRequestBuilder;
+import com.microsoft.graph.invitations.inviteduser.InvitedUserRequestBuilder;
+import com.microsoft.graph.invitations.invitedusersponsors.InvitedUserSponsorsRequestBuilder;
 import com.microsoft.graph.models.Invitation;
 import com.microsoft.graph.models.InvitationCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,16 +33,20 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the collection of invitation entities.
-     * @param invitationId The unique identifier of invitation
-     * @return a {@link InvitationItemRequestBuilder}
+     * Provides operations to manage the invitedUser property of the microsoft.graph.invitation entity.
+     * @return a {@link InvitedUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public InvitationItemRequestBuilder byInvitationId(@jakarta.annotation.Nonnull final String invitationId) {
-        Objects.requireNonNull(invitationId);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("invitation%2Did", invitationId);
-        return new InvitationItemRequestBuilder(urlTplParams, requestAdapter);
+    public InvitedUserRequestBuilder invitedUser() {
+        return new InvitedUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the invitedUserSponsors property of the microsoft.graph.invitation entity.
+     * @return a {@link InvitedUserSponsorsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public InvitedUserSponsorsRequestBuilder invitedUserSponsors() {
+        return new InvitedUserSponsorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link InvitationsRequestBuilder} and sets the default values.

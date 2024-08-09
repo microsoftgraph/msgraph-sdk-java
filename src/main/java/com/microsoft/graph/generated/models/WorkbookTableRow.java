@@ -37,7 +37,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the index property value. Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
+     * Gets the index property value. The index of the row within the rows collection of the table. Zero-based. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
         return this.backingStore.get("index");
     }
     /**
-     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Gets the values property value. The raw values of the specified range. The data returned could be of type string, number, or a Boolean. Any cell that contain an error will return the error string.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class WorkbookTableRow extends Entity implements Parsable {
         writer.writeObjectValue("values", this.getValues());
     }
     /**
-     * Sets the index property value. Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
+     * Sets the index property value. The index of the row within the rows collection of the table. Zero-based. Read-only.
      * @param value Value to set for the index property.
      */
     public void setIndex(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("index", value);
     }
     /**
-     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Sets the values property value. The raw values of the specified range. The data returned could be of type string, number, or a Boolean. Any cell that contain an error will return the error string.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final UntypedNode value) {

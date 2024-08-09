@@ -1,7 +1,7 @@
 package com.microsoft.graph.users.item.insights;
 
+import com.microsoft.graph.models.ItemInsights;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.OfficeGraphInsights;
 import com.microsoft.graph.users.item.insights.shared.SharedRequestBuilder;
 import com.microsoft.graph.users.item.insights.trending.TrendingRequestBuilder;
 import com.microsoft.graph.users.item.insights.used.UsedRequestBuilder;
@@ -83,50 +83,50 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get insights from users
-     * @return a {@link OfficeGraphInsights}
+     * @return a {@link ItemInsights}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public OfficeGraphInsights get() {
+    public ItemInsights get() {
         return get(null);
     }
     /**
      * Get insights from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link OfficeGraphInsights}
+     * @return a {@link ItemInsights}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public OfficeGraphInsights get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public ItemInsights get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, OfficeGraphInsights::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ItemInsights::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property insights in users
      * @param body The request body
-     * @return a {@link OfficeGraphInsights}
+     * @return a {@link ItemInsights}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public OfficeGraphInsights patch(@jakarta.annotation.Nonnull final OfficeGraphInsights body) {
+    public ItemInsights patch(@jakarta.annotation.Nonnull final ItemInsights body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property insights in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link OfficeGraphInsights}
+     * @return a {@link ItemInsights}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public OfficeGraphInsights patch(@jakarta.annotation.Nonnull final OfficeGraphInsights body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public ItemInsights patch(@jakarta.annotation.Nonnull final ItemInsights body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, OfficeGraphInsights::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ItemInsights::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property insights for users
@@ -174,7 +174,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OfficeGraphInsights body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ItemInsights body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -184,7 +184,7 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OfficeGraphInsights body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ItemInsights body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);

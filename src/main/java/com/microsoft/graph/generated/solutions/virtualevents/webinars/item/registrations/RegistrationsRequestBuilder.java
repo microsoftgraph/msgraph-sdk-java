@@ -63,7 +63,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
      * Get a list of all registration records of a webinar.
      * @return a {@link VirtualEventRegistrationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-list-registrations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistrationCollectionResponse get() {
@@ -74,7 +74,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventRegistrationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-list-registrations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistrationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,21 +84,23 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventRegistrationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to registrations for solutions
+     * Create a registration record for a registrant of a webinar. This method registers the person for the webinar. 
      * @param body The request body
      * @return a {@link VirtualEventRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-post-registrations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistration post(@jakarta.annotation.Nonnull final VirtualEventRegistration body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to registrations for solutions
+     * Create a registration record for a registrant of a webinar. This method registers the person for the webinar. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-post-registrations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistration post(@jakarta.annotation.Nonnull final VirtualEventRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -129,7 +131,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to registrations for solutions
+     * Create a registration record for a registrant of a webinar. This method registers the person for the webinar. 
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +140,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to registrations for solutions
+     * Create a registration record for a registrant of a webinar. This method registers the person for the webinar. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

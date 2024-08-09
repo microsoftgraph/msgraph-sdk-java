@@ -32,6 +32,15 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public static AppManagementConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.appManagementApplicationConfiguration": return new AppManagementApplicationConfiguration();
+                case "#microsoft.graph.appManagementServicePrincipalConfiguration": return new AppManagementServicePrincipalConfiguration();
+                case "#microsoft.graph.customAppManagementConfiguration": return new CustomAppManagementConfiguration();
+            }
+        }
         return new AppManagementConfiguration();
     }
     /**

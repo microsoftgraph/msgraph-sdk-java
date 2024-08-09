@@ -37,7 +37,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the format property value. Encapsulates the format properties chart point. Read-only.
+     * Gets the format property value. The format properties of the chart point. Read-only.
      * @return a {@link WorkbookChartPointFormat}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
         return this.backingStore.get("format");
     }
     /**
-     * Gets the value property value. Returns the value of a chart point. Read-only.
+     * Gets the value property value. The value of a chart point. Read-only.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class WorkbookChartPoint extends Entity implements Parsable {
         writer.writeObjectValue("value", this.getValue());
     }
     /**
-     * Sets the format property value. Encapsulates the format properties chart point. Read-only.
+     * Sets the format property value. The format properties of the chart point. Read-only.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartPointFormat value) {
         this.backingStore.set("format", value);
     }
     /**
-     * Sets the value property value. Returns the value of a chart point. Read-only.
+     * Sets the value property value. The value of a chart point. Read-only.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final UntypedNode value) {

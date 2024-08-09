@@ -31,9 +31,18 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("profileCardProperties", (n) -> { this.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("pronouns", (n) -> { this.setPronouns(n.getObjectValue(PronounsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the itemInsights property value. Represents administrator settings that manage the support for item insights in an organization.
+     * @return a {@link InsightsSettings}
+     */
+    @jakarta.annotation.Nullable
+    public InsightsSettings getItemInsights() {
+        return this.backingStore.get("itemInsights");
     }
     /**
      * Gets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
@@ -58,8 +67,16 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
         writer.writeObjectValue("pronouns", this.getPronouns());
+    }
+    /**
+     * Sets the itemInsights property value. Represents administrator settings that manage the support for item insights in an organization.
+     * @param value Value to set for the itemInsights property.
+     */
+    public void setItemInsights(@jakarta.annotation.Nullable final InsightsSettings value) {
+        this.backingStore.set("itemInsights", value);
     }
     /**
      * Sets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.

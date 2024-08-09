@@ -508,6 +508,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.importedWindowsAutopilotDeviceIdentityUpload": return new ImportedWindowsAutopilotDeviceIdentityUpload();
             case "#microsoft.graph.inferenceClassification": return new InferenceClassification();
             case "#microsoft.graph.inferenceClassificationOverride": return new InferenceClassificationOverride();
+            case "#microsoft.graph.insightsSettings": return new InsightsSettings();
             case "#microsoft.graph.internalDomainFederation": return new InternalDomainFederation();
             case "#microsoft.graph.internetExplorerMode": return new InternetExplorerMode();
             case "#microsoft.graph.invitation": return new Invitation();
@@ -534,6 +535,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.itemActivityStat": return new ItemActivityStat();
             case "#microsoft.graph.itemAnalytics": return new ItemAnalytics();
             case "#microsoft.graph.itemAttachment": return new ItemAttachment();
+            case "#microsoft.graph.itemInsights": return new ItemInsights();
             case "#microsoft.graph.itemRetentionLabel": return new ItemRetentionLabel();
             case "#microsoft.graph.landingPage": return new LandingPage();
             case "#microsoft.graph.landingPageDetail": return new LandingPageDetail();
@@ -667,8 +669,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.partners.billing.runningOperation": return new RunningOperation();
             case "#microsoft.graph.partners.billing.unbilledUsage": return new UnbilledUsage();
             case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
-            case "#microsoft.graph.payload": return new Payload();
-            case "#microsoft.graph.peopleAdminSettings": return new PeopleAdminSettings();
         }
         return null;
     }
@@ -680,6 +680,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.payload": return new Payload();
+            case "#microsoft.graph.peopleAdminSettings": return new PeopleAdminSettings();
             case "#microsoft.graph.permission": return new Permission();
             case "#microsoft.graph.permissionGrantConditionSet": return new PermissionGrantConditionSet();
             case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
@@ -851,6 +853,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.serviceHealthIssue": return new ServiceHealthIssue();
             case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();
             case "#microsoft.graph.servicePrincipalRiskDetection": return new ServicePrincipalRiskDetection();
+            case "#microsoft.graph.serviceStorageQuotaBreakdown": return new ServiceStorageQuotaBreakdown();
             case "#microsoft.graph.serviceUpdateMessage": return new ServiceUpdateMessage();
             case "#microsoft.graph.settingStateDeviceSummary": return new SettingStateDeviceSummary();
             case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
@@ -879,6 +882,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.standardWebPart": return new StandardWebPart();
             case "#microsoft.graph.startHoldMusicOperation": return new StartHoldMusicOperation();
             case "#microsoft.graph.stopHoldMusicOperation": return new StopHoldMusicOperation();
+            case "#microsoft.graph.storageQuotaBreakdown": return new StorageQuotaBreakdown();
+            case "#microsoft.graph.storageSettings": return new StorageSettings();
             case "#microsoft.graph.stsPolicy": return new StsPolicy();
             case "#microsoft.graph.subjectRightsRequest": return new SubjectRightsRequest();
             case "#microsoft.graph.subscribedSku": return new SubscribedSku();
@@ -956,6 +961,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.unifiedRoleManagementPolicyRule": return new UnifiedRoleManagementPolicyRule();
             case "#microsoft.graph.unifiedRoleScheduleBase": return new UnifiedRoleScheduleBase();
             case "#microsoft.graph.unifiedRoleScheduleInstanceBase": return new UnifiedRoleScheduleInstanceBase();
+            case "#microsoft.graph.unifiedStorageQuota": return new UnifiedStorageQuota();
             case "#microsoft.graph.unmuteParticipantOperation": return new UnmuteParticipantOperation();
             case "#microsoft.graph.updateRecordingStatusOperation": return new UpdateRecordingStatusOperation();
             case "#microsoft.graph.urlAssessmentRequest": return new UrlAssessmentRequest();
@@ -989,19 +995,28 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereModelPerformance": return new UserExperienceAnalyticsWorkFromAnywhereModelPerformance();
             case "#microsoft.graph.userFlowLanguageConfiguration": return new UserFlowLanguageConfiguration();
             case "#microsoft.graph.userFlowLanguagePage": return new UserFlowLanguagePage();
+            case "#microsoft.graph.userInsightsSettings": return new UserInsightsSettings();
             case "#microsoft.graph.userInstallStateSummary": return new UserInstallStateSummary();
             case "#microsoft.graph.userRegistrationDetails": return new UserRegistrationDetails();
             case "#microsoft.graph.userScopeTeamsAppInstallation": return new UserScopeTeamsAppInstallation();
             case "#microsoft.graph.userSettings": return new UserSettings();
             case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
+            case "#microsoft.graph.userStorage": return new UserStorage();
             case "#microsoft.graph.userTeamwork": return new UserTeamwork();
             case "#microsoft.graph.verticalSection": return new VerticalSection();
             case "#microsoft.graph.virtualEndpoint": return new VirtualEndpoint();
             case "#microsoft.graph.virtualEvent": return new VirtualEvent();
+            case "#microsoft.graph.virtualEventPresenter": return new VirtualEventPresenter();
             case "#microsoft.graph.virtualEventRegistration": return new VirtualEventRegistration();
+            case "#microsoft.graph.virtualEventRegistrationConfiguration": return new VirtualEventRegistrationConfiguration();
+            case "#microsoft.graph.virtualEventRegistrationCustomQuestion": return new VirtualEventRegistrationCustomQuestion();
+            case "#microsoft.graph.virtualEventRegistrationPredefinedQuestion": return new VirtualEventRegistrationPredefinedQuestion();
+            case "#microsoft.graph.virtualEventRegistrationQuestionBase": return new VirtualEventRegistrationQuestionBase();
             case "#microsoft.graph.virtualEventSession": return new VirtualEventSession();
             case "#microsoft.graph.virtualEventsRoot": return new VirtualEventsRoot();
+            case "#microsoft.graph.virtualEventTownhall": return new VirtualEventTownhall();
             case "#microsoft.graph.virtualEventWebinar": return new VirtualEventWebinar();
+            case "#microsoft.graph.virtualEventWebinarRegistrationConfiguration": return new VirtualEventWebinarRegistrationConfiguration();
             case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
             case "#microsoft.graph.vppToken": return new VppToken();
             case "#microsoft.graph.webApp": return new WebApp();

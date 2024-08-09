@@ -25,7 +25,7 @@ public class WorkbookChartLineFormat extends Entity implements Parsable {
         return new WorkbookChartLineFormat();
     }
     /**
-     * Gets the color property value. HTML color code representing the color of lines in the chart.
+     * Gets the color property value. The HTML color code that represents the color of lines in the chart.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class WorkbookChartLineFormat extends Entity implements Parsable {
         writer.writeStringValue("color", this.getColor());
     }
     /**
-     * Sets the color property value. HTML color code representing the color of lines in the chart.
+     * Sets the color property value. The HTML color code that represents the color of lines in the chart.
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {

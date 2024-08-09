@@ -82,7 +82,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * The sorting for the table. Read-only.
      * @return a {@link WorkbookTableSort}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -91,7 +91,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * The sorting for the table. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookTableSort}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -149,7 +149,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * The sorting for the table. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * The sorting for the table. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -209,7 +209,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * The sorting for the table. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

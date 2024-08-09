@@ -38,7 +38,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+     * Gets the format property value. The formatting of a chart title, which includes fill and font formatting. Read-only.
      * @return a {@link WorkbookChartTitleFormat}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
         return this.backingStore.get("format");
     }
     /**
-     * Gets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
+     * Gets the overlay property value. Indicates whether the chart title will overlay the chart or not.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
         return this.backingStore.get("overlay");
     }
     /**
-     * Gets the text property value. Represents the title text of a chart.
+     * Gets the text property value. The title text of the chart.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
         return this.backingStore.get("text");
     }
     /**
-     * Gets the visible property value. A boolean value that represents the visibility of a chart title object.
+     * Gets the visible property value. Indicates whether the chart title is visible.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -82,28 +82,28 @@ public class WorkbookChartTitle extends Entity implements Parsable {
         writer.writeBooleanValue("visible", this.getVisible());
     }
     /**
-     * Sets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+     * Sets the format property value. The formatting of a chart title, which includes fill and font formatting. Read-only.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookChartTitleFormat value) {
         this.backingStore.set("format", value);
     }
     /**
-     * Sets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
+     * Sets the overlay property value. Indicates whether the chart title will overlay the chart or not.
      * @param value Value to set for the overlay property.
      */
     public void setOverlay(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("overlay", value);
     }
     /**
-     * Sets the text property value. Represents the title text of a chart.
+     * Sets the text property value. The title text of the chart.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("text", value);
     }
     /**
-     * Sets the visible property value. A boolean value that represents the visibility of a chart title object.
+     * Sets the visible property value. Indicates whether the chart title is visible.
      * @param value Value to set for the visible property.
      */
     public void setVisible(@jakarta.annotation.Nullable final Boolean value) {

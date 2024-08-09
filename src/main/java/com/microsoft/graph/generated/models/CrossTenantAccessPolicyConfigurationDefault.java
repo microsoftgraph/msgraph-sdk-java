@@ -79,6 +79,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
         deserializerMap.put("invitationRedemptionIdentityProviderConfiguration", (n) -> { this.setInvitationRedemptionIdentityProviderConfiguration(n.getObjectValue(DefaultInvitationRedemptionIdentityProviderConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("isServiceDefault", (n) -> { this.setIsServiceDefault(n.getBooleanValue()); });
+        deserializerMap.put("tenantRestrictions", (n) -> { this.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -106,6 +107,14 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         return this.backingStore.get("isServiceDefault");
     }
     /**
+     * Gets the tenantRestrictions property value. Defines the default tenant restrictions configuration for users in your organization who access an external organization on your network or devices.
+     * @return a {@link CrossTenantAccessPolicyTenantRestrictions}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyTenantRestrictions getTenantRestrictions() {
+        return this.backingStore.get("tenantRestrictions");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -120,6 +129,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeObjectValue("invitationRedemptionIdentityProviderConfiguration", this.getInvitationRedemptionIdentityProviderConfiguration());
         writer.writeBooleanValue("isServiceDefault", this.getIsServiceDefault());
+        writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
     }
     /**
      * Sets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can't be updated in the default configuration. Read-only.
@@ -176,5 +186,12 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     public void setIsServiceDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isServiceDefault", value);
+    }
+    /**
+     * Sets the tenantRestrictions property value. Defines the default tenant restrictions configuration for users in your organization who access an external organization on your network or devices.
+     * @param value Value to set for the tenantRestrictions property.
+     */
+    public void setTenantRestrictions(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTenantRestrictions value) {
+        this.backingStore.set("tenantRestrictions", value);
     }
 }

@@ -44,7 +44,7 @@ public class Task extends Entity implements Parsable {
         return this.backingStore.get("category");
     }
     /**
-     * Gets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
+     * Gets the continueOnError property value. A Boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class Task extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. A boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
+     * Gets the isEnabled property value. A Boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class Task extends Entity implements Parsable {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
+     * Sets the continueOnError property value. A Boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
      * @param value Value to set for the continueOnError property.
      */
     public void setContinueOnError(@jakarta.annotation.Nullable final Boolean value) {
@@ -177,7 +177,7 @@ public class Task extends Entity implements Parsable {
         this.backingStore.set("executionSequence", value);
     }
     /**
-     * Sets the isEnabled property value. A boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
+     * Sets the isEnabled property value. A Boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

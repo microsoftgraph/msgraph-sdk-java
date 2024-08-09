@@ -57,7 +57,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
+     * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled. IDs are available in servicePlans > servicePlanId in the tenant's subscribedSkus or serviceStatus > servicePlanId in the tenant's companySubscription.
      * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the skuId property value. The unique identifier for the SKU.
+     * Gets the skuId property value. The unique identifier for the SKU. Corresponds to the skuId from subscribedSkus or companySubscription.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
+     * Sets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled. IDs are available in servicePlans > servicePlanId in the tenant's subscribedSkus or serviceStatus > servicePlanId in the tenant's companySubscription.
      * @param value Value to set for the disabledPlans property.
      */
     public void setDisabledPlans(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
@@ -133,7 +133,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the skuId property value. The unique identifier for the SKU.
+     * Sets the skuId property value. The unique identifier for the SKU. Corresponds to the skuId from subscribedSkus or companySubscription.
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {

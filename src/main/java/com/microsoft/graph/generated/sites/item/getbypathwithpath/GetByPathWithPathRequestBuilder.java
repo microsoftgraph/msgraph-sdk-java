@@ -12,7 +12,6 @@ import com.microsoft.graph.sites.item.getbypathwithpath.externalcolumns.External
 import com.microsoft.graph.sites.item.getbypathwithpath.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.sites.item.getbypathwithpath.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.sites.item.getbypathwithpath.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
-import com.microsoft.graph.sites.item.getbypathwithpath.getbypathwithpath1.GetByPathWithPath1RequestBuilder;
 import com.microsoft.graph.sites.item.getbypathwithpath.items.ItemsRequestBuilder;
 import com.microsoft.graph.sites.item.getbypathwithpath.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.sites.item.getbypathwithpath.lists.ListsRequestBuilder;
@@ -247,16 +246,6 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     public GetApplicableContentTypesForListWithListIdRequestBuilder getApplicableContentTypesForListWithListId(@jakarta.annotation.Nonnull final String listId) {
         Objects.requireNonNull(listId);
         return new GetApplicableContentTypesForListWithListIdRequestBuilder(pathParameters, requestAdapter, listId);
-    }
-    /**
-     * Provides operations to call the getByPath method.
-     * @param path1 Usage: path='{path1}'
-     * @return a {@link GetByPathWithPath1RequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetByPathWithPath1RequestBuilder getByPathWithPath1(@jakarta.annotation.Nonnull final String path1) {
-        Objects.requireNonNull(path1);
-        return new GetByPathWithPath1RequestBuilder(pathParameters, requestAdapter, path1);
     }
     /**
      * Invoke function getByPath

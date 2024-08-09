@@ -73,7 +73,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * The sheet protection object for a worksheet. Read-only.
      * @return a {@link WorkbookWorksheetProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * The sheet protection object for a worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookWorksheetProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * The sheet protection object for a worksheet. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * The sheet protection object for a worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * The sheet protection object for a worksheet. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

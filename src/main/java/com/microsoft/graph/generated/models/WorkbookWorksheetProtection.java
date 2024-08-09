@@ -36,7 +36,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the options property value. Sheet protection options. Read-only.
+     * Gets the options property value. Worksheet protection options. Read-only.
      * @return a {@link WorkbookWorksheetProtectionOptions}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
         return this.backingStore.get("options");
     }
     /**
-     * Gets the protected property value. Indicates if the worksheet is protected.  Read-only.
+     * Gets the protected property value. Indicates whether the worksheet is protected.  Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
         writer.writeBooleanValue("protected", this.getProtected());
     }
     /**
-     * Sets the options property value. Sheet protection options. Read-only.
+     * Sets the options property value. Worksheet protection options. Read-only.
      * @param value Value to set for the options property.
      */
     public void setOptions(@jakarta.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
         this.backingStore.set("options", value);
     }
     /**
-     * Sets the protected property value. Indicates if the worksheet is protected.  Read-only.
+     * Sets the protected property value. Indicates whether the worksheet is protected.  Read-only.
      * @param value Value to set for the protected property.
      */
     public void setProtected(@jakarta.annotation.Nullable final Boolean value) {

@@ -37,7 +37,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fields property value. Represents the current conditions used to last sort the table. Read-only.
+     * Gets the fields property value. The list of the current conditions last used to sort the table. Read-only.
      * @return a {@link java.util.List<WorkbookSortField>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
         return this.backingStore.get("fields");
     }
     /**
-     * Gets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
+     * Gets the matchCase property value. Indicates whether the casing impacted the last sort of the table. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
         return this.backingStore.get("matchCase");
     }
     /**
-     * Gets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+     * Gets the method property value. The Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class WorkbookTableSort extends Entity implements Parsable {
         writer.writeStringValue("method", this.getMethod());
     }
     /**
-     * Sets the fields property value. Represents the current conditions used to last sort the table. Read-only.
+     * Sets the fields property value. The list of the current conditions last used to sort the table. Read-only.
      * @param value Value to set for the fields property.
      */
     public void setFields(@jakarta.annotation.Nullable final java.util.List<WorkbookSortField> value) {
         this.backingStore.set("fields", value);
     }
     /**
-     * Sets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
+     * Sets the matchCase property value. Indicates whether the casing impacted the last sort of the table. Read-only.
      * @param value Value to set for the matchCase property.
      */
     public void setMatchCase(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("matchCase", value);
     }
     /**
-     * Sets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+     * Sets the method property value. The Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      * @param value Value to set for the method property.
      */
     public void setMethod(@jakarta.annotation.Nullable final String value) {

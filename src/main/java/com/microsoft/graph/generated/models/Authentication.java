@@ -76,7 +76,7 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("microsoftAuthenticatorMethods");
     }
     /**
-     * Gets the operations property value. Represents the status of a long-running operation.
+     * Gets the operations property value. Represents the status of a long-running operation, such as a password reset operation.
      * @return a {@link java.util.List<LongRunningOperation>}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("microsoftAuthenticatorMethods", value);
     }
     /**
-     * Sets the operations property value. Represents the status of a long-running operation.
+     * Sets the operations property value. Represents the status of a long-running operation, such as a password reset operation.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {

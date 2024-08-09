@@ -36,7 +36,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. Name of the PivotTable.
+     * Gets the name property value. The name of the pivot table.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
+     * Gets the worksheet property value. The worksheet that contains the current pivot table. Read-only.
      * @return a {@link WorkbookWorksheet}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class WorkbookPivotTable extends Entity implements Parsable {
         writer.writeObjectValue("worksheet", this.getWorksheet());
     }
     /**
-     * Sets the name property value. Name of the PivotTable.
+     * Sets the name property value. The name of the pivot table.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
+     * Sets the worksheet property value. The worksheet that contains the current pivot table. Read-only.
      * @param value Value to set for the worksheet property.
      */
     public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
