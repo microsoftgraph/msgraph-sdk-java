@@ -1,5 +1,6 @@
 package com.microsoft.graph.groups.item.team.primarychannel;
 
+import com.microsoft.graph.groups.item.team.primarychannel.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.filesfolder.FilesFolderRequestBuilder;
@@ -9,6 +10,7 @@ import com.microsoft.graph.groups.item.team.primarychannel.provisionemail.Provis
 import com.microsoft.graph.groups.item.team.primarychannel.removeemail.RemoveEmailRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.sharedwithteams.SharedWithTeamsRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.tabs.TabsRequestBuilder;
+import com.microsoft.graph.groups.item.team.primarychannel.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -29,6 +31,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the archive method.
+     * @return a {@link ArchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ArchiveRequestBuilder archive() {
+        return new ArchiveRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the completeMigration method.
      * @return a {@link CompleteMigrationRequestBuilder}
@@ -100,6 +110,14 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unarchive method.
+     * @return a {@link UnarchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnarchiveRequestBuilder unarchive() {
+        return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PrimaryChannelRequestBuilder} and sets the default values.

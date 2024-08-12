@@ -98,7 +98,7 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("onPremisesSynchronization");
     }
     /**
-     * Gets the subscriptions property value. The subscriptions property
+     * Gets the subscriptions property value. List of commercial subscriptions that an organization acquired.
      * @return a {@link java.util.List<CompanySubscription>}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("onPremisesSynchronization", value);
     }
     /**
-     * Sets the subscriptions property value. The subscriptions property
+     * Sets the subscriptions property value. List of commercial subscriptions that an organization acquired.
      * @param value Value to set for the subscriptions property.
      */
     public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<CompanySubscription> value) {

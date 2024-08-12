@@ -4,6 +4,7 @@ import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -35,6 +36,14 @@ public class BookingService extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
         return this.backingStore.get("additionalInformation");
+    }
+    /**
+     * Gets the createdDateTime property value. The date, time, and time zone when the service was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the customQuestions property value. Contains the set of custom questions associated with a particular service.
@@ -108,6 +117,7 @@ public class BookingService extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customQuestions", (n) -> { this.setCustomQuestions(n.getCollectionOfObjectValues(BookingQuestionAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultDuration", (n) -> { this.setDefaultDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("defaultLocation", (n) -> { this.setDefaultLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
@@ -117,9 +127,11 @@ public class BookingService extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isAnonymousJoinEnabled", (n) -> { this.setIsAnonymousJoinEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isCustomerAllowedToManageBooking", (n) -> { this.setIsCustomerAllowedToManageBooking(n.getBooleanValue()); });
         deserializerMap.put("isHiddenFromCustomers", (n) -> { this.setIsHiddenFromCustomers(n.getBooleanValue()); });
         deserializerMap.put("isLocationOnline", (n) -> { this.setIsLocationOnline(n.getBooleanValue()); });
         deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("maximumAttendeesCount", (n) -> { this.setMaximumAttendeesCount(n.getIntegerValue()); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
         deserializerMap.put("postBuffer", (n) -> { this.setPostBuffer(n.getPeriodAndDurationValue()); });
@@ -131,7 +143,7 @@ public class BookingService extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isAnonymousJoinEnabled property value. True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
+     * Gets the isAnonymousJoinEnabled property value. Indicates if an anonymousJoinWebUrl(webrtcUrl) is generated for the appointment booked for this service. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +151,15 @@ public class BookingService extends Entity implements Parsable {
         return this.backingStore.get("isAnonymousJoinEnabled");
     }
     /**
-     * Gets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
+     * Gets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsCustomerAllowedToManageBooking() {
+        return this.backingStore.get("isCustomerAllowedToManageBooking");
+    }
+    /**
+     * Gets the isHiddenFromCustomers property value. True indicates that this service isn't available to customers for booking.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +167,7 @@ public class BookingService extends Entity implements Parsable {
         return this.backingStore.get("isHiddenFromCustomers");
     }
     /**
-     * Gets the isLocationOnline property value. True indicates that the appointments for the service will be held online. Default value is false.
+     * Gets the isLocationOnline property value. Indicates that the appointments for the service are held online. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -161,6 +181,14 @@ public class BookingService extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
         return this.backingStore.get("languageTag");
+    }
+    /**
+     * Gets the lastUpdatedDateTime property value. The date, time, and time zone when the service was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUpdatedDateTime() {
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
@@ -234,6 +262,7 @@ public class BookingService extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("customQuestions", this.getCustomQuestions());
         writer.writePeriodAndDurationValue("defaultDuration", this.getDefaultDuration());
         writer.writeObjectValue("defaultLocation", this.getDefaultLocation());
@@ -243,9 +272,11 @@ public class BookingService extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("isAnonymousJoinEnabled", this.getIsAnonymousJoinEnabled());
+        writer.writeBooleanValue("isCustomerAllowedToManageBooking", this.getIsCustomerAllowedToManageBooking());
         writer.writeBooleanValue("isHiddenFromCustomers", this.getIsHiddenFromCustomers());
         writer.writeBooleanValue("isLocationOnline", this.getIsLocationOnline());
         writer.writeStringValue("languageTag", this.getLanguageTag());
+        writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeIntegerValue("maximumAttendeesCount", this.getMaximumAttendeesCount());
         writer.writeStringValue("notes", this.getNotes());
         writer.writePeriodAndDurationValue("postBuffer", this.getPostBuffer());
@@ -260,6 +291,13 @@ public class BookingService extends Entity implements Parsable {
      */
     public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("additionalInformation", value);
+    }
+    /**
+     * Sets the createdDateTime property value. The date, time, and time zone when the service was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the customQuestions property value. Contains the set of custom questions associated with a particular service.
@@ -318,21 +356,28 @@ public class BookingService extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isAnonymousJoinEnabled property value. True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
+     * Sets the isAnonymousJoinEnabled property value. Indicates if an anonymousJoinWebUrl(webrtcUrl) is generated for the appointment booked for this service. The default value is false.
      * @param value Value to set for the isAnonymousJoinEnabled property.
      */
     public void setIsAnonymousJoinEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAnonymousJoinEnabled", value);
     }
     /**
-     * Sets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
+     * Sets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
+     * @param value Value to set for the isCustomerAllowedToManageBooking property.
+     */
+    public void setIsCustomerAllowedToManageBooking(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isCustomerAllowedToManageBooking", value);
+    }
+    /**
+     * Sets the isHiddenFromCustomers property value. True indicates that this service isn't available to customers for booking.
      * @param value Value to set for the isHiddenFromCustomers property.
      */
     public void setIsHiddenFromCustomers(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isHiddenFromCustomers", value);
     }
     /**
-     * Sets the isLocationOnline property value. True indicates that the appointments for the service will be held online. Default value is false.
+     * Sets the isLocationOnline property value. Indicates that the appointments for the service are held online. The default value is false.
      * @param value Value to set for the isLocationOnline property.
      */
     public void setIsLocationOnline(@jakarta.annotation.Nullable final Boolean value) {
@@ -344,6 +389,13 @@ public class BookingService extends Entity implements Parsable {
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("languageTag", value);
+    }
+    /**
+     * Sets the lastUpdatedDateTime property value. The date, time, and time zone when the service was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the lastUpdatedDateTime property.
+     */
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.

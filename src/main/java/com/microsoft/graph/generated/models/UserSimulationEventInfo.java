@@ -65,6 +65,14 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("browser");
     }
     /**
+     * Gets the clickSource property value. The clickSource property
+     * @return a {@link ClickSource}
+     */
+    @jakarta.annotation.Nullable
+    public ClickSource getClickSource() {
+        return this.backingStore.get("clickSource");
+    }
+    /**
      * Gets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
      * @return a {@link OffsetDateTime}
      */
@@ -86,8 +94,9 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, BackedMode
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("browser", (n) -> { this.setBrowser(n.getStringValue()); });
+        deserializerMap.put("clickSource", (n) -> { this.setClickSource(n.getEnumValue(ClickSource::forValue)); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("eventName", (n) -> { this.setEventName(n.getStringValue()); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
@@ -126,6 +135,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, BackedMode
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("browser", this.getBrowser());
+        writer.writeEnumValue("clickSource", this.getClickSource());
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
         writer.writeStringValue("eventName", this.getEventName());
         writer.writeStringValue("ipAddress", this.getIpAddress());
@@ -154,6 +164,13 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, BackedMode
      */
     public void setBrowser(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("browser", value);
+    }
+    /**
+     * Sets the clickSource property value. The clickSource property
+     * @param value Value to set for the clickSource property.
+     */
+    public void setClickSource(@jakarta.annotation.Nullable final ClickSource value) {
+        this.backingStore.set("clickSource", value);
     }
     /**
      * Sets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.

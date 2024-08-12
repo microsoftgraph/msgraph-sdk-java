@@ -94,7 +94,7 @@ public class SslCertificate extends Artifact implements Parsable {
         return this.backingStore.get("lastSeenDateTime");
     }
     /**
-     * Gets the relatedHosts property value. The hosts related with this sslCertificate.
+     * Gets the relatedHosts property value. The host resources related with this sslCertificate.
      * @return a {@link java.util.List<Host>}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class SslCertificate extends Artifact implements Parsable {
         this.backingStore.set("lastSeenDateTime", value);
     }
     /**
-     * Sets the relatedHosts property value. The hosts related with this sslCertificate.
+     * Sets the relatedHosts property value. The host resources related with this sslCertificate.
      * @param value Value to set for the relatedHosts property.
      */
     public void setRelatedHosts(@jakarta.annotation.Nullable final java.util.List<Host> value) {

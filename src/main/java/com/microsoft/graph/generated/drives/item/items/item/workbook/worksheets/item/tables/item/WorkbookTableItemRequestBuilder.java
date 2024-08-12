@@ -154,7 +154,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      * @return a {@link WorkbookTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -163,7 +163,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -221,7 +221,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -229,7 +229,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -281,7 +281,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

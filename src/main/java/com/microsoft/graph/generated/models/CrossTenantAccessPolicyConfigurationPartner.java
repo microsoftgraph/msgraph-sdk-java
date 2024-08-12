@@ -101,7 +101,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -113,6 +113,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         deserializerMap.put("isServiceProvider", (n) -> { this.setIsServiceProvider(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("tenantRestrictions", (n) -> { this.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -164,6 +165,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.backingStore.get("tenantId");
     }
     /**
+     * Gets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for users in your organization who access a partner organization using partner supplied identities on your network or devices.
+     * @return a {@link CrossTenantAccessPolicyTenantRestrictions}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyTenantRestrictions getTenantRestrictions() {
+        return this.backingStore.get("tenantRestrictions");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -180,6 +189,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         writer.writeBooleanValue("isServiceProvider", this.getIsServiceProvider());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
+        writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -273,5 +283,12 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("tenantId", value);
+    }
+    /**
+     * Sets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for users in your organization who access a partner organization using partner supplied identities on your network or devices.
+     * @param value Value to set for the tenantRestrictions property.
+     */
+    public void setTenantRestrictions(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTenantRestrictions value) {
+        this.backingStore.set("tenantRestrictions", value);
     }
 }

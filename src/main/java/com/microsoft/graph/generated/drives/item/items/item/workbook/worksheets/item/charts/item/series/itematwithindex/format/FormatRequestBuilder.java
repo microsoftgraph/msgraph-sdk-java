@@ -55,7 +55,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * The formatting of a chart series, which includes fill and line formatting. Read-only.
      * @return a {@link WorkbookChartSeriesFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * The formatting of a chart series, which includes fill and line formatting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartSeriesFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * The formatting of a chart series, which includes fill and line formatting. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * The formatting of a chart series, which includes fill and line formatting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * The formatting of a chart series, which includes fill and line formatting. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

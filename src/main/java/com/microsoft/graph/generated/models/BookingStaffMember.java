@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -37,6 +38,14 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         return this.backingStore.get("availabilityIsAffectedByPersonalCalendar");
     }
     /**
+     * Gets the createdDateTime property value. The date, time, and time zone when the staff member was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
+    }
+    /**
      * Gets the displayName property value. The name of the staff member, as displayed to customers. Required.
      * @return a {@link String}
      */
@@ -45,7 +54,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
+     * Gets the emailAddress property value. The email address of the staff member. This email address can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -60,9 +69,11 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("availabilityIsAffectedByPersonalCalendar", (n) -> { this.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("isEmailNotificationEnabled", (n) -> { this.setIsEmailNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("membershipStatus", (n) -> { this.setMembershipStatus(n.getEnumValue(BookingStaffMembershipStatus::forValue)); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(BookingStaffRole::forValue)); });
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
@@ -71,12 +82,20 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
+     * Gets the isEmailNotificationEnabled property value. Indicates that a staff member is notified via email when a booking assigned to them is created or changed. The default value is true.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEmailNotificationEnabled() {
         return this.backingStore.get("isEmailNotificationEnabled");
+    }
+    /**
+     * Gets the lastUpdatedDateTime property value. The date, time, and time zone when the staff member was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUpdatedDateTime() {
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the membershipStatus property value. The membershipStatus property
@@ -111,7 +130,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         return this.backingStore.get("useBusinessHours");
     }
     /**
-     * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
+     * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they're initialized to be the same as the businessHours property of the business.
      * @return a {@link java.util.List<BookingWorkHours>}
      */
     @jakarta.annotation.Nullable
@@ -126,9 +145,11 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("availabilityIsAffectedByPersonalCalendar", this.getAvailabilityIsAffectedByPersonalCalendar());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeBooleanValue("isEmailNotificationEnabled", this.getIsEmailNotificationEnabled());
+        writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeEnumValue("membershipStatus", this.getMembershipStatus());
         writer.writeEnumValue("role", this.getRole());
         writer.writeStringValue("timeZone", this.getTimeZone());
@@ -143,6 +164,13 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         this.backingStore.set("availabilityIsAffectedByPersonalCalendar", value);
     }
     /**
+     * Sets the createdDateTime property value. The date, time, and time zone when the staff member was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
+    }
+    /**
      * Sets the displayName property value. The name of the staff member, as displayed to customers. Required.
      * @param value Value to set for the displayName property.
      */
@@ -150,18 +178,25 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
+     * Sets the emailAddress property value. The email address of the staff member. This email address can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailAddress", value);
     }
     /**
-     * Sets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
+     * Sets the isEmailNotificationEnabled property value. Indicates that a staff member is notified via email when a booking assigned to them is created or changed. The default value is true.
      * @param value Value to set for the isEmailNotificationEnabled property.
      */
     public void setIsEmailNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEmailNotificationEnabled", value);
+    }
+    /**
+     * Sets the lastUpdatedDateTime property value. The date, time, and time zone when the staff member was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the lastUpdatedDateTime property.
+     */
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the membershipStatus property value. The membershipStatus property
@@ -192,7 +227,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         this.backingStore.set("useBusinessHours", value);
     }
     /**
-     * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
+     * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they're initialized to be the same as the businessHours property of the business.
      * @param value Value to set for the workingHours property.
      */
     public void setWorkingHours(@jakarta.annotation.Nullable final java.util.List<BookingWorkHours> value) {

@@ -26,7 +26,7 @@ public class X509CertificateCombinationConfiguration extends AuthenticationCombi
         return new X509CertificateCombinationConfiguration();
     }
     /**
-     * Gets the allowedIssuerSkis property value. The allowedIssuerSkis property
+     * Gets the allowedIssuerSkis property value. A list of allowed subject key identifier values.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class X509CertificateCombinationConfiguration extends AuthenticationCombi
         return this.backingStore.get("allowedIssuerSkis");
     }
     /**
-     * Gets the allowedPolicyOIDs property value. The allowedPolicyOIDs property
+     * Gets the allowedPolicyOIDs property value. A list of allowed policy OIDs.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class X509CertificateCombinationConfiguration extends AuthenticationCombi
         writer.writeCollectionOfPrimitiveValues("allowedPolicyOIDs", this.getAllowedPolicyOIDs());
     }
     /**
-     * Sets the allowedIssuerSkis property value. The allowedIssuerSkis property
+     * Sets the allowedIssuerSkis property value. A list of allowed subject key identifier values.
      * @param value Value to set for the allowedIssuerSkis property.
      */
     public void setAllowedIssuerSkis(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("allowedIssuerSkis", value);
     }
     /**
-     * Sets the allowedPolicyOIDs property value. The allowedPolicyOIDs property
+     * Sets the allowedPolicyOIDs property value. A list of allowed policy OIDs.
      * @param value Value to set for the allowedPolicyOIDs property.
      */
     public void setAllowedPolicyOIDs(@jakarta.annotation.Nullable final java.util.List<String> value) {
