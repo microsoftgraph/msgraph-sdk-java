@@ -156,4 +156,4 @@ jobs:
     - name: Inspect contents of local Maven cache
       shell: pwsh
       run: |
-        .\scripts\validatePackageContents.ps1 -ArtifactId msgraph-sdk-java -Version $env:PACKAGE_VERSION
+        .\scripts\validatePackageContents.ps1 -ArtifactId microsoft-graph -Version $env:PACKAGE_VERSION
