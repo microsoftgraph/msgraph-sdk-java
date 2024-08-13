@@ -579,7 +579,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("inferenceClassification");
     }
     /**
-     * Gets the insights property value. The insights property
+     * Gets the insights property value. Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
      * @return a {@link ItemInsights}
      */
     @jakarta.annotation.Nullable
@@ -1678,7 +1678,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("inferenceClassification", value);
     }
     /**
-     * Sets the insights property value. The insights property
+     * Sets the insights property value. Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
      * @param value Value to set for the insights property.
      */
     public void setInsights(@jakarta.annotation.Nullable final ItemInsights value) {

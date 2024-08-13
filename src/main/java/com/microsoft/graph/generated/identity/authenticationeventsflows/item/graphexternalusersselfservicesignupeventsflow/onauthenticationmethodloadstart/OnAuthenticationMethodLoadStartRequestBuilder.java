@@ -46,7 +46,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/graph.externalUsersSelfServiceSignUpEventsFlow/onAuthenticationMethodLoadStart{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @return a {@link OnAuthenticationMethodLoadStartHandler}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -55,7 +55,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnAuthenticationMethodLoadStartHandler}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -68,7 +68,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, OnAuthenticationMethodLoadStartHandler::createFromDiscriminatorValue);
     }
     /**
-     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +98,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
         return new OnAuthenticationMethodLoadStartRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

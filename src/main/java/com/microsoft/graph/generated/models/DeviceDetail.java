@@ -56,7 +56,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore;
     }
     /**
-     * Gets the browser property value. Indicates the browser information of the used for signing in.
+     * Gets the browser property value. Indicates the browser information of the used in the sign-in. Populated for devices registered in Microsoft Entra.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("browser");
     }
     /**
-     * Gets the deviceId property value. Refers to the UniqueID of the device used for signing in.
+     * Gets the deviceId property value. Refers to the unique ID of the device used in the sign-in. Populated for devices registered in Microsoft Entra.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("deviceId");
     }
     /**
-     * Gets the displayName property value. Refers to the name of the device used for signing in.
+     * Gets the displayName property value. Refers to the name of the device used in the sign-in. Populated for devices registered in Microsoft Entra.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the isCompliant property value. Indicates whether the device is compliant.
+     * Gets the isCompliant property value. Indicates whether the device is compliant or not.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("isCompliant");
     }
     /**
-     * Gets the isManaged property value. Indicates whether the device is managed.
+     * Gets the isManaged property value. Indicates if the device is managed or not.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the operatingSystem property value. Indicates the operating system name and version used for signing in.
+     * Gets the operatingSystem property value. Indicates the OS name and version used in the sign-in.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("operatingSystem");
     }
     /**
-     * Gets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+     * Gets the trustType property value. Indicates information on whether the device used in the sign-in is workplace-joined, Microsoft Entra-joined, domain-joined.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,35 +168,35 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the browser property value. Indicates the browser information of the used for signing in.
+     * Sets the browser property value. Indicates the browser information of the used in the sign-in. Populated for devices registered in Microsoft Entra.
      * @param value Value to set for the browser property.
      */
     public void setBrowser(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("browser", value);
     }
     /**
-     * Sets the deviceId property value. Refers to the UniqueID of the device used for signing in.
+     * Sets the deviceId property value. Refers to the unique ID of the device used in the sign-in. Populated for devices registered in Microsoft Entra.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceId", value);
     }
     /**
-     * Sets the displayName property value. Refers to the name of the device used for signing in.
+     * Sets the displayName property value. Refers to the name of the device used in the sign-in. Populated for devices registered in Microsoft Entra.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isCompliant property value. Indicates whether the device is compliant.
+     * Sets the isCompliant property value. Indicates whether the device is compliant or not.
      * @param value Value to set for the isCompliant property.
      */
     public void setIsCompliant(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCompliant", value);
     }
     /**
-     * Sets the isManaged property value. Indicates whether the device is managed.
+     * Sets the isManaged property value. Indicates if the device is managed or not.
      * @param value Value to set for the isManaged property.
      */
     public void setIsManaged(@jakarta.annotation.Nullable final Boolean value) {
@@ -210,14 +210,14 @@ public class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the operatingSystem property value. Indicates the operating system name and version used for signing in.
+     * Sets the operatingSystem property value. Indicates the OS name and version used in the sign-in.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operatingSystem", value);
     }
     /**
-     * Sets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+     * Sets the trustType property value. Indicates information on whether the device used in the sign-in is workplace-joined, Microsoft Entra-joined, domain-joined.
      * @param value Value to set for the trustType property.
      */
     public void setTrustType(@jakarta.annotation.Nullable final String value) {

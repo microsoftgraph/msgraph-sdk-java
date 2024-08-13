@@ -25,7 +25,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
         return new OnPremisesDirectorySynchronization();
     }
     /**
-     * Gets the configuration property value. Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
+     * Gets the configuration property value. Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant. Nullable.
      * @return a {@link OnPremisesDirectorySynchronizationConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
         writer.writeObjectValue("features", this.getFeatures());
     }
     /**
-     * Sets the configuration property value. Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
+     * Sets the configuration property value. Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant. Nullable.
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationConfiguration value) {
