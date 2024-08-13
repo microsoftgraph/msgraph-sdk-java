@@ -12,6 +12,7 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'signing'
+    id 'io.github.gradle-nexus.publish-plugin' version '2.0.0'
 }
 
 java {
@@ -52,9 +53,6 @@ def pomConfig = {
 
 tasks.withType(Javadoc).all { enabled = false }
 
-//Publishing tasks-
-//Maven Central Snapshot: publishSnapshotPublicationToMavenRepository
-//Maven Central Release: publishMavenCentralReleasePublicationToMaven2Repository
 
 tasks.jar {
     manifest {
@@ -67,38 +65,11 @@ publishing {
 
     publications {
 
-        maven(MavenPublication) {
-            groupId project.property('mavenGroupId')
-            artifactId project.property('mavenArtifactId')
-            version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
-            from components.java
-            pom.withXml {
-                def root = asNode()
-                root.appendNode('name', 'Microsoft Graph SDK for Java')
-                root.appendNode('url', 'https://github.com/microsoftgraph/msgraph-sdk-java')
-                root.children().last() + pomConfig
-                def pomFile = file("${project.buildDir}/libs/microsoft-graph.pom")
-                writeTo(pomFile)
-            }
-
-        }
-        Snapshot(MavenPublication) {
+		maven(MavenPublication) {
         	customizePom(pom)
         	groupId project.property('mavenGroupId')
         	artifactId project.property('mavenArtifactId')
-        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenCentralSnapshotArtifactSuffix}"
-        	from components.java
-        	pom.withXml {
-        		def pomFile = file("${project.buildDir}/generated-pom.xml")
-        		writeTo(pomFile)
-        	}
-		}
-		
-		mavenCentralRelease(MavenPublication) {
-        	customizePom(pom)
-        	groupId project.property('mavenGroupId')
-        	artifactId project.property('mavenArtifactId')
-        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
+        	version getVersionName()
         	from components.java
         	pom.withXml {
         		def pomFile = file("${project.buildDir}/generated-pom.xml")
@@ -106,43 +77,30 @@ publishing {
         	}
 		}
     }
-	repositories {
-        maven {
-            url = 'https://oss.sonatype.org/content/repositories/snapshots'
-            name = 'sonatypeSnapshot'
-            
-            credentials {
-    			if (project.rootProject.file('local.properties').exists()) {
-        			Properties properties = new Properties()
-        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        			username = properties.getProperty('sonatypeUsername')
-        			password = properties.getProperty('sonatypePassword')
-    			}
-            }
-        }
-        
-        maven {
-            url = 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
-            name = 'sonatype'
-            
-            credentials {
-    			if (project.rootProject.file('local.properties').exists()) {
-        			Properties properties = new Properties()
-        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        			username = properties.getProperty('sonatypeUsername')
-        			password = properties.getProperty('sonatypePassword')
-    			}
+}
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            if (project.rootProject.file('local.properties').exists()) {
+                Properties properties = new Properties()
+                properties.load(project.rootProject.file('local.properties').newDataInputStream())
+                username = properties.getProperty('sonatypeUsername')
+                password = properties.getProperty('sonatypePassword')
             }
         }
     }
 }
 
+group = project.property('mavenGroupId')
+version = "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenCentralSnapshotArtifactSuffix}"
+
 signing {
-    sign publishing.publications.mavenCentralRelease
+    sign publishing.publications.maven
 }
 tasks.withType(Sign)*.enabled = mavenCentralPublishingEnabled.toBoolean()
 
-def fixAscNames = { name -> 
+def fixAscNames = { name ->
     if(name.contains('pom')) {
         "${project.property('mavenArtifactId')}-${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}.pom.asc"
     } else {
@@ -161,7 +119,7 @@ def getVersionCode() {
 }
 
 def getVersionName() {
-    return "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
+    return "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenCentralSnapshotArtifactSuffix}"
 }
 
 artifacts {
@@ -223,7 +181,7 @@ gradle.taskGraph.whenReady { taskGraph ->
 }
 
 model {
-    tasks.generatePomFileForMavenCentralReleasePublication {
+    tasks.generatePomFileForMavenPublication {
         destination = file("${project.buildDir}/generated-pom.xml")
     }
 }
