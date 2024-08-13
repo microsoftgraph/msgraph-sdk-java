@@ -46,7 +46,7 @@ jobs:
             settings.gradle
             gradle.properties
             **/gradle/**
-            Scripts/**
+            scripts/**
 
   build-java-8:
     runs-on: ubuntu-latest
