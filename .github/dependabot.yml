@@ -12,6 +12,12 @@ updates:
     kiota-dependencies:
       patterns:
         - "*kiota*"
+    junit-dependencies:
+      patterns:
+        - "*junit*"
+    open-telemetry:
+      patterns:
+        - "*opentelemetry*"
 - package-ecosystem: gradle
   directory: "/android"
   schedule:
@@ -22,6 +28,12 @@ updates:
     kiota-dependencies:
       patterns:
         - "*kiota*"
+    junit-dependencies:
+      patterns:
+        - "*junit*"
+    open-telemetry:
+      patterns:
+        - "*opentelemetry*"
 - package-ecosystem: maven
   directory: "/"
   schedule:
@@ -31,6 +43,12 @@ updates:
     kiota-dependencies:
       patterns:
         - "*kiota*"
+    junit-dependencies:
+      patterns:
+        - "*junit*"
+    open-telemetry:
+      patterns:
+        - "*opentelemetry*"
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
