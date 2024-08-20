@@ -60,7 +60,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/conditions/applications/includeApplications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List the applications linked to an authenticationEventsFlow. These are the applications for which the authentication experience defined by the user flow is enabled.
+     * List the applications linked to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the applications for which the authentication experience that's defined by the user flow is enabled. To find the user flow that's linked to an application, see Example 4: List user flow associated with specific application ID.
      * @return a {@link AuthenticationConditionApplicationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationconditionsapplications-list-includeapplications?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the applications linked to an authenticationEventsFlow. These are the applications for which the authentication experience defined by the user flow is enabled.
+     * List the applications linked to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the applications for which the authentication experience that's defined by the user flow is enabled. To find the user flow that's linked to an application, see Example 4: List user flow associated with specific application ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationConditionApplicationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -84,7 +84,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationConditionApplicationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow.
+     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow. The app must have an associated service principal in the tenant.
      * @param body The request body
      * @return a {@link AuthenticationConditionApplication}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow.
+     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow. The app must have an associated service principal in the tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationConditionApplication}
@@ -111,7 +111,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationConditionApplication::createFromDiscriminatorValue);
     }
     /**
-     * List the applications linked to an authenticationEventsFlow. These are the applications for which the authentication experience defined by the user flow is enabled.
+     * List the applications linked to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the applications for which the authentication experience that's defined by the user flow is enabled. To find the user flow that's linked to an application, see Example 4: List user flow associated with specific application ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the applications linked to an authenticationEventsFlow. These are the applications for which the authentication experience defined by the user flow is enabled.
+     * List the applications linked to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the applications for which the authentication experience that's defined by the user flow is enabled. To find the user flow that's linked to an application, see Example 4: List user flow associated with specific application ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +131,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow.
+     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow. The app must have an associated service principal in the tenant.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow.
+     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow. The app must have an associated service principal in the tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +165,7 @@ public class IncludeApplicationsRequestBuilder extends BaseRequestBuilder {
         return new IncludeApplicationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the applications linked to an authenticationEventsFlow. These are the applications for which the authentication experience defined by the user flow is enabled.
+     * List the applications linked to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the applications for which the authentication experience that's defined by the user flow is enabled. To find the user flow that's linked to an application, see Example 4: List user flow associated with specific application ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

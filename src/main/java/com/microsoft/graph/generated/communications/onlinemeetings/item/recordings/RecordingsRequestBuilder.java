@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.onlinemeetings.item.recordings;
 
 import com.microsoft.graph.communications.onlinemeetings.item.recordings.count.CountRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.recordings.delta.DeltaRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.recordings.item.CallRecordingItemRequestBuilder;
 import com.microsoft.graph.models.CallRecording;
 import com.microsoft.graph.models.CallRecordingCollectionResponse;
@@ -30,6 +31,14 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the recordings property of the microsoft.graph.onlineMeeting entity.

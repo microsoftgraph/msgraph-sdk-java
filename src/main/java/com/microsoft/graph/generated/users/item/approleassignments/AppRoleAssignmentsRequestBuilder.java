@@ -84,7 +84,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppRoleAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @return a {@link AppRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppRoleAssignment}
@@ -131,7 +131,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

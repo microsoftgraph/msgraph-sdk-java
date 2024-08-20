@@ -3,6 +3,7 @@ package com.microsoft.graph.admin;
 import com.microsoft.graph.admin.edge.EdgeRequestBuilder;
 import com.microsoft.graph.admin.microsoft365apps.Microsoft365AppsRequestBuilder;
 import com.microsoft.graph.admin.people.PeopleRequestBuilder;
+import com.microsoft.graph.admin.reportsettings.ReportSettingsRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.ServiceAnnouncementRequestBuilder;
 import com.microsoft.graph.admin.sharepoint.SharepointRequestBuilder;
 import com.microsoft.graph.models.Admin;
@@ -48,6 +49,14 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PeopleRequestBuilder people() {
         return new PeopleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the reportSettings property of the microsoft.graph.admin entity.
+     * @return a {@link ReportSettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReportSettingsRequestBuilder reportSettings() {
+        return new ReportSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the serviceAnnouncement property of the microsoft.graph.admin entity.

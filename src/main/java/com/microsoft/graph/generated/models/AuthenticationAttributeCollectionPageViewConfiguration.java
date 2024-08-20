@@ -77,7 +77,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
         return deserializerMap;
     }
     /**
-     * Gets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
+     * Gets the inputs property value. The display configuration of attributes being collected on the attribute collection page. You must specify all attributes that you want to retain, otherwise they're removed from the user flow.
      * @return a {@link java.util.List<AuthenticationAttributeCollectionInputConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
+     * Sets the inputs property value. The display configuration of attributes being collected on the attribute collection page. You must specify all attributes that you want to retain, otherwise they're removed from the user flow.
      * @param value Value to set for the inputs property.
      */
     public void setInputs(@jakarta.annotation.Nullable final java.util.List<AuthenticationAttributeCollectionInputConfiguration> value) {

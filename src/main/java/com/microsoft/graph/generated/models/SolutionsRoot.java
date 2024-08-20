@@ -56,6 +56,14 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
+     * Gets the backupRestore property value. The backupRestore property
+     * @return a {@link BackupRestoreRoot}
+     */
+    @jakarta.annotation.Nullable
+    public BackupRestoreRoot getBackupRestore() {
+        return this.backingStore.get("backupRestore");
+    }
+    /**
      * Gets the bookingBusinesses property value. The bookingBusinesses property
      * @return a {@link java.util.List<BookingBusiness>}
      */
@@ -77,7 +85,8 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("backupRestore", (n) -> { this.setBackupRestore(n.getObjectValue(BackupRestoreRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingBusinesses", (n) -> { this.setBookingBusinesses(n.getCollectionOfObjectValues(BookingBusiness::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingCurrencies", (n) -> { this.setBookingCurrencies(n.getCollectionOfObjectValues(BookingCurrency::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -106,6 +115,7 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("backupRestore", this.getBackupRestore());
         writer.writeCollectionOfObjectValues("bookingBusinesses", this.getBookingBusinesses());
         writer.writeCollectionOfObjectValues("bookingCurrencies", this.getBookingCurrencies());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -126,6 +136,13 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the backupRestore property value. The backupRestore property
+     * @param value Value to set for the backupRestore property.
+     */
+    public void setBackupRestore(@jakarta.annotation.Nullable final BackupRestoreRoot value) {
+        this.backingStore.set("backupRestore", value);
     }
     /**
      * Sets the bookingBusinesses property value. The bookingBusinesses property

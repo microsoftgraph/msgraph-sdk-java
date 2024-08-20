@@ -64,7 +64,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return this.backingStore;
     }
     /**
-     * Gets the defaultValue property value. The default value of the attribute displayed to the end user.
+     * Gets the defaultValue property value. The default value of the attribute displayed to the end user. The capability to set the default value isn't available through the Microsoft Entra admin center.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return this.backingStore.get("defaultValue");
     }
     /**
-     * Gets the editable property value. Whether the attribute is editable by the end user.
+     * Gets the editable property value. Defines whether the attribute is editable by the end user.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. Whether the attribute is displayed to the end user.
+     * Gets the hidden property value. Defines whether the attribute is displayed to the end user. The capability to hide isn't available through the Microsoft Entra admin center.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return this.backingStore.get("inputType");
     }
     /**
-     * Gets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
+     * Gets the label property value. The label of the attribute field that's displayed to end user, unless overridden.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return this.backingStore.get("options");
     }
     /**
-     * Gets the required property value. Whether the field is required.
+     * Gets the required property value. Defines whether the field is required.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return this.backingStore.get("required");
     }
     /**
-     * Gets the validationRegEx property value. The regex for the value of the field.
+     * Gets the validationRegEx property value. The regex for the value of the field. For more information about the supported regexes, see validationRegEx values for inputType objects. To understand how to specify regexes, see the Regular expressions cheat sheet.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return this.backingStore.get("validationRegEx");
     }
     /**
-     * Gets the writeToDirectory property value. Whether the value collected is stored.
+     * Gets the writeToDirectory property value. Defines whether Microsoft Entra ID stores the value that it collects.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -205,21 +205,21 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         this.backingStore = value;
     }
     /**
-     * Sets the defaultValue property value. The default value of the attribute displayed to the end user.
+     * Sets the defaultValue property value. The default value of the attribute displayed to the end user. The capability to set the default value isn't available through the Microsoft Entra admin center.
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("defaultValue", value);
     }
     /**
-     * Sets the editable property value. Whether the attribute is editable by the end user.
+     * Sets the editable property value. Defines whether the attribute is editable by the end user.
      * @param value Value to set for the editable property.
      */
     public void setEditable(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("editable", value);
     }
     /**
-     * Sets the hidden property value. Whether the attribute is displayed to the end user.
+     * Sets the hidden property value. Defines whether the attribute is displayed to the end user. The capability to hide isn't available through the Microsoft Entra admin center.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
@@ -233,7 +233,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         this.backingStore.set("inputType", value);
     }
     /**
-     * Sets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
+     * Sets the label property value. The label of the attribute field that's displayed to end user, unless overridden.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
@@ -254,21 +254,21 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         this.backingStore.set("options", value);
     }
     /**
-     * Sets the required property value. Whether the field is required.
+     * Sets the required property value. Defines whether the field is required.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("required", value);
     }
     /**
-     * Sets the validationRegEx property value. The regex for the value of the field.
+     * Sets the validationRegEx property value. The regex for the value of the field. For more information about the supported regexes, see validationRegEx values for inputType objects. To understand how to specify regexes, see the Regular expressions cheat sheet.
      * @param value Value to set for the validationRegEx property.
      */
     public void setValidationRegEx(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("validationRegEx", value);
     }
     /**
-     * Sets the writeToDirectory property value. Whether the value collected is stored.
+     * Sets the writeToDirectory property value. Defines whether Microsoft Entra ID stores the value that it collects.
      * @param value Value to set for the writeToDirectory property.
      */
     public void setWriteToDirectory(@jakarta.annotation.Nullable final Boolean value) {

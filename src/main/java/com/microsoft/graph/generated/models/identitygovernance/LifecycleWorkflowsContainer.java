@@ -51,11 +51,20 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customTaskExtensions", (n) -> { this.setCustomTaskExtensions(n.getCollectionOfObjectValues(CustomTaskExtension::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getObjectValue(DeletedItemContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(Insights::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(LifecycleManagementSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("taskDefinitions", (n) -> { this.setTaskDefinitions(n.getCollectionOfObjectValues(TaskDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("workflows", (n) -> { this.setWorkflows(n.getCollectionOfObjectValues(Workflow::createFromDiscriminatorValue)); });
         deserializerMap.put("workflowTemplates", (n) -> { this.setWorkflowTemplates(n.getCollectionOfObjectValues(WorkflowTemplate::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the insights property value. The insight container holding workflow insight summaries for a tenant.
+     * @return a {@link Insights}
+     */
+    @jakarta.annotation.Nullable
+    public Insights getInsights() {
+        return this.backingStore.get("insights");
     }
     /**
      * Gets the settings property value. The settings property
@@ -98,6 +107,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("customTaskExtensions", this.getCustomTaskExtensions());
         writer.writeObjectValue("deletedItems", this.getDeletedItems());
+        writer.writeObjectValue("insights", this.getInsights());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("taskDefinitions", this.getTaskDefinitions());
         writer.writeCollectionOfObjectValues("workflows", this.getWorkflows());
@@ -116,6 +126,13 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     public void setDeletedItems(@jakarta.annotation.Nullable final DeletedItemContainer value) {
         this.backingStore.set("deletedItems", value);
+    }
+    /**
+     * Sets the insights property value. The insight container holding workflow insight summaries for a tenant.
+     * @param value Value to set for the insights property.
+     */
+    public void setInsights(@jakarta.annotation.Nullable final Insights value) {
+        this.backingStore.set("insights", value);
     }
     /**
      * Sets the settings property value. The settings property
