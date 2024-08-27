@@ -55,7 +55,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get itemInsights from users
+     * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @return a {@link UserInsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get itemInsights from users
+     * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserInsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,21 +77,23 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserInsightsSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property itemInsights in users
+     * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @return a {@link UserInsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserInsightsSettings patch(@jakarta.annotation.Nonnull final UserInsightsSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property itemInsights in users
+     * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserInsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserInsightsSettings patch(@jakarta.annotation.Nonnull final UserInsightsSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get itemInsights from users
+     * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get itemInsights from users
+     * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +144,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property itemInsights in users
+     * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +153,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property itemInsights in users
+     * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +184,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get itemInsights from users
+     * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

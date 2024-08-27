@@ -69,11 +69,12 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoft365Apps", (n) -> { this.setMicrosoft365Apps(n.getObjectValue(AdminMicrosoft365Apps::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("people", (n) -> { this.setPeople(n.getObjectValue(PeopleAdminSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("reportSettings", (n) -> { this.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceAnnouncement", (n) -> { this.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepoint", (n) -> { this.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -103,6 +104,14 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("people");
     }
     /**
+     * Gets the reportSettings property value. A container for administrative resources to manage reports.
+     * @return a {@link AdminReportSettings}
+     */
+    @jakarta.annotation.Nullable
+    public AdminReportSettings getReportSettings() {
+        return this.backingStore.get("reportSettings");
+    }
+    /**
      * Gets the serviceAnnouncement property value. A container for service communications resources. Read-only.
      * @return a {@link ServiceAnnouncement}
      */
@@ -128,6 +137,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("microsoft365Apps", this.getMicrosoft365Apps());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("people", this.getPeople());
+        writer.writeObjectValue("reportSettings", this.getReportSettings());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
         writer.writeObjectValue("sharepoint", this.getSharepoint());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -174,6 +184,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setPeople(@jakarta.annotation.Nullable final PeopleAdminSettings value) {
         this.backingStore.set("people", value);
+    }
+    /**
+     * Sets the reportSettings property value. A container for administrative resources to manage reports.
+     * @param value Value to set for the reportSettings property.
+     */
+    public void setReportSettings(@jakarta.annotation.Nullable final AdminReportSettings value) {
+        this.backingStore.set("reportSettings", value);
     }
     /**
      * Sets the serviceAnnouncement property value. A container for service communications resources. Read-only.

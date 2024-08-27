@@ -37,7 +37,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/taskDefinitions/{taskDefinition%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read the details of a built-in workflow task.
+     * Read the details of a built-in workflow task in Lifecycle Workflows.
      * @return a {@link TaskDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-taskdefinition-get?view=graph-rest-1.0">Find more info here</a>
@@ -47,7 +47,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the details of a built-in workflow task.
+     * Read the details of a built-in workflow task in Lifecycle Workflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TaskDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,7 +61,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TaskDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Read the details of a built-in workflow task.
+     * Read the details of a built-in workflow task in Lifecycle Workflows.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the details of a built-in workflow task.
+     * Read the details of a built-in workflow task in Lifecycle Workflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +91,7 @@ public class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return new TaskDefinitionItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the details of a built-in workflow task.
+     * Read the details of a built-in workflow task in Lifecycle Workflows.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

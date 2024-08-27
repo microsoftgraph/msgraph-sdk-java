@@ -36,7 +36,7 @@ public class EducationExternalResource extends EducationResource implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the webUrl property value. Location of the resource. Required
+     * Gets the webUrl property value. Location of the resource. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EducationExternalResource extends EducationResource implements Pars
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the webUrl property value. Location of the resource. Required
+     * Sets the webUrl property value. Location of the resource. Required.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

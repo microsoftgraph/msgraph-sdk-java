@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.identitygovernance.GroupBasedSubjectSet;
 import com.microsoft.graph.models.identitygovernance.RuleBasedSubjectSet;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -41,6 +42,7 @@ public class SubjectSet implements AdditionalDataHolder, BackedModel, Parsable {
                 case "#microsoft.graph.connectedOrganizationMembers": return new ConnectedOrganizationMembers();
                 case "#microsoft.graph.externalSponsors": return new ExternalSponsors();
                 case "#microsoft.graph.groupMembers": return new GroupMembers();
+                case "#microsoft.graph.identityGovernance.groupBasedSubjectSet": return new GroupBasedSubjectSet();
                 case "#microsoft.graph.identityGovernance.ruleBasedSubjectSet": return new RuleBasedSubjectSet();
                 case "#microsoft.graph.internalSponsors": return new InternalSponsors();
                 case "#microsoft.graph.requestorManager": return new RequestorManager();
