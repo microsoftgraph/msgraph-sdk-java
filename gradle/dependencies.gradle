@@ -1,9 +1,5 @@
 dependencies {
-    // Use JUnit test framework
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
-    testImplementation 'org.mockito:mockito-inline:5.2.0'
-
+    
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
     implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
 
