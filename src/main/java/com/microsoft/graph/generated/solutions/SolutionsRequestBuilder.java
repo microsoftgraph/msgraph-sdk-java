@@ -2,6 +2,7 @@ package com.microsoft.graph.solutions;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SolutionsRoot;
+import com.microsoft.graph.solutions.backuprestore.BackupRestoreRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.BookingBusinessesRequestBuilder;
 import com.microsoft.graph.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.VirtualEventsRequestBuilder;
@@ -23,6 +24,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SolutionsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the backupRestore property of the microsoft.graph.solutionsRoot entity.
+     * @return a {@link BackupRestoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BackupRestoreRequestBuilder backupRestore() {
+        return new BackupRestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link BookingBusinessesRequestBuilder}

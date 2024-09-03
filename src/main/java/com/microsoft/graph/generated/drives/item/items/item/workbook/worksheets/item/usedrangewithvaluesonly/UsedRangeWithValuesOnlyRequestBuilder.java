@@ -1,5 +1,34 @@
 package com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly;
 
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.boundingrectwithanotherrange.BoundingRectWithAnotherRangeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.cellwithrowwithcolumn.CellWithRowWithColumnRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.clear.ClearRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.columnsafter.ColumnsAfterRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.columnsafterwithcount.ColumnsAfterWithCountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.columnsbefore.ColumnsBeforeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.columnsbeforewithcount.ColumnsBeforeWithCountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.columnwithcolumn.ColumnWithColumnRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.delete.DeleteRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.entirecolumn.EntireColumnRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.entirerow.EntireRowRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.format.FormatRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.insert.InsertRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.intersectionwithanotherrange.IntersectionWithAnotherRangeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.lastcell.LastCellRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.lastcolumn.LastColumnRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.lastrow.LastRowRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.merge.MergeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.offsetrangewithrowoffsetwithcolumnoffset.OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.resizedrangewithdeltarowswithdeltacolumns.ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.rowsabove.RowsAboveRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.rowsabovewithcount.RowsAboveWithCountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.rowsbelow.RowsBelowRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.rowsbelowwithcount.RowsBelowWithCountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.rowwithrow.RowWithRowRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.sort.SortRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.unmerge.UnmergeRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.visibleview.VisibleViewRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.worksheet.WorksheetRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookRange;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -19,6 +48,202 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UsedRangeWithValuesOnlyRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the clear method.
+     * @return a {@link ClearRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ClearRequestBuilder clear() {
+        return new ClearRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the columnsAfter method.
+     * @return a {@link ColumnsAfterRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ColumnsAfterRequestBuilder columnsAfter() {
+        return new ColumnsAfterRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the columnsBefore method.
+     * @return a {@link ColumnsBeforeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ColumnsBeforeRequestBuilder columnsBefore() {
+        return new ColumnsBeforeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delete method.
+     * @return a {@link DeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeleteRequestBuilder deletePath() {
+        return new DeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the entireColumn method.
+     * @return a {@link EntireColumnRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EntireColumnRequestBuilder entireColumn() {
+        return new EntireColumnRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the entireRow method.
+     * @return a {@link EntireRowRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EntireRowRequestBuilder entireRow() {
+        return new EntireRowRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the format property of the microsoft.graph.workbookRange entity.
+     * @return a {@link FormatRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public FormatRequestBuilder format() {
+        return new FormatRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the insert method.
+     * @return a {@link InsertRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public InsertRequestBuilder insert() {
+        return new InsertRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the lastCell method.
+     * @return a {@link LastCellRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LastCellRequestBuilder lastCell() {
+        return new LastCellRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the lastColumn method.
+     * @return a {@link LastColumnRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LastColumnRequestBuilder lastColumn() {
+        return new LastColumnRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the lastRow method.
+     * @return a {@link LastRowRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LastRowRequestBuilder lastRow() {
+        return new LastRowRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the merge method.
+     * @return a {@link MergeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MergeRequestBuilder merge() {
+        return new MergeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the rowsAbove method.
+     * @return a {@link RowsAboveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RowsAboveRequestBuilder rowsAbove() {
+        return new RowsAboveRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the rowsBelow method.
+     * @return a {@link RowsBelowRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RowsBelowRequestBuilder rowsBelow() {
+        return new RowsBelowRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sort property of the microsoft.graph.workbookRange entity.
+     * @return a {@link SortRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SortRequestBuilder sort() {
+        return new SortRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unmerge method.
+     * @return a {@link UnmergeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnmergeRequestBuilder unmerge() {
+        return new UnmergeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the visibleView method.
+     * @return a {@link VisibleViewRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public VisibleViewRequestBuilder visibleView() {
+        return new VisibleViewRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the worksheet property of the microsoft.graph.workbookRange entity.
+     * @return a {@link WorksheetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WorksheetRequestBuilder worksheet() {
+        return new WorksheetRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the boundingRect method.
+     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @return a {@link BoundingRectWithAnotherRangeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BoundingRectWithAnotherRangeRequestBuilder boundingRectWithAnotherRange(@jakarta.annotation.Nonnull final String anotherRange) {
+        Objects.requireNonNull(anotherRange);
+        return new BoundingRectWithAnotherRangeRequestBuilder(pathParameters, requestAdapter, anotherRange);
+    }
+    /**
+     * Provides operations to call the cell method.
+     * @param column Usage: column={column}
+     * @param row Usage: row={row}
+     * @return a {@link CellWithRowWithColumnRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CellWithRowWithColumnRequestBuilder cellWithRowWithColumn(@jakarta.annotation.Nonnull final Integer column, @jakarta.annotation.Nonnull final Integer row) {
+        Objects.requireNonNull(column);
+        Objects.requireNonNull(row);
+        return new CellWithRowWithColumnRequestBuilder(pathParameters, requestAdapter, column, row);
+    }
+    /**
+     * Provides operations to call the columnsAfter method.
+     * @param count Usage: count={count}
+     * @return a {@link ColumnsAfterWithCountRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ColumnsAfterWithCountRequestBuilder columnsAfterWithCount(@jakarta.annotation.Nonnull final Integer count) {
+        Objects.requireNonNull(count);
+        return new ColumnsAfterWithCountRequestBuilder(pathParameters, requestAdapter, count);
+    }
+    /**
+     * Provides operations to call the columnsBefore method.
+     * @param count Usage: count={count}
+     * @return a {@link ColumnsBeforeWithCountRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ColumnsBeforeWithCountRequestBuilder columnsBeforeWithCount(@jakarta.annotation.Nonnull final Integer count) {
+        Objects.requireNonNull(count);
+        return new ColumnsBeforeWithCountRequestBuilder(pathParameters, requestAdapter, count);
+    }
+    /**
+     * Provides operations to call the column method.
+     * @param column Usage: column={column}
+     * @return a {@link ColumnWithColumnRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ColumnWithColumnRequestBuilder columnWithColumn(@jakarta.annotation.Nonnull final Integer column) {
+        Objects.requireNonNull(column);
+        return new ColumnWithColumnRequestBuilder(pathParameters, requestAdapter, column);
+    }
     /**
      * Instantiates a new {@link UsedRangeWithValuesOnlyRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -58,6 +283,70 @@ public class UsedRangeWithValuesOnlyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookRange::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the intersection method.
+     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @return a {@link IntersectionWithAnotherRangeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IntersectionWithAnotherRangeRequestBuilder intersectionWithAnotherRange(@jakarta.annotation.Nonnull final String anotherRange) {
+        Objects.requireNonNull(anotherRange);
+        return new IntersectionWithAnotherRangeRequestBuilder(pathParameters, requestAdapter, anotherRange);
+    }
+    /**
+     * Provides operations to call the offsetRange method.
+     * @param columnOffset Usage: columnOffset={columnOffset}
+     * @param rowOffset Usage: rowOffset={rowOffset}
+     * @return a {@link OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilder offsetRangeWithRowOffsetWithColumnOffset(@jakarta.annotation.Nonnull final Integer columnOffset, @jakarta.annotation.Nonnull final Integer rowOffset) {
+        Objects.requireNonNull(columnOffset);
+        Objects.requireNonNull(rowOffset);
+        return new OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilder(pathParameters, requestAdapter, columnOffset, rowOffset);
+    }
+    /**
+     * Provides operations to call the resizedRange method.
+     * @param deltaColumns Usage: deltaColumns={deltaColumns}
+     * @param deltaRows Usage: deltaRows={deltaRows}
+     * @return a {@link ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder resizedRangeWithDeltaRowsWithDeltaColumns(@jakarta.annotation.Nonnull final Integer deltaColumns, @jakarta.annotation.Nonnull final Integer deltaRows) {
+        Objects.requireNonNull(deltaColumns);
+        Objects.requireNonNull(deltaRows);
+        return new ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder(pathParameters, requestAdapter, deltaColumns, deltaRows);
+    }
+    /**
+     * Provides operations to call the rowsAbove method.
+     * @param count Usage: count={count}
+     * @return a {@link RowsAboveWithCountRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RowsAboveWithCountRequestBuilder rowsAboveWithCount(@jakarta.annotation.Nonnull final Integer count) {
+        Objects.requireNonNull(count);
+        return new RowsAboveWithCountRequestBuilder(pathParameters, requestAdapter, count);
+    }
+    /**
+     * Provides operations to call the rowsBelow method.
+     * @param count Usage: count={count}
+     * @return a {@link RowsBelowWithCountRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RowsBelowWithCountRequestBuilder rowsBelowWithCount(@jakarta.annotation.Nonnull final Integer count) {
+        Objects.requireNonNull(count);
+        return new RowsBelowWithCountRequestBuilder(pathParameters, requestAdapter, count);
+    }
+    /**
+     * Provides operations to call the row method.
+     * @param row Usage: row={row}
+     * @return a {@link RowWithRowRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RowWithRowRequestBuilder rowWithRow(@jakarta.annotation.Nonnull final Integer row) {
+        Objects.requireNonNull(row);
+        return new RowWithRowRequestBuilder(pathParameters, requestAdapter, row);
     }
     /**
      * Invoke function usedRange

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.CallTranscript;
 import com.microsoft.graph.models.CallTranscriptCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.onlinemeetings.item.transcripts.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.item.transcripts.delta.DeltaRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.item.transcripts.item.CallTranscriptItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -30,6 +31,14 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.

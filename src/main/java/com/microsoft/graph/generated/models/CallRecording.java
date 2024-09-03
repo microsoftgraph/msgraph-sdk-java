@@ -26,12 +26,28 @@ public class CallRecording extends Entity implements Parsable {
         return new CallRecording();
     }
     /**
+     * Gets the callId property value. The unique identifier for the call that is related to this recording. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCallId() {
+        return this.backingStore.get("callId");
+    }
+    /**
      * Gets the content property value. The content of the recording. Read-only.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
         return this.backingStore.get("content");
+    }
+    /**
+     * Gets the contentCorrelationId property value. The unique identifier that links the transcript with its corresponding recording. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getContentCorrelationId() {
+        return this.backingStore.get("contentCorrelationId");
     }
     /**
      * Gets the createdDateTime property value. Date and time at which the recording was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -42,14 +58,25 @@ public class CallRecording extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
+     * Gets the endDateTime property value. Date and time at which the recording ends. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getEndDateTime() {
+        return this.backingStore.get("endDateTime");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("contentCorrelationId", (n) -> { this.setContentCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("meetingId", (n) -> { this.setMeetingId(n.getStringValue()); });
         deserializerMap.put("meetingOrganizer", (n) -> { this.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("recordingContentUrl", (n) -> { this.setRecordingContentUrl(n.getStringValue()); });
@@ -86,11 +113,21 @@ public class CallRecording extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("callId", this.getCallId());
         writer.writeByteArrayValue("content", this.getContent());
+        writer.writeStringValue("contentCorrelationId", this.getContentCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("meetingId", this.getMeetingId());
         writer.writeObjectValue("meetingOrganizer", this.getMeetingOrganizer());
         writer.writeStringValue("recordingContentUrl", this.getRecordingContentUrl());
+    }
+    /**
+     * Sets the callId property value. The unique identifier for the call that is related to this recording. Read-only.
+     * @param value Value to set for the callId property.
+     */
+    public void setCallId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("callId", value);
     }
     /**
      * Sets the content property value. The content of the recording. Read-only.
@@ -100,11 +137,25 @@ public class CallRecording extends Entity implements Parsable {
         this.backingStore.set("content", value);
     }
     /**
+     * Sets the contentCorrelationId property value. The unique identifier that links the transcript with its corresponding recording. Read-only.
+     * @param value Value to set for the contentCorrelationId property.
+     */
+    public void setContentCorrelationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("contentCorrelationId", value);
+    }
+    /**
      * Sets the createdDateTime property value. Date and time at which the recording was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the endDateTime property value. Date and time at which the recording ends. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @param value Value to set for the endDateTime property.
+     */
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("endDateTime", value);
     }
     /**
      * Sets the meetingId property value. The unique identifier of the onlineMeeting related to this recording. Read-only.

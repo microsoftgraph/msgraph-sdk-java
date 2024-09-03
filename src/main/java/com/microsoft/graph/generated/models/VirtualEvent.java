@@ -77,6 +77,7 @@ public class VirtualEvent extends Entity implements Parsable {
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("presenters", (n) -> { this.setPresenters(n.getCollectionOfObjectValues(VirtualEventPresenter::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(VirtualEventSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(VirtualEventStatus::forValue)); });
         return deserializerMap;
@@ -96,6 +97,14 @@ public class VirtualEvent extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventSession> getSessions() {
         return this.backingStore.get("sessions");
+    }
+    /**
+     * Gets the settings property value. The virtual event settings.
+     * @return a {@link VirtualEventSettings}
+     */
+    @jakarta.annotation.Nullable
+    public VirtualEventSettings getSettings() {
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
@@ -126,6 +135,7 @@ public class VirtualEvent extends Entity implements Parsable {
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
         writer.writeCollectionOfObjectValues("presenters", this.getPresenters());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
+        writer.writeObjectValue("settings", this.getSettings());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
     }
@@ -170,6 +180,13 @@ public class VirtualEvent extends Entity implements Parsable {
      */
     public void setSessions(@jakarta.annotation.Nullable final java.util.List<VirtualEventSession> value) {
         this.backingStore.set("sessions", value);
+    }
+    /**
+     * Sets the settings property value. The virtual event settings.
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final VirtualEventSettings value) {
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the startDateTime property value. Start time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.

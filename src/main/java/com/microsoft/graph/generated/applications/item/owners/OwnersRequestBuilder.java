@@ -104,7 +104,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/owners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of owners for an application that are directoryObject objects.
+     * Retrieve a list of owners for an application that are directoryObject types.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-list-owners?view=graph-rest-1.0">Find more info here</a>
@@ -114,7 +114,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of owners for an application that are directoryObject objects.
+     * Retrieve a list of owners for an application that are directoryObject types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -128,7 +128,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of owners for an application that are directoryObject objects.
+     * Retrieve a list of owners for an application that are directoryObject types.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of owners for an application that are directoryObject objects.
+     * Retrieve a list of owners for an application that are directoryObject types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -158,7 +158,7 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
         return new OwnersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of owners for an application that are directoryObject objects.
+     * Retrieve a list of owners for an application that are directoryObject types.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
