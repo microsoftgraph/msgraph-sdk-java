@@ -28,7 +28,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
         return new AppRoleAssignment();
     }
     /**
-     * Gets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
+     * Gets the appRoleId property value. The identifier (id) for the app role that's assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application hasn't declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
         writer.writeUUIDValue("resourceId", this.getResourceId());
     }
     /**
-     * Sets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
+     * Sets the appRoleId property value. The identifier (id) for the app role that's assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application hasn't declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
      * @param value Value to set for the appRoleId property.
      */
     public void setAppRoleId(@jakarta.annotation.Nullable final UUID value) {

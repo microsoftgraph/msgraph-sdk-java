@@ -73,7 +73,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
+     * Gets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled, or aborted. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -213,7 +213,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
+     * Sets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled, or aborted. Read-only.
      * @param value Value to set for the completionDateTime property.
      */
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

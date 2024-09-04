@@ -1,5 +1,7 @@
 package com.microsoft.graph.employeeexperience;
 
+import com.microsoft.graph.employeeexperience.communities.CommunitiesRequestBuilder;
+import com.microsoft.graph.employeeexperience.engagementasyncoperations.EngagementAsyncOperationsRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
@@ -23,6 +25,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the communities property of the microsoft.graph.employeeExperience entity.
+     * @return a {@link CommunitiesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CommunitiesRequestBuilder communities() {
+        return new CommunitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the engagementAsyncOperations property of the microsoft.graph.employeeExperience entity.
+     * @return a {@link EngagementAsyncOperationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EngagementAsyncOperationsRequestBuilder engagementAsyncOperations() {
+        return new EngagementAsyncOperationsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperience entity.
      * @return a {@link LearningCourseActivitiesRequestBuilder}
