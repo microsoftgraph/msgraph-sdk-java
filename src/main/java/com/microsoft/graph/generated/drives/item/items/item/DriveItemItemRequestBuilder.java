@@ -18,7 +18,6 @@ import com.microsoft.graph.drives.item.items.item.getactivitiesbyinterval.GetAct
 import com.microsoft.graph.drives.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.invite.InviteRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.listitem.ListItemRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.preview.PreviewRequestBuilder;
@@ -181,11 +180,11 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the listItem property of the microsoft.graph.driveItem entity.
-     * @return a {@link ListItemRequestBuilder}
+     * @return a {@link ListItem_EscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public ListItemRequestBuilder listItem() {
-        return new ListItemRequestBuilder(pathParameters, requestAdapter);
+    public ListItem_EscapedRequestBuilder listItem() {
+        return new ListItem_EscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the permanentDelete method.

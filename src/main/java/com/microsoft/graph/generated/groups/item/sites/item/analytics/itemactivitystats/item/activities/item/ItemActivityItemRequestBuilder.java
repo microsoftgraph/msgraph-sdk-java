@@ -1,6 +1,5 @@
 package com.microsoft.graph.groups.item.sites.item.analytics.itemactivitystats.item.activities.item;
 
-import com.microsoft.graph.groups.item.sites.item.analytics.itemactivitystats.item.activities.item.driveitem.DriveItemRequestBuilder;
 import com.microsoft.graph.models.ItemActivity;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +22,11 @@ import java.util.Objects;
 public class ItemActivityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the driveItem property of the microsoft.graph.itemActivity entity.
-     * @return a {@link DriveItemRequestBuilder}
+     * @return a {@link DriveItem_EscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DriveItemRequestBuilder driveItem() {
-        return new DriveItemRequestBuilder(pathParameters, requestAdapter);
+    public DriveItem_EscapedRequestBuilder driveItem() {
+        return new DriveItem_EscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ItemActivityItemRequestBuilder} and sets the default values.

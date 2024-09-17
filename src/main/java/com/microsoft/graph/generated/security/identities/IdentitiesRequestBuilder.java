@@ -64,7 +64,7 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get identities from security
+     * A container for security identities APIs.
      * @return a {@link IdentityContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get identities from security
+     * A container for security identities APIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get identities from security
+     * A container for security identities APIs.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get identities from security
+     * A container for security identities APIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get identities from security
+     * A container for security identities APIs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -4,7 +4,6 @@ import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.analytic
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.createdbyuser.CreatedByUserRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.createlink.CreateLinkRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.documentsetversions.DocumentSetVersionsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.driveitem.DriveItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.fields.FieldsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
@@ -64,11 +63,11 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the driveItem property of the microsoft.graph.listItem entity.
-     * @return a {@link DriveItemRequestBuilder}
+     * @return a {@link DriveItem_EscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DriveItemRequestBuilder driveItem() {
-        return new DriveItemRequestBuilder(pathParameters, requestAdapter);
+    public DriveItem_EscapedRequestBuilder driveItem() {
+        return new DriveItem_EscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the fields property of the microsoft.graph.listItem entity.

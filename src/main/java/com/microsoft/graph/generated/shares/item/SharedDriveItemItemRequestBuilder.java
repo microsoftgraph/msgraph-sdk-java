@@ -3,11 +3,9 @@ package com.microsoft.graph.shares.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharedDriveItem;
 import com.microsoft.graph.shares.item.createdbyuser.CreatedByUserRequestBuilder;
-import com.microsoft.graph.shares.item.driveitem.DriveItemRequestBuilder;
 import com.microsoft.graph.shares.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.shares.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.shares.item.list.ListRequestBuilder;
-import com.microsoft.graph.shares.item.listitem.ListItemRequestBuilder;
 import com.microsoft.graph.shares.item.permission.PermissionRequestBuilder;
 import com.microsoft.graph.shares.item.root.RootRequestBuilder;
 import com.microsoft.graph.shares.item.site.SiteRequestBuilder;
@@ -39,11 +37,11 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the driveItem property of the microsoft.graph.sharedDriveItem entity.
-     * @return a {@link DriveItemRequestBuilder}
+     * @return a {@link DriveItem_EscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DriveItemRequestBuilder driveItem() {
-        return new DriveItemRequestBuilder(pathParameters, requestAdapter);
+    public DriveItem_EscapedRequestBuilder driveItem() {
+        return new DriveItem_EscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
@@ -71,11 +69,11 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the listItem property of the microsoft.graph.sharedDriveItem entity.
-     * @return a {@link ListItemRequestBuilder}
+     * @return a {@link ListItem_EscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public ListItemRequestBuilder listItem() {
-        return new ListItemRequestBuilder(pathParameters, requestAdapter);
+    public ListItem_EscapedRequestBuilder listItem() {
+        return new ListItem_EscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permission property of the microsoft.graph.sharedDriveItem entity.
