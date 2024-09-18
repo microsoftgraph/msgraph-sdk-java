@@ -101,7 +101,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("permissions");
     }
     /**
-     * Gets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive,  active. Read-only.
+     * Gets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive, active. Read-only.
      * @return a {@link FileStorageContainerStatus}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("permissions", value);
     }
     /**
-     * Sets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive,  active. Read-only.
+     * Sets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive, active. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final FileStorageContainerStatus value) {

@@ -211,6 +211,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("hideFromOutlookClients", (n) -> { this.setHideFromOutlookClients(n.getBooleanValue()); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isAssignableToRole", (n) -> { this.setIsAssignableToRole(n.getBooleanValue()); });
+        deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("isSubscribedByMail", (n) -> { this.setIsSubscribedByMail(n.getBooleanValue()); });
         deserializerMap.put("licenseProcessingState", (n) -> { this.setLicenseProcessingState(n.getObjectValue(LicenseProcessingState::createFromDiscriminatorValue)); });
         deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
@@ -309,6 +310,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsAssignableToRole() {
         return this.backingStore.get("isAssignableToRole");
+    }
+    /**
+     * Gets the isManagementRestricted property value. The isManagementRestricted property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsManagementRestricted() {
+        return this.backingStore.get("isManagementRestricted");
     }
     /**
      * Gets the isSubscribedByMail property value. Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
@@ -455,7 +464,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesSyncEnabled");
     }
     /**
-     * Gets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
+     * Gets the owners property value. The owners of the group who can be users or service principals. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group the calling user (admin or non-admin) is automatically assigned as the group owner. A non-admin user can't explicitly add themselves to this collection when they're creating the group. For more information, see the related known issue. For security groups, the admin user isn't automatically added to this collection. For more information, see the related known issue. Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -671,6 +680,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("hideFromOutlookClients", this.getHideFromOutlookClients());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isAssignableToRole", this.getIsAssignableToRole());
+        writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isSubscribedByMail", this.getIsSubscribedByMail());
         writer.writeObjectValue("licenseProcessingState", this.getLicenseProcessingState());
         writer.writeStringValue("mail", this.getMail());
@@ -896,6 +906,13 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("isAssignableToRole", value);
     }
     /**
+     * Sets the isManagementRestricted property value. The isManagementRestricted property
+     * @param value Value to set for the isManagementRestricted property.
+     */
+    public void setIsManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isManagementRestricted", value);
+    }
+    /**
      * Sets the isSubscribedByMail property value. Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the isSubscribedByMail property.
      */
@@ -1022,7 +1039,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesSyncEnabled", value);
     }
     /**
-     * Sets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
+     * Sets the owners property value. The owners of the group who can be users or service principals. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group the calling user (admin or non-admin) is automatically assigned as the group owner. A non-admin user can't explicitly add themselves to this collection when they're creating the group. For more information, see the related known issue. For security groups, the admin user isn't automatically added to this collection. For more information, see the related known issue. Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

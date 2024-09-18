@@ -4,6 +4,7 @@ import com.microsoft.graph.domains.item.domainnamereferences.DomainNameReference
 import com.microsoft.graph.domains.item.federationconfiguration.FederationConfigurationRequestBuilder;
 import com.microsoft.graph.domains.item.forcedelete.ForceDeleteRequestBuilder;
 import com.microsoft.graph.domains.item.promote.PromoteRequestBuilder;
+import com.microsoft.graph.domains.item.rootdomain.RootDomainRequestBuilder;
 import com.microsoft.graph.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
 import com.microsoft.graph.domains.item.verificationdnsrecords.VerificationDnsRecordsRequestBuilder;
 import com.microsoft.graph.domains.item.verify.VerifyRequestBuilder;
@@ -58,6 +59,14 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PromoteRequestBuilder promote() {
         return new PromoteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the rootDomain property of the microsoft.graph.domain entity.
+     * @return a {@link RootDomainRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RootDomainRequestBuilder rootDomain() {
+        return new RootDomainRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
