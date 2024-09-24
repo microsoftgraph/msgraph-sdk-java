@@ -152,6 +152,7 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("isCompliant", (n) -> { this.setIsCompliant(n.getBooleanValue()); });
         deserializerMap.put("isManaged", (n) -> { this.setIsManaged(n.getBooleanValue()); });
+        deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("isRooted", (n) -> { this.setIsRooted(n.getBooleanValue()); });
         deserializerMap.put("managementType", (n) -> { this.setManagementType(n.getStringValue()); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
@@ -188,6 +189,14 @@ public class Device extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsManaged() {
         return this.backingStore.get("isManaged");
+    }
+    /**
+     * Gets the isManagementRestricted property value. The isManagementRestricted property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsManagementRestricted() {
+        return this.backingStore.get("isManagementRestricted");
     }
     /**
      * Gets the isRooted property value. true if the device is rooted or jail-broken. This property can only be updated by Intune.
@@ -363,6 +372,7 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeBooleanValue("isCompliant", this.getIsCompliant());
         writer.writeBooleanValue("isManaged", this.getIsManaged());
+        writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isRooted", this.getIsRooted());
         writer.writeStringValue("managementType", this.getManagementType());
         writer.writeStringValue("manufacturer", this.getManufacturer());
@@ -487,6 +497,13 @@ public class Device extends DirectoryObject implements Parsable {
      */
     public void setIsManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isManaged", value);
+    }
+    /**
+     * Sets the isManagementRestricted property value. The isManagementRestricted property
+     * @param value Value to set for the isManagementRestricted property.
+     */
+    public void setIsManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isManagementRestricted", value);
     }
     /**
      * Sets the isRooted property value. true if the device is rooted or jail-broken. This property can only be updated by Intune.

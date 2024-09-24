@@ -76,6 +76,7 @@ public class Domain extends Entity implements Parsable {
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         deserializerMap.put("passwordNotificationWindowInDays", (n) -> { this.setPasswordNotificationWindowInDays(n.getIntegerValue()); });
         deserializerMap.put("passwordValidityPeriodInDays", (n) -> { this.setPasswordValidityPeriodInDays(n.getIntegerValue()); });
+        deserializerMap.put("rootDomain", (n) -> { this.setRootDomain(n.getObjectValue(Domain::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceConfigurationRecords", (n) -> { this.setServiceConfigurationRecords(n.getCollectionOfObjectValues(DomainDnsRecord::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getObjectValue(DomainState::createFromDiscriminatorValue)); });
         deserializerMap.put("supportedServices", (n) -> { this.setSupportedServices(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -155,6 +156,14 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("passwordValidityPeriodInDays");
     }
     /**
+     * Gets the rootDomain property value. The rootDomain property
+     * @return a {@link Domain}
+     */
+    @jakarta.annotation.Nullable
+    public Domain getRootDomain() {
+        return this.backingStore.get("rootDomain");
+    }
+    /**
      * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
      * @return a {@link java.util.List<DomainDnsRecord>}
      */
@@ -206,6 +215,7 @@ public class Domain extends Entity implements Parsable {
         writer.writeStringValue("model", this.getModel());
         writer.writeIntegerValue("passwordNotificationWindowInDays", this.getPasswordNotificationWindowInDays());
         writer.writeIntegerValue("passwordValidityPeriodInDays", this.getPasswordValidityPeriodInDays());
+        writer.writeObjectValue("rootDomain", this.getRootDomain());
         writer.writeCollectionOfObjectValues("serviceConfigurationRecords", this.getServiceConfigurationRecords());
         writer.writeObjectValue("state", this.getState());
         writer.writeCollectionOfPrimitiveValues("supportedServices", this.getSupportedServices());
@@ -301,6 +311,13 @@ public class Domain extends Entity implements Parsable {
      */
     public void setPasswordValidityPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("passwordValidityPeriodInDays", value);
+    }
+    /**
+     * Sets the rootDomain property value. The rootDomain property
+     * @param value Value to set for the rootDomain property.
+     */
+    public void setRootDomain(@jakarta.annotation.Nullable final Domain value) {
+        this.backingStore.set("rootDomain", value);
     }
     /**
      * Sets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.

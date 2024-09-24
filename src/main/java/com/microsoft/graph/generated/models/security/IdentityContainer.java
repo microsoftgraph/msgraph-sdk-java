@@ -36,7 +36,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthIssues property value. The healthIssues property
+     * Gets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer's Microsoft Defender for Identity configuration.
      * @return a {@link java.util.List<HealthIssue>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class IdentityContainer extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("healthIssues", this.getHealthIssues());
     }
     /**
-     * Sets the healthIssues property value. The healthIssues property
+     * Sets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer's Microsoft Defender for Identity configuration.
      * @param value Value to set for the healthIssues property.
      */
     public void setHealthIssues(@jakarta.annotation.Nullable final java.util.List<HealthIssue> value) {

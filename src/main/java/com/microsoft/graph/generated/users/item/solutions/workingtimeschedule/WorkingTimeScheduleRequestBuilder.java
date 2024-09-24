@@ -73,7 +73,7 @@ public class WorkingTimeScheduleRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get workingTimeSchedule from users
+     * The working time schedule entity associated with the solution.
      * @return a {@link WorkingTimeSchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class WorkingTimeScheduleRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get workingTimeSchedule from users
+     * The working time schedule entity associated with the solution.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkingTimeSchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class WorkingTimeScheduleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get workingTimeSchedule from users
+     * The working time schedule entity associated with the solution.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class WorkingTimeScheduleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get workingTimeSchedule from users
+     * The working time schedule entity associated with the solution.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class WorkingTimeScheduleRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get workingTimeSchedule from users
+     * The working time schedule entity associated with the solution.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
