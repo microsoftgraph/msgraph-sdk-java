@@ -7,6 +7,9 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents a Microsoft Entra user account.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class User extends DirectoryObject implements Parsable {
     /**
@@ -455,6 +458,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
         deserializerMap.put("interests", (n) -> { this.setInterests(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("isResourceAccount", (n) -> { this.setIsResourceAccount(n.getBooleanValue()); });
         deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
         deserializerMap.put("joinedTeams", (n) -> { this.setJoinedTeams(n.getCollectionOfObjectValues(Team::createFromDiscriminatorValue)); });
@@ -594,6 +598,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<String> getInterests() {
         return this.backingStore.get("interests");
+    }
+    /**
+     * Gets the isManagementRestricted property value. The isManagementRestricted property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsManagementRestricted() {
+        return this.backingStore.get("isManagementRestricted");
     }
     /**
      * Gets the isResourceAccount property value. Don't use  reserved for future use.
@@ -892,7 +904,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("passwordPolicies");
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). To update this property:  In delegated access, the calling app must be assigned the Directory.AccessAsUser.All delegated permission on behalf of the signed-in user.  In application-only access, the calling app must be assigned the User.ReadWrite.All (least privilege) or Directory.ReadWrite.All (higher privilege) application permission and at least the User Administrator Microsoft Entra role.
      * @return a {@link PasswordProfile}
      */
     @jakarta.annotation.Nullable
@@ -1100,7 +1112,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("skills");
     }
     /**
-     * Gets the solutions property value. The solutions property
+     * Gets the solutions property value. The identifier that relates the user to the working time schedule triggers. Read-Only. Nullable
      * @return a {@link UserSolutionRoot}
      */
     @jakarta.annotation.Nullable
@@ -1248,6 +1260,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeObjectValue("inferenceClassification", this.getInferenceClassification());
         writer.writeObjectValue("insights", this.getInsights());
         writer.writeCollectionOfPrimitiveValues("interests", this.getInterests());
+        writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isResourceAccount", this.getIsResourceAccount());
         writer.writeStringValue("jobTitle", this.getJobTitle());
         writer.writeCollectionOfObjectValues("joinedTeams", this.getJoinedTeams());
@@ -1702,6 +1715,13 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("interests", value);
     }
     /**
+     * Sets the isManagementRestricted property value. The isManagementRestricted property
+     * @param value Value to set for the isManagementRestricted property.
+     */
+    public void setIsManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isManagementRestricted", value);
+    }
+    /**
      * Sets the isResourceAccount property value. Don't use  reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      */
@@ -1961,7 +1981,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("passwordPolicies", value);
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). To update this property:  In delegated access, the calling app must be assigned the Directory.AccessAsUser.All delegated permission on behalf of the signed-in user.  In application-only access, the calling app must be assigned the User.ReadWrite.All (least privilege) or Directory.ReadWrite.All (higher privilege) application permission and at least the User Administrator Microsoft Entra role.
      * @param value Value to set for the passwordProfile property.
      */
     public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
@@ -2143,7 +2163,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("skills", value);
     }
     /**
-     * Sets the solutions property value. The solutions property
+     * Sets the solutions property value. The identifier that relates the user to the working time schedule triggers. Read-Only. Nullable
      * @param value Value to set for the solutions property.
      */
     public void setSolutions(@jakarta.annotation.Nullable final UserSolutionRoot value) {

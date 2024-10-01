@@ -3,10 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+/**
+ * Types of communityPrivacy.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CommunityPrivacy implements ValuedEnum {
+    /** Any user from the tenant can join and participate in the community. */
     Public("public"),
+    /** A community administrator must add tenant users to the community before they can participate. */
     Private("private"),
+    /** A marker value for members added after the release of this API. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     CommunityPrivacy(final String value) {

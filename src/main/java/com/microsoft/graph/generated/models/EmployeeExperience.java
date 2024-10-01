@@ -10,6 +10,9 @@ import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents a container that exposes navigation properties for employee experience resources.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable {
     /**

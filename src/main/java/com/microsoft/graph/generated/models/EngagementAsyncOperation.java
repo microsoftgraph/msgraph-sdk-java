@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents the status of a Viva Engage async operation that is an operation that transcends thelifetime of a single API request. These operations are long-running or too expensive to completewithin the time frame of their original request.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EngagementAsyncOperation extends LongRunningOperation implements Parsable {
     /**

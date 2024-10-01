@@ -3,9 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+/**
+ * Types of engagementAsyncOperationType. Members will be added here as more async operations are supported.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EngagementAsyncOperationType implements ValuedEnum {
+    /** Operation to create a Viva Engage community. */
     CreateCommunity("createCommunity"),
+    /** A marker value for members added after the release of this API. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     EngagementAsyncOperationType(final String value) {

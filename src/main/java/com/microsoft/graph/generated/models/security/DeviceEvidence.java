@@ -51,6 +51,14 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("deviceDnsName");
     }
     /**
+     * Gets the dnsDomain property value. The DNS domain that this computer belongs to. A sequence of labels separated by dots.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDnsDomain() {
+        return this.backingStore.get("dnsDomain");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -60,13 +68,16 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         deserializerMap.put("azureAdDeviceId", (n) -> { this.setAzureAdDeviceId(n.getStringValue()); });
         deserializerMap.put("defenderAvStatus", (n) -> { this.setDefenderAvStatus(n.getEnumValue(DefenderAvStatus::forValue)); });
         deserializerMap.put("deviceDnsName", (n) -> { this.setDeviceDnsName(n.getStringValue()); });
+        deserializerMap.put("dnsDomain", (n) -> { this.setDnsDomain(n.getStringValue()); });
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(DeviceHealthStatus::forValue)); });
+        deserializerMap.put("hostName", (n) -> { this.setHostName(n.getStringValue()); });
         deserializerMap.put("ipInterfaces", (n) -> { this.setIpInterfaces(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("lastExternalIpAddress", (n) -> { this.setLastExternalIpAddress(n.getStringValue()); });
         deserializerMap.put("lastIpAddress", (n) -> { this.setLastIpAddress(n.getStringValue()); });
         deserializerMap.put("loggedOnUsers", (n) -> { this.setLoggedOnUsers(n.getCollectionOfObjectValues(LoggedOnUser::createFromDiscriminatorValue)); });
         deserializerMap.put("mdeDeviceId", (n) -> { this.setMdeDeviceId(n.getStringValue()); });
+        deserializerMap.put("ntDomain", (n) -> { this.setNtDomain(n.getStringValue()); });
         deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(OnboardingStatus::forValue)); });
         deserializerMap.put("osBuild", (n) -> { this.setOsBuild(n.getLongValue()); });
         deserializerMap.put("osPlatform", (n) -> { this.setOsPlatform(n.getStringValue()); });
@@ -92,6 +103,14 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nullable
     public DeviceHealthStatus getHealthStatus() {
         return this.backingStore.get("healthStatus");
+    }
+    /**
+     * Gets the hostName property value. The hostname without the domain suffix.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getHostName() {
+        return this.backingStore.get("hostName");
     }
     /**
      * Gets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
@@ -132,6 +151,14 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nullable
     public String getMdeDeviceId() {
         return this.backingStore.get("mdeDeviceId");
+    }
+    /**
+     * Gets the ntDomain property value. A logical grouping of computers within a Microsoft Windows network.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getNtDomain() {
+        return this.backingStore.get("ntDomain");
     }
     /**
      * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
@@ -207,13 +234,16 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("azureAdDeviceId", this.getAzureAdDeviceId());
         writer.writeEnumValue("defenderAvStatus", this.getDefenderAvStatus());
         writer.writeStringValue("deviceDnsName", this.getDeviceDnsName());
+        writer.writeStringValue("dnsDomain", this.getDnsDomain());
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
+        writer.writeStringValue("hostName", this.getHostName());
         writer.writeCollectionOfPrimitiveValues("ipInterfaces", this.getIpInterfaces());
         writer.writeStringValue("lastExternalIpAddress", this.getLastExternalIpAddress());
         writer.writeStringValue("lastIpAddress", this.getLastIpAddress());
         writer.writeCollectionOfObjectValues("loggedOnUsers", this.getLoggedOnUsers());
         writer.writeStringValue("mdeDeviceId", this.getMdeDeviceId());
+        writer.writeStringValue("ntDomain", this.getNtDomain());
         writer.writeEnumValue("onboardingStatus", this.getOnboardingStatus());
         writer.writeLongValue("osBuild", this.getOsBuild());
         writer.writeStringValue("osPlatform", this.getOsPlatform());
@@ -245,6 +275,13 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this.backingStore.set("deviceDnsName", value);
     }
     /**
+     * Sets the dnsDomain property value. The DNS domain that this computer belongs to. A sequence of labels separated by dots.
+     * @param value Value to set for the dnsDomain property.
+     */
+    public void setDnsDomain(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("dnsDomain", value);
+    }
+    /**
      * Sets the firstSeenDateTime property value. The date and time when the device was first seen.
      * @param value Value to set for the firstSeenDateTime property.
      */
@@ -257,6 +294,13 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final DeviceHealthStatus value) {
         this.backingStore.set("healthStatus", value);
+    }
+    /**
+     * Sets the hostName property value. The hostname without the domain suffix.
+     * @param value Value to set for the hostName property.
+     */
+    public void setHostName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("hostName", value);
     }
     /**
      * Sets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
@@ -292,6 +336,13 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     public void setMdeDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mdeDeviceId", value);
+    }
+    /**
+     * Sets the ntDomain property value. A logical grouping of computers within a Microsoft Windows network.
+     * @param value Value to set for the ntDomain property.
+     */
+    public void setNtDomain(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("ntDomain", value);
     }
     /**
      * Sets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.

@@ -7,6 +7,9 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The status of a long-running operation.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LongRunningOperation extends Entity implements Parsable {
     /**

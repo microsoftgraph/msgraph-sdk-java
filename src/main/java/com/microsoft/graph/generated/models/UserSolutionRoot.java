@@ -35,7 +35,7 @@ public class UserSolutionRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the workingTimeSchedule property value. The workingTimeSchedule property
+     * Gets the workingTimeSchedule property value. The working time schedule entity associated with the solution.
      * @return a {@link WorkingTimeSchedule}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class UserSolutionRoot extends Entity implements Parsable {
         writer.writeObjectValue("workingTimeSchedule", this.getWorkingTimeSchedule());
     }
     /**
-     * Sets the workingTimeSchedule property value. The workingTimeSchedule property
+     * Sets the workingTimeSchedule property value. The working time schedule entity associated with the solution.
      * @param value Value to set for the workingTimeSchedule property.
      */
     public void setWorkingTimeSchedule(@jakarta.annotation.Nullable final WorkingTimeSchedule value) {
