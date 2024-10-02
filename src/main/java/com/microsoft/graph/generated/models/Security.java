@@ -87,7 +87,7 @@ public class Security extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identities property value. The identities property
+     * Gets the identities property value. A container for security identities APIs.
      * @return a {@link IdentityContainer}
      */
     @jakarta.annotation.Nullable
@@ -208,7 +208,7 @@ public class Security extends Entity implements Parsable {
         this.backingStore.set("cases", value);
     }
     /**
-     * Sets the identities property value. The identities property
+     * Sets the identities property value. A container for security identities APIs.
      * @param value Value to set for the identities property.
      */
     public void setIdentities(@jakarta.annotation.Nullable final IdentityContainer value) {

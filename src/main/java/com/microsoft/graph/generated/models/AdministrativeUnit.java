@@ -59,10 +59,22 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("isMemberManagementRestricted", (n) -> { this.setIsMemberManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("membershipRule", (n) -> { this.setMembershipRule(n.getStringValue()); });
+        deserializerMap.put("membershipRuleProcessingState", (n) -> { this.setMembershipRuleProcessingState(n.getStringValue()); });
+        deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getStringValue()); });
         deserializerMap.put("scopedRoleMembers", (n) -> { this.setScopedRoleMembers(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsMemberManagementRestricted() {
+        return this.backingStore.get("isMemberManagementRestricted");
     }
     /**
      * Gets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
@@ -71,6 +83,30 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMembers() {
         return this.backingStore.get("members");
+    }
+    /**
+     * Gets the membershipRule property value. The membershipRule property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMembershipRule() {
+        return this.backingStore.get("membershipRule");
+    }
+    /**
+     * Gets the membershipRuleProcessingState property value. The membershipRuleProcessingState property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMembershipRuleProcessingState() {
+        return this.backingStore.get("membershipRuleProcessingState");
+    }
+    /**
+     * Gets the membershipType property value. The membershipType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMembershipType() {
+        return this.backingStore.get("membershipType");
     }
     /**
      * Gets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
@@ -98,7 +134,11 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
+        writer.writeBooleanValue("isMemberManagementRestricted", this.getIsMemberManagementRestricted());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
+        writer.writeStringValue("membershipRule", this.getMembershipRule());
+        writer.writeStringValue("membershipRuleProcessingState", this.getMembershipRuleProcessingState());
+        writer.writeStringValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("scopedRoleMembers", this.getScopedRoleMembers());
         writer.writeStringValue("visibility", this.getVisibility());
     }
@@ -124,11 +164,39 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this.backingStore.set("extensions", value);
     }
     /**
+     * Sets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
+     * @param value Value to set for the isMemberManagementRestricted property.
+     */
+    public void setIsMemberManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isMemberManagementRestricted", value);
+    }
+    /**
      * Sets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("members", value);
+    }
+    /**
+     * Sets the membershipRule property value. The membershipRule property
+     * @param value Value to set for the membershipRule property.
+     */
+    public void setMembershipRule(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("membershipRule", value);
+    }
+    /**
+     * Sets the membershipRuleProcessingState property value. The membershipRuleProcessingState property
+     * @param value Value to set for the membershipRuleProcessingState property.
+     */
+    public void setMembershipRuleProcessingState(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("membershipRuleProcessingState", value);
+    }
+    /**
+     * Sets the membershipType property value. The membershipType property
+     * @param value Value to set for the membershipType property.
+     */
+    public void setMembershipType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("membershipType", value);
     }
     /**
      * Sets the scopedRoleMembers property value. Scoped-role members of this administrative unit.

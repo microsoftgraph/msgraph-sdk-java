@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents a community in Viva Engage that is a central place for conversations,files, events, and updates for people sharing a common interest or goal.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Community extends Entity implements Parsable {
     /**
@@ -80,7 +83,7 @@ public class Community extends Entity implements Parsable {
         return this.backingStore.get("owners");
     }
     /**
-     * Gets the privacy property value. The privacy property
+     * Gets the privacy property value. Types of communityPrivacy.
      * @return a {@link CommunityPrivacy}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +140,7 @@ public class Community extends Entity implements Parsable {
         this.backingStore.set("owners", value);
     }
     /**
-     * Sets the privacy property value. The privacy property
+     * Sets the privacy property value. Types of communityPrivacy.
      * @param value Value to set for the privacy property.
      */
     public void setPrivacy(@jakarta.annotation.Nullable final CommunityPrivacy value) {

@@ -7,6 +7,8 @@ import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.add
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.CustodianSourcesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.lastestimatestatisticsoperation.LastEstimateStatisticsOperationRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecurityestimatestatistics.MicrosoftGraphSecurityEstimateStatisticsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecurityexportreport.MicrosoftGraphSecurityExportReportRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecurityexportresult.MicrosoftGraphSecurityExportResultRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecuritypurgedata.MicrosoftGraphSecurityPurgeDataRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.NoncustodialSourcesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -66,6 +68,22 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityEstimateStatisticsRequestBuilder microsoftGraphSecurityEstimateStatistics() {
         return new MicrosoftGraphSecurityEstimateStatisticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the exportReport method.
+     * @return a {@link MicrosoftGraphSecurityExportReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityExportReportRequestBuilder microsoftGraphSecurityExportReport() {
+        return new MicrosoftGraphSecurityExportReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the exportResult method.
+     * @return a {@link MicrosoftGraphSecurityExportResultRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityExportResultRequestBuilder microsoftGraphSecurityExportResult() {
+        return new MicrosoftGraphSecurityExportResultRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the purgeData method.

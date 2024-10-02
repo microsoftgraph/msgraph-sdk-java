@@ -69,6 +69,7 @@ import com.microsoft.graph.models.security.EdiscoveryReviewSet;
 import com.microsoft.graph.models.security.EdiscoveryReviewSetQuery;
 import com.microsoft.graph.models.security.EdiscoveryReviewTag;
 import com.microsoft.graph.models.security.EdiscoverySearch;
+import com.microsoft.graph.models.security.EdiscoverySearchExportOperation;
 import com.microsoft.graph.models.security.EdiscoveryTagOperation;
 import com.microsoft.graph.models.security.FilePlanDescriptor;
 import com.microsoft.graph.models.security.FilePlanDescriptorTemplate;
@@ -825,6 +826,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.ediscoveryReviewSetQuery": return new EdiscoveryReviewSetQuery();
             case "#microsoft.graph.security.ediscoveryReviewTag": return new EdiscoveryReviewTag();
             case "#microsoft.graph.security.ediscoverySearch": return new EdiscoverySearch();
+            case "#microsoft.graph.security.ediscoverySearchExportOperation": return new EdiscoverySearchExportOperation();
             case "#microsoft.graph.security.ediscoveryTagOperation": return new EdiscoveryTagOperation();
             case "#microsoft.graph.security.filePlanDescriptor": return new FilePlanDescriptor();
             case "#microsoft.graph.security.filePlanDescriptorTemplate": return new FilePlanDescriptorTemplate();

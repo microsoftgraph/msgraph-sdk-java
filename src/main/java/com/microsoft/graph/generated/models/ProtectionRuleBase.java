@@ -75,7 +75,7 @@ public class ProtectionRuleBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isAutoApplyEnabled property value. Indicates whether the protection rule is static or dynamic.
+     * Gets the isAutoApplyEnabled property value. true indicates that the protection rule is dynamic; false that it's static. Currently, only static rules are supported.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class ProtectionRuleBase extends Entity implements Parsable {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the isAutoApplyEnabled property value. Indicates whether the protection rule is static or dynamic.
+     * Sets the isAutoApplyEnabled property value. true indicates that the protection rule is dynamic; false that it's static. Currently, only static rules are supported.
      * @param value Value to set for the isAutoApplyEnabled property.
      */
     public void setIsAutoApplyEnabled(@jakarta.annotation.Nullable final Boolean value) {

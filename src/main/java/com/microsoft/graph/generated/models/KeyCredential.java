@@ -66,7 +66,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("customKeyIdentifier");
     }
     /**
-     * Gets the displayName property value. Friendly name for the key. Optional.
+     * Gets the displayName property value. The friendly name for the key, with a maximum length of 90 characters. Longer values are accepted but shortened. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
+     * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it's always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("customKeyIdentifier", value);
     }
     /**
-     * Sets the displayName property value. Friendly name for the key. Optional.
+     * Sets the displayName property value. The friendly name for the key, with a maximum length of 90 characters. Longer values are accepted but shortened. Optional.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -201,7 +201,7 @@ public class KeyCredential implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
+     * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it's always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final byte[] value) {
