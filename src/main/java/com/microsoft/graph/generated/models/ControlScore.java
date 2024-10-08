@@ -1,6 +1,7 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -90,7 +91,7 @@ public class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
         deserializerMap.put("controlName", (n) -> { this.setControlName(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("score", (n) -> { this.setScore(n.getDoubleValue()); });
+        deserializerMap.put("score", (n) -> { this.setScore(n.getObjectValue(ControlScoreScore::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -103,10 +104,10 @@ public class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
-     * @return a {@link Double}
+     * @return a {@link ControlScoreScore}
      */
     @jakarta.annotation.Nullable
-    public Double getScore() {
+    public ControlScoreScore getScore() {
         return this.backingStore.get("score");
     }
     /**
@@ -119,7 +120,7 @@ public class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
         writer.writeStringValue("controlName", this.getControlName());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeDoubleValue("score", this.getScore());
+        writer.writeObjectValue("score", this.getScore());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -169,7 +170,129 @@ public class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
      * Sets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
      * @param value Value to set for the score property.
      */
-    public void setScore(@jakarta.annotation.Nullable final Double value) {
+    public void setScore(@jakarta.annotation.Nullable final ControlScoreScore value) {
         this.backingStore.set("score", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class ControlScoreScore implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link ControlScoreScore} and sets the default values.
+         */
+        public ControlScoreScore() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link ControlScoreScore}
+         */
+        @jakarta.annotation.Nonnull
+        public static ControlScoreScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final ControlScoreScore result = new ControlScoreScore();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

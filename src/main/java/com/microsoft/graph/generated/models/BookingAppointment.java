@@ -1,9 +1,13 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.kiota.PeriodAndDuration;
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -153,7 +157,7 @@ public class BookingAppointment extends Entity implements Parsable {
         deserializerMap.put("optOutOfCustomerEmail", (n) -> { this.setOptOutOfCustomerEmail(n.getBooleanValue()); });
         deserializerMap.put("postBuffer", (n) -> { this.setPostBuffer(n.getPeriodAndDurationValue()); });
         deserializerMap.put("preBuffer", (n) -> { this.setPreBuffer(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("price", (n) -> { this.setPrice(n.getDoubleValue()); });
+        deserializerMap.put("price", (n) -> { this.setPrice(n.getObjectValue(BookingAppointmentPrice::createFromDiscriminatorValue)); });
         deserializerMap.put("priceType", (n) -> { this.setPriceType(n.getEnumValue(BookingPriceType::forValue)); });
         deserializerMap.put("reminders", (n) -> { this.setReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
         deserializerMap.put("selfServiceAppointmentId", (n) -> { this.setSelfServiceAppointmentId(n.getStringValue()); });
@@ -240,10 +244,10 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the price property value. The regular price for an appointment for the specified bookingService.
-     * @return a {@link Double}
+     * @return a {@link BookingAppointmentPrice}
      */
     @jakarta.annotation.Nullable
-    public Double getPrice() {
+    public BookingAppointmentPrice getPrice() {
         return this.backingStore.get("price");
     }
     /**
@@ -352,7 +356,7 @@ public class BookingAppointment extends Entity implements Parsable {
         writer.writeBooleanValue("optOutOfCustomerEmail", this.getOptOutOfCustomerEmail());
         writer.writePeriodAndDurationValue("postBuffer", this.getPostBuffer());
         writer.writePeriodAndDurationValue("preBuffer", this.getPreBuffer());
-        writer.writeDoubleValue("price", this.getPrice());
+        writer.writeObjectValue("price", this.getPrice());
         writer.writeEnumValue("priceType", this.getPriceType());
         writer.writeCollectionOfObjectValues("reminders", this.getReminders());
         writer.writeStringValue("selfServiceAppointmentId", this.getSelfServiceAppointmentId());
@@ -515,7 +519,7 @@ public class BookingAppointment extends Entity implements Parsable {
      * Sets the price property value. The regular price for an appointment for the specified bookingService.
      * @param value Value to set for the price property.
      */
-    public void setPrice(@jakarta.annotation.Nullable final Double value) {
+    public void setPrice(@jakarta.annotation.Nullable final BookingAppointmentPrice value) {
         this.backingStore.set("price", value);
     }
     /**
@@ -587,5 +591,127 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("startDateTime", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class BookingAppointmentPrice implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link BookingAppointmentPrice} and sets the default values.
+         */
+        public BookingAppointmentPrice() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link BookingAppointmentPrice}
+         */
+        @jakarta.annotation.Nonnull
+        public static BookingAppointmentPrice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final BookingAppointmentPrice result = new BookingAppointmentPrice();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

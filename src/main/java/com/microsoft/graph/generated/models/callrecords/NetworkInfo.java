@@ -1,6 +1,8 @@
 package com.microsoft.graph.models.callrecords;
 
+import com.microsoft.graph.models.ReferenceNumeric;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -57,10 +59,10 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
-     * @return a {@link Float}
+     * @return a {@link NetworkInfoBandwidthLowEventRatio}
      */
     @jakarta.annotation.Nullable
-    public Float getBandwidthLowEventRatio() {
+    public NetworkInfoBandwidthLowEventRatio getBandwidthLowEventRatio() {
         return this.backingStore.get("bandwidthLowEventRatio");
     }
     /**
@@ -81,10 +83,10 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
-     * @return a {@link Float}
+     * @return a {@link NetworkInfoDelayEventRatio}
      */
     @jakarta.annotation.Nullable
-    public Float getDelayEventRatio() {
+    public NetworkInfoDelayEventRatio getDelayEventRatio() {
         return this.backingStore.get("delayEventRatio");
     }
     /**
@@ -102,10 +104,10 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(27);
-        deserializerMap.put("bandwidthLowEventRatio", (n) -> { this.setBandwidthLowEventRatio(n.getFloatValue()); });
+        deserializerMap.put("bandwidthLowEventRatio", (n) -> { this.setBandwidthLowEventRatio(n.getObjectValue(NetworkInfoBandwidthLowEventRatio::createFromDiscriminatorValue)); });
         deserializerMap.put("basicServiceSetIdentifier", (n) -> { this.setBasicServiceSetIdentifier(n.getStringValue()); });
         deserializerMap.put("connectionType", (n) -> { this.setConnectionType(n.getEnumValue(NetworkConnectionType::forValue)); });
-        deserializerMap.put("delayEventRatio", (n) -> { this.setDelayEventRatio(n.getFloatValue()); });
+        deserializerMap.put("delayEventRatio", (n) -> { this.setDelayEventRatio(n.getObjectValue(NetworkInfoDelayEventRatio::createFromDiscriminatorValue)); });
         deserializerMap.put("dnsSuffix", (n) -> { this.setDnsSuffix(n.getStringValue()); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("linkSpeed", (n) -> { this.setLinkSpeed(n.getLongValue()); });
@@ -113,11 +115,11 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
         deserializerMap.put("networkTransportProtocol", (n) -> { this.setNetworkTransportProtocol(n.getEnumValue(NetworkTransportProtocol::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
-        deserializerMap.put("receivedQualityEventRatio", (n) -> { this.setReceivedQualityEventRatio(n.getFloatValue()); });
+        deserializerMap.put("receivedQualityEventRatio", (n) -> { this.setReceivedQualityEventRatio(n.getObjectValue(NetworkInfoReceivedQualityEventRatio::createFromDiscriminatorValue)); });
         deserializerMap.put("reflexiveIPAddress", (n) -> { this.setReflexiveIPAddress(n.getStringValue()); });
         deserializerMap.put("relayIPAddress", (n) -> { this.setRelayIPAddress(n.getStringValue()); });
         deserializerMap.put("relayPort", (n) -> { this.setRelayPort(n.getIntegerValue()); });
-        deserializerMap.put("sentQualityEventRatio", (n) -> { this.setSentQualityEventRatio(n.getFloatValue()); });
+        deserializerMap.put("sentQualityEventRatio", (n) -> { this.setSentQualityEventRatio(n.getObjectValue(NetworkInfoSentQualityEventRatio::createFromDiscriminatorValue)); });
         deserializerMap.put("subnet", (n) -> { this.setSubnet(n.getStringValue()); });
         deserializerMap.put("traceRouteHops", (n) -> { this.setTraceRouteHops(n.getCollectionOfObjectValues(TraceRouteHop::createFromDiscriminatorValue)); });
         deserializerMap.put("wifiBand", (n) -> { this.setWifiBand(n.getEnumValue(WifiBand::forValue)); });
@@ -181,10 +183,10 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
-     * @return a {@link Float}
+     * @return a {@link NetworkInfoReceivedQualityEventRatio}
      */
     @jakarta.annotation.Nullable
-    public Float getReceivedQualityEventRatio() {
+    public NetworkInfoReceivedQualityEventRatio getReceivedQualityEventRatio() {
         return this.backingStore.get("receivedQualityEventRatio");
     }
     /**
@@ -213,10 +215,10 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
-     * @return a {@link Float}
+     * @return a {@link NetworkInfoSentQualityEventRatio}
      */
     @jakarta.annotation.Nullable
-    public Float getSentQualityEventRatio() {
+    public NetworkInfoSentQualityEventRatio getSentQualityEventRatio() {
         return this.backingStore.get("sentQualityEventRatio");
     }
     /**
@@ -313,10 +315,10 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeFloatValue("bandwidthLowEventRatio", this.getBandwidthLowEventRatio());
+        writer.writeObjectValue("bandwidthLowEventRatio", this.getBandwidthLowEventRatio());
         writer.writeStringValue("basicServiceSetIdentifier", this.getBasicServiceSetIdentifier());
         writer.writeEnumValue("connectionType", this.getConnectionType());
-        writer.writeFloatValue("delayEventRatio", this.getDelayEventRatio());
+        writer.writeObjectValue("delayEventRatio", this.getDelayEventRatio());
         writer.writeStringValue("dnsSuffix", this.getDnsSuffix());
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeLongValue("linkSpeed", this.getLinkSpeed());
@@ -324,11 +326,11 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
         writer.writeEnumValue("networkTransportProtocol", this.getNetworkTransportProtocol());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("port", this.getPort());
-        writer.writeFloatValue("receivedQualityEventRatio", this.getReceivedQualityEventRatio());
+        writer.writeObjectValue("receivedQualityEventRatio", this.getReceivedQualityEventRatio());
         writer.writeStringValue("reflexiveIPAddress", this.getReflexiveIPAddress());
         writer.writeStringValue("relayIPAddress", this.getRelayIPAddress());
         writer.writeIntegerValue("relayPort", this.getRelayPort());
-        writer.writeFloatValue("sentQualityEventRatio", this.getSentQualityEventRatio());
+        writer.writeObjectValue("sentQualityEventRatio", this.getSentQualityEventRatio());
         writer.writeStringValue("subnet", this.getSubnet());
         writer.writeCollectionOfObjectValues("traceRouteHops", this.getTraceRouteHops());
         writer.writeEnumValue("wifiBand", this.getWifiBand());
@@ -361,7 +363,7 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
      * @param value Value to set for the bandwidthLowEventRatio property.
      */
-    public void setBandwidthLowEventRatio(@jakarta.annotation.Nullable final Float value) {
+    public void setBandwidthLowEventRatio(@jakarta.annotation.Nullable final NetworkInfoBandwidthLowEventRatio value) {
         this.backingStore.set("bandwidthLowEventRatio", value);
     }
     /**
@@ -382,7 +384,7 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
      * @param value Value to set for the delayEventRatio property.
      */
-    public void setDelayEventRatio(@jakarta.annotation.Nullable final Float value) {
+    public void setDelayEventRatio(@jakarta.annotation.Nullable final NetworkInfoDelayEventRatio value) {
         this.backingStore.set("delayEventRatio", value);
     }
     /**
@@ -438,7 +440,7 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
      * @param value Value to set for the receivedQualityEventRatio property.
      */
-    public void setReceivedQualityEventRatio(@jakarta.annotation.Nullable final Float value) {
+    public void setReceivedQualityEventRatio(@jakarta.annotation.Nullable final NetworkInfoReceivedQualityEventRatio value) {
         this.backingStore.set("receivedQualityEventRatio", value);
     }
     /**
@@ -466,7 +468,7 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
      * @param value Value to set for the sentQualityEventRatio property.
      */
-    public void setSentQualityEventRatio(@jakarta.annotation.Nullable final Float value) {
+    public void setSentQualityEventRatio(@jakarta.annotation.Nullable final NetworkInfoSentQualityEventRatio value) {
         this.backingStore.set("sentQualityEventRatio", value);
     }
     /**
@@ -545,5 +547,493 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setWifiVendorDriverVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("wifiVendorDriverVersion", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Float}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class NetworkInfoBandwidthLowEventRatio implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link NetworkInfoBandwidthLowEventRatio} and sets the default values.
+         */
+        public NetworkInfoBandwidthLowEventRatio() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link NetworkInfoBandwidthLowEventRatio}
+         */
+        @jakarta.annotation.Nonnull
+        public static NetworkInfoBandwidthLowEventRatio createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final NetworkInfoBandwidthLowEventRatio result = new NetworkInfoBandwidthLowEventRatio();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getFloatValue() != null) {
+                result.setFloat(parseNode.getFloatValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the float property value. Composed type representation for type {@link Float}
+         * @return a {@link Float}
+         */
+        @jakarta.annotation.Nullable
+        public Float getFloat() {
+            return this.backingStore.get("float");
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getFloat() != null) {
+                writer.writeFloatValue(null, this.getFloat());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the float property value. Composed type representation for type {@link Float}
+         * @param value Value to set for the float property.
+         */
+        public void setFloat(@jakarta.annotation.Nullable final Float value) {
+            this.backingStore.set("float", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Float}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class NetworkInfoDelayEventRatio implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link NetworkInfoDelayEventRatio} and sets the default values.
+         */
+        public NetworkInfoDelayEventRatio() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link NetworkInfoDelayEventRatio}
+         */
+        @jakarta.annotation.Nonnull
+        public static NetworkInfoDelayEventRatio createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final NetworkInfoDelayEventRatio result = new NetworkInfoDelayEventRatio();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getFloatValue() != null) {
+                result.setFloat(parseNode.getFloatValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the float property value. Composed type representation for type {@link Float}
+         * @return a {@link Float}
+         */
+        @jakarta.annotation.Nullable
+        public Float getFloat() {
+            return this.backingStore.get("float");
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getFloat() != null) {
+                writer.writeFloatValue(null, this.getFloat());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the float property value. Composed type representation for type {@link Float}
+         * @param value Value to set for the float property.
+         */
+        public void setFloat(@jakarta.annotation.Nullable final Float value) {
+            this.backingStore.set("float", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Float}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class NetworkInfoReceivedQualityEventRatio implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link NetworkInfoReceivedQualityEventRatio} and sets the default values.
+         */
+        public NetworkInfoReceivedQualityEventRatio() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link NetworkInfoReceivedQualityEventRatio}
+         */
+        @jakarta.annotation.Nonnull
+        public static NetworkInfoReceivedQualityEventRatio createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final NetworkInfoReceivedQualityEventRatio result = new NetworkInfoReceivedQualityEventRatio();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getFloatValue() != null) {
+                result.setFloat(parseNode.getFloatValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the float property value. Composed type representation for type {@link Float}
+         * @return a {@link Float}
+         */
+        @jakarta.annotation.Nullable
+        public Float getFloat() {
+            return this.backingStore.get("float");
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getFloat() != null) {
+                writer.writeFloatValue(null, this.getFloat());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the float property value. Composed type representation for type {@link Float}
+         * @param value Value to set for the float property.
+         */
+        public void setFloat(@jakarta.annotation.Nullable final Float value) {
+            this.backingStore.set("float", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Float}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class NetworkInfoSentQualityEventRatio implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link NetworkInfoSentQualityEventRatio} and sets the default values.
+         */
+        public NetworkInfoSentQualityEventRatio() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link NetworkInfoSentQualityEventRatio}
+         */
+        @jakarta.annotation.Nonnull
+        public static NetworkInfoSentQualityEventRatio createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final NetworkInfoSentQualityEventRatio result = new NetworkInfoSentQualityEventRatio();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getFloatValue() != null) {
+                result.setFloat(parseNode.getFloatValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the float property value. Composed type representation for type {@link Float}
+         * @return a {@link Float}
+         */
+        @jakarta.annotation.Nullable
+        public Float getFloat() {
+            return this.backingStore.get("float");
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getFloat() != null) {
+                writer.writeFloatValue(null, this.getFloat());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the float property value. Composed type representation for type {@link Float}
+         * @param value Value to set for the float property.
+         */
+        public void setFloat(@jakarta.annotation.Nullable final Float value) {
+            this.backingStore.set("float", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

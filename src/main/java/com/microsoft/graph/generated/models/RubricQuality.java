@@ -1,6 +1,7 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -91,7 +92,7 @@ public class RubricQuality implements AdditionalDataHolder, BackedModel, Parsabl
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("qualityId", (n) -> { this.setQualityId(n.getStringValue()); });
-        deserializerMap.put("weight", (n) -> { this.setWeight(n.getFloatValue()); });
+        deserializerMap.put("weight", (n) -> { this.setWeight(n.getObjectValue(RubricQualityWeight::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -112,10 +113,10 @@ public class RubricQuality implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
-     * @return a {@link Float}
+     * @return a {@link RubricQualityWeight}
      */
     @jakarta.annotation.Nullable
-    public Float getWeight() {
+    public RubricQualityWeight getWeight() {
         return this.backingStore.get("weight");
     }
     /**
@@ -129,7 +130,7 @@ public class RubricQuality implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("qualityId", this.getQualityId());
-        writer.writeFloatValue("weight", this.getWeight());
+        writer.writeObjectValue("weight", this.getWeight());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -186,7 +187,129 @@ public class RubricQuality implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
      * @param value Value to set for the weight property.
      */
-    public void setWeight(@jakarta.annotation.Nullable final Float value) {
+    public void setWeight(@jakarta.annotation.Nullable final RubricQualityWeight value) {
         this.backingStore.set("weight", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Float}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class RubricQualityWeight implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link RubricQualityWeight} and sets the default values.
+         */
+        public RubricQualityWeight() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link RubricQualityWeight}
+         */
+        @jakarta.annotation.Nonnull
+        public static RubricQualityWeight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final RubricQualityWeight result = new RubricQualityWeight();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getFloatValue() != null) {
+                result.setFloat(parseNode.getFloatValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the float property value. Composed type representation for type {@link Float}
+         * @return a {@link Float}
+         */
+        @jakarta.annotation.Nullable
+        public Float getFloat() {
+            return this.backingStore.get("float");
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getFloat() != null) {
+                writer.writeFloatValue(null, this.getFloat());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the float property value. Composed type representation for type {@link Float}
+         * @param value Value to set for the float property.
+         */
+        public void setFloat(@jakarta.annotation.Nullable final Float value) {
+            this.backingStore.set("float", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

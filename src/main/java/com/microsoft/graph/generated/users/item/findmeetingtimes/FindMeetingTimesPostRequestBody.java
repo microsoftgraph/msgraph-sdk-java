@@ -2,9 +2,11 @@ package com.microsoft.graph.users.item.findmeetingtimes;
 
 import com.microsoft.graph.models.AttendeeBase;
 import com.microsoft.graph.models.LocationConstraint;
+import com.microsoft.graph.models.ReferenceNumeric;
 import com.microsoft.graph.models.TimeConstraint;
 import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -79,7 +81,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Ba
         deserializerMap.put("locationConstraint", (n) -> { this.setLocationConstraint(n.getObjectValue(LocationConstraint::createFromDiscriminatorValue)); });
         deserializerMap.put("maxCandidates", (n) -> { this.setMaxCandidates(n.getIntegerValue()); });
         deserializerMap.put("meetingDuration", (n) -> { this.setMeetingDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("minimumAttendeePercentage", (n) -> { this.setMinimumAttendeePercentage(n.getDoubleValue()); });
+        deserializerMap.put("minimumAttendeePercentage", (n) -> { this.setMinimumAttendeePercentage(n.getObjectValue(FindMeetingTimesPostRequestBodyMinimumAttendeePercentage::createFromDiscriminatorValue)); });
         deserializerMap.put("returnSuggestionReasons", (n) -> { this.setReturnSuggestionReasons(n.getBooleanValue()); });
         deserializerMap.put("timeConstraint", (n) -> { this.setTimeConstraint(n.getObjectValue(TimeConstraint::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -118,10 +120,10 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
-     * @return a {@link Double}
+     * @return a {@link FindMeetingTimesPostRequestBodyMinimumAttendeePercentage}
      */
     @jakarta.annotation.Nullable
-    public Double getMinimumAttendeePercentage() {
+    public FindMeetingTimesPostRequestBodyMinimumAttendeePercentage getMinimumAttendeePercentage() {
         return this.backingStore.get("minimumAttendeePercentage");
     }
     /**
@@ -151,7 +153,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Ba
         writer.writeObjectValue("locationConstraint", this.getLocationConstraint());
         writer.writeIntegerValue("maxCandidates", this.getMaxCandidates());
         writer.writePeriodAndDurationValue("meetingDuration", this.getMeetingDuration());
-        writer.writeDoubleValue("minimumAttendeePercentage", this.getMinimumAttendeePercentage());
+        writer.writeObjectValue("minimumAttendeePercentage", this.getMinimumAttendeePercentage());
         writer.writeBooleanValue("returnSuggestionReasons", this.getReturnSuggestionReasons());
         writer.writeObjectValue("timeConstraint", this.getTimeConstraint());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -210,7 +212,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Ba
      * Sets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
      * @param value Value to set for the minimumAttendeePercentage property.
      */
-    public void setMinimumAttendeePercentage(@jakarta.annotation.Nullable final Double value) {
+    public void setMinimumAttendeePercentage(@jakarta.annotation.Nullable final FindMeetingTimesPostRequestBodyMinimumAttendeePercentage value) {
         this.backingStore.set("minimumAttendeePercentage", value);
     }
     /**
@@ -226,5 +228,127 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Ba
      */
     public void setTimeConstraint(@jakarta.annotation.Nullable final TimeConstraint value) {
         this.backingStore.set("timeConstraint", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class FindMeetingTimesPostRequestBodyMinimumAttendeePercentage implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link FindMeetingTimesPostRequestBodyMinimumAttendeePercentage} and sets the default values.
+         */
+        public FindMeetingTimesPostRequestBodyMinimumAttendeePercentage() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link FindMeetingTimesPostRequestBodyMinimumAttendeePercentage}
+         */
+        @jakarta.annotation.Nonnull
+        public static FindMeetingTimesPostRequestBodyMinimumAttendeePercentage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final FindMeetingTimesPostRequestBodyMinimumAttendeePercentage result = new FindMeetingTimesPostRequestBodyMinimumAttendeePercentage();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

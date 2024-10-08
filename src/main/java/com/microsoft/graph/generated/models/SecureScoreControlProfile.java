@@ -1,8 +1,12 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -97,7 +101,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         deserializerMap.put("deprecated", (n) -> { this.setDeprecated(n.getBooleanValue()); });
         deserializerMap.put("implementationCost", (n) -> { this.setImplementationCost(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("maxScore", (n) -> { this.setMaxScore(n.getDoubleValue()); });
+        deserializerMap.put("maxScore", (n) -> { this.setMaxScore(n.getObjectValue(SecureScoreControlProfileMaxScore::createFromDiscriminatorValue)); });
         deserializerMap.put("rank", (n) -> { this.setRank(n.getIntegerValue()); });
         deserializerMap.put("remediation", (n) -> { this.setRemediation(n.getStringValue()); });
         deserializerMap.put("remediationImpact", (n) -> { this.setRemediationImpact(n.getStringValue()); });
@@ -127,10 +131,10 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     }
     /**
      * Gets the maxScore property value. max attainable score for the control.
-     * @return a {@link Double}
+     * @return a {@link SecureScoreControlProfileMaxScore}
      */
     @jakarta.annotation.Nullable
-    public Double getMaxScore() {
+    public SecureScoreControlProfileMaxScore getMaxScore() {
         return this.backingStore.get("maxScore");
     }
     /**
@@ -221,7 +225,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         writer.writeBooleanValue("deprecated", this.getDeprecated());
         writer.writeStringValue("implementationCost", this.getImplementationCost());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
-        writer.writeDoubleValue("maxScore", this.getMaxScore());
+        writer.writeObjectValue("maxScore", this.getMaxScore());
         writer.writeIntegerValue("rank", this.getRank());
         writer.writeStringValue("remediation", this.getRemediation());
         writer.writeStringValue("remediationImpact", this.getRemediationImpact());
@@ -299,7 +303,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      * Sets the maxScore property value. max attainable score for the control.
      * @param value Value to set for the maxScore property.
      */
-    public void setMaxScore(@jakarta.annotation.Nullable final Double value) {
+    public void setMaxScore(@jakarta.annotation.Nullable final SecureScoreControlProfileMaxScore value) {
         this.backingStore.set("maxScore", value);
     }
     /**
@@ -364,5 +368,127 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
      */
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
         this.backingStore.set("vendorInformation", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class SecureScoreControlProfileMaxScore implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link SecureScoreControlProfileMaxScore} and sets the default values.
+         */
+        public SecureScoreControlProfileMaxScore() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link SecureScoreControlProfileMaxScore}
+         */
+        @jakarta.annotation.Nonnull
+        public static SecureScoreControlProfileMaxScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final SecureScoreControlProfileMaxScore result = new SecureScoreControlProfileMaxScore();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

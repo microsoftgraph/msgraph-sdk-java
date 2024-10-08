@@ -1,8 +1,12 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -54,10 +58,10 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     }
     /**
      * Gets the deviceAppHealthScore property value. The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore}
      */
     @jakarta.annotation.Nullable
-    public Double getDeviceAppHealthScore() {
+    public UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore getDeviceAppHealthScore() {
         return this.backingStore.get("deviceAppHealthScore");
     }
     /**
@@ -102,7 +106,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
         deserializerMap.put("appCrashCount", (n) -> { this.setAppCrashCount(n.getIntegerValue()); });
         deserializerMap.put("appHangCount", (n) -> { this.setAppHangCount(n.getIntegerValue()); });
         deserializerMap.put("crashedAppCount", (n) -> { this.setCrashedAppCount(n.getIntegerValue()); });
-        deserializerMap.put("deviceAppHealthScore", (n) -> { this.setDeviceAppHealthScore(n.getDoubleValue()); });
+        deserializerMap.put("deviceAppHealthScore", (n) -> { this.setDeviceAppHealthScore(n.getObjectValue(UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceManufacturer", (n) -> { this.setDeviceManufacturer(n.getStringValue()); });
@@ -146,7 +150,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
         writer.writeIntegerValue("appCrashCount", this.getAppCrashCount());
         writer.writeIntegerValue("appHangCount", this.getAppHangCount());
         writer.writeIntegerValue("crashedAppCount", this.getCrashedAppCount());
-        writer.writeDoubleValue("deviceAppHealthScore", this.getDeviceAppHealthScore());
+        writer.writeObjectValue("deviceAppHealthScore", this.getDeviceAppHealthScore());
         writer.writeStringValue("deviceDisplayName", this.getDeviceDisplayName());
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceManufacturer", this.getDeviceManufacturer());
@@ -180,7 +184,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * Sets the deviceAppHealthScore property value. The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the deviceAppHealthScore property.
      */
-    public void setDeviceAppHealthScore(@jakarta.annotation.Nullable final Double value) {
+    public void setDeviceAppHealthScore(@jakarta.annotation.Nullable final UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore value) {
         this.backingStore.set("deviceAppHealthScore", value);
     }
     /**
@@ -231,5 +235,127 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     public void setProcessedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("processedDateTime", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore} and sets the default values.
+         */
+        public UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore result = new UserExperienceAnalyticsAppHealthDevicePerformanceDeviceAppHealthScore();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

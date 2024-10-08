@@ -1,8 +1,12 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -69,26 +73,26 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the cloudIdentityScore property value. Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore}
      */
     @jakarta.annotation.Nullable
-    public Double getCloudIdentityScore() {
+    public UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore getCloudIdentityScore() {
         return this.backingStore.get("cloudIdentityScore");
     }
     /**
      * Gets the cloudManagementScore property value. Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore}
      */
     @jakarta.annotation.Nullable
-    public Double getCloudManagementScore() {
+    public UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore getCloudManagementScore() {
         return this.backingStore.get("cloudManagementScore");
     }
     /**
      * Gets the cloudProvisioningScore property value. Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore}
      */
     @jakarta.annotation.Nullable
-    public Double getCloudProvisioningScore() {
+    public UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore getCloudProvisioningScore() {
         return this.backingStore.get("cloudProvisioningScore");
     }
     /**
@@ -127,9 +131,9 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         deserializerMap.put("azureAdDeviceId", (n) -> { this.setAzureAdDeviceId(n.getStringValue()); });
         deserializerMap.put("azureAdJoinType", (n) -> { this.setAzureAdJoinType(n.getStringValue()); });
         deserializerMap.put("azureAdRegistered", (n) -> { this.setAzureAdRegistered(n.getBooleanValue()); });
-        deserializerMap.put("cloudIdentityScore", (n) -> { this.setCloudIdentityScore(n.getDoubleValue()); });
-        deserializerMap.put("cloudManagementScore", (n) -> { this.setCloudManagementScore(n.getDoubleValue()); });
-        deserializerMap.put("cloudProvisioningScore", (n) -> { this.setCloudProvisioningScore(n.getDoubleValue()); });
+        deserializerMap.put("cloudIdentityScore", (n) -> { this.setCloudIdentityScore(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudManagementScore", (n) -> { this.setCloudManagementScore(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudProvisioningScore", (n) -> { this.setCloudProvisioningScore(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore::createFromDiscriminatorValue)); });
         deserializerMap.put("compliancePolicySetToIntune", (n) -> { this.setCompliancePolicySetToIntune(n.getBooleanValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
@@ -154,8 +158,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         deserializerMap.put("tenantAttached", (n) -> { this.setTenantAttached(n.getBooleanValue()); });
         deserializerMap.put("tpmCheckFailed", (n) -> { this.setTpmCheckFailed(n.getBooleanValue()); });
         deserializerMap.put("upgradeEligibility", (n) -> { this.setUpgradeEligibility(n.getEnumValue(OperatingSystemUpgradeEligibility::forValue)); });
-        deserializerMap.put("windowsScore", (n) -> { this.setWindowsScore(n.getDoubleValue()); });
-        deserializerMap.put("workFromAnywhereScore", (n) -> { this.setWorkFromAnywhereScore(n.getDoubleValue()); });
+        deserializerMap.put("windowsScore", (n) -> { this.setWindowsScore(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("workFromAnywhereScore", (n) -> { this.setWorkFromAnywhereScore(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -328,18 +332,18 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     }
     /**
      * Gets the windowsScore property value. Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore}
      */
     @jakarta.annotation.Nullable
-    public Double getWindowsScore() {
+    public UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore getWindowsScore() {
         return this.backingStore.get("windowsScore");
     }
     /**
      * Gets the workFromAnywhereScore property value. Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore}
      */
     @jakarta.annotation.Nullable
-    public Double getWorkFromAnywhereScore() {
+    public UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore getWorkFromAnywhereScore() {
         return this.backingStore.get("workFromAnywhereScore");
     }
     /**
@@ -354,9 +358,9 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         writer.writeStringValue("azureAdDeviceId", this.getAzureAdDeviceId());
         writer.writeStringValue("azureAdJoinType", this.getAzureAdJoinType());
         writer.writeBooleanValue("azureAdRegistered", this.getAzureAdRegistered());
-        writer.writeDoubleValue("cloudIdentityScore", this.getCloudIdentityScore());
-        writer.writeDoubleValue("cloudManagementScore", this.getCloudManagementScore());
-        writer.writeDoubleValue("cloudProvisioningScore", this.getCloudProvisioningScore());
+        writer.writeObjectValue("cloudIdentityScore", this.getCloudIdentityScore());
+        writer.writeObjectValue("cloudManagementScore", this.getCloudManagementScore());
+        writer.writeObjectValue("cloudProvisioningScore", this.getCloudProvisioningScore());
         writer.writeBooleanValue("compliancePolicySetToIntune", this.getCompliancePolicySetToIntune());
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceName", this.getDeviceName());
@@ -381,8 +385,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         writer.writeBooleanValue("tenantAttached", this.getTenantAttached());
         writer.writeBooleanValue("tpmCheckFailed", this.getTpmCheckFailed());
         writer.writeEnumValue("upgradeEligibility", this.getUpgradeEligibility());
-        writer.writeDoubleValue("windowsScore", this.getWindowsScore());
-        writer.writeDoubleValue("workFromAnywhereScore", this.getWorkFromAnywhereScore());
+        writer.writeObjectValue("windowsScore", this.getWindowsScore());
+        writer.writeObjectValue("workFromAnywhereScore", this.getWorkFromAnywhereScore());
     }
     /**
      * Sets the autoPilotProfileAssigned property value. When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
@@ -423,21 +427,21 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Sets the cloudIdentityScore property value. Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudIdentityScore property.
      */
-    public void setCloudIdentityScore(@jakarta.annotation.Nullable final Double value) {
+    public void setCloudIdentityScore(@jakarta.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore value) {
         this.backingStore.set("cloudIdentityScore", value);
     }
     /**
      * Sets the cloudManagementScore property value. Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudManagementScore property.
      */
-    public void setCloudManagementScore(@jakarta.annotation.Nullable final Double value) {
+    public void setCloudManagementScore(@jakarta.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore value) {
         this.backingStore.set("cloudManagementScore", value);
     }
     /**
      * Sets the cloudProvisioningScore property value. Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudProvisioningScore property.
      */
-    public void setCloudProvisioningScore(@jakarta.annotation.Nullable final Double value) {
+    public void setCloudProvisioningScore(@jakarta.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore value) {
         this.backingStore.set("cloudProvisioningScore", value);
     }
     /**
@@ -612,14 +616,624 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Sets the windowsScore property value. Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the windowsScore property.
      */
-    public void setWindowsScore(@jakarta.annotation.Nullable final Double value) {
+    public void setWindowsScore(@jakarta.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore value) {
         this.backingStore.set("windowsScore", value);
     }
     /**
      * Sets the workFromAnywhereScore property value. Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the workFromAnywhereScore property.
      */
-    public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final Double value) {
+    public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore value) {
         this.backingStore.set("workFromAnywhereScore", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore} and sets the default values.
+         */
+        public UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore result = new UserExperienceAnalyticsWorkFromAnywhereDeviceCloudIdentityScore();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore} and sets the default values.
+         */
+        public UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore result = new UserExperienceAnalyticsWorkFromAnywhereDeviceCloudManagementScore();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore} and sets the default values.
+         */
+        public UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore result = new UserExperienceAnalyticsWorkFromAnywhereDeviceCloudProvisioningScore();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore} and sets the default values.
+         */
+        public UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore result = new UserExperienceAnalyticsWorkFromAnywhereDeviceWindowsScore();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore} and sets the default values.
+         */
+        public UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore result = new UserExperienceAnalyticsWorkFromAnywhereDeviceWorkFromAnywhereScore();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

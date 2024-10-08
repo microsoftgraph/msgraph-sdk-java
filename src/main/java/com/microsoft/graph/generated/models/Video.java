@@ -1,6 +1,7 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -117,7 +118,7 @@ public class Video implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("bitrate", (n) -> { this.setBitrate(n.getIntegerValue()); });
         deserializerMap.put("duration", (n) -> { this.setDuration(n.getLongValue()); });
         deserializerMap.put("fourCC", (n) -> { this.setFourCC(n.getStringValue()); });
-        deserializerMap.put("frameRate", (n) -> { this.setFrameRate(n.getDoubleValue()); });
+        deserializerMap.put("frameRate", (n) -> { this.setFrameRate(n.getObjectValue(VideoFrameRate::createFromDiscriminatorValue)); });
         deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
@@ -133,10 +134,10 @@ public class Video implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the frameRate property value. Frame rate of the video.
-     * @return a {@link Double}
+     * @return a {@link VideoFrameRate}
      */
     @jakarta.annotation.Nullable
-    public Double getFrameRate() {
+    public VideoFrameRate getFrameRate() {
         return this.backingStore.get("frameRate");
     }
     /**
@@ -176,7 +177,7 @@ public class Video implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeIntegerValue("bitrate", this.getBitrate());
         writer.writeLongValue("duration", this.getDuration());
         writer.writeStringValue("fourCC", this.getFourCC());
-        writer.writeDoubleValue("frameRate", this.getFrameRate());
+        writer.writeObjectValue("frameRate", this.getFrameRate());
         writer.writeIntegerValue("height", this.getHeight());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("width", this.getWidth());
@@ -250,7 +251,7 @@ public class Video implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the frameRate property value. Frame rate of the video.
      * @param value Value to set for the frameRate property.
      */
-    public void setFrameRate(@jakarta.annotation.Nullable final Double value) {
+    public void setFrameRate(@jakarta.annotation.Nullable final VideoFrameRate value) {
         this.backingStore.set("frameRate", value);
     }
     /**
@@ -273,5 +274,127 @@ public class Video implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setWidth(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("width", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class VideoFrameRate implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link VideoFrameRate} and sets the default values.
+         */
+        public VideoFrameRate() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link VideoFrameRate}
+         */
+        @jakarta.annotation.Nonnull
+        public static VideoFrameRate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final VideoFrameRate result = new VideoFrameRate();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }
