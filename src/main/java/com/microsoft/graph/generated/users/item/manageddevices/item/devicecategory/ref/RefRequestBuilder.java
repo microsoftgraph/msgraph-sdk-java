@@ -1,12 +1,10 @@
-package com.microsoft.graph.users.item.manageddevices.item.devicecategory;
+package com.microsoft.graph.users.item.manageddevices.item.devicecategory.ref;
 
-import com.microsoft.graph.models.DeviceCategory;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.manageddevices.item.devicecategory.ref.RefRequestBuilder;
+import com.microsoft.graph.models.ReferenceUpdate;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -17,43 +15,35 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity.
+ * Provides operations to manage the collection of user entities.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
+public class RefRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the collection of user entities.
-     * @return a {@link RefRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public RefRequestBuilder ref() {
-        return new RefRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Instantiates a new {@link DeviceCategoryRequestBuilder} and sets the default values.
+     * Instantiates a new {@link RefRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DeviceCategoryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/deviceCategory{?%24expand,%24select}", pathParameters);
+    public RefRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/deviceCategory/$ref", pathParameters);
     }
     /**
-     * Instantiates a new {@link DeviceCategoryRequestBuilder} and sets the default values.
+     * Instantiates a new {@link RefRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DeviceCategoryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/deviceCategory{?%24expand,%24select}", rawUrl);
+    public RefRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/deviceCategory/$ref", rawUrl);
     }
     /**
-     * Delete navigation property deviceCategory for users
+     * Delete ref of navigation property deviceCategory for users
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property deviceCategory for users
+     * Delete ref of navigation property deviceCategory for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -65,53 +55,49 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Device category
-     * @return a {@link DeviceCategory}
+     * @return a {@link String}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeviceCategory get() {
+    public String get() {
         return get(null);
     }
     /**
      * Device category
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeviceCategory}
+     * @return a {@link String}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeviceCategory get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public String get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeviceCategory::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, String.class);
     }
     /**
-     * Update the navigation property deviceCategory in users
+     * Update the ref of navigation property deviceCategory in users
      * @param body The request body
-     * @return a {@link DeviceCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
-    @jakarta.annotation.Nullable
-    public DeviceCategory patch(@jakarta.annotation.Nonnull final DeviceCategory body) {
-        return patch(body, null);
+    public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
+        put(body, null);
     }
     /**
-     * Update the navigation property deviceCategory in users
+     * Update the ref of navigation property deviceCategory in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeviceCategory}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
-    @jakarta.annotation.Nullable
-    public DeviceCategory patch(@jakarta.annotation.Nonnull final DeviceCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeviceCategory::createFromDiscriminatorValue);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Delete navigation property deviceCategory for users
+     * Delete ref of navigation property deviceCategory for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +105,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceCategory for users
+     * Delete ref of navigation property deviceCategory for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,30 +132,30 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceCategory in users
+     * Update the ref of navigation property deviceCategory in users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceCategory body) {
-        return toPatchRequestInformation(body, null);
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
+        return toPutRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceCategory in users
+     * Update the ref of navigation property deviceCategory in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
@@ -177,12 +163,12 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link DeviceCategoryRequestBuilder}
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DeviceCategoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public RefRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new DeviceCategoryRequestBuilder(rawUrl, requestAdapter);
+        return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -191,47 +177,15 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Device category
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters implements QueryParameters {
-        /**
-         * Expand related entities
-         */
-        @jakarta.annotation.Nullable
-        public String[] expand;
-        /**
-         * Select properties to be returned
-         */
-        @jakarta.annotation.Nullable
-        public String[] select;
-        /**
-         * Extracts the query parameters into a map for the URI template parsing.
-         * @return a {@link Map<String, Object>}
-         */
-        @jakarta.annotation.Nonnull
-        public Map<String, Object> toQueryParameters() {
-            final Map<String, Object> allQueryParams = new HashMap();
-            allQueryParams.put("%24expand", expand);
-            allQueryParams.put("%24select", select);
-            return allQueryParams;
-        }
-    }
-    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /**
-         * Request query parameters
-         */
-        @jakarta.annotation.Nullable
-        public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
+    public class PutRequestConfiguration extends BaseRequestConfiguration {
     }
 }
