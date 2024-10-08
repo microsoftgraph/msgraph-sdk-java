@@ -86,7 +86,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the recurrence property value. For recurring access reviews.  Not used in access requests.
+     * Gets the recurrence property value. The recurring access review pattern. Not used in access requests.
      * @return a {@link PatternedRecurrence}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the recurrence property value. For recurring access reviews.  Not used in access requests.
+     * Sets the recurrence property value. The recurring access review pattern. Not used in access requests.
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
