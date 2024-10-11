@@ -81,7 +81,7 @@ body:
       label: Configuration
       description: |
         Please provide more information on your SDK configuration:
-          * What OS and version, and what distro if applicable (Windows 10, Windows 11, MacOS Catalina, Ubuntu 22.04)?
+          * What OS and version, and what distro if applicable (Windows 10, Windows 11, macOS Catalina, Ubuntu 22.04)?
           * What is the architecture (x64, x86, ARM, ARM64)?
           * Do you know whether it is specific to that configuration?
       placeholder: |

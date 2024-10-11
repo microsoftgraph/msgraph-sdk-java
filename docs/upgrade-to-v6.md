@@ -4,7 +4,7 @@ This document provides a list of changes and upgrade considerations for the Micr
 
 ## Overview
 
-Version 6.1.0 of the Microsoft Graph Java SDK is based on the new [Kiota](https://github.com/microsoft/kiota) code generation tool. By using Kiota the SDK is now able to support a broader range of Microsoft Graph API enpoints while also being more intuitive. Furthermore, [Graph-Core](https://github.com/microsoftgraph/msgraph-sdk-java-core) has also been updated to v3 which provides a great amount of added functionality; this makes v6 of the SDK a significant upgrade from v5.
+Version 6.1.0 of the Microsoft Graph Java SDK is based on the new [Kiota](https://github.com/microsoft/kiota) code generation tool. By using Kiota the SDK is now able to support a broader range of Microsoft Graph API endpoints while also being more intuitive. Furthermore, [Graph-Core](https://github.com/microsoftgraph/msgraph-sdk-java-core) has also been updated to v3 which provides a great amount of added functionality; this makes v6 of the SDK a significant upgrade from v5.
 
 ## Table Of Contents
 
@@ -115,11 +115,11 @@ graphClient.directoryObjects().toPostRequestInformation(directoryObject);
 ### Removal of Async Suffix from Executor Methods
 
 The sdk no longer provides async methods for executing requests thus the async suffix has removed from executor methods. `postAsync()` is removed and now only `post()` is available, `getAsync()` is removed and only `get()`is available, etc.
-> If users wish to execute requests asynchronusly they may choose to wrap their calls in CompleteableFutures or a separate async workflow.   
+> If users wish to execute requests asynchronously they may choose to wrap their calls in CompleteableFutures or a separate async workflow.   
 
 ### Removal of `buildRequest()`
 
-In the previous version of the SDK the `buildRequest()` method call was neccessary when building and calling requests.
+In the previous version of the SDK the `buildRequest()` method call was necessary when building and calling requests.
 Previously a call to get the current user would look like the following: 
 ```java
 User me = graphClient.me().buildRequest().get();
@@ -227,7 +227,7 @@ MailFolderCollectionResponse mailFolders = graphClient.me().mailFolders().get(re
 
 ### Odata Function Parameters
 
-Passing function parameters to requests has changed in v6. The `FunctionOption` class, which extends the `Option` class, has been removed and is no longer used to define function parameters. Futhermore, function and action paramter classes, currently defined by classes with the suffix `ParameterSet`, have been removed. 
+Passing function parameters to requests has changed in v6. The `FunctionOption` class, which extends the `Option` class, has been removed and is no longer used to define function parameters. Futhermore, function and action parameter classes, currently defined by classes with the suffix `ParameterSet`, have been removed. 
 Previously a user would pass function parameters to a request as follows:
 ```java
 ReportRootGetMailboxUsageDetailParameterSet parameterSet = ReportRootGetMailboxUsageDetailParameterSet.newBuilder()

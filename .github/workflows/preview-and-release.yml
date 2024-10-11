@@ -1,4 +1,4 @@
-name: Maven Preview/Release and Github Release
+name: Maven Preview/Release and GitHub Release
 
 on:
   push:

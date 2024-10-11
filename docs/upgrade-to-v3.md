@@ -45,7 +45,7 @@ Due to historical reasons, the SDK provided two authentication provider interfac
 - Update the implementation to match the new interface.
 - Replace any reference to `com.microsoft.graph`.
 
-> Note: if your project implements its own authentication provider, you might want to review the list of providers available with Azure identity to review whether a custom provider is still required. If a custom provider is still required, you should extend `BaseAuthenticationProvider` which provides a method to check whether a spefic request should be authenticated based on its URL.
+> Note: if your project implements its own authentication provider, you might want to review the list of providers available with Azure identity to review whether a custom provider is still required. If a custom provider is still required, you should extend `BaseAuthenticationProvider` which provides a method to check whether a specific request should be authenticated based on its URL.
 
 ### Modern date and time API
 
@@ -86,7 +86,7 @@ To provide support for optional parameters for OData methods (actions, functions
 
 ### Futures vs Callbacks
 
-To provide a standard and modern way of executing requests asynchronuously to SDK users, the custom defined `ICallback` interface has been removed and the API now returns `CompletableFuture`. To upgrade your application do the following.
+To provide a standard and modern way of executing requests asynchronously to SDK users, the custom defined `ICallback` interface has been removed and the API now returns `CompletableFuture`. To upgrade your application do the following.
 
 - Replace any of the code built the following way
 

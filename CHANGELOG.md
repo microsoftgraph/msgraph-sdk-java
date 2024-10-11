@@ -569,7 +569,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Added members of type cast segment to administative units.
+- Added members of type cast segment to administrative units.
 
 ## [5.49.0] - 2023-03-14
 
@@ -623,7 +623,7 @@ All notable changes to this project will be documented in this file.
 - Include company portal link on notification template branding options.
 - JoinMeetingIdSettings on OnlineMeeting.
 - PartnerTenantType on Organization.
-- CommitedContainedApp on WindowsUniveralAppX
+- CommittedContainedApp on WindowsUniversalAppX
 - DevicesWithoutCompliancePolicyReport
 
 ## [5.43.0] - 2022-12-16
@@ -716,8 +716,8 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter.
-- Models and Requests returning or consuming a 'Report' model have been changed to return or cosume a java.io.InputStream. 
-- Fixed case where some intances of functionOptions were not being added to request options. 
+- Models and Requests returning or consuming a 'Report' model have been changed to return or consume a java.io.InputStream. 
+- Fixed case where some instances of functionOptions were not being added to request options. 
 - Fixed case where in some instances parameters weren't being added to request body. 
 
 ## [5.39.0] - 2022-10-20
@@ -819,7 +819,7 @@ All notable changes to this project will be documented in this file.
 
 - Generated v1.0 models and request builders using Typewriter.
 - Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests. 
-- Removed RestrictedSignIn model and related requets. 
+- Removed RestrictedSignIn model and related requests. 
 
 ## [5.34.0] - 2022-09-01
 
@@ -891,7 +891,7 @@ All notable changes to this project will be documented in this file.
 
 - Generated v1.0 models and request builders using Typewriter.
 - References to newly added models/requests added to current models/requests.
-- Example: Authentication model now has refrences to EmailAuthenticationMethod, PhoneAuthenticationMethod, SoftwareOathAuthenticationMethod models. 
+- Example: Authentication model now has references to EmailAuthenticationMethod, PhoneAuthenticationMethod, SoftwareOathAuthenticationMethod models. 
 - Example: AuthenticationRequestBuilder now references EmailAuthenticationMethodRequestBuilder, PhoneAuthenticationMethodRequestBuilder, and SoftwareOathAuthenticationMethodRequestBuilder. 
 
 ## [5.30.0] - 2022-07-05
@@ -918,7 +918,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - AssociatedTeamInfo model and related requests. 
-- ChannelDoesUserHaveAccessParameterSet models and related requets.
+- ChannelDoesUserHaveAccessParameterSet models and related requests.
 - SharedWithChannelTeamInfo model and related requests. 
 - TeamInfo model and related requests. 
 - ConversationMember requests. 
@@ -986,7 +986,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter.
-- Added refrences to the added models in related models and requests. 
+- Added references to the added models in related models and requests. 
 
 ## [5.23.0] - 2022-05-06
 
@@ -1001,7 +1001,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter.
-- Added refrences to the added models in related models and requests. 
+- Added references to the added models in related models and requests. 
 
 ## [5.22.0] - 2022-04-28
 
@@ -1013,7 +1013,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter.
-- PlannerCategroyDescriptions model. 
+- PlannerCategoryDescriptions model. 
 - PlannerTask model. 
 - TeamworkUserIdentityType model. 
 
@@ -1077,7 +1077,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - AccessPackageApprovalStage, TargetApplicationOwners, AllowedTargetScope, & TargetManager models.
-- AccessPackageAssignment(AprovalSettings, Policy, ReviewSettings, and etc) models.
+- AccessPackageAssignment(ApprovalSettings, Policy, ReviewSettings, and etc) models.
 - AccessPackageAssignment related requests. 
 
 ### Changed
@@ -1181,7 +1181,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter
-- Removed classes pertaining to eDiscovery as they were included prematurley. The API is not functional yet and will be added at a later time. 
+- Removed classes pertaining to eDiscovery as they were included prematurely. The API is not functional yet and will be added at a later time. 
 - Report API was broken, methods returning a report now return a java.io.InputStream. 
 
 ## [5.7.0] - 2021-11-09

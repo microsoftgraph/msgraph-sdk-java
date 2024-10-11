@@ -52,7 +52,7 @@ The recommended commit types used are:
  - **docs** for documentation updates e.g. ReadMe update or code documentation updates
  - **build** for build system changes (gradle updates, external dependency updates)
  - **ci** for CI configuration file changes e.g. updating a pipeline
- - **chore** for miscallaneous non-sdk changesin the repo e.g. removing an unused file
+ - **chore** for miscellaneous non-sdk changes in the repo e.g. removing an unused file
 
 Adding a footer with the prefix **BREAKING CHANGE:** will cause an increment of the _major_ version.
 
