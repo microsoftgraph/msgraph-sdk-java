@@ -569,7 +569,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Added members of type cast segment to administative units.
+- Added members of type cast segment to administrative units.
 
 ## [5.49.0] - 2023-03-14
 
