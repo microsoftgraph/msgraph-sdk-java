@@ -819,7 +819,7 @@ All notable changes to this project will be documented in this file.
 
 - Generated v1.0 models and request builders using Typewriter.
 - Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests. 
-- Removed RestrictedSignIn model and related requets. 
+- Removed RestrictedSignIn model and related requests. 
 
 ## [5.34.0] - 2022-09-01
 
@@ -918,7 +918,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - AssociatedTeamInfo model and related requests. 
-- ChannelDoesUserHaveAccessParameterSet models and related requets.
+- ChannelDoesUserHaveAccessParameterSet models and related requests.
 - SharedWithChannelTeamInfo model and related requests. 
 - TeamInfo model and related requests. 
 - ConversationMember requests. 
