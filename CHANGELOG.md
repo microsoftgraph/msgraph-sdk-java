@@ -1181,7 +1181,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter
-- Removed classes pertaining to eDiscovery as they were included prematurley. The API is not functional yet and will be added at a later time. 
+- Removed classes pertaining to eDiscovery as they were included prematurely. The API is not functional yet and will be added at a later time. 
 - Report API was broken, methods returning a report now return a java.io.InputStream. 
 
 ## [5.7.0] - 2021-11-09
