@@ -1077,7 +1077,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - AccessPackageApprovalStage, TargetApplicationOwners, AllowedTargetScope, & TargetManager models.
-- AccessPackageAssignment(AprovalSettings, Policy, ReviewSettings, and etc) models.
+- AccessPackageAssignment(ApprovalSettings, Policy, ReviewSettings, and etc) models.
 - AccessPackageAssignment related requests. 
 
 ### Changed
