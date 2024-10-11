@@ -227,7 +227,7 @@ MailFolderCollectionResponse mailFolders = graphClient.me().mailFolders().get(re
 
 ### Odata Function Parameters
 
-Passing function parameters to requests has changed in v6. The `FunctionOption` class, which extends the `Option` class, has been removed and is no longer used to define function parameters. Futhermore, function and action paramter classes, currently defined by classes with the suffix `ParameterSet`, have been removed. 
+Passing function parameters to requests has changed in v6. The `FunctionOption` class, which extends the `Option` class, has been removed and is no longer used to define function parameters. Futhermore, function and action parameter classes, currently defined by classes with the suffix `ParameterSet`, have been removed. 
 Previously a user would pass function parameters to a request as follows:
 ```java
 ReportRootGetMailboxUsageDetailParameterSet parameterSet = ReportRootGetMailboxUsageDetailParameterSet.newBuilder()
