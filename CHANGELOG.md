@@ -1013,7 +1013,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter.
-- PlannerCategroyDescriptions model. 
+- PlannerCategoryDescriptions model. 
 - PlannerTask model. 
 - TeamworkUserIdentityType model. 
 
