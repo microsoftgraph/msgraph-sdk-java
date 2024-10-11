@@ -115,7 +115,7 @@ graphClient.directoryObjects().toPostRequestInformation(directoryObject);
 ### Removal of Async Suffix from Executor Methods
 
 The sdk no longer provides async methods for executing requests thus the async suffix has removed from executor methods. `postAsync()` is removed and now only `post()` is available, `getAsync()` is removed and only `get()`is available, etc.
-> If users wish to execute requests asynchronusly they may choose to wrap their calls in CompleteableFutures or a separate async workflow.   
+> If users wish to execute requests asynchronously they may choose to wrap their calls in CompleteableFutures or a separate async workflow.   
 
 ### Removal of `buildRequest()`
 

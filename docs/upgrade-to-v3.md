@@ -86,7 +86,7 @@ To provide support for optional parameters for OData methods (actions, functions
 
 ### Futures vs Callbacks
 
-To provide a standard and modern way of executing requests asynchronuously to SDK users, the custom defined `ICallback` interface has been removed and the API now returns `CompletableFuture`. To upgrade your application do the following.
+To provide a standard and modern way of executing requests asynchronously to SDK users, the custom defined `ICallback` interface has been removed and the API now returns `CompletableFuture`. To upgrade your application do the following.
 
 - Replace any of the code built the following way
 
