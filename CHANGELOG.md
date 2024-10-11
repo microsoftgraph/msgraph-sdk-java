@@ -623,7 +623,7 @@ All notable changes to this project will be documented in this file.
 - Include company portal link on notification template branding options.
 - JoinMeetingIdSettings on OnlineMeeting.
 - PartnerTenantType on Organization.
-- CommittedContainedApp on WindowsUniveralAppX
+- CommittedContainedApp on WindowsUniversalAppX
 - DevicesWithoutCompliancePolicyReport
 
 ## [5.43.0] - 2022-12-16
