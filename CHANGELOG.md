@@ -717,7 +717,7 @@ All notable changes to this project will be documented in this file.
 
 - Generated v1.0 models and request builders using Typewriter.
 - Models and Requests returning or consuming a 'Report' model have been changed to return or consume a java.io.InputStream. 
-- Fixed case where some intances of functionOptions were not being added to request options. 
+- Fixed case where some instances of functionOptions were not being added to request options. 
 - Fixed case where in some instances parameters weren't being added to request body. 
 
 ## [5.39.0] - 2022-10-20
