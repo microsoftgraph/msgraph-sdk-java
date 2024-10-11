@@ -4,7 +4,7 @@ This document provides a list of changes and upgrade considerations for the Micr
 
 ## Overview
 
-Version 6.1.0 of the Microsoft Graph Java SDK is based on the new [Kiota](https://github.com/microsoft/kiota) code generation tool. By using Kiota the SDK is now able to support a broader range of Microsoft Graph API enpoints while also being more intuitive. Furthermore, [Graph-Core](https://github.com/microsoftgraph/msgraph-sdk-java-core) has also been updated to v3 which provides a great amount of added functionality; this makes v6 of the SDK a significant upgrade from v5.
+Version 6.1.0 of the Microsoft Graph Java SDK is based on the new [Kiota](https://github.com/microsoft/kiota) code generation tool. By using Kiota the SDK is now able to support a broader range of Microsoft Graph API endpoints while also being more intuitive. Furthermore, [Graph-Core](https://github.com/microsoftgraph/msgraph-sdk-java-core) has also been updated to v3 which provides a great amount of added functionality; this makes v6 of the SDK a significant upgrade from v5.
 
 ## Table Of Contents
 
