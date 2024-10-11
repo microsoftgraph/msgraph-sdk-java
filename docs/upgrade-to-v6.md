@@ -119,7 +119,7 @@ The sdk no longer provides async methods for executing requests thus the async s
 
 ### Removal of `buildRequest()`
 
-In the previous version of the SDK the `buildRequest()` method call was neccessary when building and calling requests.
+In the previous version of the SDK the `buildRequest()` method call was necessary when building and calling requests.
 Previously a call to get the current user would look like the following: 
 ```java
 User me = graphClient.me().buildRequest().get();
