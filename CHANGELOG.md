@@ -891,7 +891,7 @@ All notable changes to this project will be documented in this file.
 
 - Generated v1.0 models and request builders using Typewriter.
 - References to newly added models/requests added to current models/requests.
-- Example: Authentication model now has refrences to EmailAuthenticationMethod, PhoneAuthenticationMethod, SoftwareOathAuthenticationMethod models. 
+- Example: Authentication model now has references to EmailAuthenticationMethod, PhoneAuthenticationMethod, SoftwareOathAuthenticationMethod models. 
 - Example: AuthenticationRequestBuilder now references EmailAuthenticationMethodRequestBuilder, PhoneAuthenticationMethodRequestBuilder, and SoftwareOathAuthenticationMethodRequestBuilder. 
 
 ## [5.30.0] - 2022-07-05
@@ -986,7 +986,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter.
-- Added refrences to the added models in related models and requests. 
+- Added references to the added models in related models and requests. 
 
 ## [5.23.0] - 2022-05-06
 
@@ -1001,7 +1001,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter.
-- Added refrences to the added models in related models and requests. 
+- Added references to the added models in related models and requests. 
 
 ## [5.22.0] - 2022-04-28
 
