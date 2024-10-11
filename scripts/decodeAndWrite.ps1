@@ -5,7 +5,7 @@
 .Synopsis
     Decode the encoded string and write it to a local file. 
 .Description 
-    Recieves an encoded string value and decodes it using base64. 
+    Receives an encoded string value and decodes it using base64. 
     Write the new decoded string to a local file for later consumption. 
 .Parameter encodedValue
     The encoded string we wish to decode.
