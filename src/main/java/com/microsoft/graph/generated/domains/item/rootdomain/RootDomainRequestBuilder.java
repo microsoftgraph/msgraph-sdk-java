@@ -37,19 +37,21 @@ public class RootDomainRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/rootDomain{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get rootDomain from domains
+     * Get the root domain of a subdomain. This API returns a single object.
      * @return a {@link Domain}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-get-rootdomain?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Domain get() {
         return get(null);
     }
     /**
-     * Get rootDomain from domains
+     * Get the root domain of a subdomain. This API returns a single object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Domain}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-get-rootdomain?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Domain get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class RootDomainRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Domain::createFromDiscriminatorValue);
     }
     /**
-     * Get rootDomain from domains
+     * Get the root domain of a subdomain. This API returns a single object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class RootDomainRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get rootDomain from domains
+     * Get the root domain of a subdomain. This API returns a single object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class RootDomainRequestBuilder extends BaseRequestBuilder {
         return new RootDomainRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get rootDomain from domains
+     * Get the root domain of a subdomain. This API returns a single object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
