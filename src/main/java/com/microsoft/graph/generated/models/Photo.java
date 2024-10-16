@@ -103,7 +103,7 @@ public class Photo implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("focalLength", (n) -> { this.setFocalLength(n.getDoubleValue()); });
         deserializerMap.put("iso", (n) -> { this.setIso(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getIntegerValue()); });
+        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getDoubleValue()); });
         deserializerMap.put("takenDateTime", (n) -> { this.setTakenDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
     }
@@ -141,10 +141,10 @@ public class Photo implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
-     * @return a {@link Integer}
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
-    public Integer getOrientation() {
+    public Double getOrientation() {
         return this.backingStore.get("orientation");
     }
     /**
@@ -169,7 +169,7 @@ public class Photo implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeDoubleValue("focalLength", this.getFocalLength());
         writer.writeIntegerValue("iso", this.getIso());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeIntegerValue("orientation", this.getOrientation());
+        writer.writeDoubleValue("orientation", this.getOrientation());
         writer.writeOffsetDateTimeValue("takenDateTime", this.getTakenDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -248,7 +248,7 @@ public class Photo implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
      * @param value Value to set for the orientation property.
      */
-    public void setOrientation(@jakarta.annotation.Nullable final Integer value) {
+    public void setOrientation(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("orientation", value);
     }
     /**

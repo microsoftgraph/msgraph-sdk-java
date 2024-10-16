@@ -63,7 +63,7 @@ public class CollapseProperty implements AdditionalDataHolder, BackedModel, Pars
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("fields", (n) -> { this.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("limit", (n) -> { this.setLimit(n.getIntegerValue()); });
+        deserializerMap.put("limit", (n) -> { this.setLimit(n.getDoubleValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -77,10 +77,10 @@ public class CollapseProperty implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
-     * @return a {@link Integer}
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
-    public Integer getLimit() {
+    public Double getLimit() {
         return this.backingStore.get("limit");
     }
     /**
@@ -98,7 +98,7 @@ public class CollapseProperty implements AdditionalDataHolder, BackedModel, Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("fields", this.getFields());
-        writer.writeIntegerValue("limit", this.getLimit());
+        writer.writeDoubleValue("limit", this.getLimit());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -128,7 +128,7 @@ public class CollapseProperty implements AdditionalDataHolder, BackedModel, Pars
      * Sets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
      * @param value Value to set for the limit property.
      */
-    public void setLimit(@jakarta.annotation.Nullable final Integer value) {
+    public void setLimit(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("limit", value);
     }
     /**

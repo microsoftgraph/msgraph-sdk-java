@@ -105,18 +105,18 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the disc property value. The number of the disc this audio file came from.
-     * @return a {@link Integer}
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
-    public Integer getDisc() {
+    public Double getDisc() {
         return this.backingStore.get("disc");
     }
     /**
      * Gets the discCount property value. The total number of discs in this album.
-     * @return a {@link Integer}
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
-    public Integer getDiscCount() {
+    public Double getDiscCount() {
         return this.backingStore.get("discCount");
     }
     /**
@@ -140,8 +140,8 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("bitrate", (n) -> { this.setBitrate(n.getLongValue()); });
         deserializerMap.put("composers", (n) -> { this.setComposers(n.getStringValue()); });
         deserializerMap.put("copyright", (n) -> { this.setCopyright(n.getStringValue()); });
-        deserializerMap.put("disc", (n) -> { this.setDisc(n.getIntegerValue()); });
-        deserializerMap.put("discCount", (n) -> { this.setDiscCount(n.getIntegerValue()); });
+        deserializerMap.put("disc", (n) -> { this.setDisc(n.getDoubleValue()); });
+        deserializerMap.put("discCount", (n) -> { this.setDiscCount(n.getDoubleValue()); });
         deserializerMap.put("duration", (n) -> { this.setDuration(n.getLongValue()); });
         deserializerMap.put("genre", (n) -> { this.setGenre(n.getStringValue()); });
         deserializerMap.put("hasDrm", (n) -> { this.setHasDrm(n.getBooleanValue()); });
@@ -229,8 +229,8 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeLongValue("bitrate", this.getBitrate());
         writer.writeStringValue("composers", this.getComposers());
         writer.writeStringValue("copyright", this.getCopyright());
-        writer.writeIntegerValue("disc", this.getDisc());
-        writer.writeIntegerValue("discCount", this.getDiscCount());
+        writer.writeDoubleValue("disc", this.getDisc());
+        writer.writeDoubleValue("discCount", this.getDiscCount());
         writer.writeLongValue("duration", this.getDuration());
         writer.writeStringValue("genre", this.getGenre());
         writer.writeBooleanValue("hasDrm", this.getHasDrm());
@@ -303,14 +303,14 @@ public class Audio implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the disc property value. The number of the disc this audio file came from.
      * @param value Value to set for the disc property.
      */
-    public void setDisc(@jakarta.annotation.Nullable final Integer value) {
+    public void setDisc(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("disc", value);
     }
     /**
      * Sets the discCount property value. The total number of discs in this album.
      * @param value Value to set for the discCount property.
      */
-    public void setDiscCount(@jakarta.annotation.Nullable final Integer value) {
+    public void setDiscCount(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("discCount", value);
     }
     /**
