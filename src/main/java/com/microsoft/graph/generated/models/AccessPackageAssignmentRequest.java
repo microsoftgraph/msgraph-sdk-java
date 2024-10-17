@@ -110,7 +110,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("requestType");
     }
     /**
-     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set.
+     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
      * @return a {@link EntitlementManagementSchedule}
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("requestType", value);
     }
     /**
-     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set.
+     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {

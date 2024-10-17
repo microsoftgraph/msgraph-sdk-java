@@ -36,7 +36,7 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
         return deserializerMap;
     }
     /**
-     * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This property lets us define potential handler configurations per-event.
      * @return a {@link OnAuthenticationMethodLoadStartHandler}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
         writer.writeObjectValue("handler", this.getHandler());
     }
     /**
-     * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This property lets us define potential handler configurations per-event.
      * @param value Value to set for the handler property.
      */
     public void setHandler(@jakarta.annotation.Nullable final OnAuthenticationMethodLoadStartHandler value) {

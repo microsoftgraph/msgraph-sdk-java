@@ -36,7 +36,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions/{customAuthenticationExtension%2Did}/validateAuthenticationConfiguration", rawUrl);
     }
     /**
-     * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
+     * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension object, which can represent one of the following derived types:
      * @return a {@link AuthenticationConfigurationValidation}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-validateauthenticationconfiguration?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
         return post(null);
     }
     /**
-     * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
+     * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension object, which can represent one of the following derived types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationConfigurationValidation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationConfigurationValidation::createFromDiscriminatorValue);
     }
     /**
-     * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
+     * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension object, which can represent one of the following derived types:
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
         return toPostRequestInformation(null);
     }
     /**
-     * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
+     * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension object, which can represent one of the following derived types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

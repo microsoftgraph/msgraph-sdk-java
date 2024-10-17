@@ -37,7 +37,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/identity/authenticationEventListeners/{authenticationEventListener%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an authenticationEventListener object.
+     * Delete an authenticationEventListener object. The following derived types are currently supported.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         delete(null);
     }
     /**
-     * Delete an authenticationEventListener object.
+     * Delete an authenticationEventListener object. The following derived types are currently supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-delete?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      * @return a {@link AuthenticationEventListener}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-get?view=graph-rest-1.0">Find more info here</a>
@@ -67,7 +67,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventListener}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventListener::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. The following derived types are currently supported.
      * @param body The request body
      * @return a {@link AuthenticationEventListener}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -92,7 +92,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventListener}
@@ -108,7 +108,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventListener::createFromDiscriminatorValue);
     }
     /**
-     * Delete an authenticationEventListener object.
+     * Delete an authenticationEventListener object. The following derived types are currently supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an authenticationEventListener object.
+     * Delete an authenticationEventListener object. The following derived types are currently supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +128,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +148,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. The following derived types are currently supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +188,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

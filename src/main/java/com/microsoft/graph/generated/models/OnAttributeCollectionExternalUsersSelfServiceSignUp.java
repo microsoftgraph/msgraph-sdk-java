@@ -26,7 +26,7 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
         return new OnAttributeCollectionExternalUsersSelfServiceSignUp();
     }
     /**
-     * Gets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
+     * Gets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign-up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
      * @return a {@link AuthenticationAttributeCollectionPage}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
         writer.writeCollectionOfObjectValues("attributes", this.getAttributes());
     }
     /**
-     * Sets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
+     * Sets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign-up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
      * @param value Value to set for the attributeCollectionPage property.
      */
     public void setAttributeCollectionPage(@jakarta.annotation.Nullable final AuthenticationAttributeCollectionPage value) {
