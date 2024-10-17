@@ -34,7 +34,7 @@ public class Drive extends BaseItem implements Parsable {
         return this.backingStore.get("bundles");
     }
     /**
-     * Gets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+     * Gets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives return personal. OneDrive for Business returns business. SharePoint document libraries return documentLibrary. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class Drive extends BaseItem implements Parsable {
         return this.backingStore.get("special");
     }
     /**
-     * Gets the system property value. If present, indicates that this is a system-managed drive. Read-only.
+     * Gets the system property value. If present, indicates that it's a system-managed drive. Read-only.
      * @return a {@link SystemFacet}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class Drive extends BaseItem implements Parsable {
         this.backingStore.set("bundles", value);
     }
     /**
-     * Sets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+     * Sets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives return personal. OneDrive for Business returns business. SharePoint document libraries return documentLibrary. Read-only.
      * @param value Value to set for the driveType property.
      */
     public void setDriveType(@jakarta.annotation.Nullable final String value) {
@@ -223,7 +223,7 @@ public class Drive extends BaseItem implements Parsable {
         this.backingStore.set("special", value);
     }
     /**
-     * Sets the system property value. If present, indicates that this is a system-managed drive. Read-only.
+     * Sets the system property value. If present, indicates that it's a system-managed drive. Read-only.
      * @param value Value to set for the system property.
      */
     public void setSystem(@jakarta.annotation.Nullable final SystemFacet value) {

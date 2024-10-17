@@ -87,7 +87,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         deserializerMap.put("macAddress", (n) -> { this.setMacAddress(n.getStringValue()); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
-        deserializerMap.put("nics", (n) -> { this.setNics(n.getObjectValue(NicEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("nics", (n) -> { this.setNics(n.getCollectionOfObjectValues(NicEvidence::createFromDiscriminatorValue)); });
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
         deserializerMap.put("owners", (n) -> { this.setOwners(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("protocols", (n) -> { this.setProtocols(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -182,10 +182,10 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * Gets the nics property value. The nics property
-     * @return a {@link NicEvidence}
+     * @return a {@link java.util.List<NicEvidence>}
      */
     @jakarta.annotation.Nullable
-    public NicEvidence getNics() {
+    public java.util.List<NicEvidence> getNics() {
         return this.backingStore.get("nics");
     }
     /**
@@ -290,7 +290,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("macAddress", this.getMacAddress());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("model", this.getModel());
-        writer.writeObjectValue("nics", this.getNics());
+        writer.writeCollectionOfObjectValues("nics", this.getNics());
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
         writer.writeCollectionOfPrimitiveValues("owners", this.getOwners());
         writer.writeCollectionOfPrimitiveValues("protocols", this.getProtocols());
@@ -411,7 +411,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
      * Sets the nics property value. The nics property
      * @param value Value to set for the nics property.
      */
-    public void setNics(@jakarta.annotation.Nullable final NicEvidence value) {
+    public void setNics(@jakarta.annotation.Nullable final java.util.List<NicEvidence> value) {
         this.backingStore.set("nics", value);
     }
     /**

@@ -156,7 +156,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("passwordValidityPeriodInDays");
     }
     /**
-     * Gets the rootDomain property value. The rootDomain property
+     * Gets the rootDomain property value. Root domain of a subdomain. Read-only, Nullable. Supports $expand.
      * @return a {@link Domain}
      */
     @jakarta.annotation.Nullable
@@ -313,7 +313,7 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("passwordValidityPeriodInDays", value);
     }
     /**
-     * Sets the rootDomain property value. The rootDomain property
+     * Sets the rootDomain property value. Root domain of a subdomain. Read-only, Nullable. Supports $expand.
      * @param value Value to set for the rootDomain property.
      */
     public void setRootDomain(@jakarta.annotation.Nullable final Domain value) {
