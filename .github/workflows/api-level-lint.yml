@@ -9,7 +9,7 @@ on:
 
 jobs:
   lint-api-level:
-    runs-on: [self-hosted, 1ES.Pool=1es-ubuntu-msgraph-sdk-java-memory-latest]
+    runs-on: [self-hosted, 1ES.Pool=1es-ubuntu-msgraph-sdk-java-memory-latest-m]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
