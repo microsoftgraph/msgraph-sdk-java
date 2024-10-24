@@ -79,23 +79,23 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a multitenant organization.
+     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param body The request body
      * @return a {@link MultiTenantOrganization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization patch(@jakarta.annotation.Nonnull final MultiTenantOrganization body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a multitenant organization.
+     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization patch(@jakarta.annotation.Nonnull final MultiTenantOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +126,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a multitenant organization.
+     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -135,7 +135,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a multitenant organization.
+     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
