@@ -6,8 +6,8 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PurgeType implements ValuedEnum {
     Recoverable("recoverable"),
-    PermanentlyDeleted("permanentlyDeleted"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    PermanentlyDelete("permanentlyDelete");
     public final String value;
     PurgeType(final String value) {
         this.value = value;
@@ -19,8 +19,8 @@ public enum PurgeType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "recoverable": return Recoverable;
-            case "permanentlyDeleted": return PermanentlyDeleted;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "permanentlyDelete": return PermanentlyDelete;
             default: return null;
         }
     }

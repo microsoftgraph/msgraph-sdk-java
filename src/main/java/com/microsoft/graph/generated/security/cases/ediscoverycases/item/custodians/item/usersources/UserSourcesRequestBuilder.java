@@ -60,7 +60,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/userSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      * @return a {@link UserSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -111,7 +111,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSource::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -165,7 +165,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return new UserSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
