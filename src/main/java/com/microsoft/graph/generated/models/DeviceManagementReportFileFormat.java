@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Possible values for the file format of a report.
+ * Possible values for the file format of a report to be exported.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementReportFileFormat implements ValuedEnum {

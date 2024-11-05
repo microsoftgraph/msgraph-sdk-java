@@ -19,6 +19,7 @@ import com.microsoft.graph.devicemanagement.reports.getpolicynoncompliancereport
 import com.microsoft.graph.devicemanagement.reports.getpolicynoncompliancesummaryreport.GetPolicyNonComplianceSummaryReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getreportfilters.GetReportFiltersRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getsettingnoncompliancereport.GetSettingNonComplianceReportRequestBuilder;
+import com.microsoft.graph.devicemanagement.reports.retrievedeviceappinstallationstatusreport.RetrieveDeviceAppInstallationStatusReportRequestBuilder;
 import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -190,6 +191,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetSettingNonComplianceReportRequestBuilder getSettingNonComplianceReport() {
         return new GetSettingNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveDeviceAppInstallationStatusReport method.
+     * @return a {@link RetrieveDeviceAppInstallationStatusReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveDeviceAppInstallationStatusReportRequestBuilder retrieveDeviceAppInstallationStatusReport() {
+        return new RetrieveDeviceAppInstallationStatusReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.

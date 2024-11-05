@@ -2,6 +2,7 @@ package com.microsoft.graph.employeeexperience.communities.item;
 
 import com.microsoft.graph.employeeexperience.communities.item.group.GroupRequestBuilder;
 import com.microsoft.graph.employeeexperience.communities.item.owners.OwnersRequestBuilder;
+import com.microsoft.graph.employeeexperience.communities.item.ownerswithuserprincipalname.OwnersWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.models.Community;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -97,6 +98,16 @@ public class CommunityItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Community::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the owners property of the microsoft.graph.community entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link OwnersWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OwnersWithUserPrincipalNameRequestBuilder ownersWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new OwnersWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * Update the properties of an existing Viva Engage community.

@@ -64,7 +64,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("filter");
     }
     /**
-     * Gets the format property value. Possible values for the file format of a report.
+     * Gets the format property value. Possible values for the file format of a report to be exported.
      * @return a {@link DeviceManagementReportFileFormat}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         this.backingStore.set("filter", value);
     }
     /**
-     * Sets the format property value. Possible values for the file format of a report.
+     * Sets the format property value. Possible values for the file format of a report to be exported.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final DeviceManagementReportFileFormat value) {

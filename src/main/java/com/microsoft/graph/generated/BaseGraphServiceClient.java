@@ -74,6 +74,7 @@ import com.microsoft.graph.teamstemplates.TeamsTemplatesRequestBuilder;
 import com.microsoft.graph.teamwork.TeamworkRequestBuilder;
 import com.microsoft.graph.tenantrelationships.TenantRelationshipsRequestBuilder;
 import com.microsoft.graph.users.UsersRequestBuilder;
+import com.microsoft.graph.userswithuserprincipalname.UsersWithUserPrincipalNameRequestBuilder;
 import com.microsoft.kiota.ApiClientBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
@@ -719,5 +720,15 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     public ServicePrincipalsWithAppIdRequestBuilder servicePrincipalsWithAppId(@jakarta.annotation.Nonnull final String appId) {
         Objects.requireNonNull(appId);
         return new ServicePrincipalsWithAppIdRequestBuilder(pathParameters, requestAdapter, appId);
+    }
+    /**
+     * Provides operations to manage the collection of user entities.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link UsersWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UsersWithUserPrincipalNameRequestBuilder usersWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new UsersWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
 }

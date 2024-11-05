@@ -37,18 +37,18 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/assignments/{managedEBookAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a iosVppEBookAssignment.
+     * Deletes a managedEBookAssignment.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a iosVppEBookAssignment.
+     * Deletes a managedEBookAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +57,21 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the managedEBookAssignment object.
+     * Read properties and relationships of the iosVppEBookAssignment object.
      * @return a {@link ManagedEBookAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBookAssignment get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedEBookAssignment object.
+     * Read properties and relationships of the iosVppEBookAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedEBookAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBookAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +81,23 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedEBookAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a managedEBookAssignment object.
+     * Update the properties of a iosVppEBookAssignment object.
      * @param body The request body
      * @return a {@link ManagedEBookAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBookAssignment patch(@jakarta.annotation.Nonnull final ManagedEBookAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a managedEBookAssignment object.
+     * Update the properties of a iosVppEBookAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedEBookAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedEBookAssignment patch(@jakarta.annotation.Nonnull final ManagedEBookAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +108,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedEBookAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a iosVppEBookAssignment.
+     * Deletes a managedEBookAssignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a iosVppEBookAssignment.
+     * Deletes a managedEBookAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +128,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedEBookAssignment object.
+     * Read properties and relationships of the iosVppEBookAssignment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedEBookAssignment object.
+     * Read properties and relationships of the iosVppEBookAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +148,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of a managedEBookAssignment object.
+     * Update the properties of a iosVppEBookAssignment object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a managedEBookAssignment object.
+     * Update the properties of a iosVppEBookAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +188,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedEBookAssignment object.
+     * Read properties and relationships of the iosVppEBookAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

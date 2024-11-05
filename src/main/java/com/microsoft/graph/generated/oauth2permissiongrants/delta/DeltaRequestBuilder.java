@@ -36,7 +36,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/oauth2PermissionGrants/delta(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For details, see Using delta query.
+     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-delta?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For details, see Using delta query.
+     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeltaGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For details, see Using delta query.
+     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For details, see Using delta query.
+     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +90,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return new DeltaRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For details, see Using delta query.
+     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

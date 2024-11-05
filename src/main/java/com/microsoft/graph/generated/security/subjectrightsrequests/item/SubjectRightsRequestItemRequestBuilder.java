@@ -3,7 +3,9 @@ package com.microsoft.graph.security.subjectrightsrequests.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.security.subjectrightsrequests.item.approvers.ApproversRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.item.approverswithuserprincipalname.ApproversWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.security.subjectrightsrequests.item.collaborators.CollaboratorsRequestBuilder;
+import com.microsoft.graph.security.subjectrightsrequests.item.collaboratorswithuserprincipalname.CollaboratorsWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.security.subjectrightsrequests.item.getfinalattachment.GetFinalAttachmentRequestBuilder;
 import com.microsoft.graph.security.subjectrightsrequests.item.getfinalreport.GetFinalReportRequestBuilder;
 import com.microsoft.graph.security.subjectrightsrequests.item.notes.NotesRequestBuilder;
@@ -73,6 +75,26 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the approvers property of the microsoft.graph.subjectRightsRequest entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link ApproversWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ApproversWithUserPrincipalNameRequestBuilder approversWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new ApproversWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
+    }
+    /**
+     * Provides operations to manage the collaborators property of the microsoft.graph.subjectRightsRequest entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link CollaboratorsWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CollaboratorsWithUserPrincipalNameRequestBuilder collaboratorsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new CollaboratorsWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * Instantiates a new {@link SubjectRightsRequestItemRequestBuilder} and sets the default values.

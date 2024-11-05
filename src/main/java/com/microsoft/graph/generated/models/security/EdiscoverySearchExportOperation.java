@@ -26,7 +26,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return new EdiscoverySearchExportOperation();
     }
     /**
-     * Gets the additionalOptions property value. The additionalOptions property
+     * Gets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue.
      * @return a {@link EnumSet<AdditionalOptions>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("additionalOptions");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the export by the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of export provided by the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the exportCriteria property value. The exportCriteria property
+     * Gets the exportCriteria property value. Items to be included in the export. The possible values are: searchHits, partiallyIndexed, unknownFutureValue.
      * @return a {@link EnumSet<ExportCriteria>}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("exportCriteria");
     }
     /**
-     * Gets the exportFileMetadata property value. The exportFileMetadata property
+     * Gets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size.
      * @return a {@link java.util.List<ExportFileMetadata>}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("exportFileMetadata");
     }
     /**
-     * Gets the exportFormat property value. The exportFormat property
+     * Gets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml, unknownFutureValue.
      * @return a {@link ExportFormat}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("exportFormat");
     }
     /**
-     * Gets the exportLocation property value. The exportLocation property
+     * Gets the exportLocation property value. Location scope for partially indexed items. You can choose to include partially indexed items only in responsive locations with search hits or in all targeted locations. The possible values are: responsiveLocations, nonresponsiveLocations, unknownFutureValue.
      * @return a {@link EnumSet<ExportLocation>}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("exportLocation");
     }
     /**
-     * Gets the exportSingleItems property value. The exportSingleItems property
+     * Gets the exportSingleItems property value. Indicates whether to export single items.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return deserializerMap;
     }
     /**
-     * Gets the search property value. The search property
+     * Gets the search property value. The eDiscovery searches under each case.
      * @return a {@link EdiscoverySearch}
      */
     @jakarta.annotation.Nullable
@@ -133,63 +133,63 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         writer.writeObjectValue("search", this.getSearch());
     }
     /**
-     * Sets the additionalOptions property value. The additionalOptions property
+     * Sets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue.
      * @param value Value to set for the additionalOptions property.
      */
     public void setAdditionalOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalOptions> value) {
         this.backingStore.set("additionalOptions", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the export by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of export provided by the user.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the exportCriteria property value. The exportCriteria property
+     * Sets the exportCriteria property value. Items to be included in the export. The possible values are: searchHits, partiallyIndexed, unknownFutureValue.
      * @param value Value to set for the exportCriteria property.
      */
     public void setExportCriteria(@jakarta.annotation.Nullable final EnumSet<ExportCriteria> value) {
         this.backingStore.set("exportCriteria", value);
     }
     /**
-     * Sets the exportFileMetadata property value. The exportFileMetadata property
+     * Sets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size.
      * @param value Value to set for the exportFileMetadata property.
      */
     public void setExportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ExportFileMetadata> value) {
         this.backingStore.set("exportFileMetadata", value);
     }
     /**
-     * Sets the exportFormat property value. The exportFormat property
+     * Sets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml, unknownFutureValue.
      * @param value Value to set for the exportFormat property.
      */
     public void setExportFormat(@jakarta.annotation.Nullable final ExportFormat value) {
         this.backingStore.set("exportFormat", value);
     }
     /**
-     * Sets the exportLocation property value. The exportLocation property
+     * Sets the exportLocation property value. Location scope for partially indexed items. You can choose to include partially indexed items only in responsive locations with search hits or in all targeted locations. The possible values are: responsiveLocations, nonresponsiveLocations, unknownFutureValue.
      * @param value Value to set for the exportLocation property.
      */
     public void setExportLocation(@jakarta.annotation.Nullable final EnumSet<ExportLocation> value) {
         this.backingStore.set("exportLocation", value);
     }
     /**
-     * Sets the exportSingleItems property value. The exportSingleItems property
+     * Sets the exportSingleItems property value. Indicates whether to export single items.
      * @param value Value to set for the exportSingleItems property.
      */
     public void setExportSingleItems(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("exportSingleItems", value);
     }
     /**
-     * Sets the search property value. The search property
+     * Sets the search property value. The eDiscovery searches under each case.
      * @param value Value to set for the search property.
      */
     public void setSearch(@jakarta.annotation.Nullable final EdiscoverySearch value) {

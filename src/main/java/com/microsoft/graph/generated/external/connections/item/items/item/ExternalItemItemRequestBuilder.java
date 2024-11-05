@@ -99,23 +99,23 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalItem::createFromDiscriminatorValue);
     }
     /**
-     * Create a new externalItem object.
+     * Update the properties of an externalItem object.
      * @param body The request body
      * @return a {@link ExternalItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-put-items?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalItem put(@jakarta.annotation.Nonnull final ExternalItem body) {
         return put(body, null);
     }
     /**
-     * Create a new externalItem object.
+     * Update the properties of an externalItem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-put-items?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalItem put(@jakarta.annotation.Nonnull final ExternalItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -166,7 +166,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new externalItem object.
+     * Update the properties of an externalItem object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +175,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Create a new externalItem object.
+     * Update the properties of an externalItem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

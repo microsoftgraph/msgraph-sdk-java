@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item;
 
 import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.assignedusers.AssignedUsersRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.assigneduserswithuserprincipalname.AssignedUsersWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +29,16 @@ public class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public AssignedUsersRequestBuilder assignedUsers() {
         return new AssignedUsersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the assignedUsers property of the microsoft.graph.cloudPcProvisioningPolicyAssignment entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link AssignedUsersWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AssignedUsersWithUserPrincipalNameRequestBuilder assignedUsersWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new AssignedUsersWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * Instantiates a new {@link CloudPcProvisioningPolicyAssignmentItemRequestBuilder} and sets the default values.

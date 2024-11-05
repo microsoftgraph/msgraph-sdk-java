@@ -69,9 +69,10 @@ public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("hideBotAfterEscalation", (n) -> { this.setHideBotAfterEscalation(n.getBooleanValue()); });
         deserializerMap.put("isContentSharingNotificationEnabled", (n) -> { this.setIsContentSharingNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isDeltaRosterEnabled", (n) -> { this.setIsDeltaRosterEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -92,6 +93,14 @@ public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("isContentSharingNotificationEnabled");
     }
     /**
+     * Gets the isDeltaRosterEnabled property value. Indicates whether delta roster is enabled for the call.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDeltaRosterEnabled() {
+        return this.backingStore.get("isDeltaRosterEnabled");
+    }
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return a {@link String}
      */
@@ -107,6 +116,7 @@ public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable 
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hideBotAfterEscalation", this.getHideBotAfterEscalation());
         writer.writeBooleanValue("isContentSharingNotificationEnabled", this.getIsContentSharingNotificationEnabled());
+        writer.writeBooleanValue("isDeltaRosterEnabled", this.getIsDeltaRosterEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -138,6 +148,13 @@ public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setIsContentSharingNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isContentSharingNotificationEnabled", value);
+    }
+    /**
+     * Sets the isDeltaRosterEnabled property value. Indicates whether delta roster is enabled for the call.
+     * @param value Value to set for the isDeltaRosterEnabled property.
+     */
+    public void setIsDeltaRosterEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDeltaRosterEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
