@@ -35,18 +35,20 @@ public class MicrosoftGraphSecurityExportReportRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/microsoft.graph.security.exportReport", rawUrl);
     }
     /**
-     * Invoke action exportReport
+     * Export an item report from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-exportreport?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ExportReportPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action exportReport
+     * Export an item report from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-exportreport?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ExportReportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -56,7 +58,7 @@ public class MicrosoftGraphSecurityExportReportRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action exportReport
+     * Export an item report from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +67,7 @@ public class MicrosoftGraphSecurityExportReportRequestBuilder extends BaseReques
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action exportReport
+     * Export an item report from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

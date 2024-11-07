@@ -56,12 +56,21 @@ public class TeamsAppAuthorization implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
+     * Gets the clientAppId property value. The registration ID of the Microsoft Entra app ID associated with the teamsApp.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getClientAppId() {
+        return this.backingStore.get("clientAppId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("clientAppId", (n) -> { this.setClientAppId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("requiredPermissionSet", (n) -> { this.setRequiredPermissionSet(n.getObjectValue(TeamsAppPermissionSet::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -88,6 +97,7 @@ public class TeamsAppAuthorization implements AdditionalDataHolder, BackedModel,
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("clientAppId", this.getClientAppId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("requiredPermissionSet", this.getRequiredPermissionSet());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +116,13 @@ public class TeamsAppAuthorization implements AdditionalDataHolder, BackedModel,
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the clientAppId property value. The registration ID of the Microsoft Entra app ID associated with the teamsApp.
+     * @param value Value to set for the clientAppId property.
+     */
+    public void setClientAppId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("clientAppId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

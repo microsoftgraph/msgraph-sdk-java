@@ -69,9 +69,18 @@ public class InstantiatePostRequestBody implements AdditionalDataHolder, BackedM
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("serviceManagementReference", (n) -> { this.setServiceManagementReference(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the serviceManagementReference property value. The serviceManagementReference property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getServiceManagementReference() {
+        return this.backingStore.get("serviceManagementReference");
     }
     /**
      * Serializes information the current object
@@ -80,6 +89,7 @@ public class InstantiatePostRequestBody implements AdditionalDataHolder, BackedM
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("serviceManagementReference", this.getServiceManagementReference());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +113,12 @@ public class InstantiatePostRequestBody implements AdditionalDataHolder, BackedM
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the serviceManagementReference property value. The serviceManagementReference property
+     * @param value Value to set for the serviceManagementReference property.
+     */
+    public void setServiceManagementReference(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("serviceManagementReference", value);
     }
 }

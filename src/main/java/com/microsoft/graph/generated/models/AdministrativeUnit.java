@@ -85,7 +85,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("members");
     }
     /**
-     * Gets the membershipRule property value. The membershipRule property
+     * Gets the membershipRule property value. The dynamic membership rule for the administrative unit. For more information about the rules you can use for dynamic administrative units and dynamic groups, see Manage rules for dynamic membership groups in Microsoft Entra ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("membershipRule");
     }
     /**
-     * Gets the membershipRuleProcessingState property value. The membershipRuleProcessingState property
+     * Gets the membershipRuleProcessingState property value. Controls whether the dynamic membership rule is actively processed. Set to On to activate the dynamic membership rule, or Paused to stop updating membership dynamically.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("membershipRuleProcessingState");
     }
     /**
-     * Gets the membershipType property value. The membershipType property
+     * Gets the membershipType property value. Indicates the membership type for the administrative unit. The possible values are: dynamic, assigned. If not set, the default value is null and the default behavior is assigned.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("scopedRoleMembers");
     }
     /**
-     * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set, the default value is null and the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -178,21 +178,21 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the membershipRule property value. The membershipRule property
+     * Sets the membershipRule property value. The dynamic membership rule for the administrative unit. For more information about the rules you can use for dynamic administrative units and dynamic groups, see Manage rules for dynamic membership groups in Microsoft Entra ID.
      * @param value Value to set for the membershipRule property.
      */
     public void setMembershipRule(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("membershipRule", value);
     }
     /**
-     * Sets the membershipRuleProcessingState property value. The membershipRuleProcessingState property
+     * Sets the membershipRuleProcessingState property value. Controls whether the dynamic membership rule is actively processed. Set to On to activate the dynamic membership rule, or Paused to stop updating membership dynamically.
      * @param value Value to set for the membershipRuleProcessingState property.
      */
     public void setMembershipRuleProcessingState(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("membershipRuleProcessingState", value);
     }
     /**
-     * Sets the membershipType property value. The membershipType property
+     * Sets the membershipType property value. Indicates the membership type for the administrative unit. The possible values are: dynamic, assigned. If not set, the default value is null and the default behavior is assigned.
      * @param value Value to set for the membershipType property.
      */
     public void setMembershipType(@jakarta.annotation.Nullable final String value) {
@@ -206,7 +206,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this.backingStore.set("scopedRoleMembers", value);
     }
     /**
-     * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set, the default value is null and the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      * @param value Value to set for the visibility property.
      */
     public void setVisibility(@jakarta.annotation.Nullable final String value) {

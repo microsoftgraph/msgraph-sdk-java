@@ -3,7 +3,9 @@ package com.microsoft.graph.privacy.subjectrightsrequests.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.approvers.ApproversRequestBuilder;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.approverswithuserprincipalname.ApproversWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.collaborators.CollaboratorsRequestBuilder;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.collaboratorswithuserprincipalname.CollaboratorsWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.getfinalattachment.GetFinalAttachmentRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.getfinalreport.GetFinalReportRequestBuilder;
 import com.microsoft.graph.privacy.subjectrightsrequests.item.notes.NotesRequestBuilder;
@@ -91,6 +93,32 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the approvers property of the microsoft.graph.subjectRightsRequest entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link ApproversWithUserPrincipalNameRequestBuilder}
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public ApproversWithUserPrincipalNameRequestBuilder approversWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new ApproversWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
+    }
+    /**
+     * Provides operations to manage the collaborators property of the microsoft.graph.subjectRightsRequest entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link CollaboratorsWithUserPrincipalNameRequestBuilder}
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public CollaboratorsWithUserPrincipalNameRequestBuilder collaboratorsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new CollaboratorsWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * Instantiates a new {@link SubjectRightsRequestItemRequestBuilder} and sets the default values.
