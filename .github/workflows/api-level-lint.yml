@@ -18,7 +18,7 @@ jobs:
           java-version: 21
           cache: gradle
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3.2.1
+        uses: android-actions/setup-android@v3.2.2
       - name: Add execution right to the script
         run: chmod +x gradlew
         working-directory: ./android
