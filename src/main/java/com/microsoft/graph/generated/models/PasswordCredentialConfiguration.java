@@ -71,7 +71,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         return deserializerMap;
     }
     /**
-     * Gets the maxLifetime property value. Value that can be used as the maximum number for setting password expiration time in days, hours, minutes or seconds. Defined in ISO 8601 format for Durations. For example, 'P4DT12H30M5S' represents a duration of four days, twelve hours, thirty minutes, and five seconds. This property is required when restriction type is set to passwordLifetime.
+     * Gets the maxLifetime property value. String value that indicates the maximum lifetime for password expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to passwordLifetime.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the restrictForAppsCreatedAfterDateTime property value. Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
+     * Gets the restrictForAppsCreatedAfterDateTime property value. Specifies the date from which the policy restriction applies to newly created applications. For existing applications, the enforcement date can be retroactively applied.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         return this.backingStore.get("restrictForAppsCreatedAfterDateTime");
     }
     /**
-     * Gets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     * Gets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime, customPasswordAddition, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @return a {@link AppCredentialRestrictionType}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         this.backingStore = value;
     }
     /**
-     * Sets the maxLifetime property value. Value that can be used as the maximum number for setting password expiration time in days, hours, minutes or seconds. Defined in ISO 8601 format for Durations. For example, 'P4DT12H30M5S' represents a duration of four days, twelve hours, thirty minutes, and five seconds. This property is required when restriction type is set to passwordLifetime.
+     * Sets the maxLifetime property value. String value that indicates the maximum lifetime for password expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to passwordLifetime.
      * @param value Value to set for the maxLifetime property.
      */
     public void setMaxLifetime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
@@ -144,14 +144,14 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the restrictForAppsCreatedAfterDateTime property value. Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
+     * Sets the restrictForAppsCreatedAfterDateTime property value. Specifies the date from which the policy restriction applies to newly created applications. For existing applications, the enforcement date can be retroactively applied.
      * @param value Value to set for the restrictForAppsCreatedAfterDateTime property.
      */
     public void setRestrictForAppsCreatedAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("restrictForAppsCreatedAfterDateTime", value);
     }
     /**
-     * Sets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     * Sets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime, customPasswordAddition, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param value Value to set for the restrictionType property.
      */
     public void setRestrictionType(@jakarta.annotation.Nullable final AppCredentialRestrictionType value) {
