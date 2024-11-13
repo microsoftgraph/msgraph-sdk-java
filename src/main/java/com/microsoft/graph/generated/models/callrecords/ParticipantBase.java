@@ -35,7 +35,7 @@ public class ParticipantBase extends Entity implements Parsable {
         return new ParticipantBase();
     }
     /**
-     * Gets the administrativeUnitInfos property value. The administrativeUnitInfos property
+     * Gets the administrativeUnitInfos property value. List of administrativeUnitInfo objects for the call participant.
      * @return a {@link java.util.List<AdministrativeUnitInfo>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ParticipantBase extends Entity implements Parsable {
         writer.writeObjectValue("identity", this.getIdentity());
     }
     /**
-     * Sets the administrativeUnitInfos property value. The administrativeUnitInfos property
+     * Sets the administrativeUnitInfos property value. List of administrativeUnitInfo objects for the call participant.
      * @param value Value to set for the administrativeUnitInfos property.
      */
     public void setAdministrativeUnitInfos(@jakarta.annotation.Nullable final java.util.List<AdministrativeUnitInfo> value) {

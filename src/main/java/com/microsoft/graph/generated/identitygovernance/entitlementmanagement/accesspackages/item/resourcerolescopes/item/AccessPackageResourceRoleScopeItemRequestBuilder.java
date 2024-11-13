@@ -55,7 +55,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/resourceRoleScopes/{accessPackageResourceRoleScope%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * Remove an accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         delete(null);
     }
     /**
-     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * Remove an accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
@@ -122,7 +122,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceRoleScope::createFromDiscriminatorValue);
     }
     /**
-     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * Remove an accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * Remove an accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

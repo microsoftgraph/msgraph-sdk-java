@@ -67,7 +67,7 @@ public class AdministrativeUnitInfo implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. Unique identifier for the administrative unit.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class AdministrativeUnitInfo implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. Unique identifier for the administrative unit.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

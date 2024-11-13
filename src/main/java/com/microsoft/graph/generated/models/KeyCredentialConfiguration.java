@@ -71,7 +71,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the maxLifetime property value. Value that can be used as the maximum duration in days, hours, minutes, or seconds from the date of key creation, for which the key is valid.  Defined in ISO 8601 format for Durations. For example, P4DT12H30M5S represents a duration of four days, twelve hours, thirty minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
+     * Gets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the restrictForAppsCreatedAfterDateTime property value. Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
+     * Gets the restrictForAppsCreatedAfterDateTime property value. Specifies the date from which the policy restriction applies to newly created applications. For existing applications, the enforcement date can be retroactively applied.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         return this.backingStore.get("restrictForAppsCreatedAfterDateTime");
     }
     /**
-     * Gets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     * Gets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @return a {@link AppKeyCredentialRestrictionType}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the maxLifetime property value. Value that can be used as the maximum duration in days, hours, minutes, or seconds from the date of key creation, for which the key is valid.  Defined in ISO 8601 format for Durations. For example, P4DT12H30M5S represents a duration of four days, twelve hours, thirty minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
+     * Sets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
      * @param value Value to set for the maxLifetime property.
      */
     public void setMaxLifetime(@jakarta.annotation.Nullable final PeriodAndDuration value) {
@@ -144,14 +144,14 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the restrictForAppsCreatedAfterDateTime property value. Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
+     * Sets the restrictForAppsCreatedAfterDateTime property value. Specifies the date from which the policy restriction applies to newly created applications. For existing applications, the enforcement date can be retroactively applied.
      * @param value Value to set for the restrictForAppsCreatedAfterDateTime property.
      */
     public void setRestrictForAppsCreatedAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("restrictForAppsCreatedAfterDateTime", value);
     }
     /**
-     * Sets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     * Sets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param value Value to set for the restrictionType property.
      */
     public void setRestrictionType(@jakarta.annotation.Nullable final AppKeyCredentialRestrictionType value) {
