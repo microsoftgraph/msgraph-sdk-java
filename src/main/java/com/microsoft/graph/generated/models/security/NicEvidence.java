@@ -38,7 +38,7 @@ public class NicEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. The current IP address of the NIC.
      * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class NicEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("ipAddress");
     }
     /**
-     * Gets the macAddress property value. The macAddress property
+     * Gets the macAddress property value. The MAC address of the NIC.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class NicEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("macAddress");
     }
     /**
-     * Gets the vlans property value. The vlans property
+     * Gets the vlans property value. The current virtual local area networks of the NIC.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class NicEvidence extends AlertEvidence implements Parsable {
         writer.writeCollectionOfPrimitiveValues("vlans", this.getVlans());
     }
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. The current IP address of the NIC.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final IpEvidence value) {
         this.backingStore.set("ipAddress", value);
     }
     /**
-     * Sets the macAddress property value. The macAddress property
+     * Sets the macAddress property value. The MAC address of the NIC.
      * @param value Value to set for the macAddress property.
      */
     public void setMacAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("macAddress", value);
     }
     /**
-     * Sets the vlans property value. The vlans property
+     * Sets the vlans property value. The current virtual local area networks of the NIC.
      * @param value Value to set for the vlans property.
      */
     public void setVlans(@jakarta.annotation.Nullable final java.util.List<String> value) {

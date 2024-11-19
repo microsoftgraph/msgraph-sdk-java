@@ -124,7 +124,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User post(@jakarta.annotation.Nonnull final User body) {
@@ -136,7 +136,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-user-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User post(@jakarta.annotation.Nonnull final User body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
