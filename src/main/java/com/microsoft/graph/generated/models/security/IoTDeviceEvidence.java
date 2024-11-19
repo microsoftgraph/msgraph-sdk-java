@@ -26,7 +26,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return new IoTDeviceEvidence();
     }
     /**
-     * Gets the deviceId property value. The deviceId property
+     * Gets the deviceId property value. The device ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("deviceId");
     }
     /**
-     * Gets the deviceName property value. The deviceName property
+     * Gets the deviceName property value. The friendly name of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("deviceName");
     }
     /**
-     * Gets the devicePageLink property value. The devicePageLink property
+     * Gets the devicePageLink property value. The URL to the device page in the IoT Defender portal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("devicePageLink");
     }
     /**
-     * Gets the deviceSubType property value. The deviceSubType property
+     * Gets the deviceSubType property value. The device subtype.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("deviceSubType");
     }
     /**
-     * Gets the deviceType property value. The deviceType property
+     * Gets the deviceType property value. The type of the device. For example, 'temperature sensor,' 'freezer,' 'wind turbine,' and so on.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the importance property value. The importance property
+     * Gets the importance property value. The importance level for the IoT device. Possible values are low, normal, high, and unknownFutureValue.
      * @return a {@link IoTDeviceImportanceType}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("importance");
     }
     /**
-     * Gets the ioTHub property value. The ioTHub property
+     * Gets the ioTHub property value. The azureResourceEvidence entity that represents the IoT Hub that the device belongs to.
      * @return a {@link AzureResourceEvidence}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("ioTHub");
     }
     /**
-     * Gets the ioTSecurityAgentId property value. The ioTSecurityAgentId property
+     * Gets the ioTSecurityAgentId property value. The ID of the Azure Security Center for the IoT agent that is running on the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("ioTSecurityAgentId");
     }
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. The current IP address of the device.
      * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("ipAddress");
     }
     /**
-     * Gets the isAuthorized property value. The isAuthorized property
+     * Gets the isAuthorized property value. Indicates whether the device classified as an authorized device.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("isAuthorized");
     }
     /**
-     * Gets the isProgramming property value. The isProgramming property
+     * Gets the isProgramming property value. Indicates whether the device classified as a programming device.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("isProgramming");
     }
     /**
-     * Gets the isScanner property value. The isScanner property
+     * Gets the isScanner property value. Indicates whether the device classified as a scanner.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("isScanner");
     }
     /**
-     * Gets the macAddress property value. The macAddress property
+     * Gets the macAddress property value. The MAC address of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("macAddress");
     }
     /**
-     * Gets the manufacturer property value. The manufacturer property
+     * Gets the manufacturer property value. The manufacturer of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("manufacturer");
     }
     /**
-     * Gets the model property value. The model property
+     * Gets the model property value. The model of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("model");
     }
     /**
-     * Gets the nics property value. The nics property
+     * Gets the nics property value. The current network interface controllers on the device.
      * @return a {@link java.util.List<NicEvidence>}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("nics");
     }
     /**
-     * Gets the operatingSystem property value. The operatingSystem property
+     * Gets the operatingSystem property value. The operating system the device is running.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -197,7 +197,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("operatingSystem");
     }
     /**
-     * Gets the owners property value. The owners property
+     * Gets the owners property value. The owners for the device.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("owners");
     }
     /**
-     * Gets the protocols property value. The protocols property
+     * Gets the protocols property value. The list of protocols that the device supports.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -213,7 +213,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("protocols");
     }
     /**
-     * Gets the purdueLayer property value. The purdueLayer property
+     * Gets the purdueLayer property value. The Purdue Layer of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -221,7 +221,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("purdueLayer");
     }
     /**
-     * Gets the sensor property value. The sensor property
+     * Gets the sensor property value. The sensor that monitors the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -229,7 +229,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("sensor");
     }
     /**
-     * Gets the serialNumber property value. The serialNumber property
+     * Gets the serialNumber property value. The serial number of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -237,7 +237,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("serialNumber");
     }
     /**
-     * Gets the site property value. The site property
+     * Gets the site property value. The site location of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -245,7 +245,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("site");
     }
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. The source (microsoft/vendor) of the device entity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -253,7 +253,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the sourceRef property value. The sourceRef property
+     * Gets the sourceRef property value. A URL reference to the source item where the device is managed.
      * @return a {@link UrlEvidence}
      */
     @jakarta.annotation.Nullable
@@ -261,7 +261,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("sourceRef");
     }
     /**
-     * Gets the zone property value. The zone property
+     * Gets the zone property value. The zone location of the device within a site.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -303,182 +303,182 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("zone", this.getZone());
     }
     /**
-     * Sets the deviceId property value. The deviceId property
+     * Sets the deviceId property value. The device ID.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceId", value);
     }
     /**
-     * Sets the deviceName property value. The deviceName property
+     * Sets the deviceName property value. The friendly name of the device.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceName", value);
     }
     /**
-     * Sets the devicePageLink property value. The devicePageLink property
+     * Sets the devicePageLink property value. The URL to the device page in the IoT Defender portal.
      * @param value Value to set for the devicePageLink property.
      */
     public void setDevicePageLink(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("devicePageLink", value);
     }
     /**
-     * Sets the deviceSubType property value. The deviceSubType property
+     * Sets the deviceSubType property value. The device subtype.
      * @param value Value to set for the deviceSubType property.
      */
     public void setDeviceSubType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceSubType", value);
     }
     /**
-     * Sets the deviceType property value. The deviceType property
+     * Sets the deviceType property value. The type of the device. For example, 'temperature sensor,' 'freezer,' 'wind turbine,' and so on.
      * @param value Value to set for the deviceType property.
      */
     public void setDeviceType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceType", value);
     }
     /**
-     * Sets the importance property value. The importance property
+     * Sets the importance property value. The importance level for the IoT device. Possible values are low, normal, high, and unknownFutureValue.
      * @param value Value to set for the importance property.
      */
     public void setImportance(@jakarta.annotation.Nullable final IoTDeviceImportanceType value) {
         this.backingStore.set("importance", value);
     }
     /**
-     * Sets the ioTHub property value. The ioTHub property
+     * Sets the ioTHub property value. The azureResourceEvidence entity that represents the IoT Hub that the device belongs to.
      * @param value Value to set for the ioTHub property.
      */
     public void setIoTHub(@jakarta.annotation.Nullable final AzureResourceEvidence value) {
         this.backingStore.set("ioTHub", value);
     }
     /**
-     * Sets the ioTSecurityAgentId property value. The ioTSecurityAgentId property
+     * Sets the ioTSecurityAgentId property value. The ID of the Azure Security Center for the IoT agent that is running on the device.
      * @param value Value to set for the ioTSecurityAgentId property.
      */
     public void setIoTSecurityAgentId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ioTSecurityAgentId", value);
     }
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. The current IP address of the device.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final IpEvidence value) {
         this.backingStore.set("ipAddress", value);
     }
     /**
-     * Sets the isAuthorized property value. The isAuthorized property
+     * Sets the isAuthorized property value. Indicates whether the device classified as an authorized device.
      * @param value Value to set for the isAuthorized property.
      */
     public void setIsAuthorized(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAuthorized", value);
     }
     /**
-     * Sets the isProgramming property value. The isProgramming property
+     * Sets the isProgramming property value. Indicates whether the device classified as a programming device.
      * @param value Value to set for the isProgramming property.
      */
     public void setIsProgramming(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isProgramming", value);
     }
     /**
-     * Sets the isScanner property value. The isScanner property
+     * Sets the isScanner property value. Indicates whether the device classified as a scanner.
      * @param value Value to set for the isScanner property.
      */
     public void setIsScanner(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isScanner", value);
     }
     /**
-     * Sets the macAddress property value. The macAddress property
+     * Sets the macAddress property value. The MAC address of the device.
      * @param value Value to set for the macAddress property.
      */
     public void setMacAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("macAddress", value);
     }
     /**
-     * Sets the manufacturer property value. The manufacturer property
+     * Sets the manufacturer property value. The manufacturer of the device.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("manufacturer", value);
     }
     /**
-     * Sets the model property value. The model property
+     * Sets the model property value. The model of the device.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("model", value);
     }
     /**
-     * Sets the nics property value. The nics property
+     * Sets the nics property value. The current network interface controllers on the device.
      * @param value Value to set for the nics property.
      */
     public void setNics(@jakarta.annotation.Nullable final java.util.List<NicEvidence> value) {
         this.backingStore.set("nics", value);
     }
     /**
-     * Sets the operatingSystem property value. The operatingSystem property
+     * Sets the operatingSystem property value. The operating system the device is running.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operatingSystem", value);
     }
     /**
-     * Sets the owners property value. The owners property
+     * Sets the owners property value. The owners for the device.
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("owners", value);
     }
     /**
-     * Sets the protocols property value. The protocols property
+     * Sets the protocols property value. The list of protocols that the device supports.
      * @param value Value to set for the protocols property.
      */
     public void setProtocols(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("protocols", value);
     }
     /**
-     * Sets the purdueLayer property value. The purdueLayer property
+     * Sets the purdueLayer property value. The Purdue Layer of the device.
      * @param value Value to set for the purdueLayer property.
      */
     public void setPurdueLayer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("purdueLayer", value);
     }
     /**
-     * Sets the sensor property value. The sensor property
+     * Sets the sensor property value. The sensor that monitors the device.
      * @param value Value to set for the sensor property.
      */
     public void setSensor(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sensor", value);
     }
     /**
-     * Sets the serialNumber property value. The serialNumber property
+     * Sets the serialNumber property value. The serial number of the device.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("serialNumber", value);
     }
     /**
-     * Sets the site property value. The site property
+     * Sets the site property value. The site location of the device.
      * @param value Value to set for the site property.
      */
     public void setSite(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("site", value);
     }
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The source (microsoft/vendor) of the device entity.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the sourceRef property value. The sourceRef property
+     * Sets the sourceRef property value. A URL reference to the source item where the device is managed.
      * @param value Value to set for the sourceRef property.
      */
     public void setSourceRef(@jakarta.annotation.Nullable final UrlEvidence value) {
         this.backingStore.set("sourceRef", value);
     }
     /**
-     * Sets the zone property value. The zone property
+     * Sets the zone property value. The zone location of the device within a site.
      * @param value Value to set for the zone property.
      */
     public void setZone(@jakarta.annotation.Nullable final String value) {
