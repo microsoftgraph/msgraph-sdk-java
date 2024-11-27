@@ -60,7 +60,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/townhalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @return a {@link VirtualEventTownhallCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventTownhallCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -109,7 +109,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventTownhall::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +163,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return new TownhallsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

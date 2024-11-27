@@ -73,7 +73,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @return a {@link VirtualEventTownhall}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventtownhall-get?view=graph-rest-1.0">Find more info here</a>
@@ -83,7 +83,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventTownhall}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -97,7 +97,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventTownhall::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a virtualEventTownhall object.
+     * Update the properties of a virtualEventTownhall object. Only the Organizer and Co-organizer can make changes to a townhall event.
      * @param body The request body
      * @return a {@link VirtualEventTownhall}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -108,7 +108,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a virtualEventTownhall object.
+     * Update the properties of a virtualEventTownhall object. Only the Organizer and Co-organizer can make changes to a townhall event.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventTownhall}
@@ -144,7 +144,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +152,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -164,7 +164,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a virtualEventTownhall object.
+     * Update the properties of a virtualEventTownhall object. Only the Organizer and Co-organizer can make changes to a townhall event.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -173,7 +173,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a virtualEventTownhall object.
+     * Update the properties of a virtualEventTownhall object. Only the Organizer and Co-organizer can make changes to a townhall event.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -204,7 +204,7 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

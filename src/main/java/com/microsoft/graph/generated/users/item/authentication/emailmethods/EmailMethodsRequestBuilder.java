@@ -82,7 +82,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method. Self-service operations aren't supported.
      * @param body The request body
      * @return a {@link EmailAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -93,7 +93,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method. Self-service operations aren't supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmailAuthenticationMethod}
@@ -129,7 +129,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method. Self-service operations aren't supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +138,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method. Self-service operations aren't supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
