@@ -63,11 +63,12 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(AppCredentialRestrictionType::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AppManagementRestrictionState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -103,6 +104,14 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         return this.backingStore.get("restrictionType");
     }
     /**
+     * Gets the state property value. The state property
+     * @return a {@link AppManagementRestrictionState}
+     */
+    @jakarta.annotation.Nullable
+    public AppManagementRestrictionState getState() {
+        return this.backingStore.get("state");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -112,6 +121,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restrictForAppsCreatedAfterDateTime", this.getRestrictForAppsCreatedAfterDateTime());
         writer.writeEnumValue("restrictionType", this.getRestrictionType());
+        writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -156,5 +166,12 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
      */
     public void setRestrictionType(@jakarta.annotation.Nullable final AppCredentialRestrictionType value) {
         this.backingStore.set("restrictionType", value);
+    }
+    /**
+     * Sets the state property value. The state property
+     * @param value Value to set for the state property.
+     */
+    public void setState(@jakarta.annotation.Nullable final AppManagementRestrictionState value) {
+        this.backingStore.set("state", value);
     }
 }

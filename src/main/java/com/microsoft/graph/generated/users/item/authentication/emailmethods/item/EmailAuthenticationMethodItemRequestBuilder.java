@@ -79,7 +79,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Update a user's email address represented by an emailAuthenticationMethod object.
+     * Update a user's email address represented by an emailAuthenticationMethod object. Self-service operations aren't supported.
      * @param body The request body
      * @return a {@link EmailAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -90,7 +90,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return patch(body, null);
     }
     /**
-     * Update a user's email address represented by an emailAuthenticationMethod object.
+     * Update a user's email address represented by an emailAuthenticationMethod object. Self-service operations aren't supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmailAuthenticationMethod}
@@ -146,7 +146,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update a user's email address represented by an emailAuthenticationMethod object.
+     * Update a user's email address represented by an emailAuthenticationMethod object. Self-service operations aren't supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +155,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a user's email address represented by an emailAuthenticationMethod object.
+     * Update a user's email address represented by an emailAuthenticationMethod object. Self-service operations aren't supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

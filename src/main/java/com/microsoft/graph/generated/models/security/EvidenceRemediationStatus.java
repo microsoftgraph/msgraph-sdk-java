@@ -10,7 +10,13 @@ public enum EvidenceRemediationStatus implements ValuedEnum {
     Prevented("prevented"),
     Blocked("blocked"),
     NotFound("notFound"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Active("active"),
+    PendingApproval("pendingApproval"),
+    Declined("declined"),
+    Unremediated("unremediated"),
+    Running("running"),
+    PartiallyRemediated("partiallyRemediated");
     public final String value;
     EvidenceRemediationStatus(final String value) {
         this.value = value;
@@ -27,6 +33,12 @@ public enum EvidenceRemediationStatus implements ValuedEnum {
             case "blocked": return Blocked;
             case "notFound": return NotFound;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "active": return Active;
+            case "pendingApproval": return PendingApproval;
+            case "declined": return Declined;
+            case "unremediated": return Unremediated;
+            case "running": return Running;
+            case "partiallyRemediated": return PartiallyRemediated;
             default: return null;
         }
     }
