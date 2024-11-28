@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.22.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.21.0...v6.22.0) (2024-11-28)
+
+
+### Features
+
+* **generation:** update request builders and models ([de6f298](https://github.com/microsoftgraph/msgraph-sdk-java/commit/de6f298f69a9db3d9118d934dc4bf6da0b41406b))
+
 ## [6.21.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.20.0...v6.21.0) (2024-11-20)
 
 
