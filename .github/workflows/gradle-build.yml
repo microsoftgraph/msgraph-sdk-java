@@ -103,7 +103,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: echo "BRANCH=$(gh release list -L 1 --json tagName --jq '.[0] | .tagName')" >> $GITHUB_ENV
       - name: Download Last Successful Build
-        uses: dawidd6/action-download-artifact@v6
+        uses: dawidd6/action-download-artifact@v7
         with:
           workflow: preview-and-release.yml
           workflow_conclusion: success
