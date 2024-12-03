@@ -93,7 +93,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the servicePrincipalFilter property value. The servicePrincipalFilter property
+     * Gets the servicePrincipalFilter property value. Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
      * @return a {@link ConditionalAccessFilter}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the servicePrincipalFilter property value. The servicePrincipalFilter property
+     * Sets the servicePrincipalFilter property value. Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
      * @param value Value to set for the servicePrincipalFilter property.
      */
     public void setServicePrincipalFilter(@jakarta.annotation.Nullable final ConditionalAccessFilter value) {

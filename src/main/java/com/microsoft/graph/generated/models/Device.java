@@ -99,7 +99,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("deviceVersion");
     }
     /**
-     * Gets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
+     * Gets the displayName property value. The display name for the device. Maximum length is 256 characters. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -457,7 +457,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("deviceVersion", value);
     }
     /**
-     * Sets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
+     * Sets the displayName property value. The display name for the device. Maximum length is 256 characters. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

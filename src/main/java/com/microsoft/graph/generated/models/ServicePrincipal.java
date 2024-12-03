@@ -59,7 +59,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("appDescription");
     }
     /**
-     * Gets the appDisplayName property value. The display name exposed by the associated application.
+     * Gets the appDisplayName property value. The display name exposed by the associated application. Maximum length is 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -592,7 +592,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("appDescription", value);
     }
     /**
-     * Sets the appDisplayName property value. The display name exposed by the associated application.
+     * Sets the appDisplayName property value. The display name exposed by the associated application. Maximum length is 256 characters.
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
