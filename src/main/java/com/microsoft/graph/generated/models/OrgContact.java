@@ -59,7 +59,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this.backingStore.get("directReports");
     }
     /**
-     * Gets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
+     * Gets the displayName property value. Display name for this organizational contact. Maximum length is 256 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -262,7 +262,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this.backingStore.set("directReports", value);
     }
     /**
-     * Sets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
+     * Sets the displayName property value. Display name for this organizational contact. Maximum length is 256 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

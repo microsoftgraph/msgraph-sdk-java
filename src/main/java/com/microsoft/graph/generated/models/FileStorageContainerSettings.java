@@ -61,10 +61,20 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("isItemVersioningEnabled", (n) -> { this.setIsItemVersioningEnabled(n.getBooleanValue()); });
         deserializerMap.put("isOcrEnabled", (n) -> { this.setIsOcrEnabled(n.getBooleanValue()); });
+        deserializerMap.put("itemMajorVersionLimit", (n) -> { this.setItemMajorVersionLimit(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsItemVersioningEnabled() {
+        return this.backingStore.get("isItemVersioningEnabled");
     }
     /**
      * Gets the isOcrEnabled property value. Indicates whether Optical Character Recognition (OCR) is enabled for the container. The default value is false. When set to true, OCR extraction is performed for new and updated documents of supported document types, and the extracted fields in the metadata of the document enable end-user search and search-driven solutions. When set to false, existing OCR metadata is not impacted. Optional. Read-write.
@@ -73,6 +83,14 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nullable
     public Boolean getIsOcrEnabled() {
         return this.backingStore.get("isOcrEnabled");
+    }
+    /**
+     * Gets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getItemMajorVersionLimit() {
+        return this.backingStore.get("itemMajorVersionLimit");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +106,9 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("isItemVersioningEnabled", this.getIsItemVersioningEnabled());
         writer.writeBooleanValue("isOcrEnabled", this.getIsOcrEnabled());
+        writer.writeIntegerValue("itemMajorVersionLimit", this.getItemMajorVersionLimit());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -108,11 +128,25 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
+     * Sets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * @param value Value to set for the isItemVersioningEnabled property.
+     */
+    public void setIsItemVersioningEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isItemVersioningEnabled", value);
+    }
+    /**
      * Sets the isOcrEnabled property value. Indicates whether Optical Character Recognition (OCR) is enabled for the container. The default value is false. When set to true, OCR extraction is performed for new and updated documents of supported document types, and the extracted fields in the metadata of the document enable end-user search and search-driven solutions. When set to false, existing OCR metadata is not impacted. Optional. Read-write.
      * @param value Value to set for the isOcrEnabled property.
      */
     public void setIsOcrEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isOcrEnabled", value);
+    }
+    /**
+     * Sets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * @param value Value to set for the itemMajorVersionLimit property.
+     */
+    public void setItemMajorVersionLimit(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("itemMajorVersionLimit", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
