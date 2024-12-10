@@ -26,7 +26,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return new OpenShift();
     }
     /**
-     * Gets the draftOpenShift property value. An unpublished open shift.
+     * Gets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they're shared.
      * @return a {@link OpenShiftItem}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
+     * Gets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the sharedOpenShift property value. A published open shift.
+     * Gets the sharedOpenShift property value. The shared version of this openShift that is viewable by both employees and managers.
      * @return a {@link OpenShiftItem}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         writer.writeObjectValue("sharedOpenShift", this.getSharedOpenShift());
     }
     /**
-     * Sets the draftOpenShift property value. An unpublished open shift.
+     * Sets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they're shared.
      * @param value Value to set for the draftOpenShift property.
      */
     public void setDraftOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
         this.backingStore.set("draftOpenShift", value);
     }
     /**
-     * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
+     * Sets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.
      * @param value Value to set for the schedulingGroupId property.
      */
     public void setSchedulingGroupId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the sharedOpenShift property value. A published open shift.
+     * Sets the sharedOpenShift property value. The shared version of this openShift that is viewable by both employees and managers.
      * @param value Value to set for the sharedOpenShift property.
      */
     public void setSharedOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {

@@ -57,7 +57,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("applications");
     }
     /**
-     * Gets the authenticationFlows property value. The authenticationFlows property
+     * Gets the authenticationFlows property value. Authentication flows included in the policy scope.
      * @return a {@link ConditionalAccessAuthenticationFlows}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("clientApplications");
     }
     /**
-     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
+     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
      * @return a {@link java.util.List<ConditionalAccessClientApp>}
      */
     @jakarta.annotation.Nullable
@@ -218,7 +218,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         this.backingStore.set("applications", value);
     }
     /**
-     * Sets the authenticationFlows property value. The authenticationFlows property
+     * Sets the authenticationFlows property value. Authentication flows included in the policy scope.
      * @param value Value to set for the authenticationFlows property.
      */
     public void setAuthenticationFlows(@jakarta.annotation.Nullable final ConditionalAccessAuthenticationFlows value) {
@@ -240,7 +240,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         this.backingStore.set("clientApplications", value);
     }
     /**
-     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
+     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
      * @param value Value to set for the clientAppTypes property.
      */
     public void setClientAppTypes(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessClientApp> value) {
