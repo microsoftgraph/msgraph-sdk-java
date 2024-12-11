@@ -26,7 +26,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         return new TimeOff();
     }
     /**
-     * Gets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
+     * Gets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it's visible to team members. Required.
      * @return a {@link TimeOffItem}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
+     * Sets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it's visible to team members. Required.
      * @param value Value to set for the draftTimeOff property.
      */
     public void setDraftTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
