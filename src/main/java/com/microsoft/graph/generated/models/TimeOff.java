@@ -41,9 +41,18 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("draftTimeOff", (n) -> { this.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isStagedForDeletion", (n) -> { this.setIsStagedForDeletion(n.getBooleanValue()); });
         deserializerMap.put("sharedTimeOff", (n) -> { this.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isStagedForDeletion property value. The timeOff is marked for deletion, a process that is finalized when the schedule is shared.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsStagedForDeletion() {
+        return this.backingStore.get("isStagedForDeletion");
     }
     /**
      * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Updates to the sharedTimeOff property send notifications to users in the Teams client. Required.
@@ -69,6 +78,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("draftTimeOff", this.getDraftTimeOff());
+        writer.writeBooleanValue("isStagedForDeletion", this.getIsStagedForDeletion());
         writer.writeObjectValue("sharedTimeOff", this.getSharedTimeOff());
         writer.writeStringValue("userId", this.getUserId());
     }
@@ -78,6 +88,13 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     public void setDraftTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
         this.backingStore.set("draftTimeOff", value);
+    }
+    /**
+     * Sets the isStagedForDeletion property value. The timeOff is marked for deletion, a process that is finalized when the schedule is shared.
+     * @param value Value to set for the isStagedForDeletion property.
+     */
+    public void setIsStagedForDeletion(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isStagedForDeletion", value);
     }
     /**
      * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Updates to the sharedTimeOff property send notifications to users in the Teams client. Required.

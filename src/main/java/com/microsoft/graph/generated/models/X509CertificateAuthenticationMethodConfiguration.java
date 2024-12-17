@@ -42,6 +42,14 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         return this.backingStore.get("certificateUserBindings");
     }
     /**
+     * Gets the crlValidationConfiguration property value. The crlValidationConfiguration property
+     * @return a {@link X509CertificateCRLValidationConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public X509CertificateCRLValidationConfiguration getCrlValidationConfiguration() {
+        return this.backingStore.get("crlValidationConfiguration");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -50,6 +58,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationModeConfiguration", (n) -> { this.setAuthenticationModeConfiguration(n.getObjectValue(X509CertificateAuthenticationModeConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("certificateUserBindings", (n) -> { this.setCertificateUserBindings(n.getCollectionOfObjectValues(X509CertificateUserBinding::createFromDiscriminatorValue)); });
+        deserializerMap.put("crlValidationConfiguration", (n) -> { this.setCrlValidationConfiguration(n.getObjectValue(X509CertificateCRLValidationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -70,6 +79,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         super.serialize(writer);
         writer.writeObjectValue("authenticationModeConfiguration", this.getAuthenticationModeConfiguration());
         writer.writeCollectionOfObjectValues("certificateUserBindings", this.getCertificateUserBindings());
+        writer.writeObjectValue("crlValidationConfiguration", this.getCrlValidationConfiguration());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
     }
     /**
@@ -85,6 +95,13 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     public void setCertificateUserBindings(@jakarta.annotation.Nullable final java.util.List<X509CertificateUserBinding> value) {
         this.backingStore.set("certificateUserBindings", value);
+    }
+    /**
+     * Sets the crlValidationConfiguration property value. The crlValidationConfiguration property
+     * @param value Value to set for the crlValidationConfiguration property.
+     */
+    public void setCrlValidationConfiguration(@jakarta.annotation.Nullable final X509CertificateCRLValidationConfiguration value) {
+        this.backingStore.set("crlValidationConfiguration", value);
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.

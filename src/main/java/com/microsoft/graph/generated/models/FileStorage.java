@@ -33,6 +33,14 @@ public class FileStorage extends Entity implements Parsable {
         return this.backingStore.get("containers");
     }
     /**
+     * Gets the deletedContainers property value. The deletedContainers property
+     * @return a {@link java.util.List<FileStorageContainer>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<FileStorageContainer> getDeletedContainers() {
+        return this.backingStore.get("deletedContainers");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -40,6 +48,7 @@ public class FileStorage extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("containers", (n) -> { this.setContainers(n.getCollectionOfObjectValues(FileStorageContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("deletedContainers", (n) -> { this.setDeletedContainers(n.getCollectionOfObjectValues(FileStorageContainer::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -50,6 +59,7 @@ public class FileStorage extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("containers", this.getContainers());
+        writer.writeCollectionOfObjectValues("deletedContainers", this.getDeletedContainers());
     }
     /**
      * Sets the containers property value. The containers property
@@ -57,5 +67,12 @@ public class FileStorage extends Entity implements Parsable {
      */
     public void setContainers(@jakarta.annotation.Nullable final java.util.List<FileStorageContainer> value) {
         this.backingStore.set("containers", value);
+    }
+    /**
+     * Sets the deletedContainers property value. The deletedContainers property
+     * @param value Value to set for the deletedContainers property.
+     */
+    public void setDeletedContainers(@jakarta.annotation.Nullable final java.util.List<FileStorageContainer> value) {
+        this.backingStore.set("deletedContainers", value);
     }
 }

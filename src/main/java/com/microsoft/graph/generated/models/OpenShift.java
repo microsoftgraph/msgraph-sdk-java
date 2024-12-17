@@ -41,9 +41,18 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("draftOpenShift", (n) -> { this.setDraftOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isStagedForDeletion", (n) -> { this.setIsStagedForDeletion(n.getBooleanValue()); });
         deserializerMap.put("schedulingGroupId", (n) -> { this.setSchedulingGroupId(n.getStringValue()); });
         deserializerMap.put("sharedOpenShift", (n) -> { this.setSharedOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isStagedForDeletion property value. The openShift is marked for deletion, a process that is finalized when the schedule is shared.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsStagedForDeletion() {
+        return this.backingStore.get("isStagedForDeletion");
     }
     /**
      * Gets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.
@@ -69,6 +78,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("draftOpenShift", this.getDraftOpenShift());
+        writer.writeBooleanValue("isStagedForDeletion", this.getIsStagedForDeletion());
         writer.writeStringValue("schedulingGroupId", this.getSchedulingGroupId());
         writer.writeObjectValue("sharedOpenShift", this.getSharedOpenShift());
     }
@@ -78,6 +88,13 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     public void setDraftOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
         this.backingStore.set("draftOpenShift", value);
+    }
+    /**
+     * Sets the isStagedForDeletion property value. The openShift is marked for deletion, a process that is finalized when the schedule is shared.
+     * @param value Value to set for the isStagedForDeletion property.
+     */
+    public void setIsStagedForDeletion(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isStagedForDeletion", value);
     }
     /**
      * Sets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.

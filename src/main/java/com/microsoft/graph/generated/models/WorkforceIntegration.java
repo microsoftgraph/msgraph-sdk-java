@@ -43,6 +43,14 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: timeOffReason.
+     * @return a {@link EnumSet<EligibilityFilteringEnabledEntities>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<EligibilityFilteringEnabledEntities> getEligibilityFilteringEnabledEntities() {
+        return this.backingStore.get("eligibilityFilteringEnabledEntities");
+    }
+    /**
      * Gets the encryption property value. The workforce integration encryption resource.
      * @return a {@link WorkforceIntegrationEncryption}
      */
@@ -59,6 +67,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("apiVersion", (n) -> { this.setApiVersion(n.getIntegerValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("eligibilityFilteringEnabledEntities", (n) -> { this.setEligibilityFilteringEnabledEntities(n.getEnumSetValue(EligibilityFilteringEnabledEntities::forValue)); });
         deserializerMap.put("encryption", (n) -> { this.setEncryption(n.getObjectValue(WorkforceIntegrationEncryption::createFromDiscriminatorValue)); });
         deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
         deserializerMap.put("supportedEntities", (n) -> { this.setSupportedEntities(n.getEnumSetValue(WorkforceIntegrationSupportedEntities::forValue)); });
@@ -98,6 +107,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         super.serialize(writer);
         writer.writeIntegerValue("apiVersion", this.getApiVersion());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumSetValue("eligibilityFilteringEnabledEntities", this.getEligibilityFilteringEnabledEntities());
         writer.writeObjectValue("encryption", this.getEncryption());
         writer.writeBooleanValue("isActive", this.getIsActive());
         writer.writeEnumSetValue("supportedEntities", this.getSupportedEntities());
@@ -116,6 +126,13 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: timeOffReason.
+     * @param value Value to set for the eligibilityFilteringEnabledEntities property.
+     */
+    public void setEligibilityFilteringEnabledEntities(@jakarta.annotation.Nullable final EnumSet<EligibilityFilteringEnabledEntities> value) {
+        this.backingStore.set("eligibilityFilteringEnabledEntities", value);
     }
     /**
      * Sets the encryption property value. The workforce integration encryption resource.
