@@ -69,7 +69,7 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
         return deserializerMap;
     }
     /**
-     * Gets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * Gets the isItemVersioningEnabled property value. Indicates whether versioning is enabled for items in the container. Optional. Read-write.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
         return this.backingStore.get("isOcrEnabled");
     }
     /**
-     * Gets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * Gets the itemMajorVersionLimit property value. The maximum major versions allowed for items in the container. Optional. Read-write.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * Sets the isItemVersioningEnabled property value. Indicates whether versioning is enabled for items in the container. Optional. Read-write.
      * @param value Value to set for the isItemVersioningEnabled property.
      */
     public void setIsItemVersioningEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -142,7 +142,7 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
         this.backingStore.set("isOcrEnabled", value);
     }
     /**
-     * Sets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * Sets the itemMajorVersionLimit property value. The maximum major versions allowed for items in the container. Optional. Read-write.
      * @param value Value to set for the itemMajorVersionLimit property.
      */
     public void setItemMajorVersionLimit(@jakarta.annotation.Nullable final Integer value) {

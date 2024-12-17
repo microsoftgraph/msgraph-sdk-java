@@ -87,11 +87,21 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("lockState", (n) -> { this.setLockState(n.getEnumValue(SiteLockState::forValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
+        deserializerMap.put("recycleBin", (n) -> { this.setRecycleBin(n.getObjectValue(RecycleBin::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(FileStorageContainerSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(FileStorageContainerStatus::forValue)); });
         deserializerMap.put("viewpoint", (n) -> { this.setViewpoint(n.getObjectValue(FileStorageContainerViewpoint::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lockState property value. Indicates the lock state of the fileStorageContainer. The possible values are unlocked and lockedReadOnly. Read-only.
+     * @return a {@link SiteLockState}
+     */
+    @jakarta.annotation.Nullable
+    public SiteLockState getLockState() {
+        return this.backingStore.get("lockState");
     }
     /**
      * Gets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are: reader, writer, manager, and owner. Read-write.
@@ -100,6 +110,14 @@ public class FileStorageContainer extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<Permission> getPermissions() {
         return this.backingStore.get("permissions");
+    }
+    /**
+     * Gets the recycleBin property value. Recycle bin of the fileStorageContainer. Read-only.
+     * @return a {@link RecycleBin}
+     */
+    @jakarta.annotation.Nullable
+    public RecycleBin getRecycleBin() {
+        return this.backingStore.get("recycleBin");
     }
     /**
      * Gets the settings property value. The settings property
@@ -138,7 +156,9 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
+        writer.writeEnumValue("lockState", this.getLockState());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
+        writer.writeObjectValue("recycleBin", this.getRecycleBin());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeObjectValue("viewpoint", this.getViewpoint());
@@ -186,11 +206,25 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("drive", value);
     }
     /**
+     * Sets the lockState property value. Indicates the lock state of the fileStorageContainer. The possible values are unlocked and lockedReadOnly. Read-only.
+     * @param value Value to set for the lockState property.
+     */
+    public void setLockState(@jakarta.annotation.Nullable final SiteLockState value) {
+        this.backingStore.set("lockState", value);
+    }
+    /**
      * Sets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are: reader, writer, manager, and owner. Read-write.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
         this.backingStore.set("permissions", value);
+    }
+    /**
+     * Sets the recycleBin property value. Recycle bin of the fileStorageContainer. Read-only.
+     * @param value Value to set for the recycleBin property.
+     */
+    public void setRecycleBin(@jakarta.annotation.Nullable final RecycleBin value) {
+        this.backingStore.set("recycleBin", value);
     }
     /**
      * Sets the settings property value. The settings property

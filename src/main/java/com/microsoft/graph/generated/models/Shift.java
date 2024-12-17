@@ -41,10 +41,19 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("draftShift", (n) -> { this.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isStagedForDeletion", (n) -> { this.setIsStagedForDeletion(n.getBooleanValue()); });
         deserializerMap.put("schedulingGroupId", (n) -> { this.setSchedulingGroupId(n.getStringValue()); });
         deserializerMap.put("sharedShift", (n) -> { this.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isStagedForDeletion property value. The shift is marked for deletion, a process that is finalized when the schedule is shared.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsStagedForDeletion() {
+        return this.backingStore.get("isStagedForDeletion");
     }
     /**
      * Gets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
@@ -78,6 +87,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("draftShift", this.getDraftShift());
+        writer.writeBooleanValue("isStagedForDeletion", this.getIsStagedForDeletion());
         writer.writeStringValue("schedulingGroupId", this.getSchedulingGroupId());
         writer.writeObjectValue("sharedShift", this.getSharedShift());
         writer.writeStringValue("userId", this.getUserId());
@@ -88,6 +98,13 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {
         this.backingStore.set("draftShift", value);
+    }
+    /**
+     * Sets the isStagedForDeletion property value. The shift is marked for deletion, a process that is finalized when the schedule is shared.
+     * @param value Value to set for the isStagedForDeletion property.
+     */
+    public void setIsStagedForDeletion(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isStagedForDeletion", value);
     }
     /**
      * Sets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.

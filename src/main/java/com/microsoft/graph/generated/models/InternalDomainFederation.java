@@ -52,6 +52,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior::forValue)); });
         deserializerMap.put("isSignedAuthenticationRequestRequired", (n) -> { this.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });
         deserializerMap.put("nextSigningCertificate", (n) -> { this.setNextSigningCertificate(n.getStringValue()); });
+        deserializerMap.put("passwordResetUri", (n) -> { this.setPasswordResetUri(n.getStringValue()); });
         deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior::forValue)); });
         deserializerMap.put("signingCertificateUpdateStatus", (n) -> { this.setSigningCertificateUpdateStatus(n.getObjectValue(SigningCertificateUpdateStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("signOutUri", (n) -> { this.setSignOutUri(n.getStringValue()); });
@@ -72,6 +73,14 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     @jakarta.annotation.Nullable
     public String getNextSigningCertificate() {
         return this.backingStore.get("nextSigningCertificate");
+    }
+    /**
+     * Gets the passwordResetUri property value. The passwordResetUri property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPasswordResetUri() {
+        return this.backingStore.get("passwordResetUri");
     }
     /**
      * Gets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
@@ -108,6 +117,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         writer.writeEnumValue("federatedIdpMfaBehavior", this.getFederatedIdpMfaBehavior());
         writer.writeBooleanValue("isSignedAuthenticationRequestRequired", this.getIsSignedAuthenticationRequestRequired());
         writer.writeStringValue("nextSigningCertificate", this.getNextSigningCertificate());
+        writer.writeStringValue("passwordResetUri", this.getPasswordResetUri());
         writer.writeEnumValue("promptLoginBehavior", this.getPromptLoginBehavior());
         writer.writeObjectValue("signingCertificateUpdateStatus", this.getSigningCertificateUpdateStatus());
         writer.writeStringValue("signOutUri", this.getSignOutUri());
@@ -139,6 +149,13 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      */
     public void setNextSigningCertificate(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("nextSigningCertificate", value);
+    }
+    /**
+     * Sets the passwordResetUri property value. The passwordResetUri property
+     * @param value Value to set for the passwordResetUri property.
+     */
+    public void setPasswordResetUri(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("passwordResetUri", value);
     }
     /**
      * Sets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.

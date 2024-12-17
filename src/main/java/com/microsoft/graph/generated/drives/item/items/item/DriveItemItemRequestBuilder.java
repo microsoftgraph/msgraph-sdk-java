@@ -12,6 +12,7 @@ import com.microsoft.graph.drives.item.items.item.createlink.CreateLinkRequestBu
 import com.microsoft.graph.drives.item.items.item.createuploadsession.CreateUploadSessionRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.delta.DeltaRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.deltawithtoken.DeltaWithTokenRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.discardcheckout.DiscardCheckoutRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.extractsensitivitylabels.ExtractSensitivityLabelsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.follow.FollowRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
@@ -138,6 +139,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the discardCheckout method.
+     * @return a {@link DiscardCheckoutRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DiscardCheckoutRequestBuilder discardCheckout() {
+        return new DiscardCheckoutRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the extractSensitivityLabels method.

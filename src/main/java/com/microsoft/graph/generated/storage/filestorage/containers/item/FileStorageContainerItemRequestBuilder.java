@@ -4,8 +4,12 @@ import com.microsoft.graph.models.FileStorageContainer;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.storage.filestorage.containers.item.activate.ActivateRequestBuilder;
 import com.microsoft.graph.storage.filestorage.containers.item.drive.DriveRequestBuilder;
+import com.microsoft.graph.storage.filestorage.containers.item.lock.LockRequestBuilder;
 import com.microsoft.graph.storage.filestorage.containers.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.storage.filestorage.containers.item.permissions.PermissionsRequestBuilder;
+import com.microsoft.graph.storage.filestorage.containers.item.recyclebin.RecycleBinRequestBuilder;
+import com.microsoft.graph.storage.filestorage.containers.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.storage.filestorage.containers.item.unlock.UnlockRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -41,6 +45,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the lock method.
+     * @return a {@link LockRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LockRequestBuilder lock() {
+        return new LockRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the permanentDelete method.
      * @return a {@link PermanentDeleteRequestBuilder}
      */
@@ -55,6 +67,30 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PermissionsRequestBuilder permissions() {
         return new PermissionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the recycleBin property of the microsoft.graph.fileStorageContainer entity.
+     * @return a {@link RecycleBinRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RecycleBinRequestBuilder recycleBin() {
+        return new RecycleBinRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unlock method.
+     * @return a {@link UnlockRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnlockRequestBuilder unlock() {
+        return new UnlockRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link FileStorageContainerItemRequestBuilder} and sets the default values.
