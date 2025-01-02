@@ -3,6 +3,7 @@ package com.microsoft.graph.chats.item.members;
 import com.microsoft.graph.chats.item.members.add.AddRequestBuilder;
 import com.microsoft.graph.chats.item.members.count.CountRequestBuilder;
 import com.microsoft.graph.chats.item.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.chats.item.members.remove.RemoveRequestBuilder;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.ConversationMemberCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -39,6 +40,14 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the remove method.
+     * @return a {@link RemoveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveRequestBuilder remove() {
+        return new RemoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.chat entity.

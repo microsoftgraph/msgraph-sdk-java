@@ -6,6 +6,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.teams.item.channels.item.members.add.AddRequestBuilder;
 import com.microsoft.graph.teams.item.channels.item.members.count.CountRequestBuilder;
 import com.microsoft.graph.teams.item.channels.item.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.teams.item.channels.item.members.remove.RemoveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -39,6 +40,14 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the remove method.
+     * @return a {@link RemoveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveRequestBuilder remove() {
+        return new RemoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.
@@ -93,23 +102,23 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMemberCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Add a conversationMember to a channel.
      * @param body The request body
      * @return a {@link ConversationMember}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMember post(@jakarta.annotation.Nonnull final ConversationMember body) {
         return post(body, null);
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Add a conversationMember to a channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConversationMember}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMember post(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +149,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Add a conversationMember to a channel.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +158,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Add a conversationMember to a channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
