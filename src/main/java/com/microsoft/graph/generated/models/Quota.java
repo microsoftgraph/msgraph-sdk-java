@@ -88,7 +88,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
+     * Gets the remaining property value. Total space remaining before reaching the capacity limit, in bytes. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
+     * Sets the remaining property value. Total space remaining before reaching the capacity limit, in bytes. Read-only.
      * @param value Value to set for the remaining property.
      */
     public void setRemaining(@jakarta.annotation.Nullable final Long value) {

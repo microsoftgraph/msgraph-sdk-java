@@ -63,7 +63,7 @@ public class ActionResultPart implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the error property value. The error that occurred, if any, during the course of the bulk operation.
+     * Gets the error property value. The error that occurred, if any, during the bulk operation.
      * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class ActionResultPart implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the error property value. The error that occurred, if any, during the course of the bulk operation.
+     * Sets the error property value. The error that occurred, if any, during the bulk operation.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {

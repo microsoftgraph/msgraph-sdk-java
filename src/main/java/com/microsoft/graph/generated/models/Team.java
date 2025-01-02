@@ -42,7 +42,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("channels");
     }
     /**
-     * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+     * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a preconfigured set in the tenant's directory.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. An optional description for the team. Maximum length: 1024 characters.
+     * Gets the description property value. An optional description for the team. Maximum length: 1,024 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("installedApps");
     }
     /**
-     * Gets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+     * Gets the internalId property value. A unique ID for the team that was used in a few places such as the audit log/Office 365 Management Activity API.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -231,7 +231,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("schedule");
     }
     /**
-     * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+     * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case. Each team specialization has access to unique behaviors and experiences targeted to its use case.
      * @return a {@link TeamSpecialization}
      */
     @jakarta.annotation.Nullable
@@ -279,7 +279,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("visibility");
     }
     /**
-     * Gets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * Gets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. You get this URL when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -337,7 +337,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("channels", value);
     }
     /**
-     * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+     * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a preconfigured set in the tenant's directory.
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final String value) {
@@ -351,7 +351,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. An optional description for the team. Maximum length: 1024 characters.
+     * Sets the description property value. An optional description for the team. Maximum length: 1,024 characters.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -400,7 +400,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("installedApps", value);
     }
     /**
-     * Sets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+     * Sets the internalId property value. A unique ID for the team that was used in a few places such as the audit log/Office 365 Management Activity API.
      * @param value Value to set for the internalId property.
      */
     public void setInternalId(@jakarta.annotation.Nullable final String value) {
@@ -470,7 +470,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("schedule", value);
     }
     /**
-     * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+     * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case. Each team specialization has access to unique behaviors and experiences targeted to its use case.
      * @param value Value to set for the specialization property.
      */
     public void setSpecialization(@jakarta.annotation.Nullable final TeamSpecialization value) {
@@ -512,7 +512,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("visibility", value);
     }
     /**
-     * Sets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * Sets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. You get this URL when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

@@ -6,6 +6,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.teams.item.primarychannel.members.add.AddRequestBuilder;
 import com.microsoft.graph.teams.item.primarychannel.members.count.CountRequestBuilder;
 import com.microsoft.graph.teams.item.primarychannel.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.members.remove.RemoveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -39,6 +40,14 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the remove method.
+     * @return a {@link RemoveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveRequestBuilder remove() {
+        return new RemoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.
