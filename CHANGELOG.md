@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.25.1](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.25.0...v6.25.1) (2025-01-03)
+
+
+### Bug Fixes
+
+* Bump Microsoft Graph Core dependency ([67cef23](https://github.com/microsoftgraph/msgraph-sdk-java/commit/67cef230445152e25fad423e90e3022d37acec48))
+
 ## [6.25.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.24.0...v6.25.0) (2025-01-02)
 
 
