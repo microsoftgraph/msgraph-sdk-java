@@ -36,7 +36,7 @@ public class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/reports/getOffice365ActivationsUserCounts()", rawUrl);
     }
     /**
-     * Get the count of users that are enabled and those that have activated the Office subscription on desktop or devices or shared computers.
+     * Get the count of users that are enabled and the ones that activated the Office subscription on desktop or devices or shared computers.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getoffice365activationsusercounts?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get the count of users that are enabled and those that have activated the Office subscription on desktop or devices or shared computers.
+     * Get the count of users that are enabled and the ones that activated the Office subscription on desktop or devices or shared computers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequest
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the count of users that are enabled and those that have activated the Office subscription on desktop or devices or shared computers.
+     * Get the count of users that are enabled and the ones that activated the Office subscription on desktop or devices or shared computers.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get the count of users that are enabled and those that have activated the Office subscription on desktop or devices or shared computers.
+     * Get the count of users that are enabled and the ones that activated the Office subscription on desktop or devices or shared computers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

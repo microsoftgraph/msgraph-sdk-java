@@ -111,7 +111,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return this.backingStore.get("rowCount");
     }
     /**
-     * Gets the rows property value. The collection of range views associated with the range. Read-only.Read-only.
+     * Gets the rows property value. The collection of range views associated with the range. Read-only. Read-only.
      * @return a {@link java.util.List<WorkbookRangeView>}
      */
     @jakarta.annotation.Nullable
@@ -219,7 +219,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         this.backingStore.set("rowCount", value);
     }
     /**
-     * Sets the rows property value. The collection of range views associated with the range. Read-only.Read-only.
+     * Sets the rows property value. The collection of range views associated with the range. Read-only. Read-only.
      * @param value Value to set for the rows property.
      */
     public void setRows(@jakarta.annotation.Nullable final java.util.List<WorkbookRangeView> value) {
