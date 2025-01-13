@@ -75,6 +75,10 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IBaseC
     public GraphServiceClient(@Nonnull TokenCredential tokenCredential, @Nullable String... scopes) {
         this(new AzureIdentityAuthenticationProvider(tokenCredential, new String[] {}, scopes));
     }
+
+    public GraphServiceClient(@Nonnull OkHttpClient client, @Nonnull TokenCredential tokenCredential, @Nullable String... scopes) {
+        this(new AzureIdentityAuthenticationProvider(tokenCredential, new String[] {}, scopes), client);
+    }
     /**
      * Sets the RequestAdapter for the GraphServiceClient.
      * @param requestAdapter the request adapter to use to execute the requests.
