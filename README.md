@@ -24,7 +24,7 @@ dependencies {
     implementation 'com.microsoft.graph:microsoft-graph:6.25.1'
     // x-release-please-end
     // This dependency is only needed if you are using a TokenCredential object for authentication
-    implementation 'com.azure:azure-identity:1.11.0'
+    implementation 'com.azure:azure-identity:1.15.0'
 }
 ```
 
