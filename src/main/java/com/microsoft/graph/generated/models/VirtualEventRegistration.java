@@ -42,6 +42,14 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("email");
     }
     /**
+     * Gets the externalRegistrationInformation property value. The external information for a virtual event registration.
+     * @return a {@link VirtualEventExternalRegistrationInformation}
+     */
+    @jakarta.annotation.Nullable
+    public VirtualEventExternalRegistrationInformation getExternalRegistrationInformation() {
+        return this.backingStore.get("externalRegistrationInformation");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -50,6 +58,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cancelationDateTime", (n) -> { this.setCancelationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("externalRegistrationInformation", (n) -> { this.setExternalRegistrationInformation(n.getObjectValue(VirtualEventExternalRegistrationInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("firstName", (n) -> { this.setFirstName(n.getStringValue()); });
         deserializerMap.put("lastName", (n) -> { this.setLastName(n.getStringValue()); });
         deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
@@ -142,6 +151,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("cancelationDateTime", this.getCancelationDateTime());
         writer.writeStringValue("email", this.getEmail());
+        writer.writeObjectValue("externalRegistrationInformation", this.getExternalRegistrationInformation());
         writer.writeStringValue("firstName", this.getFirstName());
         writer.writeStringValue("lastName", this.getLastName());
         writer.writeStringValue("preferredLanguage", this.getPreferredLanguage());
@@ -165,6 +175,13 @@ public class VirtualEventRegistration extends Entity implements Parsable {
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("email", value);
+    }
+    /**
+     * Sets the externalRegistrationInformation property value. The external information for a virtual event registration.
+     * @param value Value to set for the externalRegistrationInformation property.
+     */
+    public void setExternalRegistrationInformation(@jakarta.annotation.Nullable final VirtualEventExternalRegistrationInformation value) {
+        this.backingStore.set("externalRegistrationInformation", value);
     }
     /**
      * Sets the firstName property value. First name of the registrant.

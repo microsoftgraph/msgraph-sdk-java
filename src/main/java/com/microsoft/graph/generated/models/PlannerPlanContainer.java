@@ -85,7 +85,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
+     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      * @return a {@link PlannerContainerType}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
+     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final PlannerContainerType value) {

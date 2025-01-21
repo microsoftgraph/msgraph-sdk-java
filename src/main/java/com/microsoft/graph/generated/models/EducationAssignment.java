@@ -34,7 +34,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("addedStudentAction");
     }
     /**
-     * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
+     * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
      * @return a {@link EducationAddToCalendarOptions}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("rubric");
     }
     /**
-     * Gets the status property value. Status of the assignment.  You can't PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
+     * Gets the status property value. Status of the assignment.  You can't PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
      * @return a {@link EducationAssignmentStatus}
      */
     @jakarta.annotation.Nullable
@@ -320,7 +320,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("addedStudentAction", value);
     }
     /**
-     * Sets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
+     * Sets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
      * @param value Value to set for the addToCalendarAction property.
      */
     public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAddToCalendarOptions value) {
@@ -488,7 +488,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("rubric", value);
     }
     /**
-     * Sets the status property value. Status of the assignment.  You can't PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
+     * Sets the status property value. Status of the assignment.  You can't PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationAssignmentStatus value) {

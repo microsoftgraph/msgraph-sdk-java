@@ -73,12 +73,28 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowParticipantsToChangeName");
     }
     /**
+     * Gets the allowRecording property value. Indicates whether recording is enabled for the meeting.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowRecording() {
+        return this.backingStore.get("allowRecording");
+    }
+    /**
      * Gets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTeamworkReactions() {
         return this.backingStore.get("allowTeamworkReactions");
+    }
+    /**
+     * Gets the allowTranscription property value. Indicates whether transcription is enabled for the meeting.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowTranscription() {
+        return this.backingStore.get("allowTranscription");
     }
     /**
      * Gets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
@@ -105,6 +121,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("chatInfo");
     }
     /**
+     * Gets the chatRestrictions property value. The chatRestrictions property
+     * @return a {@link ChatRestrictions}
+     */
+    @jakarta.annotation.Nullable
+    public ChatRestrictions getChatRestrictions() {
+        return this.backingStore.get("chatRestrictions");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -116,10 +140,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters::forValue)); });
         deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(MeetingChatMode::forValue)); });
         deserializerMap.put("allowParticipantsToChangeName", (n) -> { this.setAllowParticipantsToChangeName(n.getBooleanValue()); });
+        deserializerMap.put("allowRecording", (n) -> { this.setAllowRecording(n.getBooleanValue()); });
         deserializerMap.put("allowTeamworkReactions", (n) -> { this.setAllowTeamworkReactions(n.getBooleanValue()); });
+        deserializerMap.put("allowTranscription", (n) -> { this.setAllowTranscription(n.getBooleanValue()); });
         deserializerMap.put("attendanceReports", (n) -> { this.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
         deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("chatRestrictions", (n) -> { this.setChatRestrictions(n.getObjectValue(ChatRestrictions::createFromDiscriminatorValue)); });
         deserializerMap.put("isEntryExitAnnounced", (n) -> { this.setIsEntryExitAnnounced(n.getBooleanValue()); });
         deserializerMap.put("joinInformation", (n) -> { this.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("joinMeetingIdSettings", (n) -> { this.setJoinMeetingIdSettings(n.getObjectValue(JoinMeetingIdSettings::createFromDiscriminatorValue)); });
@@ -224,10 +251,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
         writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
         writer.writeBooleanValue("allowParticipantsToChangeName", this.getAllowParticipantsToChangeName());
+        writer.writeBooleanValue("allowRecording", this.getAllowRecording());
         writer.writeBooleanValue("allowTeamworkReactions", this.getAllowTeamworkReactions());
+        writer.writeBooleanValue("allowTranscription", this.getAllowTranscription());
         writer.writeCollectionOfObjectValues("attendanceReports", this.getAttendanceReports());
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
+        writer.writeObjectValue("chatRestrictions", this.getChatRestrictions());
         writer.writeBooleanValue("isEntryExitAnnounced", this.getIsEntryExitAnnounced());
         writer.writeObjectValue("joinInformation", this.getJoinInformation());
         writer.writeObjectValue("joinMeetingIdSettings", this.getJoinMeetingIdSettings());
@@ -275,11 +305,25 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("allowParticipantsToChangeName", value);
     }
     /**
+     * Sets the allowRecording property value. Indicates whether recording is enabled for the meeting.
+     * @param value Value to set for the allowRecording property.
+     */
+    public void setAllowRecording(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowRecording", value);
+    }
+    /**
      * Sets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @param value Value to set for the allowTeamworkReactions property.
      */
     public void setAllowTeamworkReactions(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowTeamworkReactions", value);
+    }
+    /**
+     * Sets the allowTranscription property value. Indicates whether transcription is enabled for the meeting.
+     * @param value Value to set for the allowTranscription property.
+     */
+    public void setAllowTranscription(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowTranscription", value);
     }
     /**
      * Sets the attendanceReports property value. The attendance reports of an online meeting. Read-only.
@@ -301,6 +345,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      */
     public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
         this.backingStore.set("chatInfo", value);
+    }
+    /**
+     * Sets the chatRestrictions property value. The chatRestrictions property
+     * @param value Value to set for the chatRestrictions property.
+     */
+    public void setChatRestrictions(@jakarta.annotation.Nullable final ChatRestrictions value) {
+        this.backingStore.set("chatRestrictions", value);
     }
     /**
      * Sets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.

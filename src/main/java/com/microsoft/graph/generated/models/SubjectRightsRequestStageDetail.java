@@ -85,7 +85,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
+     * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
      * @return a {@link SubjectRightsRequestStage}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
+     * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: approval.
      * @param value Value to set for the stage property.
      */
     public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {
