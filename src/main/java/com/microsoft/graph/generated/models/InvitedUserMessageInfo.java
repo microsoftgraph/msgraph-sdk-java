@@ -64,7 +64,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("ccRecipients");
     }
     /**
-     * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
+     * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message. Only plain text is allowed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel
         this.backingStore.set("ccRecipients", value);
     }
     /**
-     * Sets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
+     * Sets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message. Only plain text is allowed.
      * @param value Value to set for the customizedMessageBody property.
      */
     public void setCustomizedMessageBody(@jakarta.annotation.Nullable final String value) {

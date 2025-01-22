@@ -79,6 +79,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
         deserializerMap.put("isBroadcast", (n) -> { this.setIsBroadcast(n.getBooleanValue()); });
+        deserializerMap.put("meetingTemplateId", (n) -> { this.setMeetingTemplateId(n.getStringValue()); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getObjectValue(MeetingParticipants::createFromDiscriminatorValue)); });
         deserializerMap.put("recordings", (n) -> { this.setRecordings(n.getCollectionOfObjectValues(CallRecording::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
@@ -92,6 +93,14 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsBroadcast() {
         return this.backingStore.get("isBroadcast");
+    }
+    /**
+     * Gets the meetingTemplateId property value. The ID of the meeting template.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMeetingTemplateId() {
+        return this.backingStore.get("meetingTemplateId");
     }
     /**
      * Gets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
@@ -138,6 +147,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("externalId", this.getExternalId());
         writer.writeBooleanValue("isBroadcast", this.getIsBroadcast());
+        writer.writeStringValue("meetingTemplateId", this.getMeetingTemplateId());
         writer.writeObjectValue("participants", this.getParticipants());
         writer.writeCollectionOfObjectValues("recordings", this.getRecordings());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
@@ -184,6 +194,13 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
      */
     public void setIsBroadcast(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isBroadcast", value);
+    }
+    /**
+     * Sets the meetingTemplateId property value. The ID of the meeting template.
+     * @param value Value to set for the meetingTemplateId property.
+     */
+    public void setMeetingTemplateId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("meetingTemplateId", value);
     }
     /**
      * Sets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.

@@ -4,6 +4,8 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEventTownhall;
 import com.microsoft.graph.models.VirtualEventTownhallCollectionResponse;
 import com.microsoft.graph.solutions.virtualevents.townhalls.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.townhalls.getbyuseridandrolewithuseridwithrole.GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.townhalls.getbyuserrolewithrole.GetByUserRoleWithRoleRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.townhalls.item.VirtualEventTownhallItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -80,6 +82,28 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventTownhallCollectionResponse::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the getByUserIdAndRole method.
+     * @param role Usage: role='{role}'
+     * @param userId Usage: userId='{userId}'
+     * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder getByUserIdAndRoleWithUserIdWithRole(@jakarta.annotation.Nonnull final String role, @jakarta.annotation.Nonnull final String userId) {
+        Objects.requireNonNull(role);
+        Objects.requireNonNull(userId);
+        return new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder(pathParameters, requestAdapter, role, userId);
+    }
+    /**
+     * Provides operations to call the getByUserRole method.
+     * @param role Usage: role='{role}'
+     * @return a {@link GetByUserRoleWithRoleRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetByUserRoleWithRoleRequestBuilder getByUserRoleWithRole(@jakarta.annotation.Nonnull final String role) {
+        Objects.requireNonNull(role);
+        return new GetByUserRoleWithRoleRequestBuilder(pathParameters, requestAdapter, role);
     }
     /**
      * Create a new virtualEventTownhall object in draft mode.

@@ -6,6 +6,7 @@ import com.microsoft.graph.solutions.virtualevents.events.item.cancel.CancelRequ
 import com.microsoft.graph.solutions.virtualevents.events.item.presenters.PresentersRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.events.item.publish.PublishRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.events.item.sessions.SessionsRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.events.item.setexternaleventinformation.SetExternalEventInformationRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -55,6 +56,14 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SessionsRequestBuilder sessions() {
         return new SessionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setExternalEventInformation method.
+     * @return a {@link SetExternalEventInformationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetExternalEventInformationRequestBuilder setExternalEventInformation() {
+        return new SetExternalEventInformationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link VirtualEventItemRequestBuilder} and sets the default values.

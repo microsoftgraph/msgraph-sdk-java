@@ -51,6 +51,7 @@ public class Chat extends Entity implements Parsable {
         deserializerMap.put("chatType", (n) -> { this.setChatType(n.getEnumValue(ChatType::forValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("installedApps", (n) -> { this.setInstalledApps(n.getCollectionOfObjectValues(TeamsAppInstallation::createFromDiscriminatorValue)); });
+        deserializerMap.put("isHiddenForAllMembers", (n) -> { this.setIsHiddenForAllMembers(n.getBooleanValue()); });
         deserializerMap.put("lastMessagePreview", (n) -> { this.setLastMessagePreview(n.getObjectValue(ChatMessageInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
@@ -72,6 +73,14 @@ public class Chat extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAppInstallation> getInstalledApps() {
         return this.backingStore.get("installedApps");
+    }
+    /**
+     * Gets the isHiddenForAllMembers property value. Indicates whether the chat is hidden for all its members. Read-only.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHiddenForAllMembers() {
+        return this.backingStore.get("isHiddenForAllMembers");
     }
     /**
      * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages were sent in the chat. Currently, only the list chats operation supports this property.
@@ -179,6 +188,7 @@ public class Chat extends Entity implements Parsable {
         writer.writeEnumValue("chatType", this.getChatType());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("installedApps", this.getInstalledApps());
+        writer.writeBooleanValue("isHiddenForAllMembers", this.getIsHiddenForAllMembers());
         writer.writeObjectValue("lastMessagePreview", this.getLastMessagePreview());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
@@ -212,6 +222,13 @@ public class Chat extends Entity implements Parsable {
      */
     public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
         this.backingStore.set("installedApps", value);
+    }
+    /**
+     * Sets the isHiddenForAllMembers property value. Indicates whether the chat is hidden for all its members. Read-only.
+     * @param value Value to set for the isHiddenForAllMembers property.
+     */
+    public void setIsHiddenForAllMembers(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHiddenForAllMembers", value);
     }
     /**
      * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages were sent in the chat. Currently, only the list chats operation supports this property.

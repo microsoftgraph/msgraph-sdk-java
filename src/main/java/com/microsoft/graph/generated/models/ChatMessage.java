@@ -171,7 +171,7 @@ public class ChatMessage extends Entity implements Parsable {
         return this.backingStore.get("locale");
     }
     /**
-     * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+     * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, chat, and tag.
      * @return a {@link java.util.List<ChatMessageMention>}
      */
     @jakarta.annotation.Nullable
@@ -381,7 +381,7 @@ public class ChatMessage extends Entity implements Parsable {
         this.backingStore.set("locale", value);
     }
     /**
-     * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+     * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, chat, and tag.
      * @param value Value to set for the mentions property.
      */
     public void setMentions(@jakarta.annotation.Nullable final java.util.List<ChatMessageMention> value) {

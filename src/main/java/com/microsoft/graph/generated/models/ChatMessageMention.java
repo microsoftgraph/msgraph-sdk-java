@@ -77,7 +77,7 @@ public class ChatMessageMention implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("id");
     }
     /**
-     * Gets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
+     * Gets the mentioned property value. The entity (user, application, team, channel, or chat) that was @mentioned.
      * @return a {@link ChatMessageMentionedIdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class ChatMessageMention implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
+     * Sets the mentioned property value. The entity (user, application, team, channel, or chat) that was @mentioned.
      * @param value Value to set for the mentioned property.
      */
     public void setMentioned(@jakarta.annotation.Nullable final ChatMessageMentionedIdentitySet value) {

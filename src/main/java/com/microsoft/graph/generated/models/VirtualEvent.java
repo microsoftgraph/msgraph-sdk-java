@@ -65,6 +65,14 @@ public class VirtualEvent extends Entity implements Parsable {
         return this.backingStore.get("endDateTime");
     }
     /**
+     * Gets the externalEventInformation property value. The external information of a virtual event. Returned only for event organizers or coorganizers; otherwise, null.
+     * @return a {@link java.util.List<VirtualEventExternalInformation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<VirtualEventExternalInformation> getExternalEventInformation() {
+        return this.backingStore.get("externalEventInformation");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -75,6 +83,7 @@ public class VirtualEvent extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalEventInformation", (n) -> { this.setExternalEventInformation(n.getCollectionOfObjectValues(VirtualEventExternalInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("presenters", (n) -> { this.setPresenters(n.getCollectionOfObjectValues(VirtualEventPresenter::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(VirtualEventSettings::createFromDiscriminatorValue)); });
@@ -133,6 +142,7 @@ public class VirtualEvent extends Entity implements Parsable {
         writer.writeObjectValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
+        writer.writeCollectionOfObjectValues("externalEventInformation", this.getExternalEventInformation());
         writer.writeCollectionOfObjectValues("presenters", this.getPresenters());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
         writer.writeObjectValue("settings", this.getSettings());
@@ -166,6 +176,13 @@ public class VirtualEvent extends Entity implements Parsable {
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("endDateTime", value);
+    }
+    /**
+     * Sets the externalEventInformation property value. The external information of a virtual event. Returned only for event organizers or coorganizers; otherwise, null.
+     * @param value Value to set for the externalEventInformation property.
+     */
+    public void setExternalEventInformation(@jakarta.annotation.Nullable final java.util.List<VirtualEventExternalInformation> value) {
+        this.backingStore.set("externalEventInformation", value);
     }
     /**
      * Sets the presenters property value. The virtual event presenters.
