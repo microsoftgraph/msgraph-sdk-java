@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Device Configuration State for a given device.
+ * Support for this Entity is being deprecated starting May 2026 & will no longer be supported.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationState extends Entity implements Parsable {

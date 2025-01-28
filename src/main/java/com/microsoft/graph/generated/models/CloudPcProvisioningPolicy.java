@@ -41,6 +41,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
+     * Gets the autopatch property value. The autopatch property
+     * @return a {@link CloudPcProvisioningPolicyAutopatch}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcProvisioningPolicyAutopatch getAutopatch() {
+        return this.backingStore.get("autopatch");
+    }
+    /**
      * Gets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
      * @return a {@link String}
      */
@@ -97,6 +105,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(CloudPcProvisioningPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("autopatch", (n) -> { this.setAutopatch(n.getObjectValue(CloudPcProvisioningPolicyAutopatch::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPcGroupDisplayName", (n) -> { this.setCloudPcGroupDisplayName(n.getStringValue()); });
         deserializerMap.put("cloudPcNamingTemplate", (n) -> { this.setCloudPcNamingTemplate(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -186,6 +195,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
+        writer.writeObjectValue("autopatch", this.getAutopatch());
         writer.writeStringValue("cloudPcGroupDisplayName", this.getCloudPcGroupDisplayName());
         writer.writeStringValue("cloudPcNamingTemplate", this.getCloudPcNamingTemplate());
         writer.writeStringValue("description", this.getDescription());
@@ -214,6 +224,13 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<CloudPcProvisioningPolicyAssignment> value) {
         this.backingStore.set("assignments", value);
+    }
+    /**
+     * Sets the autopatch property value. The autopatch property
+     * @param value Value to set for the autopatch property.
+     */
+    public void setAutopatch(@jakarta.annotation.Nullable final CloudPcProvisioningPolicyAutopatch value) {
+        this.backingStore.set("autopatch", value);
     }
     /**
      * Sets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.

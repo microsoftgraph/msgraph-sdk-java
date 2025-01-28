@@ -204,21 +204,21 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the mobileLobApp objects.
+     * List properties and relationships of the macOSLobApp objects.
      * @return a {@link MobileAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobilelobapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the mobileLobApp objects.
+     * List properties and relationships of the macOSLobApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobilelobapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -255,7 +255,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileApp::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the mobileLobApp objects.
+     * List properties and relationships of the macOSLobApp objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -263,7 +263,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the mobileLobApp objects.
+     * List properties and relationships of the macOSLobApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -309,7 +309,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return new MobileAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the mobileLobApp objects.
+     * List properties and relationships of the macOSLobApp objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

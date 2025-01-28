@@ -121,7 +121,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("chatInfo");
     }
     /**
-     * Gets the chatRestrictions property value. The chatRestrictions property
+     * Gets the chatRestrictions property value. Specifies the configuration settings for meeting chat restrictions.
      * @return a {@link ChatRestrictions}
      */
     @jakarta.annotation.Nullable
@@ -347,7 +347,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("chatInfo", value);
     }
     /**
-     * Sets the chatRestrictions property value. The chatRestrictions property
+     * Sets the chatRestrictions property value. Specifies the configuration settings for meeting chat restrictions.
      * @param value Value to set for the chatRestrictions property.
      */
     public void setChatRestrictions(@jakarta.annotation.Nullable final ChatRestrictions value) {

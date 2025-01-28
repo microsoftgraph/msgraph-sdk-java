@@ -8,6 +8,7 @@ import com.microsoft.graph.applications.ApplicationsRequestBuilder;
 import com.microsoft.graph.applicationswithappid.ApplicationsWithAppIdRequestBuilder;
 import com.microsoft.graph.applicationswithuniquename.ApplicationsWithUniqueNameRequestBuilder;
 import com.microsoft.graph.applicationtemplates.ApplicationTemplatesRequestBuilder;
+import com.microsoft.graph.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.graph.auditlogs.AuditLogsRequestBuilder;
 import com.microsoft.graph.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
 import com.microsoft.graph.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
@@ -143,6 +144,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ApplicationTemplatesRequestBuilder applicationTemplates() {
         return new ApplicationTemplatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of appRoleAssignment entities.
+     * @return a {@link AppRoleAssignmentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
+        return new AppRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the auditLogRoot singleton.
