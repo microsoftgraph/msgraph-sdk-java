@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Device Enrollment Configuration that restricts the types of devices a user can enroll
+ * Default Device Enrollment Platform Restrictions Configuration that restricts the types of devices a user can enroll
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable {

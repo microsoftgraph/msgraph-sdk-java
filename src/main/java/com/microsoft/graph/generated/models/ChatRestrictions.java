@@ -48,7 +48,7 @@ public class ChatRestrictions implements AdditionalDataHolder, BackedModel, Pars
         return value;
     }
     /**
-     * Gets the allowTextOnly property value. The allowTextOnly property
+     * Gets the allowTextOnly property value. Indicates whether only text is allowed in the meeting chat. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ChatRestrictions implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowTextOnly property value. The allowTextOnly property
+     * Sets the allowTextOnly property value. Indicates whether only text is allowed in the meeting chat. Optional.
      * @param value Value to set for the allowTextOnly property.
      */
     public void setAllowTextOnly(@jakarta.annotation.Nullable final Boolean value) {

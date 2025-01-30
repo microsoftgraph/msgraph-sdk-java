@@ -8,12 +8,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedDeviceOwnerType implements ValuedEnum {
-    /** Unknown. */
+    /** Unknown device owner type. */
     Unknown("unknown"),
-    /** Owned by company. */
+    /** Corporate device owner type. */
     Company("company"),
-    /** Owned by person. */
-    Personal("personal");
+    /** Personal device owner type. */
+    Personal("personal"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ManagedDeviceOwnerType(final String value) {
         this.value = value;
@@ -27,6 +29,7 @@ public enum ManagedDeviceOwnerType implements ValuedEnum {
             case "unknown": return Unknown;
             case "company": return Company;
             case "personal": return Personal;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }
