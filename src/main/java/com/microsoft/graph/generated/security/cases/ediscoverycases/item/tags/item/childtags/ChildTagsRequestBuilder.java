@@ -59,19 +59,21 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/tags/{ediscoveryReviewTag%2Did}/childTags{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @return a {@link EdiscoveryReviewTagCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-ashierarchy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewTagCollectionResponse get() {
         return get(null);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryReviewTagCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-ashierarchy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryReviewTagCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryReviewTagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return new ChildTagsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * List eDiscovery review tags with the tag hierarchy shown.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

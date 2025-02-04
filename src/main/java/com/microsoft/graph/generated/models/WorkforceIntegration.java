@@ -27,7 +27,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         return new WorkforceIntegration();
     }
     /**
-     * Gets the apiVersion property value. API version for the call back URL. Start with 1.
+     * Gets the apiVersion property value. API version for the callback URL. Start with 1.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         return this.backingStore.get("isActive");
     }
     /**
-     * Gets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts call back to the provided URL when client changes occur to the entities specified in this property. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openShift, openShiftRequest, offerShiftRequest, unknownFutureValue, timeOffReason, timeOff, timeOffRequest. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeOffReason, timeOff, timeOffRequest.
+     * Gets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts call back to the provided URL when client changes occur to the entities specified in this property. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openShift, openShiftRequest, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard , timeOffReason , timeOff , timeOffRequest.
      * @return a {@link EnumSet<WorkforceIntegrationSupportedEntities>}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the apiVersion property value. API version for the call back URL. Start with 1.
+     * Sets the apiVersion property value. API version for the callback URL. Start with 1.
      * @param value Value to set for the apiVersion property.
      */
     public void setApiVersion(@jakarta.annotation.Nullable final Integer value) {
@@ -149,7 +149,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         this.backingStore.set("isActive", value);
     }
     /**
-     * Sets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts call back to the provided URL when client changes occur to the entities specified in this property. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openShift, openShiftRequest, offerShiftRequest, unknownFutureValue, timeOffReason, timeOff, timeOffRequest. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeOffReason, timeOff, timeOffRequest.
+     * Sets the supportedEntities property value. The Shifts entities supported for synchronous change notifications. Shifts call back to the provided URL when client changes occur to the entities specified in this property. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openShift, openShiftRequest, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard , timeOffReason , timeOff , timeOffRequest.
      * @param value Value to set for the supportedEntities property.
      */
     public void setSupportedEntities(@jakarta.annotation.Nullable final EnumSet<WorkforceIntegrationSupportedEntities> value) {

@@ -197,7 +197,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("timeZone");
     }
     /**
-     * Gets the workforceIntegrationIds property value. The workforceIntegrationIds property
+     * Gets the workforceIntegrationIds property value. The IDs for the workforce integrations associated with this schedule.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -356,7 +356,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("timeZone", value);
     }
     /**
-     * Sets the workforceIntegrationIds property value. The workforceIntegrationIds property
+     * Sets the workforceIntegrationIds property value. The IDs for the workforce integrations associated with this schedule.
      * @param value Value to set for the workforceIntegrationIds property.
      */
     public void setWorkforceIntegrationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
