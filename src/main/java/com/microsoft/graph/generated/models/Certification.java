@@ -96,7 +96,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("isCertifiedByMicrosoft");
     }
     /**
-     * Gets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
+     * Gets the isPublisherAttested property value. Indicates whether the application developer or publisher completed Publisher Attestation.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class Certification implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("isCertifiedByMicrosoft", value);
     }
     /**
-     * Sets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
+     * Sets the isPublisherAttested property value. Indicates whether the application developer or publisher completed Publisher Attestation.
      * @param value Value to set for the isPublisherAttested property.
      */
     public void setIsPublisherAttested(@jakarta.annotation.Nullable final Boolean value) {
