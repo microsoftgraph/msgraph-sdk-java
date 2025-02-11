@@ -2,7 +2,6 @@ package com.microsoft.graph.users.item.manager;
 
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.manager.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,14 +20,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagerRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to manage the collection of user entities.
-     * @return a {@link RefRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public RefRequestBuilder ref() {
-        return new RefRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new {@link ManagerRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

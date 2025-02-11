@@ -1,10 +1,15 @@
-package com.microsoft.graph.users.item.manager.ref;
+package com.microsoft.graph.users.item.joinedteams.item.schedule.timecards.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.ReferenceUpdate;
+import com.microsoft.graph.models.TimeCard;
+import com.microsoft.graph.users.item.joinedteams.item.schedule.timecards.item.clockout.ClockOutRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.schedule.timecards.item.confirm.ConfirmRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.schedule.timecards.item.endbreak.EndBreakRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.schedule.timecards.item.startbreak.StartBreakRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -15,39 +20,69 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the collection of user entities.
+ * Provides operations to manage the timeCards property of the microsoft.graph.schedule entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RefRequestBuilder extends BaseRequestBuilder {
+public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link RefRequestBuilder} and sets the default values.
+     * Provides operations to call the clockOut method.
+     * @return a {@link ClockOutRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ClockOutRequestBuilder clockOut() {
+        return new ClockOutRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the confirm method.
+     * @return a {@link ConfirmRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfirmRequestBuilder confirm() {
+        return new ConfirmRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the endBreak method.
+     * @return a {@link EndBreakRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EndBreakRequestBuilder endBreak() {
+        return new EndBreakRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the startBreak method.
+     * @return a {@link StartBreakRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StartBreakRequestBuilder startBreak() {
+        return new StartBreakRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Instantiates a new {@link TimeCardItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public RefRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/manager/$ref", pathParameters);
+    public TimeCardItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/timeCards/{timeCard%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link RefRequestBuilder} and sets the default values.
+     * Instantiates a new {@link TimeCardItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public RefRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/manager/$ref", rawUrl);
+    public TimeCardItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/timeCards/{timeCard%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Remove a user's manager.
+     * Delete navigation property timeCards for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a user's manager.
+     * Delete navigation property timeCards for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -56,54 +91,54 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
-     * @return a {@link String}
+     * The time cards in the schedule.
+     * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public String get() {
+    public TimeCard get() {
         return get(null);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * The time cards in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link String}
+     * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public String get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public TimeCard get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, String.class);
+        return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Assign a user's manager.
+     * Update the navigation property timeCards in users
      * @param body The request body
+     * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-post-manager?view=graph-rest-1.0">Find more info here</a>
      */
-    public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
-        put(body, null);
+    @jakarta.annotation.Nullable
+    public TimeCard patch(@jakarta.annotation.Nonnull final TimeCard body) {
+        return patch(body, null);
     }
     /**
-     * Assign a user's manager.
+     * Update the navigation property timeCards in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-post-manager?view=graph-rest-1.0">Find more info here</a>
      */
-    public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public TimeCard patch(@jakarta.annotation.Nonnull final TimeCard body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+        return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Remove a user's manager.
+     * Delete navigation property timeCards for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -111,7 +146,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a user's manager.
+     * Delete navigation property timeCards for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -123,7 +158,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * The time cards in the schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -131,37 +166,37 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * The time cards in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Assign a user's manager.
+     * Update the navigation property timeCards in users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
-        return toPutRequestInformation(body, null);
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TimeCard body) {
+        return toPatchRequestInformation(body, null);
     }
     /**
-     * Assign a user's manager.
+     * Update the navigation property timeCards in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TimeCard body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
@@ -169,12 +204,12 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link RefRequestBuilder}
+     * @return a {@link TimeCardItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public RefRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public TimeCardItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new RefRequestBuilder(rawUrl, requestAdapter);
+        return new TimeCardItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -183,15 +218,47 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
+     * The time cards in the schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetRequestConfiguration extends BaseRequestConfiguration {
+    public class GetQueryParameters implements QueryParameters {
+        /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
+         * Select properties to be returned
+         */
+        @jakarta.annotation.Nullable
+        public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a {@link Map<String, Object>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PutRequestConfiguration extends BaseRequestConfiguration {
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
+        /**
+         * Request query parameters
+         */
+        @jakarta.annotation.Nullable
+        public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

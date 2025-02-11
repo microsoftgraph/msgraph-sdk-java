@@ -26,6 +26,14 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
         return new SchedulingGroup();
     }
     /**
+     * Gets the code property value. The code for the schedulingGroup to represent an external identifier. This field must be unique within the team in Microsoft Teams and uses an alphanumeric format, with a maximum of 100 characters.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCode() {
+        return this.backingStore.get("code");
+    }
+    /**
      * Gets the displayName property value. The display name for the schedulingGroup. Required.
      * @return a {@link String}
      */
@@ -40,6 +48,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
         deserializerMap.put("userIds", (n) -> { this.setUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -68,8 +77,16 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("code", this.getCode());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("userIds", this.getUserIds());
+    }
+    /**
+     * Sets the code property value. The code for the schedulingGroup to represent an external identifier. This field must be unique within the team in Microsoft Teams and uses an alphanumeric format, with a maximum of 100 characters.
+     * @param value Value to set for the code property.
+     */
+    public void setCode(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("code", value);
     }
     /**
      * Sets the displayName property value. The display name for the schedulingGroup. Required.

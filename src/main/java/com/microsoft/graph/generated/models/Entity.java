@@ -350,6 +350,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.customExtensionStageSetting": return new CustomExtensionStageSetting();
             case "#microsoft.graph.customSecurityAttributeDefinition": return new CustomSecurityAttributeDefinition();
             case "#microsoft.graph.dataPolicyOperation": return new DataPolicyOperation();
+            case "#microsoft.graph.dayNote": return new DayNote();
             case "#microsoft.graph.defaultManagedAppProtection": return new DefaultManagedAppProtection();
             case "#microsoft.graph.delegatedAdminAccessAssignment": return new DelegatedAdminAccessAssignment();
             case "#microsoft.graph.delegatedAdminCustomer": return new DelegatedAdminCustomer();
@@ -672,7 +673,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.orgContact": return new OrgContact();
             case "#microsoft.graph.outlookCategory": return new OutlookCategory();
             case "#microsoft.graph.outlookItem": return new OutlookItem();
-            case "#microsoft.graph.outlookUser": return new OutlookUser();
         }
         return null;
     }
@@ -684,6 +684,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.outlookUser": return new OutlookUser();
             case "#microsoft.graph.participant": return new Participant();
             case "#microsoft.graph.participantJoiningNotification": return new ParticipantJoiningNotification();
             case "#microsoft.graph.participantLeftNotification": return new ParticipantLeftNotification();
@@ -967,6 +968,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.threatAssessmentRequest": return new ThreatAssessmentRequest();
             case "#microsoft.graph.threatAssessmentResult": return new ThreatAssessmentResult();
             case "#microsoft.graph.thumbnailSet": return new ThumbnailSet();
+            case "#microsoft.graph.timeCard": return new TimeCard();
             case "#microsoft.graph.timeOff": return new TimeOff();
             case "#microsoft.graph.timeOffReason": return new TimeOffReason();
             case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
