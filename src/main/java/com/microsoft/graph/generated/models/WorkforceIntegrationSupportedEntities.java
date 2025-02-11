@@ -13,6 +13,7 @@ public enum WorkforceIntegrationSupportedEntities implements ValuedEnum {
     OpenShiftRequest("openShiftRequest"),
     OfferShiftRequest("offerShiftRequest"),
     UnknownFutureValue("unknownFutureValue"),
+    TimeCard("timeCard"),
     TimeOffReason("timeOffReason"),
     TimeOff("timeOff"),
     TimeOffRequest("timeOffRequest");
@@ -34,6 +35,7 @@ public enum WorkforceIntegrationSupportedEntities implements ValuedEnum {
             case "openShiftRequest": return OpenShiftRequest;
             case "offerShiftRequest": return OfferShiftRequest;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "timeCard": return TimeCard;
             case "timeOffReason": return TimeOffReason;
             case "timeOff": return TimeOff;
             case "timeOffRequest": return TimeOffRequest;
