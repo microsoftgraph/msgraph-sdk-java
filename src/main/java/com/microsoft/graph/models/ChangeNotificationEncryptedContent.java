@@ -81,12 +81,12 @@ public class ChangeNotificationEncryptedContent implements DecryptableContent, A
         return this.backingStore.get("dataSignature");
     }
     /**
-     * Gets the ecnryptionCertificateId property value. The ecnryptionCertificateId property
+     * Gets the encryptionCertificateId property value. The encryptionCertificateId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public String getEcnryptionCertificateId() {
-        return this.backingStore.get("ecnryptionCertificateId");
+    public String getEncryptionCertificateId() {
+        return this.backingStore.get("encryptionCertificateId");
     }
     /**
      * Gets the encryptionCertificateThumbprint property value. The encryptionCertificateThumbprint property
@@ -106,7 +106,7 @@ public class ChangeNotificationEncryptedContent implements DecryptableContent, A
         deserializerMap.put("data", (n) -> { this.setData(n.getStringValue()); });
         deserializerMap.put("dataKey", (n) -> { this.setDataKey(n.getStringValue()); });
         deserializerMap.put("dataSignature", (n) -> { this.setDataSignature(n.getStringValue()); });
-        deserializerMap.put("ecnryptionCertificateId", (n) -> { this.setEcnryptionCertificateId(n.getStringValue()); });
+        deserializerMap.put("encryptionCertificateId", (n) -> { this.setEncryptionCertificateId(n.getStringValue()); });
         deserializerMap.put("encryptionCertificateThumbprint", (n) -> { this.setEncryptionCertificateThumbprint(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -128,7 +128,7 @@ public class ChangeNotificationEncryptedContent implements DecryptableContent, A
         writer.writeStringValue("data", this.getData());
         writer.writeStringValue("dataKey", this.getDataKey());
         writer.writeStringValue("dataSignature", this.getDataSignature());
-        writer.writeStringValue("ecnryptionCertificateId", this.getEcnryptionCertificateId());
+        writer.writeStringValue("encryptionCertificateId", this.getEncryptionCertificateId());
         writer.writeStringValue("encryptionCertificateThumbprint", this.getEncryptionCertificateThumbprint());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -170,11 +170,11 @@ public class ChangeNotificationEncryptedContent implements DecryptableContent, A
         this.backingStore.set("dataSignature", value);
     }
     /**
-     * Sets the ecnryptionCertificateId property value. The ecnryptionCertificateId property
-     * @param value Value to set for the ecnryptionCertificateId property.
+     * Sets the encryptionCertificateId property value. The encryptionCertificateId property
+     * @param value Value to set for the encryptionCertificateId property.
      */
-    public void setEcnryptionCertificateId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("ecnryptionCertificateId", value);
+    public void setEncryptionCertificateId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("encryptionCertificateId", value);
     }
     /**
      * Sets the encryptionCertificateThumbprint property value. The encryptionCertificateThumbprint property
