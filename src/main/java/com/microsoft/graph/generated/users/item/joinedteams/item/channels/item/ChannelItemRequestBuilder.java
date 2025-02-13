@@ -2,6 +2,7 @@ package com.microsoft.graph.users.item.joinedteams.item.channels.item;
 
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.joinedteams.item.channels.item.allmembers.AllMembersRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
@@ -31,6 +32,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChannelItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the allMembers property of the microsoft.graph.channel entity.
+     * @return a {@link AllMembersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AllMembersRequestBuilder allMembers() {
+        return new AllMembersRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the archive method.
      * @return a {@link ArchiveRequestBuilder}

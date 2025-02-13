@@ -25,6 +25,14 @@ public class Schedule extends Entity implements Parsable {
         return new Schedule();
     }
     /**
+     * Gets the dayNotes property value. The day notes in the schedule.
+     * @return a {@link java.util.List<DayNote>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DayNote> getDayNotes() {
+        return this.backingStore.get("dayNotes");
+    }
+    /**
      * Gets the enabled property value. Indicates whether the schedule is enabled for the team. Required.
      * @return a {@link Boolean}
      */
@@ -39,7 +47,9 @@ public class Schedule extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("dayNotes", (n) -> { this.setDayNotes(n.getCollectionOfObjectValues(DayNote::createFromDiscriminatorValue)); });
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isActivitiesIncludedWhenCopyingShiftsEnabled", (n) -> { this.setIsActivitiesIncludedWhenCopyingShiftsEnabled(n.getBooleanValue()); });
         deserializerMap.put("offerShiftRequests", (n) -> { this.setOfferShiftRequests(n.getCollectionOfObjectValues(OfferShiftRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("offerShiftRequestsEnabled", (n) -> { this.setOfferShiftRequestsEnabled(n.getBooleanValue()); });
         deserializerMap.put("openShiftChangeRequests", (n) -> { this.setOpenShiftChangeRequests(n.getCollectionOfObjectValues(OpenShiftChangeRequest::createFromDiscriminatorValue)); });
@@ -49,9 +59,12 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("provisionStatusCode", (n) -> { this.setProvisionStatusCode(n.getStringValue()); });
         deserializerMap.put("schedulingGroups", (n) -> { this.setSchedulingGroups(n.getCollectionOfObjectValues(SchedulingGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("shifts", (n) -> { this.setShifts(n.getCollectionOfObjectValues(Shift::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDayOfWeek", (n) -> { this.setStartDayOfWeek(n.getEnumValue(DayOfWeek::forValue)); });
         deserializerMap.put("swapShiftsChangeRequests", (n) -> { this.setSwapShiftsChangeRequests(n.getCollectionOfObjectValues(SwapShiftsChangeRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("swapShiftsRequestsEnabled", (n) -> { this.setSwapShiftsRequestsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("timeCards", (n) -> { this.setTimeCards(n.getCollectionOfObjectValues(TimeCard::createFromDiscriminatorValue)); });
         deserializerMap.put("timeClockEnabled", (n) -> { this.setTimeClockEnabled(n.getBooleanValue()); });
+        deserializerMap.put("timeClockSettings", (n) -> { this.setTimeClockSettings(n.getObjectValue(TimeClockSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("timeOffReasons", (n) -> { this.setTimeOffReasons(n.getCollectionOfObjectValues(TimeOffReason::createFromDiscriminatorValue)); });
         deserializerMap.put("timeOffRequests", (n) -> { this.setTimeOffRequests(n.getCollectionOfObjectValues(TimeOffRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("timeOffRequestsEnabled", (n) -> { this.setTimeOffRequestsEnabled(n.getBooleanValue()); });
@@ -59,6 +72,14 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
         deserializerMap.put("workforceIntegrationIds", (n) -> { this.setWorkforceIntegrationIds(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isActivitiesIncludedWhenCopyingShiftsEnabled property value. Indicates whether copied shifts include activities from the original shift.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsActivitiesIncludedWhenCopyingShiftsEnabled() {
+        return this.backingStore.get("isActivitiesIncludedWhenCopyingShiftsEnabled");
     }
     /**
      * Gets the offerShiftRequests property value. The offer requests for shifts in the schedule.
@@ -133,6 +154,14 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("shifts");
     }
     /**
+     * Gets the startDayOfWeek property value. Indicates the start day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * @return a {@link DayOfWeek}
+     */
+    @jakarta.annotation.Nullable
+    public DayOfWeek getStartDayOfWeek() {
+        return this.backingStore.get("startDayOfWeek");
+    }
+    /**
      * Gets the swapShiftsChangeRequests property value. The swap requests for shifts in the schedule.
      * @return a {@link java.util.List<SwapShiftsChangeRequest>}
      */
@@ -149,12 +178,28 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("swapShiftsRequestsEnabled");
     }
     /**
+     * Gets the timeCards property value. The time cards in the schedule.
+     * @return a {@link java.util.List<TimeCard>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TimeCard> getTimeCards() {
+        return this.backingStore.get("timeCards");
+    }
+    /**
      * Gets the timeClockEnabled property value. Indicates whether time clock is enabled for the schedule.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getTimeClockEnabled() {
         return this.backingStore.get("timeClockEnabled");
+    }
+    /**
+     * Gets the timeClockSettings property value. The time clock location settings for this schedule.
+     * @return a {@link TimeClockSettings}
+     */
+    @jakarta.annotation.Nullable
+    public TimeClockSettings getTimeClockSettings() {
+        return this.backingStore.get("timeClockSettings");
     }
     /**
      * Gets the timeOffReasons property value. The set of reasons for a time off in the schedule.
@@ -211,7 +256,9 @@ public class Schedule extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("dayNotes", this.getDayNotes());
         writer.writeBooleanValue("enabled", this.getEnabled());
+        writer.writeBooleanValue("isActivitiesIncludedWhenCopyingShiftsEnabled", this.getIsActivitiesIncludedWhenCopyingShiftsEnabled());
         writer.writeCollectionOfObjectValues("offerShiftRequests", this.getOfferShiftRequests());
         writer.writeBooleanValue("offerShiftRequestsEnabled", this.getOfferShiftRequestsEnabled());
         writer.writeCollectionOfObjectValues("openShiftChangeRequests", this.getOpenShiftChangeRequests());
@@ -219,9 +266,12 @@ public class Schedule extends Entity implements Parsable {
         writer.writeBooleanValue("openShiftsEnabled", this.getOpenShiftsEnabled());
         writer.writeCollectionOfObjectValues("schedulingGroups", this.getSchedulingGroups());
         writer.writeCollectionOfObjectValues("shifts", this.getShifts());
+        writer.writeEnumValue("startDayOfWeek", this.getStartDayOfWeek());
         writer.writeCollectionOfObjectValues("swapShiftsChangeRequests", this.getSwapShiftsChangeRequests());
         writer.writeBooleanValue("swapShiftsRequestsEnabled", this.getSwapShiftsRequestsEnabled());
+        writer.writeCollectionOfObjectValues("timeCards", this.getTimeCards());
         writer.writeBooleanValue("timeClockEnabled", this.getTimeClockEnabled());
+        writer.writeObjectValue("timeClockSettings", this.getTimeClockSettings());
         writer.writeCollectionOfObjectValues("timeOffReasons", this.getTimeOffReasons());
         writer.writeCollectionOfObjectValues("timeOffRequests", this.getTimeOffRequests());
         writer.writeBooleanValue("timeOffRequestsEnabled", this.getTimeOffRequestsEnabled());
@@ -230,11 +280,25 @@ public class Schedule extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("workforceIntegrationIds", this.getWorkforceIntegrationIds());
     }
     /**
+     * Sets the dayNotes property value. The day notes in the schedule.
+     * @param value Value to set for the dayNotes property.
+     */
+    public void setDayNotes(@jakarta.annotation.Nullable final java.util.List<DayNote> value) {
+        this.backingStore.set("dayNotes", value);
+    }
+    /**
      * Sets the enabled property value. Indicates whether the schedule is enabled for the team. Required.
      * @param value Value to set for the enabled property.
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("enabled", value);
+    }
+    /**
+     * Sets the isActivitiesIncludedWhenCopyingShiftsEnabled property value. Indicates whether copied shifts include activities from the original shift.
+     * @param value Value to set for the isActivitiesIncludedWhenCopyingShiftsEnabled property.
+     */
+    public void setIsActivitiesIncludedWhenCopyingShiftsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isActivitiesIncludedWhenCopyingShiftsEnabled", value);
     }
     /**
      * Sets the offerShiftRequests property value. The offer requests for shifts in the schedule.
@@ -300,6 +364,13 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("shifts", value);
     }
     /**
+     * Sets the startDayOfWeek property value. Indicates the start day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * @param value Value to set for the startDayOfWeek property.
+     */
+    public void setStartDayOfWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
+        this.backingStore.set("startDayOfWeek", value);
+    }
+    /**
      * Sets the swapShiftsChangeRequests property value. The swap requests for shifts in the schedule.
      * @param value Value to set for the swapShiftsChangeRequests property.
      */
@@ -314,11 +385,25 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("swapShiftsRequestsEnabled", value);
     }
     /**
+     * Sets the timeCards property value. The time cards in the schedule.
+     * @param value Value to set for the timeCards property.
+     */
+    public void setTimeCards(@jakarta.annotation.Nullable final java.util.List<TimeCard> value) {
+        this.backingStore.set("timeCards", value);
+    }
+    /**
      * Sets the timeClockEnabled property value. Indicates whether time clock is enabled for the schedule.
      * @param value Value to set for the timeClockEnabled property.
      */
     public void setTimeClockEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("timeClockEnabled", value);
+    }
+    /**
+     * Sets the timeClockSettings property value. The time clock location settings for this schedule.
+     * @param value Value to set for the timeClockSettings property.
+     */
+    public void setTimeClockSettings(@jakarta.annotation.Nullable final TimeClockSettings value) {
+        this.backingStore.set("timeClockSettings", value);
     }
     /**
      * Sets the timeOffReasons property value. The set of reasons for a time off in the schedule.
