@@ -26,6 +26,14 @@ public class Channel extends Entity implements Parsable {
         return new Channel();
     }
     /**
+     * Gets the allMembers property value. A collection of membership records associated with the channel, including both direct and indirect members of shared channels.
+     * @return a {@link java.util.List<ConversationMember>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConversationMember> getAllMembers() {
+        return this.backingStore.get("allMembers");
+    }
+    /**
      * Gets the createdDateTime property value. Read only. Timestamp at which the channel was created.
      * @return a {@link OffsetDateTime}
      */
@@ -64,6 +72,7 @@ public class Channel extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allMembers", (n) -> { this.setAllMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -176,6 +185,7 @@ public class Channel extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("allMembers", this.getAllMembers());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -191,6 +201,13 @@ public class Channel extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("webUrl", this.getWebUrl());
+    }
+    /**
+     * Sets the allMembers property value. A collection of membership records associated with the channel, including both direct and indirect members of shared channels.
+     * @param value Value to set for the allMembers property.
+     */
+    public void setAllMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
+        this.backingStore.set("allMembers", value);
     }
     /**
      * Sets the createdDateTime property value. Read only. Timestamp at which the channel was created.

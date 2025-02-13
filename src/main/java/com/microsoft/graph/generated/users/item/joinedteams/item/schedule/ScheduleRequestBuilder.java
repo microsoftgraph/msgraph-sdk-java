@@ -2,6 +2,7 @@ package com.microsoft.graph.users.item.joinedteams.item.schedule;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Schedule;
+import com.microsoft.graph.users.item.joinedteams.item.schedule.daynotes.DayNotesRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.offershiftrequests.OfferShiftRequestsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.openshiftchangerequests.OpenShiftChangeRequestsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.openshifts.OpenShiftsRequestBuilder;
@@ -9,6 +10,7 @@ import com.microsoft.graph.users.item.joinedteams.item.schedule.schedulinggroups
 import com.microsoft.graph.users.item.joinedteams.item.schedule.share.ShareRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.shifts.ShiftsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.swapshiftschangerequests.SwapShiftsChangeRequestsRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.schedule.timecards.TimeCardsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.timeoffreasons.TimeOffReasonsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.timeoffrequests.TimeOffRequestsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.timesoff.TimesOffRequestBuilder;
@@ -30,6 +32,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ScheduleRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the dayNotes property of the microsoft.graph.schedule entity.
+     * @return a {@link DayNotesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DayNotesRequestBuilder dayNotes() {
+        return new DayNotesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
      * @return a {@link OfferShiftRequestsRequestBuilder}
@@ -85,6 +95,14 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SwapShiftsChangeRequestsRequestBuilder swapShiftsChangeRequests() {
         return new SwapShiftsChangeRequestsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the timeCards property of the microsoft.graph.schedule entity.
+     * @return a {@link TimeCardsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TimeCardsRequestBuilder timeCards() {
+        return new TimeCardsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.

@@ -27,6 +27,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.dayNote": return new DayNote();
                 case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
                 case "#microsoft.graph.openShift": return new OpenShift();
                 case "#microsoft.graph.openShiftChangeRequest": return new OpenShiftChangeRequest();
@@ -35,6 +36,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
                 case "#microsoft.graph.shift": return new Shift();
                 case "#microsoft.graph.shiftPreferences": return new ShiftPreferences();
                 case "#microsoft.graph.swapShiftsChangeRequest": return new SwapShiftsChangeRequest();
+                case "#microsoft.graph.timeCard": return new TimeCard();
                 case "#microsoft.graph.timeOff": return new TimeOff();
                 case "#microsoft.graph.timeOffReason": return new TimeOffReason();
                 case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
@@ -42,6 +44,14 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
             }
         }
         return new ChangeTrackedEntity();
+    }
+    /**
+     * Gets the createdBy property value. Identity of the creator of the entity.
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getCreatedBy() {
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -58,6 +68,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -86,6 +97,14 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("createdBy", this.getCreatedBy());
+    }
+    /**
+     * Sets the createdBy property value. Identity of the creator of the entity.
+     * @param value Value to set for the createdBy property.
+     */
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
