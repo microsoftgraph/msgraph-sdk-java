@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.29.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.28.0...v6.29.0) (2025-02-18)
+
+
+### Features
+
+* add ChangeNotification models ([7fe8eaf](https://github.com/microsoftgraph/msgraph-sdk-java/commit/7fe8eafbc569b054835922941476c9fa08393c1c))
+* add ChangeNotification models ([fb57d04](https://github.com/microsoftgraph/msgraph-sdk-java/commit/fb57d0427cb95fc8ac731220b30557497618aec0))
+
 ## [6.28.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.27.0...v6.28.0) (2025-02-13)
 
 
