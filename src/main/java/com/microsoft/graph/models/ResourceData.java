@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * The {@link ResourceData} model for data of the subscribed resource.
+ */
 public class ResourceData implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.

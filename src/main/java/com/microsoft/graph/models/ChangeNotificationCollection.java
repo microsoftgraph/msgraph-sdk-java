@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * The {@link ChangeNotificationCollection} model.
+ */
 public class ChangeNotificationCollection implements TokenValidable<ChangeNotificationEncryptedContent, ChangeNotification>, AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.

@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * The {@link ChangeNotificationEncryptedContent} model for the encrypted response.
+ */
 public class ChangeNotificationEncryptedContent implements DecryptableContent, AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.

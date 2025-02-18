@@ -13,7 +13,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-
+/**
+ * The {@link ChangeNotification} model with information on the change notification.
+ */
 public class ChangeNotification implements EncryptedContentBearer<ChangeNotificationEncryptedContent>,  AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.

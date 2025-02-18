@@ -3,6 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+/**
+ * The {@link LifecycleEventType} enum for event status in the lifecycle.
+ */
 public enum LifecycleEventType implements ValuedEnum {
     Missed("missed"),
     SubscriptionRemoved("subscriptionRemoved"),

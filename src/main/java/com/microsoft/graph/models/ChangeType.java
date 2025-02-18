@@ -3,6 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+/**
+ * The {@link ChangeType} enum for type of change.
+ */
 public enum ChangeType implements ValuedEnum {
     Created("created"),
     Updated("updated"),
