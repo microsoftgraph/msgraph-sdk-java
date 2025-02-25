@@ -77,7 +77,7 @@ public class EventMessage extends Message implements Parsable {
         return this.backingStore.get("isAllDay");
     }
     /**
-     * Gets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. Default is false.
+     * Gets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class EventMessage extends Message implements Parsable {
         this.backingStore.set("isAllDay", value);
     }
     /**
-     * Sets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. Default is false.
+     * Sets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. The default is false.
      * @param value Value to set for the isDelegated property.
      */
     public void setIsDelegated(@jakarta.annotation.Nullable final Boolean value) {
