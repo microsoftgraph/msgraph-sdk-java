@@ -77,6 +77,14 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoles");
     }
     /**
+     * Gets the authenticationBehaviors property value. The authenticationBehaviors property
+     * @return a {@link AuthenticationBehaviors}
+     */
+    @jakarta.annotation.Nullable
+    public AuthenticationBehaviors getAuthenticationBehaviors() {
+        return this.backingStore.get("authenticationBehaviors");
+    }
+    /**
      * Gets the certification property value. Specifies the certification status of the application.
      * @return a {@link Certification}
      */
@@ -161,6 +169,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("applicationTemplateId", (n) -> { this.setApplicationTemplateId(n.getStringValue()); });
         deserializerMap.put("appManagementPolicies", (n) -> { this.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("appRoles", (n) -> { this.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationBehaviors", (n) -> { this.setAuthenticationBehaviors(n.getObjectValue(AuthenticationBehaviors::createFromDiscriminatorValue)); });
         deserializerMap.put("certification", (n) -> { this.setCertification(n.getObjectValue(Certification::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdOnBehalfOf", (n) -> { this.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
@@ -473,6 +482,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeStringValue("applicationTemplateId", this.getApplicationTemplateId());
         writer.writeCollectionOfObjectValues("appManagementPolicies", this.getAppManagementPolicies());
         writer.writeCollectionOfObjectValues("appRoles", this.getAppRoles());
+        writer.writeObjectValue("authenticationBehaviors", this.getAuthenticationBehaviors());
         writer.writeObjectValue("certification", this.getCertification());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("createdOnBehalfOf", this.getCreatedOnBehalfOf());
@@ -556,6 +566,13 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setAppRoles(@jakarta.annotation.Nullable final java.util.List<AppRole> value) {
         this.backingStore.set("appRoles", value);
+    }
+    /**
+     * Sets the authenticationBehaviors property value. The authenticationBehaviors property
+     * @param value Value to set for the authenticationBehaviors property.
+     */
+    public void setAuthenticationBehaviors(@jakarta.annotation.Nullable final AuthenticationBehaviors value) {
+        this.backingStore.set("authenticationBehaviors", value);
     }
     /**
      * Sets the certification property value. Specifies the certification status of the application.

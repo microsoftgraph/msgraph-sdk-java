@@ -49,7 +49,7 @@ public class Calendar extends Entity implements Parsable {
         return this.backingStore.get("calendarView");
     }
     /**
-     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who shared a calendar and granted write access.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class Calendar extends Entity implements Parsable {
         return this.backingStore.get("canEdit");
     }
     /**
-     * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * Gets the canShare property value. true if the user has permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class Calendar extends Entity implements Parsable {
         return this.backingStore.get("canShare");
     }
     /**
-     * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
+     * Gets the canViewPrivateItems property value. If true, the user can read calendar items that have been marked private, false otherwise.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -243,21 +243,21 @@ public class Calendar extends Entity implements Parsable {
         this.backingStore.set("calendarView", value);
     }
     /**
-     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who shared a calendar and granted write access.
      * @param value Value to set for the canEdit property.
      */
     public void setCanEdit(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("canEdit", value);
     }
     /**
-     * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * Sets the canShare property value. true if the user has permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      * @param value Value to set for the canShare property.
      */
     public void setCanShare(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("canShare", value);
     }
     /**
-     * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
+     * Sets the canViewPrivateItems property value. If true, the user can read calendar items that have been marked private, false otherwise.
      * @param value Value to set for the canViewPrivateItems property.
      */
     public void setCanViewPrivateItems(@jakarta.annotation.Nullable final Boolean value) {

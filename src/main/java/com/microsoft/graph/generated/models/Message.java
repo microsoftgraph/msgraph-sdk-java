@@ -140,7 +140,7 @@ public class Message extends OutlookItem implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
+     * Gets the flag property value. Indicates the status, start date, due date, or completion date for the message.
      * @return a {@link FollowupFlag}
      */
     @jakarta.annotation.Nullable
@@ -260,7 +260,7 @@ public class Message extends OutlookItem implements Parsable {
         return this.backingStore.get("replyTo");
     }
     /**
-     * Gets the sender property value. The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     * Gets the sender property value. The account that is used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      * @return a {@link Recipient}
      */
     @jakarta.annotation.Nullable
@@ -410,7 +410,7 @@ public class Message extends OutlookItem implements Parsable {
         this.backingStore.set("extensions", value);
     }
     /**
-     * Sets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
+     * Sets the flag property value. Indicates the status, start date, due date, or completion date for the message.
      * @param value Value to set for the flag property.
      */
     public void setFlag(@jakarta.annotation.Nullable final FollowupFlag value) {
@@ -515,7 +515,7 @@ public class Message extends OutlookItem implements Parsable {
         this.backingStore.set("replyTo", value);
     }
     /**
-     * Sets the sender property value. The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     * Sets the sender property value. The account that is used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      * @param value Value to set for the sender property.
      */
     public void setSender(@jakarta.annotation.Nullable final Recipient value) {

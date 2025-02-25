@@ -5,6 +5,7 @@ import java.util.Objects;
 
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RuleOperation implements ValuedEnum {
+    Null("null"),
     Equals("equals"),
     NotEquals("notEquals"),
     Contains("contains"),
@@ -23,6 +24,7 @@ public enum RuleOperation implements ValuedEnum {
     public static RuleOperation forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
+            case "null": return Null;
             case "equals": return Equals;
             case "notEquals": return NotEquals;
             case "contains": return Contains;
