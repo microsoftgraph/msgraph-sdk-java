@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.30.1](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.30.0...v6.30.1) (2025-02-27)
+
+
+### Bug Fixes
+
+* align build files and javadoc file strcuture ([9eec01c](https://github.com/microsoftgraph/msgraph-sdk-java/commit/9eec01c4cabc7baeeede058d6e7c35c05b93b587))
+* ensure javadocs are generated ([455f669](https://github.com/microsoftgraph/msgraph-sdk-java/commit/455f6698125f692b556369c7d14972ddeeada53e))
+* resolve javadoc and source locations ([a8478a1](https://github.com/microsoftgraph/msgraph-sdk-java/commit/a8478a17744d6c830ae2d9999f4c5e24eeb5be28))
+
 ## [6.30.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.29.0...v6.30.0) (2025-02-25)
 
 
