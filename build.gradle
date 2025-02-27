@@ -48,7 +48,7 @@ def pomConfig = {
 }
 
 tasks.withType(Javadoc).configureEach {
-    enabled = false
+    enabled = true
     options.addStringOption('Xdoclint:-missing', '-quiet')
 }
 
