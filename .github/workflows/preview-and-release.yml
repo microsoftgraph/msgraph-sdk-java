@@ -37,6 +37,9 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: ${{ env.JAVA_DISTRIBUTION}}
           cache: gradle
+      - name: Move generated sources to correct package
+        run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\generated'
+        shell: pwsh
       - name: Detect secrets
         run: |
           pip install detect-secrets
@@ -76,6 +79,9 @@ jobs:
         run: |
           pip install detect-secrets
           git ls-files -z | xargs -0 detect-secrets-hook --baseline .secrets.baseline
+      - name: Move generated sources to correct package
+        run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\generated'
+        shell: pwsh
       - name: Download File
         run: .\scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
@@ -129,6 +135,9 @@ jobs:
         java-version: ${{ env.JAVA_VERSION }}
         distribution: ${{ env.JAVA_DISTRIBUTION}}
         cache: gradle
+    - name: Move generated sources to correct package
+      run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\generated'
+      shell: pwsh
     - name: Download file
       run: .\scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
       shell: pwsh

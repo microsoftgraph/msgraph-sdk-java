@@ -17,6 +17,9 @@ jobs:
           distribution: 'temurin'
           java-version: 21
           cache: gradle
+      - name: Move generated sources to correct package
+        run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\generated'
+        shell: pwsh
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3.2.2
       - name: Add execution right to the script
