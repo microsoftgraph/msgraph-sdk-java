@@ -37,7 +37,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/drive{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The user's OneDrive. Read-only.
+     * The user&apos;s OneDrive. Read-only.
      * @return a {@link Drive}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's OneDrive. Read-only.
+     * The user&apos;s OneDrive. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Drive}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Drive::createFromDiscriminatorValue);
     }
     /**
-     * The user's OneDrive. Read-only.
+     * The user&apos;s OneDrive. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's OneDrive. Read-only.
+     * The user&apos;s OneDrive. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class DriveRequestBuilder extends BaseRequestBuilder {
         return new DriveRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user's OneDrive. Read-only.
+     * The user&apos;s OneDrive. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -25,7 +25,7 @@ public class Domain extends Entity implements Parsable {
         return new Domain();
     }
     /**
-     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
+     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant&apos;s on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("availabilityStatus");
     }
     /**
-     * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Doesn't support $expand. Supports $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
+     * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Doesn&apos;t support $expand. Supports $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("domainNameReferences");
     }
     /**
-     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Doesn't support $expand.
+     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Doesn&apos;t support $expand.
      * @return a {@link java.util.List<InternalDomainFederation>}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("isAdminManaged");
     }
     /**
-     * Gets the isDefault property value. true if this is the default domain that is used for user creation. There's only one default domain per company. Not nullable.
+     * Gets the isDefault property value. true if this is the default domain that is used for user creation. There&apos;s only one default domain per company. Not nullable.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("isDefault");
     }
     /**
-     * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There's only one initial domain per company. Not nullable
+     * Gets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There&apos;s only one initial domain per company. Not nullable
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("model");
     }
     /**
-     * Gets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password expires. If the property isn't set, a default value of 14 days is used.
+     * Gets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password expires. If the property isn&apos;t set, a default value of 14 days is used.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("passwordNotificationWindowInDays");
     }
     /**
-     * Gets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property isn't set, a default value of 90 days is used.
+     * Gets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property isn&apos;t set, a default value of 90 days is used.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("rootDomain");
     }
     /**
-     * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Doesn't support $expand.
+     * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Doesn&apos;t support $expand.
      * @return a {@link java.util.List<DomainDnsRecord>}
      */
     @jakarta.annotation.Nullable
@@ -188,7 +188,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("supportedServices");
     }
     /**
-     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Doesn't support $expand.
+     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Doesn&apos;t support $expand.
      * @return a {@link java.util.List<DomainDnsRecord>}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class Domain extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("verificationDnsRecords", this.getVerificationDnsRecords());
     }
     /**
-     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
+     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant&apos;s on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final String value) {
@@ -236,14 +236,14 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("availabilityStatus", value);
     }
     /**
-     * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Doesn't support $expand. Supports $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
+     * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Doesn&apos;t support $expand. Supports $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @param value Value to set for the domainNameReferences property.
      */
     public void setDomainNameReferences(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("domainNameReferences", value);
     }
     /**
-     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Doesn't support $expand.
+     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Doesn&apos;t support $expand.
      * @param value Value to set for the federationConfiguration property.
      */
     public void setFederationConfiguration(@jakarta.annotation.Nullable final java.util.List<InternalDomainFederation> value) {
@@ -257,14 +257,14 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("isAdminManaged", value);
     }
     /**
-     * Sets the isDefault property value. true if this is the default domain that is used for user creation. There's only one default domain per company. Not nullable.
+     * Sets the isDefault property value. true if this is the default domain that is used for user creation. There&apos;s only one default domain per company. Not nullable.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDefault", value);
     }
     /**
-     * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There's only one initial domain per company. Not nullable
+     * Sets the isInitial property value. true if this is the initial domain created by Microsoft Online Services (contoso.com). There&apos;s only one initial domain per company. Not nullable
      * @param value Value to set for the isInitial property.
      */
     public void setIsInitial(@jakarta.annotation.Nullable final Boolean value) {
@@ -299,14 +299,14 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("model", value);
     }
     /**
-     * Sets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password expires. If the property isn't set, a default value of 14 days is used.
+     * Sets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password expires. If the property isn&apos;t set, a default value of 14 days is used.
      * @param value Value to set for the passwordNotificationWindowInDays property.
      */
     public void setPasswordNotificationWindowInDays(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("passwordNotificationWindowInDays", value);
     }
     /**
-     * Sets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property isn't set, a default value of 90 days is used.
+     * Sets the passwordValidityPeriodInDays property value. Specifies the length of time that a password is valid before it must be changed. If the property isn&apos;t set, a default value of 90 days is used.
      * @param value Value to set for the passwordValidityPeriodInDays property.
      */
     public void setPasswordValidityPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
@@ -320,7 +320,7 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("rootDomain", value);
     }
     /**
-     * Sets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Doesn't support $expand.
+     * Sets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Doesn&apos;t support $expand.
      * @param value Value to set for the serviceConfigurationRecords property.
      */
     public void setServiceConfigurationRecords(@jakarta.annotation.Nullable final java.util.List<DomainDnsRecord> value) {
@@ -341,7 +341,7 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("supportedServices", value);
     }
     /**
-     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Doesn't support $expand.
+     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Doesn&apos;t support $expand.
      * @param value Value to set for the verificationDnsRecords property.
      */
     public void setVerificationDnsRecords(@jakarta.annotation.Nullable final java.util.List<DomainDnsRecord> value) {

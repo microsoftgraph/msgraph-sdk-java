@@ -26,7 +26,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return new Shift();
     }
     /**
-     * Gets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they're shared, which copies the changes from the draftShift to the sharedShift property.
+     * Gets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they&apos;re shared, which copies the changes from the draftShift to the sharedShift property.
      * @return a {@link ShiftItem}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they're shared, which copies the changes from the draftShift to the sharedShift property.
+     * Sets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they&apos;re shared, which copies the changes from the draftShift to the sharedShift property.
      * @param value Value to set for the draftShift property.
      */
     public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {

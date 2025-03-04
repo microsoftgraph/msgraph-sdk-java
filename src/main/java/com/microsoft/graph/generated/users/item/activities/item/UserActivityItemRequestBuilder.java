@@ -64,7 +64,7 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      * @return a {@link UserActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

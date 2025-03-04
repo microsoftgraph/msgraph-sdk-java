@@ -97,7 +97,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("customAccountResetCredentialsUrl");
     }
     /**
-     * Gets the customCannotAccessYourAccountText property value. A string to replace the default 'Can't access your account?' self-service password reset (SSPR) hyperlink text on the sign-in page. This text must be in Unicode format and not exceed 256 characters.
+     * Gets the customCannotAccessYourAccountText property value. A string to replace the default &apos;Can&apos;t access your account?&apos; self-service password reset (SSPR) hyperlink text on the sign-in page. This text must be in Unicode format and not exceed 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("customCannotAccessYourAccountText");
     }
     /**
-     * Gets the customCannotAccessYourAccountUrl property value. A custom URL to replace the default URL of the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead.
+     * Gets the customCannotAccessYourAccountUrl property value. A custom URL to replace the default URL of the self-service password reset (SSPR) &apos;Can&apos;t access your account?&apos; hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("customCSSRelativeUrl");
     }
     /**
-     * Gets the customForgotMyPasswordText property value. A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
+     * Gets the customForgotMyPasswordText property value. A string to replace the default &apos;Forgot my password&apos; hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("customForgotMyPasswordText");
     }
     /**
-     * Gets the customPrivacyAndCookiesText property value. A string to replace the default 'Privacy and Cookies' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
+     * Gets the customPrivacyAndCookiesText property value. A string to replace the default &apos;Privacy and Cookies&apos; hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("customPrivacyAndCookiesText");
     }
     /**
-     * Gets the customPrivacyAndCookiesUrl property value. A custom URL to replace the default URL of the 'Privacy and Cookies' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
+     * Gets the customPrivacyAndCookiesUrl property value. A custom URL to replace the default URL of the &apos;Privacy and Cookies&apos; hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("customPrivacyAndCookiesUrl");
     }
     /**
-     * Gets the customResetItNowText property value. A string to replace the default 'reset it now' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. DO NOT USE: Customization of the 'reset it now' hyperlink text is currently not supported.
+     * Gets the customResetItNowText property value. A string to replace the default &apos;reset it now&apos; hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. DO NOT USE: Customization of the &apos;reset it now&apos; hyperlink text is currently not supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -161,7 +161,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("customResetItNowText");
     }
     /**
-     * Gets the customTermsOfUseText property value. A string to replace the the default 'Terms of Use' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
+     * Gets the customTermsOfUseText property value. A string to replace the the default &apos;Terms of Use&apos; hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("customTermsOfUseText");
     }
     /**
-     * Gets the customTermsOfUseUrl property value. A custom URL to replace the default URL of the 'Terms of Use' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128characters.
+     * Gets the customTermsOfUseUrl property value. A custom URL to replace the default URL of the &apos;Terms of Use&apos; hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -313,7 +313,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this.backingStore.get("squareLogoRelativeUrl");
     }
     /**
-     * Gets the usernameHintText property value. A string that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can't exceed 64 characters.
+     * Gets the usernameHintText property value. A string that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can&apos;t exceed 64 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -416,14 +416,14 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         this.backingStore.set("customAccountResetCredentialsUrl", value);
     }
     /**
-     * Sets the customCannotAccessYourAccountText property value. A string to replace the default 'Can't access your account?' self-service password reset (SSPR) hyperlink text on the sign-in page. This text must be in Unicode format and not exceed 256 characters.
+     * Sets the customCannotAccessYourAccountText property value. A string to replace the default &apos;Can&apos;t access your account?&apos; self-service password reset (SSPR) hyperlink text on the sign-in page. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customCannotAccessYourAccountText property.
      */
     public void setCustomCannotAccessYourAccountText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customCannotAccessYourAccountText", value);
     }
     /**
-     * Sets the customCannotAccessYourAccountUrl property value. A custom URL to replace the default URL of the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead.
+     * Sets the customCannotAccessYourAccountUrl property value. A custom URL to replace the default URL of the self-service password reset (SSPR) &apos;Can&apos;t access your account?&apos; hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead.
      * @param value Value to set for the customCannotAccessYourAccountUrl property.
      */
     public void setCustomCannotAccessYourAccountUrl(@jakarta.annotation.Nullable final String value) {
@@ -444,42 +444,42 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         this.backingStore.set("customCSSRelativeUrl", value);
     }
     /**
-     * Sets the customForgotMyPasswordText property value. A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
+     * Sets the customForgotMyPasswordText property value. A string to replace the default &apos;Forgot my password&apos; hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customForgotMyPasswordText property.
      */
     public void setCustomForgotMyPasswordText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customForgotMyPasswordText", value);
     }
     /**
-     * Sets the customPrivacyAndCookiesText property value. A string to replace the default 'Privacy and Cookies' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
+     * Sets the customPrivacyAndCookiesText property value. A string to replace the default &apos;Privacy and Cookies&apos; hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customPrivacyAndCookiesText property.
      */
     public void setCustomPrivacyAndCookiesText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customPrivacyAndCookiesText", value);
     }
     /**
-     * Sets the customPrivacyAndCookiesUrl property value. A custom URL to replace the default URL of the 'Privacy and Cookies' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
+     * Sets the customPrivacyAndCookiesUrl property value. A custom URL to replace the default URL of the &apos;Privacy and Cookies&apos; hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
      * @param value Value to set for the customPrivacyAndCookiesUrl property.
      */
     public void setCustomPrivacyAndCookiesUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customPrivacyAndCookiesUrl", value);
     }
     /**
-     * Sets the customResetItNowText property value. A string to replace the default 'reset it now' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. DO NOT USE: Customization of the 'reset it now' hyperlink text is currently not supported.
+     * Sets the customResetItNowText property value. A string to replace the default &apos;reset it now&apos; hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. DO NOT USE: Customization of the &apos;reset it now&apos; hyperlink text is currently not supported.
      * @param value Value to set for the customResetItNowText property.
      */
     public void setCustomResetItNowText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customResetItNowText", value);
     }
     /**
-     * Sets the customTermsOfUseText property value. A string to replace the the default 'Terms of Use' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
+     * Sets the customTermsOfUseText property value. A string to replace the the default &apos;Terms of Use&apos; hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customTermsOfUseText property.
      */
     public void setCustomTermsOfUseText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customTermsOfUseText", value);
     }
     /**
-     * Sets the customTermsOfUseUrl property value. A custom URL to replace the default URL of the 'Terms of Use' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128characters.
+     * Sets the customTermsOfUseUrl property value. A custom URL to replace the default URL of the &apos;Terms of Use&apos; hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128characters.
      * @param value Value to set for the customTermsOfUseUrl property.
      */
     public void setCustomTermsOfUseUrl(@jakarta.annotation.Nullable final String value) {
@@ -570,7 +570,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         this.backingStore.set("squareLogoRelativeUrl", value);
     }
     /**
-     * Sets the usernameHintText property value. A string that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can't exceed 64 characters.
+     * Sets the usernameHintText property value. A string that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can&apos;t exceed 64 characters.
      * @param value Value to set for the usernameHintText property.
      */
     public void setUsernameHintText(@jakarta.annotation.Nullable final String value) {

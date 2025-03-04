@@ -48,7 +48,7 @@ public class MailFolder extends Entity implements Parsable {
         return this.backingStore.get("childFolders");
     }
     /**
-     * Gets the displayName property value. The mailFolder's display name.
+     * Gets the displayName property value. The mailFolder&apos;s display name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class MailFolder extends Entity implements Parsable {
         return this.backingStore.get("isHidden");
     }
     /**
-     * Gets the messageRules property value. The collection of rules that apply to the user's Inbox folder.
+     * Gets the messageRules property value. The collection of rules that apply to the user&apos;s Inbox folder.
      * @return a {@link java.util.List<MessageRule>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class MailFolder extends Entity implements Parsable {
         return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
-     * Gets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.
+     * Gets the parentFolderId property value. The unique identifier for the mailFolder&apos;s parent mailFolder.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class MailFolder extends Entity implements Parsable {
         this.backingStore.set("childFolders", value);
     }
     /**
-     * Sets the displayName property value. The mailFolder's display name.
+     * Sets the displayName property value. The mailFolder&apos;s display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -187,7 +187,7 @@ public class MailFolder extends Entity implements Parsable {
         this.backingStore.set("isHidden", value);
     }
     /**
-     * Sets the messageRules property value. The collection of rules that apply to the user's Inbox folder.
+     * Sets the messageRules property value. The collection of rules that apply to the user&apos;s Inbox folder.
      * @param value Value to set for the messageRules property.
      */
     public void setMessageRules(@jakarta.annotation.Nullable final java.util.List<MessageRule> value) {
@@ -208,7 +208,7 @@ public class MailFolder extends Entity implements Parsable {
         this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
-     * Sets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.
+     * Sets the parentFolderId property value. The unique identifier for the mailFolder&apos;s parent mailFolder.
      * @param value Value to set for the parentFolderId property.
      */
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {

@@ -133,7 +133,7 @@ public class ContentType extends Entity implements Parsable {
         return this.backingStore.get("group");
     }
     /**
-     * Gets the hidden property value. Indicates whether the content type is hidden in the list's 'New' menu.
+     * Gets the hidden property value. Indicates whether the content type is hidden in the list&apos;s &apos;New&apos; menu.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class ContentType extends Entity implements Parsable {
         return this.backingStore.get("propagateChanges");
     }
     /**
-     * Gets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
+     * Gets the readOnly property value. If true, the content type can&apos;t be modified unless this value is first set to false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -197,7 +197,7 @@ public class ContentType extends Entity implements Parsable {
         return this.backingStore.get("readOnly");
     }
     /**
-     * Gets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     * Gets the sealed property value. If true, the content type can&apos;t be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -302,7 +302,7 @@ public class ContentType extends Entity implements Parsable {
         this.backingStore.set("group", value);
     }
     /**
-     * Sets the hidden property value. Indicates whether the content type is hidden in the list's 'New' menu.
+     * Sets the hidden property value. Indicates whether the content type is hidden in the list&apos;s &apos;New&apos; menu.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
@@ -351,14 +351,14 @@ public class ContentType extends Entity implements Parsable {
         this.backingStore.set("propagateChanges", value);
     }
     /**
-     * Sets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
+     * Sets the readOnly property value. If true, the content type can&apos;t be modified unless this value is first set to false.
      * @param value Value to set for the readOnly property.
      */
     public void setReadOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("readOnly", value);
     }
     /**
-     * Sets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     * Sets the sealed property value. If true, the content type can&apos;t be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      * @param value Value to set for the sealed property.
      */
     public void setSealed(@jakarta.annotation.Nullable final Boolean value) {

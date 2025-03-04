@@ -126,7 +126,7 @@ public class EducationModuleItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationModule::createFromDiscriminatorValue);
     }
     /**
-     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can't use a PATCH request to change the status of a module. Use the publish action to change the module status.
+     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can&apos;t use a PATCH request to change the status of a module. Use the publish action to change the module status.
      * @param body The request body
      * @return a {@link EducationModule}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -137,7 +137,7 @@ public class EducationModuleItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can't use a PATCH request to change the status of a module. Use the publish action to change the module status.
+     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can&apos;t use a PATCH request to change the status of a module. Use the publish action to change the module status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationModule}
@@ -193,7 +193,7 @@ public class EducationModuleItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can't use a PATCH request to change the status of a module. Use the publish action to change the module status.
+     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can&apos;t use a PATCH request to change the status of a module. Use the publish action to change the module status.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -202,7 +202,7 @@ public class EducationModuleItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can't use a PATCH request to change the status of a module. Use the publish action to change the module status.
+     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can&apos;t use a PATCH request to change the status of a module. Use the publish action to change the module status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -39,7 +39,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return deserializerMap;
     }
     /**
-     * Gets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
+     * Gets the policy property value. The policy that&apos;s associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @return a {@link UnifiedRoleManagementPolicy}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return this.backingStore.get("policyId");
     }
     /**
-     * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+     * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it&apos;s the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it&apos;s either member or owner. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         writer.writeStringValue("scopeType", this.getScopeType());
     }
     /**
-     * Sets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
+     * Sets the policy property value. The policy that&apos;s associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @param value Value to set for the policy property.
      */
     public void setPolicy(@jakarta.annotation.Nullable final UnifiedRoleManagementPolicy value) {
@@ -106,7 +106,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         this.backingStore.set("policyId", value);
     }
     /**
-     * Sets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+     * Sets the roleDefinitionId property value. For Microsoft Entra roles policy, it&apos;s the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it&apos;s either member or owner. Supports $filter (eq).
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {

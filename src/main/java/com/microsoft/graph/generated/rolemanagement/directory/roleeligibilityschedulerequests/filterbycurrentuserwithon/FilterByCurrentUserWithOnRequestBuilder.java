@@ -21,7 +21,7 @@ import java.util.Objects;
 public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link FilterByCurrentUserWithOnRequestBuilder} and sets the default values.
-     * @param on Usage: on='{on}'
+     * @param on Usage: on=&apos;{on}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

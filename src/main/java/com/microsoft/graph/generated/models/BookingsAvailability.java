@@ -71,7 +71,7 @@ public class BookingsAvailability implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the businessHours property value. The hours of operation in a week. The business hours value is set to null if the availability type isn't customWeeklyHours.
+     * Gets the businessHours property value. The hours of operation in a week. The business hours value is set to null if the availability type isn&apos;t customWeeklyHours.
      * @return a {@link java.util.List<BookingWorkHours>}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class BookingsAvailability implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the businessHours property value. The hours of operation in a week. The business hours value is set to null if the availability type isn't customWeeklyHours.
+     * Sets the businessHours property value. The hours of operation in a week. The business hours value is set to null if the availability type isn&apos;t customWeeklyHours.
      * @param value Value to set for the businessHours property.
      */
     public void setBusinessHours(@jakarta.annotation.Nullable final java.util.List<BookingWorkHours> value) {

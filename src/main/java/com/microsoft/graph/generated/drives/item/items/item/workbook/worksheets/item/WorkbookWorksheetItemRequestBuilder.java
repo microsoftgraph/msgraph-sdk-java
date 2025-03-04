@@ -181,7 +181,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the range method.
-     * @param address Usage: address='{address}'
+     * @param address Usage: address=&apos;{address}&apos;
      * @return a {@link RangeWithAddressRequestBuilder}
      */
     @jakarta.annotation.Nonnull

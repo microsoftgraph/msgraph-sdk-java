@@ -57,7 +57,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the error property value. The error if the status isn't successful.
+     * Gets the error property value. The error if the status isn&apos;t successful.
      * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the error property value. The error if the status isn't successful.
+     * Sets the error property value. The error if the status isn&apos;t successful.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {

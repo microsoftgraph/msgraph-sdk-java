@@ -35,7 +35,7 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the group property value. A group that's governed through Privileged Identity Management (PIM).
+     * Gets the group property value. A group that&apos;s governed through Privileged Identity Management (PIM).
      * @return a {@link PrivilegedAccessGroup}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
         writer.writeObjectValue("group", this.getGroup());
     }
     /**
-     * Sets the group property value. A group that's governed through Privileged Identity Management (PIM).
+     * Sets the group property value. A group that&apos;s governed through Privileged Identity Management (PIM).
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final PrivilegedAccessGroup value) {

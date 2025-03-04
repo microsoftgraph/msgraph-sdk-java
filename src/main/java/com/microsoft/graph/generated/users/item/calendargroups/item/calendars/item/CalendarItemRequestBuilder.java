@@ -7,6 +7,7 @@ import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calenda
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.CalendarViewRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.events.EventsRequestBuilder;
 import com.microsoft.graph.users.item.calendargroups.item.calendars.item.getschedule.GetScheduleRequestBuilder;
+import com.microsoft.graph.users.item.calendargroups.item.calendars.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -58,8 +59,16 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
         return new GetScheduleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the allowedCalendarSharingRoles method.
-     * @param User Usage: User='{User}'
+     * @param User Usage: User=&apos;{User}&apos;
      * @return a {@link AllowedCalendarSharingRolesWithUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull

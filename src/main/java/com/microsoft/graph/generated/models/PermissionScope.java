@@ -57,7 +57,7 @@ public class PermissionScope implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("adminConsentDescription");
     }
     /**
-     * Gets the adminConsentDisplayName property value. The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
+     * Gets the adminConsentDisplayName property value. The permission&apos;s title, intended to be read by an administrator granting the permission on behalf of all users.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class PermissionScope implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("userConsentDisplayName");
     }
     /**
-     * Gets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, and characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, aren't allowed. May not begin with ..
+     * Gets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; &apos; ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, and characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, aren&apos;t allowed. May not begin with ..
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -188,7 +188,7 @@ public class PermissionScope implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("adminConsentDescription", value);
     }
     /**
-     * Sets the adminConsentDisplayName property value. The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
+     * Sets the adminConsentDisplayName property value. The permission&apos;s title, intended to be read by an administrator granting the permission on behalf of all users.
      * @param value Value to set for the adminConsentDisplayName property.
      */
     public void setAdminConsentDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -252,7 +252,7 @@ public class PermissionScope implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("userConsentDisplayName", value);
     }
     /**
-     * Sets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, and characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, aren't allowed. May not begin with ..
+     * Sets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; &apos; ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, and characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, aren&apos;t allowed. May not begin with ..
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

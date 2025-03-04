@@ -37,7 +37,7 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/taskDefinitions/{printTaskDefinition%2Did}/tasks/{printTask%2Did}/trigger{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The printTaskTrigger that triggered this task's execution. Read-only.
+     * The printTaskTrigger that triggered this task&apos;s execution. Read-only.
      * @return a {@link PrintTaskTrigger}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The printTaskTrigger that triggered this task's execution. Read-only.
+     * The printTaskTrigger that triggered this task&apos;s execution. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintTaskTrigger}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintTaskTrigger::createFromDiscriminatorValue);
     }
     /**
-     * The printTaskTrigger that triggered this task's execution. Read-only.
+     * The printTaskTrigger that triggered this task&apos;s execution. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The printTaskTrigger that triggered this task's execution. Read-only.
+     * The printTaskTrigger that triggered this task&apos;s execution. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class TriggerRequestBuilder extends BaseRequestBuilder {
         return new TriggerRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The printTaskTrigger that triggered this task's execution. Read-only.
+     * The printTaskTrigger that triggered this task&apos;s execution. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

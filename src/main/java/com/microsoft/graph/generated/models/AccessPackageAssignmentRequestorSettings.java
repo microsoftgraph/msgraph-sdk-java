@@ -48,7 +48,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         return value;
     }
     /**
-     * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn't permitted to include a schedule in their request.
+     * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn&apos;t permitted to include a schedule in their request.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn't permitted to include a schedule in their request.
+     * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor isn&apos;t permitted to include a schedule in their request.
      * @param value Value to set for the allowCustomAssignmentSchedule property.
      */
     public void setAllowCustomAssignmentSchedule(@jakarta.annotation.Nullable final Boolean value) {

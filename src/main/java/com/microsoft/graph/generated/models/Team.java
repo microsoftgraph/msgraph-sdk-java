@@ -42,7 +42,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("channels");
     }
     /**
-     * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a preconfigured set in the tenant's directory.
+     * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a preconfigured set in the tenant&apos;s directory.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,6 +86,7 @@ public class Team extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("firstChannelName", (n) -> { this.setFirstChannelName(n.getStringValue()); });
         deserializerMap.put("funSettings", (n) -> { this.setFunSettings(n.getObjectValue(TeamFunSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("guestSettings", (n) -> { this.setGuestSettings(n.getObjectValue(TeamGuestSettings::createFromDiscriminatorValue)); });
@@ -109,6 +110,14 @@ public class Team extends Entity implements Parsable {
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType::forValue)); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the firstChannelName property value. The firstChannelName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getFirstChannelName() {
+        return this.backingStore.get("firstChannelName");
     }
     /**
      * Gets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.
@@ -299,6 +308,7 @@ public class Team extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("firstChannelName", this.getFirstChannelName());
         writer.writeObjectValue("funSettings", this.getFunSettings());
         writer.writeObjectValue("group", this.getGroup());
         writer.writeObjectValue("guestSettings", this.getGuestSettings());
@@ -337,7 +347,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("channels", value);
     }
     /**
-     * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a preconfigured set in the tenant's directory.
+     * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a preconfigured set in the tenant&apos;s directory.
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final String value) {
@@ -363,6 +373,13 @@ public class Team extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the firstChannelName property value. The firstChannelName property
+     * @param value Value to set for the firstChannelName property.
+     */
+    public void setFirstChannelName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("firstChannelName", value);
     }
     /**
      * Sets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.

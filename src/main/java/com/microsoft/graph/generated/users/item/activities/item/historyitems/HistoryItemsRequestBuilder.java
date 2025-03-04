@@ -60,7 +60,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/activities/{userActivity%2Did}/historyItems{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Optional. NavigationProperty/Containment; navigation property to the activity&apos;s historyItems.
      * @return a {@link ActivityHistoryItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Optional. NavigationProperty/Containment; navigation property to the activity&apos;s historyItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ActivityHistoryItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityHistoryItem::createFromDiscriminatorValue);
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Optional. NavigationProperty/Containment; navigation property to the activity&apos;s historyItems.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Optional. NavigationProperty/Containment; navigation property to the activity&apos;s historyItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         return new HistoryItemsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Optional. NavigationProperty/Containment; navigation property to the activity&apos;s historyItems.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

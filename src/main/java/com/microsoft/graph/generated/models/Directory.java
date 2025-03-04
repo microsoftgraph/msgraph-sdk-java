@@ -57,7 +57,7 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("deletedItems");
     }
     /**
-     * Gets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * Gets the deviceLocalCredentials property value. The credentials of the device&apos;s local administrator account backed up to Microsoft Entra ID.
      * @return a {@link java.util.List<DeviceLocalCredentialInfo>}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("deletedItems", value);
     }
     /**
-     * Sets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
+     * Sets the deviceLocalCredentials property value. The credentials of the device&apos;s local administrator account backed up to Microsoft Entra ID.
      * @param value Value to set for the deviceLocalCredentials property.
      */
     public void setDeviceLocalCredentials(@jakarta.annotation.Nullable final java.util.List<DeviceLocalCredentialInfo> value) {

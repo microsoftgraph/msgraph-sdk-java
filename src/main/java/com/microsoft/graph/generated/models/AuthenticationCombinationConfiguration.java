@@ -34,7 +34,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
         return new AuthenticationCombinationConfiguration();
     }
     /**
-     * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object, part of the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
+     * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object, part of the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is &apos;fido2&apos;.
      * @return a {@link java.util.List<AuthenticationMethodModes>}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
         writer.writeCollectionOfEnumValues("appliesToCombinations", this.getAppliesToCombinations());
     }
     /**
-     * Sets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object, part of the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
+     * Sets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object, part of the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is &apos;fido2&apos;.
      * @param value Value to set for the appliesToCombinations property.
      */
     public void setAppliesToCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {

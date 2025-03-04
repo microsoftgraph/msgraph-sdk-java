@@ -34,7 +34,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
         return new ServiceAnnouncementBase();
     }
     /**
-     * Gets the details property value. More details about service event. This property doesn't support filters.
+     * Gets the details property value. More details about service event. This property doesn&apos;t support filters.
      * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the details property value. More details about service event. This property doesn't support filters.
+     * Sets the details property value. More details about service event. This property doesn&apos;t support filters.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {

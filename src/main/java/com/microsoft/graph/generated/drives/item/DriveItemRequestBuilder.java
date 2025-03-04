@@ -194,7 +194,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the search method.
-     * @param q Usage: q='{q}'
+     * @param q Usage: q=&apos;{q}&apos;
      * @return a {@link SearchWithQRequestBuilder}
      */
     @jakarta.annotation.Nonnull

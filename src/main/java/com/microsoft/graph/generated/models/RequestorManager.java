@@ -36,7 +36,7 @@ public class RequestorManager extends SubjectSet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the managerLevel property value. The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
+     * Gets the managerLevel property value. The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor&apos;s manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RequestorManager extends SubjectSet implements Parsable {
         writer.writeIntegerValue("managerLevel", this.getManagerLevel());
     }
     /**
-     * Sets the managerLevel property value. The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
+     * Sets the managerLevel property value. The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor&apos;s manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
      * @param value Value to set for the managerLevel property.
      */
     public void setManagerLevel(@jakarta.annotation.Nullable final Integer value) {

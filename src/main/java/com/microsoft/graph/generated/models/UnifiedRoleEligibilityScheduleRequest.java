@@ -105,7 +105,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
         return this.backingStore.get("justification");
     }
     /**
-     * Gets the principal property value. The principal that's getting a role eligibility through the request. Supports $expand.
+     * Gets the principal property value. The principal that&apos;s getting a role eligibility through the request. Supports $expand.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
         return this.backingStore.get("targetSchedule");
     }
     /**
-     * Gets the targetScheduleId property value. Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
+     * Gets the targetScheduleId property value. Identifier of the schedule object that&apos;s linked to the eligibility request. Supports $filter (eq, ne).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -241,7 +241,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
         this.backingStore.set("justification", value);
     }
     /**
-     * Sets the principal property value. The principal that's getting a role eligibility through the request. Supports $expand.
+     * Sets the principal property value. The principal that&apos;s getting a role eligibility through the request. Supports $expand.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -283,7 +283,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
         this.backingStore.set("targetSchedule", value);
     }
     /**
-     * Sets the targetScheduleId property value. Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
+     * Sets the targetScheduleId property value. Identifier of the schedule object that&apos;s linked to the eligibility request. Supports $filter (eq, ne).
      * @param value Value to set for the targetScheduleId property.
      */
     public void setTargetScheduleId(@jakarta.annotation.Nullable final String value) {

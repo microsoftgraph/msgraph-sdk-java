@@ -159,7 +159,7 @@ public class BookingService extends Entity implements Parsable {
         return this.backingStore.get("isCustomerAllowedToManageBooking");
     }
     /**
-     * Gets the isHiddenFromCustomers property value. True indicates that this service isn't available to customers for booking.
+     * Gets the isHiddenFromCustomers property value. True indicates that this service isn&apos;t available to customers for booking.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -370,7 +370,7 @@ public class BookingService extends Entity implements Parsable {
         this.backingStore.set("isCustomerAllowedToManageBooking", value);
     }
     /**
-     * Sets the isHiddenFromCustomers property value. True indicates that this service isn't available to customers for booking.
+     * Sets the isHiddenFromCustomers property value. True indicates that this service isn&apos;t available to customers for booking.
      * @param value Value to set for the isHiddenFromCustomers property.
      */
     public void setIsHiddenFromCustomers(@jakarta.annotation.Nullable final Boolean value) {

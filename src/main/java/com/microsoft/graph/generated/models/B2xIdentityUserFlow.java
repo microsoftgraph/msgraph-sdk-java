@@ -55,7 +55,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         return this.backingStore.get("identityProviders");
     }
     /**
-     * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
+     * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can&apos;t create custom languages in self-service sign-up user flows.
      * @return a {@link java.util.List<UserFlowLanguageConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         this.backingStore.set("identityProviders", value);
     }
     /**
-     * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
+     * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can&apos;t create custom languages in self-service sign-up user flows.
      * @param value Value to set for the languages property.
      */
     public void setLanguages(@jakarta.annotation.Nullable final java.util.List<UserFlowLanguageConfiguration> value) {

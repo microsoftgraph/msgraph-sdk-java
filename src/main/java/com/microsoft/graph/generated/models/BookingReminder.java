@@ -89,7 +89,7 @@ public class BookingReminder implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
+     * Gets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It&apos;s denoted in ISO 8601 format.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class BookingReminder implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
+     * Sets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It&apos;s denoted in ISO 8601 format.
      * @param value Value to set for the offset property.
      */
     public void setOffset(@jakarta.annotation.Nullable final PeriodAndDuration value) {

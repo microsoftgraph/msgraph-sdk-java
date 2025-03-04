@@ -75,7 +75,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
         return deserializerMap;
     }
     /**
-     * Gets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
+     * Gets the launchUri property value. Url link to an assessment that&apos;s automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
         this.backingStore.set("configurationAccount", value);
     }
     /**
-     * Sets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
+     * Sets the launchUri property value. Url link to an assessment that&apos;s automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
      * @param value Value to set for the launchUri property.
      */
     public void setLaunchUri(@jakarta.annotation.Nullable final String value) {

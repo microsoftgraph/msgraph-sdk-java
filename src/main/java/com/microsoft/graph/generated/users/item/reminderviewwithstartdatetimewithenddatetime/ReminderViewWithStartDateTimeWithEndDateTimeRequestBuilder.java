@@ -21,10 +21,10 @@ import java.util.Objects;
 public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder} and sets the default values.
-     * @param EndDateTime Usage: EndDateTime='{EndDateTime}'
+     * @param EndDateTime Usage: EndDateTime=&apos;{EndDateTime}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param StartDateTime Usage: StartDateTime='{StartDateTime}'
+     * @param StartDateTime Usage: StartDateTime=&apos;{StartDateTime}&apos;
      */
     public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String EndDateTime, @jakarta.annotation.Nullable final String StartDateTime) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

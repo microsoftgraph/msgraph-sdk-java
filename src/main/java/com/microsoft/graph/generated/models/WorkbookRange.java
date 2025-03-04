@@ -103,7 +103,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the format property value. Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+     * Gets the format property value. Returns a format object, encapsulating the range&apos;s font, fill, borders, alignment, and other properties. Read-only.
      * @return a {@link WorkbookRangeFormat}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return this.backingStore.get("formulas");
     }
     /**
-     * Gets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
+     * Gets the formulasLocal property value. Represents the formula in A1-style notation, in the user&apos;s language and number-formatting locale.  For example, the English &apos;=SUM(A1, 1.5)&apos; formula would become &apos;=SUMME(A1; 1,5)&apos; in German.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return this.backingStore.get("hidden");
     }
     /**
-     * Gets the numberFormat property value. Represents Excel's number format code for the given cell.
+     * Gets the numberFormat property value. Represents Excel&apos;s number format code for the given cell.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return this.backingStore.get("sort");
     }
     /**
-     * Gets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
+     * Gets the text property value. Text values of the specified range. The Text value doesn&apos;t depend on the cell width. The # sign substitution that happens in Excel UI doesn&apos;t affect the text value returned by the API. Read-only.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -285,7 +285,7 @@ public class WorkbookRange extends Entity implements Parsable {
         this.backingStore.set("columnIndex", value);
     }
     /**
-     * Sets the format property value. Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+     * Sets the format property value. Returns a format object, encapsulating the range&apos;s font, fill, borders, alignment, and other properties. Read-only.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final WorkbookRangeFormat value) {
@@ -299,7 +299,7 @@ public class WorkbookRange extends Entity implements Parsable {
         this.backingStore.set("formulas", value);
     }
     /**
-     * Sets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
+     * Sets the formulasLocal property value. Represents the formula in A1-style notation, in the user&apos;s language and number-formatting locale.  For example, the English &apos;=SUM(A1, 1.5)&apos; formula would become &apos;=SUMME(A1; 1,5)&apos; in German.
      * @param value Value to set for the formulasLocal property.
      */
     public void setFormulasLocal(@jakarta.annotation.Nullable final UntypedNode value) {
@@ -320,7 +320,7 @@ public class WorkbookRange extends Entity implements Parsable {
         this.backingStore.set("hidden", value);
     }
     /**
-     * Sets the numberFormat property value. Represents Excel's number format code for the given cell.
+     * Sets the numberFormat property value. Represents Excel&apos;s number format code for the given cell.
      * @param value Value to set for the numberFormat property.
      */
     public void setNumberFormat(@jakarta.annotation.Nullable final UntypedNode value) {
@@ -355,7 +355,7 @@ public class WorkbookRange extends Entity implements Parsable {
         this.backingStore.set("sort", value);
     }
     /**
-     * Sets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
+     * Sets the text property value. Text values of the specified range. The Text value doesn&apos;t depend on the cell width. The # sign substitution that happens in Excel UI doesn&apos;t affect the text value returned by the API. Read-only.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final UntypedNode value) {

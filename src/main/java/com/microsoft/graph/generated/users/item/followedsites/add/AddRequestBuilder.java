@@ -35,7 +35,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/followedSites/add", rawUrl);
     }
     /**
-     * Follow a user's site or multiple sites.
+     * Follow a user&apos;s site or multiple sites.
      * @param body The request body
      * @return a {@link AddPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Follow a user's site or multiple sites.
+     * Follow a user&apos;s site or multiple sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AddPostResponse}
@@ -62,7 +62,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AddPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Follow a user's site or multiple sites.
+     * Follow a user&apos;s site or multiple sites.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -71,7 +71,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Follow a user's site or multiple sites.
+     * Follow a user&apos;s site or multiple sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -96,7 +96,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("isAttendeeReportEnabled");
     }
     /**
-     * Gets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
+     * Gets the isQuestionAndAnswerEnabled property value. Indicates whether Q&amp;A is enabled for this Teams live event. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -179,7 +179,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, BackedMod
         this.backingStore.set("isAttendeeReportEnabled", value);
     }
     /**
-     * Sets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
+     * Sets the isQuestionAndAnswerEnabled property value. Indicates whether Q&amp;A is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isQuestionAndAnswerEnabled property.
      */
     public void setIsQuestionAndAnswerEnabled(@jakarta.annotation.Nullable final Boolean value) {

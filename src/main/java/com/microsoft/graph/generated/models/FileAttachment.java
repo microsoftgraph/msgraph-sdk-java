@@ -42,7 +42,7 @@ public class FileAttachment extends Attachment implements Parsable {
         return this.backingStore.get("contentId");
     }
     /**
-     * Gets the contentLocation property value. Don't use this property as it isn't supported.
+     * Gets the contentLocation property value. Don&apos;t use this property as it isn&apos;t supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class FileAttachment extends Attachment implements Parsable {
         this.backingStore.set("contentId", value);
     }
     /**
-     * Sets the contentLocation property value. Don't use this property as it isn't supported.
+     * Sets the contentLocation property value. Don&apos;t use this property as it isn&apos;t supported.
      * @param value Value to set for the contentLocation property.
      */
     public void setContentLocation(@jakarta.annotation.Nullable final String value) {

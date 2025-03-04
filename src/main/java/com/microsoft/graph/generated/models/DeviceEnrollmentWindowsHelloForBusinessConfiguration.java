@@ -58,7 +58,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
         return deserializerMap;
     }
     /**
-     * Gets the pinExpirationInDays property value. Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
+     * Gets the pinExpirationInDays property value. Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user&apos;s PIN will never expire
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
         this.backingStore.set("enhancedBiometricsState", value);
     }
     /**
-     * Sets the pinExpirationInDays property value. Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
+     * Sets the pinExpirationInDays property value. Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user&apos;s PIN will never expire
      * @param value Value to set for the pinExpirationInDays property.
      */
     public void setPinExpirationInDays(@jakarta.annotation.Nullable final Integer value) {

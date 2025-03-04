@@ -73,7 +73,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("destinationAddress");
     }
     /**
-     * Gets the destinationDomain property value. Destination domain portion of the destination URL. (for example 'www.contoso.com').
+     * Gets the destinationDomain property value. Destination domain portion of the destination URL. (for example &apos;www.contoso.com&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("destinationPort");
     }
     /**
-     * Gets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
+     * Gets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example &apos;www.contoso.com/products/default.html&apos;)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the localDnsName property value. The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
+     * Gets the localDnsName property value. The local DNS name resolution as it appears in the host&apos;s local DNS cache (for example, in case the &apos;hosts&apos; file was tampered with).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -313,7 +313,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("destinationAddress", value);
     }
     /**
-     * Sets the destinationDomain property value. Destination domain portion of the destination URL. (for example 'www.contoso.com').
+     * Sets the destinationDomain property value. Destination domain portion of the destination URL. (for example &apos;www.contoso.com&apos;).
      * @param value Value to set for the destinationDomain property.
      */
     public void setDestinationDomain(@jakarta.annotation.Nullable final String value) {
@@ -334,7 +334,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("destinationPort", value);
     }
     /**
-     * Sets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
+     * Sets the destinationUrl property value. Network connection URL/URI string - excluding parameters. (for example &apos;www.contoso.com/products/default.html&apos;)
      * @param value Value to set for the destinationUrl property.
      */
     public void setDestinationUrl(@jakarta.annotation.Nullable final String value) {
@@ -355,7 +355,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("domainRegisteredDateTime", value);
     }
     /**
-     * Sets the localDnsName property value. The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
+     * Sets the localDnsName property value. The local DNS name resolution as it appears in the host&apos;s local DNS cache (for example, in case the &apos;hosts&apos; file was tampered with).
      * @param value Value to set for the localDnsName property.
      */
     public void setLocalDnsName(@jakarta.annotation.Nullable final String value) {

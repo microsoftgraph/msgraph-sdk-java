@@ -229,7 +229,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("classroomAppBlockRemoteScreenObservation");
     }
     /**
-     * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
+     * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student&apos;s screen without prompting when the device is in supervised mode.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -277,7 +277,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("deviceBlockEnableRestrictions");
     }
     /**
-     * Gets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
+     * Gets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the &apos;Erase all content and settings&apos; option on the device when the device is in supervised mode.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -341,7 +341,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("enterpriseAppBlockTrust");
     }
     /**
-     * Gets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
+     * Gets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to &apos;true&apos; has no effect on the device.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -697,7 +697,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("kioskModeAllowAssistiveTouchSettings");
     }
     /**
-     * Gets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
+     * Gets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -713,7 +713,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("kioskModeAllowColorInversionSettings");
     }
     /**
-     * Gets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
+     * Gets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -721,7 +721,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("kioskModeAllowRingerSwitch");
     }
     /**
-     * Gets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
+     * Gets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -729,7 +729,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("kioskModeAllowScreenRotation");
     }
     /**
-     * Gets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
+     * Gets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -737,7 +737,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("kioskModeAllowSleepButton");
     }
     /**
-     * Gets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
+     * Gets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -753,7 +753,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("kioskModeAllowVoiceOverSettings");
     }
     /**
-     * Gets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
+     * Gets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1209,7 +1209,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("wallpaperBlockModification");
     }
     /**
-     * Gets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
+     * Gets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, &apos;WiFiConnectToAllowedNetworksOnlyForced.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1531,7 +1531,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this.backingStore.set("classroomAppBlockRemoteScreenObservation", value);
     }
     /**
-     * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
+     * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student&apos;s screen without prompting when the device is in supervised mode.
      * @param value Value to set for the classroomAppForceUnpromptedScreenObservation property.
      */
     public void setClassroomAppForceUnpromptedScreenObservation(@jakarta.annotation.Nullable final Boolean value) {
@@ -1573,7 +1573,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this.backingStore.set("deviceBlockEnableRestrictions", value);
     }
     /**
-     * Sets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
+     * Sets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the &apos;Erase all content and settings&apos; option on the device when the device is in supervised mode.
      * @param value Value to set for the deviceBlockEraseContentAndSettings property.
      */
     public void setDeviceBlockEraseContentAndSettings(@jakarta.annotation.Nullable final Boolean value) {
@@ -1629,7 +1629,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this.backingStore.set("enterpriseAppBlockTrust", value);
     }
     /**
-     * Sets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
+     * Sets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to &apos;true&apos; has no effect on the device.
      * @param value Value to set for the enterpriseAppBlockTrustModification property.
      */
     public void setEnterpriseAppBlockTrustModification(@jakarta.annotation.Nullable final Boolean value) {
@@ -1818,7 +1818,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this.backingStore.set("kioskModeAllowAssistiveTouchSettings", value);
     }
     /**
-     * Sets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
+     * Sets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
      * @param value Value to set for the kioskModeAllowAutoLock property.
      */
     public void setKioskModeAllowAutoLock(@jakarta.annotation.Nullable final Boolean value) {
@@ -1832,28 +1832,28 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this.backingStore.set("kioskModeAllowColorInversionSettings", value);
     }
     /**
-     * Sets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
+     * Sets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
      * @param value Value to set for the kioskModeAllowRingerSwitch property.
      */
     public void setKioskModeAllowRingerSwitch(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("kioskModeAllowRingerSwitch", value);
     }
     /**
-     * Sets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
+     * Sets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
      * @param value Value to set for the kioskModeAllowScreenRotation property.
      */
     public void setKioskModeAllowScreenRotation(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("kioskModeAllowScreenRotation", value);
     }
     /**
-     * Sets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
+     * Sets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
      * @param value Value to set for the kioskModeAllowSleepButton property.
      */
     public void setKioskModeAllowSleepButton(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("kioskModeAllowSleepButton", value);
     }
     /**
-     * Sets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
+     * Sets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
      * @param value Value to set for the kioskModeAllowTouchscreen property.
      */
     public void setKioskModeAllowTouchscreen(@jakarta.annotation.Nullable final Boolean value) {
@@ -1867,7 +1867,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this.backingStore.set("kioskModeAllowVoiceOverSettings", value);
     }
     /**
-     * Sets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
+     * Sets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property&apos;s functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
      * @param value Value to set for the kioskModeAllowVolumeButtons property.
      */
     public void setKioskModeAllowVolumeButtons(@jakarta.annotation.Nullable final Boolean value) {
@@ -2266,7 +2266,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         this.backingStore.set("wallpaperBlockModification", value);
     }
     /**
-     * Sets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
+     * Sets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, &apos;WiFiConnectToAllowedNetworksOnlyForced.
      * @param value Value to set for the wiFiConnectOnlyToConfiguredNetworks property.
      */
     public void setWiFiConnectOnlyToConfiguredNetworks(@jakarta.annotation.Nullable final Boolean value) {

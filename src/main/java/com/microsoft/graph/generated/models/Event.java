@@ -59,7 +59,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("body");
     }
     /**
-     * Gets the bodyPreview property value. The preview of the message associated with the event. It's in text format.
+     * Gets the bodyPreview property value. The preview of the message associated with the event. It&apos;s in text format.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("importance");
     }
     /**
-     * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn't include occurrences cancelled from the series. Navigation property. Read-only. Nullable.
+     * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn&apos;t include occurrences cancelled from the series. Navigation property. Read-only. Nullable.
      * @return a {@link java.util.List<Event>}
      */
     @jakarta.annotation.Nullable
@@ -182,7 +182,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("instances");
     }
     /**
-     * Gets the isAllDay property value. Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start, and endtime must be set to midnight and be in the same time zone.
+     * Gets the isAllDay property value. Set to true if the event lasts all day. If true, regardless of whether it&apos;s a single-day or multi-day event, start, and endtime must be set to midnight and be in the same time zone.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("isCancelled");
     }
     /**
-     * Gets the isDraft property value. Set to true if the user has updated the meeting in Outlook but hasn't sent the updates to attendees. Set to false if all changes are sent, or if the event is an appointment without any attendees.
+     * Gets the isDraft property value. Set to true if the user has updated the meeting in Outlook but hasn&apos;t sent the updates to attendees. Set to false if all changes are sent, or if the event is an appointment without any attendees.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -254,7 +254,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
-     * Gets the onlineMeeting property value. Details for an attendee to join the meeting online. The default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.
+     * Gets the onlineMeeting property value. Details for an attendee to join the meeting online. The default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can&apos;t change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.
      * @return a {@link OnlineMeetingInfo}
      */
     @jakarta.annotation.Nullable
@@ -262,7 +262,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("onlineMeeting");
     }
     /**
-     * Gets the onlineMeetingProvider property value. Represents the online meeting service provider. By default, onlineMeetingProvider is unknown. The possible values are unknown, teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.  After you set onlineMeetingProvider, Microsoft Graph initializes onlineMeeting. Subsequently, you can't change onlineMeetingProvider again, and the meeting remains available online.
+     * Gets the onlineMeetingProvider property value. Represents the online meeting service provider. By default, onlineMeetingProvider is unknown. The possible values are unknown, teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.  After you set onlineMeetingProvider, Microsoft Graph initializes onlineMeeting. Subsequently, you can&apos;t change onlineMeetingProvider again, and the meeting remains available online.
      * @return a {@link OnlineMeetingProviderType}
      */
     @jakarta.annotation.Nullable
@@ -294,7 +294,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("originalEndTimeZone");
     }
     /**
-     * Gets the originalStart property value. Represents the start time of an event when it's initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the originalStart property value. Represents the start time of an event when it&apos;s initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -382,7 +382,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("start");
     }
     /**
-     * Gets the subject property value. The text of the event's subject line.
+     * Gets the subject property value. The text of the event&apos;s subject line.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -390,7 +390,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the transactionId property value. A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. It's useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you can't change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
+     * Gets the transactionId property value. A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. It&apos;s useful when low network connectivity causes the client to time out before receiving a response from the server for the client&apos;s prior create-event request. After you set transactionId when creating an event, you can&apos;t change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -406,7 +406,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("type");
     }
     /**
-     * Gets the webLink property value. The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can't be accessed from within an iFrame.
+     * Gets the webLink property value. The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can&apos;t be accessed from within an iFrame.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -492,7 +492,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("body", value);
     }
     /**
-     * Sets the bodyPreview property value. The preview of the message associated with the event. It's in text format.
+     * Sets the bodyPreview property value. The preview of the message associated with the event. It&apos;s in text format.
      * @param value Value to set for the bodyPreview property.
      */
     public void setBodyPreview(@jakarta.annotation.Nullable final String value) {
@@ -548,14 +548,14 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("importance", value);
     }
     /**
-     * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn't include occurrences cancelled from the series. Navigation property. Read-only. Nullable.
+     * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn&apos;t include occurrences cancelled from the series. Navigation property. Read-only. Nullable.
      * @param value Value to set for the instances property.
      */
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<Event> value) {
         this.backingStore.set("instances", value);
     }
     /**
-     * Sets the isAllDay property value. Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start, and endtime must be set to midnight and be in the same time zone.
+     * Sets the isAllDay property value. Set to true if the event lasts all day. If true, regardless of whether it&apos;s a single-day or multi-day event, start, and endtime must be set to midnight and be in the same time zone.
      * @param value Value to set for the isAllDay property.
      */
     public void setIsAllDay(@jakarta.annotation.Nullable final Boolean value) {
@@ -569,7 +569,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("isCancelled", value);
     }
     /**
-     * Sets the isDraft property value. Set to true if the user has updated the meeting in Outlook but hasn't sent the updates to attendees. Set to false if all changes are sent, or if the event is an appointment without any attendees.
+     * Sets the isDraft property value. Set to true if the user has updated the meeting in Outlook but hasn&apos;t sent the updates to attendees. Set to false if all changes are sent, or if the event is an appointment without any attendees.
      * @param value Value to set for the isDraft property.
      */
     public void setIsDraft(@jakarta.annotation.Nullable final Boolean value) {
@@ -618,14 +618,14 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
-     * Sets the onlineMeeting property value. Details for an attendee to join the meeting online. The default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.
+     * Sets the onlineMeeting property value. Details for an attendee to join the meeting online. The default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can&apos;t change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.
      * @param value Value to set for the onlineMeeting property.
      */
     public void setOnlineMeeting(@jakarta.annotation.Nullable final OnlineMeetingInfo value) {
         this.backingStore.set("onlineMeeting", value);
     }
     /**
-     * Sets the onlineMeetingProvider property value. Represents the online meeting service provider. By default, onlineMeetingProvider is unknown. The possible values are unknown, teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.  After you set onlineMeetingProvider, Microsoft Graph initializes onlineMeeting. Subsequently, you can't change onlineMeetingProvider again, and the meeting remains available online.
+     * Sets the onlineMeetingProvider property value. Represents the online meeting service provider. By default, onlineMeetingProvider is unknown. The possible values are unknown, teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.  After you set onlineMeetingProvider, Microsoft Graph initializes onlineMeeting. Subsequently, you can&apos;t change onlineMeetingProvider again, and the meeting remains available online.
      * @param value Value to set for the onlineMeetingProvider property.
      */
     public void setOnlineMeetingProvider(@jakarta.annotation.Nullable final OnlineMeetingProviderType value) {
@@ -653,7 +653,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("originalEndTimeZone", value);
     }
     /**
-     * Sets the originalStart property value. Represents the start time of an event when it's initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the originalStart property value. Represents the start time of an event when it&apos;s initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the originalStart property.
      */
     public void setOriginalStart(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -730,14 +730,14 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("start", value);
     }
     /**
-     * Sets the subject property value. The text of the event's subject line.
+     * Sets the subject property value. The text of the event&apos;s subject line.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the transactionId property value. A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. It's useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you can't change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
+     * Sets the transactionId property value. A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. It&apos;s useful when low network connectivity causes the client to time out before receiving a response from the server for the client&apos;s prior create-event request. After you set transactionId when creating an event, you can&apos;t change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
      * @param value Value to set for the transactionId property.
      */
     public void setTransactionId(@jakarta.annotation.Nullable final String value) {
@@ -751,7 +751,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("type", value);
     }
     /**
-     * Sets the webLink property value. The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can't be accessed from within an iFrame.
+     * Sets the webLink property value. The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can&apos;t be accessed from within an iFrame.
      * @param value Value to set for the webLink property.
      */
     public void setWebLink(@jakarta.annotation.Nullable final String value) {

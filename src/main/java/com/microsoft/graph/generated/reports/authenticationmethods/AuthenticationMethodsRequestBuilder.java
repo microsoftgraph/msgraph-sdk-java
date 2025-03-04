@@ -196,8 +196,8 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the usersRegisteredByFeature method.
-     * @param includedUserRoles Usage: includedUserRoles='{includedUserRoles}'
-     * @param includedUserTypes Usage: includedUserTypes='{includedUserTypes}'
+     * @param includedUserRoles Usage: includedUserRoles=&apos;{includedUserRoles}&apos;
+     * @param includedUserTypes Usage: includedUserTypes=&apos;{includedUserTypes}&apos;
      * @return a {@link UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -208,8 +208,8 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the usersRegisteredByMethod method.
-     * @param includedUserRoles Usage: includedUserRoles='{includedUserRoles}'
-     * @param includedUserTypes Usage: includedUserTypes='{includedUserTypes}'
+     * @param includedUserRoles Usage: includedUserRoles=&apos;{includedUserRoles}&apos;
+     * @param includedUserTypes Usage: includedUserTypes=&apos;{includedUserTypes}&apos;
      * @return a {@link UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull

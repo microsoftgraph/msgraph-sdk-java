@@ -55,7 +55,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      * @return a {@link AgreementAcceptance}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AgreementAcceptance}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -97,7 +97,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("isDeleteAllowed");
     }
     /**
-     * Gets the isLabelUpdateAllowed property value. Specifies whether you're allowed to change the retention label on the document. Read-only.
+     * Gets the isLabelUpdateAllowed property value. Specifies whether you&apos;re allowed to change the retention label on the document. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -180,7 +180,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
         this.backingStore.set("isDeleteAllowed", value);
     }
     /**
-     * Sets the isLabelUpdateAllowed property value. Specifies whether you're allowed to change the retention label on the document. Read-only.
+     * Sets the isLabelUpdateAllowed property value. Specifies whether you&apos;re allowed to change the retention label on the document. Read-only.
      * @param value Value to set for the isLabelUpdateAllowed property.
      */
     public void setIsLabelUpdateAllowed(@jakarta.annotation.Nullable final Boolean value) {

@@ -147,7 +147,7 @@ public class ChatMessage extends Entity implements Parsable {
         return this.backingStore.get("importance");
     }
     /**
-     * Gets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
+     * Gets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an &apos;Edited&apos; flag in the Teams UI. If no edits are made the value is null.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -360,7 +360,7 @@ public class ChatMessage extends Entity implements Parsable {
         this.backingStore.set("importance", value);
     }
     /**
-     * Sets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
+     * Sets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an &apos;Edited&apos; flag in the Teams UI. If no edits are made the value is null.
      * @param value Value to set for the lastEditedDateTime property.
      */
     public void setLastEditedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -125,7 +125,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The archived print job's GUID. Read-only.
+     * Gets the id property value. The archived print job&apos;s GUID. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -241,7 +241,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the id property value. The archived print job's GUID. Read-only.
+     * Sets the id property value. The archived print job&apos;s GUID. Read-only.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

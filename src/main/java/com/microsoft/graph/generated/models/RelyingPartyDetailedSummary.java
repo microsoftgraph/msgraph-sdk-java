@@ -69,7 +69,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("migrationValidationDetails");
     }
     /**
-     * Gets the relyingPartyId property value. Identifies the relying party to this federation service. It's used when issuing claims to the relying party. Supports $orderby, $filter (eq).
+     * Gets the relyingPartyId property value. Identifies the relying party to this federation service. It&apos;s used when issuing claims to the relying party. Supports $orderby, $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("relyingPartyId");
     }
     /**
-     * Gets the relyingPartyName property value. Name of the relying party's website or other entity on the Internet that uses an identity provider to authenticate a user who wants to log in. Supports $orderby, $filter (eq).
+     * Gets the relyingPartyName property value. Name of the relying party&apos;s website or other entity on the Internet that uses an identity provider to authenticate a user who wants to log in. Supports $orderby, $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,14 +173,14 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         this.backingStore.set("migrationValidationDetails", value);
     }
     /**
-     * Sets the relyingPartyId property value. Identifies the relying party to this federation service. It's used when issuing claims to the relying party. Supports $orderby, $filter (eq).
+     * Sets the relyingPartyId property value. Identifies the relying party to this federation service. It&apos;s used when issuing claims to the relying party. Supports $orderby, $filter (eq).
      * @param value Value to set for the relyingPartyId property.
      */
     public void setRelyingPartyId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("relyingPartyId", value);
     }
     /**
-     * Sets the relyingPartyName property value. Name of the relying party's website or other entity on the Internet that uses an identity provider to authenticate a user who wants to log in. Supports $orderby, $filter (eq).
+     * Sets the relyingPartyName property value. Name of the relying party&apos;s website or other entity on the Internet that uses an identity provider to authenticate a user who wants to log in. Supports $orderby, $filter (eq).
      * @param value Value to set for the relyingPartyName property.
      */
     public void setRelyingPartyName(@jakarta.annotation.Nullable final String value) {

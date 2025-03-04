@@ -64,7 +64,7 @@ public class Recipient implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the emailAddress property value. The recipient's email address.
+     * Gets the emailAddress property value. The recipient&apos;s email address.
      * @return a {@link EmailAddress}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class Recipient implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the emailAddress property value. The recipient's email address.
+     * Sets the emailAddress property value. The recipient&apos;s email address.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {

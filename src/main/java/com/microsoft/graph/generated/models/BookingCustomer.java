@@ -30,7 +30,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
         return new BookingCustomer();
     }
     /**
-     * Gets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress isn't supported in v1.0. Internally we map the addresses to the type others.
+     * Gets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress isn&apos;t supported in v1.0. Internally we map the addresses to the type others.
      * @return a {@link java.util.List<PhysicalAddress>}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
         writer.writeCollectionOfObjectValues("phones", this.getPhones());
     }
     /**
-     * Sets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress isn't supported in v1.0. Internally we map the addresses to the type others.
+     * Sets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress isn&apos;t supported in v1.0. Internally we map the addresses to the type others.
      * @param value Value to set for the addresses property.
      */
     public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalAddress> value) {

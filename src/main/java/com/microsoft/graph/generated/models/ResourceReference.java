@@ -69,7 +69,7 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The item's unique identifier.
+     * Gets the id property value. The item&apos;s unique identifier.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
+     * Gets the type property value. A string value that can be used to classify the item, such as &apos;microsoft.graph.driveItem&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The item's unique identifier.
+     * Sets the id property value. The item&apos;s unique identifier.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -142,7 +142,7 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
+     * Sets the type property value. A string value that can be used to classify the item, such as &apos;microsoft.graph.driveItem&apos;
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

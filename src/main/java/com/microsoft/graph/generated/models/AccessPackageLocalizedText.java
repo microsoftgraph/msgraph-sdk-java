@@ -68,7 +68,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the languageCode property value. The language code that text is in. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. Required.
+     * Gets the languageCode property value. The language code that text is in. For example, &apos;en-us&apos;. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the languageCode property value. The language code that text is in. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. Required.
+     * Sets the languageCode property value. The language code that text is in. For example, &apos;en-us&apos;. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. Required.
      * @param value Value to set for the languageCode property.
      */
     public void setLanguageCode(@jakarta.annotation.Nullable final String value) {

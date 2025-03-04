@@ -36,7 +36,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/add", rawUrl);
     }
     /**
-     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
+     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can&apos;t be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
      * @param body The request body
      * @return a {@link WorkbookTable}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
+     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can&apos;t be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookTable}
@@ -63,7 +63,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookTable::createFromDiscriminatorValue);
     }
     /**
-     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
+     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can&apos;t be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
+     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can&apos;t be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

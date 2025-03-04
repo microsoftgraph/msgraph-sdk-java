@@ -7,6 +7,7 @@ import com.microsoft.graph.users.item.mailfolders.item.copy.CopyRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.messagerules.MessageRulesRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.move.MoveRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -66,6 +67,14 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new {@link MailFolderItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -100,7 +109,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The user's mail folders. Read-only. Nullable.
+     * The user&apos;s mail folders. Read-only. Nullable.
      * @return a {@link MailFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -109,7 +118,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's mail folders. Read-only. Nullable.
+     * The user&apos;s mail folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -167,7 +176,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's mail folders. Read-only. Nullable.
+     * The user&apos;s mail folders. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +184,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's mail folders. Read-only. Nullable.
+     * The user&apos;s mail folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -227,7 +236,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The user's mail folders. Read-only. Nullable.
+     * The user&apos;s mail folders. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

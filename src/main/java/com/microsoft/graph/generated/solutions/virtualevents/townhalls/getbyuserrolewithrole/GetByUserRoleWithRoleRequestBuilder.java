@@ -23,7 +23,7 @@ public class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new {@link GetByUserRoleWithRoleRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param role Usage: role='{role}'
+     * @param role Usage: role=&apos;{role}&apos;
      */
     public GetByUserRoleWithRoleRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String role) {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/townhalls/getByUserRole(role='{role}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);

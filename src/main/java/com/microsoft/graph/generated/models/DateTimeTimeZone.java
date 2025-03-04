@@ -84,7 +84,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
+     * Gets the timeZone property value. Represents a time zone, for example, &apos;Pacific Standard Time&apos;. See below for more possible values.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
+     * Sets the timeZone property value. Represents a time zone, for example, &apos;Pacific Standard Time&apos;. See below for more possible values.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {

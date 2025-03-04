@@ -51,7 +51,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this.backingStore.get("department");
     }
     /**
-     * Gets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
+     * Gets the directReports property value. The contact&apos;s direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this.backingStore.get("jobTitle");
     }
     /**
-     * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
+     * Gets the mail property value. The SMTP address for the contact, for example, &apos;jeff@contoso.com&apos;. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this.backingStore.get("mailNickname");
     }
     /**
-     * Gets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
+     * Gets the manager property value. The user or contact that is this contact&apos;s manager. Read-only. Supports $expand and $filter (eq) by id.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this.backingStore.get("phones");
     }
     /**
-     * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
+     * Gets the proxyAddresses property value. For example: &apos;SMTP: bob@contoso.com&apos;, &apos;smtp: bob@sales.contoso.com&apos;. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -255,7 +255,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this.backingStore.set("department", value);
     }
     /**
-     * Sets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
+     * Sets the directReports property value. The contact&apos;s direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @param value Value to set for the directReports property.
      */
     public void setDirectReports(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
@@ -283,7 +283,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this.backingStore.set("jobTitle", value);
     }
     /**
-     * Sets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
+     * Sets the mail property value. The SMTP address for the contact, for example, &apos;jeff@contoso.com&apos;. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @param value Value to set for the mail property.
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {
@@ -297,7 +297,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this.backingStore.set("mailNickname", value);
     }
     /**
-     * Sets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
+     * Sets the manager property value. The user or contact that is this contact&apos;s manager. Read-only. Supports $expand and $filter (eq) by id.
      * @param value Value to set for the manager property.
      */
     public void setManager(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -339,7 +339,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this.backingStore.set("phones", value);
     }
     /**
-     * Sets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
+     * Sets the proxyAddresses property value. For example: &apos;SMTP: bob@contoso.com&apos;, &apos;smtp: bob@sales.contoso.com&apos;. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the proxyAddresses property.
      */
     public void setProxyAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {

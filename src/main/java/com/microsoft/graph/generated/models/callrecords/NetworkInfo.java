@@ -148,7 +148,7 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("linkSpeed");
     }
     /**
-     * Gets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
+     * Gets the macAddress property value. The media access control (MAC) address of the media endpoint&apos;s network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -407,7 +407,7 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("linkSpeed", value);
     }
     /**
-     * Sets the macAddress property value. The media access control (MAC) address of the media endpoint's network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
+     * Sets the macAddress property value. The media access control (MAC) address of the media endpoint&apos;s network device. This value may be missing or shown as 02:00:00:00:00:00 due to operating system privacy policies.
      * @param value Value to set for the macAddress property.
      */
     public void setMacAddress(@jakarta.annotation.Nullable final String value) {

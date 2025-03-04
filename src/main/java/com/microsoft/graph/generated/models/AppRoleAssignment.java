@@ -28,7 +28,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
         return new AppRoleAssignment();
     }
     /**
-     * Gets the appRoleId property value. The identifier (id) for the app role that's assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application hasn't declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
+     * Gets the appRoleId property value. The identifier (id) for the app role that&apos;s assigned to the principal. This app role must be exposed in the appRoles property on the resource application&apos;s service principal (resourceId). If the resource application hasn&apos;t declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
         return this.backingStore.get("principalType");
     }
     /**
-     * Gets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made. Maximum length is 256 characters.
+     * Gets the resourceDisplayName property value. The display name of the resource app&apos;s service principal to which the assignment is made. Maximum length is 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
         writer.writeUUIDValue("resourceId", this.getResourceId());
     }
     /**
-     * Sets the appRoleId property value. The identifier (id) for the app role that's assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application hasn't declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
+     * Sets the appRoleId property value. The identifier (id) for the app role that&apos;s assigned to the principal. This app role must be exposed in the appRoles property on the resource application&apos;s service principal (resourceId). If the resource application hasn&apos;t declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
      * @param value Value to set for the appRoleId property.
      */
     public void setAppRoleId(@jakarta.annotation.Nullable final UUID value) {
@@ -150,7 +150,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
         this.backingStore.set("principalType", value);
     }
     /**
-     * Sets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made. Maximum length is 256 characters.
+     * Sets the resourceDisplayName property value. The display name of the resource app&apos;s service principal to which the assignment is made. Maximum length is 256 characters.
      * @param value Value to set for the resourceDisplayName property.
      */
     public void setResourceDisplayName(@jakarta.annotation.Nullable final String value) {

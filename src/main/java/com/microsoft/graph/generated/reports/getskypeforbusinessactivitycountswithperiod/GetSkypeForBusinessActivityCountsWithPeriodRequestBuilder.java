@@ -22,7 +22,7 @@ public class GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder extends B
     /**
      * Instantiates a new {@link GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
-     * @param period Usage: period='{period}'
+     * @param period Usage: period=&apos;{period}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String period) {

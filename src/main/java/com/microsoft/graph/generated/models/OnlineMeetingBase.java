@@ -213,7 +213,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("isEntryExitAnnounced");
     }
     /**
-     * Gets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+     * Gets the joinInformation property value. The join information in the language and locale variant specified in &apos;Accept-Language&apos; request HTTP header. Read-only.
      * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
@@ -221,7 +221,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("joinInformation");
     }
     /**
-     * Gets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can't be modified. To make any changes to this property, you must cancel this meeting and create a new one.
+     * Gets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can&apos;t be modified. To make any changes to this property, you must cancel this meeting and create a new one.
      * @return a {@link JoinMeetingIdSettings}
      */
     @jakarta.annotation.Nullable
@@ -446,14 +446,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("isEntryExitAnnounced", value);
     }
     /**
-     * Sets the joinInformation property value. The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+     * Sets the joinInformation property value. The join information in the language and locale variant specified in &apos;Accept-Language&apos; request HTTP header. Read-only.
      * @param value Value to set for the joinInformation property.
      */
     public void setJoinInformation(@jakarta.annotation.Nullable final ItemBody value) {
         this.backingStore.set("joinInformation", value);
     }
     /**
-     * Sets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can't be modified. To make any changes to this property, you must cancel this meeting and create a new one.
+     * Sets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings can&apos;t be modified. To make any changes to this property, you must cancel this meeting and create a new one.
      * @param value Value to set for the joinMeetingIdSettings property.
      */
     public void setJoinMeetingIdSettings(@jakarta.annotation.Nullable final JoinMeetingIdSettings value) {

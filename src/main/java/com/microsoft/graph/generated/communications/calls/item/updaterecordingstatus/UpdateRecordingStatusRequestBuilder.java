@@ -36,7 +36,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/updateRecordingStatus", rawUrl);
     }
     /**
-     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
+     * Update the application&apos;s recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @return a {@link UpdateRecordingStatusOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
+     * Update the application&apos;s recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UpdateRecordingStatusOperation}
@@ -63,7 +63,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdateRecordingStatusOperation::createFromDiscriminatorValue);
     }
     /**
-     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
+     * Update the application&apos;s recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
+     * Update the application&apos;s recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

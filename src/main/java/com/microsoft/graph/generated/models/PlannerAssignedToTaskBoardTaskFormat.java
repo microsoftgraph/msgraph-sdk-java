@@ -44,7 +44,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
         return this.backingStore.get("orderHintsByAssignee");
     }
     /**
-     * Gets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task isn't assigned to anyone, or if the orderHintsByAssignee dictionary doesn't provide an order hint for the user the task is assigned to. The format is defined as outlined here.
+     * Gets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task isn&apos;t assigned to anyone, or if the orderHintsByAssignee dictionary doesn&apos;t provide an order hint for the user the task is assigned to. The format is defined as outlined here.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
         this.backingStore.set("orderHintsByAssignee", value);
     }
     /**
-     * Sets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task isn't assigned to anyone, or if the orderHintsByAssignee dictionary doesn't provide an order hint for the user the task is assigned to. The format is defined as outlined here.
+     * Sets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task isn&apos;t assigned to anyone, or if the orderHintsByAssignee dictionary doesn&apos;t provide an order hint for the user the task is assigned to. The format is defined as outlined here.
      * @param value Value to set for the unassignedOrderHint property.
      */
     public void setUnassignedOrderHint(@jakarta.annotation.Nullable final String value) {

@@ -21,7 +21,7 @@ import java.util.Objects;
 public class GetAuditActivityTypesWithCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link GetAuditActivityTypesWithCategoryRequestBuilder} and sets the default values.
-     * @param category Usage: category='{category}'
+     * @param category Usage: category=&apos;{category}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

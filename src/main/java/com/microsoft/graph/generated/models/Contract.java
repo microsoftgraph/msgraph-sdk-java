@@ -35,7 +35,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return this.backingStore.get("contractType");
     }
     /**
-     * Gets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
+     * Gets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant&apos;s organization resource.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return this.backingStore.get("customerId");
     }
     /**
-     * Gets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
+     * Gets the defaultDomainName property value. A copy of the customer tenant&apos;s default domain name. The copy is made when the partnership with the customer is established. It isn&apos;t automatically updated if the customer tenant&apos;s default domain name changes.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return this.backingStore.get("defaultDomainName");
     }
     /**
-     * Gets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+     * Gets the displayName property value. A copy of the customer tenant&apos;s display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant&apos;s display name changes.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,21 +91,21 @@ public class Contract extends DirectoryObject implements Parsable {
         this.backingStore.set("contractType", value);
     }
     /**
-     * Sets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
+     * Sets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant&apos;s organization resource.
      * @param value Value to set for the customerId property.
      */
     public void setCustomerId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("customerId", value);
     }
     /**
-     * Sets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
+     * Sets the defaultDomainName property value. A copy of the customer tenant&apos;s default domain name. The copy is made when the partnership with the customer is established. It isn&apos;t automatically updated if the customer tenant&apos;s default domain name changes.
      * @param value Value to set for the defaultDomainName property.
      */
     public void setDefaultDomainName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("defaultDomainName", value);
     }
     /**
-     * Sets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+     * Sets the displayName property value. A copy of the customer tenant&apos;s display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant&apos;s display name changes.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

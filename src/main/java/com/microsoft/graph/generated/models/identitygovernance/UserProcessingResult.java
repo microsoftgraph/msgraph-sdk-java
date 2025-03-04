@@ -28,7 +28,7 @@ public class UserProcessingResult extends Entity implements Parsable {
         return new UserProcessingResult();
     }
     /**
-     * Gets the completedDateTime property value. The date time that the workflow execution for a user completed. Value is null if the workflow hasn't completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Gets the completedDateTime property value. The date time that the workflow execution for a user completed. Value is null if the workflow hasn&apos;t completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class UserProcessingResult extends Entity implements Parsable {
         writer.writeIntegerValue("workflowVersion", this.getWorkflowVersion());
     }
     /**
-     * Sets the completedDateTime property value. The date time that the workflow execution for a user completed. Value is null if the workflow hasn't completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Sets the completedDateTime property value. The date time that the workflow execution for a user completed. Value is null if the workflow hasn&apos;t completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

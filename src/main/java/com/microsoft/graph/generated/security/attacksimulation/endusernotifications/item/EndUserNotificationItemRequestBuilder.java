@@ -64,7 +64,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents an end user's notification for an attack simulation training.
+     * Represents an end user&apos;s notification for an attack simulation training.
      * @return a {@link EndUserNotification}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents an end user's notification for an attack simulation training.
+     * Represents an end user&apos;s notification for an attack simulation training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EndUserNotification}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents an end user's notification for an attack simulation training.
+     * Represents an end user&apos;s notification for an attack simulation training.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents an end user's notification for an attack simulation training.
+     * Represents an end user&apos;s notification for an attack simulation training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents an end user's notification for an attack simulation training.
+     * Represents an end user&apos;s notification for an attack simulation training.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

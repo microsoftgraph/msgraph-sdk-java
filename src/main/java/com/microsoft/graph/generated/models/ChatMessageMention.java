@@ -69,7 +69,7 @@ public class ChatMessageMention implements AdditionalDataHolder, BackedModel, Pa
         return deserializerMap;
     }
     /**
-     * Gets the id property value. Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
+     * Gets the id property value. Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding &lt;at id=&apos;{index}&apos;&gt; tag in the message body.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ChatMessageMention implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("mentioned");
     }
     /**
-     * Gets the mentionText property value. String used to represent the mention. For example, a user's display name, a team name.
+     * Gets the mentionText property value. String used to represent the mention. For example, a user&apos;s display name, a team name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ChatMessageMention implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
+     * Sets the id property value. Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding &lt;at id=&apos;{index}&apos;&gt; tag in the message body.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final Integer value) {
@@ -142,7 +142,7 @@ public class ChatMessageMention implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("mentioned", value);
     }
     /**
-     * Sets the mentionText property value. String used to represent the mention. For example, a user's display name, a team name.
+     * Sets the mentionText property value. String used to represent the mention. For example, a user&apos;s display name, a team name.
      * @param value Value to set for the mentionText property.
      */
     public void setMentionText(@jakarta.annotation.Nullable final String value) {

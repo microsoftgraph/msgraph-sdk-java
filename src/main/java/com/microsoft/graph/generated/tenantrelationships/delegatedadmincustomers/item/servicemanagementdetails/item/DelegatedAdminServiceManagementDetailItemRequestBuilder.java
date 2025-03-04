@@ -55,7 +55,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Contains the management details of a service in the customer tenant that&apos;s managed by delegated administration.
      * @return a {@link DelegatedAdminServiceManagementDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
         return get(null);
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Contains the management details of a service in the customer tenant that&apos;s managed by delegated administration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DelegatedAdminServiceManagementDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Contains the management details of a service in the customer tenant that&apos;s managed by delegated administration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Contains the management details of a service in the customer tenant that&apos;s managed by delegated administration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class DelegatedAdminServiceManagementDetailItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Contains the management details of a service in the customer tenant that&apos;s managed by delegated administration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

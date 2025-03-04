@@ -25,7 +25,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
         return new TeamworkTagMember();
     }
     /**
-     * Gets the displayName property value. The member's display name.
+     * Gets the displayName property value. The member&apos;s display name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the displayName property value. The member's display name.
+     * Sets the displayName property value. The member&apos;s display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

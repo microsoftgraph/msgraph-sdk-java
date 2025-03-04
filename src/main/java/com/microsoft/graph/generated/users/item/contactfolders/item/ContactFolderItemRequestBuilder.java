@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ContactFolder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.contactfolders.item.childfolders.ChildFoldersRequestBuilder;
 import com.microsoft.graph.users.item.contactfolders.item.contacts.ContactsRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
         return new ContactsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ContactFolderItemRequestBuilder} and sets the default values.
@@ -73,7 +82,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      * @return a {@link ContactFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +91,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContactFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +149,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +157,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +209,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

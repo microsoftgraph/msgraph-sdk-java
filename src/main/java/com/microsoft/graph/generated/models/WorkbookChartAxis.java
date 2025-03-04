@@ -91,7 +91,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         return this.backingStore.get("minorGridlines");
     }
     /**
-     * Gets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
+     * Gets the minorUnit property value. Represents the interval between two minor tick marks. &apos;Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         this.backingStore.set("minorGridlines", value);
     }
     /**
-     * Sets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
+     * Sets the minorUnit property value. Represents the interval between two minor tick marks. &apos;Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
      * @param value Value to set for the minorUnit property.
      */
     public void setMinorUnit(@jakarta.annotation.Nullable final UntypedNode value) {

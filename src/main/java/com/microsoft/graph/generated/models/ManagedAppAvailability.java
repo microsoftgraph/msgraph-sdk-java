@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * A managed (MAM) application's availability.
+ * A managed (MAM) application&apos;s availability.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppAvailability implements ValuedEnum {

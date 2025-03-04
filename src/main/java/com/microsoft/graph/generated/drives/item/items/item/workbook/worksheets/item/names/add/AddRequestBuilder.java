@@ -36,7 +36,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/names/add", rawUrl);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * Adds a new name to the collection of the given scope using the user&apos;s locale for the formula.
      * @param body The request body
      * @return a {@link WorkbookNamedItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * Adds a new name to the collection of the given scope using the user&apos;s locale for the formula.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookNamedItem}
@@ -63,7 +63,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookNamedItem::createFromDiscriminatorValue);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * Adds a new name to the collection of the given scope using the user&apos;s locale for the formula.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * Adds a new name to the collection of the given scope using the user&apos;s locale for the formula.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

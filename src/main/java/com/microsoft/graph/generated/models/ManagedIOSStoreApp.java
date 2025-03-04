@@ -45,7 +45,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
         return this.backingStore.get("appStoreUrl");
     }
     /**
-     * Gets the bundleId property value. The app's Bundle ID.
+     * Gets the bundleId property value. The app&apos;s Bundle ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
         this.backingStore.set("appStoreUrl", value);
     }
     /**
-     * Sets the bundleId property value. The app's Bundle ID.
+     * Sets the bundleId property value. The app&apos;s Bundle ID.
      * @param value Value to set for the bundleId property.
      */
     public void setBundleId(@jakarta.annotation.Nullable final String value) {

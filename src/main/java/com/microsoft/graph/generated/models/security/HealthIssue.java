@@ -113,7 +113,7 @@ public class HealthIssue extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the recommendations property value. A list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include instructions for further investigation and aren't limited to prewritten responses.
+     * Gets the recommendations property value. A list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include instructions for further investigation and aren&apos;t limited to prewritten responses.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -230,7 +230,7 @@ public class HealthIssue extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the recommendations property value. A list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include instructions for further investigation and aren't limited to prewritten responses.
+     * Sets the recommendations property value. A list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include instructions for further investigation and aren&apos;t limited to prewritten responses.
      * @param value Value to set for the recommendations property.
      */
     public void setRecommendations(@jakarta.annotation.Nullable final java.util.List<String> value) {

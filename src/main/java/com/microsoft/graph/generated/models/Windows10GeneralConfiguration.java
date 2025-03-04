@@ -1033,7 +1033,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("oneDriveDisableFileSync");
     }
     /**
-     * Gets the passwordBlockSimple property value. Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
+     * Gets the passwordBlockSimple property value. Specify whether PINs or passwords such as &apos;1111&apos; or &apos;1234&apos; are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1321,7 +1321,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("settingsBlockGamingPage");
     }
     /**
-     * Gets the settingsBlockNetworkInternetPage property value. Indicates whether or not to block access to Network & Internet in Settings app.
+     * Gets the settingsBlockNetworkInternetPage property value. Indicates whether or not to block access to Network &amp; Internet in Settings app.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1369,7 +1369,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("settingsBlockSystemPage");
     }
     /**
-     * Gets the settingsBlockTimeLanguagePage property value. Indicates whether or not to block access to Time & Language in Settings app.
+     * Gets the settingsBlockTimeLanguagePage property value. Indicates whether or not to block access to Time &amp; Language in Settings app.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1377,7 +1377,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("settingsBlockTimeLanguagePage");
     }
     /**
-     * Gets the settingsBlockUpdateSecurityPage property value. Indicates whether or not to block access to Update & Security in Settings app.
+     * Gets the settingsBlockUpdateSecurityPage property value. Indicates whether or not to block access to Update &amp; Security in Settings app.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1489,7 +1489,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("startMenuHideRecentlyAddedApps");
     }
     /**
-     * Gets the startMenuHideRestartOptions property value. Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
+     * Gets the startMenuHideRestartOptions property value. Enabling this policy hides &apos;Restart/Update and Restart&apos; from appearing in the power button in the start menu.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1697,7 +1697,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("voiceRecordingBlocked");
     }
     /**
-     * Gets the webRtcBlockLocalhostIpAddress property value. Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
+     * Gets the webRtcBlockLocalhostIpAddress property value. Indicates whether or not user&apos;s localhost IP address is displayed while making phone calls using the WebRTC
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -2751,7 +2751,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this.backingStore.set("oneDriveDisableFileSync", value);
     }
     /**
-     * Sets the passwordBlockSimple property value. Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
+     * Sets the passwordBlockSimple property value. Specify whether PINs or passwords such as &apos;1111&apos; or &apos;1234&apos; are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
      * @param value Value to set for the passwordBlockSimple property.
      */
     public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
@@ -3003,7 +3003,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this.backingStore.set("settingsBlockGamingPage", value);
     }
     /**
-     * Sets the settingsBlockNetworkInternetPage property value. Indicates whether or not to block access to Network & Internet in Settings app.
+     * Sets the settingsBlockNetworkInternetPage property value. Indicates whether or not to block access to Network &amp; Internet in Settings app.
      * @param value Value to set for the settingsBlockNetworkInternetPage property.
      */
     public void setSettingsBlockNetworkInternetPage(@jakarta.annotation.Nullable final Boolean value) {
@@ -3045,14 +3045,14 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this.backingStore.set("settingsBlockSystemPage", value);
     }
     /**
-     * Sets the settingsBlockTimeLanguagePage property value. Indicates whether or not to block access to Time & Language in Settings app.
+     * Sets the settingsBlockTimeLanguagePage property value. Indicates whether or not to block access to Time &amp; Language in Settings app.
      * @param value Value to set for the settingsBlockTimeLanguagePage property.
      */
     public void setSettingsBlockTimeLanguagePage(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("settingsBlockTimeLanguagePage", value);
     }
     /**
-     * Sets the settingsBlockUpdateSecurityPage property value. Indicates whether or not to block access to Update & Security in Settings app.
+     * Sets the settingsBlockUpdateSecurityPage property value. Indicates whether or not to block access to Update &amp; Security in Settings app.
      * @param value Value to set for the settingsBlockUpdateSecurityPage property.
      */
     public void setSettingsBlockUpdateSecurityPage(@jakarta.annotation.Nullable final Boolean value) {
@@ -3150,7 +3150,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this.backingStore.set("startMenuHideRecentlyAddedApps", value);
     }
     /**
-     * Sets the startMenuHideRestartOptions property value. Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
+     * Sets the startMenuHideRestartOptions property value. Enabling this policy hides &apos;Restart/Update and Restart&apos; from appearing in the power button in the start menu.
      * @param value Value to set for the startMenuHideRestartOptions property.
      */
     public void setStartMenuHideRestartOptions(@jakarta.annotation.Nullable final Boolean value) {
@@ -3332,7 +3332,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this.backingStore.set("voiceRecordingBlocked", value);
     }
     /**
-     * Sets the webRtcBlockLocalhostIpAddress property value. Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
+     * Sets the webRtcBlockLocalhostIpAddress property value. Indicates whether or not user&apos;s localhost IP address is displayed while making phone calls using the WebRTC
      * @param value Value to set for the webRtcBlockLocalhostIpAddress property.
      */
     public void setWebRtcBlockLocalhostIpAddress(@jakarta.annotation.Nullable final Boolean value) {

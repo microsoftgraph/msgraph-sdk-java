@@ -60,7 +60,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * The user&apos;s calendar groups. Read-only. Nullable.
      * @return a {@link CalendarGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * The user&apos;s calendar groups. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CalendarGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CalendarGroup::createFromDiscriminatorValue);
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * The user&apos;s calendar groups. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * The user&apos;s calendar groups. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return new CalendarGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * The user&apos;s calendar groups. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

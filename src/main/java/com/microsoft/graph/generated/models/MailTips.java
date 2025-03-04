@@ -65,7 +65,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the customMailTip property value. A custom mail tip that can be set on the recipient's mailbox.
+     * Gets the customMailTip property value. A custom mail tip that can be set on the recipient&apos;s mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("customMailTip");
     }
     /**
-     * Gets the deliveryRestricted property value. Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
+     * Gets the deliveryRestricted property value. Whether the recipient&apos;s mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
+     * Gets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient&apos;s manager.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("mailboxFull");
     }
     /**
-     * Gets the maxMessageSize property value. The maximum message size that has been configured for the recipient's organization or mailbox.
+     * Gets the maxMessageSize property value. The maximum message size that has been configured for the recipient&apos;s organization or mailbox.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
+     * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its &apos;partner&apos;. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It&apos;s also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @return a {@link EnumSet<RecipientScopeType>}
      */
     @jakarta.annotation.Nullable
@@ -226,14 +226,14 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the customMailTip property value. A custom mail tip that can be set on the recipient's mailbox.
+     * Sets the customMailTip property value. A custom mail tip that can be set on the recipient&apos;s mailbox.
      * @param value Value to set for the customMailTip property.
      */
     public void setCustomMailTip(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customMailTip", value);
     }
     /**
-     * Sets the deliveryRestricted property value. Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
+     * Sets the deliveryRestricted property value. Whether the recipient&apos;s mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
      * @param value Value to set for the deliveryRestricted property.
      */
     public void setDeliveryRestricted(@jakarta.annotation.Nullable final Boolean value) {
@@ -261,7 +261,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("externalMemberCount", value);
     }
     /**
-     * Sets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
+     * Sets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient&apos;s manager.
      * @param value Value to set for the isModerated property.
      */
     public void setIsModerated(@jakarta.annotation.Nullable final Boolean value) {
@@ -275,7 +275,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("mailboxFull", value);
     }
     /**
-     * Sets the maxMessageSize property value. The maximum message size that has been configured for the recipient's organization or mailbox.
+     * Sets the maxMessageSize property value. The maximum message size that has been configured for the recipient&apos;s organization or mailbox.
      * @param value Value to set for the maxMessageSize property.
      */
     public void setMaxMessageSize(@jakarta.annotation.Nullable final Integer value) {
@@ -289,7 +289,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
+     * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its &apos;partner&apos;. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It&apos;s also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @param value Value to set for the recipientScope property.
      */
     public void setRecipientScope(@jakarta.annotation.Nullable final EnumSet<RecipientScopeType> value) {

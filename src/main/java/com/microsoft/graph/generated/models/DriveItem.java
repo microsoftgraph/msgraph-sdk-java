@@ -66,7 +66,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("content");
     }
     /**
-     * Gets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
+     * Gets the cTag property value. An eTag for the content of the item. This eTag isn&apos;t changed if only the metadata is changed. Note This property isn&apos;t returned if the item is a folder. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -212,7 +212,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("photo");
     }
     /**
-     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
+     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn&apos;t returned by default. Read-only.
      * @return a {@link PublicationFacet}
      */
     @jakarta.annotation.Nullable
@@ -324,7 +324,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("webDavUrl");
     }
     /**
-     * Gets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
+     * Gets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet&apos;s contents. Nullable.
      * @return a {@link Workbook}
      */
     @jakarta.annotation.Nullable
@@ -408,7 +408,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
+     * Sets the cTag property value. An eTag for the content of the item. This eTag isn&apos;t changed if only the metadata is changed. Note This property isn&apos;t returned if the item is a folder. Read-only.
      * @param value Value to set for the cTag property.
      */
     public void setCTag(@jakarta.annotation.Nullable final String value) {
@@ -499,7 +499,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.backingStore.set("photo", value);
     }
     /**
-     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
+     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn&apos;t returned by default. Read-only.
      * @param value Value to set for the publication property.
      */
     public void setPublication(@jakarta.annotation.Nullable final PublicationFacet value) {
@@ -597,7 +597,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.backingStore.set("webDavUrl", value);
     }
     /**
-     * Sets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
+     * Sets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet&apos;s contents. Nullable.
      * @param value Value to set for the workbook property.
      */
     public void setWorkbook(@jakarta.annotation.Nullable final Workbook value) {

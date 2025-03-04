@@ -100,7 +100,7 @@ public class RetentionLabel extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the dispositionReviewStages property value. When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
+     * Gets the dispositionReviewStages property value. When action at the end of retention is chosen as &apos;dispositionReview&apos;, dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      * @return a {@link java.util.List<DispositionReviewStage>}
      */
     @jakarta.annotation.Nullable
@@ -278,7 +278,7 @@ public class RetentionLabel extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the dispositionReviewStages property value. When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
+     * Sets the dispositionReviewStages property value. When action at the end of retention is chosen as &apos;dispositionReview&apos;, dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      * @param value Value to set for the dispositionReviewStages property.
      */
     public void setDispositionReviewStages(@jakarta.annotation.Nullable final java.util.List<DispositionReviewStage> value) {

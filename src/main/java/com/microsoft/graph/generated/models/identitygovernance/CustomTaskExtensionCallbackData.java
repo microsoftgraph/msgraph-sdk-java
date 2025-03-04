@@ -37,7 +37,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
         return deserializerMap;
     }
     /**
-     * Gets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
+     * Gets the operationStatus property value. Operation status that&apos;s provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
      * @return a {@link CustomTaskExtensionOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class CustomTaskExtensionCallbackData extends CustomExtensionData impleme
         writer.writeEnumValue("operationStatus", this.getOperationStatus());
     }
     /**
-     * Sets the operationStatus property value. Operation status that's provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
+     * Sets the operationStatus property value. Operation status that&apos;s provided by the Azure Logic App indicating whenever the Azure Logic App has run successfully or not. Supported values: completed, failed, unknownFutureValue.
      * @param value Value to set for the operationStatus property.
      */
     public void setOperationStatus(@jakarta.annotation.Nullable final CustomTaskExtensionOperationStatus value) {

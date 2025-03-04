@@ -50,7 +50,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
+     * Gets the ignoreVersionDetection property value. A boolean to control whether the app&apos;s version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
         this.backingStore.set("commandLine", value);
     }
     /**
-     * Sets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
+     * Sets the ignoreVersionDetection property value. A boolean to control whether the app&apos;s version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
      */
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {

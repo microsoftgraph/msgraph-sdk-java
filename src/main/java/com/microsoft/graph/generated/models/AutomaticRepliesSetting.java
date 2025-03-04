@@ -56,7 +56,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
+     * Gets the externalAudience property value. The set of audience external to the signed-in user&apos;s organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      * @return a {@link ExternalAudienceScope}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
+     * Gets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user&apos;s organization, if Status is AlwaysEnabled or Scheduled.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
+     * Sets the externalAudience property value. The set of audience external to the signed-in user&apos;s organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      * @param value Value to set for the externalAudience property.
      */
     public void setExternalAudience(@jakarta.annotation.Nullable final ExternalAudienceScope value) {
@@ -172,7 +172,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
         this.backingStore.set("externalReplyMessage", value);
     }
     /**
-     * Sets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
+     * Sets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user&apos;s organization, if Status is AlwaysEnabled or Scheduled.
      * @param value Value to set for the internalReplyMessage property.
      */
     public void setInternalReplyMessage(@jakarta.annotation.Nullable final String value) {

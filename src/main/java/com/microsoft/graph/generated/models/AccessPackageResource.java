@@ -58,7 +58,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
+     * Gets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment&apos;s originId.Supports $expand.
      * @return a {@link AccessPackageResourceEnvironment}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
+     * Sets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment&apos;s originId.Supports $expand.
      * @param value Value to set for the environment property.
      */
     public void setEnvironment(@jakarta.annotation.Nullable final AccessPackageResourceEnvironment value) {

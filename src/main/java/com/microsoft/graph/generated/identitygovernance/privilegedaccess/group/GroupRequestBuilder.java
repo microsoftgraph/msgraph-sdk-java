@@ -118,7 +118,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A group that's governed through Privileged Identity Management (PIM).
+     * A group that&apos;s governed through Privileged Identity Management (PIM).
      * @return a {@link PrivilegedAccessGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -127,7 +127,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A group that's governed through Privileged Identity Management (PIM).
+     * A group that&apos;s governed through Privileged Identity Management (PIM).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -185,7 +185,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A group that's governed through Privileged Identity Management (PIM).
+     * A group that&apos;s governed through Privileged Identity Management (PIM).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -193,7 +193,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A group that's governed through Privileged Identity Management (PIM).
+     * A group that&apos;s governed through Privileged Identity Management (PIM).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -245,7 +245,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A group that's governed through Privileged Identity Management (PIM).
+     * A group that&apos;s governed through Privileged Identity Management (PIM).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

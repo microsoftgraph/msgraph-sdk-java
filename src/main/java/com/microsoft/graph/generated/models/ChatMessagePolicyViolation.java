@@ -104,7 +104,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedM
         return this.backingStore.get("policyTip");
     }
     /**
-     * Gets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction isn't required.
+     * Gets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction isn&apos;t required.
      * @return a {@link EnumSet<ChatMessagePolicyViolationUserActionTypes>}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedM
         this.backingStore.set("policyTip", value);
     }
     /**
-     * Sets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction isn't required.
+     * Sets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction isn&apos;t required.
      * @param value Value to set for the userAction property.
      */
     public void setUserAction(@jakarta.annotation.Nullable final EnumSet<ChatMessagePolicyViolationUserActionTypes> value) {

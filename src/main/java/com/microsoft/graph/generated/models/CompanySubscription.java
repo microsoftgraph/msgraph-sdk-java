@@ -95,7 +95,7 @@ public class CompanySubscription extends Entity implements Parsable {
         return this.backingStore.get("ownerTenantId");
     }
     /**
-     * Gets the ownerType property value. Indicates the entity that ownerId belongs to, for example, 'User'.
+     * Gets the ownerType property value. Indicates the entity that ownerId belongs to, for example, &apos;User&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class CompanySubscription extends Entity implements Parsable {
         this.backingStore.set("ownerTenantId", value);
     }
     /**
-     * Sets the ownerType property value. Indicates the entity that ownerId belongs to, for example, 'User'.
+     * Sets the ownerType property value. Indicates the entity that ownerId belongs to, for example, &apos;User&apos;.
      * @param value Value to set for the ownerType property.
      */
     public void setOwnerType(@jakarta.annotation.Nullable final String value) {

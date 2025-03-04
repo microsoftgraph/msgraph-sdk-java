@@ -73,7 +73,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
         return this.backingStore.get("joinRequest");
     }
     /**
-     * Gets the state property value. State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn't created. Read-only.
+     * Gets the state property value. State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn&apos;t created. Read-only.
      * @return a {@link MultiTenantOrganizationState}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
         this.backingStore.set("joinRequest", value);
     }
     /**
-     * Sets the state property value. State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn't created. Read-only.
+     * Sets the state property value. State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn&apos;t created. Read-only.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final MultiTenantOrganizationState value) {

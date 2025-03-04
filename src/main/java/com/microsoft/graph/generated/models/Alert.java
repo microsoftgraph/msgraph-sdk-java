@@ -314,7 +314,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("severity");
     }
     /**
-     * Gets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search.
+     * Gets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider&apos;s user interface for alerts or log search.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -330,7 +330,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW') (supports update).
+     * Gets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example &apos;HVA&apos;, &apos;SAW&apos;) (supports update).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -643,7 +643,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("severity", value);
     }
     /**
-     * Sets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search.
+     * Sets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider&apos;s user interface for alerts or log search.
      * @param value Value to set for the sourceMaterials property.
      */
     public void setSourceMaterials(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -657,7 +657,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW') (supports update).
+     * Sets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example &apos;HVA&apos;, &apos;SAW&apos;) (supports update).
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {

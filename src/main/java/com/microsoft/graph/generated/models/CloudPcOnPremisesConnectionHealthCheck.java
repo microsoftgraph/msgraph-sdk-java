@@ -81,7 +81,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the endDateTime property value. The value cannot be modified and is automatically populated when the health check ends. The Timestamp type represents date and time information using ISO 8601 format and is in Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2024 would look like this: '2024-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Gets the endDateTime property value. The value cannot be modified and is automatically populated when the health check ends. The Timestamp type represents date and time information using ISO 8601 format and is in Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2024 would look like this: &apos;2024-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return this.backingStore.get("recommendedAction");
     }
     /**
-     * Gets the startDateTime property value. The value cannot be modified and is automatically populated when the health check starts. The Timestamp type represents date and time information using ISO 8601 format and is in  Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2024 would look like this: '2024-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Gets the startDateTime property value. The value cannot be modified and is automatically populated when the health check starts. The Timestamp type represents date and time information using ISO 8601 format and is in  Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2024 would look like this: &apos;2024-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the endDateTime property value. The value cannot be modified and is automatically populated when the health check ends. The Timestamp type represents date and time information using ISO 8601 format and is in Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2024 would look like this: '2024-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Sets the endDateTime property value. The value cannot be modified and is automatically populated when the health check ends. The Timestamp type represents date and time information using ISO 8601 format and is in Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2024 would look like this: &apos;2024-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -228,7 +228,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         this.backingStore.set("recommendedAction", value);
     }
     /**
-     * Sets the startDateTime property value. The value cannot be modified and is automatically populated when the health check starts. The Timestamp type represents date and time information using ISO 8601 format and is in  Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2024 would look like this: '2024-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Sets the startDateTime property value. The value cannot be modified and is automatically populated when the health check starts. The Timestamp type represents date and time information using ISO 8601 format and is in  Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2024 would look like this: &apos;2024-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

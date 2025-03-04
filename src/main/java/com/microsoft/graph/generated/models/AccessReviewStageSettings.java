@@ -64,7 +64,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("decisionsThatWillMoveToNextStage");
     }
     /**
-     * Gets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, don't specify dependsOn. Required if stageId isn't 1.
+     * Gets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, don&apos;t specify dependsOn. Required if stageId isn&apos;t 1.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("dependsOn");
     }
     /**
-     * Gets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Can't exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays can't exceed 7.
+     * Gets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Can&apos;t exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays can&apos;t exceed 7.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("durationInDays");
     }
     /**
-     * Gets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don't exist. For example, if managers are selected as reviewers and a principal under review doesn't have a manager in Microsoft Entra ID, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
+     * Gets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don&apos;t exist. For example, if managers are selected as reviewers and a principal under review doesn&apos;t have a manager in Microsoft Entra ID, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
      * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
@@ -185,21 +185,21 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, BackedMo
         this.backingStore.set("decisionsThatWillMoveToNextStage", value);
     }
     /**
-     * Sets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, don't specify dependsOn. Required if stageId isn't 1.
+     * Sets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, don&apos;t specify dependsOn. Required if stageId isn&apos;t 1.
      * @param value Value to set for the dependsOn property.
      */
     public void setDependsOn(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("dependsOn", value);
     }
     /**
-     * Sets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Can't exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays can't exceed 7.
+     * Sets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Can&apos;t exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays can&apos;t exceed 7.
      * @param value Value to set for the durationInDays property.
      */
     public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("durationInDays", value);
     }
     /**
-     * Sets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don't exist. For example, if managers are selected as reviewers and a principal under review doesn't have a manager in Microsoft Entra ID, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
+     * Sets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers don&apos;t exist. For example, if managers are selected as reviewers and a principal under review doesn&apos;t have a manager in Microsoft Entra ID, the fallback reviewers are asked to review that principal. NOTE: The value of this property overrides the corresponding setting on the accessReviewScheduleDefinition object.
      * @param value Value to set for the fallbackReviewers property.
      */
     public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {

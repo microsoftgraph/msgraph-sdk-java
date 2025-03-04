@@ -66,7 +66,7 @@ public class ApprovalStage extends Entity implements Parsable {
         return this.backingStore.get("justification");
     }
     /**
-     * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
+     * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn&apos;t reviewed. Read-only.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class ApprovalStage extends Entity implements Parsable {
         this.backingStore.set("justification", value);
     }
     /**
-     * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
+     * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn&apos;t reviewed. Read-only.
      * @param value Value to set for the reviewedBy property.
      */
     public void setReviewedBy(@jakarta.annotation.Nullable final Identity value) {

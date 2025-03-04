@@ -59,7 +59,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/agreementAcceptances{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * The user&apos;s terms of use acceptance statuses. Read-only. Nullable.
      * @return a {@link AgreementAcceptanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * The user&apos;s terms of use acceptance statuses. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AgreementAcceptanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementAcceptanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * The user&apos;s terms of use acceptance statuses. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * The user&apos;s terms of use acceptance statuses. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return new AgreementAcceptancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * The user&apos;s terms of use acceptance statuses. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

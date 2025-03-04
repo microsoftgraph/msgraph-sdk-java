@@ -23,7 +23,7 @@ public class SupportedTimeZonesWithTimeZoneStandardRequestBuilder extends BaseRe
      * Instantiates a new {@link SupportedTimeZonesWithTimeZoneStandardRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param TimeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
+     * @param TimeZoneStandard Usage: TimeZoneStandard=&apos;{TimeZoneStandard}&apos;
      */
     public SupportedTimeZonesWithTimeZoneStandardRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String TimeZoneStandard) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/supportedTimeZones(TimeZoneStandard='{TimeZoneStandard}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

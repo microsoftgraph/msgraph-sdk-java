@@ -82,7 +82,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         return this.backingStore.get("unifiedGroupSources");
     }
     /**
-     * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian&apos;s mailbox and OneDrive for Business site.
      * @return a {@link java.util.List<UserSource>}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         this.backingStore.set("unifiedGroupSources", value);
     }
     /**
-     * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian&apos;s mailbox and OneDrive for Business site.
      * @param value Value to set for the userSources property.
      */
     public void setUserSources(@jakarta.annotation.Nullable final java.util.List<UserSource> value) {

@@ -104,7 +104,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("state");
     }
     /**
-     * Gets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
+     * Gets the storagePlanInformation property value. Information about the drive&apos;s storage quota plans. Only in Personal OneDrive.
      * @return a {@link StoragePlanInformation}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class Quota implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
+     * Sets the storagePlanInformation property value. Information about the drive&apos;s storage quota plans. Only in Personal OneDrive.
      * @param value Value to set for the storagePlanInformation property.
      */
     public void setStoragePlanInformation(@jakarta.annotation.Nullable final StoragePlanInformation value) {

@@ -129,7 +129,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("isPersonalSite");
     }
     /**
-     * Gets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
+     * Gets the items property value. Used to address any item contained in this site. This collection can&apos;t be enumerated.
      * @return a {@link java.util.List<BaseItem>}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("sharepointIds");
     }
     /**
-     * Gets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
+     * Gets the siteCollection property value. Provides details about the site&apos;s site collection. Available only on the root site. Read-only.
      * @return a {@link SiteCollection}
      */
     @jakarta.annotation.Nullable
@@ -317,7 +317,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("isPersonalSite", value);
     }
     /**
-     * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
+     * Sets the items property value. Used to address any item contained in this site. This collection can&apos;t be enumerated.
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<BaseItem> value) {
@@ -373,7 +373,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("sharepointIds", value);
     }
     /**
-     * Sets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
+     * Sets the siteCollection property value. Provides details about the site&apos;s site collection. Available only on the root site. Read-only.
      * @param value Value to set for the siteCollection property.
      */
     public void setSiteCollection(@jakarta.annotation.Nullable final SiteCollection value) {

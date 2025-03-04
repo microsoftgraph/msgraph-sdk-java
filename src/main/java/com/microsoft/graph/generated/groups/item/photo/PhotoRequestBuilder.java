@@ -64,7 +64,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The group's profile photo
+     * The group&apos;s profile photo
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The group's profile photo
+     * The group&apos;s profile photo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The group's profile photo
+     * The group&apos;s profile photo
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The group's profile photo
+     * The group&apos;s profile photo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The group's profile photo
+     * The group&apos;s profile photo
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -37,7 +37,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
         return deserializerMap;
     }
     /**
-     * Gets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
+     * Gets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance&apos;s start date. If this property is not specified, it&apos;s assigned the default value PT0S.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
         writer.writePeriodAndDurationValue("inactiveDuration", this.getInactiveDuration());
     }
     /**
-     * Sets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
+     * Sets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance&apos;s start date. If this property is not specified, it&apos;s assigned the default value PT0S.
      * @param value Value to set for the inactiveDuration property.
      */
     public void setInactiveDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {

@@ -27,7 +27,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         return new MicrosoftAuthenticatorAuthenticationMethod();
     }
     /**
-     * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
+     * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device isn&apos;t registered for passwordless Phone Sign-In.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
+     * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device isn&apos;t registered for passwordless Phone Sign-In.
      * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
@@ -94,14 +94,14 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         writer.writeStringValue("phoneAppVersion", this.getPhoneAppVersion());
     }
     /**
-     * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
+     * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device isn&apos;t registered for passwordless Phone Sign-In.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
+     * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device isn&apos;t registered for passwordless Phone Sign-In.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Device value) {

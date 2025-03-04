@@ -41,7 +41,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the isDefault property value. Indicates whether this is the user's default section. Read-only.
+     * Gets the isDefault property value. Indicates whether this is the user&apos;s default section. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         return this.backingStore.get("isDefault");
     }
     /**
-     * Gets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
+     * Gets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it&apos;s installed. The oneNoteWebURL link opens the section in OneNote on the web.
      * @return a {@link SectionLinks}
      */
     @jakarta.annotation.Nullable
@@ -103,14 +103,14 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         writer.writeObjectValue("parentSectionGroup", this.getParentSectionGroup());
     }
     /**
-     * Sets the isDefault property value. Indicates whether this is the user's default section. Read-only.
+     * Sets the isDefault property value. Indicates whether this is the user&apos;s default section. Read-only.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDefault", value);
     }
     /**
-     * Sets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
+     * Sets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it&apos;s installed. The oneNoteWebURL link opens the section in OneNote on the web.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final SectionLinks value) {

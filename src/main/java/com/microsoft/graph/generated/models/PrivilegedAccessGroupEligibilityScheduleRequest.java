@@ -66,7 +66,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
         return this.backingStore.get("groupId");
     }
     /**
-     * Gets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand and $select nested in $expand for id only.
+     * Gets the principal property value. References the principal that&apos;s in the scope of the membership or ownership eligibility request through the group that&apos;s governed by PIM. Supports $expand and $select nested in $expand for id only.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
         return this.backingStore.get("targetSchedule");
     }
     /**
-     * Gets the targetScheduleId property value. The identifier of the schedule that's created from the eligibility request. Optional.
+     * Gets the targetScheduleId property value. The identifier of the schedule that&apos;s created from the eligibility request. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
         this.backingStore.set("groupId", value);
     }
     /**
-     * Sets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand and $select nested in $expand for id only.
+     * Sets the principal property value. References the principal that&apos;s in the scope of the membership or ownership eligibility request through the group that&apos;s governed by PIM. Supports $expand and $select nested in $expand for id only.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -155,7 +155,7 @@ public class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedA
         this.backingStore.set("targetSchedule", value);
     }
     /**
-     * Sets the targetScheduleId property value. The identifier of the schedule that's created from the eligibility request. Optional.
+     * Sets the targetScheduleId property value. The identifier of the schedule that&apos;s created from the eligibility request. Optional.
      * @param value Value to set for the targetScheduleId property.
      */
     public void setTargetScheduleId(@jakarta.annotation.Nullable final String value) {

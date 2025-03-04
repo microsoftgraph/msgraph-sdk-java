@@ -46,7 +46,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos/{profilePhoto%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The collection of the user's profile photos in different sizes. Read-only.
+     * The collection of the user&apos;s profile photos in different sizes. Read-only.
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -55,7 +55,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of the user's profile photos in different sizes. Read-only.
+     * The collection of the user&apos;s profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -68,7 +68,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfilePhoto::createFromDiscriminatorValue);
     }
     /**
-     * The collection of the user's profile photos in different sizes. Read-only.
+     * The collection of the user&apos;s profile photos in different sizes. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of the user's profile photos in different sizes. Read-only.
+     * The collection of the user&apos;s profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +98,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return new ProfilePhotoItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of the user's profile photos in different sizes. Read-only.
+     * The collection of the user&apos;s profile photos in different sizes. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

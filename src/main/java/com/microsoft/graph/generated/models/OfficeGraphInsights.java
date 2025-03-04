@@ -52,7 +52,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
         return this.backingStore.get("shared");
     }
     /**
-     * Gets the trending property value. Calculated relationship that identifies documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for work or school and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     * Gets the trending property value. Calculated relationship that identifies documents trending around a user. Trending documents are calculated based on activity of the user&apos;s closest network of people and include files stored in OneDrive for work or school and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @return a {@link java.util.List<Trending>}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
         this.backingStore.set("shared", value);
     }
     /**
-     * Sets the trending property value. Calculated relationship that identifies documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for work or school and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     * Sets the trending property value. Calculated relationship that identifies documents trending around a user. Trending documents are calculated based on activity of the user&apos;s closest network of people and include files stored in OneDrive for work or school and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @param value Value to set for the trending property.
      */
     public void setTrending(@jakarta.annotation.Nullable final java.util.List<Trending> value) {

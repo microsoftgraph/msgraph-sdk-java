@@ -34,7 +34,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
         return this.backingStore.get("durationUntilExternalUserDeletedAfterBlocked");
     }
     /**
-     * Gets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
+     * Gets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user&apos;s last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
      * @return a {@link AccessPackageExternalUserLifecycleAction}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
         this.backingStore.set("durationUntilExternalUserDeletedAfterBlocked", value);
     }
     /**
-     * Sets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
+     * Sets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user&apos;s last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
      * @param value Value to set for the externalUserLifecycleAction property.
      */
     public void setExternalUserLifecycleAction(@jakarta.annotation.Nullable final AccessPackageExternalUserLifecycleAction value) {

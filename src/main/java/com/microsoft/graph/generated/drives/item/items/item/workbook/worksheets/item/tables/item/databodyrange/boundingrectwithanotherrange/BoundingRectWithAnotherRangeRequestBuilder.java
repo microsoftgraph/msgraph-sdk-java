@@ -21,7 +21,7 @@ import java.util.Objects;
 public class BoundingRectWithAnotherRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link BoundingRectWithAnotherRangeRequestBuilder} and sets the default values.
-     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @param anotherRange Usage: anotherRange=&apos;{anotherRange}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

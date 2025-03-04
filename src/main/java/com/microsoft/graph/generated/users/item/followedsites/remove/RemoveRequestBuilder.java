@@ -35,7 +35,7 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/followedSites/remove", rawUrl);
     }
     /**
-     * Unfollow a user's site or multiple sites.
+     * Unfollow a user&apos;s site or multiple sites.
      * @param body The request body
      * @return a {@link RemovePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Unfollow a user's site or multiple sites.
+     * Unfollow a user&apos;s site or multiple sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RemovePostResponse}
@@ -62,7 +62,7 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RemovePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Unfollow a user's site or multiple sites.
+     * Unfollow a user&apos;s site or multiple sites.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -71,7 +71,7 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Unfollow a user's site or multiple sites.
+     * Unfollow a user&apos;s site or multiple sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

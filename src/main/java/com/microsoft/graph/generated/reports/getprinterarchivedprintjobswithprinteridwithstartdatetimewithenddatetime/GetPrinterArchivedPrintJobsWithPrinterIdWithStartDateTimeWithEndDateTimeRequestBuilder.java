@@ -24,7 +24,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
      * Instantiates a new {@link GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder} and sets the default values.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param pathParameters Path parameters for the request
-     * @param printerId Usage: printerId='{printerId}'
+     * @param printerId Usage: printerId=&apos;{printerId}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param startDateTime Usage: startDateTime={startDateTime}
      */

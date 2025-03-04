@@ -53,7 +53,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in authentication context selection UX, or used to protect app resources. It's shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
+     * Gets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it&apos;s set to false, it shouldn&apos;t be shown in authentication context selection UX, or used to protect app resources. It&apos;s shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class AuthenticationContextClassReference extends Entity implements Parsa
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it's set to false, it shouldn't be shown in authentication context selection UX, or used to protect app resources. It's shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
+     * Sets the isAvailable property value. Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it&apos;s set to false, it shouldn&apos;t be shown in authentication context selection UX, or used to protect app resources. It&apos;s shown and available for Conditional Access policy authoring. The default value is false.  Supports $filter (eq).
      * @param value Value to set for the isAvailable property.
      */
     public void setIsAvailable(@jakarta.annotation.Nullable final Boolean value) {

@@ -56,7 +56,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. If present, the value of this field is used by the profile card as the default property label in the experience (for example, 'Cost Center').
+     * Gets the displayName property value. If present, the value of this field is used by the profile card as the default property label in the experience (for example, &apos;Cost Center&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
+     * Gets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets &apos;Kostnadssenter&apos; as the attribute label, rather than &apos;Cost Center.&apos;
      * @return a {@link java.util.List<DisplayNameLocalization>}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. If present, the value of this field is used by the profile card as the default property label in the experience (for example, 'Cost Center').
+     * Sets the displayName property value. If present, the value of this field is used by the profile card as the default property label in the experience (for example, &apos;Cost Center&apos;).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
+     * Sets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets &apos;Kostnadssenter&apos; as the attribute label, rather than &apos;Cost Center.&apos;
      * @param value Value to set for the localizations property.
      */
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {

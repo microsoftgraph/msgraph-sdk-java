@@ -36,7 +36,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the formulaHidden property value. Indicates whether Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+     * Gets the formulaHidden property value. Indicates whether Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn&apos;t have uniform formula hidden setting.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
         return this.backingStore.get("formulaHidden");
     }
     /**
-     * Gets the locked property value. Indicates whether Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+     * Gets the locked property value. Indicates whether Excel locks the cells in the object. A null value indicates that the entire range doesn&apos;t have uniform lock setting.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
         writer.writeBooleanValue("locked", this.getLocked());
     }
     /**
-     * Sets the formulaHidden property value. Indicates whether Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+     * Sets the formulaHidden property value. Indicates whether Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn&apos;t have uniform formula hidden setting.
      * @param value Value to set for the formulaHidden property.
      */
     public void setFormulaHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("formulaHidden", value);
     }
     /**
-     * Sets the locked property value. Indicates whether Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+     * Sets the locked property value. Indicates whether Excel locks the cells in the object. A null value indicates that the entire range doesn&apos;t have uniform lock setting.
      * @param value Value to set for the locked property.
      */
     public void setLocked(@jakarta.annotation.Nullable final Boolean value) {

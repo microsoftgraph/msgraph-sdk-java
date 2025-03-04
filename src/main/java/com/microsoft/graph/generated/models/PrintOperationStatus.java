@@ -56,7 +56,7 @@ public class PrintOperationStatus implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the description property value. A human-readable description of the printOperation's current processing state. Read-only.
+     * Gets the description property value. A human-readable description of the printOperation&apos;s current processing state. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class PrintOperationStatus implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the description property value. A human-readable description of the printOperation's current processing state. Read-only.
+     * Sets the description property value. A human-readable description of the printOperation&apos;s current processing state. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

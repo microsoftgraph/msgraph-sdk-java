@@ -35,7 +35,7 @@ public class AuthenticationMethodsRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
+     * Gets the userRegistrationDetails property value. Represents the state of a user&apos;s authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
      * @return a {@link java.util.List<UserRegistrationDetails>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AuthenticationMethodsRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("userRegistrationDetails", this.getUserRegistrationDetails());
     }
     /**
-     * Sets the userRegistrationDetails property value. Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
+     * Sets the userRegistrationDetails property value. Represents the state of a user&apos;s authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
      * @param value Value to set for the userRegistrationDetails property.
      */
     public void setUserRegistrationDetails(@jakarta.annotation.Nullable final java.util.List<UserRegistrationDetails> value) {

@@ -33,7 +33,7 @@ public class OutlookCategory extends Entity implements Parsable {
         return this.backingStore.get("color");
     }
     /**
-     * Gets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
+     * Gets the displayName property value. A unique name that identifies a category in the user&apos;s mailbox. After a category is created, the name cannot be changed. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class OutlookCategory extends Entity implements Parsable {
         this.backingStore.set("color", value);
     }
     /**
-     * Sets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
+     * Sets the displayName property value. A unique name that identifies a category in the user&apos;s mailbox. After a category is created, the name cannot be changed. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

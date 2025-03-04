@@ -110,7 +110,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("lastCollectedDateTime");
     }
     /**
-     * Gets the latitude property value. Latitude coordinate of the device's location
+     * Gets the latitude property value. Latitude coordinate of the device&apos;s location
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("latitude");
     }
     /**
-     * Gets the longitude property value. Longitude coordinate of the device's location
+     * Gets the longitude property value. Longitude coordinate of the device&apos;s location
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -210,14 +210,14 @@ public class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("lastCollectedDateTime", value);
     }
     /**
-     * Sets the latitude property value. Latitude coordinate of the device's location
+     * Sets the latitude property value. Latitude coordinate of the device&apos;s location
      * @param value Value to set for the latitude property.
      */
     public void setLatitude(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("latitude", value);
     }
     /**
-     * Sets the longitude property value. Longitude coordinate of the device's location
+     * Sets the longitude property value. Longitude coordinate of the device&apos;s location
      * @param value Value to set for the longitude property.
      */
     public void setLongitude(@jakarta.annotation.Nullable final Double value) {

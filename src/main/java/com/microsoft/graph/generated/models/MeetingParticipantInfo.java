@@ -92,7 +92,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the role property value. Specifies the participant's role in the meeting.
+     * Gets the role property value. Specifies the participant&apos;s role in the meeting.
      * @return a {@link OnlineMeetingRole}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the role property value. Specifies the participant's role in the meeting.
+     * Sets the role property value. Specifies the participant&apos;s role in the meeting.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final OnlineMeetingRole value) {

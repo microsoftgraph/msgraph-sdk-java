@@ -67,7 +67,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("isDeleted");
     }
     /**
-     * Gets the isProcessing property value. Indicates whether the backend is processing a user's risky state.
+     * Gets the isProcessing property value. Indicates whether the backend is processing a user&apos;s risky state.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("riskLevel");
     }
     /**
-     * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Gets the riskState property value. State of the user&apos;s risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @return a {@link RiskState}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class RiskyUser extends Entity implements Parsable {
         this.backingStore.set("isDeleted", value);
     }
     /**
-     * Sets the isProcessing property value. Indicates whether the backend is processing a user's risky state.
+     * Sets the isProcessing property value. Indicates whether the backend is processing a user&apos;s risky state.
      * @param value Value to set for the isProcessing property.
      */
     public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
@@ -182,7 +182,7 @@ public class RiskyUser extends Entity implements Parsable {
         this.backingStore.set("riskLevel", value);
     }
     /**
-     * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Sets the riskState property value. State of the user&apos;s risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {

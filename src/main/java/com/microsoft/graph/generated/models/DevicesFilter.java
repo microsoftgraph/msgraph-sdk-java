@@ -84,7 +84,7 @@ public class DevicesFilter implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
+     * Gets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq &apos;PrivilegedAccessWorkstation&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class DevicesFilter implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
+     * Sets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq &apos;PrivilegedAccessWorkstation&apos;.
      * @param value Value to set for the rule property.
      */
     public void setRule(@jakarta.annotation.Nullable final String value) {

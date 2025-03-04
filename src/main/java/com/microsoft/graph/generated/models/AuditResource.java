@@ -51,7 +51,7 @@ public class AuditResource implements AdditionalDataHolder, BackedModel, Parsabl
         return value;
     }
     /**
-     * Gets the auditResourceType property value. Audit resource's type.
+     * Gets the auditResourceType property value. Audit resource&apos;s type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class AuditResource implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the resourceId property value. Audit resource's Id.
+     * Gets the resourceId property value. Audit resource&apos;s Id.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class AuditResource implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the auditResourceType property value. Audit resource's type.
+     * Sets the auditResourceType property value. Audit resource&apos;s type.
      * @param value Value to set for the auditResourceType property.
      */
     public void setAuditResourceType(@jakarta.annotation.Nullable final String value) {
@@ -169,7 +169,7 @@ public class AuditResource implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the resourceId property value. Audit resource's Id.
+     * Sets the resourceId property value. Audit resource&apos;s Id.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {

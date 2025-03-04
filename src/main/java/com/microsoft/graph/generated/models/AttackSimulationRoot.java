@@ -25,7 +25,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
         return new AttackSimulationRoot();
     }
     /**
-     * Gets the endUserNotifications property value. Represents an end user's notification for an attack simulation training.
+     * Gets the endUserNotifications property value. Represents an end user&apos;s notification for an attack simulation training.
      * @return a {@link java.util.List<EndUserNotification>}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("trainings", this.getTrainings());
     }
     /**
-     * Sets the endUserNotifications property value. Represents an end user's notification for an attack simulation training.
+     * Sets the endUserNotifications property value. Represents an end user&apos;s notification for an attack simulation training.
      * @param value Value to set for the endUserNotifications property.
      */
     public void setEndUserNotifications(@jakarta.annotation.Nullable final java.util.List<EndUserNotification> value) {

@@ -37,7 +37,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/tabs/{teamsTab%2Did}/teamsApp{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The application that is linked to the tab. This can't be changed after tab creation.
+     * The application that is linked to the tab. This can&apos;t be changed after tab creation.
      * @return a {@link TeamsApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The application that is linked to the tab. This can't be changed after tab creation.
+     * The application that is linked to the tab. This can&apos;t be changed after tab creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsApp::createFromDiscriminatorValue);
     }
     /**
-     * The application that is linked to the tab. This can't be changed after tab creation.
+     * The application that is linked to the tab. This can&apos;t be changed after tab creation.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The application that is linked to the tab. This can't be changed after tab creation.
+     * The application that is linked to the tab. This can&apos;t be changed after tab creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder {
         return new TeamsAppRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The application that is linked to the tab. This can't be changed after tab creation.
+     * The application that is linked to the tab. This can&apos;t be changed after tab creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

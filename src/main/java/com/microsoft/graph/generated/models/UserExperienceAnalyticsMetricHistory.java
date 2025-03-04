@@ -49,7 +49,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the metricDateTime property value. The metric date time. The value cannot be modified and is automatically populated when the metric is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
+     * Gets the metricDateTime property value. The metric date time. The value cannot be modified and is automatically populated when the metric is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
         this.backingStore.set("deviceId", value);
     }
     /**
-     * Sets the metricDateTime property value. The metric date time. The value cannot be modified and is automatically populated when the metric is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
+     * Sets the metricDateTime property value. The metric date time. The value cannot be modified and is automatically populated when the metric is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default.
      * @param value Value to set for the metricDateTime property.
      */
     public void setMetricDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

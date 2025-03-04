@@ -60,7 +60,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/permissionGrants{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app's corresponding type of resource-specific access.
+     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app&apos;s corresponding type of resource-specific access.
      * @return a {@link ResourceSpecificPermissionGrantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/team-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app's corresponding type of resource-specific access.
+     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app&apos;s corresponding type of resource-specific access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ResourceSpecificPermissionGrantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -109,7 +109,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ResourceSpecificPermissionGrant::createFromDiscriminatorValue);
     }
     /**
-     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app's corresponding type of resource-specific access.
+     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app&apos;s corresponding type of resource-specific access.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app's corresponding type of resource-specific access.
+     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app&apos;s corresponding type of resource-specific access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +163,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return new PermissionGrantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app's corresponding type of resource-specific access.
+     * List all resource-specific permission grants on the team. This list specifies the Microsoft Entra apps that have access to the team, along with each app&apos;s corresponding type of resource-specific access.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

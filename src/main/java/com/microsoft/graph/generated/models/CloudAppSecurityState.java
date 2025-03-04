@@ -64,7 +64,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("destinationServiceIp");
     }
     /**
-     * Gets the destinationServiceName property value. Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
+     * Gets the destinationServiceName property value. Cloud application/service name (for example &apos;Salesforce&apos;, &apos;DropBox&apos;, etc.).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("destinationServiceIp", value);
     }
     /**
-     * Sets the destinationServiceName property value. Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
+     * Sets the destinationServiceName property value. Cloud application/service name (for example &apos;Salesforce&apos;, &apos;DropBox&apos;, etc.).
      * @param value Value to set for the destinationServiceName property.
      */
     public void setDestinationServiceName(@jakarta.annotation.Nullable final String value) {

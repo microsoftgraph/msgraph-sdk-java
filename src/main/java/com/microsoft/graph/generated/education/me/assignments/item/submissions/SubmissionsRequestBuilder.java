@@ -60,7 +60,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
+     * Once published, there&apos;s a submission object for each student representing their work and grade. Read-only. Nullable.
      * @return a {@link EducationSubmissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
+     * Once published, there&apos;s a submission object for each student representing their work and grade. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSubmissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSubmission::createFromDiscriminatorValue);
     }
     /**
-     * Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
+     * Once published, there&apos;s a submission object for each student representing their work and grade. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
+     * Once published, there&apos;s a submission object for each student representing their work and grade. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return new SubmissionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
+     * Once published, there&apos;s a submission object for each student representing their work and grade. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

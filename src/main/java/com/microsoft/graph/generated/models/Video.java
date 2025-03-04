@@ -124,7 +124,7 @@ public class Video implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fourCC property value. 'Four character code' name of the video format.
+     * Gets the fourCC property value. &apos;Four character code&apos; name of the video format.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -240,7 +240,7 @@ public class Video implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("duration", value);
     }
     /**
-     * Sets the fourCC property value. 'Four character code' name of the video format.
+     * Sets the fourCC property value. &apos;Four character code&apos; name of the video format.
      * @param value Value to set for the fourCC property.
      */
     public void setFourCC(@jakarta.annotation.Nullable final String value) {

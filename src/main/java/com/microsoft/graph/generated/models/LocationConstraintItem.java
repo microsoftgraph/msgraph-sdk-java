@@ -36,7 +36,7 @@ public class LocationConstraintItem extends Location implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resolveAvailability property value. If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
+     * Gets the resolveAvailability property value. If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user&apos;s cache without checking if it&apos;s free. Default is true.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class LocationConstraintItem extends Location implements Parsable {
         writer.writeBooleanValue("resolveAvailability", this.getResolveAvailability());
     }
     /**
-     * Sets the resolveAvailability property value. If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
+     * Sets the resolveAvailability property value. If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user&apos;s cache without checking if it&apos;s free. Default is true.
      * @param value Value to set for the resolveAvailability property.
      */
     public void setResolveAvailability(@jakarta.annotation.Nullable final Boolean value) {

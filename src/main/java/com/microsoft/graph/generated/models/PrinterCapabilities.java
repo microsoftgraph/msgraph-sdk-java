@@ -243,7 +243,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("orientations");
     }
     /**
-     * Gets the outputBins property value. The printer's supported output bins (trays).
+     * Gets the outputBins property value. The printer&apos;s supported output bins (trays).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -481,7 +481,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("orientations", value);
     }
     /**
-     * Sets the outputBins property value. The printer's supported output bins (trays).
+     * Sets the outputBins property value. The printer&apos;s supported output bins (trays).
      * @param value Value to set for the outputBins property.
      */
     public void setOutputBins(@jakarta.annotation.Nullable final java.util.List<String> value) {

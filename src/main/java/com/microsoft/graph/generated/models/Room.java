@@ -128,7 +128,7 @@ public class Room extends Place implements Parsable {
         return this.backingStore.get("label");
     }
     /**
-     * Gets the nickname property value. Specifies a nickname for the room, for example, 'conf room'.
+     * Gets the nickname property value. Specifies a nickname for the room, for example, &apos;conf room&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class Room extends Place implements Parsable {
         this.backingStore.set("label", value);
     }
     /**
-     * Sets the nickname property value. Specifies a nickname for the room, for example, 'conf room'.
+     * Sets the nickname property value. Specifies a nickname for the room, for example, &apos;conf room&apos;.
      * @param value Value to set for the nickname property.
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {

@@ -64,7 +64,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The user's profile photo. Read-only.
+     * The user&apos;s profile photo. Read-only.
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's profile photo. Read-only.
+     * The user&apos;s profile photo. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's profile photo. Read-only.
+     * The user&apos;s profile photo. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's profile photo. Read-only.
+     * The user&apos;s profile photo. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The user's profile photo. Read-only.
+     * The user&apos;s profile photo. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

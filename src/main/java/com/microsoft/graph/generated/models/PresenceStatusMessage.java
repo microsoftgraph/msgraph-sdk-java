@@ -57,7 +57,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message doesn't expire.expiryDateTime.dateTime shouldn't include time zone.expiryDateTime isn't available when you request the presence of another user.
+     * Gets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message doesn&apos;t expire.expiryDateTime.dateTime shouldn&apos;t include time zone.expiryDateTime isn&apos;t available when you request the presence of another user.
      * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the message property value. Status message item. The only supported format currently is message.contentType = 'text'.
+     * Gets the message property value. Status message item. The only supported format currently is message.contentType = &apos;text&apos;.
      * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime isn't available when you request the presence of another user.
+     * Gets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime isn&apos;t available when you request the presence of another user.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -129,14 +129,14 @@ public class PresenceStatusMessage implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message doesn't expire.expiryDateTime.dateTime shouldn't include time zone.expiryDateTime isn't available when you request the presence of another user.
+     * Sets the expiryDateTime property value. Time in which the status message expires.If not provided, the status message doesn&apos;t expire.expiryDateTime.dateTime shouldn&apos;t include time zone.expiryDateTime isn&apos;t available when you request the presence of another user.
      * @param value Value to set for the expiryDateTime property.
      */
     public void setExpiryDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("expiryDateTime", value);
     }
     /**
-     * Sets the message property value. Status message item. The only supported format currently is message.contentType = 'text'.
+     * Sets the message property value. Status message item. The only supported format currently is message.contentType = &apos;text&apos;.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final ItemBody value) {
@@ -150,7 +150,7 @@ public class PresenceStatusMessage implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime isn't available when you request the presence of another user.
+     * Sets the publishedDateTime property value. Time in which the status message was published.Read-only.publishedDateTime isn&apos;t available when you request the presence of another user.
      * @param value Value to set for the publishedDateTime property.
      */
     public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

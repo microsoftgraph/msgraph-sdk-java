@@ -82,7 +82,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the principal property value. The principal that's getting a role assignment or role eligibility through the request.
+     * Gets the principal property value. The principal that&apos;s getting a role assignment or role eligibility through the request.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
         return this.backingStore.get("principal");
     }
     /**
-     * Gets the principalId property value. Identifier of the principal that has been granted the role assignment or that's eligible for a role.
+     * Gets the principalId property value. Identifier of the principal that has been granted the role assignment or that&apos;s eligible for a role.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,14 +158,14 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
         this.backingStore.set("directoryScopeId", value);
     }
     /**
-     * Sets the principal property value. The principal that's getting a role assignment or role eligibility through the request.
+     * Sets the principal property value. The principal that&apos;s getting a role assignment or role eligibility through the request.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.backingStore.set("principal", value);
     }
     /**
-     * Sets the principalId property value. Identifier of the principal that has been granted the role assignment or that's eligible for a role.
+     * Sets the principalId property value. Identifier of the principal that has been granted the role assignment or that&apos;s eligible for a role.
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {

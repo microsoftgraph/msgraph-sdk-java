@@ -73,7 +73,7 @@ public class SharepointIds implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the listId property value. The unique identifier (guid) for the item's list in SharePoint.
+     * Gets the listId property value. The unique identifier (guid) for the item&apos;s list in SharePoint.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class SharepointIds implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
+     * Gets the siteId property value. The unique identifier (guid) for the item&apos;s site collection (SPSite).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class SharepointIds implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("tenantId");
     }
     /**
-     * Gets the webId property value. The unique identifier (guid) for the item's site (SPWeb).
+     * Gets the webId property value. The unique identifier (guid) for the item&apos;s site (SPWeb).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class SharepointIds implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the listId property value. The unique identifier (guid) for the item's list in SharePoint.
+     * Sets the listId property value. The unique identifier (guid) for the item&apos;s list in SharePoint.
      * @param value Value to set for the listId property.
      */
     public void setListId(@jakarta.annotation.Nullable final String value) {
@@ -196,7 +196,7 @@ public class SharepointIds implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
+     * Sets the siteId property value. The unique identifier (guid) for the item&apos;s site collection (SPSite).
      * @param value Value to set for the siteId property.
      */
     public void setSiteId(@jakarta.annotation.Nullable final String value) {
@@ -217,7 +217,7 @@ public class SharepointIds implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("tenantId", value);
     }
     /**
-     * Sets the webId property value. The unique identifier (guid) for the item's site (SPWeb).
+     * Sets the webId property value. The unique identifier (guid) for the item&apos;s site (SPWeb).
      * @param value Value to set for the webId property.
      */
     public void setWebId(@jakarta.annotation.Nullable final String value) {

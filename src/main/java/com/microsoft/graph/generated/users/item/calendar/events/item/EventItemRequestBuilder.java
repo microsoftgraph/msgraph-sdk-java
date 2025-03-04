@@ -11,6 +11,7 @@ import com.microsoft.graph.users.item.calendar.events.item.dismissreminder.Dismi
 import com.microsoft.graph.users.item.calendar.events.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.users.item.calendar.events.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.users.item.calendar.events.item.instances.InstancesRequestBuilder;
+import com.microsoft.graph.users.item.calendar.events.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.users.item.calendar.events.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.users.item.calendar.events.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -102,6 +103,14 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public InstancesRequestBuilder instances() {
         return new InstancesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the snoozeReminder method.

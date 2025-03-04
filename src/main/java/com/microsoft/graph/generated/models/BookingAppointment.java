@@ -70,7 +70,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("customerEmailAddress");
     }
     /**
-     * Gets the customerName property value. The customer's name.
+     * Gets the customerName property value. The customer&apos;s name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("customerNotes");
     }
     /**
-     * Gets the customerPhone property value. The customer's phone number.
+     * Gets the customerPhone property value. The customer&apos;s phone number.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -215,7 +215,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("maximumAttendeesCount");
     }
     /**
-     * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
+     * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment doesn&apos;t wish to receive a confirmation for this appointment.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("serviceLocation");
     }
     /**
-     * Gets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceId property.
+     * Gets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it&apos;s computed from the service associated with the appointment by the serviceId property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -400,7 +400,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("customerEmailAddress", value);
     }
     /**
-     * Sets the customerName property value. The customer's name.
+     * Sets the customerName property value. The customer&apos;s name.
      * @param value Value to set for the customerName property.
      */
     public void setCustomerName(@jakarta.annotation.Nullable final String value) {
@@ -414,7 +414,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("customerNotes", value);
     }
     /**
-     * Sets the customerPhone property value. The customer's phone number.
+     * Sets the customerPhone property value. The customer&apos;s phone number.
      * @param value Value to set for the customerPhone property.
      */
     public void setCustomerPhone(@jakarta.annotation.Nullable final String value) {
@@ -491,7 +491,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("maximumAttendeesCount", value);
     }
     /**
-     * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment doesn't wish to receive a confirmation for this appointment.
+     * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment doesn&apos;t wish to receive a confirmation for this appointment.
      * @param value Value to set for the optOutOfCustomerEmail property.
      */
     public void setOptOutOfCustomerEmail(@jakarta.annotation.Nullable final Boolean value) {
@@ -554,7 +554,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("serviceLocation", value);
     }
     /**
-     * Sets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it's computed from the service associated with the appointment by the serviceId property.
+     * Sets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it&apos;s computed from the service associated with the appointment by the serviceId property.
      * @param value Value to set for the serviceName property.
      */
     public void setServiceName(@jakarta.annotation.Nullable final String value) {

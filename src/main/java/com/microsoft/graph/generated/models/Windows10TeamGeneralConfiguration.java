@@ -139,7 +139,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
         return this.backingStore.get("miracastRequirePin");
     }
     /**
-     * Gets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
+     * Gets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the &apos;My meetings and files&apos; feature in the Start menu, which shows the signed-in user&apos;s meetings and files from Office 365.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -317,7 +317,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
         this.backingStore.set("miracastRequirePin", value);
     }
     /**
-     * Sets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
+     * Sets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the &apos;My meetings and files&apos; feature in the Start menu, which shows the signed-in user&apos;s meetings and files from Office 365.
      * @param value Value to set for the settingsBlockMyMeetingsAndFiles property.
      */
     public void setSettingsBlockMyMeetingsAndFiles(@jakarta.annotation.Nullable final Boolean value) {

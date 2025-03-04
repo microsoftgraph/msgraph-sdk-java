@@ -81,7 +81,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOff::createFromDiscriminatorValue);
     }
     /**
-     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns 404 Not found.
+     * Replace an existing timeOff object. If the specified timeOff object doesn&apos;t exist, this method returns 404 Not found.
      * @param body The request body
      * @return a {@link TimeOff}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -92,7 +92,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns 404 Not found.
+     * Replace an existing timeOff object. If the specified timeOff object doesn&apos;t exist, this method returns 404 Not found.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeOff}
@@ -148,7 +148,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns 404 Not found.
+     * Replace an existing timeOff object. If the specified timeOff object doesn&apos;t exist, this method returns 404 Not found.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns 404 Not found.
+     * Replace an existing timeOff object. If the specified timeOff object doesn&apos;t exist, this method returns 404 Not found.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

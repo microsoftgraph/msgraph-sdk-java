@@ -64,7 +64,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("containerFilter");
     }
     /**
-     * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
+     * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn&apos;t be changed.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("id");
     }
     /**
-     * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
+     * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn&apos;t be changed.
      * @return a {@link java.util.List<StringKeyStringValuePair>}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("containerFilter", value);
     }
     /**
-     * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn't be changed.
+     * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and shouldn&apos;t be changed.
      * @param value Value to set for the editable property.
      */
     public void setEditable(@jakarta.annotation.Nullable final Boolean value) {
@@ -226,7 +226,7 @@ public class SynchronizationRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn't be changed.
+     * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values shouldn&apos;t be changed.
      * @param value Value to set for the metadata property.
      */
     public void setMetadata(@jakarta.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {

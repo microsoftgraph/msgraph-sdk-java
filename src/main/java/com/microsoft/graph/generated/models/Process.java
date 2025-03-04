@@ -127,7 +127,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("isElevated");
     }
     /**
-     * Gets the name property value. The name of the process' Image file.
+     * Gets the name property value. The name of the process&apos; Image file.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -261,7 +261,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("isElevated", value);
     }
     /**
-     * Sets the name property value. The name of the process' Image file.
+     * Sets the name property value. The name of the process&apos; Image file.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

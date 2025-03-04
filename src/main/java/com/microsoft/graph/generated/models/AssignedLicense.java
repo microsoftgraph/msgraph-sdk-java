@@ -57,7 +57,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled. IDs are available in servicePlans > servicePlanId in the tenant's subscribedSkus or serviceStatus > servicePlanId in the tenant's companySubscription.
+     * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled. IDs are available in servicePlans &gt; servicePlanId in the tenant&apos;s subscribedSkus or serviceStatus &gt; servicePlanId in the tenant&apos;s companySubscription.
      * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled. IDs are available in servicePlans > servicePlanId in the tenant's subscribedSkus or serviceStatus > servicePlanId in the tenant's companySubscription.
+     * Sets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled. IDs are available in servicePlans &gt; servicePlanId in the tenant&apos;s subscribedSkus or serviceStatus &gt; servicePlanId in the tenant&apos;s companySubscription.
      * @param value Value to set for the disabledPlans property.
      */
     public void setDisabledPlans(@jakarta.annotation.Nullable final java.util.List<UUID> value) {

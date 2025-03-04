@@ -46,7 +46,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("accountEnabled");
     }
     /**
-     * Gets the activities property value. The user's activities across devices. Read-only. Nullable.
+     * Gets the activities property value. The user&apos;s activities across devices. Read-only. Nullable.
      * @return a {@link java.util.List<UserActivity>}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("ageGroup");
     }
     /**
-     * Gets the agreementAcceptances property value. The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Gets the agreementAcceptances property value. The user&apos;s terms of use acceptance statuses. Read-only. Nullable.
      * @return a {@link java.util.List<AgreementAcceptance>}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoleAssignments");
     }
     /**
-     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate between directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
+     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn&apos;t differentiate between directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      * @return a {@link java.util.List<AssignedLicense>}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("birthday");
     }
     /**
-     * Gets the businessPhones property value. The telephone numbers for the user. NOTE: Although it's a string collection, only one number can be set for this property. Read-only for users synced from the on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the businessPhones property value. The telephone numbers for the user. NOTE: Although it&apos;s a string collection, only one number can be set for this property. Read-only for users synced from the on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("businessPhones");
     }
     /**
-     * Gets the calendar property value. The user's primary calendar. Read-only.
+     * Gets the calendar property value. The user&apos;s primary calendar. Read-only.
      * @return a {@link Calendar}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("calendar");
     }
     /**
-     * Gets the calendarGroups property value. The user's calendar groups. Read-only. Nullable.
+     * Gets the calendarGroups property value. The user&apos;s calendar groups. Read-only. Nullable.
      * @return a {@link java.util.List<CalendarGroup>}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("calendarGroups");
     }
     /**
-     * Gets the calendars property value. The user's calendars. Read-only. Nullable.
+     * Gets the calendars property value. The user&apos;s calendars. Read-only. Nullable.
      * @return a {@link java.util.List<Calendar>}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("consentProvidedForMinor");
     }
     /**
-     * Gets the contactFolders property value. The user's contacts folders. Read-only. Nullable.
+     * Gets the contactFolders property value. The user&apos;s contacts folders. Read-only. Nullable.
      * @return a {@link java.util.List<ContactFolder>}
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("contactFolders");
     }
     /**
-     * Gets the contacts property value. The user's contacts. Read-only. Nullable.
+     * Gets the contacts property value. The user&apos;s contacts. Read-only. Nullable.
      * @return a {@link java.util.List<Contact>}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("country");
     }
     /**
-     * Gets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and UTC. The value can't be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users that were synced to Microsoft Entra ID before June 2018. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
+     * Gets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and UTC. The value can&apos;t be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users that were synced to Microsoft Entra ID before June 2018. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -286,7 +286,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("directReports");
     }
     /**
-     * Gets the displayName property value. The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and family name. This property is required when a user is created and it can't be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
+     * Gets the displayName property value. The name displayed in the address book for the user. This value is usually the combination of the user&apos;s first name, middle initial, and family name. This property is required when a user is created and it can&apos;t be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -294,7 +294,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the drive property value. The user's OneDrive. Read-only.
+     * Gets the drive property value. The user&apos;s OneDrive. Read-only.
      * @return a {@link Drive}
      */
     @jakarta.annotation.Nullable
@@ -358,7 +358,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("employeeType");
     }
     /**
-     * Gets the events property value. The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * Gets the events property value. The user&apos;s events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @return a {@link java.util.List<Event>}
      */
     @jakarta.annotation.Nullable
@@ -374,7 +374,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("extensions");
     }
     /**
-     * Gets the externalUserState property value. For a guest invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter (eq, ne, not , in).
+     * Gets the externalUserState property value. For a guest invited to the tenant using the invitation API, this property represents the invited user&apos;s invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter (eq, ne, not , in).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -576,7 +576,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("imAddresses");
     }
     /**
-     * Gets the inferenceClassification property value. Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
+     * Gets the inferenceClassification property value. Relevance classification of the user&apos;s messages based on explicit designations that override inferred relevance or importance.
      * @return a {@link InferenceClassification}
      */
     @jakarta.annotation.Nullable
@@ -608,7 +608,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManagementRestricted");
     }
     /**
-     * Gets the isResourceAccount property value. Don't use  reserved for future use.
+     * Gets the isResourceAccount property value. Don&apos;t use  reserved for future use.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -616,7 +616,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("isResourceAccount");
     }
     /**
-     * Gets the jobTitle property value. The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
+     * Gets the jobTitle property value. The user&apos;s job title. Maximum length is 128 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -656,7 +656,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("licenseAssignmentStates");
     }
     /**
-     * Gets the licenseDetails property value. A collection of this user's license details. Read-only.
+     * Gets the licenseDetails property value. A collection of this user&apos;s license details. Read-only.
      * @return a {@link java.util.List<LicenseDetails>}
      */
     @jakarta.annotation.Nullable
@@ -664,7 +664,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("licenseDetails");
     }
     /**
-     * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.com. Changes to this property update the user's proxyAddresses collection to include the value as an SMTP address. This property can't contain accent characters.  NOTE: We don't recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
+     * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.com. Changes to this property update the user&apos;s proxyAddresses collection to include the value as an SMTP address. This property can&apos;t contain accent characters.  NOTE: We don&apos;t recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -680,7 +680,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("mailboxSettings");
     }
     /**
-     * Gets the mailFolders property value. The user's mail folders. Read-only. Nullable.
+     * Gets the mailFolders property value. The user&apos;s mail folders. Read-only. Nullable.
      * @return a {@link java.util.List<MailFolder>}
      */
     @jakarta.annotation.Nullable
@@ -712,7 +712,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("managedDevices");
     }
     /**
-     * Gets the manager property value. The user or contact that is this user's manager. Read-only. Supports $expand.
+     * Gets the manager property value. The user or contact that is this user&apos;s manager. Read-only. Supports $expand.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -744,7 +744,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("mobilePhone");
     }
     /**
-     * Gets the mySite property value. The URL for the user's site. Returned only on $select.
+     * Gets the mySite property value. The URL for the user&apos;s site. Returned only on $select.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -760,7 +760,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("oauth2PermissionGrants");
     }
     /**
-     * Gets the officeLocation property value. The office location in the user's place of business. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the officeLocation property value. The office location in the user&apos;s place of business. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -808,7 +808,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesExtensionAttributes");
     }
     /**
-     * Gets the onPremisesImmutableId property value. This property is used to associate an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you're using a federated domain for the user's userPrincipalName (UPN) property. NOTE: The $ and _ characters can't be used when specifying this property. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in).
+     * Gets the onPremisesImmutableId property value. This property is used to associate an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you&apos;re using a federated domain for the user&apos;s userPrincipalName (UPN) property. NOTE: The $ and _ characters can&apos;t be used when specifying this property. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -848,7 +848,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesSecurityIdentifier");
     }
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Microsoft Entra ID. Read-only. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Gets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn&apos;t being synced and can be managed in Microsoft Entra ID. Read-only. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -864,7 +864,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesUserPrincipalName");
     }
     /**
-     * Gets the otherMails property value. A list of other email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Can store up to 250 values, each with a limit of 250 characters. NOTE: This property can't contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
+     * Gets the otherMails property value. A list of other email addresses for the user; for example: [&apos;bob@contoso.com&apos;, &apos;Robert@fabrikam.com&apos;]. Can store up to 250 values, each with a limit of 250 characters. NOTE: This property can&apos;t contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -904,7 +904,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("passwordPolicies");
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). To update this property:  User-PasswordProfile.ReadWrite.All is the least privileged permission to update this property.  In delegated scenarios, the User Administrator Microsoft Entra role is the least privileged admin role supported to update this property for nonadmin users. Privileged Authentication Administrator is the least privileged role that's allowed to update this property for all administrators in the tenant. In general, the signed-in user must have a higher privileged administrator role as indicated in Who can reset passwords.  In app-only scenarios, the calling app must be assigned a supported permission and at least the User Administrator Microsoft Entra role.
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). To update this property:  User-PasswordProfile.ReadWrite.All is the least privileged permission to update this property.  In delegated scenarios, the User Administrator Microsoft Entra role is the least privileged admin role supported to update this property for nonadmin users. Privileged Authentication Administrator is the least privileged role that&apos;s allowed to update this property for all administrators in the tenant. In general, the signed-in user must have a higher privileged administrator role as indicated in Who can reset passwords.  In app-only scenarios, the calling app must be assigned a supported permission and at least the User Administrator Microsoft Entra role.
      * @return a {@link PasswordProfile}
      */
     @jakarta.annotation.Nullable
@@ -936,7 +936,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("permissionGrants");
     }
     /**
-     * Gets the photo property value. The user's profile photo. Read-only.
+     * Gets the photo property value. The user&apos;s profile photo. Read-only.
      * @return a {@link ProfilePhoto}
      */
     @jakarta.annotation.Nullable
@@ -944,7 +944,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("photo");
     }
     /**
-     * Gets the photos property value. The collection of the user's profile photos in different sizes. Read-only.
+     * Gets the photos property value. The collection of the user&apos;s profile photos in different sizes. Read-only.
      * @return a {@link java.util.List<ProfilePhoto>}
      */
     @jakarta.annotation.Nullable
@@ -960,7 +960,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("planner");
     }
     /**
-     * Gets the postalCode property value. The postal code for the user's postal address. The postal code is specific to the user's country or region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the postalCode property value. The postal code for the user&apos;s postal address. The postal code is specific to the user&apos;s country or region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -976,7 +976,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("preferredDataLocation");
     }
     /**
-     * Gets the preferredLanguage property value. The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
+     * Gets the preferredLanguage property value. The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: &apos;en-US&apos;, or &apos;es-ES&apos;. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1016,7 +1016,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("provisionedPlans");
     }
     /**
-     * Gets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address, while those addresses prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
+     * Gets the proxyAddresses property value. For example: [&apos;SMTP: bob@contoso.com&apos;, &apos;smtp: bob@sales.contoso.com&apos;]. Changes to the mail property update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address, while those addresses prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -1088,7 +1088,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("showInAddressList");
     }
     /**
-     * Gets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note: Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property isn't returned for a user who never signed in or last signed in before April 2020.
+     * Gets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note: Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property isn&apos;t returned for a user who never signed in or last signed in before April 2020.
      * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
@@ -1120,7 +1120,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("solutions");
     }
     /**
-     * Gets the sponsors property value. The users and groups responsible for this guest's privileges in the tenant and keeping the guest's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
+     * Gets the sponsors property value. The users and groups responsible for this guest&apos;s privileges in the tenant and keeping the guest&apos;s information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -1128,7 +1128,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("sponsors");
     }
     /**
-     * Gets the state property value. The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the state property value. The state or province in the user&apos;s address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1136,7 +1136,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("state");
     }
     /**
-     * Gets the streetAddress property value. The street address of the user's place of business. Maximum length is 1,024 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the streetAddress property value. The street address of the user&apos;s place of business. Maximum length is 1,024 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1144,7 +1144,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("streetAddress");
     }
     /**
-     * Gets the surname property value. The user's surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the surname property value. The user&apos;s surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1184,7 +1184,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("usageLocation");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this value should map to the user's email name. The general format is alias@domain, where the domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can't contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this value should map to the user&apos;s email name. The general format is alias@domain, where the domain must be present in the tenant&apos;s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can&apos;t contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, &apos; . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1351,7 +1351,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("accountEnabled", value);
     }
     /**
-     * Sets the activities property value. The user's activities across devices. Read-only. Nullable.
+     * Sets the activities property value. The user&apos;s activities across devices. Read-only. Nullable.
      * @param value Value to set for the activities property.
      */
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<UserActivity> value) {
@@ -1365,7 +1365,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("ageGroup", value);
     }
     /**
-     * Sets the agreementAcceptances property value. The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Sets the agreementAcceptances property value. The user&apos;s terms of use acceptance statuses. Read-only. Nullable.
      * @param value Value to set for the agreementAcceptances property.
      */
     public void setAgreementAcceptances(@jakarta.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
@@ -1379,7 +1379,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("appRoleAssignments", value);
     }
     /**
-     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate between directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
+     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn&apos;t differentiate between directly assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly assigned and inherited licenses. Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      * @param value Value to set for the assignedLicenses property.
      */
     public void setAssignedLicenses(@jakarta.annotation.Nullable final java.util.List<AssignedLicense> value) {
@@ -1414,28 +1414,28 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("birthday", value);
     }
     /**
-     * Sets the businessPhones property value. The telephone numbers for the user. NOTE: Although it's a string collection, only one number can be set for this property. Read-only for users synced from the on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the businessPhones property value. The telephone numbers for the user. NOTE: Although it&apos;s a string collection, only one number can be set for this property. Read-only for users synced from the on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
      * @param value Value to set for the businessPhones property.
      */
     public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("businessPhones", value);
     }
     /**
-     * Sets the calendar property value. The user's primary calendar. Read-only.
+     * Sets the calendar property value. The user&apos;s primary calendar. Read-only.
      * @param value Value to set for the calendar property.
      */
     public void setCalendar(@jakarta.annotation.Nullable final Calendar value) {
         this.backingStore.set("calendar", value);
     }
     /**
-     * Sets the calendarGroups property value. The user's calendar groups. Read-only. Nullable.
+     * Sets the calendarGroups property value. The user&apos;s calendar groups. Read-only. Nullable.
      * @param value Value to set for the calendarGroups property.
      */
     public void setCalendarGroups(@jakarta.annotation.Nullable final java.util.List<CalendarGroup> value) {
         this.backingStore.set("calendarGroups", value);
     }
     /**
-     * Sets the calendars property value. The user's calendars. Read-only. Nullable.
+     * Sets the calendars property value. The user&apos;s calendars. Read-only. Nullable.
      * @param value Value to set for the calendars property.
      */
     public void setCalendars(@jakarta.annotation.Nullable final java.util.List<Calendar> value) {
@@ -1484,14 +1484,14 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("consentProvidedForMinor", value);
     }
     /**
-     * Sets the contactFolders property value. The user's contacts folders. Read-only. Nullable.
+     * Sets the contactFolders property value. The user&apos;s contacts folders. Read-only. Nullable.
      * @param value Value to set for the contactFolders property.
      */
     public void setContactFolders(@jakarta.annotation.Nullable final java.util.List<ContactFolder> value) {
         this.backingStore.set("contactFolders", value);
     }
     /**
-     * Sets the contacts property value. The user's contacts. Read-only. Nullable.
+     * Sets the contacts property value. The user&apos;s contacts. Read-only. Nullable.
      * @param value Value to set for the contacts property.
      */
     public void setContacts(@jakarta.annotation.Nullable final java.util.List<Contact> value) {
@@ -1505,7 +1505,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("country", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and UTC. The value can't be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users that were synced to Microsoft Entra ID before June 2018. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
+     * Sets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and UTC. The value can&apos;t be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Microsoft Entra ID. Property is null for some users created before June 2018 and on-premises users that were synced to Microsoft Entra ID before June 2018. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -1561,14 +1561,14 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("directReports", value);
     }
     /**
-     * Sets the displayName property value. The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and family name. This property is required when a user is created and it can't be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
+     * Sets the displayName property value. The name displayed in the address book for the user. This value is usually the combination of the user&apos;s first name, middle initial, and family name. This property is required when a user is created and it can&apos;t be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderby, and $search.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the drive property value. The user's OneDrive. Read-only.
+     * Sets the drive property value. The user&apos;s OneDrive. Read-only.
      * @param value Value to set for the drive property.
      */
     public void setDrive(@jakarta.annotation.Nullable final Drive value) {
@@ -1624,7 +1624,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("employeeType", value);
     }
     /**
-     * Sets the events property value. The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * Sets the events property value. The user&apos;s events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param value Value to set for the events property.
      */
     public void setEvents(@jakarta.annotation.Nullable final java.util.List<Event> value) {
@@ -1638,7 +1638,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("extensions", value);
     }
     /**
-     * Sets the externalUserState property value. For a guest invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter (eq, ne, not , in).
+     * Sets the externalUserState property value. For a guest invited to the tenant using the invitation API, this property represents the invited user&apos;s invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter (eq, ne, not , in).
      * @param value Value to set for the externalUserState property.
      */
     public void setExternalUserState(@jakarta.annotation.Nullable final String value) {
@@ -1694,7 +1694,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("imAddresses", value);
     }
     /**
-     * Sets the inferenceClassification property value. Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
+     * Sets the inferenceClassification property value. Relevance classification of the user&apos;s messages based on explicit designations that override inferred relevance or importance.
      * @param value Value to set for the inferenceClassification property.
      */
     public void setInferenceClassification(@jakarta.annotation.Nullable final InferenceClassification value) {
@@ -1722,14 +1722,14 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("isManagementRestricted", value);
     }
     /**
-     * Sets the isResourceAccount property value. Don't use  reserved for future use.
+     * Sets the isResourceAccount property value. Don&apos;t use  reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      */
     public void setIsResourceAccount(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isResourceAccount", value);
     }
     /**
-     * Sets the jobTitle property value. The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
+     * Sets the jobTitle property value. The user&apos;s job title. Maximum length is 128 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the jobTitle property.
      */
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
@@ -1764,14 +1764,14 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("licenseAssignmentStates", value);
     }
     /**
-     * Sets the licenseDetails property value. A collection of this user's license details. Read-only.
+     * Sets the licenseDetails property value. A collection of this user&apos;s license details. Read-only.
      * @param value Value to set for the licenseDetails property.
      */
     public void setLicenseDetails(@jakarta.annotation.Nullable final java.util.List<LicenseDetails> value) {
         this.backingStore.set("licenseDetails", value);
     }
     /**
-     * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.com. Changes to this property update the user's proxyAddresses collection to include the value as an SMTP address. This property can't contain accent characters.  NOTE: We don't recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
+     * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.com. Changes to this property update the user&apos;s proxyAddresses collection to include the value as an SMTP address. This property can&apos;t contain accent characters.  NOTE: We don&apos;t recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
      * @param value Value to set for the mail property.
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {
@@ -1785,7 +1785,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("mailboxSettings", value);
     }
     /**
-     * Sets the mailFolders property value. The user's mail folders. Read-only. Nullable.
+     * Sets the mailFolders property value. The user&apos;s mail folders. Read-only. Nullable.
      * @param value Value to set for the mailFolders property.
      */
     public void setMailFolders(@jakarta.annotation.Nullable final java.util.List<MailFolder> value) {
@@ -1813,7 +1813,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("managedDevices", value);
     }
     /**
-     * Sets the manager property value. The user or contact that is this user's manager. Read-only. Supports $expand.
+     * Sets the manager property value. The user or contact that is this user&apos;s manager. Read-only. Supports $expand.
      * @param value Value to set for the manager property.
      */
     public void setManager(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -1841,7 +1841,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("mobilePhone", value);
     }
     /**
-     * Sets the mySite property value. The URL for the user's site. Returned only on $select.
+     * Sets the mySite property value. The URL for the user&apos;s site. Returned only on $select.
      * @param value Value to set for the mySite property.
      */
     public void setMySite(@jakarta.annotation.Nullable final String value) {
@@ -1855,7 +1855,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("oauth2PermissionGrants", value);
     }
     /**
-     * Sets the officeLocation property value. The office location in the user's place of business. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the officeLocation property value. The office location in the user&apos;s place of business. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the officeLocation property.
      */
     public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {
@@ -1897,7 +1897,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesExtensionAttributes", value);
     }
     /**
-     * Sets the onPremisesImmutableId property value. This property is used to associate an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you're using a federated domain for the user's userPrincipalName (UPN) property. NOTE: The $ and _ characters can't be used when specifying this property. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in).
+     * Sets the onPremisesImmutableId property value. This property is used to associate an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you&apos;re using a federated domain for the user&apos;s userPrincipalName (UPN) property. NOTE: The $ and _ characters can&apos;t be used when specifying this property. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in).
      * @param value Value to set for the onPremisesImmutableId property.
      */
     public void setOnPremisesImmutableId(@jakarta.annotation.Nullable final String value) {
@@ -1932,7 +1932,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesSecurityIdentifier", value);
     }
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Microsoft Entra ID. Read-only. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Sets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn&apos;t being synced and can be managed in Microsoft Entra ID. Read-only. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
      * @param value Value to set for the onPremisesSyncEnabled property.
      */
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -1946,7 +1946,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesUserPrincipalName", value);
     }
     /**
-     * Sets the otherMails property value. A list of other email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Can store up to 250 values, each with a limit of 250 characters. NOTE: This property can't contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
+     * Sets the otherMails property value. A list of other email addresses for the user; for example: [&apos;bob@contoso.com&apos;, &apos;Robert@fabrikam.com&apos;]. Can store up to 250 values, each with a limit of 250 characters. NOTE: This property can&apos;t contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the otherMails property.
      */
     public void setOtherMails(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -1981,7 +1981,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("passwordPolicies", value);
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). To update this property:  User-PasswordProfile.ReadWrite.All is the least privileged permission to update this property.  In delegated scenarios, the User Administrator Microsoft Entra role is the least privileged admin role supported to update this property for nonadmin users. Privileged Authentication Administrator is the least privileged role that's allowed to update this property for all administrators in the tenant. In general, the signed-in user must have a higher privileged administrator role as indicated in Who can reset passwords.  In app-only scenarios, the calling app must be assigned a supported permission and at least the User Administrator Microsoft Entra role.
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). To update this property:  User-PasswordProfile.ReadWrite.All is the least privileged permission to update this property.  In delegated scenarios, the User Administrator Microsoft Entra role is the least privileged admin role supported to update this property for nonadmin users. Privileged Authentication Administrator is the least privileged role that&apos;s allowed to update this property for all administrators in the tenant. In general, the signed-in user must have a higher privileged administrator role as indicated in Who can reset passwords.  In app-only scenarios, the calling app must be assigned a supported permission and at least the User Administrator Microsoft Entra role.
      * @param value Value to set for the passwordProfile property.
      */
     public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
@@ -2009,14 +2009,14 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("permissionGrants", value);
     }
     /**
-     * Sets the photo property value. The user's profile photo. Read-only.
+     * Sets the photo property value. The user&apos;s profile photo. Read-only.
      * @param value Value to set for the photo property.
      */
     public void setPhoto(@jakarta.annotation.Nullable final ProfilePhoto value) {
         this.backingStore.set("photo", value);
     }
     /**
-     * Sets the photos property value. The collection of the user's profile photos in different sizes. Read-only.
+     * Sets the photos property value. The collection of the user&apos;s profile photos in different sizes. Read-only.
      * @param value Value to set for the photos property.
      */
     public void setPhotos(@jakarta.annotation.Nullable final java.util.List<ProfilePhoto> value) {
@@ -2030,7 +2030,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("planner", value);
     }
     /**
-     * Sets the postalCode property value. The postal code for the user's postal address. The postal code is specific to the user's country or region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the postalCode property value. The postal code for the user&apos;s postal address. The postal code is specific to the user&apos;s country or region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the postalCode property.
      */
     public void setPostalCode(@jakarta.annotation.Nullable final String value) {
@@ -2044,7 +2044,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("preferredDataLocation", value);
     }
     /**
-     * Sets the preferredLanguage property value. The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: 'en-US', or 'es-ES'. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
+     * Sets the preferredLanguage property value. The preferred language for the user. The preferred language format is based on RFC 4646. The name is a combination of an ISO 639 two-letter lowercase culture code associated with the language, and an ISO 3166 two-letter uppercase subculture code associated with the country or region. Example: &apos;en-US&apos;, or &apos;es-ES&apos;. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
      * @param value Value to set for the preferredLanguage property.
      */
     public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
@@ -2079,7 +2079,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("provisionedPlans", value);
     }
     /**
-     * Sets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address, while those addresses prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
+     * Sets the proxyAddresses property value. For example: [&apos;SMTP: bob@contoso.com&apos;, &apos;smtp: bob@sales.contoso.com&apos;]. Changes to the mail property update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address, while those addresses prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of 10 unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the proxyAddresses property.
      */
     public void setProxyAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -2142,7 +2142,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("showInAddressList", value);
     }
     /**
-     * Sets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note: Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property isn't returned for a user who never signed in or last signed in before April 2020.
+     * Sets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note: Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property isn&apos;t returned for a user who never signed in or last signed in before April 2020.
      * @param value Value to set for the signInActivity property.
      */
     public void setSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
@@ -2170,28 +2170,28 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("solutions", value);
     }
     /**
-     * Sets the sponsors property value. The users and groups responsible for this guest's privileges in the tenant and keeping the guest's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
+     * Sets the sponsors property value. The users and groups responsible for this guest&apos;s privileges in the tenant and keeping the guest&apos;s information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @param value Value to set for the sponsors property.
      */
     public void setSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("sponsors", value);
     }
     /**
-     * Sets the state property value. The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the state property value. The state or province in the user&apos;s address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the streetAddress property value. The street address of the user's place of business. Maximum length is 1,024 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the streetAddress property value. The street address of the user&apos;s place of business. Maximum length is 1,024 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the streetAddress property.
      */
     public void setStreetAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("streetAddress", value);
     }
     /**
-     * Sets the surname property value. The user's surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the surname property value. The user&apos;s surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
@@ -2226,7 +2226,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("usageLocation", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this value should map to the user's email name. The general format is alias@domain, where the domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can't contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this value should map to the user&apos;s email name. The general format is alias@domain, where the domain must be present in the tenant&apos;s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can&apos;t contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, &apos; . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

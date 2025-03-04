@@ -40,7 +40,7 @@ public class ManagedApp extends MobileApp implements Parsable {
         return new ManagedApp();
     }
     /**
-     * Gets the appAvailability property value. A managed (MAM) application's availability.
+     * Gets the appAvailability property value. A managed (MAM) application&apos;s availability.
      * @return a {@link ManagedAppAvailability}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class ManagedApp extends MobileApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the version property value. The Application's version.
+     * Gets the version property value. The Application&apos;s version.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,14 +77,14 @@ public class ManagedApp extends MobileApp implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the appAvailability property value. A managed (MAM) application's availability.
+     * Sets the appAvailability property value. A managed (MAM) application&apos;s availability.
      * @param value Value to set for the appAvailability property.
      */
     public void setAppAvailability(@jakarta.annotation.Nullable final ManagedAppAvailability value) {
         this.backingStore.set("appAvailability", value);
     }
     /**
-     * Sets the version property value. The Application's version.
+     * Sets the version property value. The Application&apos;s version.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

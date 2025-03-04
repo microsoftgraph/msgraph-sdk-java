@@ -21,8 +21,8 @@ import java.util.Objects;
 public class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder} and sets the default values.
-     * @param accessPackageId Usage: accessPackageId='{accessPackageId}'
-     * @param incompatibleAccessPackageId Usage: incompatibleAccessPackageId='{incompatibleAccessPackageId}'
+     * @param accessPackageId Usage: accessPackageId=&apos;{accessPackageId}&apos;
+     * @param incompatibleAccessPackageId Usage: incompatibleAccessPackageId=&apos;{incompatibleAccessPackageId}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

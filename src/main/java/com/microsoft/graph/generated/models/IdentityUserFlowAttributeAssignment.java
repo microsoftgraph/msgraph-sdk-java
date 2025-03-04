@@ -48,7 +48,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
+     * Gets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn&apos;t have to provide a value. false means the user can&apos;t complete sign-up without providing a value.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
         return this.backingStore.get("isOptional");
     }
     /**
-     * Gets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user's phone number or email address.
+     * Gets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user&apos;s phone number or email address.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -109,14 +109,14 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
+     * Sets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn&apos;t have to provide a value. false means the user can&apos;t complete sign-up without providing a value.
      * @param value Value to set for the isOptional property.
      */
     public void setIsOptional(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isOptional", value);
     }
     /**
-     * Sets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user's phone number or email address.
+     * Sets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user&apos;s phone number or email address.
      * @param value Value to set for the requiresVerification property.
      */
     public void setRequiresVerification(@jakarta.annotation.Nullable final Boolean value) {

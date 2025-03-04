@@ -117,7 +117,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("resourcesFolderUrl");
     }
     /**
-     * Gets the status property value. Status of the module. You can't use a PATCH operation to update this value. Possible values are: draft and published.
+     * Gets the status property value. Status of the module. You can&apos;t use a PATCH operation to update this value. Possible values are: draft and published.
      * @return a {@link EducationModuleStatus}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class EducationModule extends Entity implements Parsable {
         this.backingStore.set("resourcesFolderUrl", value);
     }
     /**
-     * Sets the status property value. Status of the module. You can't use a PATCH operation to update this value. Possible values are: draft and published.
+     * Sets the status property value. Status of the module. You can&apos;t use a PATCH operation to update this value. Possible values are: draft and published.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationModuleStatus value) {

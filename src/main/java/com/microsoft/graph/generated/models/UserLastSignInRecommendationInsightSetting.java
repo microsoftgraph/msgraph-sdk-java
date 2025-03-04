@@ -46,7 +46,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
         return this.backingStore.get("recommendationLookBackDuration");
     }
     /**
-     * Gets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
+     * Gets the signInScope property value. Indicates whether inactivity is calculated based on the user&apos;s inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
      * @return a {@link UserSignInRecommendationScope}
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
         this.backingStore.set("recommendationLookBackDuration", value);
     }
     /**
-     * Sets the signInScope property value. Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
+     * Sets the signInScope property value. Indicates whether inactivity is calculated based on the user&apos;s inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
      * @param value Value to set for the signInScope property.
      */
     public void setSignInScope(@jakarta.annotation.Nullable final UserSignInRecommendationScope value) {

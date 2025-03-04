@@ -149,7 +149,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("fitPdfToPage");
     }
     /**
-     * Gets the inputBin property value. The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
+     * Gets the inputBin property value. The input bin (tray) to use when printing. See the printer&apos;s capabilities for a list of supported input bins.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("orientation");
     }
     /**
-     * Gets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+     * Gets the outputBin property value. The output bin to place completed prints into. See the printer&apos;s capabilities for a list of supported output bins.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -344,7 +344,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("fitPdfToPage", value);
     }
     /**
-     * Sets the inputBin property value. The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
+     * Sets the inputBin property value. The input bin (tray) to use when printing. See the printer&apos;s capabilities for a list of supported input bins.
      * @param value Value to set for the inputBin property.
      */
     public void setInputBin(@jakarta.annotation.Nullable final String value) {
@@ -393,7 +393,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("orientation", value);
     }
     /**
-     * Sets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+     * Sets the outputBin property value. The output bin to place completed prints into. See the printer&apos;s capabilities for a list of supported output bins.
      * @param value Value to set for the outputBin property.
      */
     public void setOutputBin(@jakarta.annotation.Nullable final String value) {

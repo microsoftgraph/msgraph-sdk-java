@@ -203,7 +203,7 @@ public class CellWithRowWithColumnRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the boundingRect method.
-     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @param anotherRange Usage: anotherRange=&apos;{anotherRange}&apos;
      * @return a {@link BoundingRectWithAnotherRangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -262,7 +262,7 @@ public class CellWithRowWithColumnRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/cell(row={row},column={column})", rawUrl);
     }
     /**
-     * Gets the range object containing the single cell based on row and column numbers. The cell can be outside the bounds of its parent range, so long as it's stays within the worksheet grid.
+     * Gets the range object containing the single cell based on row and column numbers. The cell can be outside the bounds of its parent range, so long as it&apos;s stays within the worksheet grid.
      * @return a {@link WorkbookRange}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/worksheet-cell?view=graph-rest-1.0">Find more info here</a>
@@ -272,7 +272,7 @@ public class CellWithRowWithColumnRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Gets the range object containing the single cell based on row and column numbers. The cell can be outside the bounds of its parent range, so long as it's stays within the worksheet grid.
+     * Gets the range object containing the single cell based on row and column numbers. The cell can be outside the bounds of its parent range, so long as it&apos;s stays within the worksheet grid.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookRange}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -287,7 +287,7 @@ public class CellWithRowWithColumnRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the intersection method.
-     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @param anotherRange Usage: anotherRange=&apos;{anotherRange}&apos;
      * @return a {@link IntersectionWithAnotherRangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -350,7 +350,7 @@ public class CellWithRowWithColumnRequestBuilder extends BaseRequestBuilder {
         return new RowWithRow1RequestBuilder(pathParameters, requestAdapter, row1);
     }
     /**
-     * Gets the range object containing the single cell based on row and column numbers. The cell can be outside the bounds of its parent range, so long as it's stays within the worksheet grid.
+     * Gets the range object containing the single cell based on row and column numbers. The cell can be outside the bounds of its parent range, so long as it&apos;s stays within the worksheet grid.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -358,7 +358,7 @@ public class CellWithRowWithColumnRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Gets the range object containing the single cell based on row and column numbers. The cell can be outside the bounds of its parent range, so long as it's stays within the worksheet grid.
+     * Gets the range object containing the single cell based on row and column numbers. The cell can be outside the bounds of its parent range, so long as it&apos;s stays within the worksheet grid.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

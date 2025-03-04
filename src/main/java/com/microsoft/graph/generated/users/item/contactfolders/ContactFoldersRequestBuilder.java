@@ -69,7 +69,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      * @return a {@link ContactFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -78,7 +78,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContactFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -116,7 +116,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContactFolder::createFromDiscriminatorValue);
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +170,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
         return new ContactFoldersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * The user&apos;s contacts folders. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

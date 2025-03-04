@@ -48,7 +48,7 @@ public class Onenote extends Entity implements Parsable {
         return this.backingStore.get("notebooks");
     }
     /**
-     * Gets the operations property value. The status of OneNote operations. Getting an operations collection isn't supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+     * Gets the operations property value. The status of OneNote operations. Getting an operations collection isn&apos;t supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      * @return a {@link java.util.List<OnenoteOperation>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class Onenote extends Entity implements Parsable {
         return this.backingStore.get("pages");
     }
     /**
-     * Gets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * Gets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection isn&apos;t supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @return a {@link java.util.List<OnenoteResource>}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class Onenote extends Entity implements Parsable {
         this.backingStore.set("notebooks", value);
     }
     /**
-     * Sets the operations property value. The status of OneNote operations. Getting an operations collection isn't supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+     * Sets the operations property value. The status of OneNote operations. Getting an operations collection isn&apos;t supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<OnenoteOperation> value) {
@@ -123,7 +123,7 @@ public class Onenote extends Entity implements Parsable {
         this.backingStore.set("pages", value);
     }
     /**
-     * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection isn&apos;t supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<OnenoteResource> value) {

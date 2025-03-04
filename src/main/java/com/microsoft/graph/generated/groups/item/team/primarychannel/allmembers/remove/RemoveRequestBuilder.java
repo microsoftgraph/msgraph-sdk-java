@@ -35,7 +35,7 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/primaryChannel/allMembers/remove", rawUrl);
     }
     /**
-     * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn't be removed.
+     * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn&apos;t be removed.
      * @param body The request body
      * @return a {@link RemovePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn't be removed.
+     * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn&apos;t be removed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RemovePostResponse}
@@ -62,7 +62,7 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RemovePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn't be removed.
+     * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn&apos;t be removed.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -71,7 +71,7 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn't be removed.
+     * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn&apos;t be removed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

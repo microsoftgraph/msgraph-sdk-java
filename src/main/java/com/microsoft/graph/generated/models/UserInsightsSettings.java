@@ -35,7 +35,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. True if the user's itemInsights and meeting hours insights are enabled; false if the user's itemInsights and meeting hours insights are disabled. The default value is true. Optional.
+     * Gets the isEnabled property value. True if the user&apos;s itemInsights and meeting hours insights are enabled; false if the user&apos;s itemInsights and meeting hours insights are disabled. The default value is true. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
     }
     /**
-     * Sets the isEnabled property value. True if the user's itemInsights and meeting hours insights are enabled; false if the user's itemInsights and meeting hours insights are disabled. The default value is true. Optional.
+     * Sets the isEnabled property value. True if the user&apos;s itemInsights and meeting hours insights are enabled; false if the user&apos;s itemInsights and meeting hours insights are disabled. The default value is true. Optional.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

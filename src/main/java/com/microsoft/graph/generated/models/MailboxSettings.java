@@ -72,7 +72,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the dateFormat property value. The date format for the user's mailbox.
+     * Gets the dateFormat property value. The date format for the user&apos;s mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the timeFormat property value. The time format for the user's mailbox.
+     * Gets the timeFormat property value. The time format for the user&apos;s mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("timeFormat");
     }
     /**
-     * Gets the timeZone property value. The default time zone for the user's mailbox.
+     * Gets the timeZone property value. The default time zone for the user&apos;s mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the dateFormat property value. The date format for the user's mailbox.
+     * Sets the dateFormat property value. The date format for the user&apos;s mailbox.
      * @param value Value to set for the dateFormat property.
      */
     public void setDateFormat(@jakarta.annotation.Nullable final String value) {
@@ -230,14 +230,14 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the timeFormat property value. The time format for the user's mailbox.
+     * Sets the timeFormat property value. The time format for the user&apos;s mailbox.
      * @param value Value to set for the timeFormat property.
      */
     public void setTimeFormat(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("timeFormat", value);
     }
     /**
-     * Sets the timeZone property value. The default time zone for the user's mailbox.
+     * Sets the timeZone property value. The default time zone for the user&apos;s mailbox.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {

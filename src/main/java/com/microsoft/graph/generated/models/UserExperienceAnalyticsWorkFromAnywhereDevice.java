@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return new UserExperienceAnalyticsWorkFromAnywhereDevice();
     }
     /**
-     * Gets the autoPilotProfileAssigned property value. When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
+     * Gets the autoPilotProfileAssigned property value. When TRUE, indicates the intune device&apos;s autopilot profile is assigned. When FALSE, indicates it&apos;s not Assigned. Supports: $select, $OrderBy. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return this.backingStore.get("autoPilotProfileAssigned");
     }
     /**
-     * Gets the autoPilotRegistered property value. When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
+     * Gets the autoPilotRegistered property value. When TRUE, indicates the intune device&apos;s autopilot is registered. When FALSE, indicates it&apos;s not registered. Supports: $select, $OrderBy. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return this.backingStore.get("azureAdDeviceId");
     }
     /**
-     * Gets the azureAdJoinType property value. The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
+     * Gets the azureAdJoinType property value. The work from anywhere device&apos;s Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return this.backingStore.get("azureAdJoinType");
     }
     /**
-     * Gets the azureAdRegistered property value. When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
+     * Gets the azureAdRegistered property value. When TRUE, indicates the device&apos;s Azure Active Directory (Azure AD) is registered. When False, indicates it&apos;s not registered. Supports: $select, $OrderBy. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return this.backingStore.get("cloudProvisioningScore");
     }
     /**
-     * Gets the compliancePolicySetToIntune property value. When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
+     * Gets the compliancePolicySetToIntune property value. When TRUE, indicates the device&apos;s compliance policy is set to intune. When FALSE, indicates it&apos;s not set to intune. Supports: $select, $OrderBy. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return this.backingStore.get("healthStatus");
     }
     /**
-     * Gets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
+     * Gets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device&apos;s Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it&apos;s not enabled. Supports: $select, $OrderBy. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +223,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return this.backingStore.get("osVersion");
     }
     /**
-     * Gets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
+     * Gets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device&apos;s other workloads is set to intune. When FALSE, indicates it&apos;s not set to intune. Supports: $select, $OrderBy. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -303,7 +303,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         return this.backingStore.get("storageCheckFailed");
     }
     /**
-     * Gets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
+     * Gets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it&apos;s not Tenant Attached. Supports: $select, $OrderBy. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -385,14 +385,14 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         writer.writeDoubleValue("workFromAnywhereScore", this.getWorkFromAnywhereScore());
     }
     /**
-     * Sets the autoPilotProfileAssigned property value. When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
+     * Sets the autoPilotProfileAssigned property value. When TRUE, indicates the intune device&apos;s autopilot profile is assigned. When FALSE, indicates it&apos;s not Assigned. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the autoPilotProfileAssigned property.
      */
     public void setAutoPilotProfileAssigned(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("autoPilotProfileAssigned", value);
     }
     /**
-     * Sets the autoPilotRegistered property value. When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
+     * Sets the autoPilotRegistered property value. When TRUE, indicates the intune device&apos;s autopilot is registered. When FALSE, indicates it&apos;s not registered. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the autoPilotRegistered property.
      */
     public void setAutoPilotRegistered(@jakarta.annotation.Nullable final Boolean value) {
@@ -406,14 +406,14 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         this.backingStore.set("azureAdDeviceId", value);
     }
     /**
-     * Sets the azureAdJoinType property value. The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
+     * Sets the azureAdJoinType property value. The work from anywhere device&apos;s Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the azureAdJoinType property.
      */
     public void setAzureAdJoinType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("azureAdJoinType", value);
     }
     /**
-     * Sets the azureAdRegistered property value. When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
+     * Sets the azureAdRegistered property value. When TRUE, indicates the device&apos;s Azure Active Directory (Azure AD) is registered. When False, indicates it&apos;s not registered. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the azureAdRegistered property.
      */
     public void setAzureAdRegistered(@jakarta.annotation.Nullable final Boolean value) {
@@ -441,7 +441,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         this.backingStore.set("cloudProvisioningScore", value);
     }
     /**
-     * Sets the compliancePolicySetToIntune property value. When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
+     * Sets the compliancePolicySetToIntune property value. When TRUE, indicates the device&apos;s compliance policy is set to intune. When FALSE, indicates it&apos;s not set to intune. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the compliancePolicySetToIntune property.
      */
     public void setCompliancePolicySetToIntune(@jakarta.annotation.Nullable final Boolean value) {
@@ -469,7 +469,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         this.backingStore.set("healthStatus", value);
     }
     /**
-     * Sets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
+     * Sets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device&apos;s Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it&apos;s not enabled. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the isCloudManagedGatewayEnabled property.
      */
     public void setIsCloudManagedGatewayEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -518,7 +518,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         this.backingStore.set("osVersion", value);
     }
     /**
-     * Sets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
+     * Sets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device&apos;s other workloads is set to intune. When FALSE, indicates it&apos;s not set to intune. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the otherWorkloadsSetToIntune property.
      */
     public void setOtherWorkloadsSetToIntune(@jakarta.annotation.Nullable final Boolean value) {
@@ -588,7 +588,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
         this.backingStore.set("storageCheckFailed", value);
     }
     /**
-     * Sets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
+     * Sets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it&apos;s not Tenant Attached. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the tenantAttached property.
      */
     public void setTenantAttached(@jakarta.annotation.Nullable final Boolean value) {

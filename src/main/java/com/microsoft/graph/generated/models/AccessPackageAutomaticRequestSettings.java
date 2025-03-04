@@ -70,7 +70,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         return deserializerMap;
     }
     /**
-     * Gets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
+     * Gets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target&apos;s access is revoked once they leave the allowed target scope.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
+     * Sets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target&apos;s access is revoked once they leave the allowed target scope.
      * @param value Value to set for the gracePeriodBeforeAccessRemoval property.
      */
     public void setGracePeriodBeforeAccessRemoval(@jakarta.annotation.Nullable final PeriodAndDuration value) {

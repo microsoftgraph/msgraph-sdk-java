@@ -26,7 +26,7 @@ public class AuthoredNote extends Entity implements Parsable {
         return new AuthoredNote();
     }
     /**
-     * Gets the author property value. Identity information about the note's author.
+     * Gets the author property value. Identity information about the note&apos;s author.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class AuthoredNote extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
     }
     /**
-     * Sets the author property value. Identity information about the note's author.
+     * Sets the author property value. Identity information about the note&apos;s author.
      * @param value Value to set for the author property.
      */
     public void setAuthor(@jakarta.annotation.Nullable final Identity value) {

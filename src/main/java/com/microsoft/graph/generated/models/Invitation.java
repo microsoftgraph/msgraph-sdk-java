@@ -61,7 +61,7 @@ public class Invitation extends Entity implements Parsable {
         return this.backingStore.get("invitedUserDisplayName");
     }
     /**
-     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
+     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren&apos;t permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (&apos;)Angle brackets (&lt; &gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class Invitation extends Entity implements Parsable {
         return this.backingStore.get("invitedUserMessageInfo");
     }
     /**
-     * Gets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * Gets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users&apos; privileges in the tenant and for keeping the guest users&apos; information and access up to date.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class Invitation extends Entity implements Parsable {
         return this.backingStore.get("invitedUserSponsors");
     }
     /**
-     * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator.
+     * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you&apos;re a company administrator.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class Invitation extends Entity implements Parsable {
         return this.backingStore.get("inviteRedirectUrl");
     }
     /**
-     * Gets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. When true, the invitedUser/id relationship is required. For more information about using this property, see Reset redemption status for a guest user.
+     * Gets the resetRedemption property value. Reset the user&apos;s redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. When true, the invitedUser/id relationship is required. For more information about using this property, see Reset redemption status for a guest user.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class Invitation extends Entity implements Parsable {
         this.backingStore.set("invitedUserDisplayName", value);
     }
     /**
-     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
+     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren&apos;t permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (&apos;)Angle brackets (&lt; &gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
      * @param value Value to set for the invitedUserEmailAddress property.
      */
     public void setInvitedUserEmailAddress(@jakarta.annotation.Nullable final String value) {
@@ -180,14 +180,14 @@ public class Invitation extends Entity implements Parsable {
         this.backingStore.set("invitedUserMessageInfo", value);
     }
     /**
-     * Sets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * Sets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users&apos; privileges in the tenant and for keeping the guest users&apos; information and access up to date.
      * @param value Value to set for the invitedUserSponsors property.
      */
     public void setInvitedUserSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("invitedUserSponsors", value);
     }
     /**
-     * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator.
+     * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you&apos;re a company administrator.
      * @param value Value to set for the invitedUserType property.
      */
     public void setInvitedUserType(@jakarta.annotation.Nullable final String value) {
@@ -208,7 +208,7 @@ public class Invitation extends Entity implements Parsable {
         this.backingStore.set("inviteRedirectUrl", value);
     }
     /**
-     * Sets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. When true, the invitedUser/id relationship is required. For more information about using this property, see Reset redemption status for a guest user.
+     * Sets the resetRedemption property value. Reset the user&apos;s redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. When true, the invitedUser/id relationship is required. For more information about using this property, see Reset redemption status for a guest user.
      * @param value Value to set for the resetRedemption property.
      */
     public void setResetRedemption(@jakarta.annotation.Nullable final Boolean value) {

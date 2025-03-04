@@ -94,7 +94,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
+     * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can&apos;t be assigned but can still be reactivated before they&apos;re deleted.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("suspended");
     }
     /**
-     * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
+     * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it&apos;s canceled (moved to a suspended state).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -159,14 +159,14 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
+     * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can&apos;t be assigned but can still be reactivated before they&apos;re deleted.
      * @param value Value to set for the suspended property.
      */
     public void setSuspended(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("suspended", value);
     }
     /**
-     * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
+     * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it&apos;s canceled (moved to a suspended state).
      * @param value Value to set for the warning property.
      */
     public void setWarning(@jakarta.annotation.Nullable final Integer value) {

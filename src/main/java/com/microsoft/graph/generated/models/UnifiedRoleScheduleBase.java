@@ -111,7 +111,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
         return this.backingStore.get("modifiedDateTime");
     }
     /**
-     * Gets the principal property value. The principal that's getting a role assignment or that's eligible for a role through the request.
+     * Gets the principal property value. The principal that&apos;s getting a role assignment or that&apos;s eligible for a role through the request.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -220,7 +220,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
         this.backingStore.set("modifiedDateTime", value);
     }
     /**
-     * Sets the principal property value. The principal that's getting a role assignment or that's eligible for a role through the request.
+     * Sets the principal property value. The principal that&apos;s getting a role assignment or that&apos;s eligible for a role through the request.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {

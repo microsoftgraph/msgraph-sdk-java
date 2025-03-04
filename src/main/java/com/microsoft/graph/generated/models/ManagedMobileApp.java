@@ -39,7 +39,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.
+     * Gets the mobileAppIdentifier property value. The identifier for an app with it&apos;s operating system type.
      * @return a {@link MobileAppIdentifier}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.
+     * Sets the mobileAppIdentifier property value. The identifier for an app with it&apos;s operating system type.
      * @param value Value to set for the mobileAppIdentifier property.
      */
     public void setMobileAppIdentifier(@jakarta.annotation.Nullable final MobileAppIdentifier value) {

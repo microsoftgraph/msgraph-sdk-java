@@ -86,7 +86,7 @@ public class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
+     * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn&apos;t have to be the actual file name. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("contentType", value);
     }
     /**
-     * Sets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
+     * Sets the name property value. The display name of the attachment. This can be a descriptive string and doesn&apos;t have to be the actual file name. Required.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

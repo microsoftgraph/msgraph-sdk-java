@@ -82,7 +82,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         return this.backingStore.get("readOnly");
     }
     /**
-     * Gets the version property value. Read only value that indicates version discovered. null if discovery hasn't yet occurred.
+     * Gets the version property value. Read only value that indicates version discovered. null if discovery hasn&apos;t yet occurred.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         this.backingStore.set("readOnly", value);
     }
     /**
-     * Sets the version property value. Read only value that indicates version discovered. null if discovery hasn't yet occurred.
+     * Sets the version property value. Read only value that indicates version discovered. null if discovery hasn&apos;t yet occurred.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

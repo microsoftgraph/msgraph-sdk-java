@@ -71,7 +71,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
-     * @param token Usage: token='{token}'
+     * @param token Usage: token=&apos;{token}&apos;
      * @return a {@link DeltaWithTokenRequestBuilder}
      */
     @jakarta.annotation.Nonnull

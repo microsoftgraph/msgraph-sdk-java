@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.contactfolders.item.childfolders.item.con
 import com.microsoft.graph.models.Contact;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.photo.PhotoRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,14 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the photo property of the microsoft.graph.contact entity.

@@ -26,7 +26,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         return new SignInFrequencySessionControl();
     }
     /**
-     * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. This property isn't required when using frequencyInterval with the value of timeBased.
+     * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. This property isn&apos;t required when using frequencyInterval with the value of timeBased.
      * @return a {@link SignInFrequencyAuthenticationType}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         writer.writeIntegerValue("value", this.getValue());
     }
     /**
-     * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. This property isn't required when using frequencyInterval with the value of timeBased.
+     * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. This property isn&apos;t required when using frequencyInterval with the value of timeBased.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final SignInFrequencyAuthenticationType value) {

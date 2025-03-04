@@ -25,7 +25,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         return new DelegatedPermissionClassification();
     }
     /**
-     * Gets the classification property value. The classification value. Possible values: low, medium (preview), high (preview). Doesn't support $filter.
+     * Gets the classification property value. The classification value. Possible values: low, medium (preview), high (preview). Doesn&apos;t support $filter.
      * @return a {@link PermissionClassificationType}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Doesn't support $filter.
+     * Gets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Doesn&apos;t support $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         return this.backingStore.get("permissionId");
     }
     /**
-     * Gets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Doesn't support $filter.
+     * Gets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Doesn&apos;t support $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         writer.writeStringValue("permissionName", this.getPermissionName());
     }
     /**
-     * Sets the classification property value. The classification value. Possible values: low, medium (preview), high (preview). Doesn't support $filter.
+     * Sets the classification property value. The classification value. Possible values: low, medium (preview), high (preview). Doesn&apos;t support $filter.
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final PermissionClassificationType value) {
         this.backingStore.set("classification", value);
     }
     /**
-     * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Doesn't support $filter.
+     * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Doesn&apos;t support $filter.
      * @param value Value to set for the permissionId property.
      */
     public void setPermissionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("permissionId", value);
     }
     /**
-     * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Doesn't support $filter.
+     * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Doesn&apos;t support $filter.
      * @param value Value to set for the permissionName property.
      */
     public void setPermissionName(@jakarta.annotation.Nullable final String value) {

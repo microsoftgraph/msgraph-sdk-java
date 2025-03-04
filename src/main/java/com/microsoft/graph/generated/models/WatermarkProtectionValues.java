@@ -76,7 +76,7 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("isEnabledForContentSharing");
     }
     /**
-     * Gets the isEnabledForVideo property value. Indicates whether to apply a watermark to everyone's video feed.
+     * Gets the isEnabledForVideo property value. Indicates whether to apply a watermark to everyone&apos;s video feed.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class WatermarkProtectionValues implements AdditionalDataHolder, BackedMo
         this.backingStore.set("isEnabledForContentSharing", value);
     }
     /**
-     * Sets the isEnabledForVideo property value. Indicates whether to apply a watermark to everyone's video feed.
+     * Sets the isEnabledForVideo property value. Indicates whether to apply a watermark to everyone&apos;s video feed.
      * @param value Value to set for the isEnabledForVideo property.
      */
     public void setIsEnabledForVideo(@jakarta.annotation.Nullable final Boolean value) {

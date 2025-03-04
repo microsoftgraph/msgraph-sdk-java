@@ -84,7 +84,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
         return this.backingStore.get("recurrence");
     }
     /**
-     * Gets the reportRange property value. A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the first of every month, the reportRange is P1M. In this case, on the first of every month, access review history data is collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
+     * Gets the reportRange property value. A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the first of every month, the reportRange is P1M. In this case, on the first of every month, access review history data is collected containing only the previous month&apos;s review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
         this.backingStore.set("recurrence", value);
     }
     /**
-     * Sets the reportRange property value. A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the first of every month, the reportRange is P1M. In this case, on the first of every month, access review history data is collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
+     * Sets the reportRange property value. A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the first of every month, the reportRange is P1M. In this case, on the first of every month, access review history data is collected containing only the previous month&apos;s review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
      * @param value Value to set for the reportRange property.
      */
     public void setReportRange(@jakarta.annotation.Nullable final String value) {

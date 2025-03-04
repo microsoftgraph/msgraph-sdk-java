@@ -78,7 +78,7 @@ public class Sensor extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthIssues property value. Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified related to the sensor.
+     * Gets the healthIssues property value. Represents potential issues within a customer&apos;s Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified related to the sensor.
      * @return a {@link java.util.List<HealthIssue>}
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class Sensor extends Entity implements Parsable {
         this.backingStore.set("domainName", value);
     }
     /**
-     * Sets the healthIssues property value. Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified related to the sensor.
+     * Sets the healthIssues property value. Represents potential issues within a customer&apos;s Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified related to the sensor.
      * @param value Value to set for the healthIssues property.
      */
     public void setHealthIssues(@jakarta.annotation.Nullable final java.util.List<HealthIssue> value) {

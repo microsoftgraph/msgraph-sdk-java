@@ -23,7 +23,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseReque
      * Instantiates a new {@link AllowedCalendarSharingRolesWithUserRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param User Usage: User='{User}'
+     * @param User Usage: User=&apos;{User}&apos;
      */
     public AllowedCalendarSharingRolesWithUserRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String User) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/allowedCalendarSharingRoles(User='{User}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

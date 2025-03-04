@@ -81,7 +81,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Shift::createFromDiscriminatorValue);
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift can't be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn&apos;t exist, this method returns 404 Not found. The duration of a shift can&apos;t be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a {@link Shift}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -92,7 +92,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift can't be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn&apos;t exist, this method returns 404 Not found. The duration of a shift can&apos;t be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Shift}
@@ -148,7 +148,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift can't be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn&apos;t exist, this method returns 404 Not found. The duration of a shift can&apos;t be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift can't be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn&apos;t exist, this method returns 404 Not found. The duration of a shift can&apos;t be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

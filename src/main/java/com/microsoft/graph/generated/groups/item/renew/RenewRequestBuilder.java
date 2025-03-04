@@ -35,7 +35,7 @@ public class RenewRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/renew", rawUrl);
     }
     /**
-     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renew a group&apos;s expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-renew?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class RenewRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renew a group&apos;s expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-renew?view=graph-rest-1.0">Find more info here</a>
@@ -55,7 +55,7 @@ public class RenewRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renew a group&apos;s expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RenewRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renew a group&apos;s expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

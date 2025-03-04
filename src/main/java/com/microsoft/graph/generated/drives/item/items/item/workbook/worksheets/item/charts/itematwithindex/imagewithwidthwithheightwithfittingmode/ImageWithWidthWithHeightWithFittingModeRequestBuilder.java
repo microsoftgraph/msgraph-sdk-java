@@ -20,7 +20,7 @@ import java.util.Objects;
 public class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link ImageWithWidthWithHeightWithFittingModeRequestBuilder} and sets the default values.
-     * @param fittingMode Usage: fittingMode='{fittingMode}'
+     * @param fittingMode Usage: fittingMode=&apos;{fittingMode}&apos;
      * @param height Usage: height={height}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.

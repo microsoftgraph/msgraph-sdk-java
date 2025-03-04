@@ -80,7 +80,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add an attribute to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. You can add both custom and built-in attributes to a user flow. The attribute is added to both the attributeCollection> attributes and attributeCollection> attributeCollectionPage > views collections on the user flow. In the views collection, the attribute is assigned the default settings. You can PATCH the user flow to customize the settings of the attribute on the views object, for example, marking it as required or updating the allowed input types.
+     * Add an attribute to an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. You can add both custom and built-in attributes to a user flow. The attribute is added to both the attributeCollection&gt; attributes and attributeCollection&gt; attributeCollectionPage &gt; views collections on the user flow. In the views collection, the attribute is assigned the default settings. You can PATCH the user flow to customize the settings of the attribute on the views object, for example, marking it as required or updating the allowed input types.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onattributecollectionexternalusersselfservicesignup-post-attributes?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Add an attribute to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. You can add both custom and built-in attributes to a user flow. The attribute is added to both the attributeCollection> attributes and attributeCollection> attributeCollectionPage > views collections on the user flow. In the views collection, the attribute is assigned the default settings. You can PATCH the user flow to customize the settings of the attribute on the views object, for example, marking it as required or updating the allowed input types.
+     * Add an attribute to an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. You can add both custom and built-in attributes to a user flow. The attribute is added to both the attributeCollection&gt; attributes and attributeCollection&gt; attributeCollectionPage &gt; views collections on the user flow. In the views collection, the attribute is assigned the default settings. You can PATCH the user flow to customize the settings of the attribute on the views object, for example, marking it as required or updating the allowed input types.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -143,7 +143,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add an attribute to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. You can add both custom and built-in attributes to a user flow. The attribute is added to both the attributeCollection> attributes and attributeCollection> attributeCollectionPage > views collections on the user flow. In the views collection, the attribute is assigned the default settings. You can PATCH the user flow to customize the settings of the attribute on the views object, for example, marking it as required or updating the allowed input types.
+     * Add an attribute to an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. You can add both custom and built-in attributes to a user flow. The attribute is added to both the attributeCollection&gt; attributes and attributeCollection&gt; attributeCollectionPage &gt; views collections on the user flow. In the views collection, the attribute is assigned the default settings. You can PATCH the user flow to customize the settings of the attribute on the views object, for example, marking it as required or updating the allowed input types.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -152,7 +152,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add an attribute to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. You can add both custom and built-in attributes to a user flow. The attribute is added to both the attributeCollection> attributes and attributeCollection> attributeCollectionPage > views collections on the user flow. In the views collection, the attribute is assigned the default settings. You can PATCH the user flow to customize the settings of the attribute on the views object, for example, marking it as required or updating the allowed input types.
+     * Add an attribute to an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. You can add both custom and built-in attributes to a user flow. The attribute is added to both the attributeCollection&gt; attributes and attributeCollection&gt; attributeCollectionPage &gt; views collections on the user flow. In the views collection, the attribute is assigned the default settings. You can PATCH the user flow to customize the settings of the attribute on the views object, for example, marking it as required or updating the allowed input types.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

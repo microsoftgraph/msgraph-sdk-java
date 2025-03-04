@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Represents the level to which the device's clipboard may be shared between apps
+ * Represents the level to which the device&apos;s clipboard may be shared between apps
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppClipboardSharingLevel implements ValuedEnum {

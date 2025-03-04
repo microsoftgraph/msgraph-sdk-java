@@ -26,7 +26,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
         return new EmailFileAssessmentRequest();
     }
     /**
-     * Gets the contentData property value. Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
+     * Gets the contentData property value. Base64 encoded .eml email file content. The file content can&apos;t fetch back because it isn&apos;t stored.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
         writer.writeStringValue("recipientEmail", this.getRecipientEmail());
     }
     /**
-     * Sets the contentData property value. Base64 encoded .eml email file content. The file content can't fetch back because it isn't stored.
+     * Sets the contentData property value. Base64 encoded .eml email file content. The file content can&apos;t fetch back because it isn&apos;t stored.
      * @param value Value to set for the contentData property.
      */
     public void setContentData(@jakarta.annotation.Nullable final String value) {

@@ -41,7 +41,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return this.backingStore.get("clientApplicationPublisherIds");
     }
     /**
-     * Gets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it doesn't have a verified publisher. Default is false.
+     * Gets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it doesn&apos;t have a verified publisher. Default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions that aren't classified). Default is all.
+     * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions that aren&apos;t classified). Default is all.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return this.backingStore.get("permissionClassification");
     }
     /**
-     * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
+     * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API&apos;s servicePrincipal object. The id of application permissions can be found in the appRoles property of the API&apos;s servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API&apos;s servicePrincipal object. Default is the single value all.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return this.backingStore.get("permissions");
     }
     /**
-     * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
+     * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven&apos;t been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but can&apos;t be used in custom permission grant policies. Required.
      * @return a {@link PermissionType}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         this.backingStore.set("clientApplicationPublisherIds", value);
     }
     /**
-     * Sets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it doesn't have a verified publisher. Default is false.
+     * Sets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it doesn&apos;t have a verified publisher. Default is false.
      * @param value Value to set for the clientApplicationsFromVerifiedPublisherOnly property.
      */
     public void setClientApplicationsFromVerifiedPublisherOnly(@jakarta.annotation.Nullable final Boolean value) {
@@ -150,21 +150,21 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         this.backingStore.set("clientApplicationTenantIds", value);
     }
     /**
-     * Sets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions that aren't classified). Default is all.
+     * Sets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions that aren&apos;t classified). Default is all.
      * @param value Value to set for the permissionClassification property.
      */
     public void setPermissionClassification(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("permissionClassification", value);
     }
     /**
-     * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
+     * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API&apos;s servicePrincipal object. The id of application permissions can be found in the appRoles property of the API&apos;s servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API&apos;s servicePrincipal object. Default is the single value all.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("permissions", value);
     }
     /**
-     * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven't been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but can't be used in custom permission grant policies. Required.
+     * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (for example app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions that haven&apos;t been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but can&apos;t be used in custom permission grant policies. Required.
      * @param value Value to set for the permissionType property.
      */
     public void setPermissionType(@jakarta.annotation.Nullable final PermissionType value) {

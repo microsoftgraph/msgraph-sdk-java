@@ -85,7 +85,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
         return this.backingStore.get("isHeaderShown");
     }
     /**
-     * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
+     * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don&apos;t use.
      * @return a {@link LayoutTemplateType}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Backe
         this.backingStore.set("isHeaderShown", value);
     }
     /**
-     * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
+     * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don&apos;t use.
      * @param value Value to set for the layoutTemplateType property.
      */
     public void setLayoutTemplateType(@jakarta.annotation.Nullable final LayoutTemplateType value) {

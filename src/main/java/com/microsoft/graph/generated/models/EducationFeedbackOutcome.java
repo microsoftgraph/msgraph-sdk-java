@@ -26,7 +26,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
         return new EducationFeedbackOutcome();
     }
     /**
-     * Gets the feedback property value. Teacher's written feedback to the student.
+     * Gets the feedback property value. Teacher&apos;s written feedback to the student.
      * @return a {@link EducationFeedback}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
         writer.writeObjectValue("publishedFeedback", this.getPublishedFeedback());
     }
     /**
-     * Sets the feedback property value. Teacher's written feedback to the student.
+     * Sets the feedback property value. Teacher&apos;s written feedback to the student.
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final EducationFeedback value) {

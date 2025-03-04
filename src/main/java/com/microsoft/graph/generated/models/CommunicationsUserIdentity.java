@@ -36,7 +36,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The user's tenant ID.
+     * Gets the tenantId property value. The user&apos;s tenant ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CommunicationsUserIdentity extends Identity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the tenantId property value. The user's tenant ID.
+     * Sets the tenantId property value. The user&apos;s tenant ID.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

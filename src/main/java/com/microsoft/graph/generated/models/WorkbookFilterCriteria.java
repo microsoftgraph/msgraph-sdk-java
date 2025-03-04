@@ -131,7 +131,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the operator property value. An operator in a cell; for example, =, >, <, <=, or <>.
+     * Gets the operator property value. An operator in a cell; for example, =, &gt;, &lt;, &lt;=, or &lt;&gt;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -228,7 +228,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the operator property value. An operator in a cell; for example, =, >, <, <=, or <>.
+     * Sets the operator property value. An operator in a cell; for example, =, &gt;, &lt;, &lt;=, or &lt;&gt;.
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final String value) {

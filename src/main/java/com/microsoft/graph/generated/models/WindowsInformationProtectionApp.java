@@ -75,7 +75,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Ba
         return this.backingStore.get("denied");
     }
     /**
-     * Gets the description property value. The app's description.
+     * Gets the description property value. The app&apos;s description.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Ba
         this.backingStore.set("denied", value);
     }
     /**
-     * Sets the description property value. The app's description.
+     * Sets the description property value. The app&apos;s description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

@@ -23,7 +23,7 @@ public class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTim
     /**
      * Instantiates a new {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder} and sets the default values.
      * @param endDateTime Usage: endDateTime={endDateTime}
-     * @param groupId Usage: groupId='{groupId}'
+     * @param groupId Usage: groupId=&apos;{groupId}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param startDateTime Usage: startDateTime={startDateTime}

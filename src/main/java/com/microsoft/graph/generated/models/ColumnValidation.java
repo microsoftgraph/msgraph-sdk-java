@@ -64,7 +64,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("defaultLanguage");
     }
     /**
-     * Gets the descriptions property value. Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
+     * Gets the descriptions property value. Localized messages that explain what is needed for this column&apos;s value to be considered valid. User will be prompted with this message if validation fails.
      * @return a {@link java.util.List<DisplayNameLocalization>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class ColumnValidation implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("defaultLanguage", value);
     }
     /**
-     * Sets the descriptions property value. Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
+     * Sets the descriptions property value. Localized messages that explain what is needed for this column&apos;s value to be considered valid. User will be prompted with this message if validation fails.
      * @param value Value to set for the descriptions property.
      */
     public void setDescriptions(@jakarta.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {

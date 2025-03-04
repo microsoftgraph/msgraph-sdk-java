@@ -81,7 +81,7 @@ public class CallRecord extends Entity implements Parsable {
         return this.backingStore.get("modalities");
     }
     /**
-     * Gets the organizer property value. The organizing party's identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
+     * Gets the organizer property value. The organizing party&apos;s identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class CallRecord extends Entity implements Parsable {
         this.backingStore.set("modalities", value);
     }
     /**
-     * Sets the organizer property value. The organizing party's identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
+     * Sets the organizer property value. The organizing party&apos;s identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
      * @param value Value to set for the organizer property.
      */
     public void setOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {

@@ -134,7 +134,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("maxScore");
     }
     /**
-     * Gets the rank property value. Microsoft's stack ranking of control.
+     * Gets the rank property value. Microsoft&apos;s stack ranking of control.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -303,7 +303,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.backingStore.set("maxScore", value);
     }
     /**
-     * Sets the rank property value. Microsoft's stack ranking of control.
+     * Sets the rank property value. Microsoft&apos;s stack ranking of control.
      * @param value Value to set for the rank property.
      */
     public void setRank(@jakarta.annotation.Nullable final Integer value) {

@@ -69,7 +69,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app's workflow.
+     * Gets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app&apos;s workflow.
      * @return a {@link CustomExtensionEndpointConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app's workflow.
+     * Sets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app&apos;s workflow.
      * @param value Value to set for the endpointConfiguration property.
      */
     public void setEndpointConfiguration(@jakarta.annotation.Nullable final CustomExtensionEndpointConfiguration value) {

@@ -64,7 +64,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         return this.backingStore.get("bio");
     }
     /**
-     * Gets the company property value. The presenter's company name.
+     * Gets the company property value. The presenter&apos;s company name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         return deserializerMap;
     }
     /**
-     * Gets the jobTitle property value. The presenter's job title.
+     * Gets the jobTitle property value. The presenter&apos;s job title.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         return this.backingStore.get("jobTitle");
     }
     /**
-     * Gets the linkedInProfileWebUrl property value. The presenter's LinkedIn profile URL.
+     * Gets the linkedInProfileWebUrl property value. The presenter&apos;s LinkedIn profile URL.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the personalSiteWebUrl property value. The presenter's personal website URL.
+     * Gets the personalSiteWebUrl property value. The presenter&apos;s personal website URL.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         return this.backingStore.get("personalSiteWebUrl");
     }
     /**
-     * Gets the photo property value. The content stream of the presenter's photo.
+     * Gets the photo property value. The content stream of the presenter&apos;s photo.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         return this.backingStore.get("photo");
     }
     /**
-     * Gets the twitterProfileWebUrl property value. The presenter's Twitter profile URL.
+     * Gets the twitterProfileWebUrl property value. The presenter&apos;s Twitter profile URL.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -175,21 +175,21 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         this.backingStore.set("bio", value);
     }
     /**
-     * Sets the company property value. The presenter's company name.
+     * Sets the company property value. The presenter&apos;s company name.
      * @param value Value to set for the company property.
      */
     public void setCompany(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("company", value);
     }
     /**
-     * Sets the jobTitle property value. The presenter's job title.
+     * Sets the jobTitle property value. The presenter&apos;s job title.
      * @param value Value to set for the jobTitle property.
      */
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("jobTitle", value);
     }
     /**
-     * Sets the linkedInProfileWebUrl property value. The presenter's LinkedIn profile URL.
+     * Sets the linkedInProfileWebUrl property value. The presenter&apos;s LinkedIn profile URL.
      * @param value Value to set for the linkedInProfileWebUrl property.
      */
     public void setLinkedInProfileWebUrl(@jakarta.annotation.Nullable final String value) {
@@ -203,21 +203,21 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the personalSiteWebUrl property value. The presenter's personal website URL.
+     * Sets the personalSiteWebUrl property value. The presenter&apos;s personal website URL.
      * @param value Value to set for the personalSiteWebUrl property.
      */
     public void setPersonalSiteWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("personalSiteWebUrl", value);
     }
     /**
-     * Sets the photo property value. The content stream of the presenter's photo.
+     * Sets the photo property value. The content stream of the presenter&apos;s photo.
      * @param value Value to set for the photo property.
      */
     public void setPhoto(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("photo", value);
     }
     /**
-     * Sets the twitterProfileWebUrl property value. The presenter's Twitter profile URL.
+     * Sets the twitterProfileWebUrl property value. The presenter&apos;s Twitter profile URL.
      * @param value Value to set for the twitterProfileWebUrl property.
      */
     public void setTwitterProfileWebUrl(@jakarta.annotation.Nullable final String value) {

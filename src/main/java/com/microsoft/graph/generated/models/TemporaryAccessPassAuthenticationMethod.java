@@ -51,7 +51,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
         return deserializerMap;
     }
     /**
-     * Gets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.
+     * Gets the isUsable property value. The state of the authentication method that indicates whether it&apos;s currently usable by the user.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.
+     * Sets the isUsable property value. The state of the authentication method that indicates whether it&apos;s currently usable by the user.
      * @param value Value to set for the isUsable property.
      */
     public void setIsUsable(@jakarta.annotation.Nullable final Boolean value) {

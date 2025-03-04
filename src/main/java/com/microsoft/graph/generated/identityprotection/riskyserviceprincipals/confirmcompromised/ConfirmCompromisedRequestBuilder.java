@@ -35,7 +35,7 @@ public class ConfirmCompromisedRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyServicePrincipals/confirmCompromised", rawUrl);
     }
     /**
-     * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account's risk level to high.
+     * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account&apos;s risk level to high.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-confirmcompromised?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +44,7 @@ public class ConfirmCompromisedRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account's risk level to high.
+     * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account&apos;s risk level to high.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class ConfirmCompromisedRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account's risk level to high.
+     * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account&apos;s risk level to high.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class ConfirmCompromisedRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account's risk level to high.
+     * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account&apos;s risk level to high.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

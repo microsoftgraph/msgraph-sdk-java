@@ -60,7 +60,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/messageRules{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      * @return a {@link MessageRuleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MessageRuleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MessageRule::createFromDiscriminatorValue);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
         return new MessageRulesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

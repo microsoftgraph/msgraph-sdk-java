@@ -167,7 +167,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("lowSpeechToNoiseEventRatio");
     }
     /**
-     * Gets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint's microphone.
+     * Gets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint&apos;s microphone.
      * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
@@ -255,7 +255,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("sentSignalLevel");
     }
     /**
-     * Gets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint's loudspeaker.
+     * Gets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint&apos;s loudspeaker.
      * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
@@ -378,7 +378,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("lowSpeechToNoiseEventRatio", value);
     }
     /**
-     * Sets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint's microphone.
+     * Sets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint&apos;s microphone.
      * @param value Value to set for the micGlitchRate property.
      */
     public void setMicGlitchRate(@jakarta.annotation.Nullable final Float value) {
@@ -455,7 +455,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("sentSignalLevel", value);
     }
     /**
-     * Sets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint's loudspeaker.
+     * Sets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint&apos;s loudspeaker.
      * @param value Value to set for the speakerGlitchRate property.
      */
     public void setSpeakerGlitchRate(@jakarta.annotation.Nullable final Float value) {

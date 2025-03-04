@@ -55,7 +55,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
         return this.backingStore.get("fromName");
     }
     /**
-     * Gets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
+     * Gets the isExternalSender property value. Indicates whether the sender isn&apos;t from the user&apos;s organization.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
         this.backingStore.set("fromName", value);
     }
     /**
-     * Sets the isExternalSender property value. Indicates whether the sender isn't from the user's organization.
+     * Sets the isExternalSender property value. Indicates whether the sender isn&apos;t from the user&apos;s organization.
      * @param value Value to set for the isExternalSender property.
      */
     public void setIsExternalSender(@jakarta.annotation.Nullable final Boolean value) {
