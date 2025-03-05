@@ -64,7 +64,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return this.backingStore;
     }
     /**
-     * Gets the defaultValue property value. The default value of the attribute displayed to the end user. The capability to set the default value isn't available through the Microsoft Entra admin center.
+     * Gets the defaultValue property value. The default value of the attribute displayed to the end user. The capability to set the default value isn&apos;t available through the Microsoft Entra admin center.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. Defines whether the attribute is displayed to the end user. The capability to hide isn't available through the Microsoft Entra admin center.
+     * Gets the hidden property value. Defines whether the attribute is displayed to the end user. The capability to hide isn&apos;t available through the Microsoft Entra admin center.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return this.backingStore.get("inputType");
     }
     /**
-     * Gets the label property value. The label of the attribute field that's displayed to end user, unless overridden.
+     * Gets the label property value. The label of the attribute field that&apos;s displayed to end user, unless overridden.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         this.backingStore = value;
     }
     /**
-     * Sets the defaultValue property value. The default value of the attribute displayed to the end user. The capability to set the default value isn't available through the Microsoft Entra admin center.
+     * Sets the defaultValue property value. The default value of the attribute displayed to the end user. The capability to set the default value isn&apos;t available through the Microsoft Entra admin center.
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
@@ -219,7 +219,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         this.backingStore.set("editable", value);
     }
     /**
-     * Sets the hidden property value. Defines whether the attribute is displayed to the end user. The capability to hide isn't available through the Microsoft Entra admin center.
+     * Sets the hidden property value. Defines whether the attribute is displayed to the end user. The capability to hide isn&apos;t available through the Microsoft Entra admin center.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
@@ -233,7 +233,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         this.backingStore.set("inputType", value);
     }
     /**
-     * Sets the label property value. The label of the attribute field that's displayed to end user, unless overridden.
+     * Sets the label property value. The label of the attribute field that&apos;s displayed to end user, unless overridden.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {

@@ -48,7 +48,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
         return value;
     }
     /**
-     * Gets the additionalDetails property value. Additional details if there's error.
+     * Gets the additionalDetails property value. Additional details if there&apos;s error.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the additionalDetails property value. Additional details if there's error.
+     * Sets the additionalDetails property value. Additional details if there&apos;s error.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {

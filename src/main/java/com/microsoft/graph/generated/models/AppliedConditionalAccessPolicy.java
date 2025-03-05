@@ -56,7 +56,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. Refers to the name of the conditional access policy (example: 'Require MFA for Salesforce').
+     * Gets the displayName property value. Refers to the name of the conditional access policy (example: &apos;Require MFA for Salesforce&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
+     * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: &apos;Require multifactor authentication&apos;).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("enforcedGrantControls");
     }
     /**
-     * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
+     * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: &apos;Require app enforced controls&apos;).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
+     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn&apos;t applied because policy conditions weren&apos;t met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @return a {@link AppliedConditionalAccessPolicyResult}
      */
     @jakarta.annotation.Nullable
@@ -148,21 +148,21 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. Refers to the name of the conditional access policy (example: 'Require MFA for Salesforce').
+     * Sets the displayName property value. Refers to the name of the conditional access policy (example: &apos;Require MFA for Salesforce&apos;).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
+     * Sets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: &apos;Require multifactor authentication&apos;).
      * @param value Value to set for the enforcedGrantControls property.
      */
     public void setEnforcedGrantControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("enforcedGrantControls", value);
     }
     /**
-     * Sets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
+     * Sets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: &apos;Require app enforced controls&apos;).
      * @param value Value to set for the enforcedSessionControls property.
      */
     public void setEnforcedSessionControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -183,7 +183,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
+     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn&apos;t applied because policy conditions weren&apos;t met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {

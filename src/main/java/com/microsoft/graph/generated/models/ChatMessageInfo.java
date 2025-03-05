@@ -26,7 +26,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         return new ChatMessageInfo();
     }
     /**
-     * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
+     * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn&apos;t return @mentions and attachments.
      * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         writer.writeEnumValue("messageType", this.getMessageType());
     }
     /**
-     * Sets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
+     * Sets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn&apos;t return @mentions and attachments.
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {

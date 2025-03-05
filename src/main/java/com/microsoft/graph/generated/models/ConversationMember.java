@@ -58,7 +58,7 @@ public class ConversationMember extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the roles property value. The roles for that user. This property contains more qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member shouldn't have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.
+     * Gets the roles property value. The roles for that user. This property contains more qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member shouldn&apos;t have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class ConversationMember extends Entity implements Parsable {
         return this.backingStore.get("roles");
     }
     /**
-     * Gets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+     * Gets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation&apos;s history is shared with the conversation member. This property is settable only for members of a chat.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -92,14 +92,14 @@ public class ConversationMember extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the roles property value. The roles for that user. This property contains more qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member shouldn't have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.
+     * Sets the roles property value. The roles for that user. This property contains more qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member shouldn&apos;t have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.
      * @param value Value to set for the roles property.
      */
     public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("roles", value);
     }
     /**
-     * Sets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+     * Sets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation&apos;s history is shared with the conversation member. This property is settable only for members of a chat.
      * @param value Value to set for the visibleHistoryStartDateTime property.
      */
     public void setVisibleHistoryStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

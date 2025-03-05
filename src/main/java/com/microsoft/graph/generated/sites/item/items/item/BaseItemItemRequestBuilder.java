@@ -37,7 +37,7 @@ public class BaseItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/items/{baseItem%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Used to address any item contained in this site. This collection can't be enumerated.
+     * Used to address any item contained in this site. This collection can&apos;t be enumerated.
      * @return a {@link BaseItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class BaseItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Used to address any item contained in this site. This collection can't be enumerated.
+     * Used to address any item contained in this site. This collection can&apos;t be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BaseItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class BaseItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BaseItem::createFromDiscriminatorValue);
     }
     /**
-     * Used to address any item contained in this site. This collection can't be enumerated.
+     * Used to address any item contained in this site. This collection can&apos;t be enumerated.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BaseItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Used to address any item contained in this site. This collection can't be enumerated.
+     * Used to address any item contained in this site. This collection can&apos;t be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class BaseItemItemRequestBuilder extends BaseRequestBuilder {
         return new BaseItemItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Used to address any item contained in this site. This collection can't be enumerated.
+     * Used to address any item contained in this site. This collection can&apos;t be enumerated.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

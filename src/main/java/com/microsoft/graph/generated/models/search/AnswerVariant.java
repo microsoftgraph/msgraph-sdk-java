@@ -112,7 +112,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("platform");
     }
     /**
-     * Gets the webUrl property value. The URL link for the answer variation. When users select this answer variation from the search results, they're directed to the specified URL.
+     * Gets the webUrl property value. The URL link for the answer variation. When users select this answer variation from the search results, they&apos;re directed to the specified URL.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("platform", value);
     }
     /**
-     * Sets the webUrl property value. The URL link for the answer variation. When users select this answer variation from the search results, they're directed to the specified URL.
+     * Sets the webUrl property value. The URL link for the answer variation. When users select this answer variation from the search results, they&apos;re directed to the specified URL.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

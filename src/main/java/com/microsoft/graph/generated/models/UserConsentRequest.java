@@ -44,7 +44,7 @@ public class UserConsentRequest extends Request implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
+     * Gets the reason property value. The user&apos;s justification for requiring access to the app. Supports $filter (eq only) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class UserConsentRequest extends Request implements Parsable {
         this.backingStore.set("approval", value);
     }
     /**
-     * Sets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
+     * Sets the reason property value. The user&apos;s justification for requiring access to the app. Supports $filter (eq only) and $orderby.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {

@@ -64,7 +64,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
         return this.backingStore.get("italic");
     }
     /**
-     * Gets the name property value. The font name. For example, 'Calibri'.
+     * Gets the name property value. The font name. For example, &apos;Calibri&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
         this.backingStore.set("italic", value);
     }
     /**
-     * Sets the name property value. The font name. For example, 'Calibri'.
+     * Sets the name property value. The font name. For example, &apos;Calibri&apos;.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

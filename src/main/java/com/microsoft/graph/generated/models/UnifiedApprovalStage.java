@@ -64,7 +64,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the escalationApprovers property value. The escalation approvers for this stage when the primary approvers don't respond.
+     * Gets the escalationApprovers property value. The escalation approvers for this stage when the primary approvers don&apos;t respond.
      * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the escalationApprovers property value. The escalation approvers for this stage when the primary approvers don't respond.
+     * Sets the escalationApprovers property value. The escalation approvers for this stage when the primary approvers don&apos;t respond.
      * @param value Value to set for the escalationApprovers property.
      */
     public void setEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {

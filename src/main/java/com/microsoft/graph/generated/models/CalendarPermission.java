@@ -33,7 +33,7 @@ public class CalendarPermission extends Entity implements Parsable {
         return this.backingStore.get("allowedRoles");
     }
     /**
-     * Gets the emailAddress property value. Represents a share recipient or delegate who has access to the calendar. For the 'My Organization' share recipient, the address property is null. Read-only.
+     * Gets the emailAddress property value. Represents a share recipient or delegate who has access to the calendar. For the &apos;My Organization&apos; share recipient, the address property is null. Read-only.
      * @return a {@link EmailAddress}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class CalendarPermission extends Entity implements Parsable {
         return this.backingStore.get("isInsideOrganization");
     }
     /**
-     * Gets the isRemovable property value. True if the user can be removed from the list of recipients or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You can't remove 'My organization' as a share recipient to a calendar.
+     * Gets the isRemovable property value. True if the user can be removed from the list of recipients or delegates for the specified calendar, false otherwise. The &apos;My organization&apos; user determines the permissions other people within your organization have to the given calendar. You can&apos;t remove &apos;My organization&apos; as a share recipient to a calendar.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class CalendarPermission extends Entity implements Parsable {
         this.backingStore.set("allowedRoles", value);
     }
     /**
-     * Sets the emailAddress property value. Represents a share recipient or delegate who has access to the calendar. For the 'My Organization' share recipient, the address property is null. Read-only.
+     * Sets the emailAddress property value. Represents a share recipient or delegate who has access to the calendar. For the &apos;My Organization&apos; share recipient, the address property is null. Read-only.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
@@ -113,7 +113,7 @@ public class CalendarPermission extends Entity implements Parsable {
         this.backingStore.set("isInsideOrganization", value);
     }
     /**
-     * Sets the isRemovable property value. True if the user can be removed from the list of recipients or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You can't remove 'My organization' as a share recipient to a calendar.
+     * Sets the isRemovable property value. True if the user can be removed from the list of recipients or delegates for the specified calendar, false otherwise. The &apos;My organization&apos; user determines the permissions other people within your organization have to the given calendar. You can&apos;t remove &apos;My organization&apos; as a share recipient to a calendar.
      * @param value Value to set for the isRemovable property.
      */
     public void setIsRemovable(@jakarta.annotation.Nullable final Boolean value) {

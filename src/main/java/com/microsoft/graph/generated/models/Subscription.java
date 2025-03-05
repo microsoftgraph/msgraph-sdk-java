@@ -153,7 +153,7 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("notificationUrlAppId");
     }
     /**
-     * Gets the resource property value. Required. Specifies the resource that is monitored for changes. Don't include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+     * Gets the resource property value. Required. Specifies the resource that is monitored for changes. Don&apos;t include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -274,7 +274,7 @@ public class Subscription extends Entity implements Parsable {
         this.backingStore.set("notificationUrlAppId", value);
     }
     /**
-     * Sets the resource property value. Required. Specifies the resource that is monitored for changes. Don't include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+     * Sets the resource property value. Required. Specifies the resource that is monitored for changes. Don&apos;t include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final String value) {

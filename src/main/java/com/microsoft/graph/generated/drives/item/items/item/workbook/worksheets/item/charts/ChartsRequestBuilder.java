@@ -104,7 +104,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the item method.
-     * @param name Usage: name='{name}'
+     * @param name Usage: name=&apos;{name}&apos;
      * @return a {@link ItemWithNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull

@@ -37,7 +37,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer's Microsoft Defender for Identity configuration.
+     * Gets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer&apos;s Microsoft Defender for Identity configuration.
      * @return a {@link java.util.List<HealthIssue>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("healthIssues");
     }
     /**
-     * Gets the sensors property value. Represents a customer's Microsoft Defender for Identity sensors.
+     * Gets the sensors property value. Represents a customer&apos;s Microsoft Defender for Identity sensors.
      * @return a {@link java.util.List<Sensor>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class IdentityContainer extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("sensors", this.getSensors());
     }
     /**
-     * Sets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer's Microsoft Defender for Identity configuration.
+     * Sets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer&apos;s Microsoft Defender for Identity configuration.
      * @param value Value to set for the healthIssues property.
      */
     public void setHealthIssues(@jakarta.annotation.Nullable final java.util.List<HealthIssue> value) {
         this.backingStore.set("healthIssues", value);
     }
     /**
-     * Sets the sensors property value. Represents a customer's Microsoft Defender for Identity sensors.
+     * Sets the sensors property value. Represents a customer&apos;s Microsoft Defender for Identity sensors.
      * @param value Value to set for the sensors property.
      */
     public void setSensors(@jakarta.annotation.Nullable final java.util.List<Sensor> value) {

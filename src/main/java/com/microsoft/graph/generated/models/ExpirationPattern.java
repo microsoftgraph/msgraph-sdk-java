@@ -58,7 +58,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the duration property value. The requestor's desired duration of access represented in ISO 8601 format for durations. For example, PT3H refers to three hours.  If specified in a request, endDateTime should not be present and the type property should be set to afterDuration.
+     * Gets the duration property value. The requestor&apos;s desired duration of access represented in ISO 8601 format for durations. For example, PT3H refers to three hours.  If specified in a request, endDateTime should not be present and the type property should be set to afterDuration.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
+     * Gets the type property value. The requestor&apos;s desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
      * @return a {@link ExpirationPatternType}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the duration property value. The requestor's desired duration of access represented in ISO 8601 format for durations. For example, PT3H refers to three hours.  If specified in a request, endDateTime should not be present and the type property should be set to afterDuration.
+     * Sets the duration property value. The requestor&apos;s desired duration of access represented in ISO 8601 format for durations. For example, PT3H refers to three hours.  If specified in a request, endDateTime should not be present and the type property should be set to afterDuration.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
@@ -151,7 +151,7 @@ public class ExpirationPattern implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
+     * Sets the type property value. The requestor&apos;s desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final ExpirationPatternType value) {

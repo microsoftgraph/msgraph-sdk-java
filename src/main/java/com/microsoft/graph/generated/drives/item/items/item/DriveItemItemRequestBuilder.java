@@ -320,7 +320,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
-     * @param token Usage: token='{token}'
+     * @param token Usage: token=&apos;{token}&apos;
      * @return a {@link DeltaWithTokenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -352,9 +352,9 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getActivitiesByInterval method.
-     * @param endDateTime Usage: endDateTime='{endDateTime}'
-     * @param interval Usage: interval='{interval}'
-     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @param endDateTime Usage: endDateTime=&apos;{endDateTime}&apos;
+     * @param interval Usage: interval=&apos;{interval}&apos;
+     * @param startDateTime Usage: startDateTime=&apos;{startDateTime}&apos;
      * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -391,7 +391,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the search method.
-     * @param q Usage: q='{q}'
+     * @param q Usage: q=&apos;{q}&apos;
      * @return a {@link SearchWithQRequestBuilder}
      */
     @jakarta.annotation.Nonnull

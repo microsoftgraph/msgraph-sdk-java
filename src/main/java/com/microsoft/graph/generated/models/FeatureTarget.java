@@ -68,7 +68,7 @@ public class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The ID of the entity that's targeted in the include or exclude rule, or all_users to target all users.
+     * Gets the id property value. The ID of the entity that&apos;s targeted in the include or exclude rule, or all_users to target all users.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the targetType property value. The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
+     * Gets the targetType property value. The kind of entity that&apos;s targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
      * @return a {@link FeatureTargetType}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The ID of the entity that's targeted in the include or exclude rule, or all_users to target all users.
+     * Sets the id property value. The ID of the entity that&apos;s targeted in the include or exclude rule, or all_users to target all users.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class FeatureTarget implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the targetType property value. The kind of entity that's targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
+     * Sets the targetType property value. The kind of entity that&apos;s targeted. The possible values are: group, administrativeUnit, role, unknownFutureValue.
      * @param value Value to set for the targetType property.
      */
     public void setTargetType(@jakarta.annotation.Nullable final FeatureTargetType value) {

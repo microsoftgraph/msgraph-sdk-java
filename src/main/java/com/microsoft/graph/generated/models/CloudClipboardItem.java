@@ -55,7 +55,7 @@ public class CloudClipboardItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. Set by the server if not provided in the client's request. DateTime in UTC when the object was modified by the client.
+     * Gets the lastModifiedDateTime property value. Set by the server if not provided in the client&apos;s request. DateTime in UTC when the object was modified by the client.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class CloudClipboardItem extends Entity implements Parsable {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Set by the server if not provided in the client's request. DateTime in UTC when the object was modified by the client.
+     * Sets the lastModifiedDateTime property value. Set by the server if not provided in the client&apos;s request. DateTime in UTC when the object was modified by the client.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

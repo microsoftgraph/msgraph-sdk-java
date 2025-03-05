@@ -344,7 +344,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
-     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -355,7 +355,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipal}
@@ -411,7 +411,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -420,7 +420,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

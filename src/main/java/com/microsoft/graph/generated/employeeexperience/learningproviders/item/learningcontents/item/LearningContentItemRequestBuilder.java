@@ -37,7 +37,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents/{learningContent%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete the specified learningContent resource that represents the metadata of the specified provider&apos;s ingested content.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete the specified learningContent resource that represents the metadata of the specified provider&apos;s ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0">Find more info here</a>
@@ -57,7 +57,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      * @return a {@link LearningContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
@@ -67,7 +67,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LearningContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -106,7 +106,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LearningContent::createFromDiscriminatorValue);
     }
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete the specified learningContent resource that represents the metadata of the specified provider&apos;s ingested content.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete the specified learningContent resource that represents the metadata of the specified provider&apos;s ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -126,7 +126,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -186,7 +186,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

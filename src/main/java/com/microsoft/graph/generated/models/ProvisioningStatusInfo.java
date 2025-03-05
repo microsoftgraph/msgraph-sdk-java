@@ -56,7 +56,7 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the errorInformation property value. If status isn't success/ skipped details for the error are contained in this.
+     * Gets the errorInformation property value. If status isn&apos;t success/ skipped details for the error are contained in this.
      * @return a {@link ProvisioningErrorInfo}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the errorInformation property value. If status isn't success/ skipped details for the error are contained in this.
+     * Sets the errorInformation property value. If status isn&apos;t success/ skipped details for the error are contained in this.
      * @param value Value to set for the errorInformation property.
      */
     public void setErrorInformation(@jakarta.annotation.Nullable final ProvisioningErrorInfo value) {

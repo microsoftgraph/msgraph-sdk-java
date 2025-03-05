@@ -101,7 +101,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         return this.backingStore.get("incompleteData");
     }
     /**
-     * Gets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
+     * Gets the isTrending property value. Indicates whether the item is &apos;trending.&apos; Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         this.backingStore.set("incompleteData", value);
     }
     /**
-     * Sets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
+     * Sets the isTrending property value. Indicates whether the item is &apos;trending.&apos; Read-only.
      * @param value Value to set for the isTrending property.
      */
     public void setIsTrending(@jakarta.annotation.Nullable final Boolean value) {

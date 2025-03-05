@@ -26,7 +26,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return new EducationAssignment();
     }
     /**
-     * Gets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment shouldn't be assigned to new students.
+     * Gets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment shouldn&apos;t be assigned to new students.
      * @return a {@link EducationAddedStudentAction}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("addedStudentAction");
     }
     /**
-     * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
+     * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students&apos; and teachers&apos; calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
      * @return a {@link EducationAddToCalendarOptions}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("addToCalendarAction");
     }
     /**
-     * Gets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true.
+     * Gets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property isn&apos;t specified during create, it defaults to true.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("allowStudentsToAddResourcesToSubmission");
     }
     /**
-     * Gets the assignDateTime property value. The date when the assignment should become active. If in the future, the assignment isn't shown to the student until this date. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the assignDateTime property value. The date when the assignment should become active. If in the future, the assignment isn&apos;t shown to the student until this date. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("classId");
     }
     /**
-     * Gets the closeDateTime property value. Date when the assignment is closed for submissions. This is an optional field that can be null if the assignment doesn't allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the closeDateTime property value. Date when the assignment is closed for submissions. This is an optional field that can be null if the assignment doesn&apos;t allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -215,7 +215,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time on which the assignment was modified. A student submission doesn't modify the assignment; only teachers can update assignments. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the lastModifiedDateTime property value. The date and time on which the assignment was modified. A student submission doesn&apos;t modify the assignment; only teachers can update assignments. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -231,7 +231,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("moduleUrl");
     }
     /**
-     * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment is published.
+     * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn&apos;t allowed after the assignment is published.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("rubric");
     }
     /**
-     * Gets the status property value. Status of the assignment.  You can't PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
+     * Gets the status property value. Status of the assignment.  You can&apos;t PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
      * @return a {@link EducationAssignmentStatus}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +271,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the submissions property value. Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
+     * Gets the submissions property value. Once published, there&apos;s a submission object for each student representing their work and grade. Read-only. Nullable.
      * @return a {@link java.util.List<EducationSubmission>}
      */
     @jakarta.annotation.Nullable
@@ -313,21 +313,21 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("submissions", this.getSubmissions());
     }
     /**
-     * Sets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment shouldn't be assigned to new students.
+     * Sets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment shouldn&apos;t be assigned to new students.
      * @param value Value to set for the addedStudentAction property.
      */
     public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAddedStudentAction value) {
         this.backingStore.set("addedStudentAction", value);
     }
     /**
-     * Sets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
+     * Sets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students&apos; and teachers&apos; calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: studentsOnly. The default value is none.
      * @param value Value to set for the addToCalendarAction property.
      */
     public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAddToCalendarOptions value) {
         this.backingStore.set("addToCalendarAction", value);
     }
     /**
-     * Sets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true.
+     * Sets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property isn&apos;t specified during create, it defaults to true.
      * @param value Value to set for the allowLateSubmissions property.
      */
     public void setAllowLateSubmissions(@jakarta.annotation.Nullable final Boolean value) {
@@ -341,7 +341,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("allowStudentsToAddResourcesToSubmission", value);
     }
     /**
-     * Sets the assignDateTime property value. The date when the assignment should become active. If in the future, the assignment isn't shown to the student until this date. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the assignDateTime property value. The date when the assignment should become active. If in the future, the assignment isn&apos;t shown to the student until this date. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the assignDateTime property.
      */
     public void setAssignDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -376,7 +376,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("classId", value);
     }
     /**
-     * Sets the closeDateTime property value. Date when the assignment is closed for submissions. This is an optional field that can be null if the assignment doesn't allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the closeDateTime property value. Date when the assignment is closed for submissions. This is an optional field that can be null if the assignment doesn&apos;t allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the closeDateTime property.
      */
     public void setCloseDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -446,7 +446,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time on which the assignment was modified. A student submission doesn't modify the assignment; only teachers can update assignments. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the lastModifiedDateTime property value. The date and time on which the assignment was modified. A student submission doesn&apos;t modify the assignment; only teachers can update assignments. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -460,7 +460,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("moduleUrl", value);
     }
     /**
-     * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment is published.
+     * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn&apos;t allowed after the assignment is published.
      * @param value Value to set for the notificationChannelUrl property.
      */
     public void setNotificationChannelUrl(@jakarta.annotation.Nullable final String value) {
@@ -488,14 +488,14 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("rubric", value);
     }
     /**
-     * Sets the status property value. Status of the assignment.  You can't PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
+     * Sets the status property value. Status of the assignment.  You can&apos;t PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationAssignmentStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the submissions property value. Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
+     * Sets the submissions property value. Once published, there&apos;s a submission object for each student representing their work and grade. Read-only. Nullable.
      * @param value Value to set for the submissions property.
      */
     public void setSubmissions(@jakarta.annotation.Nullable final java.util.List<EducationSubmission> value) {

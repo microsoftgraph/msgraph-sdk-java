@@ -94,7 +94,7 @@ public class Drive extends BaseItem implements Parsable {
         return this.backingStore.get("owner");
     }
     /**
-     * Gets the quota property value. Optional. Information about the drive's storage space quota. Read-only.
+     * Gets the quota property value. Optional. Information about the drive&apos;s storage space quota. Read-only.
      * @return a {@link Quota}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class Drive extends BaseItem implements Parsable {
         return this.backingStore.get("special");
     }
     /**
-     * Gets the system property value. If present, indicates that it's a system-managed drive. Read-only.
+     * Gets the system property value. If present, indicates that it&apos;s a system-managed drive. Read-only.
      * @return a {@link SystemFacet}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class Drive extends BaseItem implements Parsable {
         this.backingStore.set("owner", value);
     }
     /**
-     * Sets the quota property value. Optional. Information about the drive's storage space quota. Read-only.
+     * Sets the quota property value. Optional. Information about the drive&apos;s storage space quota. Read-only.
      * @param value Value to set for the quota property.
      */
     public void setQuota(@jakarta.annotation.Nullable final Quota value) {
@@ -223,7 +223,7 @@ public class Drive extends BaseItem implements Parsable {
         this.backingStore.set("special", value);
     }
     /**
-     * Sets the system property value. If present, indicates that it's a system-managed drive. Read-only.
+     * Sets the system property value. If present, indicates that it&apos;s a system-managed drive. Read-only.
      * @param value Value to set for the system property.
      */
     public void setSystem(@jakarta.annotation.Nullable final SystemFacet value) {

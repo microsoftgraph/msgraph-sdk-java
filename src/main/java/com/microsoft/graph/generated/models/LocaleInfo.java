@@ -56,7 +56,7 @@ public class LocaleInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. A name representing the user's locale in natural language, for example, 'English (United States)'.
+     * Gets the displayName property value. A name representing the user&apos;s locale in natural language, for example, &apos;English (United States)&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class LocaleInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the locale property value. A locale representation for the user, which includes the user's preferred language and country/region. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.
+     * Gets the locale property value. A locale representation for the user, which includes the user&apos;s preferred language and country/region. For example, &apos;en-us&apos;. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class LocaleInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. A name representing the user's locale in natural language, for example, 'English (United States)'.
+     * Sets the displayName property value. A name representing the user&apos;s locale in natural language, for example, &apos;English (United States)&apos;.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the locale property value. A locale representation for the user, which includes the user's preferred language and country/region. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.
+     * Sets the locale property value. A locale representation for the user, which includes the user&apos;s preferred language and country/region. For example, &apos;en-us&apos;. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {

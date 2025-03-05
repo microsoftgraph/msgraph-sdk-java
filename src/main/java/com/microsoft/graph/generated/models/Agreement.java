@@ -34,7 +34,7 @@ public class Agreement extends Entity implements Parsable {
         return this.backingStore.get("acceptances");
     }
     /**
-     * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
+     * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn&apos;t shown to end users who view the agreement. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class Agreement extends Entity implements Parsable {
         return this.backingStore.get("files");
     }
     /**
-     * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
+     * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven&apos;t already done so. Supports $filter (eq).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class Agreement extends Entity implements Parsable {
         this.backingStore.set("acceptances", value);
     }
     /**
-     * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
+     * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn&apos;t shown to end users who view the agreement. Supports $filter (eq).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -151,7 +151,7 @@ public class Agreement extends Entity implements Parsable {
         this.backingStore.set("files", value);
     }
     /**
-     * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
+     * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Microsoft Entra ID, if they haven&apos;t already done so. Supports $filter (eq).
      * @param value Value to set for the isPerDeviceAcceptanceRequired property.
      */
     public void setIsPerDeviceAcceptanceRequired(@jakarta.annotation.Nullable final Boolean value) {

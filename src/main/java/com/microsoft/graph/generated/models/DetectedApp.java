@@ -76,7 +76,7 @@ public class DetectedApp extends Entity implements Parsable {
         return this.backingStore.get("platform");
     }
     /**
-     * Gets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+     * Gets the publisher property value. Indicates the publisher of the discovered application. For example: &apos;Microsoft&apos;.  The default value is an empty string.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class DetectedApp extends Entity implements Parsable {
         this.backingStore.set("platform", value);
     }
     /**
-     * Sets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+     * Sets the publisher property value. Indicates the publisher of the discovered application. For example: &apos;Microsoft&apos;.  The default value is an empty string.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {

@@ -108,7 +108,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, BackedModel, 
         return deserializerMap;
     }
     /**
-     * Gets the givenName property value. If the entity is a person, this is the person's given name (first name).
+     * Gets the givenName property value. If the entity is a person, this is the person&apos;s given name (first name).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("serialNumber");
     }
     /**
-     * Gets the surname property value. If the entity is a person, this is the person's surname (last name).
+     * Gets the surname property value. If the entity is a person, this is the person&apos;s surname (last name).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -217,7 +217,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the givenName property value. If the entity is a person, this is the person's given name (first name).
+     * Sets the givenName property value. If the entity is a person, this is the person&apos;s given name (first name).
      * @param value Value to set for the givenName property.
      */
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
@@ -252,7 +252,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("serialNumber", value);
     }
     /**
-     * Sets the surname property value. If the entity is a person, this is the person's surname (last name).
+     * Sets the surname property value. If the entity is a person, this is the person&apos;s surname (last name).
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {

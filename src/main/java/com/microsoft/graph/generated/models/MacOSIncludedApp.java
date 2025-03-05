@@ -59,7 +59,7 @@ public class MacOSIncludedApp implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the bundleId property value. The bundleId of the app. This maps to the CFBundleIdentifier in the app's bundle configuration.
+     * Gets the bundleId property value. The bundleId of the app. This maps to the CFBundleIdentifier in the app&apos;s bundle configuration.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class MacOSIncludedApp implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("bundleId");
     }
     /**
-     * Gets the bundleVersion property value. The version of the app. This maps to the CFBundleShortVersion in the app's bundle configuration.
+     * Gets the bundleVersion property value. The version of the app. This maps to the CFBundleShortVersion in the app&apos;s bundle configuration.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,14 +121,14 @@ public class MacOSIncludedApp implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the bundleId property value. The bundleId of the app. This maps to the CFBundleIdentifier in the app's bundle configuration.
+     * Sets the bundleId property value. The bundleId of the app. This maps to the CFBundleIdentifier in the app&apos;s bundle configuration.
      * @param value Value to set for the bundleId property.
      */
     public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("bundleId", value);
     }
     /**
-     * Sets the bundleVersion property value. The version of the app. This maps to the CFBundleShortVersion in the app's bundle configuration.
+     * Sets the bundleVersion property value. The version of the app. This maps to the CFBundleShortVersion in the app&apos;s bundle configuration.
      * @param value Value to set for the bundleVersion property.
      */
     public void setBundleVersion(@jakarta.annotation.Nullable final String value) {

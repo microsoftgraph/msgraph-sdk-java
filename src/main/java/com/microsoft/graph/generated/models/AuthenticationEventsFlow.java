@@ -32,7 +32,7 @@ public class AuthenticationEventsFlow extends Entity implements Parsable {
         return new AuthenticationEventsFlow();
     }
     /**
-     * Gets the conditions property value. The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
+     * Gets the conditions property value. The conditions representing the context of the authentication request that&apos;s used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @return a {@link AuthenticationConditions}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class AuthenticationEventsFlow extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the conditions property value. The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
+     * Sets the conditions property value. The conditions representing the context of the authentication request that&apos;s used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param value Value to set for the conditions property.
      */
     public void setConditions(@jakarta.annotation.Nullable final AuthenticationConditions value) {

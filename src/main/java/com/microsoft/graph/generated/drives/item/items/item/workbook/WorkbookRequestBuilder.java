@@ -147,7 +147,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet&apos;s contents. Nullable.
      * @return a {@link Workbook}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -156,7 +156,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet&apos;s contents. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Workbook}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -195,7 +195,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sessionInfoResource method.
-     * @param key Usage: key='{key}'
+     * @param key Usage: key=&apos;{key}&apos;
      * @return a {@link SessionInfoResourceWithKeyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -205,7 +205,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the tableRowOperationResult method.
-     * @param key Usage: key='{key}'
+     * @param key Usage: key=&apos;{key}&apos;
      * @return a {@link TableRowOperationResultWithKeyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -234,7 +234,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet&apos;s contents. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -242,7 +242,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet&apos;s contents. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -294,7 +294,7 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet&apos;s contents. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

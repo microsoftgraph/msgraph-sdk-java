@@ -34,7 +34,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return this.backingStore.get("buckets");
     }
     /**
-     * Gets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it's set, this property cant be updated. Required.
+     * Gets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it&apos;s set, this property cant be updated. Required.
      * @return a {@link PlannerPlanContainer}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the owner property value. Use the container property instead. ID of the group that owns the plan. After it's set, this property cant be updated. This property won't return a valid group ID if the container of the plan isn't a group.
+     * Gets the owner property value. Use the container property instead. ID of the group that owns the plan. After it&apos;s set, this property cant be updated. This property won&apos;t return a valid group ID if the container of the plan isn&apos;t a group.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this.backingStore.set("buckets", value);
     }
     /**
-     * Sets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it's set, this property cant be updated. Required.
+     * Sets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it&apos;s set, this property cant be updated. Required.
      * @param value Value to set for the container property.
      */
     public void setContainer(@jakarta.annotation.Nullable final PlannerPlanContainer value) {
@@ -158,7 +158,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this.backingStore.set("details", value);
     }
     /**
-     * Sets the owner property value. Use the container property instead. ID of the group that owns the plan. After it's set, this property cant be updated. This property won't return a valid group ID if the container of the plan isn't a group.
+     * Sets the owner property value. Use the container property instead. ID of the group that owns the plan. After it&apos;s set, this property cant be updated. This property won&apos;t return a valid group ID if the container of the plan isn&apos;t a group.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final String value) {

@@ -69,7 +69,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/licenseDetails{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * A collection of this user&apos;s license details. Read-only.
      * @return a {@link LicenseDetailsCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -78,7 +78,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * A collection of this user&apos;s license details. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LicenseDetailsCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -116,7 +116,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LicenseDetails::createFromDiscriminatorValue);
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * A collection of this user&apos;s license details. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * A collection of this user&apos;s license details. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +170,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return new LicenseDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of this user's license details. Read-only.
+     * A collection of this user&apos;s license details. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

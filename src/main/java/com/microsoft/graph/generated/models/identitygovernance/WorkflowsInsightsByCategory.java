@@ -56,7 +56,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore;
     }
     /**
-     * Gets the failedJoinerRuns property value. Failed 'Joiner' workflows processed in a tenant.
+     * Gets the failedJoinerRuns property value. Failed &apos;Joiner&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore.get("failedJoinerRuns");
     }
     /**
-     * Gets the failedLeaverRuns property value. Failed 'Leaver' workflows processed in a tenant.
+     * Gets the failedLeaverRuns property value. Failed &apos;Leaver&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore.get("failedLeaverRuns");
     }
     /**
-     * Gets the failedMoverRuns property value. Failed 'Mover' workflows processed in a tenant.
+     * Gets the failedMoverRuns property value. Failed &apos;Mover&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the successfulJoinerRuns property value. Successful 'Joiner' workflows processed in a tenant.
+     * Gets the successfulJoinerRuns property value. Successful &apos;Joiner&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore.get("successfulJoinerRuns");
     }
     /**
-     * Gets the successfulLeaverRuns property value. Successful 'Leaver' workflows processed in a tenant.
+     * Gets the successfulLeaverRuns property value. Successful &apos;Leaver&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore.get("successfulLeaverRuns");
     }
     /**
-     * Gets the successfulMoverRuns property value. Successful 'Mover' workflows processed in a tenant.
+     * Gets the successfulMoverRuns property value. Successful &apos;Mover&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore.get("successfulMoverRuns");
     }
     /**
-     * Gets the totalJoinerRuns property value. Total 'Joiner' workflows processed in a tenant.
+     * Gets the totalJoinerRuns property value. Total &apos;Joiner&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore.get("totalJoinerRuns");
     }
     /**
-     * Gets the totalLeaverRuns property value. Total 'Leaver' workflows processed in a tenant.
+     * Gets the totalLeaverRuns property value. Total &apos;Leaver&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         return this.backingStore.get("totalLeaverRuns");
     }
     /**
-     * Gets the totalMoverRuns property value. Total 'Mover' workflows processed in a tenant.
+     * Gets the totalMoverRuns property value. Total &apos;Mover&apos; workflows processed in a tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -188,21 +188,21 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the failedJoinerRuns property value. Failed 'Joiner' workflows processed in a tenant.
+     * Sets the failedJoinerRuns property value. Failed &apos;Joiner&apos; workflows processed in a tenant.
      * @param value Value to set for the failedJoinerRuns property.
      */
     public void setFailedJoinerRuns(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("failedJoinerRuns", value);
     }
     /**
-     * Sets the failedLeaverRuns property value. Failed 'Leaver' workflows processed in a tenant.
+     * Sets the failedLeaverRuns property value. Failed &apos;Leaver&apos; workflows processed in a tenant.
      * @param value Value to set for the failedLeaverRuns property.
      */
     public void setFailedLeaverRuns(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("failedLeaverRuns", value);
     }
     /**
-     * Sets the failedMoverRuns property value. Failed 'Mover' workflows processed in a tenant.
+     * Sets the failedMoverRuns property value. Failed &apos;Mover&apos; workflows processed in a tenant.
      * @param value Value to set for the failedMoverRuns property.
      */
     public void setFailedMoverRuns(@jakarta.annotation.Nullable final Integer value) {
@@ -216,42 +216,42 @@ public class WorkflowsInsightsByCategory implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the successfulJoinerRuns property value. Successful 'Joiner' workflows processed in a tenant.
+     * Sets the successfulJoinerRuns property value. Successful &apos;Joiner&apos; workflows processed in a tenant.
      * @param value Value to set for the successfulJoinerRuns property.
      */
     public void setSuccessfulJoinerRuns(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("successfulJoinerRuns", value);
     }
     /**
-     * Sets the successfulLeaverRuns property value. Successful 'Leaver' workflows processed in a tenant.
+     * Sets the successfulLeaverRuns property value. Successful &apos;Leaver&apos; workflows processed in a tenant.
      * @param value Value to set for the successfulLeaverRuns property.
      */
     public void setSuccessfulLeaverRuns(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("successfulLeaverRuns", value);
     }
     /**
-     * Sets the successfulMoverRuns property value. Successful 'Mover' workflows processed in a tenant.
+     * Sets the successfulMoverRuns property value. Successful &apos;Mover&apos; workflows processed in a tenant.
      * @param value Value to set for the successfulMoverRuns property.
      */
     public void setSuccessfulMoverRuns(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("successfulMoverRuns", value);
     }
     /**
-     * Sets the totalJoinerRuns property value. Total 'Joiner' workflows processed in a tenant.
+     * Sets the totalJoinerRuns property value. Total &apos;Joiner&apos; workflows processed in a tenant.
      * @param value Value to set for the totalJoinerRuns property.
      */
     public void setTotalJoinerRuns(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("totalJoinerRuns", value);
     }
     /**
-     * Sets the totalLeaverRuns property value. Total 'Leaver' workflows processed in a tenant.
+     * Sets the totalLeaverRuns property value. Total &apos;Leaver&apos; workflows processed in a tenant.
      * @param value Value to set for the totalLeaverRuns property.
      */
     public void setTotalLeaverRuns(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("totalLeaverRuns", value);
     }
     /**
-     * Sets the totalMoverRuns property value. Total 'Mover' workflows processed in a tenant.
+     * Sets the totalMoverRuns property value. Total &apos;Mover&apos; workflows processed in a tenant.
      * @param value Value to set for the totalMoverRuns property.
      */
     public void setTotalMoverRuns(@jakarta.annotation.Nullable final Integer value) {

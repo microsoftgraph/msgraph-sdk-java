@@ -48,7 +48,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
         return value;
     }
     /**
-     * Gets the attendee property value. The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
+     * Gets the attendee property value. The email address and type of attendee - whether it&apos;s a person or a resource, and whether required or optional if it&apos;s a person.
      * @return a {@link AttendeeBase}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the attendee property value. The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
+     * Sets the attendee property value. The email address and type of attendee - whether it&apos;s a person or a resource, and whether required or optional if it&apos;s a person.
      * @param value Value to set for the attendee property.
      */
     public void setAttendee(@jakarta.annotation.Nullable final AttendeeBase value) {

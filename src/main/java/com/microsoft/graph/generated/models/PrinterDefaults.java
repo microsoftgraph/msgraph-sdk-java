@@ -195,7 +195,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("orientation");
     }
     /**
-     * Gets the outputBin property value. The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+     * Gets the outputBin property value. The default output bin to place completed prints into. See the printer&apos;s capabilities for a list of supported output bins.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -366,7 +366,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("orientation", value);
     }
     /**
-     * Sets the outputBin property value. The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+     * Sets the outputBin property value. The default output bin to place completed prints into. See the printer&apos;s capabilities for a list of supported output bins.
      * @param value Value to set for the outputBin property.
      */
     public void setOutputBin(@jakarta.annotation.Nullable final String value) {

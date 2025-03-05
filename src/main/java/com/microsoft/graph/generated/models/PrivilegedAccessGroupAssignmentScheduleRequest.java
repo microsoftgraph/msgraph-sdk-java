@@ -75,7 +75,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
         return this.backingStore.get("groupId");
     }
     /**
-     * Gets the principal property value. References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand and $select nested in $expand for id only.
+     * Gets the principal property value. References the principal that&apos;s in the scope of this membership or ownership assignment request through the group that&apos;s governed by PIM. Supports $expand and $select nested in $expand for id only.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
         return this.backingStore.get("targetSchedule");
     }
     /**
-     * Gets the targetScheduleId property value. The identifier of the schedule that's created from the membership or ownership assignment request. Supports $filter (eq, ne).
+     * Gets the targetScheduleId property value. The identifier of the schedule that&apos;s created from the membership or ownership assignment request. Supports $filter (eq, ne).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
         this.backingStore.set("groupId", value);
     }
     /**
-     * Sets the principal property value. References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand and $select nested in $expand for id only.
+     * Sets the principal property value. References the principal that&apos;s in the scope of this membership or ownership assignment request through the group that&apos;s governed by PIM. Supports $expand and $select nested in $expand for id only.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -172,7 +172,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAc
         this.backingStore.set("targetSchedule", value);
     }
     /**
-     * Sets the targetScheduleId property value. The identifier of the schedule that's created from the membership or ownership assignment request. Supports $filter (eq, ne).
+     * Sets the targetScheduleId property value. The identifier of the schedule that&apos;s created from the membership or ownership assignment request. Supports $filter (eq, ne).
      * @param value Value to set for the targetScheduleId property.
      */
     public void setTargetScheduleId(@jakarta.annotation.Nullable final String value) {

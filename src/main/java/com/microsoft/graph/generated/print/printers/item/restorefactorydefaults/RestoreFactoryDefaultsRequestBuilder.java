@@ -35,7 +35,7 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/restoreFactoryDefaults", rawUrl);
     }
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer.
+     * Restore a printer&apos;s default settings to the values specified by the manufacturer.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-restorefactorydefaults?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer.
+     * Restore a printer&apos;s default settings to the values specified by the manufacturer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-restorefactorydefaults?view=graph-rest-1.0">Find more info here</a>
@@ -55,7 +55,7 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer.
+     * Restore a printer&apos;s default settings to the values specified by the manufacturer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Restore a printer's default settings to the values specified by the manufacturer.
+     * Restore a printer&apos;s default settings to the values specified by the manufacturer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

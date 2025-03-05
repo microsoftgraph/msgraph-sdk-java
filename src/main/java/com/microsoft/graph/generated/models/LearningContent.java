@@ -119,7 +119,7 @@ public class LearningContent extends Entity implements Parsable {
         return this.backingStore.get("format");
     }
     /**
-     * Gets the isActive property value. Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
+     * Gets the isActive property value. Indicates whether the content is active or not. Inactive content doesn&apos;t show up in the UI. The default value is true. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -290,7 +290,7 @@ public class LearningContent extends Entity implements Parsable {
         this.backingStore.set("format", value);
     }
     /**
-     * Sets the isActive property value. Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
+     * Sets the isActive property value. Indicates whether the content is active or not. Inactive content doesn&apos;t show up in the UI. The default value is true. Optional.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {

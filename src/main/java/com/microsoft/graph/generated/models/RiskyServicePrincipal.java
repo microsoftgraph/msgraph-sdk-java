@@ -84,7 +84,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
+     * Gets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal&apos;s risky state.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         return this.backingStore.get("riskLevel");
     }
     /**
-     * Gets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Gets the riskState property value. State of the service principal&apos;s risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @return a {@link RiskState}
      */
     @jakarta.annotation.Nullable
@@ -178,7 +178,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal's risky state.
+     * Sets the isProcessing property value. Indicates whether Microsoft Entra ID is currently processing the service principal&apos;s risky state.
      * @param value Value to set for the isProcessing property.
      */
     public void setIsProcessing(@jakarta.annotation.Nullable final Boolean value) {
@@ -206,7 +206,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
         this.backingStore.set("riskLevel", value);
     }
     /**
-     * Sets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Sets the riskState property value. State of the service principal&apos;s risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {

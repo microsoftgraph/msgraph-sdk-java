@@ -15,7 +15,7 @@ public enum BrowserSiteTargetEnvironment implements ValuedEnum {
     Configurable("configurable"),
     /** Open in the browser the employee chooses. */
     None("none"),
-    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary. */
+    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn&apos;t be necessary. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     BrowserSiteTargetEnvironment(final String value) {

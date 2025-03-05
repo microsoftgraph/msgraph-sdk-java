@@ -21,11 +21,11 @@ import java.util.Objects;
 public class ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder} and sets the default values.
-     * @param filter Usage: filter='{filter}'
+     * @param filter Usage: filter=&apos;{filter}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param skip Usage: skip={skip}
-     * @param skipToken Usage: skipToken='{skipToken}'
+     * @param skipToken Usage: skipToken=&apos;{skipToken}&apos;
      * @param top Usage: top={top}
      */
     public ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String filter, @jakarta.annotation.Nullable final Integer skip, @jakarta.annotation.Nullable final String skipToken, @jakarta.annotation.Nullable final Integer top) {

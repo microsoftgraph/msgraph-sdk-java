@@ -82,7 +82,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Specify the user or group in @odata.id in the request body. Users in the accepted senders list can post to conversations of the group. Make sure you don't specify the same user or group in the accepted senders and rejected senders lists, otherwise you'll get an error.
+     * Specify the user or group in @odata.id in the request body. Users in the accepted senders list can post to conversations of the group. Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you&apos;ll get an error.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-acceptedsenders?view=graph-rest-1.0">Find more info here</a>
@@ -91,7 +91,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Specify the user or group in @odata.id in the request body. Users in the accepted senders list can post to conversations of the group. Make sure you don't specify the same user or group in the accepted senders and rejected senders lists, otherwise you'll get an error.
+     * Specify the user or group in @odata.id in the request body. Users in the accepted senders list can post to conversations of the group. Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you&apos;ll get an error.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -145,7 +145,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Specify the user or group in @odata.id in the request body. Users in the accepted senders list can post to conversations of the group. Make sure you don't specify the same user or group in the accepted senders and rejected senders lists, otherwise you'll get an error.
+     * Specify the user or group in @odata.id in the request body. Users in the accepted senders list can post to conversations of the group. Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you&apos;ll get an error.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -154,7 +154,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Specify the user or group in @odata.id in the request body. Users in the accepted senders list can post to conversations of the group. Make sure you don't specify the same user or group in the accepted senders and rejected senders lists, otherwise you'll get an error.
+     * Specify the user or group in @odata.id in the request body. Users in the accepted senders list can post to conversations of the group. Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you&apos;ll get an error.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

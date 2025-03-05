@@ -38,7 +38,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
         return deserializerMap;
     }
     /**
-     * Gets the target property value. Assignment target that the T&C policy is assigned to.
+     * Gets the target property value. Assignment target that the T&amp;C policy is assigned to.
      * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the target property value. Assignment target that the T&C policy is assigned to.
+     * Sets the target property value. Assignment target that the T&amp;C policy is assigned to.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {

@@ -85,7 +85,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the provisioningStatus property value. The possible values are:Success - Service is fully provisioned.Disabled - Service is disabled.Error - The service plan isn't provisioned and is in an error state.PendingInput - The service isn't provisioned and is awaiting service confirmation.PendingActivation - The service is provisioned but requires explicit activation by an administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it isn't activated in the tenant.
+     * Gets the provisioningStatus property value. The possible values are:Success - Service is fully provisioned.Disabled - Service is disabled.Error - The service plan isn&apos;t provisioned and is in an error state.PendingInput - The service isn&apos;t provisioned and is awaiting service confirmation.PendingActivation - The service is provisioned but requires explicit activation by an administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it isn&apos;t activated in the tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("provisioningStatus");
     }
     /**
-     * Gets the service property value. The name of the service; for example, 'AccessControlS2S'.
+     * Gets the service property value. The name of the service; for example, &apos;AccessControlS2S&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -142,14 +142,14 @@ public class ProvisionedPlan implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the provisioningStatus property value. The possible values are:Success - Service is fully provisioned.Disabled - Service is disabled.Error - The service plan isn't provisioned and is in an error state.PendingInput - The service isn't provisioned and is awaiting service confirmation.PendingActivation - The service is provisioned but requires explicit activation by an administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it isn't activated in the tenant.
+     * Sets the provisioningStatus property value. The possible values are:Success - Service is fully provisioned.Disabled - Service is disabled.Error - The service plan isn&apos;t provisioned and is in an error state.PendingInput - The service isn&apos;t provisioned and is awaiting service confirmation.PendingActivation - The service is provisioned but requires explicit activation by an administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it isn&apos;t activated in the tenant.
      * @param value Value to set for the provisioningStatus property.
      */
     public void setProvisioningStatus(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("provisioningStatus", value);
     }
     /**
-     * Sets the service property value. The name of the service; for example, 'AccessControlS2S'.
+     * Sets the service property value. The name of the service; for example, &apos;AccessControlS2S&apos;.
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final String value) {

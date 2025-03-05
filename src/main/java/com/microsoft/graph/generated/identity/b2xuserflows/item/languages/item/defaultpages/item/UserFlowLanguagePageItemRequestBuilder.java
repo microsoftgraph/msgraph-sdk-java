@@ -64,7 +64,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
+     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn&apos;t allow any kind of modification.
      * @return a {@link UserFlowLanguagePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
+     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn&apos;t allow any kind of modification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserFlowLanguagePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
+     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn&apos;t allow any kind of modification.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
+     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn&apos;t allow any kind of modification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class UserFlowLanguagePageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
+     * Collection of pages with the default content to display in a user flow for a specified language. This collection doesn&apos;t allow any kind of modification.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

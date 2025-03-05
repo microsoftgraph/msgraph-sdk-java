@@ -35,7 +35,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Back
         return new DelegatedAdminAccessContainer();
     }
     /**
-     * Gets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
+     * Gets the accessContainerId property value. The identifier of the access container (for example, a security group). For &apos;securityGroup&apos; access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner&apos;s tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Back
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessContainerId property value. The identifier of the access container (for example, a security group). For 'securityGroup' access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner's tenant.
+     * Sets the accessContainerId property value. The identifier of the access container (for example, a security group). For &apos;securityGroup&apos; access containers, this must be a valid ID of a Microsoft Entra security group in the Microsoft partner&apos;s tenant.
      * @param value Value to set for the accessContainerId property.
      */
     public void setAccessContainerId(@jakarta.annotation.Nullable final String value) {

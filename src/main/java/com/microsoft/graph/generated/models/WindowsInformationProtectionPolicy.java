@@ -66,7 +66,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
         return this.backingStore.get("mdmEnrollmentUrl");
     }
     /**
-     * Gets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
+     * Gets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 &lt;= X &lt;= 999.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
         return this.backingStore.get("minutesOfInactivityBeforeDeviceLock");
     }
     /**
-     * Gets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
+     * Gets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can&apos;t be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
         return this.backingStore.get("numberOfPastPinsRemembered");
     }
     /**
-     * Gets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
+     * Gets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 &lt;= X &lt;= 16 for desktop and 0 &lt;= X &lt;= 999 for mobile devices.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
         return this.backingStore.get("passwordMaximumAttemptCount");
     }
     /**
-     * Gets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
+     * Gets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user&apos;s PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -180,28 +180,28 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
         this.backingStore.set("mdmEnrollmentUrl", value);
     }
     /**
-     * Sets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
+     * Sets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 &lt;= X &lt;= 999.
      * @param value Value to set for the minutesOfInactivityBeforeDeviceLock property.
      */
     public void setMinutesOfInactivityBeforeDeviceLock(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("minutesOfInactivityBeforeDeviceLock", value);
     }
     /**
-     * Sets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
+     * Sets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can&apos;t be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
      * @param value Value to set for the numberOfPastPinsRemembered property.
      */
     public void setNumberOfPastPinsRemembered(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("numberOfPastPinsRemembered", value);
     }
     /**
-     * Sets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
+     * Sets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 &lt;= X &lt;= 16 for desktop and 0 &lt;= X &lt;= 999 for mobile devices.
      * @param value Value to set for the passwordMaximumAttemptCount property.
      */
     public void setPasswordMaximumAttemptCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("passwordMaximumAttemptCount", value);
     }
     /**
-     * Sets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
+     * Sets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user&apos;s PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
      * @param value Value to set for the pinExpirationDays property.
      */
     public void setPinExpirationDays(@jakarta.annotation.Nullable final Integer value) {

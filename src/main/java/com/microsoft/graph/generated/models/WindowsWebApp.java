@@ -29,7 +29,7 @@ public class WindowsWebApp extends MobileApp implements Parsable {
         return new WindowsWebApp();
     }
     /**
-     * Gets the appUrl property value. Indicates the Windows web app URL. Example: 'https://www.contoso.com'
+     * Gets the appUrl property value. Indicates the Windows web app URL. Example: &apos;https://www.contoso.com&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class WindowsWebApp extends MobileApp implements Parsable {
         writer.writeStringValue("appUrl", this.getAppUrl());
     }
     /**
-     * Sets the appUrl property value. Indicates the Windows web app URL. Example: 'https://www.contoso.com'
+     * Sets the appUrl property value. Indicates the Windows web app URL. Example: &apos;https://www.contoso.com&apos;
      * @param value Value to set for the appUrl property.
      */
     public void setAppUrl(@jakarta.annotation.Nullable final String value) {

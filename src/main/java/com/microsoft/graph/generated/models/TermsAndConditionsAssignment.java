@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * A termsAndConditionsAssignment entity represents the assignment of a given Terms and Conditions (T&C) policy to a given group. Users in the group will be required to accept the terms in order to have devices enrolled into Intune.
+ * A termsAndConditionsAssignment entity represents the assignment of a given Terms and Conditions (T&amp;C) policy to a given group. Users in the group will be required to accept the terms in order to have devices enrolled into Intune.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAssignment extends Entity implements Parsable {
@@ -38,7 +38,7 @@ public class TermsAndConditionsAssignment extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the target property value. Assignment target that the T&C policy is assigned to.
+     * Gets the target property value. Assignment target that the T&amp;C policy is assigned to.
      * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class TermsAndConditionsAssignment extends Entity implements Parsable {
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the target property value. Assignment target that the T&C policy is assigned to.
+     * Sets the target property value. Assignment target that the T&amp;C policy is assigned to.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {

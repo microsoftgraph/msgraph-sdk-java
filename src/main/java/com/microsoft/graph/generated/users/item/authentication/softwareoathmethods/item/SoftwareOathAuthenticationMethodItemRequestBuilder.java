@@ -37,7 +37,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods/{softwareOathAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete a user&apos;s Software OATH token authentication method object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         delete(null);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete a user&apos;s Software OATH token authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, SoftwareOathAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete a user&apos;s Software OATH token authentication method object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a user's Software OATH token authentication method object.
+     * Delete a user&apos;s Software OATH token authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

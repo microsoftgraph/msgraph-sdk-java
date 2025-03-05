@@ -73,7 +73,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("countSuccessiveCompleteFailures");
     }
     /**
-     * Gets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
+     * Gets the escrowsPruned property value. true if the job&apos;s escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job&apos;s errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("lastExecution");
     }
     /**
-     * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
+     * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn&apos;t have any errors.
      * @return a {@link SynchronizationTaskExecution}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("countSuccessiveCompleteFailures", value);
     }
     /**
-     * Sets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
+     * Sets the escrowsPruned property value. true if the job&apos;s escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job&apos;s errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @param value Value to set for the escrowsPruned property.
      */
     public void setEscrowsPruned(@jakarta.annotation.Nullable final Boolean value) {
@@ -247,7 +247,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("lastExecution", value);
     }
     /**
-     * Sets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
+     * Sets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn&apos;t have any errors.
      * @param value Value to set for the lastSuccessfulExecution property.
      */
     public void setLastSuccessfulExecution(@jakarta.annotation.Nullable final SynchronizationTaskExecution value) {

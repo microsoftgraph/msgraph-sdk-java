@@ -26,7 +26,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
         return new DeviceLocalCredentialInfo();
     }
     /**
-     * Gets the credentials property value. The credentials of the device's local administrator account backed up to Azure Active Directory.
+     * Gets the credentials property value. The credentials of the device&apos;s local administrator account backed up to Azure Active Directory.
      * @return a {@link java.util.List<DeviceLocalCredential>}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("refreshDateTime", this.getRefreshDateTime());
     }
     /**
-     * Sets the credentials property value. The credentials of the device's local administrator account backed up to Azure Active Directory.
+     * Sets the credentials property value. The credentials of the device&apos;s local administrator account backed up to Azure Active Directory.
      * @param value Value to set for the credentials property.
      */
     public void setCredentials(@jakarta.annotation.Nullable final java.util.List<DeviceLocalCredential> value) {

@@ -64,7 +64,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
         return this.backingStore;
     }
     /**
-     * Gets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
+     * Gets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a &apos;Commands&apos; part.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
         return this.backingStore.get("position");
     }
     /**
-     * Gets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
+     * Gets the target property value. The element to update. Must be the #&lt;data-id&gt; or the generated &lt;id&gt; of the element, or the body or title keyword.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
+     * Sets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a &apos;Commands&apos; part.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
         this.backingStore.set("position", value);
     }
     /**
-     * Sets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
+     * Sets the target property value. The element to update. Must be the #&lt;data-id&gt; or the generated &lt;id&gt; of the element, or the body or title keyword.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final String value) {

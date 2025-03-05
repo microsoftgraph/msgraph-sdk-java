@@ -21,7 +21,7 @@ import java.util.Objects;
 public class GetApplicableContentTypesForListWithListIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link GetApplicableContentTypesForListWithListIdRequestBuilder} and sets the default values.
-     * @param listId Usage: listId='{listId}'
+     * @param listId Usage: listId=&apos;{listId}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

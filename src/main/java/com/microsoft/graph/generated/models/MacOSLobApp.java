@@ -71,7 +71,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
+     * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app&apos;s version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app&apos;s version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("md5Hash");
     }
     /**
-     * Gets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
+     * Gets the md5HashChunkSize property value. The chunk size for MD5 hash. This is &apos;0&apos; or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         this.backingStore.set("childApps", value);
     }
     /**
-     * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
+     * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app&apos;s version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app&apos;s version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
      */
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
@@ -178,7 +178,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         this.backingStore.set("md5Hash", value);
     }
     /**
-     * Sets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
+     * Sets the md5HashChunkSize property value. The chunk size for MD5 hash. This is &apos;0&apos; or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @param value Value to set for the md5HashChunkSize property.
      */
     public void setMd5HashChunkSize(@jakarta.annotation.Nullable final Integer value) {

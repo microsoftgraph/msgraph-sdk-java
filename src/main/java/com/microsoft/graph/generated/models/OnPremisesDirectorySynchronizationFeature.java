@@ -181,7 +181,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         return this.backingStore.get("passwordSyncEnabled");
     }
     /**
-     * Gets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled. This property isn't in use and updating it isn't supported.
+     * Gets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled. This property isn&apos;t in use and updating it isn&apos;t supported.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -372,7 +372,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         this.backingStore.set("passwordSyncEnabled", value);
     }
     /**
-     * Sets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled. This property isn't in use and updating it isn't supported.
+     * Sets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled. This property isn&apos;t in use and updating it isn&apos;t supported.
      * @param value Value to set for the passwordWritebackEnabled property.
      */
     public void setPasswordWritebackEnabled(@jakarta.annotation.Nullable final Boolean value) {

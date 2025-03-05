@@ -56,7 +56,7 @@ public class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
+     * Gets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn&apos;t present if the conversion succeeded.
      * @return a {@link GenericError}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("sourceId");
     }
     /**
-     * Gets the targetId property value. The converted identifier. This value isn't present if the conversion failed.
+     * Gets the targetId property value. The converted identifier. This value isn&apos;t present if the conversion failed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn't present if the conversion succeeded.
+     * Sets the errorDetails property value. An error object indicating the reason for the conversion failure. This value isn&apos;t present if the conversion succeeded.
      * @param value Value to set for the errorDetails property.
      */
     public void setErrorDetails(@jakarta.annotation.Nullable final GenericError value) {
@@ -149,7 +149,7 @@ public class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("sourceId", value);
     }
     /**
-     * Sets the targetId property value. The converted identifier. This value isn't present if the conversion failed.
+     * Sets the targetId property value. The converted identifier. This value isn&apos;t present if the conversion failed.
      * @param value Value to set for the targetId property.
      */
     public void setTargetId(@jakarta.annotation.Nullable final String value) {

@@ -227,9 +227,9 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getActivitiesByInterval method.
-     * @param endDateTime Usage: endDateTime='{endDateTime}'
-     * @param interval Usage: interval='{interval}'
-     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @param endDateTime Usage: endDateTime=&apos;{endDateTime}&apos;
+     * @param interval Usage: interval=&apos;{interval}&apos;
+     * @param startDateTime Usage: startDateTime=&apos;{startDateTime}&apos;
      * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -241,7 +241,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getApplicableContentTypesForList method.
-     * @param listId Usage: listId='{listId}'
+     * @param listId Usage: listId=&apos;{listId}&apos;
      * @return a {@link GetApplicableContentTypesForListWithListIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -251,7 +251,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByPath method.
-     * @param path Usage: path='{path}'
+     * @param path Usage: path=&apos;{path}&apos;
      * @return a {@link GetByPathWithPathRequestBuilder}
      */
     @jakarta.annotation.Nonnull

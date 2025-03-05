@@ -93,7 +93,7 @@ public class AggregationOption implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. The minimum accepted size is 1, and the maximum is 65535. Optional.
+     * Gets the size property value. The number of searchBucket resources to be returned. This isn&apos;t required when the range is provided manually in the search request. The minimum accepted size is 1, and the maximum is 65535. Optional.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class AggregationOption implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. The minimum accepted size is 1, and the maximum is 65535. Optional.
+     * Sets the size property value. The number of searchBucket resources to be returned. This isn&apos;t required when the range is provided manually in the search request. The minimum accepted size is 1, and the maximum is 65535. Optional.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {

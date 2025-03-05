@@ -57,7 +57,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isMultiValued property value. Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of string types such as 'extensionb7b1c57b532f40b8b5ed4b7a7ba67401jobGroupTracker': ['String 1', 'String 2']. The default value is false. Supports $filter (eq).
+     * Gets the isMultiValued property value. Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of string types such as &apos;extensionb7b1c57b532f40b8b5ed4b7a7ba67401jobGroupTracker&apos;: [&apos;String 1&apos;, &apos;String 2&apos;]. The default value is false. Supports $filter (eq).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         this.backingStore.set("dataType", value);
     }
     /**
-     * Sets the isMultiValued property value. Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of string types such as 'extensionb7b1c57b532f40b8b5ed4b7a7ba67401jobGroupTracker': ['String 1', 'String 2']. The default value is false. Supports $filter (eq).
+     * Sets the isMultiValued property value. Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of string types such as &apos;extensionb7b1c57b532f40b8b5ed4b7a7ba67401jobGroupTracker&apos;: [&apos;String 1&apos;, &apos;String 2&apos;]. The default value is false. Supports $filter (eq).
      * @param value Value to set for the isMultiValued property.
      */
     public void setIsMultiValued(@jakarta.annotation.Nullable final Boolean value) {

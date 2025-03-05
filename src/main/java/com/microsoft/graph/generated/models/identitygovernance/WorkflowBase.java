@@ -143,7 +143,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
+     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can&apos;t be true for a disabled workflow (where isEnabled is false).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -267,7 +267,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
+     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can&apos;t be true for a disabled workflow (where isEnabled is false).
      * @param value Value to set for the isSchedulingEnabled property.
      */
     public void setIsSchedulingEnabled(@jakarta.annotation.Nullable final Boolean value) {

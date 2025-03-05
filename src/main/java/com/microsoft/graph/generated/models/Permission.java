@@ -26,7 +26,7 @@ public class Permission extends Entity implements Parsable {
         return new Permission();
     }
     /**
-     * Gets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
+     * Gets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there&apos;s no expiration set for this permission. Optional.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class Permission extends Entity implements Parsable {
         return this.backingStore.get("hasPassword");
     }
     /**
-     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
+     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it&apos;s inherited from an ancestor. Read-only.
      * @return a {@link ItemReference}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class Permission extends Entity implements Parsable {
         return this.backingStore.get("invitation");
     }
     /**
-     * Gets the link property value. Provides the link details of the current permission, if it's a link type permission. Read-only.
+     * Gets the link property value. Provides the link details of the current permission, if it&apos;s a link type permission. Read-only.
      * @return a {@link SharingLink}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class Permission extends Entity implements Parsable {
         writer.writeStringValue("shareId", this.getShareId());
     }
     /**
-     * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there's no expiration set for this permission. Optional.
+     * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there&apos;s no expiration set for this permission. Optional.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -195,7 +195,7 @@ public class Permission extends Entity implements Parsable {
         this.backingStore.set("hasPassword", value);
     }
     /**
-     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it's inherited from an ancestor. Read-only.
+     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it&apos;s inherited from an ancestor. Read-only.
      * @param value Value to set for the inheritedFrom property.
      */
     public void setInheritedFrom(@jakarta.annotation.Nullable final ItemReference value) {
@@ -209,7 +209,7 @@ public class Permission extends Entity implements Parsable {
         this.backingStore.set("invitation", value);
     }
     /**
-     * Sets the link property value. Provides the link details of the current permission, if it's a link type permission. Read-only.
+     * Sets the link property value. Provides the link details of the current permission, if it&apos;s a link type permission. Read-only.
      * @param value Value to set for the link property.
      */
     public void setLink(@jakarta.annotation.Nullable final SharingLink value) {

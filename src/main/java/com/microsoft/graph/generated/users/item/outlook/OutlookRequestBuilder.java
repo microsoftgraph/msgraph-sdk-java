@@ -88,7 +88,7 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the supportedTimeZones method.
-     * @param TimeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
+     * @param TimeZoneStandard Usage: TimeZoneStandard=&apos;{TimeZoneStandard}&apos;
      * @return a {@link SupportedTimeZonesWithTimeZoneStandardRequestBuilder}
      */
     @jakarta.annotation.Nonnull

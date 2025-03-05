@@ -79,7 +79,7 @@ public class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("id");
     }
     /**
-     * Gets the layout property value. The definition of the content's appearance, represented by an Adaptive Card, which is a JSON-serialized card object model.
+     * Gets the layout property value. The definition of the content&apos;s appearance, represented by an Adaptive Card, which is a JSON-serialized card object model.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the layout property value. The definition of the content's appearance, represented by an Adaptive Card, which is a JSON-serialized card object model.
+     * Sets the layout property value. The definition of the content&apos;s appearance, represented by an Adaptive Card, which is a JSON-serialized card object model.
      * @param value Value to set for the layout property.
      */
     public void setLayout(@jakarta.annotation.Nullable final UntypedNode value) {

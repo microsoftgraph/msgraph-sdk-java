@@ -98,7 +98,7 @@ public class ResourceVisualization implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
+     * Gets the mediaType property value. The item&apos;s media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class ResourceVisualization implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("previewText");
     }
     /**
-     * Gets the title property value. The item's title text.
+     * Gets the title property value. The item&apos;s title text.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class ResourceVisualization implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("title");
     }
     /**
-     * Gets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
+     * Gets the type property value. The item&apos;s media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -199,7 +199,7 @@ public class ResourceVisualization implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("containerWebUrl", value);
     }
     /**
-     * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
+     * Sets the mediaType property value. The item&apos;s media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Not all Media Mime Types are supported.
      * @param value Value to set for the mediaType property.
      */
     public void setMediaType(@jakarta.annotation.Nullable final String value) {
@@ -227,14 +227,14 @@ public class ResourceVisualization implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("previewText", value);
     }
     /**
-     * Sets the title property value. The item's title text.
+     * Sets the title property value. The item&apos;s title text.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("title", value);
     }
     /**
-     * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
+     * Sets the type property value. The item&apos;s media type. Can be used for filtering for a specific file based on a specific type. See the section Type property values for supported types.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

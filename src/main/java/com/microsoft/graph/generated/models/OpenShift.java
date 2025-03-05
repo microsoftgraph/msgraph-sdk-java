@@ -26,7 +26,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return new OpenShift();
     }
     /**
-     * Gets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they're shared.
+     * Gets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they&apos;re shared.
      * @return a {@link OpenShiftItem}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         writer.writeObjectValue("sharedOpenShift", this.getSharedOpenShift());
     }
     /**
-     * Sets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they're shared.
+     * Sets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they&apos;re shared.
      * @param value Value to set for the draftOpenShift property.
      */
     public void setDraftOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {

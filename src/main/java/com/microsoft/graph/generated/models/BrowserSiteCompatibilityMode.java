@@ -23,7 +23,7 @@ public enum BrowserSiteCompatibilityMode implements ValuedEnum {
     InternetExplorer7("internetExplorer7"),
     /** Loads the site in internetExplorer5 */
     InternetExplorer5("internetExplorer5"),
-    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary. */
+    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn&apos;t be necessary. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     BrowserSiteCompatibilityMode(final String value) {

@@ -64,7 +64,7 @@ public class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("city");
     }
     /**
-     * Gets the countryOrRegion property value. The country or region. It's a free-format string value, for example, 'United States'.
+     * Gets the countryOrRegion property value. The country or region. It&apos;s a free-format string value, for example, &apos;United States&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("city", value);
     }
     /**
-     * Sets the countryOrRegion property value. The country or region. It's a free-format string value, for example, 'United States'.
+     * Sets the countryOrRegion property value. The country or region. It&apos;s a free-format string value, for example, &apos;United States&apos;.
      * @param value Value to set for the countryOrRegion property.
      */
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {

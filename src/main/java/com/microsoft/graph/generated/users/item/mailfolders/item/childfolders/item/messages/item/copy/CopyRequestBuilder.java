@@ -36,7 +36,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}/messages/{message%2Did}/copy", rawUrl);
     }
     /**
-     * Copy a message to a folder within the user's mailbox.
+     * Copy a message to a folder within the user&apos;s mailbox.
      * @param body The request body
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Copy a message to a folder within the user's mailbox.
+     * Copy a message to a folder within the user&apos;s mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Message}
@@ -63,7 +63,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Message::createFromDiscriminatorValue);
     }
     /**
-     * Copy a message to a folder within the user's mailbox.
+     * Copy a message to a folder within the user&apos;s mailbox.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Copy a message to a folder within the user's mailbox.
+     * Copy a message to a folder within the user&apos;s mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

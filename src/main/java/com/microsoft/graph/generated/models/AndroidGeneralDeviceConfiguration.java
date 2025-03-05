@@ -422,7 +422,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         return this.backingStore.get("voiceDialingBlocked");
     }
     /**
-     * Gets the webBrowserBlockAutofill property value. Indicates whether or not to block the web browser's auto fill feature.
+     * Gets the webBrowserBlockAutofill property value. Indicates whether or not to block the web browser&apos;s auto fill feature.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -820,7 +820,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
         this.backingStore.set("voiceDialingBlocked", value);
     }
     /**
-     * Sets the webBrowserBlockAutofill property value. Indicates whether or not to block the web browser's auto fill feature.
+     * Sets the webBrowserBlockAutofill property value. Indicates whether or not to block the web browser&apos;s auto fill feature.
      * @param value Value to set for the webBrowserBlockAutofill property.
      */
     public void setWebBrowserBlockAutofill(@jakarta.annotation.Nullable final Boolean value) {

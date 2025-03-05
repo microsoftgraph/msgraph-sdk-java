@@ -23,7 +23,7 @@ public class DeltaWithTokenRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new {@link DeltaWithTokenRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param token Usage: token='{token}'
+     * @param token Usage: token=&apos;{token}&apos;
      */
     public DeltaWithTokenRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String token) {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/delta(token='{token}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);

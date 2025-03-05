@@ -120,7 +120,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("status");
     }
     /**
-     * Gets the subject property value. The corresponding event's subject line. Optional.
+     * Gets the subject property value. The corresponding event&apos;s subject line. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the subject property value. The corresponding event's subject line. Optional.
+     * Sets the subject property value. The corresponding event&apos;s subject line. Optional.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {

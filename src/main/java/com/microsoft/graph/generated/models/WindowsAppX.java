@@ -54,7 +54,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityName property value. The identity name of the uploaded app package. For example: 'Contoso.DemoApp'.
+     * Gets the identityName property value. The identity name of the uploaded app package. For example: &apos;Contoso.DemoApp&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("identityName");
     }
     /**
-     * Gets the identityPublisherHash property value. The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'.
+     * Gets the identityPublisherHash property value. The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: &apos;AB82CD0XYZ&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("identityPublisherHash");
     }
     /**
-     * Gets the identityResourceIdentifier property value. The identity resource identifier of the uploaded app package. For example: 'TestResourceId'.
+     * Gets the identityResourceIdentifier property value. The identity resource identifier of the uploaded app package. For example: &apos;TestResourceId&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("identityResourceIdentifier");
     }
     /**
-     * Gets the identityVersion property value. The identity version of the uploaded app package. For example: '1.0.0.0'.
+     * Gets the identityVersion property value. The identity version of the uploaded app package. For example: &apos;1.0.0.0&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,28 +124,28 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
         this.backingStore.set("applicableArchitectures", value);
     }
     /**
-     * Sets the identityName property value. The identity name of the uploaded app package. For example: 'Contoso.DemoApp'.
+     * Sets the identityName property value. The identity name of the uploaded app package. For example: &apos;Contoso.DemoApp&apos;.
      * @param value Value to set for the identityName property.
      */
     public void setIdentityName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identityName", value);
     }
     /**
-     * Sets the identityPublisherHash property value. The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'.
+     * Sets the identityPublisherHash property value. The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: &apos;AB82CD0XYZ&apos;.
      * @param value Value to set for the identityPublisherHash property.
      */
     public void setIdentityPublisherHash(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identityPublisherHash", value);
     }
     /**
-     * Sets the identityResourceIdentifier property value. The identity resource identifier of the uploaded app package. For example: 'TestResourceId'.
+     * Sets the identityResourceIdentifier property value. The identity resource identifier of the uploaded app package. For example: &apos;TestResourceId&apos;.
      * @param value Value to set for the identityResourceIdentifier property.
      */
     public void setIdentityResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identityResourceIdentifier", value);
     }
     /**
-     * Sets the identityVersion property value. The identity version of the uploaded app package. For example: '1.0.0.0'.
+     * Sets the identityVersion property value. The identity version of the uploaded app package. For example: &apos;1.0.0.0&apos;.
      * @param value Value to set for the identityVersion property.
      */
     public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {

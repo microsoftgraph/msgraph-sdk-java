@@ -36,7 +36,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
         return deserializerMap;
     }
     /**
-     * Gets the value property value. The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
+     * Gets the value property value. The value stored on the requestor&apos;s user profile, if this answer is configured to be stored as a specific attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
         writer.writeStringValue("value", this.getValue());
     }
     /**
-     * Sets the value property value. The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
+     * Sets the value property value. The value stored on the requestor&apos;s user profile, if this answer is configured to be stored as a specific attribute.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

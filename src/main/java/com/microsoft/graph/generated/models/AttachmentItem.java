@@ -64,7 +64,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore;
     }
     /**
-     * Gets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the <img src='cid:contentId'> tag in HTML messages. Optional.
+     * Gets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the &lt;img src=&apos;cid:contentId&apos;&gt; tag in HTML messages. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("isInline");
     }
     /**
-     * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
+     * Gets the name property value. The display name of the attachment. This can be a descriptive string and doesn&apos;t have to be the actual file name. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the <img src='cid:contentId'> tag in HTML messages. Optional.
+     * Sets the contentId property value. The CID or Content-Id of the attachment for referencing for the in-line attachments using the &lt;img src=&apos;cid:contentId&apos;&gt; tag in HTML messages. Optional.
      * @param value Value to set for the contentId property.
      */
     public void setContentId(@jakarta.annotation.Nullable final String value) {
@@ -186,7 +186,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("isInline", value);
     }
     /**
-     * Sets the name property value. The display name of the attachment. This can be a descriptive string and doesn't have to be the actual file name. Required.
+     * Sets the name property value. The display name of the attachment. This can be a descriptive string and doesn&apos;t have to be the actual file name. Required.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

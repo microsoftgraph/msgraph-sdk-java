@@ -37,7 +37,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
+     * Gets the hidden property value. True if the participant shouldn&apos;t be shown in other participants&apos; rosters.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the hidden property value. True if the participant shouldn't be shown in other participants' rosters.
+     * Sets the hidden property value. True if the participant shouldn&apos;t be shown in other participants&apos; rosters.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {

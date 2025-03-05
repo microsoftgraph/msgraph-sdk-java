@@ -27,7 +27,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         return new OnenotePage();
     }
     /**
-     * Gets the content property value. The page's HTML content.
+     * Gets the content property value. The page&apos;s HTML content.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         return this.backingStore.get("content");
     }
     /**
-     * Gets the contentUrl property value. The URL for the page's HTML content.  Read-only.
+     * Gets the contentUrl property value. The URL for the page&apos;s HTML content.  Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         return this.backingStore.get("level");
     }
     /**
-     * Gets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
+     * Gets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it &apos;s installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
      * @return a {@link PageLinks}
      */
     @jakarta.annotation.Nullable
@@ -154,14 +154,14 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         writer.writeCollectionOfPrimitiveValues("userTags", this.getUserTags());
     }
     /**
-     * Sets the content property value. The page's HTML content.
+     * Sets the content property value. The page&apos;s HTML content.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the contentUrl property value. The URL for the page's HTML content.  Read-only.
+     * Sets the contentUrl property value. The URL for the page&apos;s HTML content.  Read-only.
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
@@ -189,7 +189,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         this.backingStore.set("level", value);
     }
     /**
-     * Sets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
+     * Sets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it &apos;s installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final PageLinks value) {

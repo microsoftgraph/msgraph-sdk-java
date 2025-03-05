@@ -93,7 +93,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in draft status, which means that students can't see the assignment until it's published.
+     * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in draft status, which means that students can&apos;t see the assignment until it&apos;s published.
      * @param body The request body
      * @return a {@link EducationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -104,7 +104,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in draft status, which means that students can't see the assignment until it's published.
+     * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in draft status, which means that students can&apos;t see the assignment until it&apos;s published.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationAssignment}
@@ -140,7 +140,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in draft status, which means that students can't see the assignment until it's published.
+     * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in draft status, which means that students can&apos;t see the assignment until it&apos;s published.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +149,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in draft status, which means that students can't see the assignment until it's published.
+     * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in draft status, which means that students can&apos;t see the assignment until it&apos;s published.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -57,7 +57,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
         return this.backingStore.get("minimumSupportedOperatingSystem");
     }
     /**
-     * Gets the packageId property value. The app's package ID.
+     * Gets the packageId property value. The app&apos;s package ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
         this.backingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
-     * Sets the packageId property value. The app's package ID.
+     * Sets the packageId property value. The app&apos;s package ID.
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {

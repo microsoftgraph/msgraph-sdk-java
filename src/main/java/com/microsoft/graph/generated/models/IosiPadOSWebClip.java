@@ -29,7 +29,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
         return new IosiPadOSWebClip();
     }
     /**
-     * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
+     * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: &apos;https://www.contoso.com&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
         writer.writeBooleanValue("useManagedBrowser", this.getUseManagedBrowser());
     }
     /**
-     * Sets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
+     * Sets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: &apos;https://www.contoso.com&apos;
      * @param value Value to set for the appUrl property.
      */
     public void setAppUrl(@jakarta.annotation.Nullable final String value) {

@@ -90,7 +90,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("resetEnabled");
     }
     /**
-     * Gets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
+     * Gets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users&apos; provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      * @return a {@link CloudPcRestorePointSetting}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("resetEnabled", value);
     }
     /**
-     * Sets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
+     * Sets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users&apos; provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      * @param value Value to set for the restorePointSetting property.
      */
     public void setRestorePointSetting(@jakarta.annotation.Nullable final CloudPcRestorePointSetting value) {

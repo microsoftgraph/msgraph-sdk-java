@@ -22,7 +22,7 @@ public class GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder ex
     /**
      * Instantiates a new {@link GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
-     * @param period Usage: period='{period}'
+     * @param period Usage: period=&apos;{period}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String period) {
@@ -38,7 +38,7 @@ public class GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder ex
         super(requestAdapter, "{+baseurl}/reports/getSkypeForBusinessDeviceUsageUserCounts(period='{period}')", rawUrl);
     }
     /**
-     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You'll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
+     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You&apos;ll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessdeviceusageusercounts?view=graph-rest-1.0">Find more info here</a>
@@ -48,7 +48,7 @@ public class GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder ex
         return get(null);
     }
     /**
-     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You'll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
+     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You&apos;ll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -62,7 +62,7 @@ public class GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder ex
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You'll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
+     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You&apos;ll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder ex
         return toGetRequestInformation(null);
     }
     /**
-     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You'll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
+     * Get the usage trends on how many users in your organization have connected using the Skype for Business app. You&apos;ll also get a breakdown by the type of device (Windows, Windows phone, Android phone, iPhone, or iPad) on which the Skype for Business client app is installed and used across your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

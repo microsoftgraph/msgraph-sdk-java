@@ -39,7 +39,7 @@ public class OwnersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/employeeExperience/communities/{community%2Did}/owners(userPrincipalName='{userPrincipalName}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * The admins of the community. Limited to 100 users. If this property isn't specified when you create the community, the calling user is automatically assigned as the community owner.
+     * The admins of the community. Limited to 100 users. If this property isn&apos;t specified when you create the community, the calling user is automatically assigned as the community owner.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -48,7 +48,7 @@ public class OwnersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * The admins of the community. Limited to 100 users. If this property isn't specified when you create the community, the calling user is automatically assigned as the community owner.
+     * The admins of the community. Limited to 100 users. If this property isn&apos;t specified when you create the community, the calling user is automatically assigned as the community owner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,7 +61,7 @@ public class OwnersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * The admins of the community. Limited to 100 users. If this property isn't specified when you create the community, the calling user is automatically assigned as the community owner.
+     * The admins of the community. Limited to 100 users. If this property isn&apos;t specified when you create the community, the calling user is automatically assigned as the community owner.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class OwnersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The admins of the community. Limited to 100 users. If this property isn't specified when you create the community, the calling user is automatically assigned as the community owner.
+     * The admins of the community. Limited to 100 users. If this property isn&apos;t specified when you create the community, the calling user is automatically assigned as the community owner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +91,7 @@ public class OwnersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
         return new OwnersWithUserPrincipalNameRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The admins of the community. Limited to 100 users. If this property isn't specified when you create the community, the calling user is automatically assigned as the community owner.
+     * The admins of the community. Limited to 100 users. If this property isn&apos;t specified when you create the community, the calling user is automatically assigned as the community owner.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

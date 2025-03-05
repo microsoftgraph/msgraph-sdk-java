@@ -35,7 +35,7 @@ public class ClearPresenceRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/presences/{presence%2Did}/clearPresence", rawUrl);
     }
     /**
-     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
+     * Clear the application&apos;s presence session for a user. If it is the user&apos;s only presence session, the user&apos;s presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/presence-clearpresence?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +44,7 @@ public class ClearPresenceRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
+     * Clear the application&apos;s presence session for a user. If it is the user&apos;s only presence session, the user&apos;s presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class ClearPresenceRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
+     * Clear the application&apos;s presence session for a user. If it is the user&apos;s only presence session, the user&apos;s presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class ClearPresenceRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
+     * Clear the application&apos;s presence session for a user. If it is the user&apos;s only presence session, the user&apos;s presence will change to Offline/Offline. For details about presences sessions, see presence: setPresence.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

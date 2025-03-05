@@ -193,7 +193,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the image method.
-     * @param fittingMode Usage: fittingMode='{fittingMode}'
+     * @param fittingMode Usage: fittingMode=&apos;{fittingMode}&apos;
      * @param height Usage: height={height}
      * @param width Usage: width={width}
      * @return a {@link ImageWithWidthWithHeightWithFittingModeRequestBuilder}

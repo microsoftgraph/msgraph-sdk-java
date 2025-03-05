@@ -9,6 +9,7 @@ import com.microsoft.graph.groups.item.events.item.dismissreminder.DismissRemind
 import com.microsoft.graph.groups.item.events.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.groups.item.events.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.groups.item.events.item.instances.InstancesRequestBuilder;
+import com.microsoft.graph.groups.item.events.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.groups.item.events.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.groups.item.events.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
 import com.microsoft.graph.models.Event;
@@ -102,6 +103,14 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public InstancesRequestBuilder instances() {
         return new InstancesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the snoozeReminder method.

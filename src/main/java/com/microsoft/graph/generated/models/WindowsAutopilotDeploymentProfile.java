@@ -37,7 +37,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         return this.backingStore.get("assignedDevices");
     }
     /**
-     * Gets the createdDateTime property value. The date and time of when the deployment profile was created. The value cannot be modified and is automatically populated when the profile was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported. Read-Only.
+     * Gets the createdDateTime property value. The date and time of when the deployment profile was created. The value cannot be modified and is automatically populated when the profile was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported. Read-Only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         return this.backingStore.get("hardwareHashExtractionEnabled");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time of when the deployment profile was last modified. The value cannot be updated manually and is automatically populated when any changes are made to the profile. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported Read-Only.
+     * Gets the lastModifiedDateTime property value. The date and time of when the deployment profile was last modified. The value cannot be updated manually and is automatically populated when any changes are made to the profile. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported Read-Only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         this.backingStore.set("assignedDevices", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time of when the deployment profile was created. The value cannot be modified and is automatically populated when the profile was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported. Read-Only.
+     * Sets the createdDateTime property value. The date and time of when the deployment profile was created. The value cannot be modified and is automatically populated when the profile was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported. Read-Only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -225,7 +225,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         this.backingStore.set("hardwareHashExtractionEnabled", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time of when the deployment profile was last modified. The value cannot be updated manually and is automatically populated when any changes are made to the profile. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported Read-Only.
+     * Sets the lastModifiedDateTime property value. The date and time of when the deployment profile was last modified. The value cannot be updated manually and is automatically populated when any changes are made to the profile. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported Read-Only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

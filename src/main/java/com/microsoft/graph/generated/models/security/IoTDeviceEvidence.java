@@ -58,7 +58,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("deviceSubType");
     }
     /**
-     * Gets the deviceType property value. The type of the device. For example, 'temperature sensor,' 'freezer,' 'wind turbine,' and so on.
+     * Gets the deviceType property value. The type of the device. For example, &apos;temperature sensor,&apos; &apos;freezer,&apos; &apos;wind turbine,&apos; and so on.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -331,7 +331,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         this.backingStore.set("deviceSubType", value);
     }
     /**
-     * Sets the deviceType property value. The type of the device. For example, 'temperature sensor,' 'freezer,' 'wind turbine,' and so on.
+     * Sets the deviceType property value. The type of the device. For example, &apos;temperature sensor,&apos; &apos;freezer,&apos; &apos;wind turbine,&apos; and so on.
      * @param value Value to set for the deviceType property.
      */
     public void setDeviceType(@jakarta.annotation.Nullable final String value) {

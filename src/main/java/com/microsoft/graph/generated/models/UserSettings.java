@@ -25,7 +25,7 @@ public class UserSettings extends Entity implements Parsable {
         return new UserSettings();
     }
     /**
-     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn&apos;t have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("contributionToContentDiscoveryAsOrganizationDisabled");
     }
     /**
-     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected. Users can control this setting in Office Delve.
+     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user&apos;s trending API is disabled. When set to true, documents in the user&apos;s Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected. Users can control this setting in Office Delve.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class UserSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
+     * Gets the itemInsights property value. The user&apos;s settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @return a {@link UserInsightsSettings}
      */
     @jakarta.annotation.Nullable
@@ -102,21 +102,21 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("windows", this.getWindows());
     }
     /**
-     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn&apos;t have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
      */
     public void setContributionToContentDiscoveryAsOrganizationDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("contributionToContentDiscoveryAsOrganizationDisabled", value);
     }
     /**
-     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected. Users can control this setting in Office Delve.
+     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user&apos;s trending API is disabled. When set to true, documents in the user&apos;s Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected. Users can control this setting in Office Delve.
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
      */
     public void setContributionToContentDiscoveryDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("contributionToContentDiscoveryDisabled", value);
     }
     /**
-     * Sets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
+     * Sets the itemInsights property value. The user&apos;s settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @param value Value to set for the itemInsights property.
      */
     public void setItemInsights(@jakarta.annotation.Nullable final UserInsightsSettings value) {

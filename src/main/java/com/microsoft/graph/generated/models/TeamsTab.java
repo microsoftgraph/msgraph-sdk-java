@@ -54,7 +54,7 @@ public class TeamsTab extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the teamsApp property value. The application that is linked to the tab. This can't be changed after tab creation.
+     * Gets the teamsApp property value. The application that is linked to the tab. This can&apos;t be changed after tab creation.
      * @return a {@link TeamsApp}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class TeamsTab extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the teamsApp property value. The application that is linked to the tab. This can't be changed after tab creation.
+     * Sets the teamsApp property value. The application that is linked to the tab. This can&apos;t be changed after tab creation.
      * @param value Value to set for the teamsApp property.
      */
     public void setTeamsApp(@jakarta.annotation.Nullable final TeamsApp value) {

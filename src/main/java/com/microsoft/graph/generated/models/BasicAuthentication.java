@@ -37,7 +37,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
         return deserializerMap;
     }
     /**
-     * Gets the password property value. The password. It isn't returned in the responses.
+     * Gets the password property value. The password. It isn&apos;t returned in the responses.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
         writer.writeStringValue("username", this.getUsername());
     }
     /**
-     * Sets the password property value. The password. It isn't returned in the responses.
+     * Sets the password property value. The password. It isn&apos;t returned in the responses.
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {

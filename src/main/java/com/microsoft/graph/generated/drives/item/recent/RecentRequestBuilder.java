@@ -36,7 +36,7 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/recent(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user's drive and items they have access to from other drives.
+     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user&apos;s drive and items they have access to from other drives.
      * @return a {@link RecentGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/drive-recent?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user's drive and items they have access to from other drives.
+     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user&apos;s drive and items they have access to from other drives.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RecentGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RecentGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user's drive and items they have access to from other drives.
+     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user&apos;s drive and items they have access to from other drives.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user's drive and items they have access to from other drives.
+     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user&apos;s drive and items they have access to from other drives.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +90,7 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
         return new RecentRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user's drive and items they have access to from other drives.
+     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user&apos;s drive and items they have access to from other drives.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

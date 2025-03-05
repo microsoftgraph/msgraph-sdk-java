@@ -204,7 +204,7 @@ public class RangeWithAddressRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the boundingRect method.
-     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @param anotherRange Usage: anotherRange=&apos;{anotherRange}&apos;
      * @return a {@link BoundingRectWithAnotherRangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -256,7 +256,7 @@ public class RangeWithAddressRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Instantiates a new {@link RangeWithAddressRequestBuilder} and sets the default values.
-     * @param address Usage: address='{address}'
+     * @param address Usage: address=&apos;{address}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -296,7 +296,7 @@ public class RangeWithAddressRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the intersection method.
-     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @param anotherRange Usage: anotherRange=&apos;{anotherRange}&apos;
      * @return a {@link IntersectionWithAnotherRangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull

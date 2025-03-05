@@ -22,7 +22,7 @@ public class GetOneDriveUsageStorageWithPeriodRequestBuilder extends BaseRequest
     /**
      * Instantiates a new {@link GetOneDriveUsageStorageWithPeriodRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
-     * @param period Usage: period='{period}'
+     * @param period Usage: period=&apos;{period}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetOneDriveUsageStorageWithPeriodRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String period) {
@@ -38,7 +38,7 @@ public class GetOneDriveUsageStorageWithPeriodRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/reports/getOneDriveUsageStorage(period='{period}')", rawUrl);
     }
     /**
-     * Get the trend on the amount of storage you're using in OneDrive for Business.
+     * Get the trend on the amount of storage you&apos;re using in OneDrive for Business.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getonedriveusagestorage?view=graph-rest-1.0">Find more info here</a>
@@ -48,7 +48,7 @@ public class GetOneDriveUsageStorageWithPeriodRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get the trend on the amount of storage you're using in OneDrive for Business.
+     * Get the trend on the amount of storage you&apos;re using in OneDrive for Business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -62,7 +62,7 @@ public class GetOneDriveUsageStorageWithPeriodRequestBuilder extends BaseRequest
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the trend on the amount of storage you're using in OneDrive for Business.
+     * Get the trend on the amount of storage you&apos;re using in OneDrive for Business.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class GetOneDriveUsageStorageWithPeriodRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get the trend on the amount of storage you're using in OneDrive for Business.
+     * Get the trend on the amount of storage you&apos;re using in OneDrive for Business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

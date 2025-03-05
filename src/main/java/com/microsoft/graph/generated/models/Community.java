@@ -75,7 +75,7 @@ public class Community extends Entity implements Parsable {
         return this.backingStore.get("groupId");
     }
     /**
-     * Gets the owners property value. The admins of the community. Limited to 100 users. If this property isn't specified when you create the community, the calling user is automatically assigned as the community owner.
+     * Gets the owners property value. The admins of the community. Limited to 100 users. If this property isn&apos;t specified when you create the community, the calling user is automatically assigned as the community owner.
      * @return a {@link java.util.List<User>}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class Community extends Entity implements Parsable {
         this.backingStore.set("groupId", value);
     }
     /**
-     * Sets the owners property value. The admins of the community. Limited to 100 users. If this property isn't specified when you create the community, the calling user is automatically assigned as the community owner.
+     * Sets the owners property value. The admins of the community. Limited to 100 users. If this property isn&apos;t specified when you create the community, the calling user is automatically assigned as the community owner.
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<User> value) {

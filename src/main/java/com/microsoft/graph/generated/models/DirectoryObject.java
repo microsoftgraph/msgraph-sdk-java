@@ -63,7 +63,7 @@ public class DirectoryObject extends Entity implements Parsable {
         return new DirectoryObject();
     }
     /**
-     * Gets the deletedDateTime property value. Date and time when this object was deleted. Always null when the object hasn't been deleted.
+     * Gets the deletedDateTime property value. Date and time when this object was deleted. Always null when the object hasn&apos;t been deleted.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class DirectoryObject extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("deletedDateTime", this.getDeletedDateTime());
     }
     /**
-     * Sets the deletedDateTime property value. Date and time when this object was deleted. Always null when the object hasn't been deleted.
+     * Sets the deletedDateTime property value. Date and time when this object was deleted. Always null when the object hasn&apos;t been deleted.
      * @param value Value to set for the deletedDateTime property.
      */
     public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

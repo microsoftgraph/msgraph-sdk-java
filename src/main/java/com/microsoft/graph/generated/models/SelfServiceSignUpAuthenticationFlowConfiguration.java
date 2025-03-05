@@ -67,7 +67,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
+     * Gets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn&apos;t a key. Required.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
         this.backingStore = value;
     }
     /**
-     * Sets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
+     * Sets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn&apos;t a key. Required.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

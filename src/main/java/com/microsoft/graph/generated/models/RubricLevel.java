@@ -86,7 +86,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
+     * Gets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it&apos;s a points rubric.
      * @return a {@link EducationAssignmentGradeType}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class RubricLevel implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it's a points rubric.
+     * Sets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it&apos;s a points rubric.
      * @param value Value to set for the grading property.
      */
     public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {

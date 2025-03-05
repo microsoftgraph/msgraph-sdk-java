@@ -25,7 +25,7 @@ public class WorkbookRangeFill extends Entity implements Parsable {
         return new WorkbookRangeFill();
     }
     /**
-     * Gets the color property value. HTML color code representing the color of the border line. Can either be of the form #RRGGBB, for example 'FFA500', or be a named HTML color, for example 'orange'.
+     * Gets the color property value. HTML color code representing the color of the border line. Can either be of the form #RRGGBB, for example &apos;FFA500&apos;, or be a named HTML color, for example &apos;orange&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class WorkbookRangeFill extends Entity implements Parsable {
         writer.writeStringValue("color", this.getColor());
     }
     /**
-     * Sets the color property value. HTML color code representing the color of the border line. Can either be of the form #RRGGBB, for example 'FFA500', or be a named HTML color, for example 'orange'.
+     * Sets the color property value. HTML color code representing the color of the border line. Can either be of the form #RRGGBB, for example &apos;FFA500&apos;, or be a named HTML color, for example &apos;orange&apos;.
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final String value) {

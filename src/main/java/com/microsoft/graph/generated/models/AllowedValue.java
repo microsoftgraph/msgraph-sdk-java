@@ -35,7 +35,7 @@ public class AllowedValue extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
+     * Gets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can&apos;t be assigned to any other supported directory objects.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AllowedValue extends Entity implements Parsable {
         writer.writeBooleanValue("isActive", this.getIsActive());
     }
     /**
-     * Sets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
+     * Sets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value can&apos;t be assigned to any other supported directory objects.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {

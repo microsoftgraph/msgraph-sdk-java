@@ -96,7 +96,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
+     * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell&apos;s icon.
      * @return a {@link WorkbookIcon}
      */
     @jakarta.annotation.Nullable
@@ -179,7 +179,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("dataOption", value);
     }
     /**
-     * Sets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
+     * Sets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell&apos;s icon.
      * @param value Value to set for the icon property.
      */
     public void setIcon(@jakarta.annotation.Nullable final WorkbookIcon value) {

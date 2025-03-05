@@ -22,7 +22,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
      * Instantiates a new {@link GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param secretReferenceValueId Usage: secretReferenceValueId='{secretReferenceValueId}'
+     * @param secretReferenceValueId Usage: secretReferenceValueId=&apos;{secretReferenceValueId}&apos;
      */
     public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String secretReferenceValueId) {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/getOmaSettingPlainTextValue(secretReferenceValueId='{secretReferenceValueId}')", pathParameters);

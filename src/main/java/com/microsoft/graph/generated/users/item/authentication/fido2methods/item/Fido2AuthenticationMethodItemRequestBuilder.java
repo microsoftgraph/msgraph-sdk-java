@@ -37,7 +37,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/fido2Methods/{fido2AuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Deletes a user&apos;s FIDO2 Security Key Authentication Method object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         delete(null);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Deletes a user&apos;s FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, Fido2AuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Deletes a user&apos;s FIDO2 Security Key Authentication Method object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a user's FIDO2 Security Key Authentication Method object.
+     * Deletes a user&apos;s FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

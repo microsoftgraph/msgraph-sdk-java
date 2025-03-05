@@ -156,7 +156,7 @@ public class Message extends OutlookItem implements Parsable {
         return this.backingStore.get("from");
     }
     /**
-     * Gets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
+     * Gets the hasAttachments property value. Indicates whether the message has attachments. This property doesn&apos;t include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &lt;IMG src=&apos;cid:image001.jpg@01D26CD8.6C05F070&apos;&gt;.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -204,7 +204,7 @@ public class Message extends OutlookItem implements Parsable {
         return this.backingStore.get("isDeliveryReceiptRequested");
     }
     /**
-     * Gets the isDraft property value. Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
+     * Gets the isDraft property value. Indicates whether the message is a draft. A message is a draft if it hasn&apos;t been sent yet.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -236,7 +236,7 @@ public class Message extends OutlookItem implements Parsable {
         return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
-     * Gets the parentFolderId property value. The unique identifier for the message's parent mailFolder.
+     * Gets the parentFolderId property value. The unique identifier for the message&apos;s parent mailFolder.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -424,7 +424,7 @@ public class Message extends OutlookItem implements Parsable {
         this.backingStore.set("from", value);
     }
     /**
-     * Sets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
+     * Sets the hasAttachments property value. Indicates whether the message has attachments. This property doesn&apos;t include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &lt;IMG src=&apos;cid:image001.jpg@01D26CD8.6C05F070&apos;&gt;.
      * @param value Value to set for the hasAttachments property.
      */
     public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
@@ -466,7 +466,7 @@ public class Message extends OutlookItem implements Parsable {
         this.backingStore.set("isDeliveryReceiptRequested", value);
     }
     /**
-     * Sets the isDraft property value. Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
+     * Sets the isDraft property value. Indicates whether the message is a draft. A message is a draft if it hasn&apos;t been sent yet.
      * @param value Value to set for the isDraft property.
      */
     public void setIsDraft(@jakarta.annotation.Nullable final Boolean value) {
@@ -494,7 +494,7 @@ public class Message extends OutlookItem implements Parsable {
         this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
-     * Sets the parentFolderId property value. The unique identifier for the message's parent mailFolder.
+     * Sets the parentFolderId property value. The unique identifier for the message&apos;s parent mailFolder.
      * @param value Value to set for the parentFolderId property.
      */
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {

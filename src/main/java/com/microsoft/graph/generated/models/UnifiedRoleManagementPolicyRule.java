@@ -46,7 +46,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
+     * Gets the target property value. Defines details of scope that&apos;s targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      * @return a {@link UnifiedRoleManagementPolicyRuleTarget}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
+     * Sets the target property value. Defines details of scope that&apos;s targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final UnifiedRoleManagementPolicyRuleTarget value) {

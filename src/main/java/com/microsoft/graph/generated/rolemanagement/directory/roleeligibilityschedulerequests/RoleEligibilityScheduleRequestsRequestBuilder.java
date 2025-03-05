@@ -62,7 +62,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     }
     /**
      * Provides operations to call the filterByCurrentUser method.
-     * @param on Usage: on='{on}'
+     * @param on Usage: on=&apos;{on}&apos;
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
      */
     @jakarta.annotation.Nonnull

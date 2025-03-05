@@ -23,7 +23,7 @@ public class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestB
      * Instantiates a new {@link GetEffectivePermissionsWithScopeRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param scope Usage: scope='{scope}'
+     * @param scope Usage: scope=&apos;{scope}&apos;
      */
     public GetEffectivePermissionsWithScopeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String scope) {
         super(requestAdapter, "{+baseurl}/deviceManagement/getEffectivePermissions(scope='{scope}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

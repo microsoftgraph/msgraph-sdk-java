@@ -102,7 +102,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("requestor");
     }
     /**
-     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can't be changed once set.
+     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can&apos;t be changed once set.
      * @return a {@link AccessPackageRequestType}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("requestType");
     }
     /**
-     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
+     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can&apos;t be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
      * @return a {@link EntitlementManagementSchedule}
      */
     @jakarta.annotation.Nullable
@@ -202,14 +202,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("requestor", value);
     }
     /**
-     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can't be changed once set.
+     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can&apos;t be changed once set.
      * @param value Value to set for the requestType property.
      */
     public void setRequestType(@jakarta.annotation.Nullable final AccessPackageRequestType value) {
         this.backingStore.set("requestType", value);
     }
     /**
-     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
+     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can&apos;t be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {

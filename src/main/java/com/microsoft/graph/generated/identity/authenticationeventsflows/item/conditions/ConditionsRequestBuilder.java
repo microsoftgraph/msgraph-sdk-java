@@ -46,7 +46,7 @@ public class ConditionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/conditions{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
+     * The conditions representing the context of the authentication request that&apos;s used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @return a {@link AuthenticationConditions}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -55,7 +55,7 @@ public class ConditionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
+     * The conditions representing the context of the authentication request that&apos;s used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationConditions}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -68,7 +68,7 @@ public class ConditionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationConditions::createFromDiscriminatorValue);
     }
     /**
-     * The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
+     * The conditions representing the context of the authentication request that&apos;s used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class ConditionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
+     * The conditions representing the context of the authentication request that&apos;s used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +98,7 @@ public class ConditionsRequestBuilder extends BaseRequestBuilder {
         return new ConditionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
+     * The conditions representing the context of the authentication request that&apos;s used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

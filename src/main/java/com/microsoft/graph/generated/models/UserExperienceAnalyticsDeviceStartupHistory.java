@@ -118,7 +118,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
         return this.backingStore.get("isFirstLogin");
     }
     /**
-     * Gets the operatingSystemVersion property value. The user experience analytics device boot record's operating system version. Supports: $select, $OrderBy. Read-only.
+     * Gets the operatingSystemVersion property value. The user experience analytics device boot record&apos;s operating system version. Supports: $select, $OrderBy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
         return this.backingStore.get("restartStopCode");
     }
     /**
-     * Gets the startTime property value. The device boot start time. The value cannot be modified and is automatically populated when the device performs a reboot. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Gets the startTime property value. The device boot start time. The value cannot be modified and is automatically populated when the device performs a reboot. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: &apos;2022-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -262,7 +262,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
         this.backingStore.set("isFirstLogin", value);
     }
     /**
-     * Sets the operatingSystemVersion property value. The user experience analytics device boot record's operating system version. Supports: $select, $OrderBy. Read-only.
+     * Sets the operatingSystemVersion property value. The user experience analytics device boot record&apos;s operating system version. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the operatingSystemVersion property.
      */
     public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
@@ -297,7 +297,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
         this.backingStore.set("restartStopCode", value);
     }
     /**
-     * Sets the startTime property value. The device boot start time. The value cannot be modified and is automatically populated when the device performs a reboot. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Sets the startTime property value. The device boot start time. The value cannot be modified and is automatically populated when the device performs a reboot. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: &apos;2022-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @param value Value to set for the startTime property.
      */
     public void setStartTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

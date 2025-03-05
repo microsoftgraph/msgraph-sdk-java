@@ -33,7 +33,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this.backingStore.get("boolean");
     }
     /**
-     * Gets the calculated property value. This column's data is calculated based on other columns.
+     * Gets the calculated property value. This column&apos;s data is calculated based on other columns.
      * @return a {@link CalculatedColumn}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this.backingStore.get("isSealed");
     }
     /**
-     * Gets the lookup property value. This column's data is looked up from another source in the site.
+     * Gets the lookup property value. This column&apos;s data is looked up from another source in the site.
      * @return a {@link LookupColumn}
      */
     @jakarta.annotation.Nullable
@@ -242,7 +242,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this.backingStore.get("personOrGroup");
     }
     /**
-     * Gets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
+     * Gets the propagateChanges property value. If &apos;true&apos;, changes to this column will be propagated to lists that implement the column.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -258,7 +258,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this.backingStore.get("readOnly");
     }
     /**
-     * Gets the required property value. Specifies whether the column value isn't optional.
+     * Gets the required property value. Specifies whether the column value isn&apos;t optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -369,7 +369,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this.backingStore.set("boolean", value);
     }
     /**
-     * Sets the calculated property value. This column's data is calculated based on other columns.
+     * Sets the calculated property value. This column&apos;s data is calculated based on other columns.
      * @param value Value to set for the calculated property.
      */
     public void setCalculated(@jakarta.annotation.Nullable final CalculatedColumn value) {
@@ -488,7 +488,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this.backingStore.set("isSealed", value);
     }
     /**
-     * Sets the lookup property value. This column's data is looked up from another source in the site.
+     * Sets the lookup property value. This column&apos;s data is looked up from another source in the site.
      * @param value Value to set for the lookup property.
      */
     public void setLookup(@jakarta.annotation.Nullable final LookupColumn value) {
@@ -516,7 +516,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this.backingStore.set("personOrGroup", value);
     }
     /**
-     * Sets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
+     * Sets the propagateChanges property value. If &apos;true&apos;, changes to this column will be propagated to lists that implement the column.
      * @param value Value to set for the propagateChanges property.
      */
     public void setPropagateChanges(@jakarta.annotation.Nullable final Boolean value) {
@@ -530,7 +530,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this.backingStore.set("readOnly", value);
     }
     /**
-     * Sets the required property value. Specifies whether the column value isn't optional.
+     * Sets the required property value. Specifies whether the column value isn&apos;t optional.
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {

@@ -101,7 +101,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("deviceCategory");
     }
     /**
-     * Gets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
+     * Gets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator &apos;eq&apos; and &apos;or&apos;. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("emailAddress");
     }
     /**
-     * Gets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
+     * Gets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator &apos;lt&apos; and &apos;gt&apos;. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -314,7 +314,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("freeStorageSpaceInBytes");
     }
     /**
-     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card&apos;s unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -346,7 +346,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("isSupervised");
     }
     /**
-     * Gets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
+     * Gets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator &apos;eq&apos; and &apos;or&apos;. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -354,7 +354,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("jailBroken");
     }
     /**
-     * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
+     * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator &apos;lt&apos; and &apos;gt&apos;. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -665,7 +665,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.backingStore.set("deviceCategory", value);
     }
     /**
-     * Sets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
+     * Sets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator &apos;eq&apos; and &apos;or&apos;. This property is read-only.
      * @param value Value to set for the deviceCategoryDisplayName property.
      */
     public void setDeviceCategoryDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -742,7 +742,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.backingStore.set("emailAddress", value);
     }
     /**
-     * Sets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
+     * Sets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator &apos;lt&apos; and &apos;gt&apos;. This property is read-only.
      * @param value Value to set for the enrolledDateTime property.
      */
     public void setEnrolledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -791,7 +791,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.backingStore.set("freeStorageSpaceInBytes", value);
     }
     /**
-     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card&apos;s unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the iccid property.
      */
     public void setIccid(@jakarta.annotation.Nullable final String value) {
@@ -819,14 +819,14 @@ public class ManagedDevice extends Entity implements Parsable {
         this.backingStore.set("isSupervised", value);
     }
     /**
-     * Sets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
+     * Sets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator &apos;eq&apos; and &apos;or&apos;. This property is read-only.
      * @param value Value to set for the jailBroken property.
      */
     public void setJailBroken(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("jailBroken", value);
     }
     /**
-     * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
+     * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator &apos;lt&apos; and &apos;gt&apos;. This property is read-only.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

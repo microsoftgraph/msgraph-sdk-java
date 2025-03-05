@@ -72,7 +72,7 @@ public class WorkbookTable extends Entity implements Parsable {
         return this.backingStore.get("highlightLastColumn");
     }
     /**
-     * Gets the legacyId property value. A legacy identifier used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
+     * Gets the legacyId property value. A legacy identifier used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn&apos;t be parsed to any other type. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -203,7 +203,7 @@ public class WorkbookTable extends Entity implements Parsable {
         this.backingStore.set("highlightLastColumn", value);
     }
     /**
-     * Sets the legacyId property value. A legacy identifier used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
+     * Sets the legacyId property value. A legacy identifier used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn&apos;t be parsed to any other type. Read-only.
      * @param value Value to set for the legacyId property.
      */
     public void setLegacyId(@jakarta.annotation.Nullable final String value) {

@@ -157,7 +157,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the privacyPolicyWebUrl property value. URL of a webpage that provides the terms and conditions of the business. If a privacy policy isn't included, the following text appears on the booking page as default: 'The policies and practices of {bookingbusinessname} apply to the use of your data.'
+     * Gets the privacyPolicyWebUrl property value. URL of a webpage that provides the terms and conditions of the business. If a privacy policy isn&apos;t included, the following text appears on the booking page as default: &apos;The policies and practices of {bookingbusinessname} apply to the use of your data.&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -278,7 +278,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the privacyPolicyWebUrl property value. URL of a webpage that provides the terms and conditions of the business. If a privacy policy isn't included, the following text appears on the booking page as default: 'The policies and practices of {bookingbusinessname} apply to the use of your data.'
+     * Sets the privacyPolicyWebUrl property value. URL of a webpage that provides the terms and conditions of the business. If a privacy policy isn&apos;t included, the following text appears on the booking page as default: &apos;The policies and practices of {bookingbusinessname} apply to the use of your data.&apos;
      * @param value Value to set for the privacyPolicyWebUrl property.
      */
     public void setPrivacyPolicyWebUrl(@jakarta.annotation.Nullable final String value) {

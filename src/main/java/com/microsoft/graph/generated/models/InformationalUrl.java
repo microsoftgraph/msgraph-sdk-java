@@ -71,7 +71,7 @@ public class InformationalUrl implements AdditionalDataHolder, BackedModel, Pars
         return deserializerMap;
     }
     /**
-     * Gets the logoUrl property value. CDN URL to the application's logo, Read-only.
+     * Gets the logoUrl property value. CDN URL to the application&apos;s logo, Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class InformationalUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("logoUrl");
     }
     /**
-     * Gets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
+     * Gets the marketingUrl property value. Link to the application&apos;s marketing page. For example, https://www.contoso.com/app/marketing
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class InformationalUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
+     * Gets the privacyStatementUrl property value. Link to the application&apos;s privacy statement. For example, https://www.contoso.com/app/privacy
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class InformationalUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("privacyStatementUrl");
     }
     /**
-     * Gets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
+     * Gets the supportUrl property value. Link to the application&apos;s support page. For example, https://www.contoso.com/app/support
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class InformationalUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("supportUrl");
     }
     /**
-     * Gets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
+     * Gets the termsOfServiceUrl property value. Link to the application&apos;s terms of service statement. For example, https://www.contoso.com/app/termsofservice
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,14 +148,14 @@ public class InformationalUrl implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the logoUrl property value. CDN URL to the application's logo, Read-only.
+     * Sets the logoUrl property value. CDN URL to the application&apos;s logo, Read-only.
      * @param value Value to set for the logoUrl property.
      */
     public void setLogoUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("logoUrl", value);
     }
     /**
-     * Sets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
+     * Sets the marketingUrl property value. Link to the application&apos;s marketing page. For example, https://www.contoso.com/app/marketing
      * @param value Value to set for the marketingUrl property.
      */
     public void setMarketingUrl(@jakarta.annotation.Nullable final String value) {
@@ -169,21 +169,21 @@ public class InformationalUrl implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
+     * Sets the privacyStatementUrl property value. Link to the application&apos;s privacy statement. For example, https://www.contoso.com/app/privacy
      * @param value Value to set for the privacyStatementUrl property.
      */
     public void setPrivacyStatementUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("privacyStatementUrl", value);
     }
     /**
-     * Sets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
+     * Sets the supportUrl property value. Link to the application&apos;s support page. For example, https://www.contoso.com/app/support
      * @param value Value to set for the supportUrl property.
      */
     public void setSupportUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("supportUrl", value);
     }
     /**
-     * Sets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
+     * Sets the termsOfServiceUrl property value. Link to the application&apos;s terms of service statement. For example, https://www.contoso.com/app/termsofservice
      * @param value Value to set for the termsOfServiceUrl property.
      */
     public void setTermsOfServiceUrl(@jakarta.annotation.Nullable final String value) {

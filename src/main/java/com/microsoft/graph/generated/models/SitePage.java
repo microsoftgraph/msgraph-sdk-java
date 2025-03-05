@@ -82,7 +82,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         return this.backingStore.get("showRecommendedPages");
     }
     /**
-     * Gets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
+     * Gets the thumbnailWebUrl property value. Url of the sitePage&apos;s thumbnail image
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class SitePage extends BaseSitePage implements Parsable {
         this.backingStore.set("showRecommendedPages", value);
     }
     /**
-     * Sets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
+     * Sets the thumbnailWebUrl property value. Url of the sitePage&apos;s thumbnail image
      * @param value Value to set for the thumbnailWebUrl property.
      */
     public void setThumbnailWebUrl(@jakarta.annotation.Nullable final String value) {

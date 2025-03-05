@@ -573,7 +573,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Read properties and relationships of the deviceManagement object.
      * @return a {@link DeviceManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement get() {
@@ -584,7 +584,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-wip-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -595,7 +595,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getEffectivePermissions method.
-     * @param scope Usage: scope='{scope}'
+     * @param scope Usage: scope=&apos;{scope}&apos;
      * @return a {@link GetEffectivePermissionsWithScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -608,7 +608,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link DeviceManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
@@ -620,7 +620,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -676,7 +676,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
-     * @param domainName Usage: domainName='{domainName}'
+     * @param domainName Usage: domainName=&apos;{domainName}&apos;
      * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull

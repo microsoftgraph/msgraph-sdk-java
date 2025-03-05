@@ -70,7 +70,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Backe
         return deserializerMap;
     }
     /**
-     * Gets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
+     * Gets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn&apos;t yet expired but whose notBefore time is in the past.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Backe
         return this.backingStore.get("isActive");
     }
     /**
-     * Gets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * Gets the notAfter property value. The certificate&apos;s expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Backe
         return this.backingStore.get("notAfter");
     }
     /**
-     * Gets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * Gets the notBefore property value. The certificate&apos;s issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn't yet expired but whose notBefore time is in the past.
+     * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate that isn&apos;t yet expired but whose notBefore time is in the past.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isActive", value);
     }
     /**
-     * Sets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * Sets the notAfter property value. The certificate&apos;s expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @param value Value to set for the notAfter property.
      */
     public void setNotAfter(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("notAfter", value);
     }
     /**
-     * Sets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * Sets the notBefore property value. The certificate&apos;s issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @param value Value to set for the notBefore property.
      */
     public void setNotBefore(@jakarta.annotation.Nullable final Long value) {

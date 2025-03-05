@@ -81,7 +81,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("content");
     }
     /**
-     * Gets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
+     * Gets the description property value. Optional. Longer text description of the user&apos;s unique activity (example: document name, first sentence, and/or metadata)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
+     * Gets the displayText property value. Required. Short text description of the user&apos;s unique activity (for example, document name in cases where an activity refers to document creation)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -170,14 +170,14 @@ public class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
+     * Sets the description property value. Optional. Longer text description of the user&apos;s unique activity (example: document name, first sentence, and/or metadata)
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
+     * Sets the displayText property value. Required. Short text description of the user&apos;s unique activity (for example, document name in cases where an activity refers to document creation)
      * @param value Value to set for the displayText property.
      */
     public void setDisplayText(@jakarta.annotation.Nullable final String value) {

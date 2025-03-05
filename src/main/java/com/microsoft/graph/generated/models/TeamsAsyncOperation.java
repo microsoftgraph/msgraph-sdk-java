@@ -91,7 +91,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
+     * Gets the targetResourceId property value. The ID of the object that&apos;s created or modified as result of this async operation, typically a team.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
         return this.backingStore.get("targetResourceId");
     }
     /**
-     * Gets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
+     * Gets the targetResourceLocation property value. The location of the object that&apos;s created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -165,14 +165,14 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
+     * Sets the targetResourceId property value. The ID of the object that&apos;s created or modified as result of this async operation, typically a team.
      * @param value Value to set for the targetResourceId property.
      */
     public void setTargetResourceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetResourceId", value);
     }
     /**
-     * Sets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
+     * Sets the targetResourceLocation property value. The location of the object that&apos;s created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
      * @param value Value to set for the targetResourceLocation property.
      */
     public void setTargetResourceLocation(@jakarta.annotation.Nullable final String value) {

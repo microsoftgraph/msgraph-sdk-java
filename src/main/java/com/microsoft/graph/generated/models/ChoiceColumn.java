@@ -48,7 +48,7 @@ public class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable
         return value;
     }
     /**
-     * Gets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
+     * Gets the allowTextEntry property value. If true, allows custom values that aren&apos;t in the configured choices.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
+     * Sets the allowTextEntry property value. If true, allows custom values that aren&apos;t in the configured choices.
      * @param value Value to set for the allowTextEntry property.
      */
     public void setAllowTextEntry(@jakarta.annotation.Nullable final Boolean value) {

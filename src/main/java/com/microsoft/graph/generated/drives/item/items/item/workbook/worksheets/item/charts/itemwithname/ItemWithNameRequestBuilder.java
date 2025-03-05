@@ -114,7 +114,7 @@ public class ItemWithNameRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Instantiates a new {@link ItemWithNameRequestBuilder} and sets the default values.
-     * @param name Usage: name='{name}'
+     * @param name Usage: name=&apos;{name}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -176,7 +176,7 @@ public class ItemWithNameRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the image method.
-     * @param fittingMode Usage: fittingMode='{fittingMode}'
+     * @param fittingMode Usage: fittingMode=&apos;{fittingMode}&apos;
      * @param height Usage: height={height}
      * @param width Usage: width={width}
      * @return a {@link ImageWithWidthWithHeightWithFittingModeRequestBuilder}

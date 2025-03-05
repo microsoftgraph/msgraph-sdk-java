@@ -64,7 +64,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore;
     }
     /**
-     * Gets the errorCode property value. Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
+     * Gets the errorCode property value. Provides the 5-6 digit error code that&apos;s generated during a sign-in failure. Check out the list of error codes and messages.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the errorCode property value. Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
+     * Sets the errorCode property value. Provides the 5-6 digit error code that&apos;s generated during a sign-in failure. Check out the list of error codes and messages.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {

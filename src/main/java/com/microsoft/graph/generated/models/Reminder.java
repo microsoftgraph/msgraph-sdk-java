@@ -96,7 +96,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("eventStartTime");
     }
     /**
-     * Gets the eventSubject property value. The text of the event's subject line.
+     * Gets the eventSubject property value. The text of the event&apos;s subject line.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("eventSubject");
     }
     /**
-     * Gets the eventWebLink property value. The URL to open the event in Outlook on the web.The event opens in the browser if you're logged in to your mailbox via Outlook on the web. You're prompted to log in if you aren't already logged in with the browser.This URL can't be accessed from within an iFrame.
+     * Gets the eventWebLink property value. The URL to open the event in Outlook on the web.The event opens in the browser if you&apos;re logged in to your mailbox via Outlook on the web. You&apos;re prompted to log in if you aren&apos;t already logged in with the browser.This URL can&apos;t be accessed from within an iFrame.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -213,14 +213,14 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("eventStartTime", value);
     }
     /**
-     * Sets the eventSubject property value. The text of the event's subject line.
+     * Sets the eventSubject property value. The text of the event&apos;s subject line.
      * @param value Value to set for the eventSubject property.
      */
     public void setEventSubject(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("eventSubject", value);
     }
     /**
-     * Sets the eventWebLink property value. The URL to open the event in Outlook on the web.The event opens in the browser if you're logged in to your mailbox via Outlook on the web. You're prompted to log in if you aren't already logged in with the browser.This URL can't be accessed from within an iFrame.
+     * Sets the eventWebLink property value. The URL to open the event in Outlook on the web.The event opens in the browser if you&apos;re logged in to your mailbox via Outlook on the web. You&apos;re prompted to log in if you aren&apos;t already logged in with the browser.This URL can&apos;t be accessed from within an iFrame.
      * @param value Value to set for the eventWebLink property.
      */
     public void setEventWebLink(@jakarta.annotation.Nullable final String value) {

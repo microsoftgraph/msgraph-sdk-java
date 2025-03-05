@@ -78,7 +78,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         return this.backingStore.get("enterpriseDomain");
     }
     /**
-     * Gets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
+     * Gets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, &apos;157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59&apos;. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
      * @return a {@link java.util.List<WindowsInformationProtectionResourceCollection>}
      */
     @jakarta.annotation.Nullable
@@ -248,7 +248,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         return this.backingStore.get("protectionUnderLockConfigRequired");
     }
     /**
-     * Gets the revokeOnUnenrollDisabled property value. This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
+     * Gets the revokeOnUnenrollDisabled property value. This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don&apos;t revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -340,7 +340,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         this.backingStore.set("enterpriseDomain", value);
     }
     /**
-     * Sets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
+     * Sets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, &apos;157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59&apos;. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
      * @param value Value to set for the enterpriseInternalProxyServers property.
      */
     public void setEnterpriseInternalProxyServers(@jakarta.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
@@ -459,7 +459,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         this.backingStore.set("protectionUnderLockConfigRequired", value);
     }
     /**
-     * Sets the revokeOnUnenrollDisabled property value. This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
+     * Sets the revokeOnUnenrollDisabled property value. This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don&apos;t revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
      * @param value Value to set for the revokeOnUnenrollDisabled property.
      */
     public void setRevokeOnUnenrollDisabled(@jakarta.annotation.Nullable final Boolean value) {

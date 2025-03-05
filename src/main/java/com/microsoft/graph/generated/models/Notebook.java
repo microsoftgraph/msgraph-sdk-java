@@ -43,7 +43,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isDefault property value. Indicates whether this is the user's default notebook. Read-only.
+     * Gets the isDefault property value. Indicates whether this is the user&apos;s default notebook. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         return this.backingStore.get("isShared");
     }
     /**
-     * Gets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+     * Gets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it&apos;s installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      * @return a {@link NotebookLinks}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         writer.writeEnumValue("userRole", this.getUserRole());
     }
     /**
-     * Sets the isDefault property value. Indicates whether this is the user's default notebook. Read-only.
+     * Sets the isDefault property value. Indicates whether this is the user&apos;s default notebook. Read-only.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
@@ -137,7 +137,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         this.backingStore.set("isShared", value);
     }
     /**
-     * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+     * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it&apos;s installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final NotebookLinks value) {

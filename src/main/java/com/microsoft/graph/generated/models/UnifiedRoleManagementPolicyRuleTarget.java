@@ -56,7 +56,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         return this.backingStore;
     }
     /**
-     * Gets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
+     * Gets the caller property value. The type of caller that&apos;s the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         return this.backingStore.get("inheritableSettings");
     }
     /**
-     * Gets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
+     * Gets the level property value. The role assignment type that&apos;s the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
+     * Sets the caller property value. The type of caller that&apos;s the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @param value Value to set for the caller property.
      */
     public void setCaller(@jakarta.annotation.Nullable final String value) {
@@ -179,7 +179,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         this.backingStore.set("inheritableSettings", value);
     }
     /**
-     * Sets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
+     * Sets the level property value. The role assignment type that&apos;s the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @param value Value to set for the level property.
      */
     public void setLevel(@jakarta.annotation.Nullable final String value) {

@@ -51,7 +51,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
         return value;
     }
     /**
-     * Gets the address property value. Address to the proxy server. Specify an address in the format [':']
+     * Gets the address property value. Address to the proxy server. Specify an address in the format [&apos;:&apos;]
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Backed
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the address property value. Address to the proxy server. Specify an address in the format [':']
+     * Sets the address property value. Address to the proxy server. Specify an address in the format [&apos;:&apos;]
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final String value) {

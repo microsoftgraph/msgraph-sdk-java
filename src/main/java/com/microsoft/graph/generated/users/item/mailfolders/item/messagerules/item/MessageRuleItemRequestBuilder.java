@@ -55,7 +55,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      * @return a {@link MessageRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MessageRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * The collection of rules that apply to the user&apos;s Inbox folder.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

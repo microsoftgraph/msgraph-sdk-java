@@ -130,7 +130,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("currency");
     }
     /**
-     * Gets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
+     * Gets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user&apos;s location.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -203,7 +203,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("id");
     }
     /**
-     * Gets the inventoryType property value. User's phone number type, such as a service of toll-free number.
+     * Gets the inventoryType property value. User&apos;s phone number type, such as a service of toll-free number.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -267,7 +267,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("userDisplayName");
     }
     /**
-     * Gets the userId property value. Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * Gets the userId property value. Calling user&apos;s ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -275,7 +275,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user&apos;s SIP address, and can be the same as the user&apos;s email address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -393,7 +393,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("currency", value);
     }
     /**
-     * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user's location.
+     * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region), based on the user&apos;s location.
      * @param value Value to set for the destinationContext property.
      */
     public void setDestinationContext(@jakarta.annotation.Nullable final String value) {
@@ -428,7 +428,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the inventoryType property value. User's phone number type, such as a service of toll-free number.
+     * Sets the inventoryType property value. User&apos;s phone number type, such as a service of toll-free number.
      * @param value Value to set for the inventoryType property.
      */
     public void setInventoryType(@jakarta.annotation.Nullable final String value) {
@@ -484,14 +484,14 @@ public class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("userDisplayName", value);
     }
     /**
-     * Sets the userId property value. Calling user's ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * Sets the userId property value. Calling user&apos;s ID in Microsoft Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be the same as the user's email address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user&apos;s SIP address, and can be the same as the user&apos;s email address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

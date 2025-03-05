@@ -29,7 +29,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
         return new WindowsDefenderAdvancedThreatProtectionConfiguration();
     }
     /**
-     * Gets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
+     * Gets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection &apos;Allow Sample Sharing&apos; Rule
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
         writer.writeBooleanValue("enableExpeditedTelemetryReporting", this.getEnableExpeditedTelemetryReporting());
     }
     /**
-     * Sets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
+     * Sets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection &apos;Allow Sample Sharing&apos; Rule
      * @param value Value to set for the allowSampleSharing property.
      */
     public void setAllowSampleSharing(@jakarta.annotation.Nullable final Boolean value) {

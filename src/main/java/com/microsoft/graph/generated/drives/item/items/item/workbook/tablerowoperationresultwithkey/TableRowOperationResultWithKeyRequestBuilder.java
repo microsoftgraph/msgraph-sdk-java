@@ -21,7 +21,7 @@ import java.util.Objects;
 public class TableRowOperationResultWithKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link TableRowOperationResultWithKeyRequestBuilder} and sets the default values.
-     * @param key Usage: key='{key}'
+     * @param key Usage: key=&apos;{key}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

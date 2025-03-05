@@ -82,7 +82,7 @@ public class HostComponent extends Artifact implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
+     * Gets the version property value. The component version running on the artifact, for example, v8.5. This shouldn&apos;t be assumed to be strictly numerical.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class HostComponent extends Artifact implements Parsable {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the version property value. The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
+     * Sets the version property value. The component version running on the artifact, for example, v8.5. This shouldn&apos;t be assumed to be strictly numerical.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

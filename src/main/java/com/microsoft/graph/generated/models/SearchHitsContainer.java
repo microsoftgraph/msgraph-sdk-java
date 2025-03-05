@@ -102,7 +102,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
+     * Gets the total property value. The total number of results. Note this isn&apos;t the number of results on the page, but the total number of results satisfying the query.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the total property value. The total number of results. Note this isn't the number of results on the page, but the total number of results satisfying the query.
+     * Sets the total property value. The total number of results. Note this isn&apos;t the number of results on the page, but the total number of results satisfying the query.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Integer value) {

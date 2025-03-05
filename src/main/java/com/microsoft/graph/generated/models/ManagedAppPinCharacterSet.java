@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Character set which is to be used for a user's app PIN
+ * Character set which is to be used for a user&apos;s app PIN
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppPinCharacterSet implements ValuedEnum {

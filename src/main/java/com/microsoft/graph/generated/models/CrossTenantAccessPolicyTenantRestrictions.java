@@ -26,7 +26,7 @@ public class CrossTenantAccessPolicyTenantRestrictions extends CrossTenantAccess
         return new CrossTenantAccessPolicyTenantRestrictions();
     }
     /**
-     * Gets the devices property value. Defines the rule for filtering devices and whether devices that satisfy the rule should be allowed or blocked. This property isn't supported on the server side yet.
+     * Gets the devices property value. Defines the rule for filtering devices and whether devices that satisfy the rule should be allowed or blocked. This property isn&apos;t supported on the server side yet.
      * @return a {@link DevicesFilter}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CrossTenantAccessPolicyTenantRestrictions extends CrossTenantAccess
         writer.writeObjectValue("devices", this.getDevices());
     }
     /**
-     * Sets the devices property value. Defines the rule for filtering devices and whether devices that satisfy the rule should be allowed or blocked. This property isn't supported on the server side yet.
+     * Sets the devices property value. Defines the rule for filtering devices and whether devices that satisfy the rule should be allowed or blocked. This property isn&apos;t supported on the server side yet.
      * @param value Value to set for the devices property.
      */
     public void setDevices(@jakarta.annotation.Nullable final DevicesFilter value) {

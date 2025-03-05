@@ -9,7 +9,7 @@ public enum BrowserSiteMergeType implements ValuedEnum {
     NoMerge("noMerge"),
     /** Default merge type */
     Default("default"),
-    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary. */
+    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn&apos;t be necessary. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     BrowserSiteMergeType(final String value) {

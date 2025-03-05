@@ -25,7 +25,7 @@ public class TeamworkTag extends Entity implements Parsable {
         return new TeamworkTag();
     }
     /**
-     * Gets the description property value. The description of the tag as it appears to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
+     * Gets the description property value. The description of the tag as it appears to the user in Microsoft Teams. A teamworkTag can&apos;t have more than 200 teamworkTagMembers.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class TeamworkTag extends Entity implements Parsable {
         writer.writeStringValue("teamId", this.getTeamId());
     }
     /**
-     * Sets the description property value. The description of the tag as it appears to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
+     * Sets the description property value. The description of the tag as it appears to the user in Microsoft Teams. A teamworkTag can&apos;t have more than 200 teamworkTagMembers.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

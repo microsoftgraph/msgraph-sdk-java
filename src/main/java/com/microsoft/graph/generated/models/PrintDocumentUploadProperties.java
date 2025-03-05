@@ -56,7 +56,7 @@ public class PrintDocumentUploadProperties implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the contentType property value. The document's content (MIME) type.
+     * Gets the contentType property value. The document&apos;s content (MIME) type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class PrintDocumentUploadProperties implements AdditionalDataHolder, Back
         return this.backingStore.get("contentType");
     }
     /**
-     * Gets the documentName property value. The document's name.
+     * Gets the documentName property value. The document&apos;s name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class PrintDocumentUploadProperties implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the size property value. The document's size in bytes.
+     * Gets the size property value. The document&apos;s size in bytes.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class PrintDocumentUploadProperties implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the contentType property value. The document's content (MIME) type.
+     * Sets the contentType property value. The document&apos;s content (MIME) type.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("contentType", value);
     }
     /**
-     * Sets the documentName property value. The document's name.
+     * Sets the documentName property value. The document&apos;s name.
      * @param value Value to set for the documentName property.
      */
     public void setDocumentName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class PrintDocumentUploadProperties implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the size property value. The document's size in bytes.
+     * Sets the size property value. The document&apos;s size in bytes.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {

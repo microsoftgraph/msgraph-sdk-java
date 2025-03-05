@@ -90,7 +90,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("department");
     }
     /**
-     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
+     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user&apos;s first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("passwordPolicies");
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      * @return a {@link PasswordProfile}
      */
     @jakarta.annotation.Nullable
@@ -321,7 +321,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("student");
     }
     /**
-     * Gets the surname property value. The user's surname (family name or last name). Supports $filter.
+     * Gets the surname property value. The user&apos;s surname (family name or last name). Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -361,7 +361,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("user");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user&apos;s email name. The general format is alias@domain, where domain must be present in the tenant&apos;s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -479,7 +479,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("department", value);
     }
     /**
-     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
+     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user&apos;s first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -563,7 +563,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("passwordPolicies", value);
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      * @param value Value to set for the passwordProfile property.
      */
     public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
@@ -640,7 +640,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("student", value);
     }
     /**
-     * Sets the surname property value. The user's surname (family name or last name). Supports $filter.
+     * Sets the surname property value. The user&apos;s surname (family name or last name). Supports $filter.
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
@@ -675,7 +675,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("user", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user&apos;s email name. The general format is alias@domain, where domain must be present in the tenant&apos;s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

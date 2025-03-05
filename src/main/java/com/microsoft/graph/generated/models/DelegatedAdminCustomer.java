@@ -45,7 +45,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Gets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that&apos;s managed by delegated administration.
      * @return a {@link java.util.List<DelegatedAdminServiceManagementDetail>}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Sets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that&apos;s managed by delegated administration.
      * @param value Value to set for the serviceManagementDetails property.
      */
     public void setServiceManagementDetails(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminServiceManagementDetail> value) {

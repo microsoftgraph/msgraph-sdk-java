@@ -87,7 +87,7 @@ public class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("lastAccessedTime");
     }
     /**
-     * Gets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+     * Gets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it&apos;s installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      * @return a {@link RecentNotebookLinks}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("lastAccessedTime", value);
     }
     /**
-     * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+     * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it&apos;s installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final RecentNotebookLinks value) {

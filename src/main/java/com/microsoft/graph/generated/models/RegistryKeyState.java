@@ -132,7 +132,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("operation");
     }
     /**
-     * Gets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
+     * Gets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert &apos;processes&apos; collection).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("operation", value);
     }
     /**
-     * Sets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
+     * Sets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert &apos;processes&apos; collection).
      * @param value Value to set for the processId property.
      */
     public void setProcessId(@jakarta.annotation.Nullable final Integer value) {

@@ -104,7 +104,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the preAuthorizedApplications property value. Lists the client applications that are preauthorized with the specified delegated permissions to access this application's APIs. Users aren't required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
+     * Gets the preAuthorizedApplications property value. Lists the client applications that are preauthorized with the specified delegated permissions to access this application&apos;s APIs. Users aren&apos;t required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
      * @return a {@link java.util.List<PreAuthorizedApplication>}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class ApiApplication implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the preAuthorizedApplications property value. Lists the client applications that are preauthorized with the specified delegated permissions to access this application's APIs. Users aren't required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
+     * Sets the preAuthorizedApplications property value. Lists the client applications that are preauthorized with the specified delegated permissions to access this application&apos;s APIs. Users aren&apos;t required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
      * @param value Value to set for the preAuthorizedApplications property.
      */
     public void setPreAuthorizedApplications(@jakarta.annotation.Nullable final java.util.List<PreAuthorizedApplication> value) {

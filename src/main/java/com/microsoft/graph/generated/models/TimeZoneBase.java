@@ -74,7 +74,7 @@ public class TimeZoneBase implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name of a time zone. It can be a standard time zone name such as 'Hawaii-Aleutian Standard Time', or 'Customized Time Zone' for a custom time zone.
+     * Gets the name property value. The name of a time zone. It can be a standard time zone name such as &apos;Hawaii-Aleutian Standard Time&apos;, or &apos;Customized Time Zone&apos; for a custom time zone.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class TimeZoneBase implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. The name of a time zone. It can be a standard time zone name such as 'Hawaii-Aleutian Standard Time', or 'Customized Time Zone' for a custom time zone.
+     * Sets the name property value. The name of a time zone. It can be a standard time zone name such as &apos;Hawaii-Aleutian Standard Time&apos;, or &apos;Customized Time Zone&apos; for a custom time zone.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

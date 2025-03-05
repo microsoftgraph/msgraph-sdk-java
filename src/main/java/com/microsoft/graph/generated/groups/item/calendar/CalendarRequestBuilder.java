@@ -5,6 +5,7 @@ import com.microsoft.graph.groups.item.calendar.calendarpermissions.CalendarPerm
 import com.microsoft.graph.groups.item.calendar.calendarview.CalendarViewRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.events.EventsRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.getschedule.GetScheduleRequestBuilder;
+import com.microsoft.graph.groups.item.calendar.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -58,8 +59,16 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return new GetScheduleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the allowedCalendarSharingRoles method.
-     * @param User Usage: User='{User}'
+     * @param User Usage: User=&apos;{User}&apos;
      * @return a {@link AllowedCalendarSharingRolesWithUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +93,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendar{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The group's calendar. Read-only.
+     * The group&apos;s calendar. Read-only.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -93,7 +102,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The group's calendar. Read-only.
+     * The group&apos;s calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -106,7 +115,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Calendar::createFromDiscriminatorValue);
     }
     /**
-     * The group's calendar. Read-only.
+     * The group&apos;s calendar. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +123,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The group's calendar. Read-only.
+     * The group&apos;s calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +145,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return new CalendarRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The group's calendar. Read-only.
+     * The group&apos;s calendar. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

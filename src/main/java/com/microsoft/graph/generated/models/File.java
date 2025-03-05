@@ -69,7 +69,7 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hashes property value. Hashes of the file's binary content, if available. Read-only.
+     * Gets the hashes property value. Hashes of the file&apos;s binary content, if available. Read-only.
      * @return a {@link Hashes}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the hashes property value. Hashes of the file's binary content, if available. Read-only.
+     * Sets the hashes property value. Hashes of the file&apos;s binary content, if available. Read-only.
      * @param value Value to set for the hashes property.
      */
     public void setHashes(@jakarta.annotation.Nullable final Hashes value) {

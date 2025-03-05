@@ -48,7 +48,7 @@ public class AttributeDefinition implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
-     * Gets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
+     * Gets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object&apos;s attributes must be designated as the anchor to support synchronization.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AttributeDefinition implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the flowNullValues property value. 'true' to allow null values for attributes.
+     * Gets the flowNullValues property value. &apos;true&apos; to allow null values for attributes.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class AttributeDefinition implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
+     * Sets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object&apos;s attributes must be designated as the anchor to support synchronization.
      * @param value Value to set for the anchor property.
      */
     public void setAnchor(@jakarta.annotation.Nullable final Boolean value) {
@@ -246,7 +246,7 @@ public class AttributeDefinition implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("defaultValue", value);
     }
     /**
-     * Sets the flowNullValues property value. 'true' to allow null values for attributes.
+     * Sets the flowNullValues property value. &apos;true&apos; to allow null values for attributes.
      * @param value Value to set for the flowNullValues property.
      */
     public void setFlowNullValues(@jakarta.annotation.Nullable final Boolean value) {

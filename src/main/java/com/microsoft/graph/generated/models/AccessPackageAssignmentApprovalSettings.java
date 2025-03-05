@@ -69,7 +69,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         return deserializerMap;
     }
     /**
-     * Gets the isApprovalRequiredForAdd property value. If false, then approval isn't required for new requests in this policy.
+     * Gets the isApprovalRequiredForAdd property value. If false, then approval isn&apos;t required for new requests in this policy.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         return this.backingStore.get("isApprovalRequiredForAdd");
     }
     /**
-     * Gets the isApprovalRequiredForUpdate property value. If false, then approval isn't required for updates to requests in this policy.
+     * Gets the isApprovalRequiredForUpdate property value. If false, then approval isn&apos;t required for updates to requests in this policy.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         this.backingStore = value;
     }
     /**
-     * Sets the isApprovalRequiredForAdd property value. If false, then approval isn't required for new requests in this policy.
+     * Sets the isApprovalRequiredForAdd property value. If false, then approval isn&apos;t required for new requests in this policy.
      * @param value Value to set for the isApprovalRequiredForAdd property.
      */
     public void setIsApprovalRequiredForAdd(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isApprovalRequiredForAdd", value);
     }
     /**
-     * Sets the isApprovalRequiredForUpdate property value. If false, then approval isn't required for updates to requests in this policy.
+     * Sets the isApprovalRequiredForUpdate property value. If false, then approval isn&apos;t required for updates to requests in this policy.
      * @param value Value to set for the isApprovalRequiredForUpdate property.
      */
     public void setIsApprovalRequiredForUpdate(@jakarta.annotation.Nullable final Boolean value) {

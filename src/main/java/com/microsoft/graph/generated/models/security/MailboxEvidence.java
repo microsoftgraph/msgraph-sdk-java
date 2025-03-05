@@ -42,6 +42,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("primaryAddress", (n) -> { this.setPrimaryAddress(n.getStringValue()); });
+        deserializerMap.put("upn", (n) -> { this.setUpn(n.getStringValue()); });
         deserializerMap.put("userAccount", (n) -> { this.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -52,6 +53,14 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nullable
     public String getPrimaryAddress() {
         return this.backingStore.get("primaryAddress");
+    }
+    /**
+     * Gets the upn property value. The user principal name of the mailbox.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getUpn() {
+        return this.backingStore.get("upn");
     }
     /**
      * Gets the userAccount property value. The user account of the mailbox.
@@ -70,6 +79,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("primaryAddress", this.getPrimaryAddress());
+        writer.writeStringValue("upn", this.getUpn());
         writer.writeObjectValue("userAccount", this.getUserAccount());
     }
     /**
@@ -85,6 +95,13 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      */
     public void setPrimaryAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("primaryAddress", value);
+    }
+    /**
+     * Sets the upn property value. The user principal name of the mailbox.
+     * @param value Value to set for the upn property.
+     */
+    public void setUpn(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("upn", value);
     }
     /**
      * Sets the userAccount property value. The user account of the mailbox.

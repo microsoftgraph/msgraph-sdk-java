@@ -62,7 +62,7 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Provides operations to call the filterByCurrentUser method.
-     * @param on Usage: on='{on}'
+     * @param on Usage: on=&apos;{on}&apos;
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
      */
     @jakarta.annotation.Nonnull

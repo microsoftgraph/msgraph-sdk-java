@@ -35,7 +35,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+     * Gets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user&apos;s Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+     * Sets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user&apos;s Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Device value) {

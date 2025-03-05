@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         return this.backingStore.get("appReliabilityScore");
     }
     /**
-     * Gets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Gets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device&apos;s battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         this.backingStore.set("appReliabilityScore", value);
     }
     /**
-     * Sets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Sets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device&apos;s battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the batteryHealthScore property.
      */
     public void setBatteryHealthScore(@jakarta.annotation.Nullable final Double value) {

@@ -11,6 +11,7 @@ import com.microsoft.graph.users.item.events.item.dismissreminder.DismissReminde
 import com.microsoft.graph.users.item.events.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.users.item.events.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.users.item.events.item.instances.InstancesRequestBuilder;
+import com.microsoft.graph.users.item.events.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.users.item.events.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.users.item.events.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -104,6 +105,14 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return new InstancesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the snoozeReminder method.
      * @return a {@link SnoozeReminderRequestBuilder}
      */
@@ -154,7 +163,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * The user&apos;s events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -163,7 +172,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * The user&apos;s events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -221,7 +230,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * The user&apos;s events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -229,7 +238,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * The user&apos;s events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -281,7 +290,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * The user&apos;s events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

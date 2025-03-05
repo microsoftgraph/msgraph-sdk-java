@@ -56,7 +56,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
         return this.backingStore;
     }
     /**
-     * Gets the complianceUrl property value. The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
+     * Gets the complianceUrl property value. The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn&apos;t say in chats)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
         return this.backingStore.get("generalText");
     }
     /**
-     * Gets the matchedConditionDescriptions property value. The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
+     * Gets the matchedConditionDescriptions property value. The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include &apos;Credit Card Number&apos; and &apos;Social Security Number&apos;.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
         this.backingStore = value;
     }
     /**
-     * Sets the complianceUrl property value. The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
+     * Sets the complianceUrl property value. The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn&apos;t say in chats)
      * @param value Value to set for the complianceUrl property.
      */
     public void setComplianceUrl(@jakarta.annotation.Nullable final String value) {
@@ -142,7 +142,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
         this.backingStore.set("generalText", value);
     }
     /**
-     * Sets the matchedConditionDescriptions property value. The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
+     * Sets the matchedConditionDescriptions property value. The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include &apos;Credit Card Number&apos; and &apos;Social Security Number&apos;.
      * @param value Value to set for the matchedConditionDescriptions property.
      */
     public void setMatchedConditionDescriptions(@jakarta.annotation.Nullable final java.util.List<String> value) {

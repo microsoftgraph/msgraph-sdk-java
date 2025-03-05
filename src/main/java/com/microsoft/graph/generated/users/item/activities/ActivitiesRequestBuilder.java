@@ -69,7 +69,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/activities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      * @return a {@link UserActivityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -78,7 +78,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserActivityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -116,7 +116,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserActivity::createFromDiscriminatorValue);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +170,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return new ActivitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user's activities across devices. Read-only. Nullable.
+     * The user&apos;s activities across devices. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

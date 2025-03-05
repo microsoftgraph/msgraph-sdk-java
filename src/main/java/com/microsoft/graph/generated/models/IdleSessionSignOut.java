@@ -93,7 +93,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("signOutAfterInSeconds");
     }
     /**
-     * Gets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they'll be signed out.
+     * Gets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they&apos;ll be signed out.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("signOutAfterInSeconds", value);
     }
     /**
-     * Sets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they'll be signed out.
+     * Sets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they&apos;ll be signed out.
      * @param value Value to set for the warnAfterInSeconds property.
      */
     public void setWarnAfterInSeconds(@jakarta.annotation.Nullable final Long value) {

@@ -62,7 +62,7 @@ public class AttachmentBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the name property value. The display name of the attachment. This doesn't need to be the actual file name.
+     * Gets the name property value. The display name of the attachment. This doesn&apos;t need to be the actual file name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class AttachmentBase extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the name property value. The display name of the attachment. This doesn't need to be the actual file name.
+     * Sets the name property value. The display name of the attachment. This doesn&apos;t need to be the actual file name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

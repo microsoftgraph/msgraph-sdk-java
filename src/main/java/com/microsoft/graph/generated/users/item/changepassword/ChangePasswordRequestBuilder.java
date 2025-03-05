@@ -35,7 +35,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/changePassword", rawUrl);
     }
     /**
-     * Update the signed-in user's password. Any user can update their password without belonging to any administrator role.
+     * Update the signed-in user&apos;s password. Any user can update their password without belonging to any administrator role.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-changepassword?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +44,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Update the signed-in user's password. Any user can update their password without belonging to any administrator role.
+     * Update the signed-in user&apos;s password. Any user can update their password without belonging to any administrator role.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Update the signed-in user's password. Any user can update their password without belonging to any administrator role.
+     * Update the signed-in user&apos;s password. Any user can update their password without belonging to any administrator role.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class ChangePasswordRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update the signed-in user's password. Any user can update their password without belonging to any administrator role.
+     * Update the signed-in user&apos;s password. Any user can update their password without belonging to any administrator role.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

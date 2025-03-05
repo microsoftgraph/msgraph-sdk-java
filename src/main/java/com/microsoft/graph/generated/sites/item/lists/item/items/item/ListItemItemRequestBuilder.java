@@ -164,9 +164,9 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getActivitiesByInterval method.
-     * @param endDateTime Usage: endDateTime='{endDateTime}'
-     * @param interval Usage: interval='{interval}'
-     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @param endDateTime Usage: endDateTime=&apos;{endDateTime}&apos;
+     * @param interval Usage: interval=&apos;{interval}&apos;
+     * @param startDateTime Usage: startDateTime=&apos;{startDateTime}&apos;
      * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
      */
     @jakarta.annotation.Nonnull

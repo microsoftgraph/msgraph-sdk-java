@@ -87,7 +87,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("lastName");
     }
     /**
-     * Gets the preferredLanguage property value. The registrant's preferred language.
+     * Gets the preferredLanguage property value. The registrant&apos;s preferred language.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("preferredLanguage");
     }
     /**
-     * Gets the preferredTimezone property value. The registrant's time zone details.
+     * Gets the preferredTimezone property value. The registrant&apos;s time zone details.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("registrationDateTime");
     }
     /**
-     * Gets the registrationQuestionAnswers property value. The registrant's answer to the registration questions.
+     * Gets the registrationQuestionAnswers property value. The registrant&apos;s answer to the registration questions.
      * @return a {@link java.util.List<VirtualEventRegistrationQuestionAnswer>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userId property value. The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
+     * Gets the userId property value. The registrant&apos;s ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -198,14 +198,14 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         this.backingStore.set("lastName", value);
     }
     /**
-     * Sets the preferredLanguage property value. The registrant's preferred language.
+     * Sets the preferredLanguage property value. The registrant&apos;s preferred language.
      * @param value Value to set for the preferredLanguage property.
      */
     public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("preferredLanguage", value);
     }
     /**
-     * Sets the preferredTimezone property value. The registrant's time zone details.
+     * Sets the preferredTimezone property value. The registrant&apos;s time zone details.
      * @param value Value to set for the preferredTimezone property.
      */
     public void setPreferredTimezone(@jakarta.annotation.Nullable final String value) {
@@ -219,7 +219,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         this.backingStore.set("registrationDateTime", value);
     }
     /**
-     * Sets the registrationQuestionAnswers property value. The registrant's answer to the registration questions.
+     * Sets the registrationQuestionAnswers property value. The registrant&apos;s answer to the registration questions.
      * @param value Value to set for the registrationQuestionAnswers property.
      */
     public void setRegistrationQuestionAnswers(@jakarta.annotation.Nullable final java.util.List<VirtualEventRegistrationQuestionAnswer> value) {
@@ -240,7 +240,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userId property value. The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
+     * Sets the userId property value. The registrant&apos;s ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

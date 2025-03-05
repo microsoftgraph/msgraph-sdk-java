@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.contacts.item;
 import com.microsoft.graph.models.Contact;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.contacts.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.users.item.contacts.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.users.item.contacts.item.photo.PhotoRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,14 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the photo property of the microsoft.graph.contact entity.
@@ -73,7 +82,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The user's contacts. Read-only. Nullable.
+     * The user&apos;s contacts. Read-only. Nullable.
      * @return a {@link Contact}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +91,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's contacts. Read-only. Nullable.
+     * The user&apos;s contacts. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Contact}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +149,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's contacts. Read-only. Nullable.
+     * The user&apos;s contacts. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +157,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's contacts. Read-only. Nullable.
+     * The user&apos;s contacts. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +209,7 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The user's contacts. Read-only. Nullable.
+     * The user&apos;s contacts. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

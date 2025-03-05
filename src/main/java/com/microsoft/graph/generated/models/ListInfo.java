@@ -77,7 +77,7 @@ public class ListInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. If true, indicates that the list isn't normally visible in the SharePoint user experience.
+     * Gets the hidden property value. If true, indicates that the list isn&apos;t normally visible in the SharePoint user experience.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class ListInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("contentTypesEnabled", value);
     }
     /**
-     * Sets the hidden property value. If true, indicates that the list isn't normally visible in the SharePoint user experience.
+     * Sets the hidden property value. If true, indicates that the list isn&apos;t normally visible in the SharePoint user experience.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {

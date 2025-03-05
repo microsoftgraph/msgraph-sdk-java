@@ -76,7 +76,7 @@ public class PageLinks implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the oneNoteClientUrl property value. Opens the page in the OneNote native client if it's installed.
+     * Gets the oneNoteClientUrl property value. Opens the page in the OneNote native client if it&apos;s installed.
      * @return a {@link ExternalLink}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class PageLinks implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the oneNoteClientUrl property value. Opens the page in the OneNote native client if it's installed.
+     * Sets the oneNoteClientUrl property value. Opens the page in the OneNote native client if it&apos;s installed.
      * @param value Value to set for the oneNoteClientUrl property.
      */
     public void setOneNoteClientUrl(@jakarta.annotation.Nullable final ExternalLink value) {

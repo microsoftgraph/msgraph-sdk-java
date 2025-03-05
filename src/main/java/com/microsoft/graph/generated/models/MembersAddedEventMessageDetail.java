@@ -55,7 +55,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
         return this.backingStore.get("members");
     }
     /**
-     * Gets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
+     * Gets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation&apos;s history is shared with the conversation members.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
+     * Sets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation&apos;s history is shared with the conversation members.
      * @param value Value to set for the visibleHistoryStartDateTime property.
      */
     public void setVisibleHistoryStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

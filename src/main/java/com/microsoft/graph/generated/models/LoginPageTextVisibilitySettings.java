@@ -72,7 +72,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
         return deserializerMap;
     }
     /**
-     * Gets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
+     * Gets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as &apos;Can&apos;t access your account?&apos;, &apos;Forgot my password&apos; and &apos;Reset it now&apos; on the sign-in form.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
         return this.backingStore.get("hideAccountResetCredentials");
     }
     /**
-     * Gets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
+     * Gets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) &apos;Can&apos;t access your account?&apos; hyperlink on the sign-in form.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
         return this.backingStore.get("hideCannotAccessYourAccount");
     }
     /**
-     * Gets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
+     * Gets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) &apos;Forgot my password&apos; hyperlink on the sign-in form.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
         return this.backingStore.get("hideForgotMyPassword");
     }
     /**
-     * Gets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
+     * Gets the hidePrivacyAndCookies property value. Option to hide the &apos;Privacy &amp; Cookies&apos; hyperlink in the footer.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
         return this.backingStore.get("hidePrivacyAndCookies");
     }
     /**
-     * Gets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
+     * Gets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) &apos;reset it now&apos; hyperlink on the sign-in form.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
         return this.backingStore.get("hideResetItNow");
     }
     /**
-     * Gets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
+     * Gets the hideTermsOfUse property value. Option to hide the &apos;Terms of Use&apos; hyperlink in the footer.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -158,42 +158,42 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Ba
         this.backingStore = value;
     }
     /**
-     * Sets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
+     * Sets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as &apos;Can&apos;t access your account?&apos;, &apos;Forgot my password&apos; and &apos;Reset it now&apos; on the sign-in form.
      * @param value Value to set for the hideAccountResetCredentials property.
      */
     public void setHideAccountResetCredentials(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hideAccountResetCredentials", value);
     }
     /**
-     * Sets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
+     * Sets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) &apos;Can&apos;t access your account?&apos; hyperlink on the sign-in form.
      * @param value Value to set for the hideCannotAccessYourAccount property.
      */
     public void setHideCannotAccessYourAccount(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hideCannotAccessYourAccount", value);
     }
     /**
-     * Sets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
+     * Sets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) &apos;Forgot my password&apos; hyperlink on the sign-in form.
      * @param value Value to set for the hideForgotMyPassword property.
      */
     public void setHideForgotMyPassword(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hideForgotMyPassword", value);
     }
     /**
-     * Sets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
+     * Sets the hidePrivacyAndCookies property value. Option to hide the &apos;Privacy &amp; Cookies&apos; hyperlink in the footer.
      * @param value Value to set for the hidePrivacyAndCookies property.
      */
     public void setHidePrivacyAndCookies(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hidePrivacyAndCookies", value);
     }
     /**
-     * Sets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
+     * Sets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) &apos;reset it now&apos; hyperlink on the sign-in form.
      * @param value Value to set for the hideResetItNow property.
      */
     public void setHideResetItNow(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hideResetItNow", value);
     }
     /**
-     * Sets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
+     * Sets the hideTermsOfUse property value. Option to hide the &apos;Terms of Use&apos; hyperlink in the footer.
      * @param value Value to set for the hideTermsOfUse property.
      */
     public void setHideTermsOfUse(@jakarta.annotation.Nullable final Boolean value) {

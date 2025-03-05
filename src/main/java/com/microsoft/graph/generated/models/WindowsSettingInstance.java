@@ -55,7 +55,7 @@ public class WindowsSettingInstance extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. Set by the server if not provided in the request from the Windows client device. Refers to the user's Windows device that modified the object at the specified dateTime in UTC.
+     * Gets the lastModifiedDateTime property value. Set by the server if not provided in the request from the Windows client device. Refers to the user&apos;s Windows device that modified the object at the specified dateTime in UTC.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class WindowsSettingInstance extends Entity implements Parsable {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Set by the server if not provided in the request from the Windows client device. Refers to the user's Windows device that modified the object at the specified dateTime in UTC.
+     * Sets the lastModifiedDateTime property value. Set by the server if not provided in the request from the Windows client device. Refers to the user&apos;s Windows device that modified the object at the specified dateTime in UTC.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

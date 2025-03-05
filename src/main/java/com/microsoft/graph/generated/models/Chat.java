@@ -115,7 +115,7 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("messages");
     }
     /**
-     * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+     * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn&apos;t associated with an online meeting, the property is empty. Read-only.
      * @return a {@link TeamworkOnlineMeetingInfo}
      */
     @jakarta.annotation.Nullable
@@ -259,7 +259,7 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("messages", value);
     }
     /**
-     * Sets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+     * Sets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn&apos;t associated with an online meeting, the property is empty. Read-only.
      * @param value Value to set for the onlineMeetingInfo property.
      */
     public void setOnlineMeetingInfo(@jakarta.annotation.Nullable final TeamworkOnlineMeetingInfo value) {

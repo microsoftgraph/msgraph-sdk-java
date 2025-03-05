@@ -22,7 +22,7 @@ public class GetMailboxUsageMailboxCountsWithPeriodRequestBuilder extends BaseRe
     /**
      * Instantiates a new {@link GetMailboxUsageMailboxCountsWithPeriodRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
-     * @param period Usage: period='{period}'
+     * @param period Usage: period=&apos;{period}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetMailboxUsageMailboxCountsWithPeriodRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String period) {

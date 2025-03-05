@@ -59,7 +59,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/drives{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      * @return a {@link DriveCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return new DrivesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -49,7 +49,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("adDomainUsername");
     }
     /**
-     * Gets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Returned only on $select.
+     * Gets the alternateResourceUrl property value. The interface URL of the partner service&apos;s resource that links to this Azure network connection. Returned only on $select.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("alternateResourceUrl");
     }
     /**
-     * Gets the connectionType property value. Specifies how the provisioned Cloud PC joins to Microsoft Entra. It includes different types, one is Microsoft Entra ID join, which means there's no on-premises Active Directory (AD) in the current tenant, and the Cloud PC device is joined by Microsoft Entra. Another one is hybridAzureADJoin, which means there's also an on-premises Active Directory (AD) in the current tenant and the Cloud PC device joins to on-premises Active Directory (AD) and Microsoft Entra. The type also determines which types of users can be assigned and can sign into a Cloud PC. The azureADJoin type indicates that cloud-only and hybrid users can be assigned and signed into the Cloud PC. hybridAzureADJoin indicates only hybrid users can be assigned and signed into the Cloud PC. The default value is hybridAzureADJoin.
+     * Gets the connectionType property value. Specifies how the provisioned Cloud PC joins to Microsoft Entra. It includes different types, one is Microsoft Entra ID join, which means there&apos;s no on-premises Active Directory (AD) in the current tenant, and the Cloud PC device is joined by Microsoft Entra. Another one is hybridAzureADJoin, which means there&apos;s also an on-premises Active Directory (AD) in the current tenant and the Cloud PC device joins to on-premises Active Directory (AD) and Microsoft Entra. The type also determines which types of users can be assigned and can sign into a Cloud PC. The azureADJoin type indicates that cloud-only and hybrid users can be assigned and signed into the Cloud PC. hybridAzureADJoin indicates only hybrid users can be assigned and signed into the Cloud PC. The default value is hybridAzureADJoin.
      * @return a {@link CloudPcOnPremisesConnectionType}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("healthCheckStatusDetail");
     }
     /**
-     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn&apos;t in use. You can&apos;t delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("inUse");
     }
     /**
-     * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant's Active Directory domain (OU) is used. Optional.
+     * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant&apos;s Active Directory domain (OU) is used. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("organizationalUnit");
     }
     /**
-     * Gets the resourceGroupId property value. The unique identifier of the target resource group used associated with the on-premises network connectivity for Cloud PCs. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}'
+     * Gets the resourceGroupId property value. The unique identifier of the target resource group used associated with the on-premises network connectivity for Cloud PCs. Required format: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("resourceGroupId");
     }
     /**
-     * Gets the subnetId property value. The unique identifier of the target subnet used associated with the on-premises network connectivity for Cloud PCs. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}'
+     * Gets the subnetId property value. The unique identifier of the target subnet used associated with the on-premises network connectivity for Cloud PCs. Required format: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("subscriptionName");
     }
     /**
-     * Gets the virtualNetworkId property value. The unique identifier of the target virtual network used associated with the on-premises network connectivity for Cloud PCs. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'
+     * Gets the virtualNetworkId property value. The unique identifier of the target virtual network used associated with the on-premises network connectivity for Cloud PCs. Required format: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -223,14 +223,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("adDomainUsername", value);
     }
     /**
-     * Sets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Returned only on $select.
+     * Sets the alternateResourceUrl property value. The interface URL of the partner service&apos;s resource that links to this Azure network connection. Returned only on $select.
      * @param value Value to set for the alternateResourceUrl property.
      */
     public void setAlternateResourceUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("alternateResourceUrl", value);
     }
     /**
-     * Sets the connectionType property value. Specifies how the provisioned Cloud PC joins to Microsoft Entra. It includes different types, one is Microsoft Entra ID join, which means there's no on-premises Active Directory (AD) in the current tenant, and the Cloud PC device is joined by Microsoft Entra. Another one is hybridAzureADJoin, which means there's also an on-premises Active Directory (AD) in the current tenant and the Cloud PC device joins to on-premises Active Directory (AD) and Microsoft Entra. The type also determines which types of users can be assigned and can sign into a Cloud PC. The azureADJoin type indicates that cloud-only and hybrid users can be assigned and signed into the Cloud PC. hybridAzureADJoin indicates only hybrid users can be assigned and signed into the Cloud PC. The default value is hybridAzureADJoin.
+     * Sets the connectionType property value. Specifies how the provisioned Cloud PC joins to Microsoft Entra. It includes different types, one is Microsoft Entra ID join, which means there&apos;s no on-premises Active Directory (AD) in the current tenant, and the Cloud PC device is joined by Microsoft Entra. Another one is hybridAzureADJoin, which means there&apos;s also an on-premises Active Directory (AD) in the current tenant and the Cloud PC device joins to on-premises Active Directory (AD) and Microsoft Entra. The type also determines which types of users can be assigned and can sign into a Cloud PC. The azureADJoin type indicates that cloud-only and hybrid users can be assigned and signed into the Cloud PC. hybridAzureADJoin indicates only hybrid users can be assigned and signed into the Cloud PC. The default value is hybridAzureADJoin.
      * @param value Value to set for the connectionType property.
      */
     public void setConnectionType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionType value) {
@@ -258,28 +258,28 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("healthCheckStatusDetail", value);
     }
     /**
-     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn&apos;t in use. You can&apos;t delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @param value Value to set for the inUse property.
      */
     public void setInUse(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("inUse", value);
     }
     /**
-     * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant's Active Directory domain (OU) is used. Optional.
+     * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant&apos;s Active Directory domain (OU) is used. Optional.
      * @param value Value to set for the organizationalUnit property.
      */
     public void setOrganizationalUnit(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("organizationalUnit", value);
     }
     /**
-     * Sets the resourceGroupId property value. The unique identifier of the target resource group used associated with the on-premises network connectivity for Cloud PCs. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}'
+     * Sets the resourceGroupId property value. The unique identifier of the target resource group used associated with the on-premises network connectivity for Cloud PCs. Required format: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}&apos;
      * @param value Value to set for the resourceGroupId property.
      */
     public void setResourceGroupId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceGroupId", value);
     }
     /**
-     * Sets the subnetId property value. The unique identifier of the target subnet used associated with the on-premises network connectivity for Cloud PCs. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}'
+     * Sets the subnetId property value. The unique identifier of the target subnet used associated with the on-premises network connectivity for Cloud PCs. Required format: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}&apos;
      * @param value Value to set for the subnetId property.
      */
     public void setSubnetId(@jakarta.annotation.Nullable final String value) {
@@ -300,7 +300,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("subscriptionName", value);
     }
     /**
-     * Sets the virtualNetworkId property value. The unique identifier of the target virtual network used associated with the on-premises network connectivity for Cloud PCs. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'
+     * Sets the virtualNetworkId property value. The unique identifier of the target virtual network used associated with the on-premises network connectivity for Cloud PCs. Required format: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}&apos;
      * @param value Value to set for the virtualNetworkId property.
      */
     public void setVirtualNetworkId(@jakarta.annotation.Nullable final String value) {

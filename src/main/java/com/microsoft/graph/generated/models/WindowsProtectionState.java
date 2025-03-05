@@ -46,7 +46,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         return this.backingStore.get("detectedMalwareState");
     }
     /**
-     * Gets the deviceState property value. Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
+     * Gets the deviceState property value. Indicates device&apos;s health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
      * @return a {@link EnumSet<WindowsDeviceHealthState>}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         return this.backingStore.get("deviceState");
     }
     /**
-     * Gets the engineVersion property value. Current endpoint protection engine's version
+     * Gets the engineVersion property value. Current endpoint protection engine&apos;s version
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -271,14 +271,14 @@ public class WindowsProtectionState extends Entity implements Parsable {
         this.backingStore.set("detectedMalwareState", value);
     }
     /**
-     * Sets the deviceState property value. Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
+     * Sets the deviceState property value. Indicates device&apos;s health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
      * @param value Value to set for the deviceState property.
      */
     public void setDeviceState(@jakarta.annotation.Nullable final EnumSet<WindowsDeviceHealthState> value) {
         this.backingStore.set("deviceState", value);
     }
     /**
-     * Sets the engineVersion property value. Current endpoint protection engine's version
+     * Sets the engineVersion property value. Current endpoint protection engine&apos;s version
      * @param value Value to set for the engineVersion property.
      */
     public void setEngineVersion(@jakarta.annotation.Nullable final String value) {

@@ -64,7 +64,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
         return this.backingStore.get("expirationBehavior");
     }
     /**
-     * Gets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
+     * Gets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don&apos;t respond.
      * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
         this.backingStore.set("expirationBehavior", value);
     }
     /**
-     * Sets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
+     * Sets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don&apos;t respond.
      * @param value Value to set for the fallbackReviewers property.
      */
     public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {

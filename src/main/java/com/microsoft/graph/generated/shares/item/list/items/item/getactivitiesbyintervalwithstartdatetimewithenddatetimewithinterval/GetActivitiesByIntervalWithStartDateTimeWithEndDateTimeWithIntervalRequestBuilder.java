@@ -21,11 +21,11 @@ import java.util.Objects;
 public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder} and sets the default values.
-     * @param endDateTime Usage: endDateTime='{endDateTime}'
-     * @param interval Usage: interval='{interval}'
+     * @param endDateTime Usage: endDateTime=&apos;{endDateTime}&apos;
+     * @param interval Usage: interval=&apos;{interval}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @param startDateTime Usage: startDateTime=&apos;{startDateTime}&apos;
      */
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String endDateTime, @jakarta.annotation.Nullable final String interval, @jakarta.annotation.Nullable final String startDateTime) {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}/getActivitiesByInterval(startDateTime='{startDateTime}',endDateTime='{endDateTime}',interval='{interval}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);

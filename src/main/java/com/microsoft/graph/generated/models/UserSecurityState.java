@@ -81,7 +81,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("domainName");
     }
     /**
-     * Gets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
+     * Gets the emailRole property value. For email-related alerts - user account&apos;s email &apos;role&apos;. Possible values are: unknown, sender, recipient.
      * @return a {@link EmailRole}
      */
     @jakarta.annotation.Nullable
@@ -260,7 +260,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("domainName", value);
     }
     /**
-     * Sets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
+     * Sets the emailRole property value. For email-related alerts - user account&apos;s email &apos;role&apos;. Possible values are: unknown, sender, recipient.
      * @param value Value to set for the emailRole property.
      */
     public void setEmailRole(@jakarta.annotation.Nullable final EmailRole value) {

@@ -83,7 +83,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Application::createFromDiscriminatorValue);
     }
     /**
-     * Create a new application object if it doesn't exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object.
      * @param body The request body
      * @return a {@link Application}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -94,7 +94,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Create a new application object if it doesn't exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Application}
@@ -150,7 +150,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new application object if it doesn't exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -159,7 +159,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new application object if it doesn't exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

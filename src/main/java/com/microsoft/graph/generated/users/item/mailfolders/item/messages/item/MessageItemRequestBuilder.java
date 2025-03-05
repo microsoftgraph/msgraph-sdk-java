@@ -10,6 +10,7 @@ import com.microsoft.graph.users.item.mailfolders.item.messages.item.createreply
 import com.microsoft.graph.users.item.mailfolders.item.messages.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.messages.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.messages.item.move.MoveRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.messages.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.messages.item.reply.ReplyRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.messages.item.replyall.ReplyAllRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.messages.item.send.SendRequestBuilder;
@@ -103,6 +104,14 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the reply method.

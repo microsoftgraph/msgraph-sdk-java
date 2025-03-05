@@ -27,7 +27,7 @@ public class UserSource extends DataSource implements Parsable {
         return new UserSource();
     }
     /**
-     * Gets the email property value. Email address of the user's mailbox.
+     * Gets the email property value. Email address of the user&apos;s mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class UserSource extends DataSource implements Parsable {
         return this.backingStore.get("includedSources");
     }
     /**
-     * Gets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
+     * Gets the siteWebUrl property value. The URL of the user&apos;s OneDrive for Business site. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class UserSource extends DataSource implements Parsable {
         writer.writeStringValue("siteWebUrl", this.getSiteWebUrl());
     }
     /**
-     * Sets the email property value. Email address of the user's mailbox.
+     * Sets the email property value. Email address of the user&apos;s mailbox.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
@@ -88,7 +88,7 @@ public class UserSource extends DataSource implements Parsable {
         this.backingStore.set("includedSources", value);
     }
     /**
-     * Sets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
+     * Sets the siteWebUrl property value. The URL of the user&apos;s OneDrive for Business site. Read-only.
      * @param value Value to set for the siteWebUrl property.
      */
     public void setSiteWebUrl(@jakarta.annotation.Nullable final String value) {

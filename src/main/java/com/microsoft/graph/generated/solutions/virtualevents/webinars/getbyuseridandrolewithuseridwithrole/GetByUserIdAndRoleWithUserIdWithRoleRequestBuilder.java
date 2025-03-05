@@ -23,8 +23,8 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
      * Instantiates a new {@link GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param role Usage: role='{role}'
-     * @param userId Usage: userId='{userId}'
+     * @param role Usage: role=&apos;{role}&apos;
+     * @param userId Usage: userId=&apos;{userId}&apos;
      */
     public GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String role, @jakarta.annotation.Nullable final String userId) {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/getByUserIdAndRole(userId='{userId}',role='{role}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);

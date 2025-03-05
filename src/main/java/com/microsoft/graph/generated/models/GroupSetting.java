@@ -45,7 +45,7 @@ public class GroupSetting extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the templateId property value. Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
+     * Gets the templateId property value. Unique identifier for the tenant-level groupSettingTemplates object that&apos;s been customized for this group-level settings object. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class GroupSetting extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the templateId property value. Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
+     * Sets the templateId property value. Unique identifier for the tenant-level groupSettingTemplates object that&apos;s been customized for this group-level settings object. Read-only.
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {

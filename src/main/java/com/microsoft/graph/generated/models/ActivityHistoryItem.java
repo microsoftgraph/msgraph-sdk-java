@@ -108,7 +108,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
+     * Gets the userTimezone property value. Optional. The timezone in which the user&apos;s device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
+     * Sets the userTimezone property value. Optional. The timezone in which the user&apos;s device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
      * @param value Value to set for the userTimezone property.
      */
     public void setUserTimezone(@jakarta.annotation.Nullable final String value) {

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * A termsAndConditions entity represents the metadata and contents of a given Terms and Conditions (T&C) policy. T&C policies contents are presented to users upon their first attempt to enroll into Intune and subsequently upon edits where an administrator has required re-acceptance. They enable administrators to communicate the provisions to which a user must agree in order to have devices enrolled into Intune.
+ * A termsAndConditions entity represents the metadata and contents of a given Terms and Conditions (T&amp;C) policy. T&amp;C policies contents are presented to users upon their first attempt to enroll into Intune and subsequently upon edits where an administrator has required re-acceptance. They enable administrators to communicate the provisions to which a user must agree in order to have devices enrolled into Intune.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditions extends Entity implements Parsable {
@@ -29,7 +29,7 @@ public class TermsAndConditions extends Entity implements Parsable {
         return new TermsAndConditions();
     }
     /**
-     * Gets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
+     * Gets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class TermsAndConditions extends Entity implements Parsable {
         return this.backingStore.get("acceptanceStatement");
     }
     /**
-     * Gets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
+     * Gets the acceptanceStatuses property value. The list of acceptance statuses for this T&amp;C policy.
      * @return a {@link java.util.List<TermsAndConditionsAcceptanceStatus>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class TermsAndConditions extends Entity implements Parsable {
         return this.backingStore.get("acceptanceStatuses");
     }
     /**
-     * Gets the assignments property value. The list of assignments for this T&C policy.
+     * Gets the assignments property value. The list of assignments for this T&amp;C policy.
      * @return a {@link java.util.List<TermsAndConditionsAssignment>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TermsAndConditions extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
-     * Gets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
+     * Gets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class TermsAndConditions extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. Administrator-supplied description of the T&C policy.
+     * Gets the description property value. Administrator-supplied description of the T&amp;C policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class TermsAndConditions extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Administrator-supplied name for the T&C policy.
+     * Gets the displayName property value. Administrator-supplied name for the T&amp;C policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class TermsAndConditions extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
+     * Gets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class TermsAndConditions extends Entity implements Parsable {
         return this.backingStore.get("title");
     }
     /**
-     * Gets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
+     * Gets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&amp;C policy.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -146,28 +146,28 @@ public class TermsAndConditions extends Entity implements Parsable {
         writer.writeIntegerValue("version", this.getVersion());
     }
     /**
-     * Sets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
+     * Sets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
      * @param value Value to set for the acceptanceStatement property.
      */
     public void setAcceptanceStatement(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("acceptanceStatement", value);
     }
     /**
-     * Sets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
+     * Sets the acceptanceStatuses property value. The list of acceptance statuses for this T&amp;C policy.
      * @param value Value to set for the acceptanceStatuses property.
      */
     public void setAcceptanceStatuses(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
         this.backingStore.set("acceptanceStatuses", value);
     }
     /**
-     * Sets the assignments property value. The list of assignments for this T&C policy.
+     * Sets the assignments property value. The list of assignments for this T&amp;C policy.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAssignment> value) {
         this.backingStore.set("assignments", value);
     }
     /**
-     * Sets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
+     * Sets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
      * @param value Value to set for the bodyText property.
      */
     public void setBodyText(@jakarta.annotation.Nullable final String value) {
@@ -181,14 +181,14 @@ public class TermsAndConditions extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. Administrator-supplied description of the T&C policy.
+     * Sets the description property value. Administrator-supplied description of the T&amp;C policy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Administrator-supplied name for the T&C policy.
+     * Sets the displayName property value. Administrator-supplied name for the T&amp;C policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -202,14 +202,14 @@ public class TermsAndConditions extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
+     * Sets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C policy.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("title", value);
     }
     /**
-     * Sets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
+     * Sets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&amp;C policy.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {

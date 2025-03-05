@@ -56,7 +56,7 @@ public class FileStorageContainerViewpoint implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the effectiveRole property value. The current user's effective role. Read-only.
+     * Gets the effectiveRole property value. The current user&apos;s effective role. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class FileStorageContainerViewpoint implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the effectiveRole property value. The current user's effective role. Read-only.
+     * Sets the effectiveRole property value. The current user&apos;s effective role. Read-only.
      * @param value Value to set for the effectiveRole property.
      */
     public void setEffectiveRole(@jakarta.annotation.Nullable final String value) {

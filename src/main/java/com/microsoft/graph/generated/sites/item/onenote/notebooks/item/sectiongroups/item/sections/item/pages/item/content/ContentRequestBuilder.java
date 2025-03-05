@@ -37,7 +37,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/onenote/notebooks/{notebook%2Did}/sectionGroups/{sectionGroup%2Did}/sections/{onenoteSection%2Did}/pages/{onenotePage%2Did}/content", rawUrl);
     }
     /**
-     * The page's HTML content.
+     * The page&apos;s HTML content.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The page's HTML content.
+     * The page&apos;s HTML content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * The page's HTML content.
+     * The page&apos;s HTML content.
      * @param body Binary request body
      * @return a {@link OnenotePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -69,7 +69,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * The page's HTML content.
+     * The page&apos;s HTML content.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenotePage}
@@ -84,7 +84,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnenotePage::createFromDiscriminatorValue);
     }
     /**
-     * The page's HTML content.
+     * The page&apos;s HTML content.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The page's HTML content.
+     * The page&apos;s HTML content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -104,7 +104,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The page's HTML content.
+     * The page&apos;s HTML content.
      * @param body Binary request body
      * @return a {@link RequestInformation}
      */
@@ -113,7 +113,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * The page's HTML content.
+     * The page&apos;s HTML content.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

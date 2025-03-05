@@ -248,7 +248,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("userDisplayName");
     }
     /**
-     * Gets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
+     * Gets the userId property value. Calling user&apos;s ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This value is usually the same as the user's SIP Address, and can be the same as the user's email address.
+     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This value is usually the same as the user&apos;s SIP Address, and can be the same as the user&apos;s email address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -449,14 +449,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("userDisplayName", value);
     }
     /**
-     * Sets the userId property value. Calling user's ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
+     * Sets the userId property value. Calling user&apos;s ID in Microsoft Graph. This and other user information is null/empty for bot call types. GUID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This value is usually the same as the user's SIP Address, and can be the same as the user's email address.
+     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This value is usually the same as the user&apos;s SIP Address, and can be the same as the user&apos;s email address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

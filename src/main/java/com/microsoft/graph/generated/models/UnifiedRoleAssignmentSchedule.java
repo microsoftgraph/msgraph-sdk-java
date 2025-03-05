@@ -25,7 +25,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         return new UnifiedRoleAssignmentSchedule();
     }
     /**
-     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
+     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it&apos;s null. Supports $expand.
      * @return a {@link UnifiedRoleEligibilitySchedule}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         writer.writeObjectValue("scheduleInfo", this.getScheduleInfo());
     }
     /**
-     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
+     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter shows the related eligible assignment for that activation. Otherwise, it&apos;s null. Supports $expand.
      * @param value Value to set for the activatedUsing property.
      */
     public void setActivatedUsing(@jakarta.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {

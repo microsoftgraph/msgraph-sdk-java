@@ -85,8 +85,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByUserIdAndRole method.
-     * @param role Usage: role='{role}'
-     * @param userId Usage: userId='{userId}'
+     * @param role Usage: role=&apos;{role}&apos;
+     * @param userId Usage: userId=&apos;{userId}&apos;
      * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByUserRole method.
-     * @param role Usage: role='{role}'
+     * @param role Usage: role=&apos;{role}&apos;
      * @return a {@link GetByUserRoleWithRoleRequestBuilder}
      */
     @jakarta.annotation.Nonnull

@@ -60,7 +60,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreementAcceptances{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      * @return a {@link AgreementAcceptanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AgreementAcceptanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AgreementAcceptance::createFromDiscriminatorValue);
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return new AgreementAcceptancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     * Represents the current status of a user&apos;s response to a company&apos;s customizable terms of use agreement.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

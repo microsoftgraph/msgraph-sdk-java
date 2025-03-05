@@ -67,7 +67,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("allowUserConsentForRiskyApps");
     }
     /**
-     * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
+     * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn&apos;t affect Microsoft Entra Connect or Microsoft Graph.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.backingStore.set("allowUserConsentForRiskyApps", value);
     }
     /**
-     * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
+     * Sets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This doesn&apos;t affect Microsoft Entra Connect or Microsoft Graph.
      * @param value Value to set for the blockMsolPowerShell property.
      */
     public void setBlockMsolPowerShell(@jakarta.annotation.Nullable final Boolean value) {

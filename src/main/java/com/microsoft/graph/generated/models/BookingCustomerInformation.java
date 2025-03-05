@@ -75,7 +75,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         return this.backingStore.get("location");
     }
     /**
-     * Gets the name property value. The customer's name.
+     * Gets the name property value. The customer&apos;s name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         return this.backingStore.get("notes");
     }
     /**
-     * Gets the phone property value. The customer's phone number.
+     * Gets the phone property value. The customer&apos;s phone number.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         this.backingStore.set("location", value);
     }
     /**
-     * Sets the name property value. The customer's name.
+     * Sets the name property value. The customer&apos;s name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -165,7 +165,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         this.backingStore.set("notes", value);
     }
     /**
-     * Sets the phone property value. The customer's phone number.
+     * Sets the phone property value. The customer&apos;s phone number.
      * @param value Value to set for the phone property.
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {

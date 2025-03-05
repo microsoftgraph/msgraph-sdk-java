@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * A termsAndConditionsAcceptanceStatus entity represents the acceptance status of a given Terms and Conditions (T&C) policy by a given user. Users must accept the most up-to-date version of the terms in order to retain access to the Company Portal.
+ * A termsAndConditionsAcceptanceStatus entity represents the acceptance status of a given Terms and Conditions (T&amp;C) policy by a given user. Users must accept the most up-to-date version of the terms in order to retain access to the Company Portal.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable {
@@ -37,7 +37,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
         return this.backingStore.get("acceptedDateTime");
     }
     /**
-     * Gets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
+     * Gets the acceptedVersion property value. Most recent version number of the T&amp;C accepted by the user.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
         this.backingStore.set("acceptedDateTime", value);
     }
     /**
-     * Sets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
+     * Sets the acceptedVersion property value. Most recent version number of the T&amp;C accepted by the user.
      * @param value Value to set for the acceptedVersion property.
      */
     public void setAcceptedVersion(@jakarta.annotation.Nullable final Integer value) {

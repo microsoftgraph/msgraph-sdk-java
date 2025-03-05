@@ -42,7 +42,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.backingStore.get("availableManagedPathsForSiteCreation");
     }
     /**
-     * Gets the deletedUserPersonalSiteRetentionPeriodInDays property value. The number of days for preserving a deleted user's OneDrive.
+     * Gets the deletedUserPersonalSiteRetentionPeriodInDays property value. The number of days for preserving a deleted user&apos;s OneDrive.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.backingStore.get("isRequireAcceptingUserToMatchInvitedUserEnabled");
     }
     /**
-     * Gets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
+     * Gets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don&apos;t own.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -347,7 +347,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.backingStore.set("availableManagedPathsForSiteCreation", value);
     }
     /**
-     * Sets the deletedUserPersonalSiteRetentionPeriodInDays property value. The number of days for preserving a deleted user's OneDrive.
+     * Sets the deletedUserPersonalSiteRetentionPeriodInDays property value. The number of days for preserving a deleted user&apos;s OneDrive.
      * @param value Value to set for the deletedUserPersonalSiteRetentionPeriodInDays property.
      */
     public void setDeletedUserPersonalSiteRetentionPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
@@ -417,7 +417,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.backingStore.set("isRequireAcceptingUserToMatchInvitedUserEnabled", value);
     }
     /**
-     * Sets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
+     * Sets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don&apos;t own.
      * @param value Value to set for the isResharingByExternalUsersEnabled property.
      */
     public void setIsResharingByExternalUsersEnabled(@jakarta.annotation.Nullable final Boolean value) {

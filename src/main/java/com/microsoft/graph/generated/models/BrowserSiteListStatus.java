@@ -11,7 +11,7 @@ public enum BrowserSiteListStatus implements ValuedEnum {
     Published("published"),
     /** A site that has pending changes */
     Pending("pending"),
-    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shoudn't be necessary. */
+    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shoudn&apos;t be necessary. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     BrowserSiteListStatus(final String value) {

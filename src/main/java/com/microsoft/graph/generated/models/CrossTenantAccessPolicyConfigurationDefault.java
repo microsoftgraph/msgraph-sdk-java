@@ -25,7 +25,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         return new CrossTenantAccessPolicyConfigurationDefault();
     }
     /**
-     * Gets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can't be updated in the default configuration. Read-only.
+     * Gets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can&apos;t be updated in the default configuration. Read-only.
      * @return a {@link InboundOutboundPolicyConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
     }
     /**
-     * Sets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can't be updated in the default configuration. Read-only.
+     * Sets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can&apos;t be updated in the default configuration. Read-only.
      * @param value Value to set for the automaticUserConsentSettings property.
      */
     public void setAutomaticUserConsentSettings(@jakarta.annotation.Nullable final InboundOutboundPolicyConfiguration value) {

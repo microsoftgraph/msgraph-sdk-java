@@ -122,7 +122,7 @@ public class UserActivity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Gets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity&apos;s historyItems.
      * @return a {@link java.util.List<ActivityHistoryItem>}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class UserActivity extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
+     * Gets the userTimezone property value. Optional. The timezone in which the user&apos;s device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class UserActivity extends Entity implements Parsable {
         this.backingStore.set("fallbackUrl", value);
     }
     /**
-     * Sets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Sets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity&apos;s historyItems.
      * @param value Value to set for the historyItems property.
      */
     public void setHistoryItems(@jakarta.annotation.Nullable final java.util.List<ActivityHistoryItem> value) {
@@ -268,7 +268,7 @@ public class UserActivity extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
+     * Sets the userTimezone property value. Optional. The timezone in which the user&apos;s device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
      * @param value Value to set for the userTimezone property.
      */
     public void setUserTimezone(@jakarta.annotation.Nullable final String value) {

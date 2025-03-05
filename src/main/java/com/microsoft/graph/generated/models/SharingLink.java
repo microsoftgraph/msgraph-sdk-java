@@ -112,7 +112,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("type");
     }
     /**
-     * Gets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
+     * Gets the webHtml property value. For embed links, this property contains the HTML code for an &lt;iframe&gt; element that will embed the item in a webpage.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class SharingLink implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("type", value);
     }
     /**
-     * Sets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
+     * Sets the webHtml property value. For embed links, this property contains the HTML code for an &lt;iframe&gt; element that will embed the item in a webpage.
      * @param value Value to set for the webHtml property.
      */
     public void setWebHtml(@jakarta.annotation.Nullable final String value) {

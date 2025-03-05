@@ -37,7 +37,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences/{authenticationContextClassReference%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete an authenticationContextClassReference object that&apos;s not published or used by a conditional access policy.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         delete(null);
     }
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete an authenticationContextClassReference object that&apos;s not published or used by a conditional access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationContextClassReference::createFromDiscriminatorValue);
     }
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete an authenticationContextClassReference object that&apos;s not published or used by a conditional access policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+     * Delete an authenticationContextClassReference object that&apos;s not published or used by a conditional access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

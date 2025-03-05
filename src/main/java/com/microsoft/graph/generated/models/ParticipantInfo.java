@@ -56,7 +56,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+     * Gets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant&apos;s best estimated physical location at the start of the call. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("participantId");
     }
     /**
-     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn't change based on the participant's current physical location. Read-only.
+     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn&apos;t change based on the participant&apos;s current physical location. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+     * Sets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant&apos;s best estimated physical location at the start of the call. Read-only.
      * @param value Value to set for the countryCode property.
      */
     public void setCountryCode(@jakarta.annotation.Nullable final String value) {
@@ -200,7 +200,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("participantId", value);
     }
     /**
-     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn't change based on the participant's current physical location. Read-only.
+     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This doesn&apos;t change based on the participant&apos;s current physical location. Read-only.
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {

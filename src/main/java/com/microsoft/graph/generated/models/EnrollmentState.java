@@ -9,7 +9,7 @@ public enum EnrollmentState implements ValuedEnum {
     Unknown("unknown"),
     /** Device is Enrolled. */
     Enrolled("enrolled"),
-    /** Enrolled but it's enrolled via enrollment profile and the enrolled profile is different from the assigned profile. */
+    /** Enrolled but it&apos;s enrolled via enrollment profile and the enrolled profile is different from the assigned profile. */
     PendingReset("pendingReset"),
     /** Not enrolled and there is enrollment failure record. */
     Failed("failed"),

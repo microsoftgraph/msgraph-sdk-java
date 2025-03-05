@@ -101,7 +101,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the serviceInstance property value. Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
+     * Gets the serviceInstance property value. Qualified service instance (for example, &apos;SharePoint/Dublin&apos;) that published the service error information.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the serviceInstance property value. Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
+     * Sets the serviceInstance property value. Qualified service instance (for example, &apos;SharePoint/Dublin&apos;) that published the service error information.
      * @param value Value to set for the serviceInstance property.
      */
     public void setServiceInstance(@jakarta.annotation.Nullable final String value) {

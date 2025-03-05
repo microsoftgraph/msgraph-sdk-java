@@ -27,7 +27,7 @@ public class Contact extends OutlookItem implements Parsable {
         return new Contact();
     }
     /**
-     * Gets the assistantName property value. The name of the contact's assistant.
+     * Gets the assistantName property value. The name of the contact&apos;s assistant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("assistantName");
     }
     /**
-     * Gets the birthday property value. The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the birthday property value. The contact&apos;s birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("birthday");
     }
     /**
-     * Gets the businessAddress property value. The contact's business address.
+     * Gets the businessAddress property value. The contact&apos;s business address.
      * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("businessHomePage");
     }
     /**
-     * Gets the businessPhones property value. The contact's business phone numbers.
+     * Gets the businessPhones property value. The contact&apos;s business phone numbers.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("businessPhones");
     }
     /**
-     * Gets the children property value. The names of the contact's children.
+     * Gets the children property value. The names of the contact&apos;s children.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("children");
     }
     /**
-     * Gets the companyName property value. The name of the contact's company.
+     * Gets the companyName property value. The name of the contact&apos;s company.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("companyName");
     }
     /**
-     * Gets the department property value. The contact's department.
+     * Gets the department property value. The contact&apos;s department.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("department");
     }
     /**
-     * Gets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
+     * Gets the displayName property value. The contact&apos;s display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the emailAddresses property value. The contact's email addresses.
+     * Gets the emailAddresses property value. The contact&apos;s email addresses.
      * @return a {@link java.util.List<EmailAddress>}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("fileAs");
     }
     /**
-     * Gets the generation property value. The contact's suffix.
+     * Gets the generation property value. The contact&apos;s suffix.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("generation");
     }
     /**
-     * Gets the givenName property value. The contact's given name.
+     * Gets the givenName property value. The contact&apos;s given name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("givenName");
     }
     /**
-     * Gets the homeAddress property value. The contact's home address.
+     * Gets the homeAddress property value. The contact&apos;s home address.
      * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("homeAddress");
     }
     /**
-     * Gets the homePhones property value. The contact's home phone numbers.
+     * Gets the homePhones property value. The contact&apos;s home phone numbers.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -201,7 +201,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("homePhones");
     }
     /**
-     * Gets the imAddresses property value. The contact's instant messaging (IM) addresses.
+     * Gets the imAddresses property value. The contact&apos;s instant messaging (IM) addresses.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("imAddresses");
     }
     /**
-     * Gets the initials property value. The contact's initials.
+     * Gets the initials property value. The contact&apos;s initials.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -225,7 +225,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("jobTitle");
     }
     /**
-     * Gets the manager property value. The name of the contact's manager.
+     * Gets the manager property value. The name of the contact&apos;s manager.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("manager");
     }
     /**
-     * Gets the middleName property value. The contact's middle name.
+     * Gets the middleName property value. The contact&apos;s middle name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -241,7 +241,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("middleName");
     }
     /**
-     * Gets the mobilePhone property value. The contact's mobile phone number.
+     * Gets the mobilePhone property value. The contact&apos;s mobile phone number.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -257,7 +257,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
-     * Gets the nickName property value. The contact's nickname.
+     * Gets the nickName property value. The contact&apos;s nickname.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -265,7 +265,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("nickName");
     }
     /**
-     * Gets the officeLocation property value. The location of the contact's office.
+     * Gets the officeLocation property value. The location of the contact&apos;s office.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -281,7 +281,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("otherAddress");
     }
     /**
-     * Gets the parentFolderId property value. The ID of the contact's parent folder.
+     * Gets the parentFolderId property value. The ID of the contact&apos;s parent folder.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -289,7 +289,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("parentFolderId");
     }
     /**
-     * Gets the personalNotes property value. The user's notes about the contact.
+     * Gets the personalNotes property value. The user&apos;s notes about the contact.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -305,7 +305,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("photo");
     }
     /**
-     * Gets the profession property value. The contact's profession.
+     * Gets the profession property value. The contact&apos;s profession.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -321,7 +321,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("singleValueExtendedProperties");
     }
     /**
-     * Gets the spouseName property value. The name of the contact's spouse/partner.
+     * Gets the spouseName property value. The name of the contact&apos;s spouse/partner.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -329,7 +329,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("spouseName");
     }
     /**
-     * Gets the surname property value. The contact's surname.
+     * Gets the surname property value. The contact&apos;s surname.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -337,7 +337,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("surname");
     }
     /**
-     * Gets the title property value. The contact's title.
+     * Gets the title property value. The contact&apos;s title.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -414,21 +414,21 @@ public class Contact extends OutlookItem implements Parsable {
         writer.writeStringValue("yomiSurname", this.getYomiSurname());
     }
     /**
-     * Sets the assistantName property value. The name of the contact's assistant.
+     * Sets the assistantName property value. The name of the contact&apos;s assistant.
      * @param value Value to set for the assistantName property.
      */
     public void setAssistantName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("assistantName", value);
     }
     /**
-     * Sets the birthday property value. The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the birthday property value. The contact&apos;s birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the birthday property.
      */
     public void setBirthday(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("birthday", value);
     }
     /**
-     * Sets the businessAddress property value. The contact's business address.
+     * Sets the businessAddress property value. The contact&apos;s business address.
      * @param value Value to set for the businessAddress property.
      */
     public void setBusinessAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
@@ -442,42 +442,42 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("businessHomePage", value);
     }
     /**
-     * Sets the businessPhones property value. The contact's business phone numbers.
+     * Sets the businessPhones property value. The contact&apos;s business phone numbers.
      * @param value Value to set for the businessPhones property.
      */
     public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("businessPhones", value);
     }
     /**
-     * Sets the children property value. The names of the contact's children.
+     * Sets the children property value. The names of the contact&apos;s children.
      * @param value Value to set for the children property.
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("children", value);
     }
     /**
-     * Sets the companyName property value. The name of the contact's company.
+     * Sets the companyName property value. The name of the contact&apos;s company.
      * @param value Value to set for the companyName property.
      */
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("companyName", value);
     }
     /**
-     * Sets the department property value. The contact's department.
+     * Sets the department property value. The contact&apos;s department.
      * @param value Value to set for the department property.
      */
     public void setDepartment(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("department", value);
     }
     /**
-     * Sets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
+     * Sets the displayName property value. The contact&apos;s display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the emailAddresses property value. The contact's email addresses.
+     * Sets the emailAddresses property value. The contact&apos;s email addresses.
      * @param value Value to set for the emailAddresses property.
      */
     public void setEmailAddresses(@jakarta.annotation.Nullable final java.util.List<EmailAddress> value) {
@@ -498,42 +498,42 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("fileAs", value);
     }
     /**
-     * Sets the generation property value. The contact's suffix.
+     * Sets the generation property value. The contact&apos;s suffix.
      * @param value Value to set for the generation property.
      */
     public void setGeneration(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("generation", value);
     }
     /**
-     * Sets the givenName property value. The contact's given name.
+     * Sets the givenName property value. The contact&apos;s given name.
      * @param value Value to set for the givenName property.
      */
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("givenName", value);
     }
     /**
-     * Sets the homeAddress property value. The contact's home address.
+     * Sets the homeAddress property value. The contact&apos;s home address.
      * @param value Value to set for the homeAddress property.
      */
     public void setHomeAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.backingStore.set("homeAddress", value);
     }
     /**
-     * Sets the homePhones property value. The contact's home phone numbers.
+     * Sets the homePhones property value. The contact&apos;s home phone numbers.
      * @param value Value to set for the homePhones property.
      */
     public void setHomePhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("homePhones", value);
     }
     /**
-     * Sets the imAddresses property value. The contact's instant messaging (IM) addresses.
+     * Sets the imAddresses property value. The contact&apos;s instant messaging (IM) addresses.
      * @param value Value to set for the imAddresses property.
      */
     public void setImAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("imAddresses", value);
     }
     /**
-     * Sets the initials property value. The contact's initials.
+     * Sets the initials property value. The contact&apos;s initials.
      * @param value Value to set for the initials property.
      */
     public void setInitials(@jakarta.annotation.Nullable final String value) {
@@ -547,21 +547,21 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("jobTitle", value);
     }
     /**
-     * Sets the manager property value. The name of the contact's manager.
+     * Sets the manager property value. The name of the contact&apos;s manager.
      * @param value Value to set for the manager property.
      */
     public void setManager(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("manager", value);
     }
     /**
-     * Sets the middleName property value. The contact's middle name.
+     * Sets the middleName property value. The contact&apos;s middle name.
      * @param value Value to set for the middleName property.
      */
     public void setMiddleName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("middleName", value);
     }
     /**
-     * Sets the mobilePhone property value. The contact's mobile phone number.
+     * Sets the mobilePhone property value. The contact&apos;s mobile phone number.
      * @param value Value to set for the mobilePhone property.
      */
     public void setMobilePhone(@jakarta.annotation.Nullable final String value) {
@@ -575,14 +575,14 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
-     * Sets the nickName property value. The contact's nickname.
+     * Sets the nickName property value. The contact&apos;s nickname.
      * @param value Value to set for the nickName property.
      */
     public void setNickName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("nickName", value);
     }
     /**
-     * Sets the officeLocation property value. The location of the contact's office.
+     * Sets the officeLocation property value. The location of the contact&apos;s office.
      * @param value Value to set for the officeLocation property.
      */
     public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {
@@ -596,14 +596,14 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("otherAddress", value);
     }
     /**
-     * Sets the parentFolderId property value. The ID of the contact's parent folder.
+     * Sets the parentFolderId property value. The ID of the contact&apos;s parent folder.
      * @param value Value to set for the parentFolderId property.
      */
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("parentFolderId", value);
     }
     /**
-     * Sets the personalNotes property value. The user's notes about the contact.
+     * Sets the personalNotes property value. The user&apos;s notes about the contact.
      * @param value Value to set for the personalNotes property.
      */
     public void setPersonalNotes(@jakarta.annotation.Nullable final String value) {
@@ -617,7 +617,7 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("photo", value);
     }
     /**
-     * Sets the profession property value. The contact's profession.
+     * Sets the profession property value. The contact&apos;s profession.
      * @param value Value to set for the profession property.
      */
     public void setProfession(@jakarta.annotation.Nullable final String value) {
@@ -631,21 +631,21 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("singleValueExtendedProperties", value);
     }
     /**
-     * Sets the spouseName property value. The name of the contact's spouse/partner.
+     * Sets the spouseName property value. The name of the contact&apos;s spouse/partner.
      * @param value Value to set for the spouseName property.
      */
     public void setSpouseName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("spouseName", value);
     }
     /**
-     * Sets the surname property value. The contact's surname.
+     * Sets the surname property value. The contact&apos;s surname.
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("surname", value);
     }
     /**
-     * Sets the title property value. The contact's title.
+     * Sets the title property value. The contact&apos;s title.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

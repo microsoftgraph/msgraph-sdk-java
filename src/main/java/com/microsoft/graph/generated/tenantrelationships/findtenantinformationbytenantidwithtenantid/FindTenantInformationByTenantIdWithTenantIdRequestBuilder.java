@@ -23,7 +23,7 @@ public class FindTenantInformationByTenantIdWithTenantIdRequestBuilder extends B
      * Instantiates a new {@link FindTenantInformationByTenantIdWithTenantIdRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param tenantId Usage: tenantId='{tenantId}'
+     * @param tenantId Usage: tenantId=&apos;{tenantId}&apos;
      */
     public FindTenantInformationByTenantIdWithTenantIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String tenantId) {
         super(requestAdapter, "{+baseurl}/tenantRelationships/findTenantInformationByTenantId(tenantId='{tenantId}')", pathParameters);

@@ -21,7 +21,7 @@ import java.util.Objects;
 public class FindTenantInformationByDomainNameWithDomainNameRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link FindTenantInformationByDomainNameWithDomainNameRequestBuilder} and sets the default values.
-     * @param domainName Usage: domainName='{domainName}'
+     * @param domainName Usage: domainName=&apos;{domainName}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

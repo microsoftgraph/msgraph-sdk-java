@@ -22,7 +22,7 @@ public class SearchWithQRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link SearchWithQRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
-     * @param q Usage: q='{q}'
+     * @param q Usage: q=&apos;{q}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SearchWithQRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String q) {

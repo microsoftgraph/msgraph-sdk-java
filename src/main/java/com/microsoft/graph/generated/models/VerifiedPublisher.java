@@ -65,7 +65,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
+     * Gets the displayName property value. The verified publisher name from the app publisher&apos;s Partner Center account.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the verifiedPublisherId property value. The ID of the verified publisher from the app publisher's Partner Center account.
+     * Gets the verifiedPublisherId property value. The ID of the verified publisher from the app publisher&apos;s Partner Center account.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
+     * Sets the displayName property value. The verified publisher name from the app publisher&apos;s Partner Center account.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -150,7 +150,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the verifiedPublisherId property value. The ID of the verified publisher from the app publisher's Partner Center account.
+     * Sets the verifiedPublisherId property value. The ID of the verified publisher from the app publisher&apos;s Partner Center account.
      * @param value Value to set for the verifiedPublisherId property.
      */
     public void setVerifiedPublisherId(@jakarta.annotation.Nullable final String value) {

@@ -55,7 +55,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+     * Returns a format object, encapsulating the range&apos;s font, fill, borders, alignment, and other properties. Read-only.
      * @return a {@link WorkbookRangeFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+     * Returns a format object, encapsulating the range&apos;s font, fill, borders, alignment, and other properties. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookRangeFormat}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+     * Returns a format object, encapsulating the range&apos;s font, fill, borders, alignment, and other properties. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+     * Returns a format object, encapsulating the range&apos;s font, fill, borders, alignment, and other properties. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+     * Returns a format object, encapsulating the range&apos;s font, fill, borders, alignment, and other properties. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

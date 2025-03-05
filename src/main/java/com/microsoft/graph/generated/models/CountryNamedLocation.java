@@ -53,7 +53,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the includeUnknownCountriesAndRegions property value. true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false.
+     * Gets the includeUnknownCountriesAndRegions property value. true if IP addresses that don&apos;t map to a country or region should be included in the named location. Optional. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
         this.backingStore.set("countryLookupMethod", value);
     }
     /**
-     * Sets the includeUnknownCountriesAndRegions property value. true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false.
+     * Sets the includeUnknownCountriesAndRegions property value. true if IP addresses that don&apos;t map to a country or region should be included in the named location. Optional. Default value is false.
      * @param value Value to set for the includeUnknownCountriesAndRegions property.
      */
     public void setIncludeUnknownCountriesAndRegions(@jakarta.annotation.Nullable final Boolean value) {

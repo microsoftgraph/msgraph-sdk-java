@@ -71,7 +71,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return this.backingStore.get("formulas");
     }
     /**
-     * Gets the formulasLocal property value. The formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
+     * Gets the formulasLocal property value. The formula in A1-style notation, in the user&apos;s language and number-formatting locale. For example, the English &apos;=SUM(A1, 1.5)&apos; formula would become &apos;=SUMME(A1; 1,5)&apos; in German.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return this.backingStore.get("index");
     }
     /**
-     * Gets the numberFormat property value. Excel's number format code for the given cell. Read-only.
+     * Gets the numberFormat property value. Excel&apos;s number format code for the given cell. Read-only.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return this.backingStore.get("rows");
     }
     /**
-     * Gets the text property value. The text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+     * Gets the text property value. The text values of the specified range. The Text value won&apos;t depend on the cell width. The # sign substitution that happens in Excel UI won&apos;t affect the text value returned by the API. Read-only.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         this.backingStore.set("formulas", value);
     }
     /**
-     * Sets the formulasLocal property value. The formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
+     * Sets the formulasLocal property value. The formula in A1-style notation, in the user&apos;s language and number-formatting locale. For example, the English &apos;=SUM(A1, 1.5)&apos; formula would become &apos;=SUMME(A1; 1,5)&apos; in German.
      * @param value Value to set for the formulasLocal property.
      */
     public void setFormulasLocal(@jakarta.annotation.Nullable final UntypedNode value) {
@@ -205,7 +205,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         this.backingStore.set("index", value);
     }
     /**
-     * Sets the numberFormat property value. Excel's number format code for the given cell. Read-only.
+     * Sets the numberFormat property value. Excel&apos;s number format code for the given cell. Read-only.
      * @param value Value to set for the numberFormat property.
      */
     public void setNumberFormat(@jakarta.annotation.Nullable final UntypedNode value) {
@@ -226,7 +226,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         this.backingStore.set("rows", value);
     }
     /**
-     * Sets the text property value. The text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+     * Sets the text property value. The text values of the specified range. The Text value won&apos;t depend on the cell width. The # sign substitution that happens in Excel UI won&apos;t affect the text value returned by the API. Read-only.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final UntypedNode value) {

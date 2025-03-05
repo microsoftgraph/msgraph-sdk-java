@@ -13,7 +13,7 @@ public enum BrowserSharedCookieStatus implements ValuedEnum {
     PendingEdit("pendingEdit"),
     /** A sharedcookie that has been deleted pending publish */
     PendingDelete("pendingDelete"),
-    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary. */
+    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn&apos;t be necessary. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     BrowserSharedCookieStatus(final String value) {

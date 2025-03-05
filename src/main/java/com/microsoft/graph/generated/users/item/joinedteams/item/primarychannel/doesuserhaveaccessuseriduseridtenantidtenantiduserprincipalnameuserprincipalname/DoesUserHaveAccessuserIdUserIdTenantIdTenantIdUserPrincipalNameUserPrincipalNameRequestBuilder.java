@@ -95,17 +95,17 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
-         * Usage: tenantId='@tenantId'
+         * Usage: tenantId=&apos;@tenantId&apos;
          */
         @jakarta.annotation.Nullable
         public String tenantId;
         /**
-         * Usage: userId='@userId'
+         * Usage: userId=&apos;@userId&apos;
          */
         @jakarta.annotation.Nullable
         public String userId;
         /**
-         * Usage: userPrincipalName='@userPrincipalName'
+         * Usage: userPrincipalName=&apos;@userPrincipalName&apos;
          */
         @jakarta.annotation.Nullable
         public String userPrincipalName;

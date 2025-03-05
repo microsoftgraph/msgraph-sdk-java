@@ -56,7 +56,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
         return this.backingStore;
     }
     /**
-     * Gets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app shows them the client app they're signing into.
+     * Gets the displayAppInformationRequiredState property value. Determines whether the user&apos;s Authenticator app shows them the client app they&apos;re signing into.
      * @return a {@link AuthenticationMethodFeatureConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
         return this.backingStore.get("displayAppInformationRequiredState");
     }
     /**
-     * Gets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
+     * Gets the displayLocationInformationRequiredState property value. Determines whether the user&apos;s Authenticator app shows them the geographic location of where the authentication request originated from.
      * @return a {@link AuthenticationMethodFeatureConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app shows them the client app they're signing into.
+     * Sets the displayAppInformationRequiredState property value. Determines whether the user&apos;s Authenticator app shows them the client app they&apos;re signing into.
      * @param value Value to set for the displayAppInformationRequiredState property.
      */
     public void setDisplayAppInformationRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
         this.backingStore.set("displayAppInformationRequiredState", value);
     }
     /**
-     * Sets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app shows them the geographic location of where the authentication request originated from.
+     * Sets the displayLocationInformationRequiredState property value. Determines whether the user&apos;s Authenticator app shows them the geographic location of where the authentication request originated from.
      * @param value Value to set for the displayLocationInformationRequiredState property.
      */
     public void setDisplayLocationInformationRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {

@@ -6,6 +6,7 @@ import com.microsoft.graph.users.item.mailfolders.item.childfolders.item.copy.Co
 import com.microsoft.graph.users.item.mailfolders.item.childfolders.item.messagerules.MessageRulesRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.childfolders.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.users.item.mailfolders.item.childfolders.item.move.MoveRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.childfolders.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -55,6 +56,14 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link MailFolderItemRequestBuilder} and sets the default values.

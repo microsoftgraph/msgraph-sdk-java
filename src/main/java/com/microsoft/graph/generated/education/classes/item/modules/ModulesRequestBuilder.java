@@ -84,7 +84,7 @@ public class ModulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationModuleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can't see the modules until publication.
+     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can&apos;t see the modules until publication.
      * @param body The request body
      * @return a {@link EducationModule}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class ModulesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can't see the modules until publication.
+     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can&apos;t see the modules until publication.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationModule}
@@ -131,7 +131,7 @@ public class ModulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can't see the modules until publication.
+     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can&apos;t see the modules until publication.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class ModulesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can't see the modules until publication.
+     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can&apos;t see the modules until publication.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

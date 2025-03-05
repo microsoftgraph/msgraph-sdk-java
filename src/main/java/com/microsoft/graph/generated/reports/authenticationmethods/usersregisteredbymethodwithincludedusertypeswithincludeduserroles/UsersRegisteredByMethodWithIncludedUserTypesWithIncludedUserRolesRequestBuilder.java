@@ -21,8 +21,8 @@ import java.util.Objects;
 public class UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder} and sets the default values.
-     * @param includedUserRoles Usage: includedUserRoles='{includedUserRoles}'
-     * @param includedUserTypes Usage: includedUserTypes='{includedUserTypes}'
+     * @param includedUserRoles Usage: includedUserRoles=&apos;{includedUserRoles}&apos;
+     * @param includedUserTypes Usage: includedUserTypes=&apos;{includedUserTypes}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

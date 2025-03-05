@@ -37,7 +37,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/drives/{drive%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      * @return a {@link Drive}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Drive}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Drive::createFromDiscriminatorValue);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
         return new DriveItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The group's drives. Read-only.
+     * The group&apos;s drives. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

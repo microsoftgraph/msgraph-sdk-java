@@ -57,7 +57,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
         return this.backingStore;
     }
     /**
-     * Gets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
+     * Gets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn&apos;t null or an empty String.
      * @return a {@link ConditionalAccessExternalTenants}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
         this.backingStore = value;
     }
     /**
-     * Sets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
+     * Sets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn&apos;t null or an empty String.
      * @param value Value to set for the externalTenants property.
      */
     public void setExternalTenants(@jakarta.annotation.Nullable final ConditionalAccessExternalTenants value) {

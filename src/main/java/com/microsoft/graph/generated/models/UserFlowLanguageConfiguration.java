@@ -25,7 +25,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
         return new UserFlowLanguageConfiguration();
     }
     /**
-     * Gets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
+     * Gets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection doesn&apos;t allow any kind of modification.
      * @return a {@link java.util.List<UserFlowLanguagePage>}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows you to modify the content of the page, any other modification isn't allowed (creation or deletion of pages).
+     * Gets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows you to modify the content of the page, any other modification isn&apos;t allowed (creation or deletion of pages).
      * @return a {@link java.util.List<UserFlowLanguagePage>}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("overridesPages", this.getOverridesPages());
     }
     /**
-     * Sets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection doesn't allow any kind of modification.
+     * Sets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection doesn&apos;t allow any kind of modification.
      * @param value Value to set for the defaultPages property.
      */
     public void setDefaultPages(@jakarta.annotation.Nullable final java.util.List<UserFlowLanguagePage> value) {
@@ -103,7 +103,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows you to modify the content of the page, any other modification isn't allowed (creation or deletion of pages).
+     * Sets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows you to modify the content of the page, any other modification isn&apos;t allowed (creation or deletion of pages).
      * @param value Value to set for the overridesPages property.
      */
     public void setOverridesPages(@jakarta.annotation.Nullable final java.util.List<UserFlowLanguagePage> value) {

@@ -82,7 +82,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
         return this.backingStore.get("memberType");
     }
     /**
-     * Gets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
+     * Gets the principal property value. References the principal that&apos;s in the scope of the membership or ownership eligibility request through the group that&apos;s governed by PIM. Supports $expand.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class PrivilegedAccessGroupEligibilityScheduleInstance extends Privileged
         this.backingStore.set("memberType", value);
     }
     /**
-     * Sets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
+     * Sets the principal property value. References the principal that&apos;s in the scope of the membership or ownership eligibility request through the group that&apos;s governed by PIM. Supports $expand.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
