@@ -26,6 +26,14 @@ public class PrintJob extends Entity implements Parsable {
         return new PrintJob();
     }
     /**
+     * Gets the acknowledgedDateTime property value. The dateTimeOffset when the job was acknowledged. Read-only.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getAcknowledgedDateTime() {
+        return this.backingStore.get("acknowledgedDateTime");
+    }
+    /**
      * Gets the configuration property value. The configuration property
      * @return a {@link PrintJobConfiguration}
      */
@@ -58,16 +66,26 @@ public class PrintJob extends Entity implements Parsable {
         return this.backingStore.get("documents");
     }
     /**
+     * Gets the errorCode property value. The error code of the print job. Read-only.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getErrorCode() {
+        return this.backingStore.get("errorCode");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acknowledgedDateTime", (n) -> { this.setAcknowledgedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(PrintJobConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("documents", (n) -> { this.setDocuments(n.getCollectionOfObjectValues(PrintDocument::createFromDiscriminatorValue)); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getIntegerValue()); });
         deserializerMap.put("isFetchable", (n) -> { this.setIsFetchable(n.getBooleanValue()); });
         deserializerMap.put("redirectedFrom", (n) -> { this.setRedirectedFrom(n.getStringValue()); });
         deserializerMap.put("redirectedTo", (n) -> { this.setRedirectedTo(n.getStringValue()); });
@@ -122,15 +140,24 @@ public class PrintJob extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeOffsetDateTimeValue("acknowledgedDateTime", this.getAcknowledgedDateTime());
         writer.writeObjectValue("configuration", this.getConfiguration());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("documents", this.getDocuments());
+        writer.writeIntegerValue("errorCode", this.getErrorCode());
         writer.writeBooleanValue("isFetchable", this.getIsFetchable());
         writer.writeStringValue("redirectedFrom", this.getRedirectedFrom());
         writer.writeStringValue("redirectedTo", this.getRedirectedTo());
         writer.writeObjectValue("status", this.getStatus());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
+    }
+    /**
+     * Sets the acknowledgedDateTime property value. The dateTimeOffset when the job was acknowledged. Read-only.
+     * @param value Value to set for the acknowledgedDateTime property.
+     */
+    public void setAcknowledgedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("acknowledgedDateTime", value);
     }
     /**
      * Sets the configuration property value. The configuration property
@@ -159,6 +186,13 @@ public class PrintJob extends Entity implements Parsable {
      */
     public void setDocuments(@jakarta.annotation.Nullable final java.util.List<PrintDocument> value) {
         this.backingStore.set("documents", value);
+    }
+    /**
+     * Sets the errorCode property value. The error code of the print job. Read-only.
+     * @param value Value to set for the errorCode property.
+     */
+    public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the isFetchable property value. If true, document can be fetched by printer.
