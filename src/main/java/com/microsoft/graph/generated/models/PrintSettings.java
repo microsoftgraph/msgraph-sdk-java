@@ -69,9 +69,10 @@ public class PrintSettings implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("documentConversionEnabled", (n) -> { this.setDocumentConversionEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("printerDiscoverySettings", (n) -> { this.setPrinterDiscoverySettings(n.getObjectValue(PrinterDiscoverySettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -83,6 +84,14 @@ public class PrintSettings implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the printerDiscoverySettings property value. Specifies settings that affect printer discovery when using Universal Print.
+     * @return a {@link PrinterDiscoverySettings}
+     */
+    @jakarta.annotation.Nullable
+    public PrinterDiscoverySettings getPrinterDiscoverySettings() {
+        return this.backingStore.get("printerDiscoverySettings");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -90,6 +99,7 @@ public class PrintSettings implements AdditionalDataHolder, BackedModel, Parsabl
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("documentConversionEnabled", this.getDocumentConversionEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("printerDiscoverySettings", this.getPrinterDiscoverySettings());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,5 +130,12 @@ public class PrintSettings implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the printerDiscoverySettings property value. Specifies settings that affect printer discovery when using Universal Print.
+     * @param value Value to set for the printerDiscoverySettings property.
+     */
+    public void setPrinterDiscoverySettings(@jakarta.annotation.Nullable final PrinterDiscoverySettings value) {
+        this.backingStore.set("printerDiscoverySettings", value);
     }
 }
