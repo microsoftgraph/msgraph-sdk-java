@@ -2,6 +2,9 @@ package com.microsoft.graph.solutions.backuprestore.protectionunits.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProtectionUnitBase;
+import com.microsoft.graph.solutions.backuprestore.protectionunits.item.graphdriveprotectionunit.GraphDriveProtectionUnitRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.protectionunits.item.graphmailboxprotectionunit.GraphMailboxProtectionUnitRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.protectionunits.item.graphsiteprotectionunit.GraphSiteProtectionUnitRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +23,30 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProtectionUnitBaseItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Casts the previous resource to driveProtectionUnit.
+     * @return a {@link GraphDriveProtectionUnitRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphDriveProtectionUnitRequestBuilder graphDriveProtectionUnit() {
+        return new GraphDriveProtectionUnitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to mailboxProtectionUnit.
+     * @return a {@link GraphMailboxProtectionUnitRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphMailboxProtectionUnitRequestBuilder graphMailboxProtectionUnit() {
+        return new GraphMailboxProtectionUnitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to siteProtectionUnit.
+     * @return a {@link GraphSiteProtectionUnitRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphSiteProtectionUnitRequestBuilder graphSiteProtectionUnit() {
+        return new GraphSiteProtectionUnitRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link ProtectionUnitBaseItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
