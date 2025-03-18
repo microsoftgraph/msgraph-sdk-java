@@ -3,6 +3,9 @@ package com.microsoft.graph.solutions.backuprestore.protectionunits;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProtectionUnitBaseCollectionResponse;
 import com.microsoft.graph.solutions.backuprestore.protectionunits.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.protectionunits.graphdriveprotectionunit.GraphDriveProtectionUnitRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.protectionunits.graphmailboxprotectionunit.GraphMailboxProtectionUnitRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.protectionunits.graphsiteprotectionunit.GraphSiteProtectionUnitRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.protectionunits.item.ProtectionUnitBaseItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +32,30 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to driveProtectionUnit.
+     * @return a {@link GraphDriveProtectionUnitRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphDriveProtectionUnitRequestBuilder graphDriveProtectionUnit() {
+        return new GraphDriveProtectionUnitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to mailboxProtectionUnit.
+     * @return a {@link GraphMailboxProtectionUnitRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphMailboxProtectionUnitRequestBuilder graphMailboxProtectionUnit() {
+        return new GraphMailboxProtectionUnitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to siteProtectionUnit.
+     * @return a {@link GraphSiteProtectionUnitRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphSiteProtectionUnitRequestBuilder graphSiteProtectionUnit() {
+        return new GraphSiteProtectionUnitRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the protectionUnits property of the microsoft.graph.backupRestoreRoot entity.
