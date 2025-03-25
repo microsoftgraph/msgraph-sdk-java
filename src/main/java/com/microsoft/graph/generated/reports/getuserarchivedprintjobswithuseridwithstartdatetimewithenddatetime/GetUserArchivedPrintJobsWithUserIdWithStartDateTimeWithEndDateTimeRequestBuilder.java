@@ -44,27 +44,27 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
     }
     /**
      * Get a list of archived print jobs for a particular user.
-     * @return a {@link GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reports-getuserarchivedprintjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeGetResponse get() {
+    public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimegetResponse get() {
         return get(null);
     }
     /**
      * Get a list of archived print jobs for a particular user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reports-getuserarchivedprintjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a list of archived print jobs for a particular user.

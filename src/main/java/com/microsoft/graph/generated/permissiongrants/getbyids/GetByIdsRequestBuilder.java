@@ -37,29 +37,29 @@ public class GetByIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Return the directory objects specified in a list of IDs. Only a subset of user properties are returned by default in v1.0. Some common uses for this function are to:
      * @param body The request body
-     * @return a {@link GetByIdsPostResponse}
+     * @return a {@link GetByIdspostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetByIdsPostResponse post(@jakarta.annotation.Nonnull final GetByIdsPostRequestBody body) {
+    public GetByIdspostResponse post(@jakarta.annotation.Nonnull final GetByIdsPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Return the directory objects specified in a list of IDs. Only a subset of user properties are returned by default in v1.0. Some common uses for this function are to:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetByIdsPostResponse}
+     * @return a {@link GetByIdspostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetByIdsPostResponse post(@jakarta.annotation.Nonnull final GetByIdsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public GetByIdspostResponse post(@jakarta.annotation.Nonnull final GetByIdsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetByIdsPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetByIdspostResponse::createFromDiscriminatorValue);
     }
     /**
      * Return the directory objects specified in a list of IDs. Only a subset of user properties are returned by default in v1.0. Some common uses for this function are to:

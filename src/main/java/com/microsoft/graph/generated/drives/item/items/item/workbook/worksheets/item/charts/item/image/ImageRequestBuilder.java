@@ -36,25 +36,25 @@ public class ImageRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function image
-     * @return a {@link ImageGetResponse}
+     * @return a {@link ImagegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public ImageGetResponse get() {
+    public ImagegetResponse get() {
         return get(null);
     }
     /**
      * Invoke function image
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ImageGetResponse}
+     * @return a {@link ImagegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public ImageGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public ImagegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ImageGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ImagegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function image

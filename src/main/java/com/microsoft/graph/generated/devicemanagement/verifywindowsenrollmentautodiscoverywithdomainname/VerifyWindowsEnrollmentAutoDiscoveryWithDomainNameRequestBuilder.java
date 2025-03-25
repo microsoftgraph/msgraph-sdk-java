@@ -38,25 +38,25 @@ public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder ex
     }
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
-     * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse}
+     * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNamegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse get() {
+    public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNamegetResponse get() {
         return get(null);
     }
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse}
+     * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNamegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNamegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, VerifyWindowsEnrollmentAutoDiscoveryWithDomainNamegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery

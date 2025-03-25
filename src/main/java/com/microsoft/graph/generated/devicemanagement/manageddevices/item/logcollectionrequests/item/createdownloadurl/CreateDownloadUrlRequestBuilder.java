@@ -36,25 +36,25 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action createDownloadUrl
-     * @return a {@link CreateDownloadUrlPostResponse}
+     * @return a {@link CreateDownloadUrlpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public CreateDownloadUrlPostResponse post() {
+    public CreateDownloadUrlpostResponse post() {
         return post(null);
     }
     /**
      * Invoke action createDownloadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link CreateDownloadUrlPostResponse}
+     * @return a {@link CreateDownloadUrlpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public CreateDownloadUrlPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public CreateDownloadUrlpostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, CreateDownloadUrlPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, CreateDownloadUrlpostResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke action createDownloadUrl

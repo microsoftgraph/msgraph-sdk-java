@@ -37,27 +37,27 @@ public class SupportedLanguagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of locales and languages that are supported for the user, as configured on the user&apos;s mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language bygetting the user&apos;s mailbox settings.
-     * @return a {@link SupportedLanguagesGetResponse}
+     * @return a {@link SupportedLanguagesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-supportedlanguages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SupportedLanguagesGetResponse get() {
+    public SupportedLanguagesgetResponse get() {
         return get(null);
     }
     /**
      * Get the list of locales and languages that are supported for the user, as configured on the user&apos;s mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language bygetting the user&apos;s mailbox settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link SupportedLanguagesGetResponse}
+     * @return a {@link SupportedLanguagesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-supportedlanguages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SupportedLanguagesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public SupportedLanguagesgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, SupportedLanguagesGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SupportedLanguagesgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the list of locales and languages that are supported for the user, as configured on the user&apos;s mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language bygetting the user&apos;s mailbox settings.

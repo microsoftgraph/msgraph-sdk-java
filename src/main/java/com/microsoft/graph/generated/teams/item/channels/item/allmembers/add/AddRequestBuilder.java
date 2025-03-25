@@ -37,29 +37,29 @@ public class AddRequestBuilder extends BaseRequestBuilder {
     /**
      * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn&apos;t be created.
      * @param body The request body
-     * @return a {@link AddPostResponse}
+     * @return a {@link AddpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmembers-add?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public AddPostResponse post(@jakarta.annotation.Nonnull final AddPostRequestBody body) {
+    public AddpostResponse post(@jakarta.annotation.Nonnull final AddPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn&apos;t be created.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link AddPostResponse}
+     * @return a {@link AddpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmembers-add?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public AddPostResponse post(@jakarta.annotation.Nonnull final AddPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public AddpostResponse post(@jakarta.annotation.Nonnull final AddPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, AddPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, AddpostResponse::createFromDiscriminatorValue);
     }
     /**
      * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn&apos;t be created.

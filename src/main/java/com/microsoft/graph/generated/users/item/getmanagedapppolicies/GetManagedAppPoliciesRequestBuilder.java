@@ -37,27 +37,27 @@ public class GetManagedAppPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets app restrictions for a given user.
-     * @return a {@link GetManagedAppPoliciesGetResponse}
+     * @return a {@link GetManagedAppPoliciesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-getmanagedapppolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetManagedAppPoliciesGetResponse get() {
+    public GetManagedAppPoliciesgetResponse get() {
         return get(null);
     }
     /**
      * Gets app restrictions for a given user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetManagedAppPoliciesGetResponse}
+     * @return a {@link GetManagedAppPoliciesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-getmanagedapppolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetManagedAppPoliciesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetManagedAppPoliciesgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetManagedAppPoliciesGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetManagedAppPoliciesgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Gets app restrictions for a given user.

@@ -44,27 +44,27 @@ public class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTim
     }
     /**
      * Get a list of archived print jobs for a particular group.
-     * @return a {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reports-getgrouparchivedprintjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse get() {
+    public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimegetResponse get() {
         return get(null);
     }
     /**
      * Get a list of archived print jobs for a particular group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reports-getgrouparchivedprintjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a list of archived print jobs for a particular group.

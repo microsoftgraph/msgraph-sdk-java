@@ -36,27 +36,27 @@ public class RevokeSignInSessionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invalidates all the refresh tokens issued to applications for a user (and session cookies in a user&apos;s browser), by resetting the signInSessionsValidFromDateTime user property to the current date-time. Typically, this operation is performed (by the user or an administrator) if the user has a lost or stolen device. This operation prevents access to the organization&apos;s data through applications on the device by requiring the user to sign in again to all applications that they consented to previously, independent of device.
-     * @return a {@link RevokeSignInSessionsPostResponse}
+     * @return a {@link RevokeSignInSessionspostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-revokesigninsessions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public RevokeSignInSessionsPostResponse post() {
+    public RevokeSignInSessionspostResponse post() {
         return post(null);
     }
     /**
      * Invalidates all the refresh tokens issued to applications for a user (and session cookies in a user&apos;s browser), by resetting the signInSessionsValidFromDateTime user property to the current date-time. Typically, this operation is performed (by the user or an administrator) if the user has a lost or stolen device. This operation prevents access to the organization&apos;s data through applications on the device by requiring the user to sign in again to all applications that they consented to previously, independent of device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RevokeSignInSessionsPostResponse}
+     * @return a {@link RevokeSignInSessionspostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-revokesigninsessions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public RevokeSignInSessionsPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RevokeSignInSessionspostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, RevokeSignInSessionsPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, RevokeSignInSessionspostResponse::createFromDiscriminatorValue);
     }
     /**
      * Invalidates all the refresh tokens issued to applications for a user (and session cookies in a user&apos;s browser), by resetting the signInSessionsValidFromDateTime user property to the current date-time. Typically, this operation is performed (by the user or an administrator) if the user has a lost or stolen device. This operation prevents access to the organization&apos;s data through applications on the device by requiring the user to sign in again to all applications that they consented to previously, independent of device.

@@ -37,27 +37,27 @@ public class GetAttackSimulationSimulationUserCoverageRequestBuilder extends Bas
     }
     /**
      * List training coverage for each tenant user in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
-     * @return a {@link GetAttackSimulationSimulationUserCoverageGetResponse}
+     * @return a {@link GetAttackSimulationSimulationUserCoveragegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationsimulationusercoverage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetAttackSimulationSimulationUserCoverageGetResponse get() {
+    public GetAttackSimulationSimulationUserCoveragegetResponse get() {
         return get(null);
     }
     /**
      * List training coverage for each tenant user in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetAttackSimulationSimulationUserCoverageGetResponse}
+     * @return a {@link GetAttackSimulationSimulationUserCoveragegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationsimulationusercoverage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetAttackSimulationSimulationUserCoverageGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetAttackSimulationSimulationUserCoveragegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetAttackSimulationSimulationUserCoverageGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetAttackSimulationSimulationUserCoveragegetResponse::createFromDiscriminatorValue);
     }
     /**
      * List training coverage for each tenant user in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.

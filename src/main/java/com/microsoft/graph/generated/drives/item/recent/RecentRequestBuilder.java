@@ -37,27 +37,27 @@ public class RecentRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user&apos;s drive and items they have access to from other drives.
-     * @return a {@link RecentGetResponse}
+     * @return a {@link RecentgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/drive-recent?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public RecentGetResponse get() {
+    public RecentgetResponse get() {
         return get(null);
     }
     /**
      * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user&apos;s drive and items they have access to from other drives.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RecentGetResponse}
+     * @return a {@link RecentgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/drive-recent?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public RecentGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public RecentgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, RecentGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, RecentgetResponse::createFromDiscriminatorValue);
     }
     /**
      * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user&apos;s drive and items they have access to from other drives.

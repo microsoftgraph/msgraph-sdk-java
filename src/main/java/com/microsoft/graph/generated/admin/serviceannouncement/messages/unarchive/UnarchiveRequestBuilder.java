@@ -37,29 +37,29 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
     /**
      * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
-     * @return a {@link UnarchivePostResponse}
+     * @return a {@link UnarchivepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-unarchive?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public UnarchivePostResponse post(@jakarta.annotation.Nonnull final UnarchivePostRequestBody body) {
+    public UnarchivepostResponse post(@jakarta.annotation.Nonnull final UnarchivePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link UnarchivePostResponse}
+     * @return a {@link UnarchivepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-unarchive?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public UnarchivePostResponse post(@jakarta.annotation.Nonnull final UnarchivePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public UnarchivepostResponse post(@jakarta.annotation.Nonnull final UnarchivePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, UnarchivePostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnarchivepostResponse::createFromDiscriminatorValue);
     }
     /**
      * Unarchive a list of serviceUpdateMessages for the signed in user.

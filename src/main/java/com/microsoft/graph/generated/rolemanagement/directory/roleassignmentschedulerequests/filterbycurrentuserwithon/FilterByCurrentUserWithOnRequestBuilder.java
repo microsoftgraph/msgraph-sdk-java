@@ -39,27 +39,27 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * In PIM, retrieve the requests for active role assignments for a particular principal. The principal can be the creator or approver of the unifiedRoleAssignmentScheduleRequest object, or they can be the target of the assignment.
-     * @return a {@link FilterByCurrentUserWithOnGetResponse}
+     * @return a {@link FilterByCurrentUserWithOngetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-filterbycurrentuser?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public FilterByCurrentUserWithOnGetResponse get() {
+    public FilterByCurrentUserWithOngetResponse get() {
         return get(null);
     }
     /**
      * In PIM, retrieve the requests for active role assignments for a particular principal. The principal can be the creator or approver of the unifiedRoleAssignmentScheduleRequest object, or they can be the target of the assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link FilterByCurrentUserWithOnGetResponse}
+     * @return a {@link FilterByCurrentUserWithOngetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-filterbycurrentuser?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public FilterByCurrentUserWithOnGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public FilterByCurrentUserWithOngetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, FilterByCurrentUserWithOnGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, FilterByCurrentUserWithOngetResponse::createFromDiscriminatorValue);
     }
     /**
      * In PIM, retrieve the requests for active role assignments for a particular principal. The principal can be the creator or approver of the unifiedRoleAssignmentScheduleRequest object, or they can be the target of the assignment.

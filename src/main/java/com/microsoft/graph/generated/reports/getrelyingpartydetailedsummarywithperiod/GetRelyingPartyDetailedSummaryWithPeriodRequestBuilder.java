@@ -39,27 +39,27 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends Base
     }
     /**
      * Get a summary of AD FS relying parties information.
-     * @return a {@link GetRelyingPartyDetailedSummaryWithPeriodGetResponse}
+     * @return a {@link GetRelyingPartyDetailedSummaryWithPeriodgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getrelyingpartydetailedsummary?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetRelyingPartyDetailedSummaryWithPeriodGetResponse get() {
+    public GetRelyingPartyDetailedSummaryWithPeriodgetResponse get() {
         return get(null);
     }
     /**
      * Get a summary of AD FS relying parties information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetRelyingPartyDetailedSummaryWithPeriodGetResponse}
+     * @return a {@link GetRelyingPartyDetailedSummaryWithPeriodgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getrelyingpartydetailedsummary?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetRelyingPartyDetailedSummaryWithPeriodGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetRelyingPartyDetailedSummaryWithPeriodgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetRelyingPartyDetailedSummaryWithPeriodGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetRelyingPartyDetailedSummaryWithPeriodgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a summary of AD FS relying parties information.

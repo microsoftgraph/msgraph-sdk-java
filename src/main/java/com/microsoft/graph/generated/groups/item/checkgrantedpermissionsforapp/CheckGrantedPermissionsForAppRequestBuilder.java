@@ -36,25 +36,25 @@ public class CheckGrantedPermissionsForAppRequestBuilder extends BaseRequestBuil
     }
     /**
      * Invoke action checkGrantedPermissionsForApp
-     * @return a {@link CheckGrantedPermissionsForAppPostResponse}
+     * @return a {@link CheckGrantedPermissionsForApppostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public CheckGrantedPermissionsForAppPostResponse post() {
+    public CheckGrantedPermissionsForApppostResponse post() {
         return post(null);
     }
     /**
      * Invoke action checkGrantedPermissionsForApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link CheckGrantedPermissionsForAppPostResponse}
+     * @return a {@link CheckGrantedPermissionsForApppostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public CheckGrantedPermissionsForAppPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public CheckGrantedPermissionsForApppostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, CheckGrantedPermissionsForAppPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, CheckGrantedPermissionsForApppostResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke action checkGrantedPermissionsForApp

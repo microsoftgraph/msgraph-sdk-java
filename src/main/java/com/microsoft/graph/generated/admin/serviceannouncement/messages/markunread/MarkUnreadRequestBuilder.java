@@ -37,29 +37,29 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
     /**
      * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
-     * @return a {@link MarkUnreadPostResponse}
+     * @return a {@link MarkUnreadpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markunread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public MarkUnreadPostResponse post(@jakarta.annotation.Nonnull final MarkUnreadPostRequestBody body) {
+    public MarkUnreadpostResponse post(@jakarta.annotation.Nonnull final MarkUnreadPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link MarkUnreadPostResponse}
+     * @return a {@link MarkUnreadpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markunread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public MarkUnreadPostResponse post(@jakarta.annotation.Nonnull final MarkUnreadPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public MarkUnreadpostResponse post(@jakarta.annotation.Nonnull final MarkUnreadPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, MarkUnreadPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, MarkUnreadpostResponse::createFromDiscriminatorValue);
     }
     /**
      * Mark a list of serviceUpdateMessages as unread for the signed in user.

@@ -42,25 +42,25 @@ public class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime
     }
     /**
      * Get a log of PSTN calls as a collection of pstnCallLogRow entries.
-     * @return a {@link GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse}
+     * @return a {@link GetPstnCallsWithFromDateTimeWithToDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse get() {
+    public GetPstnCallsWithFromDateTimeWithToDateTimegetResponse get() {
         return get(null);
     }
     /**
      * Get a log of PSTN calls as a collection of pstnCallLogRow entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse}
+     * @return a {@link GetPstnCallsWithFromDateTimeWithToDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetPstnCallsWithFromDateTimeWithToDateTimegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetPstnCallsWithFromDateTimeWithToDateTimegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a log of PSTN calls as a collection of pstnCallLogRow entries.

@@ -37,25 +37,25 @@ public class SupportedTimeZonesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function supportedTimeZones
-     * @return a {@link SupportedTimeZonesGetResponse}
+     * @return a {@link SupportedTimeZonesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public SupportedTimeZonesGetResponse get() {
+    public SupportedTimeZonesgetResponse get() {
         return get(null);
     }
     /**
      * Invoke function supportedTimeZones
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link SupportedTimeZonesGetResponse}
+     * @return a {@link SupportedTimeZonesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public SupportedTimeZonesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public SupportedTimeZonesgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, SupportedTimeZonesGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SupportedTimeZonesgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function supportedTimeZones

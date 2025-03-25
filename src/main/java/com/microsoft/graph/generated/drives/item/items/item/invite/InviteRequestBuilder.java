@@ -37,29 +37,29 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
     /**
      * Sends a sharing invitation for a driveItem.A sharing invitation provides permissions to the recipients and optionally sends them an email with a sharing link.
      * @param body The request body
-     * @return a {@link InvitePostResponse}
+     * @return a {@link InvitepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public InvitePostResponse post(@jakarta.annotation.Nonnull final InvitePostRequestBody body) {
+    public InvitepostResponse post(@jakarta.annotation.Nonnull final InvitePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Sends a sharing invitation for a driveItem.A sharing invitation provides permissions to the recipients and optionally sends them an email with a sharing link.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link InvitePostResponse}
+     * @return a {@link InvitepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public InvitePostResponse post(@jakarta.annotation.Nonnull final InvitePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public InvitepostResponse post(@jakarta.annotation.Nonnull final InvitePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, InvitePostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, InvitepostResponse::createFromDiscriminatorValue);
     }
     /**
      * Sends a sharing invitation for a driveItem.A sharing invitation provides permissions to the recipients and optionally sends them an email with a sharing link.

@@ -37,29 +37,29 @@ public class FavoriteRequestBuilder extends BaseRequestBuilder {
     /**
      * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
      * @param body The request body
-     * @return a {@link FavoritePostResponse}
+     * @return a {@link FavoritepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-favorite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public FavoritePostResponse post(@jakarta.annotation.Nonnull final FavoritePostRequestBody body) {
+    public FavoritepostResponse post(@jakarta.annotation.Nonnull final FavoritePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link FavoritePostResponse}
+     * @return a {@link FavoritepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-favorite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public FavoritePostResponse post(@jakarta.annotation.Nonnull final FavoritePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public FavoritepostResponse post(@jakarta.annotation.Nonnull final FavoritePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, FavoritePostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, FavoritepostResponse::createFromDiscriminatorValue);
     }
     /**
      * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.

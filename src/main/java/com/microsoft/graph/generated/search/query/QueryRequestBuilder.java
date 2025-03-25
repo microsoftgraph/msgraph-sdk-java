@@ -37,29 +37,29 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
     /**
      * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
-     * @return a {@link QueryPostResponse}
+     * @return a {@link QuerypostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public QueryPostResponse post(@jakarta.annotation.Nonnull final QueryPostRequestBody body) {
+    public QuerypostResponse post(@jakarta.annotation.Nonnull final QueryPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link QueryPostResponse}
+     * @return a {@link QuerypostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public QueryPostResponse post(@jakarta.annotation.Nonnull final QueryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public QuerypostResponse post(@jakarta.annotation.Nonnull final QueryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, QueryPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, QuerypostResponse::createFromDiscriminatorValue);
     }
     /**
      * Runs the query specified in the request body. Search results are provided in the response.

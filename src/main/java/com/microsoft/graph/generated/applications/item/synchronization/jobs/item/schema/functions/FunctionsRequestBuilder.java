@@ -37,27 +37,27 @@ public class FunctionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the functions currently supported in the attributeMappingSource.
-     * @return a {@link FunctionsGetResponse}
+     * @return a {@link FunctionsgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-functions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public FunctionsGetResponse get() {
+    public FunctionsgetResponse get() {
         return get(null);
     }
     /**
      * List all the functions currently supported in the attributeMappingSource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link FunctionsGetResponse}
+     * @return a {@link FunctionsgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-functions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public FunctionsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public FunctionsgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, FunctionsGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, FunctionsgetResponse::createFromDiscriminatorValue);
     }
     /**
      * List all the functions currently supported in the attributeMappingSource.

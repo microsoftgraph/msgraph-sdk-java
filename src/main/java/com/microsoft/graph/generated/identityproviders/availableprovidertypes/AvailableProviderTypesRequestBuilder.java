@@ -37,7 +37,7 @@ public class AvailableProviderTypesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieves all identity provider types available in a directory.
-     * @return a {@link AvailableProviderTypesGetResponse}
+     * @return a {@link AvailableProviderTypesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
@@ -45,13 +45,13 @@ public class AvailableProviderTypesRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public AvailableProviderTypesGetResponse get() {
+    public AvailableProviderTypesgetResponse get() {
         return get(null);
     }
     /**
      * Retrieves all identity provider types available in a directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link AvailableProviderTypesGetResponse}
+     * @return a {@link AvailableProviderTypesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
@@ -59,11 +59,11 @@ public class AvailableProviderTypesRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public AvailableProviderTypesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public AvailableProviderTypesgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, AvailableProviderTypesGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, AvailableProviderTypesgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieves all identity provider types available in a directory.

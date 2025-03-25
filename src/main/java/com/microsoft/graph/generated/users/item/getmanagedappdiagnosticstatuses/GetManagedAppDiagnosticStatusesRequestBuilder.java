@@ -37,27 +37,27 @@ public class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBu
     }
     /**
      * Gets diagnostics validation status for a given user.
-     * @return a {@link GetManagedAppDiagnosticStatusesGetResponse}
+     * @return a {@link GetManagedAppDiagnosticStatusesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-getmanagedappdiagnosticstatuses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetManagedAppDiagnosticStatusesGetResponse get() {
+    public GetManagedAppDiagnosticStatusesgetResponse get() {
         return get(null);
     }
     /**
      * Gets diagnostics validation status for a given user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetManagedAppDiagnosticStatusesGetResponse}
+     * @return a {@link GetManagedAppDiagnosticStatusesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-user-getmanagedappdiagnosticstatuses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetManagedAppDiagnosticStatusesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetManagedAppDiagnosticStatusesgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetManagedAppDiagnosticStatusesGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetManagedAppDiagnosticStatusesgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Gets diagnostics validation status for a given user.

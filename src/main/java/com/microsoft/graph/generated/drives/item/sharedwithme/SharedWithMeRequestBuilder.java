@@ -37,27 +37,27 @@ public class SharedWithMeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
-     * @return a {@link SharedWithMeGetResponse}
+     * @return a {@link SharedWithMegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/drive-sharedwithme?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SharedWithMeGetResponse get() {
+    public SharedWithMegetResponse get() {
         return get(null);
     }
     /**
      * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link SharedWithMeGetResponse}
+     * @return a {@link SharedWithMegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/drive-sharedwithme?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SharedWithMeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public SharedWithMegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, SharedWithMeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SharedWithMegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.

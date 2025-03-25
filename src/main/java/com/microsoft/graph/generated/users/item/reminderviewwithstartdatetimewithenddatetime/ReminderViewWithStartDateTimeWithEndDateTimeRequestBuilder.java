@@ -41,27 +41,27 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
     }
     /**
      * Invoke function reminderView
-     * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-reminderview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public ReminderViewWithStartDateTimeWithEndDateTimeGetResponse get() {
+    public ReminderViewWithStartDateTimeWithEndDateTimegetResponse get() {
         return get(null);
     }
     /**
      * Invoke function reminderView
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-reminderview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public ReminderViewWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public ReminderViewWithStartDateTimeWithEndDateTimegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ReminderViewWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ReminderViewWithStartDateTimeWithEndDateTimegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function reminderView

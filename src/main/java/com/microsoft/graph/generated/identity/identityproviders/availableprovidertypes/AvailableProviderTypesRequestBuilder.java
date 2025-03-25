@@ -37,27 +37,27 @@ public class AvailableProviderTypesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all identity providers supported in a directory.
-     * @return a {@link AvailableProviderTypesGetResponse}
+     * @return a {@link AvailableProviderTypesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identityproviderbase-availableprovidertypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public AvailableProviderTypesGetResponse get() {
+    public AvailableProviderTypesgetResponse get() {
         return get(null);
     }
     /**
      * Get all identity providers supported in a directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link AvailableProviderTypesGetResponse}
+     * @return a {@link AvailableProviderTypesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identityproviderbase-availableprovidertypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public AvailableProviderTypesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public AvailableProviderTypesgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, AvailableProviderTypesGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, AvailableProviderTypesgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get all identity providers supported in a directory.

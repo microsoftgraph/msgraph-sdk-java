@@ -37,27 +37,27 @@ public class GetUserIdsWithFlaggedAppRegistrationRequestBuilder extends BaseRequ
     }
     /**
      * Not yet documented
-     * @return a {@link GetUserIdsWithFlaggedAppRegistrationGetResponse}
+     * @return a {@link GetUserIdsWithFlaggedAppRegistrationgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-getuseridswithflaggedappregistration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetUserIdsWithFlaggedAppRegistrationGetResponse get() {
+    public GetUserIdsWithFlaggedAppRegistrationgetResponse get() {
         return get(null);
     }
     /**
      * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetUserIdsWithFlaggedAppRegistrationGetResponse}
+     * @return a {@link GetUserIdsWithFlaggedAppRegistrationgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-getuseridswithflaggedappregistration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetUserIdsWithFlaggedAppRegistrationGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetUserIdsWithFlaggedAppRegistrationgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetUserIdsWithFlaggedAppRegistrationGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetUserIdsWithFlaggedAppRegistrationgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Not yet documented

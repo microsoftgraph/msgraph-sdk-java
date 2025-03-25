@@ -42,27 +42,27 @@ public class MicrosoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDa
     }
     /**
      * Provide a summary of the most processed tasks, known as top tasks, for a specified time period in a tenant. The task definition is provided, along with numerical counts of total, successful, and failed runs. For information about workflows processed, see insights: topWorkflowsProcessedSummary.
-     * @return a {@link TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-insights-toptasksprocessedsummary?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse get() {
+    public TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimegetResponse get() {
         return get(null);
     }
     /**
      * Provide a summary of the most processed tasks, known as top tasks, for a specified time period in a tenant. The task definition is provided, along with numerical counts of total, successful, and failed runs. For information about workflows processed, see insights: topWorkflowsProcessedSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-insights-toptasksprocessedsummary?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Provide a summary of the most processed tasks, known as top tasks, for a specified time period in a tenant. The task definition is provided, along with numerical counts of total, successful, and failed runs. For information about workflows processed, see insights: topWorkflowsProcessedSummary.

@@ -41,27 +41,27 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
     }
     /**
      * Get a list of virtualEventTownhall objects where the specified user is either the organizer or a coorganizer.
-     * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleGetResponse}
+     * @return a {@link GetByUserIdAndRoleWithUserIdWithRolegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventtownhall-getbyuseridandrole?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetByUserIdAndRoleWithUserIdWithRoleGetResponse get() {
+    public GetByUserIdAndRoleWithUserIdWithRolegetResponse get() {
         return get(null);
     }
     /**
      * Get a list of virtualEventTownhall objects where the specified user is either the organizer or a coorganizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleGetResponse}
+     * @return a {@link GetByUserIdAndRoleWithUserIdWithRolegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventtownhall-getbyuseridandrole?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetByUserIdAndRoleWithUserIdWithRoleGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetByUserIdAndRoleWithUserIdWithRolegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetByUserIdAndRoleWithUserIdWithRoleGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetByUserIdAndRoleWithUserIdWithRolegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a list of virtualEventTownhall objects where the specified user is either the organizer or a coorganizer.

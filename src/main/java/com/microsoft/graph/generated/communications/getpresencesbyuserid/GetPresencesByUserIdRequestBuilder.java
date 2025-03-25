@@ -37,29 +37,29 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the presence information for multiple users.
      * @param body The request body
-     * @return a {@link GetPresencesByUserIdPostResponse}
+     * @return a {@link GetPresencesByUserIdpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetPresencesByUserIdPostResponse post(@jakarta.annotation.Nonnull final GetPresencesByUserIdPostRequestBody body) {
+    public GetPresencesByUserIdpostResponse post(@jakarta.annotation.Nonnull final GetPresencesByUserIdPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Get the presence information for multiple users.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetPresencesByUserIdPostResponse}
+     * @return a {@link GetPresencesByUserIdpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetPresencesByUserIdPostResponse post(@jakarta.annotation.Nonnull final GetPresencesByUserIdPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public GetPresencesByUserIdpostResponse post(@jakarta.annotation.Nonnull final GetPresencesByUserIdPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetPresencesByUserIdPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetPresencesByUserIdpostResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the presence information for multiple users.

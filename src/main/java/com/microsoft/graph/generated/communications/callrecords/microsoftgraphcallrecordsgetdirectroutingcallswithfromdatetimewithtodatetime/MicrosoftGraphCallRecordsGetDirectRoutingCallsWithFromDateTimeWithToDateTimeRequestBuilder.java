@@ -42,25 +42,25 @@ public class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithT
     }
     /**
      * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
-     * @return a {@link GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse}
+     * @return a {@link GetDirectRoutingCallsWithFromDateTimeWithToDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse get() {
+    public GetDirectRoutingCallsWithFromDateTimeWithToDateTimegetResponse get() {
         return get(null);
     }
     /**
      * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse}
+     * @return a {@link GetDirectRoutingCallsWithFromDateTimeWithToDateTimegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetDirectRoutingCallsWithFromDateTimeWithToDateTimegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetDirectRoutingCallsWithFromDateTimeWithToDateTimegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a log of direct routing calls as a collection of directRoutingLogRow entries.

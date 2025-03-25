@@ -37,27 +37,27 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
     }
     /**
      * Retrieves the list of devices with failed apps
-     * @return a {@link GetManagedDevicesWithAppFailuresGetResponse}
+     * @return a {@link GetManagedDevicesWithAppFailuresgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-troubleshooting-user-getmanageddeviceswithappfailures?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetManagedDevicesWithAppFailuresGetResponse get() {
+    public GetManagedDevicesWithAppFailuresgetResponse get() {
         return get(null);
     }
     /**
      * Retrieves the list of devices with failed apps
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetManagedDevicesWithAppFailuresGetResponse}
+     * @return a {@link GetManagedDevicesWithAppFailuresgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-troubleshooting-user-getmanageddeviceswithappfailures?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetManagedDevicesWithAppFailuresGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetManagedDevicesWithAppFailuresgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetManagedDevicesWithAppFailuresGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetManagedDevicesWithAppFailuresgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieves the list of devices with failed apps

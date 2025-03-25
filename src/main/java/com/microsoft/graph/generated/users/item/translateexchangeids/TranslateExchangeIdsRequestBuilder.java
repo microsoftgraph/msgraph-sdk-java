@@ -37,29 +37,29 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
-     * @return a {@link TranslateExchangeIdsPostResponse}
+     * @return a {@link TranslateExchangeIdspostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public TranslateExchangeIdsPostResponse post(@jakarta.annotation.Nonnull final TranslateExchangeIdsPostRequestBody body) {
+    public TranslateExchangeIdspostResponse post(@jakarta.annotation.Nonnull final TranslateExchangeIdsPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link TranslateExchangeIdsPostResponse}
+     * @return a {@link TranslateExchangeIdspostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public TranslateExchangeIdsPostResponse post(@jakarta.annotation.Nonnull final TranslateExchangeIdsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public TranslateExchangeIdspostResponse post(@jakarta.annotation.Nonnull final TranslateExchangeIdsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, TranslateExchangeIdsPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, TranslateExchangeIdspostResponse::createFromDiscriminatorValue);
     }
     /**
      * Translate identifiers of Outlook-related resources between formats.

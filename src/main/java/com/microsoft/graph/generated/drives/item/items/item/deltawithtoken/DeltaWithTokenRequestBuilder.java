@@ -39,25 +39,25 @@ public class DeltaWithTokenRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function delta
-     * @return a {@link DeltaWithTokenGetResponse}
+     * @return a {@link DeltaWithTokengetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeltaWithTokenGetResponse get() {
+    public DeltaWithTokengetResponse get() {
         return get(null);
     }
     /**
      * Invoke function delta
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeltaWithTokenGetResponse}
+     * @return a {@link DeltaWithTokengetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeltaWithTokenGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public DeltaWithTokengetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeltaWithTokenGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeltaWithTokengetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function delta

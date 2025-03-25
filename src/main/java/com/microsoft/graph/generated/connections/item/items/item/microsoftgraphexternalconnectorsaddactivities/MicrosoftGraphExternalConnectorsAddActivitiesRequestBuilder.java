@@ -37,27 +37,27 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
     /**
      * Invoke action addActivities
      * @param body The request body
-     * @return a {@link AddActivitiesPostResponse}
+     * @return a {@link AddActivitiespostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public AddActivitiesPostResponse post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body) {
+    public AddActivitiespostResponse post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action addActivities
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link AddActivitiesPostResponse}
+     * @return a {@link AddActivitiespostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public AddActivitiesPostResponse post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public AddActivitiespostResponse post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, AddActivitiesPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, AddActivitiespostResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke action addActivities

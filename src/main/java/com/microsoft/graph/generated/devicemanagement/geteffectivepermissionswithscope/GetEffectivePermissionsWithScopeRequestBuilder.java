@@ -39,27 +39,27 @@ public class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestB
     }
     /**
      * Retrieves the effective permissions of the currently authenticated user
-     * @return a {@link GetEffectivePermissionsWithScopeGetResponse}
+     * @return a {@link GetEffectivePermissionsWithScopegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-devicemanagement-geteffectivepermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetEffectivePermissionsWithScopeGetResponse get() {
+    public GetEffectivePermissionsWithScopegetResponse get() {
         return get(null);
     }
     /**
      * Retrieves the effective permissions of the currently authenticated user
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetEffectivePermissionsWithScopeGetResponse}
+     * @return a {@link GetEffectivePermissionsWithScopegetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-devicemanagement-geteffectivepermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetEffectivePermissionsWithScopeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetEffectivePermissionsWithScopegetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetEffectivePermissionsWithScopeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetEffectivePermissionsWithScopegetResponse::createFromDiscriminatorValue);
     }
     /**
      * Retrieves the effective permissions of the currently authenticated user

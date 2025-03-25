@@ -37,29 +37,29 @@ public class RemoveRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn&apos;t be removed.
      * @param body The request body
-     * @return a {@link RemovePostResponse}
+     * @return a {@link RemovepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-remove?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public RemovePostResponse post(@jakarta.annotation.Nonnull final RemovePostRequestBody body) {
+    public RemovepostResponse post(@jakarta.annotation.Nonnull final RemovePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn&apos;t be removed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RemovePostResponse}
+     * @return a {@link RemovepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-remove?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public RemovePostResponse post(@jakarta.annotation.Nonnull final RemovePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RemovepostResponse post(@jakarta.annotation.Nonnull final RemovePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, RemovePostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, RemovepostResponse::createFromDiscriminatorValue);
     }
     /**
      * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn&apos;t be removed.

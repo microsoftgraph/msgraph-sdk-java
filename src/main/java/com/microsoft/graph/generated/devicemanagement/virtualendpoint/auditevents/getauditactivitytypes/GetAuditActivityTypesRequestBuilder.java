@@ -37,27 +37,27 @@ public class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get auditactivity typesby tenant ID.
-     * @return a {@link GetAuditActivityTypesGetResponse}
+     * @return a {@link GetAuditActivityTypesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcauditevent-getauditactivitytypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetAuditActivityTypesGetResponse get() {
+    public GetAuditActivityTypesgetResponse get() {
         return get(null);
     }
     /**
      * Get auditactivity typesby tenant ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetAuditActivityTypesGetResponse}
+     * @return a {@link GetAuditActivityTypesgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcauditevent-getauditactivitytypes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GetAuditActivityTypesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetAuditActivityTypesgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetAuditActivityTypesGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetAuditActivityTypesgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get auditactivity typesby tenant ID.

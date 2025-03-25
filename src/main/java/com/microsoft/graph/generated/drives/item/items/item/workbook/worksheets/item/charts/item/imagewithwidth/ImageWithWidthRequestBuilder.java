@@ -38,25 +38,25 @@ public class ImageWithWidthRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function image
-     * @return a {@link ImageWithWidthGetResponse}
+     * @return a {@link ImageWithWidthgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public ImageWithWidthGetResponse get() {
+    public ImageWithWidthgetResponse get() {
         return get(null);
     }
     /**
      * Invoke function image
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ImageWithWidthGetResponse}
+     * @return a {@link ImageWithWidthgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public ImageWithWidthGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public ImageWithWidthgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ImageWithWidthGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ImageWithWidthgetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function image

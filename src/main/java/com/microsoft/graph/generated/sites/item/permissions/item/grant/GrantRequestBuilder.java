@@ -37,29 +37,29 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
     /**
      * Grant users access to a link represented by a permission.
      * @param body The request body
-     * @return a {@link GrantPostResponse}
+     * @return a {@link GrantpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GrantPostResponse post(@jakarta.annotation.Nonnull final GrantPostRequestBody body) {
+    public GrantpostResponse post(@jakarta.annotation.Nonnull final GrantPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Grant users access to a link represented by a permission.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GrantPostResponse}
+     * @return a {@link GrantpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GrantPostResponse post(@jakarta.annotation.Nonnull final GrantPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public GrantpostResponse post(@jakarta.annotation.Nonnull final GrantPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GrantPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GrantpostResponse::createFromDiscriminatorValue);
     }
     /**
      * Grant users access to a link represented by a permission.

@@ -37,29 +37,29 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
     /**
      * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
-     * @return a {@link ArchivePostResponse}
+     * @return a {@link ArchivepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public ArchivePostResponse post(@jakarta.annotation.Nonnull final ArchivePostRequestBody body) {
+    public ArchivepostResponse post(@jakarta.annotation.Nonnull final ArchivePostRequestBody body) {
         return post(body, null);
     }
     /**
      * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ArchivePostResponse}
+     * @return a {@link ArchivepostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public ArchivePostResponse post(@jakarta.annotation.Nonnull final ArchivePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public ArchivepostResponse post(@jakarta.annotation.Nonnull final ArchivePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ArchivePostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ArchivepostResponse::createFromDiscriminatorValue);
     }
     /**
      * Archive a list of serviceUpdateMessages for the signed in user.

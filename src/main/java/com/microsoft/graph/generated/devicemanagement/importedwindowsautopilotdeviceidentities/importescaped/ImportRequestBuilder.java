@@ -37,29 +37,29 @@ public class ImportRequestBuilder extends BaseRequestBuilder {
     /**
      * Not yet documented
      * @param body The request body
-     * @return a {@link ImportPostResponse}
+     * @return a {@link ImportpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-import?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public ImportPostResponse post(@jakarta.annotation.Nonnull final ImportPostRequestBody body) {
+    public ImportpostResponse post(@jakarta.annotation.Nonnull final ImportPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ImportPostResponse}
+     * @return a {@link ImportpostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-import?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public ImportPostResponse post(@jakarta.annotation.Nonnull final ImportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public ImportpostResponse post(@jakarta.annotation.Nonnull final ImportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ImportPostResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ImportpostResponse::createFromDiscriminatorValue);
     }
     /**
      * Not yet documented

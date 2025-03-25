@@ -37,27 +37,27 @@ public class AdditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In Microsoft Entra Entitlement Management, retrieve a collection of accessPackageAssignment objects that indicate a target user has an assignment to a specified access package and also an assignment to another, potentially incompatible, access package.  This can be used to prepare to configure the incompatible access packages for a specific access package.
-     * @return a {@link AdditionalAccessGetResponse}
+     * @return a {@link AdditionalAccessgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-additionalaccess?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public AdditionalAccessGetResponse get() {
+    public AdditionalAccessgetResponse get() {
         return get(null);
     }
     /**
      * In Microsoft Entra Entitlement Management, retrieve a collection of accessPackageAssignment objects that indicate a target user has an assignment to a specified access package and also an assignment to another, potentially incompatible, access package.  This can be used to prepare to configure the incompatible access packages for a specific access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link AdditionalAccessGetResponse}
+     * @return a {@link AdditionalAccessgetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignment-additionalaccess?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public AdditionalAccessGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public AdditionalAccessgetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, AdditionalAccessGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, AdditionalAccessgetResponse::createFromDiscriminatorValue);
     }
     /**
      * In Microsoft Entra Entitlement Management, retrieve a collection of accessPackageAssignment objects that indicate a target user has an assignment to a specified access package and also an assignment to another, potentially incompatible, access package.  This can be used to prepare to configure the incompatible access packages for a specific access package.

@@ -39,25 +39,25 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseReque
     }
     /**
      * Invoke function allowedCalendarSharingRoles
-     * @return a {@link AllowedCalendarSharingRolesWithUserGetResponse}
+     * @return a {@link AllowedCalendarSharingRolesWithUsergetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public AllowedCalendarSharingRolesWithUserGetResponse get() {
+    public AllowedCalendarSharingRolesWithUsergetResponse get() {
         return get(null);
     }
     /**
      * Invoke function allowedCalendarSharingRoles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link AllowedCalendarSharingRolesWithUserGetResponse}
+     * @return a {@link AllowedCalendarSharingRolesWithUsergetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public AllowedCalendarSharingRolesWithUserGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public AllowedCalendarSharingRolesWithUsergetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, AllowedCalendarSharingRolesWithUserGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, AllowedCalendarSharingRolesWithUsergetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function allowedCalendarSharingRoles

@@ -37,27 +37,27 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get newly created or updated educationUser without having to perform a full read of the entire collection. See Use delta query for details.
-     * @return a {@link DeltaGetResponse}
+     * @return a {@link DeltagetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-delta?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public DeltaGetResponse get() {
+    public DeltagetResponse get() {
         return get(null);
     }
     /**
      * Get newly created or updated educationUser without having to perform a full read of the entire collection. See Use delta query for details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeltaGetResponse}
+     * @return a {@link DeltagetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationuser-delta?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public DeltaGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public DeltagetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeltaGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeltagetResponse::createFromDiscriminatorValue);
     }
     /**
      * Get newly created or updated educationUser without having to perform a full read of the entire collection. See Use delta query for details.

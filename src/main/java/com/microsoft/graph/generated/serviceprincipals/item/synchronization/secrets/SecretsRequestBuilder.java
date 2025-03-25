@@ -46,29 +46,29 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provide credentials for establishing connectivity with the target system.
      * @param body The request body
-     * @return a {@link SecretsPutResponse}
+     * @return a {@link SecretsputResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-serviceprincipal-put-synchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
+    public SecretsputResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
         return put(body, null);
     }
     /**
      * Provide credentials for establishing connectivity with the target system.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link SecretsPutResponse}
+     * @return a {@link SecretsputResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-serviceprincipal-put-synchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public SecretsputResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, SecretsPutResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SecretsputResponse::createFromDiscriminatorValue);
     }
     /**
      * Provide credentials for establishing connectivity with the target system.
