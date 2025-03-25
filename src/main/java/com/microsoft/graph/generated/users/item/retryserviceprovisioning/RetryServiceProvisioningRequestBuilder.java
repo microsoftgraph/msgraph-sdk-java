@@ -35,7 +35,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/retryServiceProvisioning", rawUrl);
     }
     /**
-     * Retry the user service provisioning.
+     * Retry the provisioning of a user object in Microsoft Entra ID.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-retryserviceprovisioning?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Retry the user service provisioning.
+     * Retry the provisioning of a user object in Microsoft Entra ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-retryserviceprovisioning?view=graph-rest-1.0">Find more info here</a>
@@ -55,7 +55,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retry the user service provisioning.
+     * Retry the provisioning of a user object in Microsoft Entra ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Retry the user service provisioning.
+     * Retry the provisioning of a user object in Microsoft Entra ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
