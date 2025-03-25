@@ -48,7 +48,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
         return value;
     }
     /**
-     * Gets the applicationFilter property value. The applicationFilter property
+     * Gets the applicationFilter property value. Filter that defines the dynamic-application-syntax rule to include/exclude cloud applications. A filter can use custom security attributes to include/exclude applications.
      * @return a {@link ConditionalAccessFilter}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the applicationFilter property value. The applicationFilter property
+     * Sets the applicationFilter property value. Filter that defines the dynamic-application-syntax rule to include/exclude cloud applications. A filter can use custom security attributes to include/exclude applications.
      * @param value Value to set for the applicationFilter property.
      */
     public void setApplicationFilter(@jakarta.annotation.Nullable final ConditionalAccessFilter value) {

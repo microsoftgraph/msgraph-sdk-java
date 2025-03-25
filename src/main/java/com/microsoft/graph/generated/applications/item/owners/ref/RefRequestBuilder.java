@@ -82,7 +82,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add an owner to an application. Currently, only individual users are supported as owners of applications.
+     * Add an owner to an application. Application owners can be individual users, the associated service principal, or another service principal.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-post-owners?view=graph-rest-1.0">Find more info here</a>
@@ -91,7 +91,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Add an owner to an application. Currently, only individual users are supported as owners of applications.
+     * Add an owner to an application. Application owners can be individual users, the associated service principal, or another service principal.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -145,7 +145,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add an owner to an application. Currently, only individual users are supported as owners of applications.
+     * Add an owner to an application. Application owners can be individual users, the associated service principal, or another service principal.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -154,7 +154,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add an owner to an application. Currently, only individual users are supported as owners of applications.
+     * Add an owner to an application. Application owners can be individual users, the associated service principal, or another service principal.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
