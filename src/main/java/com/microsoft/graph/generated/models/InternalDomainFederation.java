@@ -26,7 +26,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         return new InternalDomainFederation();
     }
     /**
-     * Gets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Gets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         return this.backingStore.get("signingCertificateUpdateStatus");
     }
     /**
-     * Gets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Gets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         writer.writeStringValue("signOutUri", this.getSignOutUri());
     }
     /**
-     * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
      * @param value Value to set for the activeSignInUri property.
      */
     public void setActiveSignInUri(@jakarta.annotation.Nullable final String value) {
@@ -172,7 +172,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         this.backingStore.set("signingCertificateUpdateStatus", value);
     }
     /**
-     * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
      * @param value Value to set for the signOutUri property.
      */
     public void setSignOutUri(@jakarta.annotation.Nullable final String value) {

@@ -8,7 +8,8 @@ public enum ExportFileStructure implements ValuedEnum {
     None("none"),
     Directory("directory"),
     Pst("pst"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Msg("msg");
     public final String value;
     ExportFileStructure(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum ExportFileStructure implements ValuedEnum {
             case "directory": return Directory;
             case "pst": return Pst;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "msg": return Msg;
             default: return null;
         }
     }
