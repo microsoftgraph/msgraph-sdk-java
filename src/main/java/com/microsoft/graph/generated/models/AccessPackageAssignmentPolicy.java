@@ -114,6 +114,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("expiration", (n) -> { this.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("notificationSettings", (n) -> { this.setNotificationSettings(n.getObjectValue(AccessPackageNotificationSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("questions", (n) -> { this.setQuestions(n.getCollectionOfObjectValues(AccessPackageQuestion::createFromDiscriminatorValue)); });
         deserializerMap.put("requestApprovalSettings", (n) -> { this.setRequestApprovalSettings(n.getObjectValue(AccessPackageAssignmentApprovalSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("requestorSettings", (n) -> { this.setRequestorSettings(n.getObjectValue(AccessPackageAssignmentRequestorSettings::createFromDiscriminatorValue)); });
@@ -128,6 +129,14 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.backingStore.get("modifiedDateTime");
+    }
+    /**
+     * Gets the notificationSettings property value. The notificationSettings property
+     * @return a {@link AccessPackageNotificationSettings}
+     */
+    @jakarta.annotation.Nullable
+    public AccessPackageNotificationSettings getNotificationSettings() {
+        return this.backingStore.get("notificationSettings");
     }
     /**
      * Gets the questions property value. Questions that are posed to the  requestor.
@@ -186,6 +195,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("expiration", this.getExpiration());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
+        writer.writeObjectValue("notificationSettings", this.getNotificationSettings());
         writer.writeCollectionOfObjectValues("questions", this.getQuestions());
         writer.writeObjectValue("requestApprovalSettings", this.getRequestApprovalSettings());
         writer.writeObjectValue("requestorSettings", this.getRequestorSettings());
@@ -261,6 +271,13 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("modifiedDateTime", value);
+    }
+    /**
+     * Sets the notificationSettings property value. The notificationSettings property
+     * @param value Value to set for the notificationSettings property.
+     */
+    public void setNotificationSettings(@jakarta.annotation.Nullable final AccessPackageNotificationSettings value) {
+        this.backingStore.set("notificationSettings", value);
     }
     /**
      * Sets the questions property value. Questions that are posed to the  requestor.

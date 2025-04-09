@@ -25,7 +25,7 @@ public class SchemaExtension extends Entity implements Parsable {
         return new SchemaExtension();
     }
     /**
-     * Gets the description property value. Description for the schema extension. Supports $filter (eq).
+     * Gets the description property value. Description for the schema extension.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class SchemaExtension extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("targetTypes", this.getTargetTypes());
     }
     /**
-     * Sets the description property value. Description for the schema extension. Supports $filter (eq).
+     * Sets the description property value. Description for the schema extension.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
