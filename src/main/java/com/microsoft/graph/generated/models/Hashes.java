@@ -56,7 +56,7 @@ public class Hashes implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
+     * Gets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class Hashes implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
+     * Gets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file change (if available). Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class Hashes implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("sha1Hash");
     }
     /**
-     * Gets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
+     * Gets the sha256Hash property value. This property isn&apos;t supported. Don&apos;t use.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class Hashes implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
+     * Sets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
      * @param value Value to set for the crc32Hash property.
      */
     public void setCrc32Hash(@jakarta.annotation.Nullable final String value) {
@@ -152,7 +152,7 @@ public class Hashes implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
+     * Sets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file change (if available). Read-only.
      * @param value Value to set for the quickXorHash property.
      */
     public void setQuickXorHash(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class Hashes implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("sha1Hash", value);
     }
     /**
-     * Sets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
+     * Sets the sha256Hash property value. This property isn&apos;t supported. Don&apos;t use.
      * @param value Value to set for the sha256Hash property.
      */
     public void setSha256Hash(@jakarta.annotation.Nullable final String value) {

@@ -208,18 +208,18 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a macOSLobApp.
+     * Deletes a macOSOfficeSuiteApp.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a macOSLobApp.
+     * Deletes a macOSOfficeSuiteApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -228,21 +228,21 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the managedMobileLobApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      * @return a {@link MobileApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedmobilelobapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosmicrosoftedgeapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the managedMobileLobApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedmobilelobapp-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosmicrosoftedgeapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -252,23 +252,23 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileApp::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a managedAndroidLobApp object.
+     * Update the properties of a win32LobApp object.
      * @param body The request body
      * @return a {@link MobileApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedandroidlobapp-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp patch(@jakarta.annotation.Nonnull final MobileApp body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a managedAndroidLobApp object.
+     * Update the properties of a win32LobApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-managedandroidlobapp-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp patch(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -279,7 +279,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileApp::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a macOSLobApp.
+     * Deletes a macOSOfficeSuiteApp.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -287,7 +287,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a macOSLobApp.
+     * Deletes a macOSOfficeSuiteApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -295,11 +295,10 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedMobileLobApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -307,7 +306,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedMobileLobApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -319,7 +318,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a managedAndroidLobApp object.
+     * Update the properties of a win32LobApp object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -328,7 +327,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a managedAndroidLobApp object.
+     * Update the properties of a win32LobApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -359,7 +358,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedMobileLobApp object.
+     * Read properties and relationships of the macOSMicrosoftEdgeApp object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

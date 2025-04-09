@@ -99,6 +99,14 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
+     * Gets the customDetails property value. The customDetails property
+     * @return a {@link Dictionary}
+     */
+    @jakarta.annotation.Nullable
+    public Dictionary getCustomDetails() {
+        return this.backingStore.get("customDetails");
+    }
+    /**
      * Gets the description property value. String value describing each alert.
      * @return a {@link String}
      */
@@ -154,6 +162,7 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(AlertClassification::forValue)); });
         deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfObjectValues(AlertComment::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customDetails", (n) -> { this.setCustomDetails(n.getObjectValue(Dictionary::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("detectionSource", (n) -> { this.setDetectionSource(n.getEnumValue(DetectionSource::forValue)); });
         deserializerMap.put("detectorId", (n) -> { this.setDetectorId(n.getStringValue()); });
@@ -339,6 +348,7 @@ public class Alert extends Entity implements Parsable {
         writer.writeEnumValue("classification", this.getClassification());
         writer.writeCollectionOfObjectValues("comments", this.getComments());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeObjectValue("customDetails", this.getCustomDetails());
         writer.writeStringValue("description", this.getDescription());
         writer.writeEnumValue("detectionSource", this.getDetectionSource());
         writer.writeStringValue("detectorId", this.getDetectorId());
@@ -425,6 +435,13 @@ public class Alert extends Entity implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the customDetails property value. The customDetails property
+     * @param value Value to set for the customDetails property.
+     */
+    public void setCustomDetails(@jakarta.annotation.Nullable final Dictionary value) {
+        this.backingStore.set("customDetails", value);
     }
     /**
      * Sets the description property value. String value describing each alert.

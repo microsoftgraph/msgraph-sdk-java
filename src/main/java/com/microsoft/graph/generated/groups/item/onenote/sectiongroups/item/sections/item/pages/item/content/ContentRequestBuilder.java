@@ -118,7 +118,6 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -138,7 +137,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json");
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream");
         return requestInfo;
     }
     /**

@@ -56,7 +56,7 @@ public class X509CertificateCRLValidationConfiguration implements AdditionalData
         return this.backingStore;
     }
     /**
-     * Gets the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property value. The exemptedCertificateAuthoritiesSubjectKeyIdentifiers property
+     * Gets the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property value. Represents the SKIs of CAs that should be excluded from the valid CRL distribution point check. SKI is represented as a hexadecimal string.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class X509CertificateCRLValidationConfiguration implements AdditionalData
         this.backingStore = value;
     }
     /**
-     * Sets the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property value. The exemptedCertificateAuthoritiesSubjectKeyIdentifiers property
+     * Sets the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property value. Represents the SKIs of CAs that should be excluded from the valid CRL distribution point check. SKI is represented as a hexadecimal string.
      * @param value Value to set for the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property.
      */
     public void setExemptedCertificateAuthoritiesSubjectKeyIdentifiers(@jakarta.annotation.Nullable final java.util.List<String> value) {
