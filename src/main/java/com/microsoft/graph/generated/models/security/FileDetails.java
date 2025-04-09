@@ -61,15 +61,17 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
         deserializerMap.put("filePath", (n) -> { this.setFilePath(n.getStringValue()); });
         deserializerMap.put("filePublisher", (n) -> { this.setFilePublisher(n.getStringValue()); });
         deserializerMap.put("fileSize", (n) -> { this.setFileSize(n.getLongValue()); });
         deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
+        deserializerMap.put("md5", (n) -> { this.setMd5(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("sha1", (n) -> { this.setSha1(n.getStringValue()); });
         deserializerMap.put("sha256", (n) -> { this.setSha256(n.getStringValue()); });
+        deserializerMap.put("sha256Ac", (n) -> { this.setSha256Ac(n.getStringValue()); });
         deserializerMap.put("signer", (n) -> { this.setSigner(n.getStringValue()); });
         return deserializerMap;
     }
@@ -114,6 +116,14 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("issuer");
     }
     /**
+     * Gets the md5 property value. The Md5 cryptographic hash of the file content.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMd5() {
+        return this.backingStore.get("md5");
+    }
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return a {@link String}
      */
@@ -138,6 +148,14 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("sha256");
     }
     /**
+     * Gets the sha256Ac property value. The sha256Ac property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSha256Ac() {
+        return this.backingStore.get("sha256Ac");
+    }
+    /**
      * Gets the signer property value. The signer of the signed file.
      * @return a {@link String}
      */
@@ -156,9 +174,11 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
         writer.writeStringValue("filePublisher", this.getFilePublisher());
         writer.writeLongValue("fileSize", this.getFileSize());
         writer.writeStringValue("issuer", this.getIssuer());
+        writer.writeStringValue("md5", this.getMd5());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sha1", this.getSha1());
         writer.writeStringValue("sha256", this.getSha256());
+        writer.writeStringValue("sha256Ac", this.getSha256Ac());
         writer.writeStringValue("signer", this.getSigner());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -213,6 +233,13 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("issuer", value);
     }
     /**
+     * Sets the md5 property value. The Md5 cryptographic hash of the file content.
+     * @param value Value to set for the md5 property.
+     */
+    public void setMd5(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("md5", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
@@ -232,6 +259,13 @@ public class FileDetails implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setSha256(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sha256", value);
+    }
+    /**
+     * Sets the sha256Ac property value. The sha256Ac property
+     * @param value Value to set for the sha256Ac property.
+     */
+    public void setSha256Ac(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("sha256Ac", value);
     }
     /**
      * Sets the signer property value. The signer of the signed file.

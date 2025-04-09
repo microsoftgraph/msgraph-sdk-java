@@ -34,6 +34,14 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("additionalOptions");
     }
     /**
+     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @return a {@link CloudAttachmentVersion}
+     */
+    @jakarta.annotation.Nullable
+    public CloudAttachmentVersion getCloudAttachmentVersion() {
+        return this.backingStore.get("cloudAttachmentVersion");
+    }
+    /**
      * Gets the description property value. The description of the export by the user.
      * @return a {@link String}
      */
@@ -48,6 +56,14 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.backingStore.get("displayName");
+    }
+    /**
+     * Gets the documentVersion property value. The documentVersion property
+     * @return a {@link DocumentVersion}
+     */
+    @jakarta.annotation.Nullable
+    public DocumentVersion getDocumentVersion() {
+        return this.backingStore.get("documentVersion");
     }
     /**
      * Gets the exportCriteria property value. Items to be included in the export. The possible values are: searchHits, partiallyIndexed, unknownFutureValue.
@@ -97,8 +113,10 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalOptions", (n) -> { this.setAdditionalOptions(n.getEnumSetValue(AdditionalOptions::forValue)); });
+        deserializerMap.put("cloudAttachmentVersion", (n) -> { this.setCloudAttachmentVersion(n.getEnumValue(CloudAttachmentVersion::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("documentVersion", (n) -> { this.setDocumentVersion(n.getEnumValue(DocumentVersion::forValue)); });
         deserializerMap.put("exportCriteria", (n) -> { this.setExportCriteria(n.getEnumSetValue(ExportCriteria::forValue)); });
         deserializerMap.put("exportFileMetadata", (n) -> { this.setExportFileMetadata(n.getCollectionOfObjectValues(ExportFileMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("exportFormat", (n) -> { this.setExportFormat(n.getEnumValue(ExportFormat::forValue)); });
@@ -123,8 +141,10 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumSetValue("additionalOptions", this.getAdditionalOptions());
+        writer.writeEnumValue("cloudAttachmentVersion", this.getCloudAttachmentVersion());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("documentVersion", this.getDocumentVersion());
         writer.writeEnumSetValue("exportCriteria", this.getExportCriteria());
         writer.writeCollectionOfObjectValues("exportFileMetadata", this.getExportFileMetadata());
         writer.writeEnumValue("exportFormat", this.getExportFormat());
@@ -140,6 +160,13 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         this.backingStore.set("additionalOptions", value);
     }
     /**
+     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @param value Value to set for the cloudAttachmentVersion property.
+     */
+    public void setCloudAttachmentVersion(@jakarta.annotation.Nullable final CloudAttachmentVersion value) {
+        this.backingStore.set("cloudAttachmentVersion", value);
+    }
+    /**
      * Sets the description property value. The description of the export by the user.
      * @param value Value to set for the description property.
      */
@@ -152,6 +179,13 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the documentVersion property value. The documentVersion property
+     * @param value Value to set for the documentVersion property.
+     */
+    public void setDocumentVersion(@jakarta.annotation.Nullable final DocumentVersion value) {
+        this.backingStore.set("documentVersion", value);
     }
     /**
      * Sets the exportCriteria property value. Items to be included in the export. The possible values are: searchHits, partiallyIndexed, unknownFutureValue.

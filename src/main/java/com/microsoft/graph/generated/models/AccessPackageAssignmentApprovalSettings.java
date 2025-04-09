@@ -61,9 +61,10 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("isApprovalRequiredForAdd", (n) -> { this.setIsApprovalRequiredForAdd(n.getBooleanValue()); });
         deserializerMap.put("isApprovalRequiredForUpdate", (n) -> { this.setIsApprovalRequiredForUpdate(n.getBooleanValue()); });
+        deserializerMap.put("isRequestorJustificationRequired", (n) -> { this.setIsRequestorJustificationRequired(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("stages", (n) -> { this.setStages(n.getCollectionOfObjectValues(AccessPackageApprovalStage::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -83,6 +84,14 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForUpdate() {
         return this.backingStore.get("isApprovalRequiredForUpdate");
+    }
+    /**
+     * Gets the isRequestorJustificationRequired property value. The isRequestorJustificationRequired property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsRequestorJustificationRequired() {
+        return this.backingStore.get("isRequestorJustificationRequired");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -108,6 +117,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isApprovalRequiredForAdd", this.getIsApprovalRequiredForAdd());
         writer.writeBooleanValue("isApprovalRequiredForUpdate", this.getIsApprovalRequiredForUpdate());
+        writer.writeBooleanValue("isRequestorJustificationRequired", this.getIsRequestorJustificationRequired());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("stages", this.getStages());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -140,6 +150,13 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     public void setIsApprovalRequiredForUpdate(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isApprovalRequiredForUpdate", value);
+    }
+    /**
+     * Sets the isRequestorJustificationRequired property value. The isRequestorJustificationRequired property
+     * @param value Value to set for the isRequestorJustificationRequired property.
+     */
+    public void setIsRequestorJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isRequestorJustificationRequired", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
