@@ -64,7 +64,7 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("bandwidthLowEventRatio");
     }
     /**
-     * Gets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
+     * Gets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network. This property isn&apos;t available if the user disables precise location sharing in their operating system or Microsoft Teams app settings.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -365,7 +365,7 @@ public class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("bandwidthLowEventRatio", value);
     }
     /**
-     * Sets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
+     * Sets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network. This property isn&apos;t available if the user disables precise location sharing in their operating system or Microsoft Teams app settings.
      * @param value Value to set for the basicServiceSetIdentifier property.
      */
     public void setBasicServiceSetIdentifier(@jakarta.annotation.Nullable final String value) {
