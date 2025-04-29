@@ -3,7 +3,6 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -37,7 +36,6 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         deserializerMap.put("mailboxCount", (n) -> { this.setMailboxCount(n.getIntegerValue()); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         deserializerMap.put("siteCount", (n) -> { this.setSiteCount(n.getIntegerValue()); });
-        deserializerMap.put("statisticsOptions", (n) -> { this.setStatisticsOptions(n.getEnumSetValue(StatisticsOptions::forValue)); });
         deserializerMap.put("unindexedItemCount", (n) -> { this.setUnindexedItemCount(n.getLongValue()); });
         deserializerMap.put("unindexedItemsSize", (n) -> { this.setUnindexedItemsSize(n.getLongValue()); });
         return deserializerMap;
@@ -83,14 +81,6 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         return this.backingStore.get("siteCount");
     }
     /**
-     * Gets the statisticsOptions property value. The statisticsOptions property
-     * @return a {@link EnumSet<StatisticsOptions>}
-     */
-    @jakarta.annotation.Nullable
-    public EnumSet<StatisticsOptions> getStatisticsOptions() {
-        return this.backingStore.get("statisticsOptions");
-    }
-    /**
      * Gets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
      * @return a {@link Long}
      */
@@ -118,7 +108,6 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         writer.writeIntegerValue("mailboxCount", this.getMailboxCount());
         writer.writeObjectValue("search", this.getSearch());
         writer.writeIntegerValue("siteCount", this.getSiteCount());
-        writer.writeEnumSetValue("statisticsOptions", this.getStatisticsOptions());
         writer.writeLongValue("unindexedItemCount", this.getUnindexedItemCount());
         writer.writeLongValue("unindexedItemsSize", this.getUnindexedItemsSize());
     }
@@ -156,13 +145,6 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     public void setSiteCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("siteCount", value);
-    }
-    /**
-     * Sets the statisticsOptions property value. The statisticsOptions property
-     * @param value Value to set for the statisticsOptions property.
-     */
-    public void setStatisticsOptions(@jakarta.annotation.Nullable final EnumSet<StatisticsOptions> value) {
-        this.backingStore.set("statisticsOptions", value);
     }
     /**
      * Sets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
