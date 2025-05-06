@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ExchangeProtectionPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.backuprestore.exchangeprotectionpolicies.item.mailboxinclusionrules.MailboxInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.exchangeprotectionpolicies.item.mailboxprotectionunits.MailboxProtectionUnitsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.exchangeprotectionpolicies.item.mailboxprotectionunitsbulkadditionjobs.MailboxProtectionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     @jakarta.annotation.Nonnull
     public MailboxProtectionUnitsRequestBuilder mailboxProtectionUnits() {
         return new MailboxProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mailboxProtectionUnitsBulkAdditionJobs property of the microsoft.graph.exchangeProtectionPolicy entity.
+     * @return a {@link MailboxProtectionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxProtectionUnitsBulkAdditionJobsRequestBuilder mailboxProtectionUnitsBulkAdditionJobs() {
+        return new MailboxProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ExchangeProtectionPolicyItemRequestBuilder} and sets the default values.

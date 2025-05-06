@@ -54,6 +54,7 @@ public class Authentication extends Entity implements Parsable {
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(LongRunningOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("passwordMethods", (n) -> { this.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("phoneMethods", (n) -> { this.setPhoneMethods(n.getCollectionOfObjectValues(PhoneAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("platformCredentialMethods", (n) -> { this.setPlatformCredentialMethods(n.getCollectionOfObjectValues(PlatformCredentialAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("softwareOathMethods", (n) -> { this.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("temporaryAccessPassMethods", (n) -> { this.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsHelloForBusinessMethods", (n) -> { this.setWindowsHelloForBusinessMethods(n.getCollectionOfObjectValues(WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue)); });
@@ -100,6 +101,14 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("phoneMethods");
     }
     /**
+     * Gets the platformCredentialMethods property value. Represents a platform credential instance registered to a user on Mac OS.
+     * @return a {@link java.util.List<PlatformCredentialAuthenticationMethod>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PlatformCredentialAuthenticationMethod> getPlatformCredentialMethods() {
+        return this.backingStore.get("platformCredentialMethods");
+    }
+    /**
      * Gets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return a {@link java.util.List<SoftwareOathAuthenticationMethod>}
      */
@@ -137,6 +146,7 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("passwordMethods", this.getPasswordMethods());
         writer.writeCollectionOfObjectValues("phoneMethods", this.getPhoneMethods());
+        writer.writeCollectionOfObjectValues("platformCredentialMethods", this.getPlatformCredentialMethods());
         writer.writeCollectionOfObjectValues("softwareOathMethods", this.getSoftwareOathMethods());
         writer.writeCollectionOfObjectValues("temporaryAccessPassMethods", this.getTemporaryAccessPassMethods());
         writer.writeCollectionOfObjectValues("windowsHelloForBusinessMethods", this.getWindowsHelloForBusinessMethods());
@@ -189,6 +199,13 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setPhoneMethods(@jakarta.annotation.Nullable final java.util.List<PhoneAuthenticationMethod> value) {
         this.backingStore.set("phoneMethods", value);
+    }
+    /**
+     * Sets the platformCredentialMethods property value. Represents a platform credential instance registered to a user on Mac OS.
+     * @param value Value to set for the platformCredentialMethods property.
+     */
+    public void setPlatformCredentialMethods(@jakarta.annotation.Nullable final java.util.List<PlatformCredentialAuthenticationMethod> value) {
+        this.backingStore.set("platformCredentialMethods", value);
     }
     /**
      * Sets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.

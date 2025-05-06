@@ -34,6 +34,14 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
         return this.backingStore.get("attendanceRecords");
     }
     /**
+     * Gets the externalEventInformation property value. The externalEventInformation property
+     * @return a {@link java.util.List<VirtualEventExternalInformation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<VirtualEventExternalInformation> getExternalEventInformation() {
+        return this.backingStore.get("externalEventInformation");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -41,6 +49,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attendanceRecords", (n) -> { this.setAttendanceRecords(n.getCollectionOfObjectValues(AttendanceRecord::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalEventInformation", (n) -> { this.setExternalEventInformation(n.getCollectionOfObjectValues(VirtualEventExternalInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("meetingEndDateTime", (n) -> { this.setMeetingEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("meetingStartDateTime", (n) -> { this.setMeetingStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("totalParticipantCount", (n) -> { this.setTotalParticipantCount(n.getIntegerValue()); });
@@ -78,6 +87,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("attendanceRecords", this.getAttendanceRecords());
+        writer.writeCollectionOfObjectValues("externalEventInformation", this.getExternalEventInformation());
         writer.writeOffsetDateTimeValue("meetingEndDateTime", this.getMeetingEndDateTime());
         writer.writeOffsetDateTimeValue("meetingStartDateTime", this.getMeetingStartDateTime());
         writer.writeIntegerValue("totalParticipantCount", this.getTotalParticipantCount());
@@ -88,6 +98,13 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     public void setAttendanceRecords(@jakarta.annotation.Nullable final java.util.List<AttendanceRecord> value) {
         this.backingStore.set("attendanceRecords", value);
+    }
+    /**
+     * Sets the externalEventInformation property value. The externalEventInformation property
+     * @param value Value to set for the externalEventInformation property.
+     */
+    public void setExternalEventInformation(@jakarta.annotation.Nullable final java.util.List<VirtualEventExternalInformation> value) {
+        this.backingStore.set("externalEventInformation", value);
     }
     /**
      * Sets the meetingEndDateTime property value. UTC time when the meeting ended. Read-only.

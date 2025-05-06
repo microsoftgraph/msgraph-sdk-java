@@ -75,12 +75,28 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("calendar");
     }
     /**
+     * Gets the cancelledOccurrences property value. The cancelledOccurrences property
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getCancelledOccurrences() {
+        return this.backingStore.get("cancelledOccurrences");
+    }
+    /**
      * Gets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
      * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEnd() {
         return this.backingStore.get("end");
+    }
+    /**
+     * Gets the exceptionOccurrences property value. The exceptionOccurrences property
+     * @return a {@link java.util.List<Event>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Event> getExceptionOccurrences() {
+        return this.backingStore.get("exceptionOccurrences");
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the event. Nullable.
@@ -103,7 +119,9 @@ public class Event extends OutlookItem implements Parsable {
         deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("bodyPreview", (n) -> { this.setBodyPreview(n.getStringValue()); });
         deserializerMap.put("calendar", (n) -> { this.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
+        deserializerMap.put("cancelledOccurrences", (n) -> { this.setCancelledOccurrences(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("end", (n) -> { this.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("exceptionOccurrences", (n) -> { this.setExceptionOccurrences(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("hideAttendees", (n) -> { this.setHideAttendees(n.getBooleanValue()); });
@@ -426,7 +444,9 @@ public class Event extends OutlookItem implements Parsable {
         writer.writeObjectValue("body", this.getBody());
         writer.writeStringValue("bodyPreview", this.getBodyPreview());
         writer.writeObjectValue("calendar", this.getCalendar());
+        writer.writeCollectionOfPrimitiveValues("cancelledOccurrences", this.getCancelledOccurrences());
         writer.writeObjectValue("end", this.getEnd());
+        writer.writeCollectionOfObjectValues("exceptionOccurrences", this.getExceptionOccurrences());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeBooleanValue("hasAttachments", this.getHasAttachments());
         writer.writeBooleanValue("hideAttendees", this.getHideAttendees());
@@ -506,11 +526,25 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("calendar", value);
     }
     /**
+     * Sets the cancelledOccurrences property value. The cancelledOccurrences property
+     * @param value Value to set for the cancelledOccurrences property.
+     */
+    public void setCancelledOccurrences(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("cancelledOccurrences", value);
+    }
+    /**
      * Sets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
      * @param value Value to set for the end property.
      */
     public void setEnd(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("end", value);
+    }
+    /**
+     * Sets the exceptionOccurrences property value. The exceptionOccurrences property
+     * @param value Value to set for the exceptionOccurrences property.
+     */
+    public void setExceptionOccurrences(@jakarta.annotation.Nullable final java.util.List<Event> value) {
+        this.backingStore.set("exceptionOccurrences", value);
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the event. Nullable.

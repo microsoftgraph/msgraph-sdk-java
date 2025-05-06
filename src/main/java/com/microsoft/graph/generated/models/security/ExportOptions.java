@@ -9,12 +9,7 @@ public enum ExportOptions implements ValuedEnum {
     Text("text"),
     PdfReplacement("pdfReplacement"),
     Tags("tags"),
-    UnknownFutureValue("unknownFutureValue"),
-    SplitSource("splitSource"),
-    IncludeFolderAndPath("includeFolderAndPath"),
-    FriendlyName("friendlyName"),
-    CondensePaths("condensePaths"),
-    OptimizedPartitionSize("optimizedPartitionSize");
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ExportOptions(final String value) {
         this.value = value;
@@ -30,11 +25,6 @@ public enum ExportOptions implements ValuedEnum {
             case "pdfReplacement": return PdfReplacement;
             case "tags": return Tags;
             case "unknownFutureValue": return UnknownFutureValue;
-            case "splitSource": return SplitSource;
-            case "includeFolderAndPath": return IncludeFolderAndPath;
-            case "friendlyName": return FriendlyName;
-            case "condensePaths": return CondensePaths;
-            case "optimizedPartitionSize": return OptimizedPartitionSize;
             default: return null;
         }
     }

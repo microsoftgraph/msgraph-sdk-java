@@ -26,6 +26,14 @@ public class EducationSubmission extends Entity implements Parsable {
         return new EducationSubmission();
     }
     /**
+     * Gets the assignmentId property value. The unique identifier for the assignment with which this submission is associated. A submission is always associated with one and only one assignment.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAssignmentId() {
+        return this.backingStore.get("assignmentId");
+    }
+    /**
      * Gets the excusedBy property value. The user that marked the submission as excused.
      * @return a {@link IdentitySet}
      */
@@ -48,8 +56,11 @@ public class EducationSubmission extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignmentId", (n) -> { this.setAssignmentId(n.getStringValue()); });
         deserializerMap.put("excusedBy", (n) -> { this.setExcusedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("excusedDateTime", (n) -> { this.setExcusedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("outcomes", (n) -> { this.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
         deserializerMap.put("reassignedBy", (n) -> { this.setReassignedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("reassignedDateTime", (n) -> { this.setReassignedDateTime(n.getOffsetDateTimeValue()); });
@@ -66,6 +77,22 @@ public class EducationSubmission extends Entity implements Parsable {
         deserializerMap.put("unsubmittedDateTime", (n) -> { this.setUnsubmittedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lastModifiedBy property value. The identities of those who modified the submission.
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getLastModifiedBy() {
+        return this.backingStore.get("lastModifiedBy");
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. The date and time the submission was modified.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the outcomes property value. The outcomes property
@@ -200,6 +227,13 @@ public class EducationSubmission extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("submittedResources", this.getSubmittedResources());
     }
     /**
+     * Sets the assignmentId property value. The unique identifier for the assignment with which this submission is associated. A submission is always associated with one and only one assignment.
+     * @param value Value to set for the assignmentId property.
+     */
+    public void setAssignmentId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("assignmentId", value);
+    }
+    /**
      * Sets the excusedBy property value. The user that marked the submission as excused.
      * @param value Value to set for the excusedBy property.
      */
@@ -212,6 +246,20 @@ public class EducationSubmission extends Entity implements Parsable {
      */
     public void setExcusedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("excusedDateTime", value);
+    }
+    /**
+     * Sets the lastModifiedBy property value. The identities of those who modified the submission.
+     * @param value Value to set for the lastModifiedBy property.
+     */
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("lastModifiedBy", value);
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. The date and time the submission was modified.
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the outcomes property value. The outcomes property

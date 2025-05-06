@@ -4,6 +4,7 @@ import com.microsoft.graph.models.ExchangeRestoreSession;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.backuprestore.exchangerestoresessions.item.granularmailboxrestoreartifacts.GranularMailboxRestoreArtifactsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.exchangerestoresessions.item.mailboxrestoreartifacts.MailboxRestoreArtifactsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.exchangerestoresessions.item.mailboxrestoreartifactsbulkadditionrequests.MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class ExchangeRestoreSessionItemRequestBuilder extends BaseRequestBuilder
     @jakarta.annotation.Nonnull
     public MailboxRestoreArtifactsRequestBuilder mailboxRestoreArtifacts() {
         return new MailboxRestoreArtifactsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mailboxRestoreArtifactsBulkAdditionRequests property of the microsoft.graph.exchangeRestoreSession entity.
+     * @return a {@link MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder mailboxRestoreArtifactsBulkAdditionRequests() {
+        return new MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ExchangeRestoreSessionItemRequestBuilder} and sets the default values.

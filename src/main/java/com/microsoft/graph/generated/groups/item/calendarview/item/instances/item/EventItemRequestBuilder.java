@@ -6,6 +6,7 @@ import com.microsoft.graph.groups.item.calendarview.item.instances.item.calendar
 import com.microsoft.graph.groups.item.calendarview.item.instances.item.cancel.CancelRequestBuilder;
 import com.microsoft.graph.groups.item.calendarview.item.instances.item.decline.DeclineRequestBuilder;
 import com.microsoft.graph.groups.item.calendarview.item.instances.item.dismissreminder.DismissReminderRequestBuilder;
+import com.microsoft.graph.groups.item.calendarview.item.instances.item.exceptionoccurrences.ExceptionOccurrencesRequestBuilder;
 import com.microsoft.graph.groups.item.calendarview.item.instances.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.groups.item.calendarview.item.instances.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.groups.item.calendarview.item.instances.item.permanentdelete.PermanentDeleteRequestBuilder;
@@ -78,6 +79,14 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DismissReminderRequestBuilder dismissReminder() {
         return new DismissReminderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the exceptionOccurrences property of the microsoft.graph.event entity.
+     * @return a {@link ExceptionOccurrencesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExceptionOccurrencesRequestBuilder exceptionOccurrences() {
+        return new ExceptionOccurrencesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.event entity.

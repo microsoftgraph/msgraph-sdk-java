@@ -3,6 +3,7 @@ package com.microsoft.graph.solutions.backuprestore.onedriveforbusinessrestorese
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OneDriveForBusinessRestoreSession;
 import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessrestoresessions.item.driverestoreartifacts.DriveRestoreArtifactsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessrestoresessions.item.driverestoreartifactsbulkadditionrequests.DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
     @jakarta.annotation.Nonnull
     public DriveRestoreArtifactsRequestBuilder driveRestoreArtifacts() {
         return new DriveRestoreArtifactsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the driveRestoreArtifactsBulkAdditionRequests property of the microsoft.graph.oneDriveForBusinessRestoreSession entity.
+     * @return a {@link DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder driveRestoreArtifactsBulkAdditionRequests() {
+        return new DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link OneDriveForBusinessRestoreSessionItemRequestBuilder} and sets the default values.

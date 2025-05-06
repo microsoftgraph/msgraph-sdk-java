@@ -41,6 +41,14 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.backingStore.get("emailAddress");
     }
     /**
+     * Gets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * @return a {@link VirtualEventExternalRegistrationInformation}
+     */
+    @jakarta.annotation.Nullable
+    public VirtualEventExternalRegistrationInformation getExternalRegistrationInformation() {
+        return this.backingStore.get("externalRegistrationInformation");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -49,7 +57,9 @@ public class AttendanceRecord extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attendanceIntervals", (n) -> { this.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("externalRegistrationInformation", (n) -> { this.setExternalRegistrationInformation(n.getObjectValue(VirtualEventExternalRegistrationInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("registrationId", (n) -> { this.setRegistrationId(n.getStringValue()); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getStringValue()); });
         deserializerMap.put("totalAttendanceInSeconds", (n) -> { this.setTotalAttendanceInSeconds(n.getIntegerValue()); });
         return deserializerMap;
@@ -61,6 +71,14 @@ public class AttendanceRecord extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Identity getIdentity() {
         return this.backingStore.get("identity");
+    }
+    /**
+     * Gets the registrationId property value. The registrationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRegistrationId() {
+        return this.backingStore.get("registrationId");
     }
     /**
      * Gets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
@@ -87,7 +105,9 @@ public class AttendanceRecord extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("attendanceIntervals", this.getAttendanceIntervals());
         writer.writeStringValue("emailAddress", this.getEmailAddress());
+        writer.writeObjectValue("externalRegistrationInformation", this.getExternalRegistrationInformation());
         writer.writeObjectValue("identity", this.getIdentity());
+        writer.writeStringValue("registrationId", this.getRegistrationId());
         writer.writeStringValue("role", this.getRole());
         writer.writeIntegerValue("totalAttendanceInSeconds", this.getTotalAttendanceInSeconds());
     }
@@ -106,11 +126,25 @@ public class AttendanceRecord extends Entity implements Parsable {
         this.backingStore.set("emailAddress", value);
     }
     /**
+     * Sets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * @param value Value to set for the externalRegistrationInformation property.
+     */
+    public void setExternalRegistrationInformation(@jakarta.annotation.Nullable final VirtualEventExternalRegistrationInformation value) {
+        this.backingStore.set("externalRegistrationInformation", value);
+    }
+    /**
      * Sets the identity property value. Identity of the user associated with this attendance record.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final Identity value) {
         this.backingStore.set("identity", value);
+    }
+    /**
+     * Sets the registrationId property value. The registrationId property
+     * @param value Value to set for the registrationId property.
+     */
+    public void setRegistrationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("registrationId", value);
     }
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.

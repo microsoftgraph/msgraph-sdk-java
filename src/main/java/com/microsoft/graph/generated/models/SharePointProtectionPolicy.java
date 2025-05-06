@@ -34,6 +34,7 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("siteInclusionRules", (n) -> { this.setSiteInclusionRules(n.getCollectionOfObjectValues(SiteProtectionRule::createFromDiscriminatorValue)); });
         deserializerMap.put("siteProtectionUnits", (n) -> { this.setSiteProtectionUnits(n.getCollectionOfObjectValues(SiteProtectionUnit::createFromDiscriminatorValue)); });
+        deserializerMap.put("siteProtectionUnitsBulkAdditionJobs", (n) -> { this.setSiteProtectionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(SiteProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
         return this.backingStore.get("siteProtectionUnits");
     }
     /**
+     * Gets the siteProtectionUnitsBulkAdditionJobs property value. The siteProtectionUnitsBulkAdditionJobs property
+     * @return a {@link java.util.List<SiteProtectionUnitsBulkAdditionJob>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SiteProtectionUnitsBulkAdditionJob> getSiteProtectionUnitsBulkAdditionJobs() {
+        return this.backingStore.get("siteProtectionUnitsBulkAdditionJobs");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("siteInclusionRules", this.getSiteInclusionRules());
         writer.writeCollectionOfObjectValues("siteProtectionUnits", this.getSiteProtectionUnits());
+        writer.writeCollectionOfObjectValues("siteProtectionUnitsBulkAdditionJobs", this.getSiteProtectionUnitsBulkAdditionJobs());
     }
     /**
      * Sets the siteInclusionRules property value. The rules associated with the SharePoint Protection policy.
@@ -75,5 +85,12 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
      */
     public void setSiteProtectionUnits(@jakarta.annotation.Nullable final java.util.List<SiteProtectionUnit> value) {
         this.backingStore.set("siteProtectionUnits", value);
+    }
+    /**
+     * Sets the siteProtectionUnitsBulkAdditionJobs property value. The siteProtectionUnitsBulkAdditionJobs property
+     * @param value Value to set for the siteProtectionUnitsBulkAdditionJobs property.
+     */
+    public void setSiteProtectionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<SiteProtectionUnitsBulkAdditionJob> value) {
+        this.backingStore.set("siteProtectionUnitsBulkAdditionJobs", value);
     }
 }

@@ -228,23 +228,23 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileAppCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new macOSOfficeSuiteApp object.
      * @param body The request body
      * @return a {@link MobileApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp post(@jakarta.annotation.Nonnull final MobileApp body) {
         return post(body, null);
     }
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new macOSOfficeSuiteApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-macosofficesuiteapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MobileApp post(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -275,7 +275,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new macOSOfficeSuiteApp object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -284,7 +284,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new windowsUniversalAppX object.
+     * Create a new macOSOfficeSuiteApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

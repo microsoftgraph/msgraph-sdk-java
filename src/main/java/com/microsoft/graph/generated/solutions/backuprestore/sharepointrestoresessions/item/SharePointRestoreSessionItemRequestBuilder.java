@@ -3,6 +3,7 @@ package com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.it
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharePointRestoreSession;
 import com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.item.siterestoreartifacts.SiteRestoreArtifactsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.item.siterestoreartifactsbulkadditionrequests.SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuild
     @jakarta.annotation.Nonnull
     public SiteRestoreArtifactsRequestBuilder siteRestoreArtifacts() {
         return new SiteRestoreArtifactsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the siteRestoreArtifactsBulkAdditionRequests property of the microsoft.graph.sharePointRestoreSession entity.
+     * @return a {@link SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder siteRestoreArtifactsBulkAdditionRequests() {
+        return new SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SharePointRestoreSessionItemRequestBuilder} and sets the default values.

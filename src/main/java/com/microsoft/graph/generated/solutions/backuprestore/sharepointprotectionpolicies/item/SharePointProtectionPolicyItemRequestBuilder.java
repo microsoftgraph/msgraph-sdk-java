@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharePointProtectionPolicy;
 import com.microsoft.graph.solutions.backuprestore.sharepointprotectionpolicies.item.siteinclusionrules.SiteInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.sharepointprotectionpolicies.item.siteprotectionunits.SiteProtectionUnitsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.sharepointprotectionpolicies.item.siteprotectionunitsbulkadditionjobs.SiteProtectionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     @jakarta.annotation.Nonnull
     public SiteProtectionUnitsRequestBuilder siteProtectionUnits() {
         return new SiteProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the siteProtectionUnitsBulkAdditionJobs property of the microsoft.graph.sharePointProtectionPolicy entity.
+     * @return a {@link SiteProtectionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SiteProtectionUnitsBulkAdditionJobsRequestBuilder siteProtectionUnitsBulkAdditionJobs() {
+        return new SiteProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SharePointProtectionPolicyItemRequestBuilder} and sets the default values.
