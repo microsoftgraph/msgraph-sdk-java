@@ -4,6 +4,7 @@ import com.microsoft.graph.education.classes.item.assignmentcategories.Assignmen
 import com.microsoft.graph.education.classes.item.assignmentdefaults.AssignmentDefaultsRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignmentsettings.AssignmentSettingsRequestBuilder;
+import com.microsoft.graph.education.classes.item.getrecentlymodifiedsubmissions.GetRecentlyModifiedSubmissionsRequestBuilder;
 import com.microsoft.graph.education.classes.item.group.GroupRequestBuilder;
 import com.microsoft.graph.education.classes.item.members.MembersRequestBuilder;
 import com.microsoft.graph.education.classes.item.modules.ModulesRequestBuilder;
@@ -60,6 +61,14 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AssignmentSettingsRequestBuilder assignmentSettings() {
         return new AssignmentSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getRecentlyModifiedSubmissions method.
+     * @return a {@link GetRecentlyModifiedSubmissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetRecentlyModifiedSubmissionsRequestBuilder getRecentlyModifiedSubmissions() {
+        return new GetRecentlyModifiedSubmissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the group property of the microsoft.graph.educationClass entity.

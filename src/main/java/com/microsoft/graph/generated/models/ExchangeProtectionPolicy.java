@@ -34,6 +34,7 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("mailboxInclusionRules", (n) -> { this.setMailboxInclusionRules(n.getCollectionOfObjectValues(MailboxProtectionRule::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxProtectionUnits", (n) -> { this.setMailboxProtectionUnits(n.getCollectionOfObjectValues(MailboxProtectionUnit::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailboxProtectionUnitsBulkAdditionJobs", (n) -> { this.setMailboxProtectionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(MailboxProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
         return this.backingStore.get("mailboxProtectionUnits");
     }
     /**
+     * Gets the mailboxProtectionUnitsBulkAdditionJobs property value. The mailboxProtectionUnitsBulkAdditionJobs property
+     * @return a {@link java.util.List<MailboxProtectionUnitsBulkAdditionJob>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MailboxProtectionUnitsBulkAdditionJob> getMailboxProtectionUnitsBulkAdditionJobs() {
+        return this.backingStore.get("mailboxProtectionUnitsBulkAdditionJobs");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("mailboxInclusionRules", this.getMailboxInclusionRules());
         writer.writeCollectionOfObjectValues("mailboxProtectionUnits", this.getMailboxProtectionUnits());
+        writer.writeCollectionOfObjectValues("mailboxProtectionUnitsBulkAdditionJobs", this.getMailboxProtectionUnitsBulkAdditionJobs());
     }
     /**
      * Sets the mailboxInclusionRules property value. The rules associated with the Exchange protection policy.
@@ -75,5 +85,12 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
      */
     public void setMailboxProtectionUnits(@jakarta.annotation.Nullable final java.util.List<MailboxProtectionUnit> value) {
         this.backingStore.set("mailboxProtectionUnits", value);
+    }
+    /**
+     * Sets the mailboxProtectionUnitsBulkAdditionJobs property value. The mailboxProtectionUnitsBulkAdditionJobs property
+     * @param value Value to set for the mailboxProtectionUnitsBulkAdditionJobs property.
+     */
+    public void setMailboxProtectionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<MailboxProtectionUnitsBulkAdditionJob> value) {
+        this.backingStore.set("mailboxProtectionUnitsBulkAdditionJobs", value);
     }
 }

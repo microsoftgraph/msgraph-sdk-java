@@ -34,6 +34,7 @@ public class ExchangeRestoreSession extends RestoreSessionBase implements Parsab
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("granularMailboxRestoreArtifacts", (n) -> { this.setGranularMailboxRestoreArtifacts(n.getCollectionOfObjectValues(GranularMailboxRestoreArtifact::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxRestoreArtifacts", (n) -> { this.setMailboxRestoreArtifacts(n.getCollectionOfObjectValues(MailboxRestoreArtifact::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailboxRestoreArtifactsBulkAdditionRequests", (n) -> { this.setMailboxRestoreArtifactsBulkAdditionRequests(n.getCollectionOfObjectValues(MailboxRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class ExchangeRestoreSession extends RestoreSessionBase implements Parsab
         return this.backingStore.get("mailboxRestoreArtifacts");
     }
     /**
+     * Gets the mailboxRestoreArtifactsBulkAdditionRequests property value. The mailboxRestoreArtifactsBulkAdditionRequests property
+     * @return a {@link java.util.List<MailboxRestoreArtifactsBulkAdditionRequest>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MailboxRestoreArtifactsBulkAdditionRequest> getMailboxRestoreArtifactsBulkAdditionRequests() {
+        return this.backingStore.get("mailboxRestoreArtifactsBulkAdditionRequests");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class ExchangeRestoreSession extends RestoreSessionBase implements Parsab
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("granularMailboxRestoreArtifacts", this.getGranularMailboxRestoreArtifacts());
         writer.writeCollectionOfObjectValues("mailboxRestoreArtifacts", this.getMailboxRestoreArtifacts());
+        writer.writeCollectionOfObjectValues("mailboxRestoreArtifactsBulkAdditionRequests", this.getMailboxRestoreArtifactsBulkAdditionRequests());
     }
     /**
      * Sets the granularMailboxRestoreArtifacts property value. The granularMailboxRestoreArtifacts property
@@ -75,5 +85,12 @@ public class ExchangeRestoreSession extends RestoreSessionBase implements Parsab
      */
     public void setMailboxRestoreArtifacts(@jakarta.annotation.Nullable final java.util.List<MailboxRestoreArtifact> value) {
         this.backingStore.set("mailboxRestoreArtifacts", value);
+    }
+    /**
+     * Sets the mailboxRestoreArtifactsBulkAdditionRequests property value. The mailboxRestoreArtifactsBulkAdditionRequests property
+     * @param value Value to set for the mailboxRestoreArtifactsBulkAdditionRequests property.
+     */
+    public void setMailboxRestoreArtifactsBulkAdditionRequests(@jakarta.annotation.Nullable final java.util.List<MailboxRestoreArtifactsBulkAdditionRequest> value) {
+        this.backingStore.set("mailboxRestoreArtifactsBulkAdditionRequests", value);
     }
 }

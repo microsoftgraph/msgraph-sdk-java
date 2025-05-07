@@ -9,6 +9,7 @@ import com.microsoft.graph.users.item.authentication.microsoftauthenticatormetho
 import com.microsoft.graph.users.item.authentication.operations.OperationsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.passwordmethods.PasswordMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.phonemethods.PhoneMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.WindowsHelloForBusinessMethodsRequestBuilder;
@@ -85,6 +86,14 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PhoneMethodsRequestBuilder phoneMethods() {
         return new PhoneMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the platformCredentialMethods property of the microsoft.graph.authentication entity.
+     * @return a {@link PlatformCredentialMethodsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PlatformCredentialMethodsRequestBuilder platformCredentialMethods() {
+        return new PlatformCredentialMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.

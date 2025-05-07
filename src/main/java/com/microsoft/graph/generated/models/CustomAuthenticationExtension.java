@@ -27,6 +27,8 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.onAttributeCollectionStartCustomExtension": return new OnAttributeCollectionStartCustomExtension();
+                case "#microsoft.graph.onAttributeCollectionSubmitCustomExtension": return new OnAttributeCollectionSubmitCustomExtension();
                 case "#microsoft.graph.onTokenIssuanceStartCustomExtension": return new OnTokenIssuanceStartCustomExtension();
             }
         }

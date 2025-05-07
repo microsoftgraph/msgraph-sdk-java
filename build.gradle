@@ -52,6 +52,9 @@ tasks.withType(Javadoc).configureEach {
     options.addStringOption('Xdoclint:-missing', '-quiet')
 }
 
+tasks.javadocJar {
+    zip64 = true
+}
 
 tasks.jar {
     manifest {

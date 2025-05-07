@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OneDriveForBusinessProtectionPolicy;
 import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessprotectionpolicies.item.driveinclusionrules.DriveInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessprotectionpolicies.item.driveprotectionunits.DriveProtectionUnitsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessprotectionpolicies.item.driveprotectionunitsbulkadditionjobs.DriveProtectionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public DriveProtectionUnitsRequestBuilder driveProtectionUnits() {
         return new DriveProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the driveProtectionUnitsBulkAdditionJobs property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
+     * @return a {@link DriveProtectionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DriveProtectionUnitsBulkAdditionJobsRequestBuilder driveProtectionUnitsBulkAdditionJobs() {
+        return new DriveProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link OneDriveForBusinessProtectionPolicyItemRequestBuilder} and sets the default values.

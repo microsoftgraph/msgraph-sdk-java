@@ -4,11 +4,13 @@ import com.microsoft.graph.models.BackupRestoreRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.backuprestore.driveinclusionrules.DriveInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.driveprotectionunits.DriveProtectionUnitsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.driveprotectionunitsbulkadditionjobs.DriveProtectionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.enable.EnableRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.exchangeprotectionpolicies.ExchangeProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.exchangerestoresessions.ExchangeRestoreSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.mailboxinclusionrules.MailboxInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.mailboxprotectionunits.MailboxProtectionUnitsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.mailboxprotectionunitsbulkadditionjobs.MailboxProtectionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessprotectionpolicies.OneDriveForBusinessProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessrestoresessions.OneDriveForBusinessRestoreSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.protectionpolicies.ProtectionPoliciesRequestBuilder;
@@ -20,6 +22,7 @@ import com.microsoft.graph.solutions.backuprestore.sharepointprotectionpolicies.
 import com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.SharePointRestoreSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.siteinclusionrules.SiteInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.siteprotectionunits.SiteProtectionUnitsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.siteprotectionunitsbulkadditionjobs.SiteProtectionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -53,6 +56,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DriveProtectionUnitsRequestBuilder driveProtectionUnits() {
         return new DriveProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the driveProtectionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link DriveProtectionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DriveProtectionUnitsBulkAdditionJobsRequestBuilder driveProtectionUnitsBulkAdditionJobs() {
+        return new DriveProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the enable method.
@@ -93,6 +104,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MailboxProtectionUnitsRequestBuilder mailboxProtectionUnits() {
         return new MailboxProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mailboxProtectionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link MailboxProtectionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxProtectionUnitsBulkAdditionJobsRequestBuilder mailboxProtectionUnitsBulkAdditionJobs() {
+        return new MailboxProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the oneDriveForBusinessProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.
@@ -181,6 +200,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SiteProtectionUnitsRequestBuilder siteProtectionUnits() {
         return new SiteProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the siteProtectionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link SiteProtectionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SiteProtectionUnitsBulkAdditionJobsRequestBuilder siteProtectionUnitsBulkAdditionJobs() {
+        return new SiteProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link BackupRestoreRequestBuilder} and sets the default values.

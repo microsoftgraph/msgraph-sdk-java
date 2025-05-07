@@ -34,6 +34,14 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         return this.backingStore.get("driveRestoreArtifacts");
     }
     /**
+     * Gets the driveRestoreArtifactsBulkAdditionRequests property value. The driveRestoreArtifactsBulkAdditionRequests property
+     * @return a {@link java.util.List<DriveRestoreArtifactsBulkAdditionRequest>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DriveRestoreArtifactsBulkAdditionRequest> getDriveRestoreArtifactsBulkAdditionRequests() {
+        return this.backingStore.get("driveRestoreArtifactsBulkAdditionRequests");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -41,6 +49,7 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("driveRestoreArtifacts", (n) -> { this.setDriveRestoreArtifacts(n.getCollectionOfObjectValues(DriveRestoreArtifact::createFromDiscriminatorValue)); });
+        deserializerMap.put("driveRestoreArtifactsBulkAdditionRequests", (n) -> { this.setDriveRestoreArtifactsBulkAdditionRequests(n.getCollectionOfObjectValues(DriveRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -51,6 +60,7 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("driveRestoreArtifacts", this.getDriveRestoreArtifacts());
+        writer.writeCollectionOfObjectValues("driveRestoreArtifactsBulkAdditionRequests", this.getDriveRestoreArtifactsBulkAdditionRequests());
     }
     /**
      * Sets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Business drive.
@@ -58,5 +68,12 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
      */
     public void setDriveRestoreArtifacts(@jakarta.annotation.Nullable final java.util.List<DriveRestoreArtifact> value) {
         this.backingStore.set("driveRestoreArtifacts", value);
+    }
+    /**
+     * Sets the driveRestoreArtifactsBulkAdditionRequests property value. The driveRestoreArtifactsBulkAdditionRequests property
+     * @param value Value to set for the driveRestoreArtifactsBulkAdditionRequests property.
+     */
+    public void setDriveRestoreArtifactsBulkAdditionRequests(@jakarta.annotation.Nullable final java.util.List<DriveRestoreArtifactsBulkAdditionRequest> value) {
+        this.backingStore.set("driveRestoreArtifactsBulkAdditionRequests", value);
     }
 }
