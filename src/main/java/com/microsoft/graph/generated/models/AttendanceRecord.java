@@ -41,7 +41,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.backingStore.get("emailAddress");
     }
     /**
-     * Gets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * Gets the externalRegistrationInformation property value. The external information for a virtualEventRegistration.
      * @return a {@link VirtualEventExternalRegistrationInformation}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identity property value. Identity of the user associated with this attendance record.
+     * Gets the identity property value. The identity of the user associated with this attendance record. The specific type is one of the following derived types of identity, depending on the user type: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.backingStore.get("identity");
     }
     /**
-     * Gets the registrationId property value. The registrationId property
+     * Gets the registrationId property value. Unique identifier of a virtualEventRegistration that is available to all participants registered for the virtualEventWebinar.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,21 +126,21 @@ public class AttendanceRecord extends Entity implements Parsable {
         this.backingStore.set("emailAddress", value);
     }
     /**
-     * Sets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * Sets the externalRegistrationInformation property value. The external information for a virtualEventRegistration.
      * @param value Value to set for the externalRegistrationInformation property.
      */
     public void setExternalRegistrationInformation(@jakarta.annotation.Nullable final VirtualEventExternalRegistrationInformation value) {
         this.backingStore.set("externalRegistrationInformation", value);
     }
     /**
-     * Sets the identity property value. Identity of the user associated with this attendance record.
+     * Sets the identity property value. The identity of the user associated with this attendance record. The specific type is one of the following derived types of identity, depending on the user type: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final Identity value) {
         this.backingStore.set("identity", value);
     }
     /**
-     * Sets the registrationId property value. The registrationId property
+     * Sets the registrationId property value. Unique identifier of a virtualEventRegistration that is available to all participants registered for the virtualEventWebinar.
      * @param value Value to set for the registrationId property.
      */
     public void setRegistrationId(@jakarta.annotation.Nullable final String value) {

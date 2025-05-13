@@ -34,7 +34,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
         return this.backingStore.get("attendanceRecords");
     }
     /**
-     * Gets the externalEventInformation property value. The externalEventInformation property
+     * Gets the externalEventInformation property value. The external information of a virtual event. Returned only for event organizers or coorganizers. Read-only.
      * @return a {@link java.util.List<VirtualEventExternalInformation>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
         this.backingStore.set("attendanceRecords", value);
     }
     /**
-     * Sets the externalEventInformation property value. The externalEventInformation property
+     * Sets the externalEventInformation property value. The external information of a virtual event. Returned only for event organizers or coorganizers. Read-only.
      * @param value Value to set for the externalEventInformation property.
      */
     public void setExternalEventInformation(@jakarta.annotation.Nullable final java.util.List<VirtualEventExternalInformation> value) {

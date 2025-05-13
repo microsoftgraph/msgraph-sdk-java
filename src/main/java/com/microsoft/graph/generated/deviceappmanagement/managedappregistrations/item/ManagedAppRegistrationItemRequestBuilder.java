@@ -82,21 +82,21 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the androidManagedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      * @return a {@link ManagedAppRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppRegistration get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the androidManagedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedAppRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedAppRegistration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -150,7 +150,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the androidManagedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -158,7 +158,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the androidManagedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -210,7 +210,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the androidManagedAppRegistration object.
+     * Read properties and relationships of the iosManagedAppRegistration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
