@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerolescopes.item.scope.resource.roles.item.resource;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerolescopes.item.scope.resource.roles.item.resource.environment.EnvironmentRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerolescopes.item.scope.resource.roles.item.resource.refresh.RefreshRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerolescopes.item.scope.resource.roles.item.resource.scopes.ScopesRequestBuilder;
 import com.microsoft.graph.models.AccessPackageResource;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -29,6 +30,14 @@ public class ResourceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EnvironmentRequestBuilder environment() {
         return new EnvironmentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the refresh method.
+     * @return a {@link RefreshRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RefreshRequestBuilder refresh() {
+        return new RefreshRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the scopes property of the microsoft.graph.accessPackageResource entity.
