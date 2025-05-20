@@ -95,7 +95,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the justification property value. The justification property
+     * Gets the justification property value. The requestor&apos;s supplied justification.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("customExtensionCalloutInstances", value);
     }
     /**
-     * Sets the justification property value. The justification property
+     * Sets the justification property value. The requestor&apos;s supplied justification.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {

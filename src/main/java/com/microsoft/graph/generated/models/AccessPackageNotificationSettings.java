@@ -67,7 +67,7 @@ public class AccessPackageNotificationSettings implements AdditionalDataHolder, 
         return deserializerMap;
     }
     /**
-     * Gets the isAssignmentNotificationDisabled property value. The isAssignmentNotificationDisabled property
+     * Gets the isAssignmentNotificationDisabled property value. Indicates if notification emails for an access package are disabled within an access package assignment policy.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class AccessPackageNotificationSettings implements AdditionalDataHolder, 
         this.backingStore = value;
     }
     /**
-     * Sets the isAssignmentNotificationDisabled property value. The isAssignmentNotificationDisabled property
+     * Sets the isAssignmentNotificationDisabled property value. Indicates if notification emails for an access package are disabled within an access package assignment policy.
      * @param value Value to set for the isAssignmentNotificationDisabled property.
      */
     public void setIsAssignmentNotificationDisabled(@jakarta.annotation.Nullable final Boolean value) {

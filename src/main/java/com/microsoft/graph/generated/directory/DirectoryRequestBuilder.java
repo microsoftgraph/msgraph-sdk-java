@@ -7,6 +7,7 @@ import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
 import com.microsoft.graph.directory.devicelocalcredentials.DeviceLocalCredentialsRequestBuilder;
 import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
 import com.microsoft.graph.directory.onpremisessynchronization.OnPremisesSynchronizationRequestBuilder;
+import com.microsoft.graph.directory.publickeyinfrastructure.PublicKeyInfrastructureRequestBuilder;
 import com.microsoft.graph.directory.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.directory.subscriptionswithcommercesubscriptionid.SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 import com.microsoft.graph.models.Directory;
@@ -84,6 +85,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OnPremisesSynchronizationRequestBuilder onPremisesSynchronization() {
         return new OnPremisesSynchronizationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the publicKeyInfrastructure property of the microsoft.graph.directory entity.
+     * @return a {@link PublicKeyInfrastructureRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PublicKeyInfrastructureRequestBuilder publicKeyInfrastructure() {
+        return new PublicKeyInfrastructureRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.directory entity.

@@ -86,6 +86,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("deviceLocalCredentials", (n) -> { this.setDeviceLocalCredentials(n.getCollectionOfObjectValues(DeviceLocalCredentialInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
+        deserializerMap.put("publicKeyInfrastructure", (n) -> { this.setPublicKeyInfrastructure(n.getObjectValue(PublicKeyInfrastructureRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -96,6 +97,14 @@ public class Directory extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {
         return this.backingStore.get("onPremisesSynchronization");
+    }
+    /**
+     * Gets the publicKeyInfrastructure property value. The publicKeyInfrastructure property
+     * @return a {@link PublicKeyInfrastructureRoot}
+     */
+    @jakarta.annotation.Nullable
+    public PublicKeyInfrastructureRoot getPublicKeyInfrastructure() {
+        return this.backingStore.get("publicKeyInfrastructure");
     }
     /**
      * Gets the subscriptions property value. List of commercial subscriptions that an organization acquired.
@@ -119,6 +128,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceLocalCredentials", this.getDeviceLocalCredentials());
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
+        writer.writeObjectValue("publicKeyInfrastructure", this.getPublicKeyInfrastructure());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
     }
     /**
@@ -169,6 +179,13 @@ public class Directory extends Entity implements Parsable {
      */
     public void setOnPremisesSynchronization(@jakarta.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
         this.backingStore.set("onPremisesSynchronization", value);
+    }
+    /**
+     * Sets the publicKeyInfrastructure property value. The publicKeyInfrastructure property
+     * @param value Value to set for the publicKeyInfrastructure property.
+     */
+    public void setPublicKeyInfrastructure(@jakarta.annotation.Nullable final PublicKeyInfrastructureRoot value) {
+        this.backingStore.set("publicKeyInfrastructure", value);
     }
     /**
      * Sets the subscriptions property value. List of commercial subscriptions that an organization acquired.

@@ -29,7 +29,7 @@ public class VppToken extends Entity implements Parsable {
         return new VppToken();
     }
     /**
-     * Gets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
+     * Gets the appleId property value. The Apple ID associated with the given Apple Volume Purchase Program Token.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class VppToken extends Entity implements Parsable {
         return this.backingStore.get("automaticallyUpdateApps");
     }
     /**
-     * Gets the countryOrRegion property value. Whether or not apps for the VPP token will be automatically updated.
+     * Gets the countryOrRegion property value. The country or region associated with the Apple Volume Purchase Program Token.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class VppToken extends Entity implements Parsable {
         writer.writeEnumValue("vppTokenAccountType", this.getVppTokenAccountType());
     }
     /**
-     * Sets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
+     * Sets the appleId property value. The Apple ID associated with the given Apple Volume Purchase Program Token.
      * @param value Value to set for the appleId property.
      */
     public void setAppleId(@jakarta.annotation.Nullable final String value) {
@@ -170,7 +170,7 @@ public class VppToken extends Entity implements Parsable {
         this.backingStore.set("automaticallyUpdateApps", value);
     }
     /**
-     * Sets the countryOrRegion property value. Whether or not apps for the VPP token will be automatically updated.
+     * Sets the countryOrRegion property value. The country or region associated with the Apple Volume Purchase Program Token.
      * @param value Value to set for the countryOrRegion property.
      */
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {
