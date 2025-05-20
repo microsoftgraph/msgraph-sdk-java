@@ -62,7 +62,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("assignedLabels");
     }
     /**
-     * Gets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq).Read-only.
+     * Gets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq). Read-only.
      * @return a {@link java.util.List<AssignedLicense>}
      */
     @jakarta.annotation.Nullable
@@ -755,7 +755,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("assignedLabels", value);
     }
     /**
-     * Sets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq).Read-only.
+     * Sets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq). Read-only.
      * @param value Value to set for the assignedLicenses property.
      */
     public void setAssignedLicenses(@jakarta.annotation.Nullable final java.util.List<AssignedLicense> value) {

@@ -50,7 +50,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("azureTenantId");
     }
     /**
-     * Gets the complianceInformation property value. The collection of compliance information associated with secure score control
+     * Gets the complianceInformation property value. The collection of compliance information associated with secure score control. Not implemented. Currently returns null.
      * @return a {@link java.util.List<ComplianceInformation>}
      */
     @jakarta.annotation.Nullable
@@ -254,7 +254,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.backingStore.set("azureTenantId", value);
     }
     /**
-     * Sets the complianceInformation property value. The collection of compliance information associated with secure score control
+     * Sets the complianceInformation property value. The collection of compliance information associated with secure score control. Not implemented. Currently returns null.
      * @param value Value to set for the complianceInformation property.
      */
     public void setComplianceInformation(@jakarta.annotation.Nullable final java.util.List<ComplianceInformation> value) {

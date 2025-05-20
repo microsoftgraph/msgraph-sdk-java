@@ -36,6 +36,7 @@ public class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable 
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.aiInteractionMentionedIdentitySet": return new AiInteractionMentionedIdentitySet();
                 case "#microsoft.graph.chatMessageFromIdentitySet": return new ChatMessageFromIdentitySet();
                 case "#microsoft.graph.chatMessageMentionedIdentitySet": return new ChatMessageMentionedIdentitySet();
                 case "#microsoft.graph.chatMessageReactionIdentitySet": return new ChatMessageReactionIdentitySet();

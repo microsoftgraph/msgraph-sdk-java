@@ -86,7 +86,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         return this.backingStore.get("isApprovalRequiredForUpdate");
     }
     /**
-     * Gets the isRequestorJustificationRequired property value. The isRequestorJustificationRequired property
+     * Gets the isRequestorJustificationRequired property value. If false, then requestor justification isn&apos;t required for updates to requests in this policy.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         this.backingStore.set("isApprovalRequiredForUpdate", value);
     }
     /**
-     * Sets the isRequestorJustificationRequired property value. The isRequestorJustificationRequired property
+     * Sets the isRequestorJustificationRequired property value. If false, then requestor justification isn&apos;t required for updates to requests in this policy.
      * @param value Value to set for the isRequestorJustificationRequired property.
      */
     public void setIsRequestorJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
