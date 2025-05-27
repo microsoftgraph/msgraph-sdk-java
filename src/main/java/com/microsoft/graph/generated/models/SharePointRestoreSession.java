@@ -45,7 +45,7 @@ public class SharePointRestoreSession extends RestoreSessionBase implements Pars
         return this.backingStore.get("siteRestoreArtifacts");
     }
     /**
-     * Gets the siteRestoreArtifactsBulkAdditionRequests property value. The siteRestoreArtifactsBulkAdditionRequests property
+     * Gets the siteRestoreArtifactsBulkAdditionRequests property value. A collection of SharePoint site URLs and destination details that can be used to restore SharePoint sites.
      * @return a {@link java.util.List<SiteRestoreArtifactsBulkAdditionRequest>}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class SharePointRestoreSession extends RestoreSessionBase implements Pars
         this.backingStore.set("siteRestoreArtifacts", value);
     }
     /**
-     * Sets the siteRestoreArtifactsBulkAdditionRequests property value. The siteRestoreArtifactsBulkAdditionRequests property
+     * Sets the siteRestoreArtifactsBulkAdditionRequests property value. A collection of SharePoint site URLs and destination details that can be used to restore SharePoint sites.
      * @param value Value to set for the siteRestoreArtifactsBulkAdditionRequests property.
      */
     public void setSiteRestoreArtifactsBulkAdditionRequests(@jakarta.annotation.Nullable final java.util.List<SiteRestoreArtifactsBulkAdditionRequest> value) {

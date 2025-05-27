@@ -37,16 +37,18 @@ public class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extend
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/exchangeRestoreSessions/{exchangeRestoreSession%2Did}/mailboxRestoreArtifactsBulkAdditionRequests/{mailboxRestoreArtifactsBulkAdditionRequest%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxrestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxrestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extend
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
      * @return a {@link MailboxRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxrestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxRestoreArtifactsBulkAdditionRequest get() {
         return get(null);
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxrestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxRestoreArtifactsBulkAdditionRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extend
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extend
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -121,7 +125,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extend
         return requestInfo;
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +133,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +185,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extend
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -37,16 +37,18 @@ public class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSession%2Did}/siteRestoreArtifactsBulkAdditionRequests/{siteRestoreArtifactsBulkAdditionRequest%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a siteRestoreArtifactsBulkAdditionRequest object associated with a sharepointRestoreSession.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/siterestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a siteRestoreArtifactsBulkAdditionRequest object associated with a sharepointRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/siterestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends B
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
      * @return a {@link SiteRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/siterestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteRestoreArtifactsBulkAdditionRequest get() {
         return get(null);
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/siterestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteRestoreArtifactsBulkAdditionRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, SiteRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a siteRestoreArtifactsBulkAdditionRequest object associated with a sharepointRestoreSession.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends B
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a siteRestoreArtifactsBulkAdditionRequest object associated with a sharepointRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -121,7 +125,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +133,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +185,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends B
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

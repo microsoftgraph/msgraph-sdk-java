@@ -26,7 +26,7 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         return new OneDriveForBusinessRestoreSession();
     }
     /**
-     * Gets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Business drive.
+     * Gets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      * @return a {@link java.util.List<DriveRestoreArtifact>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         return this.backingStore.get("driveRestoreArtifacts");
     }
     /**
-     * Gets the driveRestoreArtifactsBulkAdditionRequests property value. The driveRestoreArtifactsBulkAdditionRequests property
+     * Gets the driveRestoreArtifactsBulkAdditionRequests property value. A collection of user mailboxes and destination details that can be used to restore a OneDrive for work or school drive.
      * @return a {@link java.util.List<DriveRestoreArtifactsBulkAdditionRequest>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         writer.writeCollectionOfObjectValues("driveRestoreArtifactsBulkAdditionRequests", this.getDriveRestoreArtifactsBulkAdditionRequests());
     }
     /**
-     * Sets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Business drive.
+     * Sets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      * @param value Value to set for the driveRestoreArtifacts property.
      */
     public void setDriveRestoreArtifacts(@jakarta.annotation.Nullable final java.util.List<DriveRestoreArtifact> value) {
         this.backingStore.set("driveRestoreArtifacts", value);
     }
     /**
-     * Sets the driveRestoreArtifactsBulkAdditionRequests property value. The driveRestoreArtifactsBulkAdditionRequests property
+     * Sets the driveRestoreArtifactsBulkAdditionRequests property value. A collection of user mailboxes and destination details that can be used to restore a OneDrive for work or school drive.
      * @param value Value to set for the driveRestoreArtifactsBulkAdditionRequests property.
      */
     public void setDriveRestoreArtifactsBulkAdditionRequests(@jakarta.annotation.Nullable final java.util.List<DriveRestoreArtifactsBulkAdditionRequest> value) {

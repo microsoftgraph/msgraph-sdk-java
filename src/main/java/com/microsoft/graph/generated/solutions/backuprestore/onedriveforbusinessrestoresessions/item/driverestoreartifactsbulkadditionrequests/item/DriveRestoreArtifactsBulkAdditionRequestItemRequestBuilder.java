@@ -37,16 +37,18 @@ public class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBusinessRestoreSession%2Did}/driveRestoreArtifactsBulkAdditionRequests/{driveRestoreArtifactsBulkAdditionRequest%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driverestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driverestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
      * @return a {@link DriveRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driverestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveRestoreArtifactsBulkAdditionRequest get() {
         return get(null);
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driverestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveRestoreArtifactsBulkAdditionRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends 
         return this.requestAdapter.send(requestInfo, errorMapping, DriveRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -121,7 +125,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends 
         return requestInfo;
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +133,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +185,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

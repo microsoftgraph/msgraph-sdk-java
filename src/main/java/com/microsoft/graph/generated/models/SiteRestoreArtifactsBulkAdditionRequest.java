@@ -36,7 +36,7 @@ public class SiteRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBul
         return deserializerMap;
     }
     /**
-     * Gets the siteIds property value. The siteIds property
+     * Gets the siteIds property value. The list of SharePoint site IDs that are added to the corresponding SharePoint restore session in a bulk operation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class SiteRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBul
         return this.backingStore.get("siteIds");
     }
     /**
-     * Gets the siteWebUrls property value. The siteWebUrls property
+     * Gets the siteWebUrls property value. The list of SharePoint site URLs that are added to the corresponding SharePoint restore session in a bulk operation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class SiteRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBul
         writer.writeCollectionOfPrimitiveValues("siteWebUrls", this.getSiteWebUrls());
     }
     /**
-     * Sets the siteIds property value. The siteIds property
+     * Sets the siteIds property value. The list of SharePoint site IDs that are added to the corresponding SharePoint restore session in a bulk operation.
      * @param value Value to set for the siteIds property.
      */
     public void setSiteIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("siteIds", value);
     }
     /**
-     * Sets the siteWebUrls property value. The siteWebUrls property
+     * Sets the siteWebUrls property value. The list of SharePoint site URLs that are added to the corresponding SharePoint restore session in a bulk operation.
      * @param value Value to set for the siteWebUrls property.
      */
     public void setSiteWebUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
