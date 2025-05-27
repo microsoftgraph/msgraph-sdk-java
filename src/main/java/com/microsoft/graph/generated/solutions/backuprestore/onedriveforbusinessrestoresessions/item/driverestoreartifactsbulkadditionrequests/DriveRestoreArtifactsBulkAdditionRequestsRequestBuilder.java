@@ -60,19 +60,21 @@ public class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBusinessRestoreSession%2Did}/driveRestoreArtifactsBulkAdditionRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
      * @return a {@link DriveRestoreArtifactsBulkAdditionRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-list-driverestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveRestoreArtifactsBulkAdditionRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveRestoreArtifactsBulkAdditionRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-list-driverestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveRestoreArtifactsBulkAdditionRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Bas
         return this.requestAdapter.send(requestInfo, errorMapping, DriveRestoreArtifactsBulkAdditionRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession. The following steps describe how to create and manage a oneDriveForBusinessRestoreSession with bulk artifact additions.
      * @param body The request body
      * @return a {@link DriveRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-post-driverestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveRestoreArtifactsBulkAdditionRequest post(@jakarta.annotation.Nonnull final DriveRestoreArtifactsBulkAdditionRequest body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession. The following steps describe how to create and manage a oneDriveForBusinessRestoreSession with bulk artifact additions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-post-driverestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveRestoreArtifactsBulkAdditionRequest post(@jakarta.annotation.Nonnull final DriveRestoreArtifactsBulkAdditionRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Bas
         return this.requestAdapter.send(requestInfo, errorMapping, DriveRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Create new navigation property to driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession. The following steps describe how to create and manage a oneDriveForBusinessRestoreSession with bulk artifact additions.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Bas
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession. The following steps describe how to create and manage a oneDriveForBusinessRestoreSession with bulk artifact additions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Bas
         return new DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

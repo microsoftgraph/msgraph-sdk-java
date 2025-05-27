@@ -54,7 +54,7 @@ public class ExchangeRestoreSession extends RestoreSessionBase implements Parsab
         return this.backingStore.get("mailboxRestoreArtifacts");
     }
     /**
-     * Gets the mailboxRestoreArtifactsBulkAdditionRequests property value. The mailboxRestoreArtifactsBulkAdditionRequests property
+     * Gets the mailboxRestoreArtifactsBulkAdditionRequests property value. A collection of user mailboxes and destination details that can be used to restore Exchange mailboxes.
      * @return a {@link java.util.List<MailboxRestoreArtifactsBulkAdditionRequest>}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class ExchangeRestoreSession extends RestoreSessionBase implements Parsab
         this.backingStore.set("mailboxRestoreArtifacts", value);
     }
     /**
-     * Sets the mailboxRestoreArtifactsBulkAdditionRequests property value. The mailboxRestoreArtifactsBulkAdditionRequests property
+     * Sets the mailboxRestoreArtifactsBulkAdditionRequests property value. A collection of user mailboxes and destination details that can be used to restore Exchange mailboxes.
      * @param value Value to set for the mailboxRestoreArtifactsBulkAdditionRequests property.
      */
     public void setMailboxRestoreArtifactsBulkAdditionRequests(@jakarta.annotation.Nullable final java.util.List<MailboxRestoreArtifactsBulkAdditionRequest> value) {

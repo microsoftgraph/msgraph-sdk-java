@@ -60,19 +60,21 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/exchangeRestoreSessions/{exchangeRestoreSession%2Did}/mailboxRestoreArtifactsBulkAdditionRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the maiboxRestoreArtifactsBulkAdditionRequest objects associated with an exchangeRestoreSession. The mailboxes property is deliberately omitted from the response body in order to limit the response size.
      * @return a {@link MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangerestoresession-list-mailboxrestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the maiboxRestoreArtifactsBulkAdditionRequest objects associated with an exchangeRestoreSession. The mailboxes property is deliberately omitted from the response body in order to limit the response size.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangerestoresession-list-mailboxrestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param body The request body
      * @return a {@link MailboxRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangerestoresession-post-mailboxrestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxRestoreArtifactsBulkAdditionRequest post(@jakarta.annotation.Nonnull final MailboxRestoreArtifactsBulkAdditionRequest body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangerestoresession-post-mailboxrestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxRestoreArtifactsBulkAdditionRequest post(@jakarta.annotation.Nonnull final MailboxRestoreArtifactsBulkAdditionRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the maiboxRestoreArtifactsBulkAdditionRequest objects associated with an exchangeRestoreSession. The mailboxes property is deliberately omitted from the response body in order to limit the response size.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the maiboxRestoreArtifactsBulkAdditionRequest objects associated with an exchangeRestoreSession. The mailboxes property is deliberately omitted from the response body in order to limit the response size.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Create new navigation property to mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return new MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the maiboxRestoreArtifactsBulkAdditionRequest objects associated with an exchangeRestoreSession. The mailboxes property is deliberately omitted from the response body in order to limit the response size.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

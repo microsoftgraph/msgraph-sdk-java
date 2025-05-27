@@ -25,7 +25,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequest extends RestoreArtifacts
         return new MailboxRestoreArtifactsBulkAdditionRequest();
     }
     /**
-     * Gets the directoryObjectIds property value. The directoryObjectIds property
+     * Gets the directoryObjectIds property value. The list of directory object IDs that are added to the corresponding Exchange restore session in a bulk operation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequest extends RestoreArtifacts
         return deserializerMap;
     }
     /**
-     * Gets the mailboxes property value. The mailboxes property
+     * Gets the mailboxes property value. The list of email addresses that are added to the corresponding Exchange restore session in a bulk operation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class MailboxRestoreArtifactsBulkAdditionRequest extends RestoreArtifacts
         writer.writeCollectionOfPrimitiveValues("mailboxes", this.getMailboxes());
     }
     /**
-     * Sets the directoryObjectIds property value. The directoryObjectIds property
+     * Sets the directoryObjectIds property value. The list of directory object IDs that are added to the corresponding Exchange restore session in a bulk operation.
      * @param value Value to set for the directoryObjectIds property.
      */
     public void setDirectoryObjectIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("directoryObjectIds", value);
     }
     /**
-     * Sets the mailboxes property value. The mailboxes property
+     * Sets the mailboxes property value. The list of email addresses that are added to the corresponding Exchange restore session in a bulk operation.
      * @param value Value to set for the mailboxes property.
      */
     public void setMailboxes(@jakarta.annotation.Nullable final java.util.List<String> value) {

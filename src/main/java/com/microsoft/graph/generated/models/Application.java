@@ -230,7 +230,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("homeRealmDiscoveryPolicies");
     }
     /**
-     * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API&apos;s code, and it must be globally unique. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API&apos;s code, and it must be globally unique across Microsoft Entra ID. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -652,7 +652,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("homeRealmDiscoveryPolicies", value);
     }
     /**
-     * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API&apos;s code, and it must be globally unique. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API&apos;s code, and it must be globally unique across Microsoft Entra ID. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      * @param value Value to set for the identifierUris property.
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final java.util.List<String> value) {
