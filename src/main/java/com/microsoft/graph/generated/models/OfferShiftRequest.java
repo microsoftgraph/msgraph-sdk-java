@@ -47,7 +47,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the recipientActionDateTime property value. The date and time when the recipient approved or declined the request.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         return this.backingStore.get("recipientActionDateTime");
     }
     /**
-     * Gets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
+     * Gets the recipientActionMessage property value. The message sent by the recipient regarding the request.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         return this.backingStore.get("recipientActionMessage");
     }
     /**
-     * Gets the recipientUserId property value. User ID of the recipient of the offer shift request.
+     * Gets the recipientUserId property value. The recipient&apos;s user ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         return this.backingStore.get("recipientUserId");
     }
     /**
-     * Gets the senderShiftId property value. User ID of the sender of the offer shift request.
+     * Gets the senderShiftId property value. The sender&apos;s shift ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,28 +90,28 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         writer.writeStringValue("senderShiftId", this.getSenderShiftId());
     }
     /**
-     * Sets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the recipientActionDateTime property value. The date and time when the recipient approved or declined the request.
      * @param value Value to set for the recipientActionDateTime property.
      */
     public void setRecipientActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("recipientActionDateTime", value);
     }
     /**
-     * Sets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
+     * Sets the recipientActionMessage property value. The message sent by the recipient regarding the request.
      * @param value Value to set for the recipientActionMessage property.
      */
     public void setRecipientActionMessage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("recipientActionMessage", value);
     }
     /**
-     * Sets the recipientUserId property value. User ID of the recipient of the offer shift request.
+     * Sets the recipientUserId property value. The recipient&apos;s user ID.
      * @param value Value to set for the recipientUserId property.
      */
     public void setRecipientUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("recipientUserId", value);
     }
     /**
-     * Sets the senderShiftId property value. User ID of the sender of the offer shift request.
+     * Sets the senderShiftId property value. The sender&apos;s shift ID.
      * @param value Value to set for the senderShiftId property.
      */
     public void setSenderShiftId(@jakarta.annotation.Nullable final String value) {

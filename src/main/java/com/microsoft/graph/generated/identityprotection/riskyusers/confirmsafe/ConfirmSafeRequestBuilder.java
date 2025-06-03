@@ -1,4 +1,4 @@
-package com.microsoft.graph.deviceappmanagement.managedapppolicies.item.targetapps;
+package com.microsoft.graph.identityprotection.riskyusers.confirmsafe;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -14,43 +14,43 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to call the targetApps method.
+ * Provides operations to call the confirmSafe method.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TargetAppsRequestBuilder extends BaseRequestBuilder {
+public class ConfirmSafeRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link TargetAppsRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ConfirmSafeRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public TargetAppsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppPolicies/{managedAppPolicy%2Did}/targetApps", pathParameters);
+    public ConfirmSafeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/identityProtection/riskyUsers/confirmSafe", pathParameters);
     }
     /**
-     * Instantiates a new {@link TargetAppsRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ConfirmSafeRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public TargetAppsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppPolicies/{managedAppPolicy%2Did}/targetApps", rawUrl);
+    public ConfirmSafeRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/identityProtection/riskyUsers/confirmSafe", rawUrl);
     }
     /**
-     * Not yet documented
+     * Confirm one or more riskyUser objects as safe. This action sets the targeted user&apos;s risk level to none.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappprotection-targetapps?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-confirmsafe?view=graph-rest-1.0">Find more info here</a>
      */
-    public void post(@jakarta.annotation.Nonnull final TargetAppsPostRequestBody body) {
+    public void post(@jakarta.annotation.Nonnull final ConfirmSafePostRequestBody body) {
         post(body, null);
     }
     /**
-     * Not yet documented
+     * Confirm one or more riskyUser objects as safe. This action sets the targeted user&apos;s risk level to none.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedappprotection-targetapps?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskyuser-confirmsafe?view=graph-rest-1.0">Find more info here</a>
      */
-    public void post(@jakarta.annotation.Nonnull final TargetAppsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public void post(@jakarta.annotation.Nonnull final ConfirmSafePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -58,22 +58,22 @@ public class TargetAppsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Not yet documented
+     * Confirm one or more riskyUser objects as safe. This action sets the targeted user&apos;s risk level to none.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TargetAppsPostRequestBody body) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConfirmSafePostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Not yet documented
+     * Confirm one or more riskyUser objects as safe. This action sets the targeted user&apos;s risk level to none.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TargetAppsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConfirmSafePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
@@ -83,12 +83,12 @@ public class TargetAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link TargetAppsRequestBuilder}
+     * @return a {@link ConfirmSafeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public TargetAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public ConfirmSafeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new TargetAppsRequestBuilder(rawUrl, requestAdapter);
+        return new ConfirmSafeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

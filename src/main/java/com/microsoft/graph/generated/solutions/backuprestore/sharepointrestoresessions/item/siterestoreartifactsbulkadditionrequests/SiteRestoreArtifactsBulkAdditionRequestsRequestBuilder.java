@@ -60,19 +60,21 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSession%2Did}/siteRestoreArtifactsBulkAdditionRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the siteRestoreArtifactsBulkAdditionRequest objects associated with a sharePointRestoreSession. The siteWebUrls property is deliberately omitted from the response body in order to limit the response size.
      * @return a {@link SiteRestoreArtifactsBulkAdditionRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointrestoresession-list-siterestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteRestoreArtifactsBulkAdditionRequestCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the siteRestoreArtifactsBulkAdditionRequest objects associated with a sharePointRestoreSession. The siteWebUrls property is deliberately omitted from the response body in order to limit the response size.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteRestoreArtifactsBulkAdditionRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointrestoresession-list-siterestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteRestoreArtifactsBulkAdditionRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, SiteRestoreArtifactsBulkAdditionRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param body The request body
      * @return a {@link SiteRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointrestoresession-post-siterestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteRestoreArtifactsBulkAdditionRequest post(@jakarta.annotation.Nonnull final SiteRestoreArtifactsBulkAdditionRequest body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointrestoresession-post-siterestoreartifactsbulkadditionrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteRestoreArtifactsBulkAdditionRequest post(@jakarta.annotation.Nonnull final SiteRestoreArtifactsBulkAdditionRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, SiteRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the siteRestoreArtifactsBulkAdditionRequest objects associated with a sharePointRestoreSession. The siteWebUrls property is deliberately omitted from the response body in order to limit the response size.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the siteRestoreArtifactsBulkAdditionRequest objects associated with a sharePointRestoreSession. The siteWebUrls property is deliberately omitted from the response body in order to limit the response size.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Create new navigation property to siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return new SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the siteRestoreArtifactsBulkAdditionRequest objects associated with a sharePointRestoreSession. The siteWebUrls property is deliberately omitted from the response body in order to limit the response size.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -1,6 +1,7 @@
 package com.microsoft.graph.identityprotection.riskyusers;
 
 import com.microsoft.graph.identityprotection.riskyusers.confirmcompromised.ConfirmCompromisedRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyusers.confirmsafe.ConfirmSafeRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyusers.count.CountRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyusers.dismiss.DismissRequestBuilder;
 import com.microsoft.graph.identityprotection.riskyusers.item.RiskyUserItemRequestBuilder;
@@ -32,6 +33,14 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ConfirmCompromisedRequestBuilder confirmCompromised() {
         return new ConfirmCompromisedRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the confirmSafe method.
+     * @return a {@link ConfirmSafeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfirmSafeRequestBuilder confirmSafe() {
+        return new ConfirmSafeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to count the resources in the collection.

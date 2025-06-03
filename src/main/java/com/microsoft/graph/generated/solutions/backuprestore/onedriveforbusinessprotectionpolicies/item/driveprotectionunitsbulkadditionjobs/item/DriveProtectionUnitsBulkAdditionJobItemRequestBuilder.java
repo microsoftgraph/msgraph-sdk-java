@@ -37,19 +37,21 @@ public class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessProtectionPolicies/{oneDriveForBusinessProtectionPolicy%2Did}/driveProtectionUnitsBulkAdditionJobs/{driveProtectionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get driveProtectionUnitsBulkAdditionJobs from solutions
+     * Get a driveProtectionUnitsBulkAdditionJob object by the ID associated with a oneDriveForBusinessProtectionPolicy.
      * @return a {@link DriveProtectionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driveprotectionunitsbulkadditionjobs-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveProtectionUnitsBulkAdditionJob get() {
         return get(null);
     }
     /**
-     * Get driveProtectionUnitsBulkAdditionJobs from solutions
+     * Get a driveProtectionUnitsBulkAdditionJob object by the ID associated with a oneDriveForBusinessProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveProtectionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driveprotectionunitsbulkadditionjobs-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveProtectionUnitsBulkAdditionJob get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, DriveProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue);
     }
     /**
-     * Get driveProtectionUnitsBulkAdditionJobs from solutions
+     * Get a driveProtectionUnitsBulkAdditionJob object by the ID associated with a oneDriveForBusinessProtectionPolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Get driveProtectionUnitsBulkAdditionJobs from solutions
+     * Get a driveProtectionUnitsBulkAdditionJob object by the ID associated with a oneDriveForBusinessProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseR
         return new DriveProtectionUnitsBulkAdditionJobItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get driveProtectionUnitsBulkAdditionJobs from solutions
+     * Get a driveProtectionUnitsBulkAdditionJob object by the ID associated with a oneDriveForBusinessProtectionPolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
