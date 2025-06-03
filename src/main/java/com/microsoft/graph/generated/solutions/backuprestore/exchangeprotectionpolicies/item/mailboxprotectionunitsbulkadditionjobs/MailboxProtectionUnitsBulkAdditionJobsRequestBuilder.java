@@ -59,19 +59,21 @@ public class MailboxProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/exchangeProtectionPolicies/{exchangeProtectionPolicy%2Did}/mailboxProtectionUnitsBulkAdditionJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailboxProtectionUnitsBulkAdditionJobs objects associated with an exchangeProtectionPolicy.
      * @return a {@link MailboxProtectionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-list-mailboxprotectionunitsbulkadditionjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxProtectionUnitsBulkAdditionJobCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailboxProtectionUnitsBulkAdditionJobs objects associated with an exchangeProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxProtectionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-list-mailboxprotectionunitsbulkadditionjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxProtectionUnitsBulkAdditionJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class MailboxProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRe
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxProtectionUnitsBulkAdditionJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailboxProtectionUnitsBulkAdditionJobs objects associated with an exchangeProtectionPolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class MailboxProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailboxProtectionUnitsBulkAdditionJobs objects associated with an exchangeProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class MailboxProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRe
         return new MailboxProtectionUnitsBulkAdditionJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailboxProtectionUnitsBulkAdditionJobs objects associated with an exchangeProtectionPolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

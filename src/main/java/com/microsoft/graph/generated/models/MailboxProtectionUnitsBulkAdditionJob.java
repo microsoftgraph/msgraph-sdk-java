@@ -26,7 +26,7 @@ public class MailboxProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJo
         return new MailboxProtectionUnitsBulkAdditionJob();
     }
     /**
-     * Gets the directoryObjectIds property value. The directoryObjectIds property
+     * Gets the directoryObjectIds property value. The list of Exchange directoryObjectIds to add to the Exchange protection policy.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class MailboxProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJo
         return deserializerMap;
     }
     /**
-     * Gets the mailboxes property value. The mailboxes property
+     * Gets the mailboxes property value. The list of Exchange email addresses to add to the Exchange protection policy.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class MailboxProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJo
         writer.writeCollectionOfPrimitiveValues("mailboxes", this.getMailboxes());
     }
     /**
-     * Sets the directoryObjectIds property value. The directoryObjectIds property
+     * Sets the directoryObjectIds property value. The list of Exchange directoryObjectIds to add to the Exchange protection policy.
      * @param value Value to set for the directoryObjectIds property.
      */
     public void setDirectoryObjectIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("directoryObjectIds", value);
     }
     /**
-     * Sets the mailboxes property value. The mailboxes property
+     * Sets the mailboxes property value. The list of Exchange email addresses to add to the Exchange protection policy.
      * @param value Value to set for the mailboxes property.
      */
     public void setMailboxes(@jakarta.annotation.Nullable final java.util.List<String> value) {

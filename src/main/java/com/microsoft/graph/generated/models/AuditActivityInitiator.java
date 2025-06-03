@@ -48,7 +48,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
         return value;
     }
     /**
-     * Gets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
+     * Gets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId and name.
      * @return a {@link AppIdentity}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
+     * Gets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like user ID and userPrincipalName.
      * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
+     * Sets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId and name.
      * @param value Value to set for the app property.
      */
     public void setApp(@jakarta.annotation.Nullable final AppIdentity value) {
@@ -132,7 +132,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
+     * Sets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like user ID and userPrincipalName.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final UserIdentity value) {

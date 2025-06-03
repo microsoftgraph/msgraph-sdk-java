@@ -35,7 +35,7 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         return new ProtectionUnitsBulkJobBase();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The identity of person who created the job.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The time of creation of the job.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the protection units bulk addition job.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Error details containing resource resolution failures, if any.
      * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The identity of the person who last modified the job.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Timestamp of the last modification made to the job.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -122,42 +122,42 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The identity of person who created the job.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The time of creation of the job.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the protection units bulk addition job.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Error details containing resource resolution failures, if any.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The identity of the person who last modified the job.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Timestamp of the last modification made to the job.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -37,7 +37,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return new ScheduleChangeRequest();
     }
     /**
-     * Gets the assignedTo property value. The assignedTo property
+     * Gets the assignedTo property value. Indicates who the request is assigned to. Possible values are: sender, recipient, manager, system, unknownFutureValue.
      * @return a {@link ScheduleChangeRequestActor}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the managerActionDateTime property value. The managerActionDateTime property
+     * Gets the managerActionDateTime property value. The date and time when the manager approved or declined the scheduleChangeRequest. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return this.backingStore.get("managerActionDateTime");
     }
     /**
-     * Gets the managerActionMessage property value. The managerActionMessage property
+     * Gets the managerActionMessage property value. The message sent by the manager regarding the scheduleChangeRequest. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return this.backingStore.get("managerActionMessage");
     }
     /**
-     * Gets the managerUserId property value. The managerUserId property
+     * Gets the managerUserId property value. The user ID of the manager who approved or declined the scheduleChangeRequest.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return this.backingStore.get("managerUserId");
     }
     /**
-     * Gets the senderDateTime property value. The senderDateTime property
+     * Gets the senderDateTime property value. The date and time when the sender sent the scheduleChangeRequest. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return this.backingStore.get("senderDateTime");
     }
     /**
-     * Gets the senderMessage property value. The senderMessage property
+     * Gets the senderMessage property value. The message sent by the sender of the scheduleChangeRequest. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return this.backingStore.get("senderMessage");
     }
     /**
-     * Gets the senderUserId property value. The senderUserId property
+     * Gets the senderUserId property value. The user ID of the sender of the scheduleChangeRequest.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return this.backingStore.get("senderUserId");
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The state of the scheduleChangeRequest. Possible values are: pending, approved, declined, unknownFutureValue.
      * @return a {@link ScheduleChangeState}
      */
     @jakarta.annotation.Nullable
@@ -130,56 +130,56 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         writer.writeEnumValue("state", this.getState());
     }
     /**
-     * Sets the assignedTo property value. The assignedTo property
+     * Sets the assignedTo property value. Indicates who the request is assigned to. Possible values are: sender, recipient, manager, system, unknownFutureValue.
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final ScheduleChangeRequestActor value) {
         this.backingStore.set("assignedTo", value);
     }
     /**
-     * Sets the managerActionDateTime property value. The managerActionDateTime property
+     * Sets the managerActionDateTime property value. The date and time when the manager approved or declined the scheduleChangeRequest. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the managerActionDateTime property.
      */
     public void setManagerActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("managerActionDateTime", value);
     }
     /**
-     * Sets the managerActionMessage property value. The managerActionMessage property
+     * Sets the managerActionMessage property value. The message sent by the manager regarding the scheduleChangeRequest. Optional.
      * @param value Value to set for the managerActionMessage property.
      */
     public void setManagerActionMessage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("managerActionMessage", value);
     }
     /**
-     * Sets the managerUserId property value. The managerUserId property
+     * Sets the managerUserId property value. The user ID of the manager who approved or declined the scheduleChangeRequest.
      * @param value Value to set for the managerUserId property.
      */
     public void setManagerUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("managerUserId", value);
     }
     /**
-     * Sets the senderDateTime property value. The senderDateTime property
+     * Sets the senderDateTime property value. The date and time when the sender sent the scheduleChangeRequest. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the senderDateTime property.
      */
     public void setSenderDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("senderDateTime", value);
     }
     /**
-     * Sets the senderMessage property value. The senderMessage property
+     * Sets the senderMessage property value. The message sent by the sender of the scheduleChangeRequest. Optional.
      * @param value Value to set for the senderMessage property.
      */
     public void setSenderMessage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("senderMessage", value);
     }
     /**
-     * Sets the senderUserId property value. The senderUserId property
+     * Sets the senderUserId property value. The user ID of the sender of the scheduleChangeRequest.
      * @param value Value to set for the senderUserId property.
      */
     public void setSenderUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("senderUserId", value);
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The state of the scheduleChangeRequest. Possible values are: pending, approved, declined, unknownFutureValue.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ScheduleChangeState value) {

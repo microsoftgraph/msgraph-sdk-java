@@ -36,7 +36,7 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
+     * Gets the recipientShiftId property value. The recipient&apos;s Shift ID
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsab
         writer.writeStringValue("recipientShiftId", this.getRecipientShiftId());
     }
     /**
-     * Sets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
+     * Sets the recipientShiftId property value. The recipient&apos;s Shift ID
      * @param value Value to set for the recipientShiftId property.
      */
     public void setRecipientShiftId(@jakarta.annotation.Nullable final String value) {

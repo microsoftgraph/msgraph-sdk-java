@@ -25,7 +25,7 @@ public class DriveRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBu
         return new DriveRestoreArtifactsBulkAdditionRequest();
     }
     /**
-     * Gets the directoryObjectIds property value. The directoryObjectIds property
+     * Gets the directoryObjectIds property value. The list of directory object IDs that are added to the corresponding OneDrive for work or school restore session in a bulk operation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class DriveRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBu
         return this.backingStore.get("directoryObjectIds");
     }
     /**
-     * Gets the drives property value. The drives property
+     * Gets the drives property value. The list of email addresses that are added to the corresponding OneDrive for work or school restore session in a bulk operation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class DriveRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBu
         writer.writeCollectionOfPrimitiveValues("drives", this.getDrives());
     }
     /**
-     * Sets the directoryObjectIds property value. The directoryObjectIds property
+     * Sets the directoryObjectIds property value. The list of directory object IDs that are added to the corresponding OneDrive for work or school restore session in a bulk operation.
      * @param value Value to set for the directoryObjectIds property.
      */
     public void setDirectoryObjectIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("directoryObjectIds", value);
     }
     /**
-     * Sets the drives property value. The drives property
+     * Sets the drives property value. The list of email addresses that are added to the corresponding OneDrive for work or school restore session in a bulk operation.
      * @param value Value to set for the drives property.
      */
     public void setDrives(@jakarta.annotation.Nullable final java.util.List<String> value) {

@@ -35,7 +35,7 @@ public class AiUser extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the interactionHistory property value. The interactionHistory property
+     * Gets the interactionHistory property value. The history of interactions between AI agents and users.
      * @return a {@link AiInteractionHistory}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AiUser extends Entity implements Parsable {
         writer.writeObjectValue("interactionHistory", this.getInteractionHistory());
     }
     /**
-     * Sets the interactionHistory property value. The interactionHistory property
+     * Sets the interactionHistory property value. The history of interactions between AI agents and users.
      * @param value Value to set for the interactionHistory property.
      */
     public void setInteractionHistory(@jakarta.annotation.Nullable final AiInteractionHistory value) {

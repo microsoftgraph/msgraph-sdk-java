@@ -62,9 +62,10 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("isAtApprovedLocation", (n) -> { this.setIsAtApprovedLocation(n.getBooleanValue()); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("onBehalfOfUserId", (n) -> { this.setOnBehalfOfUserId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -84,6 +85,14 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("notes");
     }
     /**
+     * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOnBehalfOfUserId() {
+        return this.backingStore.get("onBehalfOfUserId");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -91,6 +100,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isAtApprovedLocation", this.getIsAtApprovedLocation());
         writer.writeObjectValue("notes", this.getNotes());
+        writer.writeStringValue("onBehalfOfUserId", this.getOnBehalfOfUserId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -121,5 +131,12 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel
      */
     public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
         this.backingStore.set("notes", value);
+    }
+    /**
+     * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
+     * @param value Value to set for the onBehalfOfUserId property.
+     */
+    public void setOnBehalfOfUserId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("onBehalfOfUserId", value);
     }
 }

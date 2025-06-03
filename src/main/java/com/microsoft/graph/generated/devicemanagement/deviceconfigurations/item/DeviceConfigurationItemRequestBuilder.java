@@ -101,18 +101,18 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a macOSGeneralDeviceConfiguration.
+     * Deletes a windows10CustomConfiguration.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosgeneraldeviceconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10customconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a macOSGeneralDeviceConfiguration.
+     * Deletes a windows10CustomConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosgeneraldeviceconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10customconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -121,21 +121,21 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the windowsUpdateForBusinessConfiguration object.
+     * Read properties and relationships of the windows10CustomConfiguration object.
      * @return a {@link DeviceConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsupdateforbusinessconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10customconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the windowsUpdateForBusinessConfiguration object.
+     * Read properties and relationships of the windows10CustomConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsupdateforbusinessconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10customconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,23 +155,23 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(pathParameters, requestAdapter, secretReferenceValueId);
     }
     /**
-     * Update the properties of a windows10SecureAssessmentConfiguration object.
+     * Update the properties of a editionUpgradeConfiguration object.
      * @param body The request body
      * @return a {@link DeviceConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10secureassessmentconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration patch(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a windows10SecureAssessmentConfiguration object.
+     * Update the properties of a editionUpgradeConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10secureassessmentconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration patch(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +182,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a macOSGeneralDeviceConfiguration.
+     * Deletes a windows10CustomConfiguration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -190,7 +190,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a macOSGeneralDeviceConfiguration.
+     * Deletes a windows10CustomConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -201,7 +201,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the windowsUpdateForBusinessConfiguration object.
+     * Read properties and relationships of the windows10CustomConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -209,7 +209,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the windowsUpdateForBusinessConfiguration object.
+     * Read properties and relationships of the windows10CustomConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -221,7 +221,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a windows10SecureAssessmentConfiguration object.
+     * Update the properties of a editionUpgradeConfiguration object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -230,7 +230,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a windows10SecureAssessmentConfiguration object.
+     * Update the properties of a editionUpgradeConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -261,7 +261,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the windowsUpdateForBusinessConfiguration object.
+     * Read properties and relationships of the windows10CustomConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

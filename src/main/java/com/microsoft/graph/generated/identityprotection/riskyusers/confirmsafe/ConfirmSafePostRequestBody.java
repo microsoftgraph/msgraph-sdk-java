@@ -1,6 +1,5 @@
-package com.microsoft.graph.users.item.joinedteams.item.schedule.timecards.clockin;
+package com.microsoft.graph.identityprotection.riskyusers.confirmsafe;
 
-import com.microsoft.graph.models.ItemBody;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -12,28 +11,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
+public class ConfirmSafePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.
      */
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new {@link ClockInPostRequestBody} and sets the default values.
+     * Instantiates a new {@link ConfirmSafePostRequestBody} and sets the default values.
      */
-    public ClockInPostRequestBody() {
+    public ConfirmSafePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link ClockInPostRequestBody}
+     * @return a {@link ConfirmSafePostRequestBody}
      */
     @jakarta.annotation.Nonnull
-    public static ClockInPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static ConfirmSafePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new ClockInPostRequestBody();
+        return new ConfirmSafePostRequestBody();
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -62,35 +61,17 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("isAtApprovedLocation", (n) -> { this.setIsAtApprovedLocation(n.getBooleanValue()); });
-        deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-        deserializerMap.put("onBehalfOfUserId", (n) -> { this.setOnBehalfOfUserId(n.getStringValue()); });
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("userIds", (n) -> { this.setUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
-     * Gets the isAtApprovedLocation property value. The isAtApprovedLocation property
-     * @return a {@link Boolean}
+     * Gets the userIds property value. The userIds property
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public Boolean getIsAtApprovedLocation() {
-        return this.backingStore.get("isAtApprovedLocation");
-    }
-    /**
-     * Gets the notes property value. The notes property
-     * @return a {@link ItemBody}
-     */
-    @jakarta.annotation.Nullable
-    public ItemBody getNotes() {
-        return this.backingStore.get("notes");
-    }
-    /**
-     * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOnBehalfOfUserId() {
-        return this.backingStore.get("onBehalfOfUserId");
+    public java.util.List<String> getUserIds() {
+        return this.backingStore.get("userIds");
     }
     /**
      * Serializes information the current object
@@ -98,9 +79,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeBooleanValue("isAtApprovedLocation", this.getIsAtApprovedLocation());
-        writer.writeObjectValue("notes", this.getNotes());
-        writer.writeStringValue("onBehalfOfUserId", this.getOnBehalfOfUserId());
+        writer.writeCollectionOfPrimitiveValues("userIds", this.getUserIds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -119,24 +98,10 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the isAtApprovedLocation property value. The isAtApprovedLocation property
-     * @param value Value to set for the isAtApprovedLocation property.
+     * Sets the userIds property value. The userIds property
+     * @param value Value to set for the userIds property.
      */
-    public void setIsAtApprovedLocation(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("isAtApprovedLocation", value);
-    }
-    /**
-     * Sets the notes property value. The notes property
-     * @param value Value to set for the notes property.
-     */
-    public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
-        this.backingStore.set("notes", value);
-    }
-    /**
-     * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
-     * @param value Value to set for the onBehalfOfUserId property.
-     */
-    public void setOnBehalfOfUserId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("onBehalfOfUserId", value);
+    public void setUserIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("userIds", value);
     }
 }
