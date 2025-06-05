@@ -2,6 +2,7 @@ package com.microsoft.graph.serviceclient;
 
 import com.microsoft.graph.core.CoreConstants;
 import com.microsoft.graph.core.requests.BaseGraphRequestAdapter;
+import com.microsoft.graph.core.requests.BaseGraphRequestAdapter.Clouds;
 import com.microsoft.graph.core.requests.BatchRequestBuilder;
 import com.microsoft.graph.core.requests.options.GraphClientOption;
 import com.microsoft.graph.core.requests.IBaseClient;
