@@ -57,7 +57,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IBaseC
      * @param clouds The Clouds for the GraphServiceClient.
      *
      */
-    public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider,@Nonnull OkHttpClient client, @Nonnull Clouds clouds) {
+    public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider, @Nonnull OkHttpClient client, @Nonnull Clouds clouds) {
         this(new BaseGraphRequestAdapter(authenticationProvider, clouds, "v1.0", getGraphClientOptions()));
     }
     /**
