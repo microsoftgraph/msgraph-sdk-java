@@ -53,14 +53,14 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IBaseC
     }
     /**
      * Instantiate the GraphServiceClient using an AuthenticationProvider, Cloud and OkHttpClient.
+     * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
      * @param client The OkHttpClient for the GraphServiceClient.
      * @param clouds The Clouds for the GraphServiceClient.
-     * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
      *
      */
     @SuppressWarnings("LambdaLast")
-    public GraphServiceClient(@Nonnull OkHttpClient client, @Nonnull Clouds clouds, @Nonnull AuthenticationProvider authenticationProvider) {
-        this(new BaseGraphRequestAdapter(authenticationProvider, clouds, "v1.0", getGraphClientOptions()));
+    public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider, @Nonnull OkHttpClient client, @Nonnull Clouds clouds) {
+        this(new BaseGraphRequestAdapter(authenticationProvider, clouds, "v1.0", client));
     }
     /**
      * Instantiate the GraphServiceClient using an AuthenticationProvider and OkHttpClient.
