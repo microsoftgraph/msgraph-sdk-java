@@ -17,7 +17,8 @@ public enum ServiceSource implements ValuedEnum {
     UnknownFutureValue("unknownFutureValue"),
     MicrosoftDefenderForCloud("microsoftDefenderForCloud"),
     MicrosoftSentinel("microsoftSentinel"),
-    MicrosoftInsiderRiskManagement("microsoftInsiderRiskManagement");
+    MicrosoftInsiderRiskManagement("microsoftInsiderRiskManagement"),
+    MicrosoftThreatIntelligence("microsoftThreatIntelligence");
     public final String value;
     ServiceSource(final String value) {
         this.value = value;
@@ -41,6 +42,7 @@ public enum ServiceSource implements ValuedEnum {
             case "microsoftDefenderForCloud": return MicrosoftDefenderForCloud;
             case "microsoftSentinel": return MicrosoftSentinel;
             case "microsoftInsiderRiskManagement": return MicrosoftInsiderRiskManagement;
+            case "microsoftThreatIntelligence": return MicrosoftThreatIntelligence;
             default: return null;
         }
     }

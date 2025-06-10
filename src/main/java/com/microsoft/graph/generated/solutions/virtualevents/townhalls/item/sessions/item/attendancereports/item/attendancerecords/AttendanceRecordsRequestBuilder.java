@@ -60,19 +60,21 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/townhalls/{virtualEventTownhall%2Did}/sessions/{virtualEventSession%2Did}/attendanceReports/{meetingAttendanceReport%2Did}/attendanceRecords{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @return a {@link AttendanceRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attendancerecord-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttendanceRecordCollectionResponse get() {
         return get(null);
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AttendanceRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/attendancerecord-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AttendanceRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AttendanceRecord::createFromDiscriminatorValue);
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         return new AttendanceRecordsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
