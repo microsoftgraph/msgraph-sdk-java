@@ -36,7 +36,7 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/getAllMessages(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,model*}", rawUrl);
     }
     /**
-     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
+     * Get all messages from all chats in which a user is a participant, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @return a {@link GetAllMessagesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chats-getallmessages?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
+     * Get all messages from all chats in which a user is a participant, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAllMessagesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GetAllMessagesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
+     * Get all messages from all chats in which a user is a participant, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
+     * Get all messages from all chats in which a user is a participant, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +90,7 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
         return new GetAllMessagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
+     * Get all messages from all chats in which a user is a participant, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
