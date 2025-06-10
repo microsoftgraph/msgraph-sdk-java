@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.41.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.40.0...v6.41.0) (2025-06-10)
+
+
+### Features
+
+* added new constructor for GraphServiceClient ([791479f](https://github.com/microsoftgraph/msgraph-sdk-java/commit/791479f8a68d06f9cd33ac45b56ca6d80c236de1))
+* **generation:** update request builders and models ([58f473c](https://github.com/microsoftgraph/msgraph-sdk-java/commit/58f473c1070a6585b5be76c3bad562c2c53f228e))
+
 ## [6.40.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.39.0...v6.40.0) (2025-06-03)
 
 
