@@ -1,6 +1,8 @@
 package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecurityexportresult;
 
 import com.microsoft.graph.models.security.AdditionalOptions;
+import com.microsoft.graph.models.security.CloudAttachmentVersion;
+import com.microsoft.graph.models.security.DocumentVersion;
 import com.microsoft.graph.models.security.ExportCriteria;
 import com.microsoft.graph.models.security.ExportFormat;
 import com.microsoft.graph.models.security.ExportLocation;
@@ -69,6 +71,14 @@ public class ExportResultPostRequestBody implements AdditionalDataHolder, Backed
         return this.backingStore;
     }
     /**
+     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @return a {@link CloudAttachmentVersion}
+     */
+    @jakarta.annotation.Nullable
+    public CloudAttachmentVersion getCloudAttachmentVersion() {
+        return this.backingStore.get("cloudAttachmentVersion");
+    }
+    /**
      * Gets the description property value. The description property
      * @return a {@link String}
      */
@@ -83,6 +93,14 @@ public class ExportResultPostRequestBody implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.backingStore.get("displayName");
+    }
+    /**
+     * Gets the documentVersion property value. The documentVersion property
+     * @return a {@link DocumentVersion}
+     */
+    @jakarta.annotation.Nullable
+    public DocumentVersion getDocumentVersion() {
+        return this.backingStore.get("documentVersion");
     }
     /**
      * Gets the exportCriteria property value. The exportCriteria property
@@ -122,10 +140,12 @@ public class ExportResultPostRequestBody implements AdditionalDataHolder, Backed
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("additionalOptions", (n) -> { this.setAdditionalOptions(n.getEnumSetValue(AdditionalOptions::forValue)); });
+        deserializerMap.put("cloudAttachmentVersion", (n) -> { this.setCloudAttachmentVersion(n.getEnumValue(CloudAttachmentVersion::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("documentVersion", (n) -> { this.setDocumentVersion(n.getEnumValue(DocumentVersion::forValue)); });
         deserializerMap.put("exportCriteria", (n) -> { this.setExportCriteria(n.getEnumSetValue(ExportCriteria::forValue)); });
         deserializerMap.put("exportFormat", (n) -> { this.setExportFormat(n.getEnumValue(ExportFormat::forValue)); });
         deserializerMap.put("exportLocation", (n) -> { this.setExportLocation(n.getEnumSetValue(ExportLocation::forValue)); });
@@ -139,8 +159,10 @@ public class ExportResultPostRequestBody implements AdditionalDataHolder, Backed
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumSetValue("additionalOptions", this.getAdditionalOptions());
+        writer.writeEnumValue("cloudAttachmentVersion", this.getCloudAttachmentVersion());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("documentVersion", this.getDocumentVersion());
         writer.writeEnumSetValue("exportCriteria", this.getExportCriteria());
         writer.writeEnumValue("exportFormat", this.getExportFormat());
         writer.writeEnumSetValue("exportLocation", this.getExportLocation());
@@ -170,6 +192,13 @@ public class ExportResultPostRequestBody implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
+     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @param value Value to set for the cloudAttachmentVersion property.
+     */
+    public void setCloudAttachmentVersion(@jakarta.annotation.Nullable final CloudAttachmentVersion value) {
+        this.backingStore.set("cloudAttachmentVersion", value);
+    }
+    /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
@@ -182,6 +211,13 @@ public class ExportResultPostRequestBody implements AdditionalDataHolder, Backed
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the documentVersion property value. The documentVersion property
+     * @param value Value to set for the documentVersion property.
+     */
+    public void setDocumentVersion(@jakarta.annotation.Nullable final DocumentVersion value) {
+        this.backingStore.set("documentVersion", value);
     }
     /**
      * Sets the exportCriteria property value. The exportCriteria property

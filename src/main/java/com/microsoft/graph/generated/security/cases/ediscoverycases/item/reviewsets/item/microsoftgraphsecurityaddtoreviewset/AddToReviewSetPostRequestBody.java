@@ -1,7 +1,10 @@
 package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.microsoftgraphsecurityaddtoreviewset;
 
 import com.microsoft.graph.models.security.AdditionalDataOptions;
+import com.microsoft.graph.models.security.CloudAttachmentVersion;
+import com.microsoft.graph.models.security.DocumentVersion;
 import com.microsoft.graph.models.security.EdiscoverySearch;
+import com.microsoft.graph.models.security.ItemsToInclude;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -67,15 +70,42 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
+     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @return a {@link CloudAttachmentVersion}
+     */
+    @jakarta.annotation.Nullable
+    public CloudAttachmentVersion getCloudAttachmentVersion() {
+        return this.backingStore.get("cloudAttachmentVersion");
+    }
+    /**
+     * Gets the documentVersion property value. The documentVersion property
+     * @return a {@link DocumentVersion}
+     */
+    @jakarta.annotation.Nullable
+    public DocumentVersion getDocumentVersion() {
+        return this.backingStore.get("documentVersion");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("additionalDataOptions", (n) -> { this.setAdditionalDataOptions(n.getEnumSetValue(AdditionalDataOptions::forValue)); });
+        deserializerMap.put("cloudAttachmentVersion", (n) -> { this.setCloudAttachmentVersion(n.getEnumValue(CloudAttachmentVersion::forValue)); });
+        deserializerMap.put("documentVersion", (n) -> { this.setDocumentVersion(n.getEnumValue(DocumentVersion::forValue)); });
+        deserializerMap.put("itemsToInclude", (n) -> { this.setItemsToInclude(n.getEnumSetValue(ItemsToInclude::forValue)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the itemsToInclude property value. The itemsToInclude property
+     * @return a {@link EnumSet<ItemsToInclude>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<ItemsToInclude> getItemsToInclude() {
+        return this.backingStore.get("itemsToInclude");
     }
     /**
      * Gets the search property value. The search property
@@ -92,6 +122,9 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumSetValue("additionalDataOptions", this.getAdditionalDataOptions());
+        writer.writeEnumValue("cloudAttachmentVersion", this.getCloudAttachmentVersion());
+        writer.writeEnumValue("documentVersion", this.getDocumentVersion());
+        writer.writeEnumSetValue("itemsToInclude", this.getItemsToInclude());
         writer.writeObjectValue("search", this.getSearch());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -116,6 +149,27 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Back
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @param value Value to set for the cloudAttachmentVersion property.
+     */
+    public void setCloudAttachmentVersion(@jakarta.annotation.Nullable final CloudAttachmentVersion value) {
+        this.backingStore.set("cloudAttachmentVersion", value);
+    }
+    /**
+     * Sets the documentVersion property value. The documentVersion property
+     * @param value Value to set for the documentVersion property.
+     */
+    public void setDocumentVersion(@jakarta.annotation.Nullable final DocumentVersion value) {
+        this.backingStore.set("documentVersion", value);
+    }
+    /**
+     * Sets the itemsToInclude property value. The itemsToInclude property
+     * @param value Value to set for the itemsToInclude property.
+     */
+    public void setItemsToInclude(@jakarta.annotation.Nullable final EnumSet<ItemsToInclude> value) {
+        this.backingStore.set("itemsToInclude", value);
     }
     /**
      * Sets the search property value. The search property

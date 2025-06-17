@@ -1,8 +1,6 @@
 package com.microsoft.graph.groups.item.events.item.instances;
 
-import com.microsoft.graph.groups.item.events.item.instances.count.CountRequestBuilder;
 import com.microsoft.graph.groups.item.events.item.instances.delta.DeltaRequestBuilder;
-import com.microsoft.graph.groups.item.events.item.instances.item.EventItemRequestBuilder;
 import com.microsoft.graph.models.EventCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -24,32 +22,12 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InstancesRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to count the resources in the collection.
-     * @return a {@link CountRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the delta method.
      * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the instances property of the microsoft.graph.event entity.
-     * @param eventId1 The unique identifier of event
-     * @return a {@link EventItemRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public EventItemRequestBuilder byEventId1(@jakarta.annotation.Nonnull final String eventId1) {
-        Objects.requireNonNull(eventId1);
-        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("event%2Did1", eventId1);
-        return new EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link InstancesRequestBuilder} and sets the default values.
