@@ -35,7 +35,7 @@ public class DataSet extends Entity implements Parsable {
         return new DataSet();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The user who created the data set. Read-only.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class DataSet extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the review set was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class DataSet extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the data set.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class DataSet extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the data set. The name is unique with a maximum limit of 64 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -92,28 +92,28 @@ public class DataSet extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The user who created the data set. Read-only.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the review set was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the data set.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the data set. The name is unique with a maximum limit of 64 characters.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
