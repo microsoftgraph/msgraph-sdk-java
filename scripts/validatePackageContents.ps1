@@ -3,7 +3,8 @@ param(
   [Parameter(Mandatory=$true)][string] $ArtifactId,
   [Parameter(Mandatory=$true)][string] $Version,
   [Parameter()][string] $GroupId = "com.microsoft.graph",
-  [Parameter()][string] $MavenLocalCachePath = "~" + [System.IO.Path]::DirectorySeparatorChar + ".m2" + [System.IO.Path]::DirectorySeparatorChar + "repository"
+  [Parameter()][string] $MavenLocalCachePath = "~" + [System.IO.Path]::DirectorySeparatorChar + ".m2" + [System.IO.Path]::DirectorySeparatorChar + "repository",
+  [Parameter()][bool] $ValidateMavenMetadata = $true
 )
 
 $groupIdPath = $GroupId -replace "\.", [System.IO.Path]::DirectorySeparatorChar
@@ -48,7 +49,7 @@ foreach($file in $expectedFiles) {
 }
 
 $mavenMetadataFiles = Get-ChildItem -Path $packageFullPath -Filter "maven-metadata*.xml"
-if($mavenMetadataFiles.Count -eq 0) {
+if($mavenMetadataFiles.Count -eq 0 -and $ValidateMavenMetadata -eq $true) {
   Write-Output "No maven-metadata*.xml files found in package."
   exit 1
 }

@@ -1,5 +1,7 @@
 name: Maven Preview/Release and GitHub Release
 
+# TODO: remove the todo entries in build.gradle
+
 on:
   push:
     branches: [main]
