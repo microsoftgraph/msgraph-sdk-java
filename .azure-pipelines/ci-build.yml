@@ -67,26 +67,26 @@ extends:
 
               - script: ./gradlew --no-daemon publishToMavenLocal -PmavenCentralPublishingEnabled=true -PmavenCentralSnapshotArtifactSuffix=""
                 displayName: Publish to local Maven for verification
-                # condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
+                condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
 
-              # - script: ./gradlew --no-daemon publishToMavenLocal -PmavenCentralPublishingEnabled=true
-              #   displayName: Publish to local Maven for verification
-              #   condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
+              - script: ./gradlew --no-daemon publishToMavenLocal -PmavenCentralPublishingEnabled=true
+                displayName: Publish to local Maven for verification
+                condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
 
               - script: ./gradlew --no-daemon publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true -PmavenCentralSnapshotArtifactSuffix=""
                 displayName: Publish to local Maven ADO for ESRP
-                # condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
+                condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
 
-              # - script: ./gradlew --no-daemon publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true
-              #   displayName: Publish to local Maven ADO for ESRP
-              #   condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
+              - script: ./gradlew --no-daemon publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true
+                displayName: Publish to local Maven ADO for ESRP
+                condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
 
               - pwsh: |
                   $contents = Get-Content gradle.properties -Raw
                   $major = $contents | Select-String -Pattern 'mavenMajorVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
                   $minor = $contents | Select-String -Pattern 'mavenMinorVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
                   $patch = $contents | Select-String -Pattern 'mavenPatchVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
-                  # $snapshot_suffix = if ($Env:BRANCH_NAME.StartsWith('refs/tags/v')) { '' } else { '-SNAPSHOT' }
+                  $snapshot_suffix = if ($Env:BRANCH_NAME.StartsWith('refs/tags/v')) { '' } else { '-SNAPSHOT' }
                   $version = "$major.$minor.$patch$snapshot_suffix"
                   echo "Current version is $version"
                   echo "##vso[task.setvariable variable=PACKAGE_VERSION;]$version"
@@ -112,7 +112,7 @@ extends:
                   targetPath: "$(PACKAGE_PATH)"
 
       - stage: deploy
-        # condition: and(or(contains(variables['build.sourceBranch'], 'refs/tags/v'), eq(variables['build.sourceBranch'], '${{ parameters.previewBranch }}')), succeeded())
+        condition: and(or(contains(variables['build.sourceBranch'], 'refs/tags/v'), eq(variables['build.sourceBranch'], '${{ parameters.previewBranch }}')), succeeded())
         dependsOn: build
         jobs:
           - deployment: deploy_github
@@ -192,7 +192,7 @@ extends:
             
           - deployment: deploy_maven
             # snapshots are not supported by ESRP release for now, but they are planning to add support. When it happens, simply remove the condition
-            # condition: and(contains(variables['build.sourceBranch'], 'refs/tags/v'), succeeded())
+            condition: and(contains(variables['build.sourceBranch'], 'refs/tags/v'), succeeded())
             pool:
               name: Azure-Pipelines-1ESPT-ExDShared
               os: linux
