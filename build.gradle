@@ -12,8 +12,6 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'signing'
-    // TODO remove this dependency once we remove the GH WF
-    id 'io.github.gradle-nexus.publish-plugin' version '2.0.0'
 }
 
 java {
@@ -85,20 +83,6 @@ publishing {
         maven {
             name = "ADO"
             url = layout.buildDirectory.dir("publishing-repository")
-        }
-    }
-}
-
-// TODO remove this configuration once we remove the GH WF
-nexusPublishing {
-    repositories {
-        sonatype {
-            if (project.rootProject.file('local.properties').exists()) {
-                Properties properties = new Properties()
-                properties.load(project.rootProject.file('local.properties').newDataInputStream())
-                username = properties.getProperty('sonatypeUsername')
-                password = properties.getProperty('sonatypePassword')
-            }
         }
     }
 }
