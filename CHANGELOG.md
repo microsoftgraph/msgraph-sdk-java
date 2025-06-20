@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.42.1](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.42.0...v6.42.1) (2025-06-20)
+
+
+### Bug Fixes
+
+* branch name for the CI ([a13ce43](https://github.com/microsoftgraph/msgraph-sdk-java/commit/a13ce43d5dc1d00ea4471d0487a21fe45a641f5c))
+* sanity release due to pipeline migration ([a0e3ad1](https://github.com/microsoftgraph/msgraph-sdk-java/commit/a0e3ad1b45e04a867a3ee47e743bcb2a7603443b))
+
 ## [6.42.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.41.0...v6.42.0) (2025-06-18)
 
 
