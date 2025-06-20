@@ -43,7 +43,6 @@ extends:
             #TODO maybe missing template context with sdl baselines?
             steps:
               - checkout: self
-                persistCredentials: true
 
               - task: JavaToolInstaller@1
                 inputs:
