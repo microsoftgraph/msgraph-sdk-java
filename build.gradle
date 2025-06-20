@@ -12,6 +12,7 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'signing'
+    // TODO remove this dependency once we remove the GH WF
     id 'io.github.gradle-nexus.publish-plugin' version '2.0.0'
 }
 
@@ -79,8 +80,16 @@ publishing {
         	}
 		}
     }
+
+    repositories {
+        maven {
+            name = "ADO"
+            url = layout.buildDirectory.dir("publishing-repository")
+        }
+    }
 }
 
+// TODO remove this configuration once we remove the GH WF
 nexusPublishing {
     repositories {
         sonatype {
