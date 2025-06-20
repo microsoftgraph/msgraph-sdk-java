@@ -4,14 +4,13 @@ param(
   [Parameter(Mandatory=$true)][string] $Version,
   [Parameter(Mandatory=$true)][string] $OutputDirectory,
   [Parameter()][string] $GroupId = "com.microsoft.graph",
-  [Parameter()][string] $ComponentsSegment = "..\components",
   [Parameter()][string] $buildOutDir = "build\publishing-repository"
 )
 
 #build\publishing-repository\com\microsoft\kiota\microsoft-kiota-bundle\1.8.5\
 
 $groupIdPath = $GroupId -replace "\.", [System.IO.Path]::DirectorySeparatorChar
-$packageFullPath = Join-Path -Path $PSScriptRoot -ChildPath $buildOutDir -AdditionalChildPath $groupIdPath, $ArtifactId, $Version
+$packageFullPath = Join-Path -Path $PSScriptRoot -ChildPath ".." -AdditionalChildPath $buildOutDir, $groupIdPath, $ArtifactId, $Version
 
 Write-Output "---------------------------------------------------"
 Write-Output "Zipping package contents at $packageFullPath"
