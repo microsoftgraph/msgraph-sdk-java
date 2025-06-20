@@ -100,7 +100,7 @@ extends:
                 displayName: Inspect contents of local Maven cache
 
               - pwsh: |
-                  .\scripts\zipPackageContent.ps1 -OutputDirectory $Env:OUTPUT_DIRECTORY -ArtifactId microsoft-graph -PackageSegment abstractions -Version $(PACKAGE_VERSION)
+                  .\scripts\zipPackageContent.ps1 -OutputDirectory $Env:OUTPUT_DIRECTORY -ArtifactId microsoft-graph -Version $(PACKAGE_VERSION)
                   echo "list of zips:"
                   Get-ChildItem -Path $Env:OUTPUT_DIRECTORY -Filter "*.zip" | ForEach-Object { Write-Host $_.FullName }
                 displayName: Zip contents of local Maven cache
