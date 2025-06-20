@@ -100,18 +100,16 @@ extends:
                 displayName: Inspect contents of local Maven cache
 
               - pwsh: |
-                  .\scripts\zipPackageContent.ps1 -OutputDirectory $Env:OUTPUT_DIRECTORY -ArtifactId microsoft-graph -Version $(PACKAGE_VERSION)
-                  echo "list of zips:"
-                  Get-ChildItem -Path $Env:OUTPUT_DIRECTORY -Filter "*.zip" | ForEach-Object { Write-Host $_.FullName }
-                displayName: Zip contents of local Maven cache
-                env:
-                  OUTPUT_DIRECTORY: $(Build.ArtifactStagingDirectory)
+                  $packageFullPath = Join-Path -Path "./" -ChildPath "build/publishing-repository/com/microsoft/graph/microsoft-graph" -AdditionalChildPath "$(PACKAGE_VERSION)"
+                  echo "Package full path: $packageFullPath"
+                  echo "##vso[task.setvariable variable=PACKAGE_PATH;]$packageFullPath"
+                displayName: Get the package full path
               
               - task: 1ES.PublishPipelineArtifact@1
                 displayName: "Publish Artifact: jars"
                 inputs:
                   artifactName: jars
-                  targetPath: "$(Build.ArtifactStagingDirectory)"
+                  targetPath: "$(PACKAGE_PATH)"
 
       - stage: deploy
         # condition: and(or(contains(variables['build.sourceBranch'], 'refs/tags/v'), eq(variables['build.sourceBranch'], '${{ parameters.previewBranch }}')), succeeded())
@@ -136,7 +134,7 @@ extends:
                 deploy:
                   steps:
                     - pwsh: |
-                        $zips = Get-ChildItem -Path "$(Pipeline.Workspace)" -Filter "*.zip"
+                        $zips = Get-ChildItem -Path "$(Pipeline.Workspace)" -Filter "*.jar"
                         $zip = $zips | Select-Object -First 1
                         $zipName = $zip.Name
                         if ($zipName -match "\d+.\d+.\d+")
@@ -147,18 +145,9 @@ extends:
                         }
                         else
                         {
-                          Write-Error "No valid version found in zip file name."
+                          Write-Error "No valid version found in jar file name."
                           exit 1
                         }
-
-                    - pwsh: |
-                        $zips = Get-ChildItem -Path "$(Pipeline.Workspace)" -Filter "*.zip"
-                        foreach ($zip in $zips) {
-                            $targetPath = $zip.FullName.Replace(".zip", "")
-                            Expand-Archive -Path $zip.FullName -DestinationPath $targetPath
-                            Remove-Item -Path $zip.FullName -Force
-                        }
-                      displayName: Unzip artifacts
                         
                     - task: GitHubRelease@1
                       inputs:
