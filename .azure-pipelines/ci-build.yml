@@ -93,7 +93,7 @@ extends:
                 displayName: Get current version
                 name: GetVersion
                 env:
-                  BRANCH_NAME: $(Build.SourceBranchName)
+                  BRANCH_NAME: $(Build.SourceBranch)
 
               - pwsh: |
                   .\scripts\validatePackageContents.ps1 -ArtifactId microsoft-graph -Version $(PACKAGE_VERSION) -ValidateMavenMetadata $false
