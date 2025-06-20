@@ -83,9 +83,9 @@ extends:
 
               - pwsh: |
                   $contents = Get-Content gradle.properties -Raw
-                  $major = $contents | Select-String -Pattern 'mavenMajorVersion = ([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
-                  $minor = $contents | Select-String -Pattern 'mavenMinorVersion = ([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
-                  $patch = $contents | Select-String -Pattern 'mavenPatchVersion = ([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
+                  $major = $contents | Select-String -Pattern 'mavenMajorVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
+                  $minor = $contents | Select-String -Pattern 'mavenMinorVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
+                  $patch = $contents | Select-String -Pattern 'mavenPatchVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
                   # $snapshot_suffix = if ($Env:BRANCH_NAME.StartsWith('refs/tags/v')) { '' } else { '-SNAPSHOT' }
                   $version = "$major.$minor.$patch$snapshot_suffix"
                   echo "Current version is $version"
