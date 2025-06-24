@@ -55,7 +55,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return this.backingStore.get("policyId");
     }
     /**
-     * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it&apos;s the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it&apos;s either member or owner. Supports $filter (eq).
+     * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it&apos;s the identifier of the role definition object where the policy applies. For PIM for Groups membership and ownership, it&apos;s either member or owner. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return this.backingStore.get("roleDefinitionId");
     }
     /**
-     * Gets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
+     * Gets the scopeId property value. The identifier of the scope where the policy is assigned. Can be / for the tenant or a group ID. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -106,14 +106,14 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         this.backingStore.set("policyId", value);
     }
     /**
-     * Sets the roleDefinitionId property value. For Microsoft Entra roles policy, it&apos;s the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it&apos;s either member or owner. Supports $filter (eq).
+     * Sets the roleDefinitionId property value. For Microsoft Entra roles policy, it&apos;s the identifier of the role definition object where the policy applies. For PIM for Groups membership and ownership, it&apos;s either member or owner. Supports $filter (eq).
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("roleDefinitionId", value);
     }
     /**
-     * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
+     * Sets the scopeId property value. The identifier of the scope where the policy is assigned. Can be / for the tenant or a group ID. Required.
      * @param value Value to set for the scopeId property.
      */
     public void setScopeId(@jakarta.annotation.Nullable final String value) {
