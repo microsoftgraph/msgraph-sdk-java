@@ -46,7 +46,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/group/eligibilitySchedules/{privilegedAccessGroupEligibilitySchedule%2Did}/group{?%24expand,%24select}", rawUrl);
     }
     /**
-     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -55,7 +55,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -68,7 +68,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
-     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +98,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return new GroupRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

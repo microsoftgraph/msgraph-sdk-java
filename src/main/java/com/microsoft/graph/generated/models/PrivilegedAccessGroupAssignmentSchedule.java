@@ -34,7 +34,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
         return this.backingStore.get("accessId");
     }
     /**
-     * Gets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it&apos;s null. Supports $expand.
+     * Gets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for Groups, this object represents the eligibility relationship. Otherwise, it&apos;s null. Supports $expand.
      * @return a {@link PrivilegedAccessGroupEligibilitySchedule}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
         return deserializerMap;
     }
     /**
-     * Gets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
+     * Gets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for Groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @return a {@link Group}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
         return this.backingStore.get("group");
     }
     /**
-     * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required. Supports $filter (eq).
+     * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for Groups. Required. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
         return this.backingStore.get("principal");
     }
     /**
-     * Gets the principalId property value. The identifier of the principal whose membership or ownership assignment is granted through PIM for groups. Required. Supports $filter (eq).
+     * Gets the principalId property value. The identifier of the principal whose membership or ownership assignment is granted through PIM for Groups. Required. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
         this.backingStore.set("accessId", value);
     }
     /**
-     * Sets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it&apos;s null. Supports $expand.
+     * Sets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for Groups, this object represents the eligibility relationship. Otherwise, it&apos;s null. Supports $expand.
      * @param value Value to set for the activatedUsing property.
      */
     public void setActivatedUsing(@jakarta.annotation.Nullable final PrivilegedAccessGroupEligibilitySchedule value) {
@@ -144,14 +144,14 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
         this.backingStore.set("assignmentType", value);
     }
     /**
-     * Sets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
+     * Sets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for Groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
         this.backingStore.set("group", value);
     }
     /**
-     * Sets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required. Supports $filter (eq).
+     * Sets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for Groups. Required. Supports $filter (eq).
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
@@ -172,7 +172,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
         this.backingStore.set("principal", value);
     }
     /**
-     * Sets the principalId property value. The identifier of the principal whose membership or ownership assignment is granted through PIM for groups. Required. Supports $filter (eq).
+     * Sets the principalId property value. The identifier of the principal whose membership or ownership assignment is granted through PIM for Groups. Required. Supports $filter (eq).
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
