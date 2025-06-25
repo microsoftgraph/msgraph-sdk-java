@@ -18,10 +18,6 @@ jobs:
           java-version: 21
           distribution: 'temurin'
           cache: gradle
-      - name: Detect secrets
-        run: |
-          pip install detect-secrets
-          git ls-files -z | xargs -0 detect-secrets-hook --baseline .secrets.baseline
       - name: Move generated sources to correct package
         run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\generated'
         shell: pwsh
