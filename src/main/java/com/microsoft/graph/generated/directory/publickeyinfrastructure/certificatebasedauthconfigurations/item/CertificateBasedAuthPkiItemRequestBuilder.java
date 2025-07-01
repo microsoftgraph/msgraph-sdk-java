@@ -55,16 +55,18 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/directory/publicKeyInfrastructure/certificateBasedAuthConfigurations/{certificateBasedAuthPki%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property certificateBasedAuthConfigurations for directory
+     * Delete a certificateBasedAuthPki object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/publickeyinfrastructureroot-delete-certificatebasedauthconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property certificateBasedAuthConfigurations for directory
+     * Delete a certificateBasedAuthPki object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/publickeyinfrastructureroot-delete-certificatebasedauthconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -73,19 +75,21 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Read the properties and relationships of a certificateBasedAuthPki object.
      * @return a {@link CertificateBasedAuthPki}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthpki-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthPki get() {
         return get(null);
     }
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Read the properties and relationships of a certificateBasedAuthPki object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateBasedAuthPki}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthpki-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthPki get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,21 +99,23 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedAuthPki::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property certificateBasedAuthConfigurations in directory
+     * Update the properties of a certificateBasedAuthPki object.
      * @param body The request body
      * @return a {@link CertificateBasedAuthPki}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthpki-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthPki patch(@jakarta.annotation.Nonnull final CertificateBasedAuthPki body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property certificateBasedAuthConfigurations in directory
+     * Update the properties of a certificateBasedAuthPki object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateBasedAuthPki}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthpki-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedAuthPki patch(@jakarta.annotation.Nonnull final CertificateBasedAuthPki body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -120,7 +126,7 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedAuthPki::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property certificateBasedAuthConfigurations for directory
+     * Delete a certificateBasedAuthPki object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +134,7 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property certificateBasedAuthConfigurations for directory
+     * Delete a certificateBasedAuthPki object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +146,7 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Read the properties and relationships of a certificateBasedAuthPki object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +154,7 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Read the properties and relationships of a certificateBasedAuthPki object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property certificateBasedAuthConfigurations in directory
+     * Update the properties of a certificateBasedAuthPki object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -169,7 +175,7 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property certificateBasedAuthConfigurations in directory
+     * Update the properties of a certificateBasedAuthPki object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -200,7 +206,7 @@ public class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Read the properties and relationships of a certificateBasedAuthPki object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

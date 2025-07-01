@@ -315,7 +315,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("isAssignableToRole");
     }
     /**
-     * Gets the isManagementRestricted property value. The isManagementRestricted property
+     * Gets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Returned only on $select.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -909,7 +909,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("isAssignableToRole", value);
     }
     /**
-     * Sets the isManagementRestricted property value. The isManagementRestricted property
+     * Sets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Returned only on $select.
      * @param value Value to set for the isManagementRestricted property.
      */
     public void setIsManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {

@@ -37,16 +37,18 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/directory/publicKeyInfrastructure/certificateBasedAuthConfigurations/{certificateBasedAuthPki%2Did}/certificateAuthorities/{certificateAuthorityDetail%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property certificateAuthorities for directory
+     * Delete a certificateAuthorityDetail object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthpki-delete-certificateauthorities?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property certificateAuthorities for directory
+     * Delete a certificateAuthorityDetail object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedauthpki-delete-certificateauthorities?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +57,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get certificateAuthorities from directory
+     * The collection of certificate authorities contained in this public key infrastructure resource.
      * @return a {@link CertificateAuthorityDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +66,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Get certificateAuthorities from directory
+     * The collection of certificate authorities contained in this public key infrastructure resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateAuthorityDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,21 +79,23 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateAuthorityDetail::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property certificateAuthorities in directory
+     * Update certificateAuthorityDetail
      * @param body The request body
      * @return a {@link CertificateAuthorityDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritydetail-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityDetail patch(@jakarta.annotation.Nonnull final CertificateAuthorityDetail body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property certificateAuthorities in directory
+     * Update certificateAuthorityDetail
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateAuthorityDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritydetail-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityDetail patch(@jakarta.annotation.Nonnull final CertificateAuthorityDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateAuthorityDetail::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property certificateAuthorities for directory
+     * Delete a certificateAuthorityDetail object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property certificateAuthorities for directory
+     * Delete a certificateAuthorityDetail object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get certificateAuthorities from directory
+     * The collection of certificate authorities contained in this public key infrastructure resource.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get certificateAuthorities from directory
+     * The collection of certificate authorities contained in this public key infrastructure resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the navigation property certificateAuthorities in directory
+     * Update certificateAuthorityDetail
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property certificateAuthorities in directory
+     * Update certificateAuthorityDetail
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get certificateAuthorities from directory
+     * The collection of certificate authorities contained in this public key infrastructure resource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

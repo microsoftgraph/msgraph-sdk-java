@@ -3,6 +3,7 @@ package com.microsoft.graph.reports.partners.billing.reconciliation;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.partners.billing.BillingReconciliation;
 import com.microsoft.graph.reports.partners.billing.reconciliation.billed.BilledRequestBuilder;
+import com.microsoft.graph.reports.partners.billing.reconciliation.unbilled.UnbilledRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class ReconciliationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BilledRequestBuilder billed() {
         return new BilledRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the unbilled property of the microsoft.graph.partners.billing.billingReconciliation entity.
+     * @return a {@link UnbilledRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnbilledRequestBuilder unbilled() {
+        return new UnbilledRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ReconciliationRequestBuilder} and sets the default values.

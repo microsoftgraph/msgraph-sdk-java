@@ -25,7 +25,7 @@ public class PublicKeyInfrastructureRoot extends Entity implements Parsable {
         return new PublicKeyInfrastructureRoot();
     }
     /**
-     * Gets the certificateBasedAuthConfigurations property value. The certificateBasedAuthConfigurations property
+     * Gets the certificateBasedAuthConfigurations property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users.
      * @return a {@link java.util.List<CertificateBasedAuthPki>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class PublicKeyInfrastructureRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("certificateBasedAuthConfigurations", this.getCertificateBasedAuthConfigurations());
     }
     /**
-     * Sets the certificateBasedAuthConfigurations property value. The certificateBasedAuthConfigurations property
+     * Sets the certificateBasedAuthConfigurations property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users.
      * @param value Value to set for the certificateBasedAuthConfigurations property.
      */
     public void setCertificateBasedAuthConfigurations(@jakarta.annotation.Nullable final java.util.List<CertificateBasedAuthPki> value) {

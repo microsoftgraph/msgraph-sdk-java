@@ -69,7 +69,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
+     * Gets the isMemberManagementRestricted property value. true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. If not set, the default value is null and the default behavior is false. Use this property to define administrative units with roles that don&apos;t inherit from tenant-level administrators, and where the management of individual member objects is limited to administrators scoped to a restricted management administrative unit. This property is immutable and can&apos;t be changed later.  For more information on how to work with restricted management administrative units, see Restricted management administrative units in Microsoft Entra ID.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this.backingStore.set("extensions", value);
     }
     /**
-     * Sets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
+     * Sets the isMemberManagementRestricted property value. true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. If not set, the default value is null and the default behavior is false. Use this property to define administrative units with roles that don&apos;t inherit from tenant-level administrators, and where the management of individual member objects is limited to administrators scoped to a restricted management administrative unit. This property is immutable and can&apos;t be changed later.  For more information on how to work with restricted management administrative units, see Restricted management administrative units in Microsoft Entra ID.
      * @param value Value to set for the isMemberManagementRestricted property.
      */
     public void setIsMemberManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {

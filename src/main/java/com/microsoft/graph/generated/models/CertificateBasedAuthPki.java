@@ -27,7 +27,7 @@ public class CertificateBasedAuthPki extends DirectoryObject implements Parsable
         return new CertificateBasedAuthPki();
     }
     /**
-     * Gets the certificateAuthorities property value. The certificateAuthorities property
+     * Gets the certificateAuthorities property value. The collection of certificate authorities contained in this public key infrastructure resource.
      * @return a {@link java.util.List<CertificateAuthorityDetail>}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class CertificateBasedAuthPki extends DirectoryObject implements Parsable
         return this.backingStore.get("certificateAuthorities");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the object. Maximum length is 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class CertificateBasedAuthPki extends DirectoryObject implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the object was created or last modified.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class CertificateBasedAuthPki extends DirectoryObject implements Parsable
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of any asynchronous jobs runs on the object which can be upload or delete.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class CertificateBasedAuthPki extends DirectoryObject implements Parsable
         return this.backingStore.get("status");
     }
     /**
-     * Gets the statusDetails property value. The statusDetails property
+     * Gets the statusDetails property value. The status details of the upload/deleted operation of PKI (Public Key Infrastructure).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,35 +94,35 @@ public class CertificateBasedAuthPki extends DirectoryObject implements Parsable
         writer.writeStringValue("statusDetails", this.getStatusDetails());
     }
     /**
-     * Sets the certificateAuthorities property value. The certificateAuthorities property
+     * Sets the certificateAuthorities property value. The collection of certificate authorities contained in this public key infrastructure resource.
      * @param value Value to set for the certificateAuthorities property.
      */
     public void setCertificateAuthorities(@jakarta.annotation.Nullable final java.util.List<CertificateAuthorityDetail> value) {
         this.backingStore.set("certificateAuthorities", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the object. Maximum length is 256 characters.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the object was created or last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of any asynchronous jobs runs on the object which can be upload or delete.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the statusDetails property value. The statusDetails property
+     * Sets the statusDetails property value. The status details of the upload/deleted operation of PKI (Public Key Infrastructure).
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final String value) {
