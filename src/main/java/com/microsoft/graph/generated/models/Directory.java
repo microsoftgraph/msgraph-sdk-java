@@ -99,7 +99,7 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("onPremisesSynchronization");
     }
     /**
-     * Gets the publicKeyInfrastructure property value. The publicKeyInfrastructure property
+     * Gets the publicKeyInfrastructure property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      * @return a {@link PublicKeyInfrastructureRoot}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("onPremisesSynchronization", value);
     }
     /**
-     * Sets the publicKeyInfrastructure property value. The publicKeyInfrastructure property
+     * Sets the publicKeyInfrastructure property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      * @param value Value to set for the publicKeyInfrastructure property.
      */
     public void setPublicKeyInfrastructure(@jakarta.annotation.Nullable final PublicKeyInfrastructureRoot value) {

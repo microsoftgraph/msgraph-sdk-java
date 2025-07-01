@@ -27,7 +27,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return new CertificateAuthorityDetail();
     }
     /**
-     * Gets the certificate property value. The certificate property
+     * Gets the certificate property value. The public key of the certificate authority.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("certificate");
     }
     /**
-     * Gets the certificateAuthorityType property value. The certificateAuthorityType property
+     * Gets the certificateAuthorityType property value. The type of certificate authority. The possible values are: root, intermediate, unknownFutureValue. Supports $filter (eq).
      * @return a {@link CertificateAuthorityType}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("certificateAuthorityType");
     }
     /**
-     * Gets the certificateRevocationListUrl property value. The certificateRevocationListUrl property
+     * Gets the certificateRevocationListUrl property value. The URL to check if the certificate is revoked.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("certificateRevocationListUrl");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the certificate authority was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("deltaCertificateRevocationListUrl");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the certificate authority.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time when the certificate authority expires. Supports $filter (eq) and $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the isIssuerHintEnabled property value. The isIssuerHintEnabled property
+     * Gets the isIssuerHintEnabled property value. Indicates whether the certificate picker presents the certificate authority to the user to use for authentication. Default value is false. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("isIssuerHintEnabled");
     }
     /**
-     * Gets the issuer property value. The issuer property
+     * Gets the issuer property value. The issuer of the certificate authority.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("issuer");
     }
     /**
-     * Gets the issuerSubjectKeyIdentifier property value. The issuerSubjectKeyIdentifier property
+     * Gets the issuerSubjectKeyIdentifier property value. The subject key identifier of certificate authority.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("issuerSubjectKeyIdentifier");
     }
     /**
-     * Gets the thumbprint property value. The thumbprint property
+     * Gets the thumbprint property value. The thumbprint of certificate authority certificate. Supports $filter (eq, startswith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -154,28 +154,28 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         writer.writeStringValue("thumbprint", this.getThumbprint());
     }
     /**
-     * Sets the certificate property value. The certificate property
+     * Sets the certificate property value. The public key of the certificate authority.
      * @param value Value to set for the certificate property.
      */
     public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("certificate", value);
     }
     /**
-     * Sets the certificateAuthorityType property value. The certificateAuthorityType property
+     * Sets the certificateAuthorityType property value. The type of certificate authority. The possible values are: root, intermediate, unknownFutureValue. Supports $filter (eq).
      * @param value Value to set for the certificateAuthorityType property.
      */
     public void setCertificateAuthorityType(@jakarta.annotation.Nullable final CertificateAuthorityType value) {
         this.backingStore.set("certificateAuthorityType", value);
     }
     /**
-     * Sets the certificateRevocationListUrl property value. The certificateRevocationListUrl property
+     * Sets the certificateRevocationListUrl property value. The URL to check if the certificate is revoked.
      * @param value Value to set for the certificateRevocationListUrl property.
      */
     public void setCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("certificateRevocationListUrl", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the certificate authority was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -189,42 +189,42 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         this.backingStore.set("deltaCertificateRevocationListUrl", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the certificate authority.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time when the certificate authority expires. Supports $filter (eq) and $orderby.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the isIssuerHintEnabled property value. The isIssuerHintEnabled property
+     * Sets the isIssuerHintEnabled property value. Indicates whether the certificate picker presents the certificate authority to the user to use for authentication. Default value is false. Optional.
      * @param value Value to set for the isIssuerHintEnabled property.
      */
     public void setIsIssuerHintEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isIssuerHintEnabled", value);
     }
     /**
-     * Sets the issuer property value. The issuer property
+     * Sets the issuer property value. The issuer of the certificate authority.
      * @param value Value to set for the issuer property.
      */
     public void setIssuer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("issuer", value);
     }
     /**
-     * Sets the issuerSubjectKeyIdentifier property value. The issuerSubjectKeyIdentifier property
+     * Sets the issuerSubjectKeyIdentifier property value. The subject key identifier of certificate authority.
      * @param value Value to set for the issuerSubjectKeyIdentifier property.
      */
     public void setIssuerSubjectKeyIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("issuerSubjectKeyIdentifier", value);
     }
     /**
-     * Sets the thumbprint property value. The thumbprint property
+     * Sets the thumbprint property value. The thumbprint of certificate authority certificate. Supports $filter (eq, startswith).
      * @param value Value to set for the thumbprint property.
      */
     public void setThumbprint(@jakarta.annotation.Nullable final String value) {

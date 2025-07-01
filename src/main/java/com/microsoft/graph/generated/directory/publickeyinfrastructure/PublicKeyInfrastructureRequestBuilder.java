@@ -64,7 +64,7 @@ public class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get publicKeyInfrastructure from directory
+     * The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      * @return a {@link PublicKeyInfrastructureRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get publicKeyInfrastructure from directory
+     * The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PublicKeyInfrastructureRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get publicKeyInfrastructure from directory
+     * The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get publicKeyInfrastructure from directory
+     * The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get publicKeyInfrastructure from directory
+     * The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

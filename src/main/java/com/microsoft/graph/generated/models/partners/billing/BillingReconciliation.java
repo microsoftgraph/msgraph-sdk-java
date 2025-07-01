@@ -41,7 +41,16 @@ public class BillingReconciliation extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("billed", (n) -> { this.setBilled(n.getObjectValue(BilledReconciliation::createFromDiscriminatorValue)); });
+        deserializerMap.put("unbilled", (n) -> { this.setUnbilled(n.getObjectValue(UnbilledReconciliation::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the unbilled property value. The unbilled property
+     * @return a {@link UnbilledReconciliation}
+     */
+    @jakarta.annotation.Nullable
+    public UnbilledReconciliation getUnbilled() {
+        return this.backingStore.get("unbilled");
     }
     /**
      * Serializes information the current object
@@ -51,6 +60,7 @@ public class BillingReconciliation extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("billed", this.getBilled());
+        writer.writeObjectValue("unbilled", this.getUnbilled());
     }
     /**
      * Sets the billed property value. The billed property
@@ -58,5 +68,12 @@ public class BillingReconciliation extends Entity implements Parsable {
      */
     public void setBilled(@jakarta.annotation.Nullable final BilledReconciliation value) {
         this.backingStore.set("billed", value);
+    }
+    /**
+     * Sets the unbilled property value. The unbilled property
+     * @param value Value to set for the unbilled property.
+     */
+    public void setUnbilled(@jakarta.annotation.Nullable final UnbilledReconciliation value) {
+        this.backingStore.set("unbilled", value);
     }
 }
