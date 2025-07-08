@@ -35,7 +35,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/contracts/getAvailableExtensionProperties", rawUrl);
     }
     /**
-     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
+     * Return all directory extension definitions that are registered in a directory, including through multitenant apps. The following entities support extension properties:
      * @param body The request body
      * @return a {@link GetAvailableExtensionPropertiesPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         return post(body, null);
     }
     /**
-     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
+     * Return all directory extension definitions that are registered in a directory, including through multitenant apps. The following entities support extension properties:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAvailableExtensionPropertiesPostResponse}
@@ -62,7 +62,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, GetAvailableExtensionPropertiesPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
+     * Return all directory extension definitions that are registered in a directory, including through multitenant apps. The following entities support extension properties:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -71,7 +71,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
+     * Return all directory extension definitions that are registered in a directory, including through multitenant apps. The following entities support extension properties:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

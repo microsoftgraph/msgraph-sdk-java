@@ -81,15 +81,24 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("activityType", (n) -> { this.setActivityType(n.getStringValue()); });
         deserializerMap.put("chainId", (n) -> { this.setChainId(n.getLongValue()); });
+        deserializerMap.put("iconId", (n) -> { this.setIconId(n.getStringValue()); });
         deserializerMap.put("previewText", (n) -> { this.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("recipient", (n) -> { this.setRecipient(n.getObjectValue(TeamworkNotificationRecipient::createFromDiscriminatorValue)); });
         deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
         deserializerMap.put("templateParameters", (n) -> { this.setTemplateParameters(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("topic", (n) -> { this.setTopic(n.getObjectValue(TeamworkActivityTopic::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the iconId property value. The iconId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getIconId() {
+        return this.backingStore.get("iconId");
     }
     /**
      * Gets the previewText property value. The previewText property
@@ -139,6 +148,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
         Objects.requireNonNull(writer);
         writer.writeStringValue("activityType", this.getActivityType());
         writer.writeLongValue("chainId", this.getChainId());
+        writer.writeStringValue("iconId", this.getIconId());
         writer.writeObjectValue("previewText", this.getPreviewText());
         writer.writeObjectValue("recipient", this.getRecipient());
         writer.writeStringValue("teamsAppId", this.getTeamsAppId());
@@ -174,6 +184,13 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      */
     public void setChainId(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("chainId", value);
+    }
+    /**
+     * Sets the iconId property value. The iconId property
+     * @param value Value to set for the iconId property.
+     */
+    public void setIconId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("iconId", value);
     }
     /**
      * Sets the previewText property value. The previewText property
