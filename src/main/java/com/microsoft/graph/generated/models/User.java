@@ -254,6 +254,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("customSecurityAttributes");
     }
     /**
+     * Gets the dataSecurityAndGovernance property value. The data security and governance settings for the user. Read-only. Nullable.
+     * @return a {@link UserDataSecurityAndGovernance}
+     */
+    @jakarta.annotation.Nullable
+    public UserDataSecurityAndGovernance getDataSecurityAndGovernance() {
+        return this.backingStore.get("dataSecurityAndGovernance");
+    }
+    /**
      * Gets the department property value. The name of the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
      * @return a {@link String}
      */
@@ -432,6 +440,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("createdObjects", (n) -> { this.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("creationType", (n) -> { this.setCreationType(n.getStringValue()); });
         deserializerMap.put("customSecurityAttributes", (n) -> { this.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSecurityAndGovernance", (n) -> { this.setDataSecurityAndGovernance(n.getObjectValue(UserDataSecurityAndGovernance::createFromDiscriminatorValue)); });
         deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
         deserializerMap.put("deviceEnrollmentLimit", (n) -> { this.setDeviceEnrollmentLimit(n.getIntegerValue()); });
         deserializerMap.put("deviceManagementTroubleshootingEvents", (n) -> { this.setDeviceManagementTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
@@ -1234,6 +1243,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("createdObjects", this.getCreatedObjects());
         writer.writeStringValue("creationType", this.getCreationType());
         writer.writeObjectValue("customSecurityAttributes", this.getCustomSecurityAttributes());
+        writer.writeObjectValue("dataSecurityAndGovernance", this.getDataSecurityAndGovernance());
         writer.writeStringValue("department", this.getDepartment());
         writer.writeIntegerValue("deviceEnrollmentLimit", this.getDeviceEnrollmentLimit());
         writer.writeCollectionOfObjectValues("deviceManagementTroubleshootingEvents", this.getDeviceManagementTroubleshootingEvents());
@@ -1531,6 +1541,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setCustomSecurityAttributes(@jakarta.annotation.Nullable final CustomSecurityAttributeValue value) {
         this.backingStore.set("customSecurityAttributes", value);
+    }
+    /**
+     * Sets the dataSecurityAndGovernance property value. The data security and governance settings for the user. Read-only. Nullable.
+     * @param value Value to set for the dataSecurityAndGovernance property.
+     */
+    public void setDataSecurityAndGovernance(@jakarta.annotation.Nullable final UserDataSecurityAndGovernance value) {
+        this.backingStore.set("dataSecurityAndGovernance", value);
     }
     /**
      * Sets the department property value. The name of the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, and eq on null values).

@@ -1,6 +1,9 @@
 package com.microsoft.graph.auditlogs.signins;
 
+import com.microsoft.graph.auditlogs.signins.confirmcompromised.ConfirmCompromisedRequestBuilder;
+import com.microsoft.graph.auditlogs.signins.confirmsafe.ConfirmSafeRequestBuilder;
 import com.microsoft.graph.auditlogs.signins.count.CountRequestBuilder;
+import com.microsoft.graph.auditlogs.signins.dismiss.DismissRequestBuilder;
 import com.microsoft.graph.auditlogs.signins.item.SignInItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SignIn;
@@ -24,12 +27,36 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the confirmCompromised method.
+     * @return a {@link ConfirmCompromisedRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfirmCompromisedRequestBuilder confirmCompromised() {
+        return new ConfirmCompromisedRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the confirmSafe method.
+     * @return a {@link ConfirmSafeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfirmSafeRequestBuilder confirmSafe() {
+        return new ConfirmSafeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the dismiss method.
+     * @return a {@link DismissRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DismissRequestBuilder dismiss() {
+        return new DismissRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.

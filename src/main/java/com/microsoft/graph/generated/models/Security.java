@@ -65,6 +65,14 @@ public class Security extends Entity implements Parsable {
         return this.backingStore.get("cases");
     }
     /**
+     * Gets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
+     * @return a {@link TenantDataSecurityAndGovernance}
+     */
+    @jakarta.annotation.Nullable
+    public TenantDataSecurityAndGovernance getDataSecurityAndGovernance() {
+        return this.backingStore.get("dataSecurityAndGovernance");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -75,6 +83,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSecurityAndGovernance", (n) -> { this.setDataSecurityAndGovernance(n.getObjectValue(TenantDataSecurityAndGovernance::createFromDiscriminatorValue)); });
         deserializerMap.put("identities", (n) -> { this.setIdentities(n.getObjectValue(IdentityContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
         deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
@@ -169,6 +178,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("alerts_v2", this.getAlertsV2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
         writer.writeObjectValue("cases", this.getCases());
+        writer.writeObjectValue("dataSecurityAndGovernance", this.getDataSecurityAndGovernance());
         writer.writeObjectValue("identities", this.getIdentities());
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeObjectValue("labels", this.getLabels());
@@ -206,6 +216,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setCases(@jakarta.annotation.Nullable final CasesRoot value) {
         this.backingStore.set("cases", value);
+    }
+    /**
+     * Sets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
+     * @param value Value to set for the dataSecurityAndGovernance property.
+     */
+    public void setDataSecurityAndGovernance(@jakarta.annotation.Nullable final TenantDataSecurityAndGovernance value) {
+        this.backingStore.set("dataSecurityAndGovernance", value);
     }
     /**
      * Sets the identities property value. A container for security identities APIs.
