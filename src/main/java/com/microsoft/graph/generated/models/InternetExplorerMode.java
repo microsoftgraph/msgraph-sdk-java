@@ -31,16 +31,7 @@ public class InternetExplorerMode extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("siteLists", (n) -> { this.setSiteLists(n.getCollectionOfObjectValues(BrowserSiteList::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the siteLists property value. A collection of site lists to support Internet Explorer mode.
-     * @return a {@link java.util.List<BrowserSiteList>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<BrowserSiteList> getSiteLists() {
-        return this.backingStore.get("siteLists");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class InternetExplorerMode extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("siteLists", this.getSiteLists());
-    }
-    /**
-     * Sets the siteLists property value. A collection of site lists to support Internet Explorer mode.
-     * @param value Value to set for the siteLists property.
-     */
-    public void setSiteLists(@jakarta.annotation.Nullable final java.util.List<BrowserSiteList> value) {
-        this.backingStore.set("siteLists", value);
     }
 }

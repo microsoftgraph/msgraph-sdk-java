@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -41,6 +42,8 @@ public class LabelContentRight extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cid", (n) -> { this.setCid(n.getStringValue()); });
         deserializerMap.put("format", (n) -> { this.setFormat(n.getStringValue()); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getObjectValue(SensitivityLabel::createFromDiscriminatorValue)); });
+        deserializerMap.put("rights", (n) -> { this.setRights(n.getEnumSetValue(UsageRights::forValue)); });
         return deserializerMap;
     }
     /**
@@ -52,6 +55,22 @@ public class LabelContentRight extends Entity implements Parsable {
         return this.backingStore.get("format");
     }
     /**
+     * Gets the label property value. The label property
+     * @return a {@link SensitivityLabel}
+     */
+    @jakarta.annotation.Nullable
+    public SensitivityLabel getLabel() {
+        return this.backingStore.get("label");
+    }
+    /**
+     * Gets the rights property value. The rights property
+     * @return a {@link EnumSet<UsageRights>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<UsageRights> getRights() {
+        return this.backingStore.get("rights");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -60,6 +79,8 @@ public class LabelContentRight extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("cid", this.getCid());
         writer.writeStringValue("format", this.getFormat());
+        writer.writeObjectValue("label", this.getLabel());
+        writer.writeEnumSetValue("rights", this.getRights());
     }
     /**
      * Sets the cid property value. The content identifier.
@@ -74,5 +95,19 @@ public class LabelContentRight extends Entity implements Parsable {
      */
     public void setFormat(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("format", value);
+    }
+    /**
+     * Sets the label property value. The label property
+     * @param value Value to set for the label property.
+     */
+    public void setLabel(@jakarta.annotation.Nullable final SensitivityLabel value) {
+        this.backingStore.set("label", value);
+    }
+    /**
+     * Sets the rights property value. The rights property
+     * @param value Value to set for the rights property.
+     */
+    public void setRights(@jakarta.annotation.Nullable final EnumSet<UsageRights> value) {
+        this.backingStore.set("rights", value);
     }
 }

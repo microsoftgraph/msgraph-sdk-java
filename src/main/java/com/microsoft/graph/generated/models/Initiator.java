@@ -13,7 +13,6 @@ public class Initiator extends Identity implements Parsable {
      */
     public Initiator() {
         super();
-        this.setOdataType("#microsoft.graph.initiator");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,16 +31,7 @@ public class Initiator extends Identity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("initiatorType", (n) -> { this.setInitiatorType(n.getEnumValue(InitiatorType::forValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
-     * @return a {@link InitiatorType}
-     */
-    @jakarta.annotation.Nullable
-    public InitiatorType getInitiatorType() {
-        return this.backingStore.get("initiatorType");
     }
     /**
      * Serializes information the current object
@@ -50,13 +40,5 @@ public class Initiator extends Identity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("initiatorType", this.getInitiatorType());
-    }
-    /**
-     * Sets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
-     * @param value Value to set for the initiatorType property.
-     */
-    public void setInitiatorType(@jakarta.annotation.Nullable final InitiatorType value) {
-        this.backingStore.set("initiatorType", value);
     }
 }

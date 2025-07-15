@@ -13,7 +13,6 @@ public class UserIdentity extends Identity implements Parsable {
      */
     public UserIdentity() {
         super();
-        this.setOdataType("#microsoft.graph.userIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,25 +31,7 @@ public class UserIdentity extends Identity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
-        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the ipAddress property value. Indicates the client IP address associated with the user performing the activity (audit log only).
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getIpAddress() {
-        return this.backingStore.get("ipAddress");
-    }
-    /**
-     * Gets the userPrincipalName property value. The userPrincipalName attribute of the user.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getUserPrincipalName() {
-        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -59,21 +40,5 @@ public class UserIdentity extends Identity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("ipAddress", this.getIpAddress());
-        writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
-    }
-    /**
-     * Sets the ipAddress property value. Indicates the client IP address associated with the user performing the activity (audit log only).
-     * @param value Value to set for the ipAddress property.
-     */
-    public void setIpAddress(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("ipAddress", value);
-    }
-    /**
-     * Sets the userPrincipalName property value. The userPrincipalName attribute of the user.
-     * @param value Value to set for the userPrincipalName property.
-     */
-    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("userPrincipalName", value);
     }
 }

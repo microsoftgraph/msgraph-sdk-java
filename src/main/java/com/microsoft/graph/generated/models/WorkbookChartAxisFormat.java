@@ -31,25 +31,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("font", (n) -> { this.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
-        deserializerMap.put("line", (n) -> { this.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
-     * @return a {@link WorkbookChartFont}
-     */
-    @jakarta.annotation.Nullable
-    public WorkbookChartFont getFont() {
-        return this.backingStore.get("font");
-    }
-    /**
-     * Gets the line property value. Represents chart line formatting. Read-only.
-     * @return a {@link WorkbookChartLineFormat}
-     */
-    @jakarta.annotation.Nullable
-    public WorkbookChartLineFormat getLine() {
-        return this.backingStore.get("line");
     }
     /**
      * Serializes information the current object
@@ -58,21 +40,5 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("font", this.getFont());
-        writer.writeObjectValue("line", this.getLine());
-    }
-    /**
-     * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
-     * @param value Value to set for the font property.
-     */
-    public void setFont(@jakarta.annotation.Nullable final WorkbookChartFont value) {
-        this.backingStore.set("font", value);
-    }
-    /**
-     * Sets the line property value. Represents chart line formatting. Read-only.
-     * @param value Value to set for the line property.
-     */
-    public void setLine(@jakarta.annotation.Nullable final WorkbookChartLineFormat value) {
-        this.backingStore.set("line", value);
     }
 }

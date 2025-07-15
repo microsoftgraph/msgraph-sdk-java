@@ -45,6 +45,9 @@ import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.Article;
 import com.microsoft.graph.models.security.ArticleIndicator;
 import com.microsoft.graph.models.security.Artifact;
+import com.microsoft.graph.models.security.AuditCoreRoot;
+import com.microsoft.graph.models.security.AuditLogQuery;
+import com.microsoft.graph.models.security.AuditLogRecord;
 import com.microsoft.graph.models.security.AuthorityTemplate;
 import com.microsoft.graph.models.security.CaseEscaped;
 import com.microsoft.graph.models.security.CaseOperation;
@@ -162,6 +165,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             final Entity createFromDiscriminatorValue_1_result = createFromDiscriminatorValue_1(mappingValue);
             if (createFromDiscriminatorValue_1_result != null) {
                 return createFromDiscriminatorValue_1_result;
+            }
+            final Entity createFromDiscriminatorValue_2_result = createFromDiscriminatorValue_2(mappingValue);
+            if (createFromDiscriminatorValue_2_result != null) {
+                return createFromDiscriminatorValue_2_result;
             }
         }
         return new Entity();
@@ -834,6 +841,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.article": return new Article();
             case "#microsoft.graph.security.articleIndicator": return new ArticleIndicator();
             case "#microsoft.graph.security.artifact": return new Artifact();
+            case "#microsoft.graph.security.auditCoreRoot": return new AuditCoreRoot();
+            case "#microsoft.graph.security.auditLogQuery": return new AuditLogQuery();
+            case "#microsoft.graph.security.auditLogRecord": return new AuditLogRecord();
             case "#microsoft.graph.security.authorityTemplate": return new AuthorityTemplate();
             case "#microsoft.graph.security.case": return new CaseEscaped();
             case "#microsoft.graph.security.caseOperation": return new CaseOperation();
@@ -906,6 +916,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.whoisRecord": return new WhoisRecord();
             case "#microsoft.graph.securityReportsRoot": return new SecurityReportsRoot();
             case "#microsoft.graph.sendDtmfTonesOperation": return new SendDtmfTonesOperation();
+            case "#microsoft.graph.sensitivityLabel": return new SensitivityLabel();
             case "#microsoft.graph.serviceAnnouncement": return new ServiceAnnouncement();
             case "#microsoft.graph.serviceAnnouncementAttachment": return new ServiceAnnouncementAttachment();
             case "#microsoft.graph.serviceAnnouncementBase": return new ServiceAnnouncementBase();
@@ -1181,6 +1192,17 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.workbookWorksheetProtection": return new WorkbookWorksheetProtection();
             case "#microsoft.graph.workforceIntegration": return new WorkforceIntegration();
             case "#microsoft.graph.workingTimeSchedule": return new WorkingTimeSchedule();
+        }
+        return null;
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param discriminatorValue Discriminator value from the payload
+     * @return a {@link Entity}
+     */
+    @jakarta.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
+        switch (discriminatorValue) {
             case "#microsoft.graph.x509CertificateAuthenticationMethodConfiguration": return new X509CertificateAuthenticationMethodConfiguration();
             case "#microsoft.graph.x509CertificateCombinationConfiguration": return new X509CertificateCombinationConfiguration();
         }

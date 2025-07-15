@@ -97,10 +97,10 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
-     * @return a {@link java.util.List<EntityType>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<EntityType> getEntityTypes() {
+    public java.util.List<String> getEntityTypes() {
         return this.backingStore.get("entityTypes");
     }
     /**
@@ -115,7 +115,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         deserializerMap.put("collapseProperties", (n) -> { this.setCollapseProperties(n.getCollectionOfObjectValues(CollapseProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("contentSources", (n) -> { this.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("enableTopResults", (n) -> { this.setEnableTopResults(n.getBooleanValue()); });
-        deserializerMap.put("entityTypes", (n) -> { this.setEntityTypes(n.getCollectionOfEnumValues(EntityType::forValue)); });
+        deserializerMap.put("entityTypes", (n) -> { this.setEntityTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("fields", (n) -> { this.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("from", (n) -> { this.setFrom(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -219,7 +219,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeCollectionOfObjectValues("collapseProperties", this.getCollapseProperties());
         writer.writeCollectionOfPrimitiveValues("contentSources", this.getContentSources());
         writer.writeBooleanValue("enableTopResults", this.getEnableTopResults());
-        writer.writeCollectionOfEnumValues("entityTypes", this.getEntityTypes());
+        writer.writeCollectionOfPrimitiveValues("entityTypes", this.getEntityTypes());
         writer.writeCollectionOfPrimitiveValues("fields", this.getFields());
         writer.writeIntegerValue("from", this.getFrom());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -286,7 +286,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
      * @param value Value to set for the entityTypes property.
      */
-    public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {
+    public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("entityTypes", value);
     }
     /**

@@ -39,7 +39,6 @@ public class GetOrderRequestBuilder extends BaseRequestBuilder {
      * Get the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @return a {@link AssignmentOrder}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-getorder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AssignmentOrder get() {
@@ -50,7 +49,6 @@ public class GetOrderRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AssignmentOrder}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-getorder?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AssignmentOrder get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

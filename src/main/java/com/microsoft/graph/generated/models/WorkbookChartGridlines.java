@@ -31,25 +31,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartGridlinesFormat::createFromDiscriminatorValue)); });
-        deserializerMap.put("visible", (n) -> { this.setVisible(n.getBooleanValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the format property value. Represents the formatting of chart gridlines. Read-only.
-     * @return a {@link WorkbookChartGridlinesFormat}
-     */
-    @jakarta.annotation.Nullable
-    public WorkbookChartGridlinesFormat getFormat() {
-        return this.backingStore.get("format");
-    }
-    /**
-     * Gets the visible property value. Indicates whether the axis gridlines are visible.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getVisible() {
-        return this.backingStore.get("visible");
     }
     /**
      * Serializes information the current object
@@ -58,21 +40,5 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("format", this.getFormat());
-        writer.writeBooleanValue("visible", this.getVisible());
-    }
-    /**
-     * Sets the format property value. Represents the formatting of chart gridlines. Read-only.
-     * @param value Value to set for the format property.
-     */
-    public void setFormat(@jakarta.annotation.Nullable final WorkbookChartGridlinesFormat value) {
-        this.backingStore.set("format", value);
-    }
-    /**
-     * Sets the visible property value. Indicates whether the axis gridlines are visible.
-     * @param value Value to set for the visible property.
-     */
-    public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("visible", value);
     }
 }

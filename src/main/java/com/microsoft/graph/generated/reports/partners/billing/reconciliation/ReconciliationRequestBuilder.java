@@ -73,7 +73,7 @@ public class ReconciliationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents details for billed invoice reconciliation data.
+     * Represents details for billed and unbilled invoice reconciliation data.
      * @return a {@link BillingReconciliation}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class ReconciliationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents details for billed invoice reconciliation data.
+     * Represents details for billed and unbilled invoice reconciliation data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BillingReconciliation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class ReconciliationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents details for billed invoice reconciliation data.
+     * Represents details for billed and unbilled invoice reconciliation data.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ReconciliationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents details for billed invoice reconciliation data.
+     * Represents details for billed and unbilled invoice reconciliation data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class ReconciliationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents details for billed invoice reconciliation data.
+     * Represents details for billed and unbilled invoice reconciliation data.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

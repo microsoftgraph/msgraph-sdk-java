@@ -107,7 +107,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("copiesPerJob", (n) -> { this.setCopiesPerJob(n.getIntegerValue()); });
         deserializerMap.put("dpi", (n) -> { this.setDpi(n.getIntegerValue()); });
         deserializerMap.put("duplexMode", (n) -> { this.setDuplexMode(n.getEnumValue(PrintDuplexMode::forValue)); });
-        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrintFinishing::forValue)); });
+        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("fitPdfToPage", (n) -> { this.setFitPdfToPage(n.getBooleanValue()); });
         deserializerMap.put("inputBin", (n) -> { this.setInputBin(n.getStringValue()); });
         deserializerMap.put("mediaColor", (n) -> { this.setMediaColor(n.getStringValue()); });
@@ -124,10 +124,10 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     * @return a {@link java.util.List<PrintFinishing>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintFinishing> getFinishings() {
+    public java.util.List<String> getFinishings() {
         return this.backingStore.get("finishings");
     }
     /**
@@ -237,7 +237,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
         writer.writeIntegerValue("copiesPerJob", this.getCopiesPerJob());
         writer.writeIntegerValue("dpi", this.getDpi());
         writer.writeEnumValue("duplexMode", this.getDuplexMode());
-        writer.writeCollectionOfEnumValues("finishings", this.getFinishings());
+        writer.writeCollectionOfPrimitiveValues("finishings", this.getFinishings());
         writer.writeBooleanValue("fitPdfToPage", this.getFitPdfToPage());
         writer.writeStringValue("inputBin", this.getInputBin());
         writer.writeStringValue("mediaColor", this.getMediaColor());
@@ -306,7 +306,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
      * @param value Value to set for the finishings property.
      */
-    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("finishings", value);
     }
     /**

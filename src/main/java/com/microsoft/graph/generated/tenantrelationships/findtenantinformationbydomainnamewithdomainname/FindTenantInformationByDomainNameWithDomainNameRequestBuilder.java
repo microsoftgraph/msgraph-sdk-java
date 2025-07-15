@@ -41,7 +41,6 @@ public class FindTenantInformationByDomainNameWithDomainNameRequestBuilder exten
      * Given a domain name, search for a tenant and read its tenantInformation. You can use this API to validate tenant information and use the tenantId to configure cross-tenant access settings between you and the tenant.
      * @return a {@link TenantInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-findtenantinformationbydomainname?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantInformation get() {
@@ -52,7 +51,6 @@ public class FindTenantInformationByDomainNameWithDomainNameRequestBuilder exten
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-findtenantinformationbydomainname?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantInformation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -39,7 +39,6 @@ public class UsersRegisteredByFeatureRequestBuilder extends BaseRequestBuilder {
      * Get the number of users capable of multi-factor authentication, self-service password reset, and passwordless authentication.
      * @return a {@link UserRegistrationFeatureSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodsroot-usersregisteredbyfeature?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserRegistrationFeatureSummary get() {
@@ -50,7 +49,6 @@ public class UsersRegisteredByFeatureRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserRegistrationFeatureSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodsroot-usersregisteredbyfeature?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserRegistrationFeatureSummary get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

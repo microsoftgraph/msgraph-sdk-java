@@ -31,43 +31,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartTitleFormat::createFromDiscriminatorValue)); });
-        deserializerMap.put("overlay", (n) -> { this.setOverlay(n.getBooleanValue()); });
-        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
-        deserializerMap.put("visible", (n) -> { this.setVisible(n.getBooleanValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the format property value. The formatting of a chart title, which includes fill and font formatting. Read-only.
-     * @return a {@link WorkbookChartTitleFormat}
-     */
-    @jakarta.annotation.Nullable
-    public WorkbookChartTitleFormat getFormat() {
-        return this.backingStore.get("format");
-    }
-    /**
-     * Gets the overlay property value. Indicates whether the chart title will overlay the chart or not.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getOverlay() {
-        return this.backingStore.get("overlay");
-    }
-    /**
-     * Gets the text property value. The title text of the chart.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getText() {
-        return this.backingStore.get("text");
-    }
-    /**
-     * Gets the visible property value. Indicates whether the chart title is visible.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getVisible() {
-        return this.backingStore.get("visible");
     }
     /**
      * Serializes information the current object
@@ -76,37 +40,5 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("format", this.getFormat());
-        writer.writeBooleanValue("overlay", this.getOverlay());
-        writer.writeStringValue("text", this.getText());
-        writer.writeBooleanValue("visible", this.getVisible());
-    }
-    /**
-     * Sets the format property value. The formatting of a chart title, which includes fill and font formatting. Read-only.
-     * @param value Value to set for the format property.
-     */
-    public void setFormat(@jakarta.annotation.Nullable final WorkbookChartTitleFormat value) {
-        this.backingStore.set("format", value);
-    }
-    /**
-     * Sets the overlay property value. Indicates whether the chart title will overlay the chart or not.
-     * @param value Value to set for the overlay property.
-     */
-    public void setOverlay(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("overlay", value);
-    }
-    /**
-     * Sets the text property value. The title text of the chart.
-     * @param value Value to set for the text property.
-     */
-    public void setText(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("text", value);
-    }
-    /**
-     * Sets the visible property value. Indicates whether the chart title is visible.
-     * @param value Value to set for the visible property.
-     */
-    public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("visible", value);
     }
 }

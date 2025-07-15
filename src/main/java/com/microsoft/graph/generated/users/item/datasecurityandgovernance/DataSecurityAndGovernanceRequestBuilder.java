@@ -5,6 +5,7 @@ import com.microsoft.graph.models.UserDataSecurityAndGovernance;
 import com.microsoft.graph.users.item.datasecurityandgovernance.activities.ActivitiesRequestBuilder;
 import com.microsoft.graph.users.item.datasecurityandgovernance.processcontent.ProcessContentRequestBuilder;
 import com.microsoft.graph.users.item.datasecurityandgovernance.protectionscopes.ProtectionScopesRequestBuilder;
+import com.microsoft.graph.users.item.datasecurityandgovernance.sensitivitylabels.SensitivityLabelsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -46,6 +47,14 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public ProtectionScopesRequestBuilder protectionScopes() {
         return new ProtectionScopesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sensitivityLabels property of the microsoft.graph.dataSecurityAndGovernance entity.
+     * @return a {@link SensitivityLabelsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SensitivityLabelsRequestBuilder sensitivityLabels() {
+        return new SensitivityLabelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link DataSecurityAndGovernanceRequestBuilder} and sets the default values.

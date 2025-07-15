@@ -31,25 +31,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("options", (n) -> { this.setOptions(n.getObjectValue(WorkbookWorksheetProtectionOptions::createFromDiscriminatorValue)); });
-        deserializerMap.put("protected", (n) -> { this.setProtected(n.getBooleanValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the options property value. Worksheet protection options. Read-only.
-     * @return a {@link WorkbookWorksheetProtectionOptions}
-     */
-    @jakarta.annotation.Nullable
-    public WorkbookWorksheetProtectionOptions getOptions() {
-        return this.backingStore.get("options");
-    }
-    /**
-     * Gets the protected property value. Indicates whether the worksheet is protected.  Read-only.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getProtected() {
-        return this.backingStore.get("protected");
     }
     /**
      * Serializes information the current object
@@ -58,21 +40,5 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("options", this.getOptions());
-        writer.writeBooleanValue("protected", this.getProtected());
-    }
-    /**
-     * Sets the options property value. Worksheet protection options. Read-only.
-     * @param value Value to set for the options property.
-     */
-    public void setOptions(@jakarta.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
-        this.backingStore.set("options", value);
-    }
-    /**
-     * Sets the protected property value. Indicates whether the worksheet is protected.  Read-only.
-     * @param value Value to set for the protected property.
-     */
-    public void setProtected(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("protected", value);
     }
 }

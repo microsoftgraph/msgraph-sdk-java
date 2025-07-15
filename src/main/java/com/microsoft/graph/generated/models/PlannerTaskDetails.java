@@ -25,49 +25,13 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         return new PlannerTaskDetails();
     }
     /**
-     * Gets the checklist property value. The collection of checklist items on the task.
-     * @return a {@link PlannerChecklistItems}
-     */
-    @jakarta.annotation.Nullable
-    public PlannerChecklistItems getChecklist() {
-        return this.backingStore.get("checklist");
-    }
-    /**
-     * Gets the description property value. Description of the task.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getDescription() {
-        return this.backingStore.get("description");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("checklist", (n) -> { this.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
-        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType::forValue)); });
-        deserializerMap.put("references", (n) -> { this.setReferences(n.getObjectValue(PlannerExternalReferences::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
-     * @return a {@link PlannerPreviewType}
-     */
-    @jakarta.annotation.Nullable
-    public PlannerPreviewType getPreviewType() {
-        return this.backingStore.get("previewType");
-    }
-    /**
-     * Gets the references property value. The collection of references on the task.
-     * @return a {@link PlannerExternalReferences}
-     */
-    @jakarta.annotation.Nullable
-    public PlannerExternalReferences getReferences() {
-        return this.backingStore.get("references");
     }
     /**
      * Serializes information the current object
@@ -76,37 +40,5 @@ public class PlannerTaskDetails extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("checklist", this.getChecklist());
-        writer.writeStringValue("description", this.getDescription());
-        writer.writeEnumValue("previewType", this.getPreviewType());
-        writer.writeObjectValue("references", this.getReferences());
-    }
-    /**
-     * Sets the checklist property value. The collection of checklist items on the task.
-     * @param value Value to set for the checklist property.
-     */
-    public void setChecklist(@jakarta.annotation.Nullable final PlannerChecklistItems value) {
-        this.backingStore.set("checklist", value);
-    }
-    /**
-     * Sets the description property value. Description of the task.
-     * @param value Value to set for the description property.
-     */
-    public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("description", value);
-    }
-    /**
-     * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
-     * @param value Value to set for the previewType property.
-     */
-    public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
-        this.backingStore.set("previewType", value);
-    }
-    /**
-     * Sets the references property value. The collection of references on the task.
-     * @param value Value to set for the references property.
-     */
-    public void setReferences(@jakarta.annotation.Nullable final PlannerExternalReferences value) {
-        this.backingStore.set("references", value);
     }
 }

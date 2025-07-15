@@ -1,6 +1,5 @@
 package com.microsoft.graph.policies.authenticationstrengthpolicies.item.updateallowedcombinations;
 
-import com.microsoft.graph.models.AuthenticationMethodModes;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -51,10 +49,10 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     }
     /**
      * Gets the allowedCombinations property value. The allowedCombinations property
-     * @return a {@link java.util.List<AuthenticationMethodModes>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<AuthenticationMethodModes> getAllowedCombinations() {
+    public java.util.List<String> getAllowedCombinations() {
         return this.backingStore.get("allowedCombinations");
     }
     /**
@@ -72,7 +70,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("allowedCombinations", (n) -> { this.setAllowedCombinations(n.getCollectionOfEnumValues(AuthenticationMethodModes::forValue)); });
+        deserializerMap.put("allowedCombinations", (n) -> { this.setAllowedCombinations(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
@@ -81,7 +79,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfEnumValues("allowedCombinations", this.getAllowedCombinations());
+        writer.writeCollectionOfPrimitiveValues("allowedCombinations", this.getAllowedCombinations());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -95,7 +93,7 @@ public class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataH
      * Sets the allowedCombinations property value. The allowedCombinations property
      * @param value Value to set for the allowedCombinations property.
      */
-    public void setAllowedCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {
+    public void setAllowedCombinations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("allowedCombinations", value);
     }
     /**

@@ -64,7 +64,7 @@ public class UnbilledRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get unbilled from reports
+     * Represents details for unbilled invoice reconciliation data.
      * @return a {@link UnbilledReconciliation}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class UnbilledRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get unbilled from reports
+     * Represents details for unbilled invoice reconciliation data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnbilledReconciliation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class UnbilledRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get unbilled from reports
+     * Represents details for unbilled invoice reconciliation data.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class UnbilledRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get unbilled from reports
+     * Represents details for unbilled invoice reconciliation data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class UnbilledRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get unbilled from reports
+     * Represents details for unbilled invoice reconciliation data.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

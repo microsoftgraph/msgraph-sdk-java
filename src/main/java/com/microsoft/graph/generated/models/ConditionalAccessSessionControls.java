@@ -85,12 +85,13 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("applicationEnforcedRestrictions", (n) -> { this.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudAppSecurity", (n) -> { this.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("disableResilienceDefaults", (n) -> { this.setDisableResilienceDefaults(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("persistentBrowser", (n) -> { this.setPersistentBrowser(n.getObjectValue(PersistentBrowserSessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("secureSignInSession", (n) -> { this.setSecureSignInSession(n.getObjectValue(SecureSignInSessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("signInFrequency", (n) -> { this.setSignInFrequency(n.getObjectValue(SignInFrequencySessionControl::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -111,6 +112,14 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
         return this.backingStore.get("persistentBrowser");
     }
     /**
+     * Gets the secureSignInSession property value. The secureSignInSession property
+     * @return a {@link SecureSignInSessionControl}
+     */
+    @jakarta.annotation.Nullable
+    public SecureSignInSessionControl getSecureSignInSession() {
+        return this.backingStore.get("secureSignInSession");
+    }
+    /**
      * Gets the signInFrequency property value. Session control to enforce signin frequency.
      * @return a {@link SignInFrequencySessionControl}
      */
@@ -129,6 +138,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
         writer.writeBooleanValue("disableResilienceDefaults", this.getDisableResilienceDefaults());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("persistentBrowser", this.getPersistentBrowser());
+        writer.writeObjectValue("secureSignInSession", this.getSecureSignInSession());
         writer.writeObjectValue("signInFrequency", this.getSignInFrequency());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -181,6 +191,13 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
      */
     public void setPersistentBrowser(@jakarta.annotation.Nullable final PersistentBrowserSessionControl value) {
         this.backingStore.set("persistentBrowser", value);
+    }
+    /**
+     * Sets the secureSignInSession property value. The secureSignInSession property
+     * @param value Value to set for the secureSignInSession property.
+     */
+    public void setSecureSignInSession(@jakarta.annotation.Nullable final SecureSignInSessionControl value) {
+        this.backingStore.set("secureSignInSession", value);
     }
     /**
      * Sets the signInFrequency property value. Session control to enforce signin frequency.

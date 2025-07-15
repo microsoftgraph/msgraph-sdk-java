@@ -37,7 +37,6 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Restore a printer&apos;s default settings to the values specified by the manufacturer.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printer-restorefactorydefaults?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -46,7 +45,6 @@ public class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder {
      * Restore a printer&apos;s default settings to the values specified by the manufacturer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/printer-restorefactorydefaults?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

@@ -31,16 +31,7 @@ public class CopilotAdminSetting extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("limitedMode", (n) -> { this.setLimitedMode(n.getObjectValue(CopilotAdminLimitedMode::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the limitedMode property value. Represents a setting that controls whether users of Microsoft 365 Copilot in Teams meetings can receive responses to sentiment-related prompts. Read-only. Nullable.
-     * @return a {@link CopilotAdminLimitedMode}
-     */
-    @jakarta.annotation.Nullable
-    public CopilotAdminLimitedMode getLimitedMode() {
-        return this.backingStore.get("limitedMode");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class CopilotAdminSetting extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("limitedMode", this.getLimitedMode());
-    }
-    /**
-     * Sets the limitedMode property value. Represents a setting that controls whether users of Microsoft 365 Copilot in Teams meetings can receive responses to sentiment-related prompts. Read-only. Nullable.
-     * @param value Value to set for the limitedMode property.
-     */
-    public void setLimitedMode(@jakarta.annotation.Nullable final CopilotAdminLimitedMode value) {
-        this.backingStore.set("limitedMode", value);
     }
 }
