@@ -84,23 +84,23 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceEnrollmentConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @return a {@link DeviceEnrollmentConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentConfiguration post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
         return post(body, null);
     }
     /**
-     * Create a new deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceEnrollmentConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentConfiguration post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -131,7 +131,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create a new deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * Create a new deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -203,12 +203,12 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

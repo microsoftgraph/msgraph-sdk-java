@@ -31,16 +31,7 @@ public class TeamsLicensingDetails extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("hasTeamsLicense", (n) -> { this.setHasTeamsLicense(n.getBooleanValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the hasTeamsLicense property value. Indicates whether the user has a valid license to use Microsoft Teams.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getHasTeamsLicense() {
-        return this.backingStore.get("hasTeamsLicense");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class TeamsLicensingDetails extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("hasTeamsLicense", this.getHasTeamsLicense());
-    }
-    /**
-     * Sets the hasTeamsLicense property value. Indicates whether the user has a valid license to use Microsoft Teams.
-     * @param value Value to set for the hasTeamsLicense property.
-     */
-    public void setHasTeamsLicense(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("hasTeamsLicense", value);
     }
 }

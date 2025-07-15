@@ -32,16 +32,7 @@ public class TriggersRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("retentionEvents", (n) -> { this.setRetentionEvents(n.getCollectionOfObjectValues(RetentionEvent::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the retentionEvents property value. The retentionEvents property
-     * @return a {@link java.util.List<RetentionEvent>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<RetentionEvent> getRetentionEvents() {
-        return this.backingStore.get("retentionEvents");
     }
     /**
      * Serializes information the current object
@@ -50,13 +41,5 @@ public class TriggersRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("retentionEvents", this.getRetentionEvents());
-    }
-    /**
-     * Sets the retentionEvents property value. The retentionEvents property
-     * @param value Value to set for the retentionEvents property.
-     */
-    public void setRetentionEvents(@jakarta.annotation.Nullable final java.util.List<RetentionEvent> value) {
-        this.backingStore.set("retentionEvents", value);
     }
 }

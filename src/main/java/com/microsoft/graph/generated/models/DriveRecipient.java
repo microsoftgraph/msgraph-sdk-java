@@ -48,7 +48,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
         return value;
     }
     /**
-     * Gets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
+     * Gets the alias property value. The alias of the domain object, for cases where an email address is unavailable (for example, security groups).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
+     * Sets the alias property value. The alias of the domain object, for cases where an email address is unavailable (for example, security groups).
      * @param value Value to set for the alias property.
      */
     public void setAlias(@jakarta.annotation.Nullable final String value) {

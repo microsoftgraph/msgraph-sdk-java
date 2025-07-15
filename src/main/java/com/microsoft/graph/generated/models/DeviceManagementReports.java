@@ -28,21 +28,12 @@ public class DeviceManagementReports extends Entity implements Parsable {
         return new DeviceManagementReports();
     }
     /**
-     * Gets the exportJobs property value. Entity representing a job to export a report
-     * @return a {@link java.util.List<DeviceManagementExportJob>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<DeviceManagementExportJob> getExportJobs() {
-        return this.backingStore.get("exportJobs");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("exportJobs", (n) -> { this.setExportJobs(n.getCollectionOfObjectValues(DeviceManagementExportJob::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -52,13 +43,5 @@ public class DeviceManagementReports extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("exportJobs", this.getExportJobs());
-    }
-    /**
-     * Sets the exportJobs property value. Entity representing a job to export a report
-     * @param value Value to set for the exportJobs property.
-     */
-    public void setExportJobs(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExportJob> value) {
-        this.backingStore.set("exportJobs", value);
     }
 }

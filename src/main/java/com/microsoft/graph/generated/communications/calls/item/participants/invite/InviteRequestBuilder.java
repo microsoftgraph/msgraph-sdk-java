@@ -40,7 +40,6 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link InviteParticipantsOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/participant-invite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InviteParticipantsOperation post(@jakarta.annotation.Nonnull final InvitePostRequestBody body) {
@@ -52,7 +51,6 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InviteParticipantsOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/participant-invite?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InviteParticipantsOperation post(@jakarta.annotation.Nonnull final InvitePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

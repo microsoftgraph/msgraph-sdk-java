@@ -25,31 +25,13 @@ public class AppScope extends Entity implements Parsable {
         return new AppScope();
     }
     /**
-     * Gets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getDisplayName() {
-        return this.backingStore.get("displayName");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the type property value. Describes the type of app-specific resource represented by the app scope. Read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getType() {
-        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -58,21 +40,5 @@ public class AppScope extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeStringValue("type", this.getType());
-    }
-    /**
-     * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read only.
-     * @param value Value to set for the displayName property.
-     */
-    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("displayName", value);
-    }
-    /**
-     * Sets the type property value. Describes the type of app-specific resource represented by the app scope. Read-only.
-     * @param value Value to set for the type property.
-     */
-    public void setType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("type", value);
     }
 }

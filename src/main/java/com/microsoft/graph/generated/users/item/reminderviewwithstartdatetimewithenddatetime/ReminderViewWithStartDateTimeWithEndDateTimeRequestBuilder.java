@@ -43,7 +43,6 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
      * Invoke function reminderView
      * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-reminderview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ReminderViewWithStartDateTimeWithEndDateTimeGetResponse get() {
@@ -54,7 +53,6 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-reminderview?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ReminderViewWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,12 +115,12 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

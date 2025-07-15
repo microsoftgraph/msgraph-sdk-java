@@ -41,7 +41,6 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * In Microsoft Entra entitlement management, return a collection of access package assignment approvals. The objects returned are those that are in scope for approval by the calling user. In PIM for Groups, return a collection of assignment approvals. The objects returned are those that are in scope for approval by the calling user.
      * @return a {@link FilterByCurrentUserWithOnGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approval-filterbycurrentuser?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilterByCurrentUserWithOnGetResponse get() {
@@ -52,7 +51,6 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FilterByCurrentUserWithOnGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approval-filterbycurrentuser?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilterByCurrentUserWithOnGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,12 +128,12 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

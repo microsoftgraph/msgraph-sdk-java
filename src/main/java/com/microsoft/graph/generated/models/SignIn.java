@@ -110,7 +110,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
         deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
-        deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfEnumValues(RiskEventType::forValue)); });
+        deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("riskEventTypes_v2", (n) -> { this.setRiskEventTypesV2(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("riskLevelAggregated", (n) -> { this.setRiskLevelAggregated(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskLevelDuringSignIn", (n) -> { this.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel::forValue)); });
@@ -171,10 +171,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the riskEventTypes property value. The riskEventTypes property
-     * @return a {@link java.util.List<RiskEventType>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<RiskEventType> getRiskEventTypes() {
+    public java.util.List<String> getRiskEventTypes() {
         return this.backingStore.get("riskEventTypes");
     }
     /**
@@ -262,7 +262,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("resourceDisplayName", this.getResourceDisplayName());
         writer.writeStringValue("resourceId", this.getResourceId());
         writer.writeEnumValue("riskDetail", this.getRiskDetail());
-        writer.writeCollectionOfEnumValues("riskEventTypes", this.getRiskEventTypes());
+        writer.writeCollectionOfPrimitiveValues("riskEventTypes", this.getRiskEventTypes());
         writer.writeCollectionOfPrimitiveValues("riskEventTypes_v2", this.getRiskEventTypesV2());
         writer.writeEnumValue("riskLevelAggregated", this.getRiskLevelAggregated());
         writer.writeEnumValue("riskLevelDuringSignIn", this.getRiskLevelDuringSignIn());
@@ -374,7 +374,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the riskEventTypes property value. The riskEventTypes property
      * @param value Value to set for the riskEventTypes property.
      */
-    public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<RiskEventType> value) {
+    public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("riskEventTypes", value);
     }
     /**

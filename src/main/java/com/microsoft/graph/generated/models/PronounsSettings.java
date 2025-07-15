@@ -31,16 +31,7 @@ public class PronounsSettings extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("isEnabledInOrganization", (n) -> { this.setIsEnabledInOrganization(n.getBooleanValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the isEnabledInOrganization property value. true to enable pronouns in the organization; otherwise, false. The default value is false, and pronouns are disabled.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getIsEnabledInOrganization() {
-        return this.backingStore.get("isEnabledInOrganization");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class PronounsSettings extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("isEnabledInOrganization", this.getIsEnabledInOrganization());
-    }
-    /**
-     * Sets the isEnabledInOrganization property value. true to enable pronouns in the organization; otherwise, false. The default value is false, and pronouns are disabled.
-     * @param value Value to set for the isEnabledInOrganization property.
-     */
-    public void setIsEnabledInOrganization(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("isEnabledInOrganization", value);
     }
 }

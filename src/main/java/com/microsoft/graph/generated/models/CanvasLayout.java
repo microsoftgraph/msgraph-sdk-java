@@ -31,25 +31,7 @@ public class CanvasLayout extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("horizontalSections", (n) -> { this.setHorizontalSections(n.getCollectionOfObjectValues(HorizontalSection::createFromDiscriminatorValue)); });
-        deserializerMap.put("verticalSection", (n) -> { this.setVerticalSection(n.getObjectValue(VerticalSection::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
-     * @return a {@link java.util.List<HorizontalSection>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<HorizontalSection> getHorizontalSections() {
-        return this.backingStore.get("horizontalSections");
-    }
-    /**
-     * Gets the verticalSection property value. Vertical section on the SharePoint page.
-     * @return a {@link VerticalSection}
-     */
-    @jakarta.annotation.Nullable
-    public VerticalSection getVerticalSection() {
-        return this.backingStore.get("verticalSection");
     }
     /**
      * Serializes information the current object
@@ -58,21 +40,5 @@ public class CanvasLayout extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("horizontalSections", this.getHorizontalSections());
-        writer.writeObjectValue("verticalSection", this.getVerticalSection());
-    }
-    /**
-     * Sets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
-     * @param value Value to set for the horizontalSections property.
-     */
-    public void setHorizontalSections(@jakarta.annotation.Nullable final java.util.List<HorizontalSection> value) {
-        this.backingStore.set("horizontalSections", value);
-    }
-    /**
-     * Sets the verticalSection property value. Vertical section on the SharePoint page.
-     * @param value Value to set for the verticalSection property.
-     */
-    public void setVerticalSection(@jakarta.annotation.Nullable final VerticalSection value) {
-        this.backingStore.set("verticalSection", value);
     }
 }

@@ -42,6 +42,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("videoOnDemandWebUrl", (n) -> { this.setVideoOnDemandWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("startDateTime");
     }
     /**
+     * Gets the videoOnDemandWebUrl property value. The URL of the video on demand (VOD) for Microsoft Teams events that allows webinar and town hall organizers to quickly publish and share event recordings.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getVideoOnDemandWebUrl() {
+        return this.backingStore.get("videoOnDemandWebUrl");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
+        writer.writeStringValue("videoOnDemandWebUrl", this.getVideoOnDemandWebUrl());
     }
     /**
      * Sets the endDateTime property value. The virtual event session end time.
@@ -75,5 +85,12 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("startDateTime", value);
+    }
+    /**
+     * Sets the videoOnDemandWebUrl property value. The URL of the video on demand (VOD) for Microsoft Teams events that allows webinar and town hall organizers to quickly publish and share event recordings.
+     * @param value Value to set for the videoOnDemandWebUrl property.
+     */
+    public void setVideoOnDemandWebUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("videoOnDemandWebUrl", value);
     }
 }

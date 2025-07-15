@@ -39,7 +39,16 @@ public class DataSecurityAndGovernance extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("sensitivityLabels", (n) -> { this.setSensitivityLabels(n.getCollectionOfObjectValues(SensitivityLabel::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the sensitivityLabels property value. The sensitivityLabels property
+     * @return a {@link java.util.List<SensitivityLabel>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SensitivityLabel> getSensitivityLabels() {
+        return this.backingStore.get("sensitivityLabels");
     }
     /**
      * Serializes information the current object
@@ -48,5 +57,13 @@ public class DataSecurityAndGovernance extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("sensitivityLabels", this.getSensitivityLabels());
+    }
+    /**
+     * Sets the sensitivityLabels property value. The sensitivityLabels property
+     * @param value Value to set for the sensitivityLabels property.
+     */
+    public void setSensitivityLabels(@jakarta.annotation.Nullable final java.util.List<SensitivityLabel> value) {
+        this.backingStore.set("sensitivityLabels", value);
     }
 }

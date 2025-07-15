@@ -31,16 +31,7 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the fill property value. Represents the fill format of a chart, which includes background formatting information. Read-only.
-     * @return a {@link WorkbookChartFill}
-     */
-    @jakarta.annotation.Nullable
-    public WorkbookChartFill getFill() {
-        return this.backingStore.get("fill");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("fill", this.getFill());
-    }
-    /**
-     * Sets the fill property value. Represents the fill format of a chart, which includes background formatting information. Read-only.
-     * @param value Value to set for the fill property.
-     */
-    public void setFill(@jakarta.annotation.Nullable final WorkbookChartFill value) {
-        this.backingStore.set("fill", value);
     }
 }

@@ -31,25 +31,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getStringValue()); });
-        deserializerMap.put("scheduleInfo", (n) -> { this.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getMemberType() {
-        return this.backingStore.get("memberType");
-    }
-    /**
-     * Gets the scheduleInfo property value. The period of the role eligibility.
-     * @return a {@link RequestSchedule}
-     */
-    @jakarta.annotation.Nullable
-    public RequestSchedule getScheduleInfo() {
-        return this.backingStore.get("scheduleInfo");
     }
     /**
      * Serializes information the current object
@@ -58,21 +40,5 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("memberType", this.getMemberType());
-        writer.writeObjectValue("scheduleInfo", this.getScheduleInfo());
-    }
-    /**
-     * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
-     * @param value Value to set for the memberType property.
-     */
-    public void setMemberType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("memberType", value);
-    }
-    /**
-     * Sets the scheduleInfo property value. The period of the role eligibility.
-     * @param value Value to set for the scheduleInfo property.
-     */
-    public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
-        this.backingStore.set("scheduleInfo", value);
     }
 }

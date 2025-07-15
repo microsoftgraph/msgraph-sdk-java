@@ -39,7 +39,6 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
      * Activate a protectionPolicyBase. Currently, only one active backup policy per underlying service is supported (that is, one for OneDrive accounts, one for SharePoint sites, and one for Exchange Online users). You can add or remove artifacts (sites or user accounts) to or from each active policy.
      * @return a {@link ProtectionPolicyBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/protectionpolicybase-activate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProtectionPolicyBase post() {
@@ -50,7 +49,6 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProtectionPolicyBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/protectionpolicybase-activate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProtectionPolicyBase post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

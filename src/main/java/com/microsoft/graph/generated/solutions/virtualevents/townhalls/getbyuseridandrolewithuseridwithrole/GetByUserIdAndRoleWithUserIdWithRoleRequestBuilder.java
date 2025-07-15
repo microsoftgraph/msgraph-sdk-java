@@ -43,7 +43,6 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
      * Get a list of virtualEventTownhall objects where the specified user is either the organizer or a coorganizer.
      * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventtownhall-getbyuseridandrole?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetByUserIdAndRoleWithUserIdWithRoleGetResponse get() {
@@ -54,7 +53,6 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventtownhall-getbyuseridandrole?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetByUserIdAndRoleWithUserIdWithRoleGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -132,12 +130,12 @@ public class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequ
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

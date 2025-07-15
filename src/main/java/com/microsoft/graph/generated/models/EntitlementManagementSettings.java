@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -26,30 +25,12 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
         return new EntitlementManagementSettings();
     }
     /**
-     * Gets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically many days, after an external user is blocked from sign in before their account is deleted.
-     * @return a {@link PeriodAndDuration}
-     */
-    @jakarta.annotation.Nullable
-    public PeriodAndDuration getDurationUntilExternalUserDeletedAfterBlocked() {
-        return this.backingStore.get("durationUntilExternalUserDeletedAfterBlocked");
-    }
-    /**
-     * Gets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user&apos;s last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
-     * @return a {@link AccessPackageExternalUserLifecycleAction}
-     */
-    @jakarta.annotation.Nullable
-    public AccessPackageExternalUserLifecycleAction getExternalUserLifecycleAction() {
-        return this.backingStore.get("externalUserLifecycleAction");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("durationUntilExternalUserDeletedAfterBlocked", (n) -> { this.setDurationUntilExternalUserDeletedAfterBlocked(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("externalUserLifecycleAction", (n) -> { this.setExternalUserLifecycleAction(n.getEnumValue(AccessPackageExternalUserLifecycleAction::forValue)); });
         return deserializerMap;
     }
     /**
@@ -59,21 +40,5 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodAndDurationValue("durationUntilExternalUserDeletedAfterBlocked", this.getDurationUntilExternalUserDeletedAfterBlocked());
-        writer.writeEnumValue("externalUserLifecycleAction", this.getExternalUserLifecycleAction());
-    }
-    /**
-     * Sets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically many days, after an external user is blocked from sign in before their account is deleted.
-     * @param value Value to set for the durationUntilExternalUserDeletedAfterBlocked property.
-     */
-    public void setDurationUntilExternalUserDeletedAfterBlocked(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.backingStore.set("durationUntilExternalUserDeletedAfterBlocked", value);
-    }
-    /**
-     * Sets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user&apos;s last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
-     * @param value Value to set for the externalUserLifecycleAction property.
-     */
-    public void setExternalUserLifecycleAction(@jakarta.annotation.Nullable final AccessPackageExternalUserLifecycleAction value) {
-        this.backingStore.set("externalUserLifecycleAction", value);
     }
 }

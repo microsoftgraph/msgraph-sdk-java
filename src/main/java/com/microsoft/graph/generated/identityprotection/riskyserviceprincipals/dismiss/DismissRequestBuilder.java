@@ -38,7 +38,6 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
      * Dismiss the risk of one or more riskyServicePrincipal objects. This action sets the targeted service principal account&apos;s risk level to none. You can dismiss up to 60 service principal accounts in one request.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-dismiss?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final DismissPostRequestBody body) {
         post(body, null);
@@ -48,7 +47,6 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskyserviceprincipal-dismiss?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final DismissPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

@@ -36,7 +36,7 @@ public class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/reports/partners/billing/reconciliation/unbilled/microsoft.graph.partners.billing.export", rawUrl);
     }
     /**
-     * Invoke action export
+     * Export the unbilled invoice reconciliation data for a specific billing period and a given currency.
      * @param body The request body
      * @return a {@link Operation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseReque
         return post(body, null);
     }
     /**
-     * Invoke action export
+     * Export the unbilled invoice reconciliation data for a specific billing period and a given currency.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Operation}
@@ -61,7 +61,7 @@ public class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, Operation::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action export
+     * Export the unbilled invoice reconciliation data for a specific billing period and a given currency.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +70,7 @@ public class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseReque
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action export
+     * Export the unbilled invoice reconciliation data for a specific billing period and a given currency.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
