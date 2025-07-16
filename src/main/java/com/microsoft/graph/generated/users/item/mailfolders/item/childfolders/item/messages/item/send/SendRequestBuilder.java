@@ -37,6 +37,7 @@ public class SendRequestBuilder extends BaseRequestBuilder {
     /**
      * Send an existing draft message. The draft message can be a new message draft, reply draft, reply-all draft, or a forward draft. This method saves the message in the Sent Items folder. Alternatively, send a new message in a single operation.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/message-send?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -45,6 +46,7 @@ public class SendRequestBuilder extends BaseRequestBuilder {
      * Send an existing draft message. The draft message can be a new message draft, reply draft, reply-all draft, or a forward draft. This method saves the message in the Sent Items folder. Alternatively, send a new message in a single operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/message-send?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

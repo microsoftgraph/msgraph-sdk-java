@@ -42,6 +42,7 @@ public class GetOneDriveUsageAccountDetailWithDateRequestBuilder extends BaseReq
      * Get details about OneDrive usage by account.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getonedriveusageaccountdetail?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
@@ -52,6 +53,7 @@ public class GetOneDriveUsageAccountDetailWithDateRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getonedriveusageaccountdetail?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

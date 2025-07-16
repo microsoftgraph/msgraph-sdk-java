@@ -45,6 +45,7 @@ public class ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBu
      * Calculate the sensitivity label that should be inherited by an output artifact, given a set of sensitivity labels from input or referenced artifacts.
      * @return a {@link SensitivityLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sensitivitylabel-computeinheritance?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabel get() {
@@ -55,6 +56,7 @@ public class ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensitivityLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sensitivitylabel-computeinheritance?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabel get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

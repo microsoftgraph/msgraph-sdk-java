@@ -38,6 +38,7 @@ public class IsPublishedRequestBuilder extends BaseRequestBuilder {
      * Check the publishing status of a contentType in a content type hub site.
      * @return a {@link IsPublishedGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-ispublished?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IsPublishedGetResponse get() {
@@ -48,6 +49,7 @@ public class IsPublishedRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IsPublishedGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-ispublished?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IsPublishedGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

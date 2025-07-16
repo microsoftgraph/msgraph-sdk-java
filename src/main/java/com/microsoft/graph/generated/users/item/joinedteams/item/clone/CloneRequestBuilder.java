@@ -38,6 +38,7 @@ public class CloneRequestBuilder extends BaseRequestBuilder {
      * Create a copy of a team. This operation also creates a copy of the corresponding group.You can specify which parts of the team to clone: When tabs are cloned, they aren&apos;t configured. The tabs are displayed on the tab bar in Microsoft Teams, and the first time a user opens them, they must go through the configuration screen. If the user who opens the tab doesn&apos;t have permission to configure apps, they see a message that says that the tab isn&apos;t configured. Cloning is a long-running operation. After the POST clone returns, you need to GET the operation returned by the Location: header to see if it&apos;s running, succeeded, or failed. You should continue to GET until the status isn&apos;t running. The recommended delay between GETs is 5 seconds.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/team-clone?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ClonePostRequestBody body) {
         post(body, null);
@@ -47,6 +48,7 @@ public class CloneRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/team-clone?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ClonePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

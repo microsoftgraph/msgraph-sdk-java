@@ -25,7 +25,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/$count{?%24filter,%24search}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/$count?end={end}&start={start}{&%24filter,%24search}", pathParameters);
     }
     /**
      * Instantiates a new {@link CountRequestBuilder} and sets the default values.
@@ -33,29 +33,29 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/$count{?%24filter,%24search}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView/$count?end={end}&start={start}{&%24filter,%24search}", rawUrl);
     }
     /**
      * Get the number of the resource
-     * @return a {@link Long}
+     * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public Long get() {
+    public Integer get() {
         return get(null);
     }
     /**
      * Get the number of the resource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link Long}
+     * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public Long get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public Integer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Long.class);
+        return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Integer.class);
     }
     /**
      * Get the number of the resource
@@ -93,6 +93,11 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
+         * The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+         */
+        @jakarta.annotation.Nullable
+        public String end;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -103,14 +108,21 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public String search;
         /**
+         * The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
+         */
+        @jakarta.annotation.Nullable
+        public String start;
+        /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("end", end);
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24search", search);
+            allQueryParams.put("start", start);
             return allQueryParams;
         }
     }

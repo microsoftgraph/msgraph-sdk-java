@@ -39,6 +39,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
      * Mark an assigned educationAssignment as inactive to signal that the assignment has no further action items for teachers and students. This action can only be performed by a teacher on assigned assignments.
      * @return a {@link EducationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-deactivate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationAssignment post() {
@@ -49,6 +50,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-deactivate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationAssignment post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

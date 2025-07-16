@@ -63,7 +63,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
         return this.backingStore.get("isSelfServiceRegistrationAllowed");
     }
     /**
-     * Gets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Gets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator.
      * @return a {@link Fido2KeyRestrictions}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
         this.backingStore.set("isSelfServiceRegistrationAllowed", value);
     }
     /**
-     * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator.
      * @param value Value to set for the keyRestrictions property.
      */
     public void setKeyRestrictions(@jakarta.annotation.Nullable final Fido2KeyRestrictions value) {

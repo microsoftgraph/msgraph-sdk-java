@@ -39,6 +39,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      * Get a list of newly-created or updated assignments without reading the whole collection. A teacher or an application running with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-delta?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeltaGetResponse get() {
@@ -49,6 +50,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-delta?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeltaGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,12 +128,12 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

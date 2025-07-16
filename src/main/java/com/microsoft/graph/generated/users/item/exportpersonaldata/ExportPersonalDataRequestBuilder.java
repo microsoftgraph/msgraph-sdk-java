@@ -38,6 +38,7 @@ public class ExportPersonalDataRequestBuilder extends BaseRequestBuilder {
      * Submit a data policy operation request from a company administrator or an application to export an organizational user&apos;s data. This data includes the user&apos;s data stored in OneDrive and their activity reports. For more information about exporting data while complying with regulations, see Data Subject Requests and the GDPR and CCPA.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-exportpersonaldata?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ExportPersonalDataPostRequestBody body) {
         post(body, null);
@@ -47,6 +48,7 @@ public class ExportPersonalDataRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-exportpersonaldata?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ExportPersonalDataPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

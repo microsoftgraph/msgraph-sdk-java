@@ -25,12 +25,21 @@ public class PublicKeyInfrastructureRoot extends Entity implements Parsable {
         return new PublicKeyInfrastructureRoot();
     }
     /**
+     * Gets the certificateBasedAuthConfigurations property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users.
+     * @return a {@link java.util.List<CertificateBasedAuthPki>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CertificateBasedAuthPki> getCertificateBasedAuthConfigurations() {
+        return this.backingStore.get("certificateBasedAuthConfigurations");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateBasedAuthConfigurations", (n) -> { this.setCertificateBasedAuthConfigurations(n.getCollectionOfObjectValues(CertificateBasedAuthPki::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -40,5 +49,13 @@ public class PublicKeyInfrastructureRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("certificateBasedAuthConfigurations", this.getCertificateBasedAuthConfigurations());
+    }
+    /**
+     * Sets the certificateBasedAuthConfigurations property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users.
+     * @param value Value to set for the certificateBasedAuthConfigurations property.
+     */
+    public void setCertificateBasedAuthConfigurations(@jakarta.annotation.Nullable final java.util.List<CertificateBasedAuthPki> value) {
+        this.backingStore.set("certificateBasedAuthConfigurations", value);
     }
 }

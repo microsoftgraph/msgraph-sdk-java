@@ -38,6 +38,7 @@ public class ForwardRequestBuilder extends BaseRequestBuilder {
      * Forward a post to a recipient. You can specify both the parent conversation and thread in the request, or, you can specify just the parent thread without the parent conversation. 
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/post-forward?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ForwardPostRequestBody body) {
         post(body, null);
@@ -47,6 +48,7 @@ public class ForwardRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/post-forward?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ForwardPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

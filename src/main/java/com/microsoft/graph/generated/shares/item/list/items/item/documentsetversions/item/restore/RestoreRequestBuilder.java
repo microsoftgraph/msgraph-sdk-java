@@ -37,6 +37,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Restore a document set version.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -45,6 +46,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
      * Restore a document set version.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

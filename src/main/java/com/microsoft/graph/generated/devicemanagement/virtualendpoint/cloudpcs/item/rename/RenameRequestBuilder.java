@@ -38,6 +38,7 @@ public class RenameRequestBuilder extends BaseRequestBuilder {
      * Rename a specific cloudPC object. Use this API to update the displayName of a Cloud PC entity.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-rename?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final RenamePostRequestBody body) {
         post(body, null);
@@ -47,6 +48,7 @@ public class RenameRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-rename?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final RenamePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

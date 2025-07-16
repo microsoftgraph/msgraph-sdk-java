@@ -37,6 +37,7 @@ public class WindowsDefenderUpdateSignaturesRequestBuilder extends BaseRequestBu
     /**
      * Not yet documented
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderupdatesignatures?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -45,6 +46,7 @@ public class WindowsDefenderUpdateSignaturesRequestBuilder extends BaseRequestBu
      * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderupdatesignatures?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

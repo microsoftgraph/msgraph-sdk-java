@@ -31,7 +31,25 @@ public class ProfilePhoto extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the height property value. The height of the photo. Read-only.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getHeight() {
+        return this.backingStore.get("height");
+    }
+    /**
+     * Gets the width property value. The width of the photo. Read-only.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getWidth() {
+        return this.backingStore.get("width");
     }
     /**
      * Serializes information the current object
@@ -40,5 +58,21 @@ public class ProfilePhoto extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeIntegerValue("height", this.getHeight());
+        writer.writeIntegerValue("width", this.getWidth());
+    }
+    /**
+     * Sets the height property value. The height of the photo. Read-only.
+     * @param value Value to set for the height property.
+     */
+    public void setHeight(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("height", value);
+    }
+    /**
+     * Sets the width property value. The width of the photo. Read-only.
+     * @param value Value to set for the width property.
+     */
+    public void setWidth(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("width", value);
     }
 }

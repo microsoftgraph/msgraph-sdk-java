@@ -39,6 +39,7 @@ public class GetRecentlyModifiedSubmissionsRequestBuilder extends BaseRequestBui
      * Retrieve submissions modified in the previous seven days. Only teachers and applications with application permissions can perform this operation. A submission object represents a student&apos;s work for an assignment. Resources associated with the submission represent their work. A teacher or application with application permissions has full access to all submission objects. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students can&apos;t see the grade or feedback until the assignment is released.
      * @return a {@link GetRecentlyModifiedSubmissionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-getrecentlymodifiedsubmissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetRecentlyModifiedSubmissionsGetResponse get() {
@@ -49,6 +50,7 @@ public class GetRecentlyModifiedSubmissionsRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetRecentlyModifiedSubmissionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-getrecentlymodifiedsubmissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetRecentlyModifiedSubmissionsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,12 +128,12 @@ public class GetRecentlyModifiedSubmissionsRequestBuilder extends BaseRequestBui
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

@@ -32,7 +32,16 @@ public class TriggerTypesRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("retentionEventTypes", (n) -> { this.setRetentionEventTypes(n.getCollectionOfObjectValues(RetentionEventType::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the retentionEventTypes property value. The retentionEventTypes property
+     * @return a {@link java.util.List<RetentionEventType>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RetentionEventType> getRetentionEventTypes() {
+        return this.backingStore.get("retentionEventTypes");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class TriggerTypesRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("retentionEventTypes", this.getRetentionEventTypes());
+    }
+    /**
+     * Sets the retentionEventTypes property value. The retentionEventTypes property
+     * @param value Value to set for the retentionEventTypes property.
+     */
+    public void setRetentionEventTypes(@jakarta.annotation.Nullable final java.util.List<RetentionEventType> value) {
+        this.backingStore.set("retentionEventTypes", value);
     }
 }

@@ -37,6 +37,7 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove the group from the list of the current user&apos;s favorite groups. Supported for Microsoft 365 groups only.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-removefavorite?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -45,6 +46,7 @@ public class RemoveFavoriteRequestBuilder extends BaseRequestBuilder {
      * Remove the group from the list of the current user&apos;s favorite groups. Supported for Microsoft 365 groups only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-removefavorite?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

@@ -40,6 +40,7 @@ public class CreateOrGetRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeeting post(@jakarta.annotation.Nonnull final CreateOrGetPostRequestBody body) {
@@ -51,6 +52,7 @@ public class CreateOrGetRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeeting post(@jakarta.annotation.Nonnull final CreateOrGetPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

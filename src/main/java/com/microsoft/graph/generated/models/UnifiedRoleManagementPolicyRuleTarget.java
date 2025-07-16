@@ -83,7 +83,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         deserializerMap.put("inheritableSettings", (n) -> { this.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("level", (n) -> { this.setLevel(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations::forValue)); });
         deserializerMap.put("targetObjects", (n) -> { this.setTargetObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -113,10 +113,10 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     }
     /**
      * Gets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getOperations() {
+    public java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> getOperations() {
         return this.backingStore.get("operations");
     }
     /**
@@ -138,7 +138,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         writer.writeCollectionOfPrimitiveValues("inheritableSettings", this.getInheritableSettings());
         writer.writeStringValue("level", this.getLevel());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeCollectionOfPrimitiveValues("operations", this.getOperations());
+        writer.writeCollectionOfEnumValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("targetObjects", this.getTargetObjects());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -196,7 +196,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      * @param value Value to set for the operations property.
      */
-    public void setOperations(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> value) {
         this.backingStore.set("operations", value);
     }
     /**
