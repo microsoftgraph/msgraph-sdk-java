@@ -31,7 +31,25 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHintsByAssignee", (n) -> { this.setOrderHintsByAssignee(n.getObjectValue(PlannerOrderHintsByAssignee::createFromDiscriminatorValue)); });
+        deserializerMap.put("unassignedOrderHint", (n) -> { this.setUnassignedOrderHint(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
+     * @return a {@link PlannerOrderHintsByAssignee}
+     */
+    @jakarta.annotation.Nullable
+    public PlannerOrderHintsByAssignee getOrderHintsByAssignee() {
+        return this.backingStore.get("orderHintsByAssignee");
+    }
+    /**
+     * Gets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task isn&apos;t assigned to anyone, or if the orderHintsByAssignee dictionary doesn&apos;t provide an order hint for the user the task is assigned to. The format is defined as outlined here.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getUnassignedOrderHint() {
+        return this.backingStore.get("unassignedOrderHint");
     }
     /**
      * Serializes information the current object
@@ -40,5 +58,21 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("orderHintsByAssignee", this.getOrderHintsByAssignee());
+        writer.writeStringValue("unassignedOrderHint", this.getUnassignedOrderHint());
+    }
+    /**
+     * Sets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
+     * @param value Value to set for the orderHintsByAssignee property.
+     */
+    public void setOrderHintsByAssignee(@jakarta.annotation.Nullable final PlannerOrderHintsByAssignee value) {
+        this.backingStore.set("orderHintsByAssignee", value);
+    }
+    /**
+     * Sets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task isn&apos;t assigned to anyone, or if the orderHintsByAssignee dictionary doesn&apos;t provide an order hint for the user the task is assigned to. The format is defined as outlined here.
+     * @param value Value to set for the unassignedOrderHint property.
+     */
+    public void setUnassignedOrderHint(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("unassignedOrderHint", value);
     }
 }

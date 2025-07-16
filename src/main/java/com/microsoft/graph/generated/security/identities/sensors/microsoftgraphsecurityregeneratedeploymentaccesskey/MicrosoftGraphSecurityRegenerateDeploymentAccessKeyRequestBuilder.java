@@ -39,6 +39,7 @@ public class MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder e
      * Generate a new deployment access key that can be used to install a sensor associated with the workspace.
      * @return a {@link DeploymentAccessKeyType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-regeneratedeploymentaccesskey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAccessKeyType post() {
@@ -49,6 +50,7 @@ public class MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder e
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeploymentAccessKeyType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-regeneratedeploymentaccesskey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAccessKeyType post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

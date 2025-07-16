@@ -141,7 +141,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
          */
@@ -151,7 +151,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

@@ -37,6 +37,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
     /**
      * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -45,6 +46,7 @@ public class UnpublishRequestBuilder extends BaseRequestBuilder {
      * Make the scheduling page of this business not available to external customers. Set the isPublished property to false, and the publicUrl property to null.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-unpublish?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

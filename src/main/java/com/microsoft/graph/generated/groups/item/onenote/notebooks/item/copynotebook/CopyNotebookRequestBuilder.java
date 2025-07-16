@@ -40,6 +40,7 @@ public class CopyNotebookRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link OnenoteOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/notebook-copynotebook?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnenoteOperation post(@jakarta.annotation.Nonnull final CopyNotebookPostRequestBody body) {
@@ -51,6 +52,7 @@ public class CopyNotebookRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenoteOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/notebook-copynotebook?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnenoteOperation post(@jakarta.annotation.Nonnull final CopyNotebookPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

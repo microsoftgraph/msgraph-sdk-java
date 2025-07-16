@@ -31,7 +31,16 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOrderHint() {
+        return this.backingStore.get("orderHint");
     }
     /**
      * Serializes information the current object
@@ -40,5 +49,13 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("orderHint", this.getOrderHint());
+    }
+    /**
+     * Sets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
+     * @param value Value to set for the orderHint property.
+     */
+    public void setOrderHint(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("orderHint", value);
     }
 }

@@ -39,6 +39,7 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
      * Activate a draft restoreSessionBase object. The following points apply to restoring a protection unit:
      * @return a {@link RestoreSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/restoresessionbase-activate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RestoreSessionBase post() {
@@ -49,6 +50,7 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RestoreSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/restoresessionbase-activate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RestoreSessionBase post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

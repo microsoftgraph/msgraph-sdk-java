@@ -32,7 +32,16 @@ public class AuditCoreRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("queries", (n) -> { this.setQueries(n.getCollectionOfObjectValues(AuditLogQuery::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the queries property value. The queries property
+     * @return a {@link java.util.List<AuditLogQuery>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AuditLogQuery> getQueries() {
+        return this.backingStore.get("queries");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class AuditCoreRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("queries", this.getQueries());
+    }
+    /**
+     * Sets the queries property value. The queries property
+     * @param value Value to set for the queries property.
+     */
+    public void setQueries(@jakarta.annotation.Nullable final java.util.List<AuditLogQuery> value) {
+        this.backingStore.set("queries", value);
     }
 }

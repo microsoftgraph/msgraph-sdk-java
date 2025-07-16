@@ -50,6 +50,7 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
      * Retrieve a point based on its position within the series.
      * @return a {@link WorkbookChartPoint}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chartpointscollection-itemat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPoint get() {
@@ -60,6 +61,7 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookChartPoint}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chartpointscollection-itemat?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookChartPoint get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
