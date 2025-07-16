@@ -13,6 +13,7 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
      */
     public UrlEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.urlEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,7 +32,16 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the url property value. The Unique Resource Locator (URL).
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getUrl() {
+        return this.backingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -40,5 +50,13 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("url", this.getUrl());
+    }
+    /**
+     * Sets the url property value. The Unique Resource Locator (URL).
+     * @param value Value to set for the url property.
+     */
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("url", value);
     }
 }

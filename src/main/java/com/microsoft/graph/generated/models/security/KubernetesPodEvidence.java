@@ -13,6 +13,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      */
     public KubernetesPodEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.kubernetesPodEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -25,13 +26,94 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
         return new KubernetesPodEvidence();
     }
     /**
+     * Gets the containers property value. The list of pod containers which are not init or ephemeral containers.
+     * @return a {@link java.util.List<ContainerEvidence>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ContainerEvidence> getContainers() {
+        return this.backingStore.get("containers");
+    }
+    /**
+     * Gets the controller property value. The pod controller.
+     * @return a {@link KubernetesControllerEvidence}
+     */
+    @jakarta.annotation.Nullable
+    public KubernetesControllerEvidence getController() {
+        return this.backingStore.get("controller");
+    }
+    /**
+     * Gets the ephemeralContainers property value. The list of pod ephemeral containers.
+     * @return a {@link java.util.List<ContainerEvidence>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ContainerEvidence> getEphemeralContainers() {
+        return this.backingStore.get("ephemeralContainers");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("containers", (n) -> { this.setContainers(n.getCollectionOfObjectValues(ContainerEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("controller", (n) -> { this.setController(n.getObjectValue(KubernetesControllerEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("ephemeralContainers", (n) -> { this.setEphemeralContainers(n.getCollectionOfObjectValues(ContainerEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("initContainers", (n) -> { this.setInitContainers(n.getCollectionOfObjectValues(ContainerEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(Dictionary::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("namespace", (n) -> { this.setNamespace(n.getObjectValue(KubernetesNamespaceEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("podIp", (n) -> { this.setPodIp(n.getObjectValue(IpEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("serviceAccount", (n) -> { this.setServiceAccount(n.getObjectValue(KubernetesServiceAccountEvidence::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the initContainers property value. The list of pod init containers.
+     * @return a {@link java.util.List<ContainerEvidence>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ContainerEvidence> getInitContainers() {
+        return this.backingStore.get("initContainers");
+    }
+    /**
+     * Gets the labels property value. The pod labels.
+     * @return a {@link Dictionary}
+     */
+    @jakarta.annotation.Nullable
+    public Dictionary getLabels() {
+        return this.backingStore.get("labels");
+    }
+    /**
+     * Gets the name property value. The pod name.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getName() {
+        return this.backingStore.get("name");
+    }
+    /**
+     * Gets the namespace property value. The pod namespace.
+     * @return a {@link KubernetesNamespaceEvidence}
+     */
+    @jakarta.annotation.Nullable
+    public KubernetesNamespaceEvidence getNamespace() {
+        return this.backingStore.get("namespace");
+    }
+    /**
+     * Gets the podIp property value. The pod IP.
+     * @return a {@link IpEvidence}
+     */
+    @jakarta.annotation.Nullable
+    public IpEvidence getPodIp() {
+        return this.backingStore.get("podIp");
+    }
+    /**
+     * Gets the serviceAccount property value. The pod service account.
+     * @return a {@link KubernetesServiceAccountEvidence}
+     */
+    @jakarta.annotation.Nullable
+    public KubernetesServiceAccountEvidence getServiceAccount() {
+        return this.backingStore.get("serviceAccount");
     }
     /**
      * Serializes information the current object
@@ -40,5 +122,77 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("containers", this.getContainers());
+        writer.writeObjectValue("controller", this.getController());
+        writer.writeCollectionOfObjectValues("ephemeralContainers", this.getEphemeralContainers());
+        writer.writeCollectionOfObjectValues("initContainers", this.getInitContainers());
+        writer.writeObjectValue("labels", this.getLabels());
+        writer.writeStringValue("name", this.getName());
+        writer.writeObjectValue("namespace", this.getNamespace());
+        writer.writeObjectValue("podIp", this.getPodIp());
+        writer.writeObjectValue("serviceAccount", this.getServiceAccount());
+    }
+    /**
+     * Sets the containers property value. The list of pod containers which are not init or ephemeral containers.
+     * @param value Value to set for the containers property.
+     */
+    public void setContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
+        this.backingStore.set("containers", value);
+    }
+    /**
+     * Sets the controller property value. The pod controller.
+     * @param value Value to set for the controller property.
+     */
+    public void setController(@jakarta.annotation.Nullable final KubernetesControllerEvidence value) {
+        this.backingStore.set("controller", value);
+    }
+    /**
+     * Sets the ephemeralContainers property value. The list of pod ephemeral containers.
+     * @param value Value to set for the ephemeralContainers property.
+     */
+    public void setEphemeralContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
+        this.backingStore.set("ephemeralContainers", value);
+    }
+    /**
+     * Sets the initContainers property value. The list of pod init containers.
+     * @param value Value to set for the initContainers property.
+     */
+    public void setInitContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
+        this.backingStore.set("initContainers", value);
+    }
+    /**
+     * Sets the labels property value. The pod labels.
+     * @param value Value to set for the labels property.
+     */
+    public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
+        this.backingStore.set("labels", value);
+    }
+    /**
+     * Sets the name property value. The pod name.
+     * @param value Value to set for the name property.
+     */
+    public void setName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("name", value);
+    }
+    /**
+     * Sets the namespace property value. The pod namespace.
+     * @param value Value to set for the namespace property.
+     */
+    public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
+        this.backingStore.set("namespace", value);
+    }
+    /**
+     * Sets the podIp property value. The pod IP.
+     * @param value Value to set for the podIp property.
+     */
+    public void setPodIp(@jakarta.annotation.Nullable final IpEvidence value) {
+        this.backingStore.set("podIp", value);
+    }
+    /**
+     * Sets the serviceAccount property value. The pod service account.
+     * @param value Value to set for the serviceAccount property.
+     */
+    public void setServiceAccount(@jakarta.annotation.Nullable final KubernetesServiceAccountEvidence value) {
+        this.backingStore.set("serviceAccount", value);
     }
 }

@@ -40,6 +40,7 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ApplicationServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplicationServicePrincipal post(@jakarta.annotation.Nonnull final InstantiatePostRequestBody body) {
@@ -51,6 +52,7 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApplicationServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplicationServicePrincipal post(@jakarta.annotation.Nonnull final InstantiatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

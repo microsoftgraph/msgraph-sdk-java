@@ -46,6 +46,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
      * Get a list of archived print jobs that were queued for particular printer.
      * @return a {@link GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reports-getprinterarchivedprintjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeGetResponse get() {
@@ -56,6 +57,7 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reports-getprinterarchivedprintjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,12 +120,12 @@ public class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDat
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

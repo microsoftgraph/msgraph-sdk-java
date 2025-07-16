@@ -58,10 +58,10 @@ public class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the daysOfWeek property value. The days of the week on which the user works.
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<DayOfWeek>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getDaysOfWeek() {
+    public java.util.List<DayOfWeek> getDaysOfWeek() {
         return this.backingStore.get("daysOfWeek");
     }
     /**
@@ -79,7 +79,7 @@ public class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek::forValue)); });
         deserializerMap.put("endTime", (n) -> { this.setEndTime(n.getLocalTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startTime", (n) -> { this.setStartTime(n.getLocalTimeValue()); });
@@ -116,7 +116,7 @@ public class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("daysOfWeek", this.getDaysOfWeek());
+        writer.writeCollectionOfEnumValues("daysOfWeek", this.getDaysOfWeek());
         writer.writeLocalTimeValue("endTime", this.getEndTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalTimeValue("startTime", this.getStartTime());
@@ -142,7 +142,7 @@ public class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
      * Sets the daysOfWeek property value. The days of the week on which the user works.
      * @param value Value to set for the daysOfWeek property.
      */
-    public void setDaysOfWeek(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setDaysOfWeek(@jakarta.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this.backingStore.set("daysOfWeek", value);
     }
     /**

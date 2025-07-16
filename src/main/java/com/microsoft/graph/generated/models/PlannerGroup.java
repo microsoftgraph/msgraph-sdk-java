@@ -31,7 +31,16 @@ public class PlannerGroup extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the plans property value. Read-only. Nullable. Returns the plannerPlans owned by the group.
+     * @return a {@link java.util.List<PlannerPlan>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PlannerPlan> getPlans() {
+        return this.backingStore.get("plans");
     }
     /**
      * Serializes information the current object
@@ -40,5 +49,13 @@ public class PlannerGroup extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("plans", this.getPlans());
+    }
+    /**
+     * Sets the plans property value. Read-only. Nullable. Returns the plannerPlans owned by the group.
+     * @param value Value to set for the plans property.
+     */
+    public void setPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
+        this.backingStore.set("plans", value);
     }
 }

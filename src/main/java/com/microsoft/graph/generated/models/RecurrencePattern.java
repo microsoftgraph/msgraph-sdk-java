@@ -65,10 +65,10 @@ public class RecurrencePattern implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<DayOfWeek>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getDaysOfWeek() {
+    public java.util.List<DayOfWeek> getDaysOfWeek() {
         return this.backingStore.get("daysOfWeek");
     }
     /**
@@ -79,7 +79,7 @@ public class RecurrencePattern implements AdditionalDataHolder, BackedModel, Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("dayOfMonth", (n) -> { this.setDayOfMonth(n.getIntegerValue()); });
-        deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek::forValue)); });
         deserializerMap.put("firstDayOfWeek", (n) -> { this.setFirstDayOfWeek(n.getEnumValue(DayOfWeek::forValue)); });
         deserializerMap.put("index", (n) -> { this.setIndex(n.getEnumValue(WeekIndex::forValue)); });
         deserializerMap.put("interval", (n) -> { this.setInterval(n.getIntegerValue()); });
@@ -143,7 +143,7 @@ public class RecurrencePattern implements AdditionalDataHolder, BackedModel, Par
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("dayOfMonth", this.getDayOfMonth());
-        writer.writeCollectionOfPrimitiveValues("daysOfWeek", this.getDaysOfWeek());
+        writer.writeCollectionOfEnumValues("daysOfWeek", this.getDaysOfWeek());
         writer.writeEnumValue("firstDayOfWeek", this.getFirstDayOfWeek());
         writer.writeEnumValue("index", this.getIndex());
         writer.writeIntegerValue("interval", this.getInterval());
@@ -178,7 +178,7 @@ public class RecurrencePattern implements AdditionalDataHolder, BackedModel, Par
      * Sets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
      * @param value Value to set for the daysOfWeek property.
      */
-    public void setDaysOfWeek(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setDaysOfWeek(@jakarta.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this.backingStore.set("daysOfWeek", value);
     }
     /**

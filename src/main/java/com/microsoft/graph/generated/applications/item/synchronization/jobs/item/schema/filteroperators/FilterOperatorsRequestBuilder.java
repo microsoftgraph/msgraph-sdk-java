@@ -39,6 +39,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
      * List all operators supported in the scoping filters.
      * @return a {@link FilterOperatorsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-filteroperators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilterOperatorsGetResponse get() {
@@ -49,6 +50,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FilterOperatorsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-filteroperators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilterOperatorsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,12 +128,12 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

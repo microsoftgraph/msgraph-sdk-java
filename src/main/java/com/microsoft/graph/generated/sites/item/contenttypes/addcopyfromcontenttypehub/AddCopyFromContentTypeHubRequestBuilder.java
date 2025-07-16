@@ -40,6 +40,7 @@ public class AddCopyFromContentTypeHubRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-addcopyfromcontenttypehub?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentType post(@jakarta.annotation.Nonnull final AddCopyFromContentTypeHubPostRequestBody body) {
@@ -51,6 +52,7 @@ public class AddCopyFromContentTypeHubRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-addcopyfromcontenttypehub?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContentType post(@jakarta.annotation.Nonnull final AddCopyFromContentTypeHubPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

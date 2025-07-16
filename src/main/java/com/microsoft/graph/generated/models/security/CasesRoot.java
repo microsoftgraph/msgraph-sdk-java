@@ -26,12 +26,21 @@ public class CasesRoot extends Entity implements Parsable {
         return new CasesRoot();
     }
     /**
+     * Gets the ediscoveryCases property value. The ediscoveryCases property
+     * @return a {@link java.util.List<EdiscoveryCase>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EdiscoveryCase> getEdiscoveryCases() {
+        return this.backingStore.get("ediscoveryCases");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ediscoveryCases", (n) -> { this.setEdiscoveryCases(n.getCollectionOfObjectValues(EdiscoveryCase::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -41,5 +50,13 @@ public class CasesRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("ediscoveryCases", this.getEdiscoveryCases());
+    }
+    /**
+     * Sets the ediscoveryCases property value. The ediscoveryCases property
+     * @param value Value to set for the ediscoveryCases property.
+     */
+    public void setEdiscoveryCases(@jakarta.annotation.Nullable final java.util.List<EdiscoveryCase> value) {
+        this.backingStore.set("ediscoveryCases", value);
     }
 }

@@ -44,6 +44,7 @@ public class MicrosoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDa
      * Provide a summary of the most processed tasks, known as top tasks, for a specified time period in a tenant. The task definition is provided, along with numerical counts of total, successful, and failed runs. For information about workflows processed, see insights: topWorkflowsProcessedSummary.
      * @return a {@link TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-insights-toptasksprocessedsummary?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse get() {
@@ -54,6 +55,7 @@ public class MicrosoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDa
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-insights-toptasksprocessedsummary?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,12 +118,12 @@ public class MicrosoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDa
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

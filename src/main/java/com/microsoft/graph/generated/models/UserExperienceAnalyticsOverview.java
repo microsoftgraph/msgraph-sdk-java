@@ -34,7 +34,16 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("insights", (n) -> { this.setInsights(n.getCollectionOfObjectValues(UserExperienceAnalyticsInsight::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the insights property value. The user experience analytics insights. Read-only.
+     * @return a {@link java.util.List<UserExperienceAnalyticsInsight>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsInsight> getInsights() {
+        return this.backingStore.get("insights");
     }
     /**
      * Serializes information the current object
@@ -43,5 +52,13 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("insights", this.getInsights());
+    }
+    /**
+     * Sets the insights property value. The user experience analytics insights. Read-only.
+     * @param value Value to set for the insights property.
+     */
+    public void setInsights(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsight> value) {
+        this.backingStore.set("insights", value);
     }
 }

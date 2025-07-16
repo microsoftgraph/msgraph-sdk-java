@@ -31,7 +31,16 @@ public class UserStorage extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("quota", (n) -> { this.setQuota(n.getObjectValue(UnifiedStorageQuota::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the quota property value. The quota property
+     * @return a {@link UnifiedStorageQuota}
+     */
+    @jakarta.annotation.Nullable
+    public UnifiedStorageQuota getQuota() {
+        return this.backingStore.get("quota");
     }
     /**
      * Serializes information the current object
@@ -40,5 +49,13 @@ public class UserStorage extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("quota", this.getQuota());
+    }
+    /**
+     * Sets the quota property value. The quota property
+     * @param value Value to set for the quota property.
+     */
+    public void setQuota(@jakarta.annotation.Nullable final UnifiedStorageQuota value) {
+        this.backingStore.set("quota", value);
     }
 }

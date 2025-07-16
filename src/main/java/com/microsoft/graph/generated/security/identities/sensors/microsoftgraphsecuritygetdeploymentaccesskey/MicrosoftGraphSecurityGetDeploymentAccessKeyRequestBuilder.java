@@ -39,6 +39,7 @@ public class MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder extends 
      * Get the deployment access key for Microsoft Defender for Identity that is required to install sensors associated with the workspace.
      * @return a {@link DeploymentAccessKeyType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-getdeploymentaccesskey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAccessKeyType get() {
@@ -49,6 +50,7 @@ public class MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder extends 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeploymentAccessKeyType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-getdeploymentaccesskey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAccessKeyType get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

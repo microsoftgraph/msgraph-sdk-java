@@ -28,12 +28,30 @@ public class DeviceCategory extends Entity implements Parsable {
         return new DeviceCategory();
     }
     /**
+     * Gets the description property value. Optional description for the device category.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDescription() {
+        return this.backingStore.get("description");
+    }
+    /**
+     * Gets the displayName property value. Display name for the device category.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDisplayName() {
+        return this.backingStore.get("displayName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -43,5 +61,21 @@ public class DeviceCategory extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("description", this.getDescription());
+        writer.writeStringValue("displayName", this.getDisplayName());
+    }
+    /**
+     * Sets the description property value. Optional description for the device category.
+     * @param value Value to set for the description property.
+     */
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("description", value);
+    }
+    /**
+     * Sets the displayName property value. Display name for the device category.
+     * @param value Value to set for the displayName property.
+     */
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("displayName", value);
     }
 }

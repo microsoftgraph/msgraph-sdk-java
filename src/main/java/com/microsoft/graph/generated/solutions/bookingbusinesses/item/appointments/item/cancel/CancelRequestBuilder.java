@@ -38,6 +38,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingappointment-cancel?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final CancelPostRequestBody body) {
         post(body, null);
@@ -47,6 +48,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingappointment-cancel?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final CancelPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

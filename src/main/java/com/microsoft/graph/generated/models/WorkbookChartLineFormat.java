@@ -25,12 +25,21 @@ public class WorkbookChartLineFormat extends Entity implements Parsable {
         return new WorkbookChartLineFormat();
     }
     /**
+     * Gets the color property value. The HTML color code that represents the color of lines in the chart.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getColor() {
+        return this.backingStore.get("color");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -40,5 +49,13 @@ public class WorkbookChartLineFormat extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("color", this.getColor());
+    }
+    /**
+     * Sets the color property value. The HTML color code that represents the color of lines in the chart.
+     * @param value Value to set for the color property.
+     */
+    public void setColor(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("color", value);
     }
 }
