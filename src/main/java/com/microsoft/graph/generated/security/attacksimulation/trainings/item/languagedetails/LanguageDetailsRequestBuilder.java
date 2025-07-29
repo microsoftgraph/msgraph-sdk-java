@@ -60,7 +60,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/trainings/{training%2Did}/languageDetails{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @return a {@link TrainingLanguageDetailCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TrainingLanguageDetailCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TrainingLanguageDetail::createFromDiscriminatorValue);
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         return new LanguageDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

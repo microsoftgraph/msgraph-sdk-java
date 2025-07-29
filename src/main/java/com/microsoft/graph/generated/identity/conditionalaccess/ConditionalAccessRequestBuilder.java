@@ -2,6 +2,7 @@ package com.microsoft.graph.identity.conditionalaccess;
 
 import com.microsoft.graph.identity.conditionalaccess.authenticationcontextclassreferences.AuthenticationContextClassReferencesRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.authenticationstrength.AuthenticationStrengthRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.evaluate.EvaluateRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.namedlocations.NamedLocationsRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.policies.PoliciesRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.templates.TemplatesRequestBuilder;
@@ -29,6 +30,14 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthRequestBuilder authenticationStrength() {
         return new AuthenticationStrengthRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the evaluate method.
+     * @return a {@link EvaluateRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EvaluateRequestBuilder evaluate() {
+        return new EvaluateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.

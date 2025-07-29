@@ -26,7 +26,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return new EdiscoverySearchExportOperation();
     }
     /**
-     * Gets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue.
+     * Gets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue, htmlTranscripts, advancedIndexing, allItemsInFolder, includeFolderAndPath, condensePaths, friendlyName, splitSource, includeReport. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: htmlTranscripts, advancedIndexing, allItemsInFolder, includeFolderAndPath, condensePaths, friendlyName, splitSource, includeReport.
      * @return a {@link EnumSet<AdditionalOptions>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("additionalOptions");
     }
     /**
-     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * Gets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return a {@link CloudAttachmentVersion}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the documentVersion property value. The documentVersion property
+     * Gets the documentVersion property value. The versions of files in SharePoint to include. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return a {@link DocumentVersion}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("exportFileMetadata");
     }
     /**
-     * Gets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml, unknownFutureValue.
+     * Gets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml (deprecated), unknownFutureValue. The eml member is deprecated. It remains in v1.0 for backward compatibility. Going forward, use either pst or msg.
      * @return a {@link ExportFormat}
      */
     @jakarta.annotation.Nullable
@@ -153,14 +153,14 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         writer.writeObjectValue("search", this.getSearch());
     }
     /**
-     * Sets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue.
+     * Sets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue, htmlTranscripts, advancedIndexing, allItemsInFolder, includeFolderAndPath, condensePaths, friendlyName, splitSource, includeReport. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: htmlTranscripts, advancedIndexing, allItemsInFolder, includeFolderAndPath, condensePaths, friendlyName, splitSource, includeReport.
      * @param value Value to set for the additionalOptions property.
      */
     public void setAdditionalOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalOptions> value) {
         this.backingStore.set("additionalOptions", value);
     }
     /**
-     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * Sets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param value Value to set for the cloudAttachmentVersion property.
      */
     public void setCloudAttachmentVersion(@jakarta.annotation.Nullable final CloudAttachmentVersion value) {
@@ -181,7 +181,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the documentVersion property value. The documentVersion property
+     * Sets the documentVersion property value. The versions of files in SharePoint to include. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param value Value to set for the documentVersion property.
      */
     public void setDocumentVersion(@jakarta.annotation.Nullable final DocumentVersion value) {
@@ -202,7 +202,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         this.backingStore.set("exportFileMetadata", value);
     }
     /**
-     * Sets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml, unknownFutureValue.
+     * Sets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml (deprecated), unknownFutureValue. The eml member is deprecated. It remains in v1.0 for backward compatibility. Going forward, use either pst or msg.
      * @param value Value to set for the exportFormat property.
      */
     public void setExportFormat(@jakarta.annotation.Nullable final ExportFormat value) {

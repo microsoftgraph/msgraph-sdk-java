@@ -2,6 +2,7 @@ package com.microsoft.graph.education;
 
 import com.microsoft.graph.education.classes.ClassesRequestBuilder;
 import com.microsoft.graph.education.me.MeRequestBuilder;
+import com.microsoft.graph.education.reports.ReportsRequestBuilder;
 import com.microsoft.graph.education.schools.SchoolsRequestBuilder;
 import com.microsoft.graph.education.users.UsersRequestBuilder;
 import com.microsoft.graph.models.EducationRoot;
@@ -39,6 +40,14 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MeRequestBuilder me() {
         return new MeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the reports property of the microsoft.graph.educationRoot entity.
+     * @return a {@link ReportsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReportsRequestBuilder reports() {
+        return new ReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the schools property of the microsoft.graph.educationRoot entity.

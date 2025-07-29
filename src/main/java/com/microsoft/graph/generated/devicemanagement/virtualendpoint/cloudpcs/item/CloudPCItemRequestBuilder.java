@@ -3,6 +3,7 @@ package com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item;
 import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.reboot.RebootRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.rename.RenameRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.resize.ResizeRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
 import com.microsoft.graph.models.CloudPC;
@@ -48,6 +49,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RenameRequestBuilder rename() {
         return new RenameRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the resize method.
+     * @return a {@link ResizeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ResizeRequestBuilder resize() {
+        return new ResizeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the restore method.

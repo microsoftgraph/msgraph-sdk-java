@@ -35,21 +35,23 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
         super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/items/{externalItem%2Did}/microsoft.graph.externalConnectors.addActivities", rawUrl);
     }
     /**
-     * Invoke action addActivities
+     * Append additional instances of externalActivity objects on an externalItem.
      * @param body The request body
      * @return a {@link AddActivitiesPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-addactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AddActivitiesPostResponse post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action addActivities
+     * Append additional instances of externalActivity objects on an externalItem.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AddActivitiesPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-addactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AddActivitiesPostResponse post(@jakarta.annotation.Nonnull final AddActivitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
         return this.requestAdapter.send(requestInfo, errorMapping, AddActivitiesPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action addActivities
+     * Append additional instances of externalActivity objects on an externalItem.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -69,7 +71,7 @@ public class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action addActivities
+     * Append additional instances of externalActivity objects on an externalItem.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
