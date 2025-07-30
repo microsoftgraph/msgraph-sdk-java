@@ -26,7 +26,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         return new EdiscoveryAddToReviewSetOperation();
     }
     /**
-     * Gets the additionalDataOptions property value. The additionalDataOptions property
+     * Gets the additionalDataOptions property value. The options to add items to the review set. Possible values are: allVersions, linkedFiles, unknownFutureValue, advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder.
      * @return a {@link EnumSet<AdditionalDataOptions>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         return this.backingStore.get("additionalDataOptions");
     }
     /**
-     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * Gets the cloudAttachmentVersion property value. Specifies the number of most recent versions of cloud attachments to collect. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return a {@link CloudAttachmentVersion}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         return this.backingStore.get("cloudAttachmentVersion");
     }
     /**
-     * Gets the documentVersion property value. The documentVersion property
+     * Gets the documentVersion property value. Specifies the number of most recent versions of SharePoint documents to collect. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return a {@link DocumentVersion}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         return deserializerMap;
     }
     /**
-     * Gets the itemsToInclude property value. The itemsToInclude property
+     * Gets the itemsToInclude property value. The items to include in the review set. Possible values are: searchHits, partiallyIndexed, unknownFutureValue.
      * @return a {@link EnumSet<ItemsToInclude>}
      */
     @jakarta.annotation.Nullable
@@ -103,28 +103,28 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         writer.writeObjectValue("search", this.getSearch());
     }
     /**
-     * Sets the additionalDataOptions property value. The additionalDataOptions property
+     * Sets the additionalDataOptions property value. The options to add items to the review set. Possible values are: allVersions, linkedFiles, unknownFutureValue, advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder.
      * @param value Value to set for the additionalDataOptions property.
      */
     public void setAdditionalDataOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalDataOptions> value) {
         this.backingStore.set("additionalDataOptions", value);
     }
     /**
-     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * Sets the cloudAttachmentVersion property value. Specifies the number of most recent versions of cloud attachments to collect. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param value Value to set for the cloudAttachmentVersion property.
      */
     public void setCloudAttachmentVersion(@jakarta.annotation.Nullable final CloudAttachmentVersion value) {
         this.backingStore.set("cloudAttachmentVersion", value);
     }
     /**
-     * Sets the documentVersion property value. The documentVersion property
+     * Sets the documentVersion property value. Specifies the number of most recent versions of SharePoint documents to collect. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param value Value to set for the documentVersion property.
      */
     public void setDocumentVersion(@jakarta.annotation.Nullable final DocumentVersion value) {
         this.backingStore.set("documentVersion", value);
     }
     /**
-     * Sets the itemsToInclude property value. The itemsToInclude property
+     * Sets the itemsToInclude property value. The items to include in the review set. Possible values are: searchHits, partiallyIndexed, unknownFutureValue.
      * @param value Value to set for the itemsToInclude property.
      */
     public void setItemsToInclude(@jakarta.annotation.Nullable final EnumSet<ItemsToInclude> value) {

@@ -83,7 +83,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         return this.backingStore.get("siteCount");
     }
     /**
-     * Gets the statisticsOptions property value. The statisticsOptions property
+     * Gets the statisticsOptions property value. The options to generate statistics. Possible values are: includeRefiners, includeQueryStats, includeUnindexedStats, advancedIndexing, locationsWithoutHits, unknownFutureValue.
      * @return a {@link EnumSet<StatisticsOptions>}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         this.backingStore.set("siteCount", value);
     }
     /**
-     * Sets the statisticsOptions property value. The statisticsOptions property
+     * Sets the statisticsOptions property value. The options to generate statistics. Possible values are: includeRefiners, includeQueryStats, includeUnindexedStats, advancedIndexing, locationsWithoutHits, unknownFutureValue.
      * @param value Value to set for the statisticsOptions property.
      */
     public void setStatisticsOptions(@jakarta.annotation.Nullable final EnumSet<StatisticsOptions> value) {

@@ -60,7 +60,7 @@ public class ContainersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of fileStorageContainer objects that are visible to the caller. The containerTypeId filter parameter is required.
+     * Get a list of fileStorageContainer objects that are accessible to a caller. The containerTypeId filter parameter is required.
      * @return a {@link FileStorageContainerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/filestorage-list-containers?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class ContainersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of fileStorageContainer objects that are visible to the caller. The containerTypeId filter parameter is required.
+     * Get a list of fileStorageContainer objects that are accessible to a caller. The containerTypeId filter parameter is required.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -111,7 +111,7 @@ public class ContainersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainer::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of fileStorageContainer objects that are visible to the caller. The containerTypeId filter parameter is required.
+     * Get a list of fileStorageContainer objects that are accessible to a caller. The containerTypeId filter parameter is required.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class ContainersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of fileStorageContainer objects that are visible to the caller. The containerTypeId filter parameter is required.
+     * Get a list of fileStorageContainer objects that are accessible to a caller. The containerTypeId filter parameter is required.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -165,7 +165,7 @@ public class ContainersRequestBuilder extends BaseRequestBuilder {
         return new ContainersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of fileStorageContainer objects that are visible to the caller. The containerTypeId filter parameter is required.
+     * Get a list of fileStorageContainer objects that are accessible to a caller. The containerTypeId filter parameter is required.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -27,6 +27,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         return new FileStorageContainer();
     }
     /**
+     * Gets the columns property value. The columns property
+     * @return a {@link java.util.List<ColumnDefinition>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ColumnDefinition> getColumns() {
+        return this.backingStore.get("columns");
+    }
+    /**
      * Gets the containerTypeId property value. Container type ID of the fileStorageContainer. For details about container types, see Container Types. Each container must have only one container type. Read-only.
      * @return a {@link UUID}
      */
@@ -81,6 +89,7 @@ public class FileStorageContainer extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("containerTypeId", (n) -> { this.setContainerTypeId(n.getUUIDValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customProperties", (n) -> { this.setCustomProperties(n.getObjectValue(FileStorageContainerCustomPropertyDictionary::createFromDiscriminatorValue)); });
@@ -150,6 +159,7 @@ public class FileStorageContainer extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("columns", this.getColumns());
         writer.writeUUIDValue("containerTypeId", this.getContainerTypeId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("customProperties", this.getCustomProperties());
@@ -162,6 +172,13 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeObjectValue("viewpoint", this.getViewpoint());
+    }
+    /**
+     * Sets the columns property value. The columns property
+     * @param value Value to set for the columns property.
+     */
+    public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
+        this.backingStore.set("columns", value);
     }
     /**
      * Sets the containerTypeId property value. Container type ID of the fileStorageContainer. For details about container types, see Container Types. Each container must have only one container type. Read-only.

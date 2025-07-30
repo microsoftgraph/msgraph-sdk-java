@@ -3,6 +3,7 @@ package com.microsoft.graph.storage.filestorage.containers.item;
 import com.microsoft.graph.models.FileStorageContainer;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.storage.filestorage.containers.item.activate.ActivateRequestBuilder;
+import com.microsoft.graph.storage.filestorage.containers.item.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.storage.filestorage.containers.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.storage.filestorage.containers.item.lock.LockRequestBuilder;
 import com.microsoft.graph.storage.filestorage.containers.item.permanentdelete.PermanentDeleteRequestBuilder;
@@ -35,6 +36,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ActivateRequestBuilder activate() {
         return new ActivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.fileStorageContainer entity.
+     * @return a {@link ColumnsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ColumnsRequestBuilder columns() {
+        return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.fileStorageContainer entity.

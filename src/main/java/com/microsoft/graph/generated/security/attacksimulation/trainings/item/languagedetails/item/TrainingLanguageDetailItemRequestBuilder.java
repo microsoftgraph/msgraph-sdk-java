@@ -55,19 +55,21 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @return a {@link TrainingLanguageDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/traininglanguagedetail-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrainingLanguageDetail get() {
         return get(null);
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TrainingLanguageDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/traininglanguagedetail-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrainingLanguageDetail get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -23,6 +23,13 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.whatIfAnalysisResult": return new WhatIfAnalysisResult();
+            }
+        }
         return new ConditionalAccessPolicy();
     }
     /**
@@ -108,7 +115,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         return this.backingStore.get("state");
     }
     /**
-     * Gets the templateId property value. The templateId property
+     * Gets the templateId property value. Specifies the unique identifier of a Conditional Access template. Inherited from entity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +196,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the templateId property value. The templateId property
+     * Sets the templateId property value. Specifies the unique identifier of a Conditional Access template. Inherited from entity.
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {

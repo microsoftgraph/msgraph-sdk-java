@@ -45,9 +45,6 @@ import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.Article;
 import com.microsoft.graph.models.security.ArticleIndicator;
 import com.microsoft.graph.models.security.Artifact;
-import com.microsoft.graph.models.security.AuditCoreRoot;
-import com.microsoft.graph.models.security.AuditLogQuery;
-import com.microsoft.graph.models.security.AuditLogRecord;
 import com.microsoft.graph.models.security.AuthorityTemplate;
 import com.microsoft.graph.models.security.CaseEscaped;
 import com.microsoft.graph.models.security.CaseOperation;
@@ -739,6 +736,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
             case "#microsoft.graph.person": return new Person();
             case "#microsoft.graph.phoneAuthenticationMethod": return new PhoneAuthenticationMethod();
+            case "#microsoft.graph.phoneUserConversationMember": return new PhoneUserConversationMember();
             case "#microsoft.graph.pinnedChatMessageInfo": return new PinnedChatMessageInfo();
             case "#microsoft.graph.place": return new Place();
             case "#microsoft.graph.planner": return new Planner();
@@ -796,13 +794,16 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.provisioningObjectSummary": return new ProvisioningObjectSummary();
             case "#microsoft.graph.publicKeyInfrastructureRoot": return new PublicKeyInfrastructureRoot();
             case "#microsoft.graph.rbacApplication": return new RbacApplication();
+            case "#microsoft.graph.readingAssignmentSubmission": return new ReadingAssignmentSubmission();
             case "#microsoft.graph.recordOperation": return new RecordOperation();
             case "#microsoft.graph.recycleBin": return new RecycleBin();
             case "#microsoft.graph.recycleBinItem": return new RecycleBinItem();
             case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
+            case "#microsoft.graph.reflectCheckInResponse": return new ReflectCheckInResponse();
             case "#microsoft.graph.relyingPartyDetailedSummary": return new RelyingPartyDetailedSummary();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
             case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();
+            case "#microsoft.graph.reportsRoot": return new ReportsRoot();
             case "#microsoft.graph.request": return new Request();
             case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
             case "#microsoft.graph.resourceOperation": return new ResourceOperation();
@@ -841,9 +842,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.article": return new Article();
             case "#microsoft.graph.security.articleIndicator": return new ArticleIndicator();
             case "#microsoft.graph.security.artifact": return new Artifact();
-            case "#microsoft.graph.security.auditCoreRoot": return new AuditCoreRoot();
-            case "#microsoft.graph.security.auditLogQuery": return new AuditLogQuery();
-            case "#microsoft.graph.security.auditLogRecord": return new AuditLogRecord();
             case "#microsoft.graph.security.authorityTemplate": return new AuthorityTemplate();
             case "#microsoft.graph.security.case": return new CaseEscaped();
             case "#microsoft.graph.security.caseOperation": return new CaseOperation();
@@ -1107,6 +1105,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.vppToken": return new VppToken();
             case "#microsoft.graph.webApp": return new WebApp();
             case "#microsoft.graph.webPart": return new WebPart();
+            case "#microsoft.graph.whatIfAnalysisResult": return new WhatIfAnalysisResult();
             case "#microsoft.graph.win32LobApp": return new Win32LobApp();
             case "#microsoft.graph.windows10CompliancePolicy": return new Windows10CompliancePolicy();
             case "#microsoft.graph.windows10CustomConfiguration": return new Windows10CustomConfiguration();
@@ -1190,8 +1189,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.workbookTableSort": return new WorkbookTableSort();
             case "#microsoft.graph.workbookWorksheet": return new WorkbookWorksheet();
             case "#microsoft.graph.workbookWorksheetProtection": return new WorkbookWorksheetProtection();
-            case "#microsoft.graph.workforceIntegration": return new WorkforceIntegration();
-            case "#microsoft.graph.workingTimeSchedule": return new WorkingTimeSchedule();
         }
         return null;
     }
@@ -1203,6 +1200,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.workforceIntegration": return new WorkforceIntegration();
+            case "#microsoft.graph.workingTimeSchedule": return new WorkingTimeSchedule();
             case "#microsoft.graph.x509CertificateAuthenticationMethodConfiguration": return new X509CertificateAuthenticationMethodConfiguration();
             case "#microsoft.graph.x509CertificateCombinationConfiguration": return new X509CertificateCombinationConfiguration();
         }

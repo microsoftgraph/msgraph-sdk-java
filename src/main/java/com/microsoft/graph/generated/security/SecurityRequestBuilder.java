@@ -5,7 +5,6 @@ import com.microsoft.graph.models.Security;
 import com.microsoft.graph.security.alerts_v2.AlertsV2RequestBuilder;
 import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
-import com.microsoft.graph.security.auditlog.AuditLogRequestBuilder;
 import com.microsoft.graph.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.security.datasecurityandgovernance.DataSecurityAndGovernanceRequestBuilder;
 import com.microsoft.graph.security.identities.IdentitiesRequestBuilder;
@@ -59,14 +58,6 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AttackSimulationRequestBuilder attackSimulation() {
         return new AttackSimulationRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the auditLog property of the microsoft.graph.security entity.
-     * @return a {@link AuditLogRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public AuditLogRequestBuilder auditLog() {
-        return new AuditLogRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the cases property of the microsoft.graph.security entity.

@@ -192,6 +192,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("chatRestrictions", (n) -> { this.setChatRestrictions(n.getObjectValue(ChatRestrictions::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEndToEndEncryptionEnabled", (n) -> { this.setIsEndToEndEncryptionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isEntryExitAnnounced", (n) -> { this.setIsEntryExitAnnounced(n.getBooleanValue()); });
         deserializerMap.put("joinInformation", (n) -> { this.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("joinMeetingIdSettings", (n) -> { this.setJoinMeetingIdSettings(n.getObjectValue(JoinMeetingIdSettings::createFromDiscriminatorValue)); });
@@ -203,6 +204,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("videoTeleconferenceId", (n) -> { this.setVideoTeleconferenceId(n.getStringValue()); });
         deserializerMap.put("watermarkProtection", (n) -> { this.setWatermarkProtection(n.getObjectValue(WatermarkProtectionValues::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isEndToEndEncryptionEnabled property value. The isEndToEndEncryptionEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsEndToEndEncryptionEnabled() {
+        return this.backingStore.get("isEndToEndEncryptionEnabled");
     }
     /**
      * Gets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.
@@ -308,6 +317,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
         writer.writeObjectValue("chatRestrictions", this.getChatRestrictions());
+        writer.writeBooleanValue("isEndToEndEncryptionEnabled", this.getIsEndToEndEncryptionEnabled());
         writer.writeBooleanValue("isEntryExitAnnounced", this.getIsEntryExitAnnounced());
         writer.writeObjectValue("joinInformation", this.getJoinInformation());
         writer.writeObjectValue("joinMeetingIdSettings", this.getJoinMeetingIdSettings());
@@ -437,6 +447,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      */
     public void setChatRestrictions(@jakarta.annotation.Nullable final ChatRestrictions value) {
         this.backingStore.set("chatRestrictions", value);
+    }
+    /**
+     * Sets the isEndToEndEncryptionEnabled property value. The isEndToEndEncryptionEnabled property
+     * @param value Value to set for the isEndToEndEncryptionEnabled property.
+     */
+    public void setIsEndToEndEncryptionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isEndToEndEncryptionEnabled", value);
     }
     /**
      * Sets the isEntryExitAnnounced property value. Indicates whether to announce when callers join or leave.
