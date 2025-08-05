@@ -25,7 +25,7 @@ public class AppScope extends Entity implements Parsable {
         return new AppScope();
     }
     /**
-     * Gets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read only.
+     * Gets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class AppScope extends Entity implements Parsable {
         writer.writeStringValue("type", this.getType());
     }
     /**
-     * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read only.
+     * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

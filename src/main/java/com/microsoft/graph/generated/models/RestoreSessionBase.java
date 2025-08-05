@@ -79,6 +79,8 @@ public class RestoreSessionBase extends Entity implements Parsable {
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("restoreJobType", (n) -> { this.setRestoreJobType(n.getEnumValue(RestoreJobType::forValue)); });
+        deserializerMap.put("restoreSessionArtifactCount", (n) -> { this.setRestoreSessionArtifactCount(n.getObjectValue(RestoreSessionArtifactCount::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RestoreSessionStatus::forValue)); });
         return deserializerMap;
     }
@@ -97,6 +99,22 @@ public class RestoreSessionBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the restoreJobType property value. Indicates whether the restore session was created normally or by a bulk job.
+     * @return a {@link RestoreJobType}
+     */
+    @jakarta.annotation.Nullable
+    public RestoreJobType getRestoreJobType() {
+        return this.backingStore.get("restoreJobType");
+    }
+    /**
+     * Gets the restoreSessionArtifactCount property value. The number of metadata artifacts that belong to this restore session.
+     * @return a {@link RestoreSessionArtifactCount}
+     */
+    @jakarta.annotation.Nullable
+    public RestoreSessionArtifactCount getRestoreSessionArtifactCount() {
+        return this.backingStore.get("restoreSessionArtifactCount");
     }
     /**
      * Gets the status property value. Status of the restore session. The value is an aggregated status of the restored artifacts. The possible values are: draft, activating, active, completedWithError, completed, unknownFutureValue, failed. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: failed.
@@ -119,6 +137,8 @@ public class RestoreSessionBase extends Entity implements Parsable {
         writer.writeObjectValue("error", this.getError());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeEnumValue("restoreJobType", this.getRestoreJobType());
+        writer.writeObjectValue("restoreSessionArtifactCount", this.getRestoreSessionArtifactCount());
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
@@ -162,6 +182,20 @@ public class RestoreSessionBase extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the restoreJobType property value. Indicates whether the restore session was created normally or by a bulk job.
+     * @param value Value to set for the restoreJobType property.
+     */
+    public void setRestoreJobType(@jakarta.annotation.Nullable final RestoreJobType value) {
+        this.backingStore.set("restoreJobType", value);
+    }
+    /**
+     * Sets the restoreSessionArtifactCount property value. The number of metadata artifacts that belong to this restore session.
+     * @param value Value to set for the restoreSessionArtifactCount property.
+     */
+    public void setRestoreSessionArtifactCount(@jakarta.annotation.Nullable final RestoreSessionArtifactCount value) {
+        this.backingStore.set("restoreSessionArtifactCount", value);
     }
     /**
      * Sets the status property value. Status of the restore session. The value is an aggregated status of the restored artifacts. The possible values are: draft, activating, active, completedWithError, completed, unknownFutureValue, failed. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: failed.

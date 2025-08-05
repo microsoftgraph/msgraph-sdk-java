@@ -40,6 +40,7 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("restoredFolderId", (n) -> { this.setRestoredFolderId(n.getStringValue()); });
         deserializerMap.put("restoredFolderName", (n) -> { this.setRestoredFolderName(n.getStringValue()); });
+        deserializerMap.put("restoredItemCount", (n) -> { this.setRestoredItemCount(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
@@ -59,6 +60,14 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
         return this.backingStore.get("restoredFolderName");
     }
     /**
+     * Gets the restoredItemCount property value. The number of items that are being restored in the folder.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getRestoredItemCount() {
+        return this.backingStore.get("restoredItemCount");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -66,6 +75,7 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("restoredFolderId", this.getRestoredFolderId());
+        writer.writeIntegerValue("restoredItemCount", this.getRestoredItemCount());
     }
     /**
      * Sets the restoredFolderId property value. The new restored folder identifier for the user.
@@ -80,5 +90,12 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
      */
     public void setRestoredFolderName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("restoredFolderName", value);
+    }
+    /**
+     * Sets the restoredItemCount property value. The number of items that are being restored in the folder.
+     * @param value Value to set for the restoredItemCount property.
+     */
+    public void setRestoredItemCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("restoredItemCount", value);
     }
 }

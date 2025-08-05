@@ -78,7 +78,7 @@ public class AllMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/allMembers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of all members in a channel. It supports all types of channels. In the case of shared channels, it includes all cross-tenant and cross-team members in a channel.
+     * Get a list of all members in a channel. This API supports all channel types, including shared channels. For shared channels, the response includes:
      * @return a {@link ConversationMemberCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-allmembers?view=graph-rest-1.0">Find more info here</a>
@@ -88,7 +88,7 @@ public class AllMembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of all members in a channel. It supports all types of channels. In the case of shared channels, it includes all cross-tenant and cross-team members in a channel.
+     * Get a list of all members in a channel. This API supports all channel types, including shared channels. For shared channels, the response includes:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConversationMemberCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -127,7 +127,7 @@ public class AllMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of all members in a channel. It supports all types of channels. In the case of shared channels, it includes all cross-tenant and cross-team members in a channel.
+     * Get a list of all members in a channel. This API supports all channel types, including shared channels. For shared channels, the response includes:
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class AllMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of all members in a channel. It supports all types of channels. In the case of shared channels, it includes all cross-tenant and cross-team members in a channel.
+     * Get a list of all members in a channel. This API supports all channel types, including shared channels. For shared channels, the response includes:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +181,7 @@ public class AllMembersRequestBuilder extends BaseRequestBuilder {
         return new AllMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of all members in a channel. It supports all types of channels. In the case of shared channels, it includes all cross-tenant and cross-team members in a channel.
+     * Get a list of all members in a channel. This API supports all channel types, including shared channels. For shared channels, the response includes:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

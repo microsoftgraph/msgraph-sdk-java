@@ -239,7 +239,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
     }
     /**
-     * Create a new team under a group. In order to create a team, the group must have a least one owner. If the creation of the team call is delayed, you can retry the call up to three times before you have to wait for 15 minutes due to a propagation delay. If the group was created less than 15 minutes ago, the call might fail with a 404 error code due to replication delays. If the group was created less than 15 minutes ago, it&apos;s possible for a call to create a team to fail with a 404 error code, due to ongoing replication delays.The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
+     * Create a new team under a group. In order to create a team, the group must have at least one owner. If the group was created less than 15 minutes ago, calls to create a team might fail with a 404 Not Found error code because the group information didn&apos;t fully replicate.
      * @param body The request body
      * @return a {@link Team}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -250,7 +250,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * Create a new team under a group. In order to create a team, the group must have a least one owner. If the creation of the team call is delayed, you can retry the call up to three times before you have to wait for 15 minutes due to a propagation delay. If the group was created less than 15 minutes ago, the call might fail with a 404 error code due to replication delays. If the group was created less than 15 minutes ago, it&apos;s possible for a call to create a team to fail with a 404 error code, due to ongoing replication delays.The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
+     * Create a new team under a group. In order to create a team, the group must have at least one owner. If the group was created less than 15 minutes ago, calls to create a team might fail with a 404 Not Found error code because the group information didn&apos;t fully replicate.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Team}
@@ -306,7 +306,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new team under a group. In order to create a team, the group must have a least one owner. If the creation of the team call is delayed, you can retry the call up to three times before you have to wait for 15 minutes due to a propagation delay. If the group was created less than 15 minutes ago, the call might fail with a 404 error code due to replication delays. If the group was created less than 15 minutes ago, it&apos;s possible for a call to create a team to fail with a 404 error code, due to ongoing replication delays.The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
+     * Create a new team under a group. In order to create a team, the group must have at least one owner. If the group was created less than 15 minutes ago, calls to create a team might fail with a 404 Not Found error code because the group information didn&apos;t fully replicate.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -315,7 +315,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Create a new team under a group. In order to create a team, the group must have a least one owner. If the creation of the team call is delayed, you can retry the call up to three times before you have to wait for 15 minutes due to a propagation delay. If the group was created less than 15 minutes ago, the call might fail with a 404 error code due to replication delays. If the group was created less than 15 minutes ago, it&apos;s possible for a call to create a team to fail with a 404 error code, due to ongoing replication delays.The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
+     * Create a new team under a group. In order to create a team, the group must have at least one owner. If the group was created less than 15 minutes ago, calls to create a team might fail with a 404 Not Found error code because the group information didn&apos;t fully replicate.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

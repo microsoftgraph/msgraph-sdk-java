@@ -65,7 +65,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowedLobbyAdmitters");
     }
     /**
-     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
+     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
      * @return a {@link OnlineMeetingPresenters}
      */
     @jakarta.annotation.Nullable
@@ -358,7 +358,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("allowedLobbyAdmitters", value);
     }
     /**
-     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
+     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
      * @param value Value to set for the allowedPresenters property.
      */
     public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingPresenters value) {

@@ -26,7 +26,7 @@ public class GroupMembers extends SubjectSet implements Parsable {
         return new GroupMembers();
     }
     /**
-     * Gets the description property value. The name of the group in Microsoft Entra ID. Read only.
+     * Gets the description property value. The name of the group in Microsoft Entra ID. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class GroupMembers extends SubjectSet implements Parsable {
         writer.writeStringValue("groupId", this.getGroupId());
     }
     /**
-     * Sets the description property value. The name of the group in Microsoft Entra ID. Read only.
+     * Sets the description property value. The name of the group in Microsoft Entra ID. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

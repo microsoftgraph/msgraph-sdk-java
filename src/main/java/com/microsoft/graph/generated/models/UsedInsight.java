@@ -38,7 +38,7 @@ public class UsedInsight extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
+     * Gets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read-only.
      * @return a {@link UsageDetails}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class UsedInsight extends Entity implements Parsable {
         return this.backingStore.get("resource");
     }
     /**
-     * Gets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
+     * Gets the resourceReference property value. Reference properties of the used document, such as the URL and type of the document. Read-only
      * @return a {@link ResourceReference}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class UsedInsight extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
+     * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read-only.
      * @param value Value to set for the lastUsed property.
      */
     public void setLastUsed(@jakarta.annotation.Nullable final UsageDetails value) {
@@ -94,7 +94,7 @@ public class UsedInsight extends Entity implements Parsable {
         this.backingStore.set("resource", value);
     }
     /**
-     * Sets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
+     * Sets the resourceReference property value. Reference properties of the used document, such as the URL and type of the document. Read-only
      * @param value Value to set for the resourceReference property.
      */
     public void setResourceReference(@jakarta.annotation.Nullable final ResourceReference value) {
