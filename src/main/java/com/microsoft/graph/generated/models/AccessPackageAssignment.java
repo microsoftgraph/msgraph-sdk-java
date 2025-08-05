@@ -91,7 +91,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         return this.backingStore.get("state");
     }
     /**
-     * Gets the status property value. More information about the assignment lifecycle. Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered. Read-only.
+     * Gets the status property value. More information about the assignment lifecycle. Possible values include Delivering, Delivered, AutoAssignmentInGracePeriod, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the status property value. More information about the assignment lifecycle. Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered. Read-only.
+     * Sets the status property value. More information about the assignment lifecycle. Possible values include Delivering, Delivered, AutoAssignmentInGracePeriod, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
