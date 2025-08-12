@@ -35,7 +35,7 @@ public class CopilotAdmin extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the settings property value. Set of Microsoft 365 Copilot settings that can be added or modified. Read-only. Nullable.
+     * Gets the settings property value. The settings property
      * @return a {@link CopilotAdminSetting}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class CopilotAdmin extends Entity implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
-     * Sets the settings property value. Set of Microsoft 365 Copilot settings that can be added or modified. Read-only. Nullable.
+     * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final CopilotAdminSetting value) {

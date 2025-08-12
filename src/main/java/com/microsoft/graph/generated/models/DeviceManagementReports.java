@@ -6,9 +6,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Singleton entity that acts as a container for all reports functionality.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementReports extends Entity implements Parsable {
     /**

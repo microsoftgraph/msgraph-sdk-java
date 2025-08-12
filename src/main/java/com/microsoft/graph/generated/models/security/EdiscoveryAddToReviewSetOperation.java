@@ -60,6 +60,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         deserializerMap.put("cloudAttachmentVersion", (n) -> { this.setCloudAttachmentVersion(n.getEnumValue(CloudAttachmentVersion::forValue)); });
         deserializerMap.put("documentVersion", (n) -> { this.setDocumentVersion(n.getEnumValue(DocumentVersion::forValue)); });
         deserializerMap.put("itemsToInclude", (n) -> { this.setItemsToInclude(n.getEnumSetValue(ItemsToInclude::forValue)); });
+        deserializerMap.put("reportFileMetadata", (n) -> { this.setReportFileMetadata(n.getCollectionOfObjectValues(ReportFileMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("reviewSet", (n) -> { this.setReviewSet(n.getObjectValue(EdiscoveryReviewSet::createFromDiscriminatorValue)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -71,6 +72,14 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     @jakarta.annotation.Nullable
     public EnumSet<ItemsToInclude> getItemsToInclude() {
         return this.backingStore.get("itemsToInclude");
+    }
+    /**
+     * Gets the reportFileMetadata property value. Contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @return a {@link java.util.List<ReportFileMetadata>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ReportFileMetadata> getReportFileMetadata() {
+        return this.backingStore.get("reportFileMetadata");
     }
     /**
      * Gets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
@@ -99,6 +108,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         writer.writeEnumValue("cloudAttachmentVersion", this.getCloudAttachmentVersion());
         writer.writeEnumValue("documentVersion", this.getDocumentVersion());
         writer.writeEnumSetValue("itemsToInclude", this.getItemsToInclude());
+        writer.writeCollectionOfObjectValues("reportFileMetadata", this.getReportFileMetadata());
         writer.writeObjectValue("reviewSet", this.getReviewSet());
         writer.writeObjectValue("search", this.getSearch());
     }
@@ -129,6 +139,13 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     public void setItemsToInclude(@jakarta.annotation.Nullable final EnumSet<ItemsToInclude> value) {
         this.backingStore.set("itemsToInclude", value);
+    }
+    /**
+     * Sets the reportFileMetadata property value. Contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @param value Value to set for the reportFileMetadata property.
+     */
+    public void setReportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ReportFileMetadata> value) {
+        this.backingStore.set("reportFileMetadata", value);
     }
     /**
      * Sets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.

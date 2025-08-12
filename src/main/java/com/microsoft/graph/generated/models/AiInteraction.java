@@ -26,7 +26,7 @@ public class AiInteraction extends Entity implements Parsable {
         return new AiInteraction();
     }
     /**
-     * Gets the appClass property value. The data source for Copilot data. For example, IPM.SkypeTeams.Message.Copilot.Excel or IPM.SkypeTeams.Message.Copilot.Loop.
+     * Gets the appClass property value. The appClass property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("appClass");
     }
     /**
-     * Gets the attachments property value. The collection of documents attached to the interaction, such as cards and images.
+     * Gets the attachments property value. The attachments property
      * @return a {@link java.util.List<AiInteractionAttachment>}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("attachments");
     }
     /**
-     * Gets the body property value. The body of the message, including the text of the body and its body type.
+     * Gets the body property value. The body property
      * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("body");
     }
     /**
-     * Gets the contexts property value. The identifer that maps to all contexts associated with an interaction.
+     * Gets the contexts property value. The contexts property
      * @return a {@link java.util.List<AiInteractionContext>}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("contexts");
     }
     /**
-     * Gets the conversationType property value. The type of the conversation. For example, appchat or bizchat.
+     * Gets the conversationType property value. The conversationType property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("conversationType");
     }
     /**
-     * Gets the createdDateTime property value. The time when the interaction was created.
+     * Gets the createdDateTime property value. The createdDateTime property
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the etag property value. The timestamp of when the interaction was last modified.
+     * Gets the etag property value. The etag property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("interactionType");
     }
     /**
-     * Gets the links property value. The collection of links that appear in the interaction.
+     * Gets the links property value. The links property
      * @return a {@link java.util.List<AiInteractionLink>}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("links");
     }
     /**
-     * Gets the locale property value. The locale of the sender.
+     * Gets the locale property value. The locale property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("locale");
     }
     /**
-     * Gets the mentions property value. The collection of the entities that were mentioned in the interaction, including users, bots, and so on.
+     * Gets the mentions property value. The mentions property
      * @return a {@link java.util.List<AiInteractionMention>}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("mentions");
     }
     /**
-     * Gets the requestId property value. The identifier that groups a user prompt with its Copilot response.
+     * Gets the requestId property value. The requestId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class AiInteraction extends Entity implements Parsable {
         return this.backingStore.get("requestId");
     }
     /**
-     * Gets the sessionId property value. The thread ID or conversation identifier that maps to all Copilot sessions for the user.
+     * Gets the sessionId property value. The sessionId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -183,49 +183,49 @@ public class AiInteraction extends Entity implements Parsable {
         writer.writeStringValue("sessionId", this.getSessionId());
     }
     /**
-     * Sets the appClass property value. The data source for Copilot data. For example, IPM.SkypeTeams.Message.Copilot.Excel or IPM.SkypeTeams.Message.Copilot.Loop.
+     * Sets the appClass property value. The appClass property
      * @param value Value to set for the appClass property.
      */
     public void setAppClass(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appClass", value);
     }
     /**
-     * Sets the attachments property value. The collection of documents attached to the interaction, such as cards and images.
+     * Sets the attachments property value. The attachments property
      * @param value Value to set for the attachments property.
      */
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<AiInteractionAttachment> value) {
         this.backingStore.set("attachments", value);
     }
     /**
-     * Sets the body property value. The body of the message, including the text of the body and its body type.
+     * Sets the body property value. The body property
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.backingStore.set("body", value);
     }
     /**
-     * Sets the contexts property value. The identifer that maps to all contexts associated with an interaction.
+     * Sets the contexts property value. The contexts property
      * @param value Value to set for the contexts property.
      */
     public void setContexts(@jakarta.annotation.Nullable final java.util.List<AiInteractionContext> value) {
         this.backingStore.set("contexts", value);
     }
     /**
-     * Sets the conversationType property value. The type of the conversation. For example, appchat or bizchat.
+     * Sets the conversationType property value. The conversationType property
      * @param value Value to set for the conversationType property.
      */
     public void setConversationType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("conversationType", value);
     }
     /**
-     * Sets the createdDateTime property value. The time when the interaction was created.
+     * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the etag property value. The timestamp of when the interaction was last modified.
+     * Sets the etag property value. The etag property
      * @param value Value to set for the etag property.
      */
     public void setEtag(@jakarta.annotation.Nullable final String value) {
@@ -246,35 +246,35 @@ public class AiInteraction extends Entity implements Parsable {
         this.backingStore.set("interactionType", value);
     }
     /**
-     * Sets the links property value. The collection of links that appear in the interaction.
+     * Sets the links property value. The links property
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final java.util.List<AiInteractionLink> value) {
         this.backingStore.set("links", value);
     }
     /**
-     * Sets the locale property value. The locale of the sender.
+     * Sets the locale property value. The locale property
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("locale", value);
     }
     /**
-     * Sets the mentions property value. The collection of the entities that were mentioned in the interaction, including users, bots, and so on.
+     * Sets the mentions property value. The mentions property
      * @param value Value to set for the mentions property.
      */
     public void setMentions(@jakarta.annotation.Nullable final java.util.List<AiInteractionMention> value) {
         this.backingStore.set("mentions", value);
     }
     /**
-     * Sets the requestId property value. The identifier that groups a user prompt with its Copilot response.
+     * Sets the requestId property value. The requestId property
      * @param value Value to set for the requestId property.
      */
     public void setRequestId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("requestId", value);
     }
     /**
-     * Sets the sessionId property value. The thread ID or conversation identifier that maps to all Copilot sessions for the user.
+     * Sets the sessionId property value. The sessionId property
      * @param value Value to set for the sessionId property.
      */
     public void setSessionId(@jakarta.annotation.Nullable final String value) {

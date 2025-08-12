@@ -65,6 +65,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         deserializerMap.put("microsoftStoreForBusinessLastSuccessfulSyncDateTime", (n) -> { this.setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("mobileAppCategories", (n) -> { this.setMobileAppCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileAppConfigurations", (n) -> { this.setMobileAppConfigurations(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppRelationships", (n) -> { this.setMobileAppRelationships(n.getCollectionOfObjectValues(MobileAppRelationship::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileApps", (n) -> { this.setMobileApps(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
         deserializerMap.put("targetedManagedAppConfigurations", (n) -> { this.setTargetedManagedAppConfigurations(n.getCollectionOfObjectValues(TargetedManagedAppConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("vppTokens", (n) -> { this.setVppTokens(n.getCollectionOfObjectValues(VppToken::createFromDiscriminatorValue)); });
@@ -168,6 +169,14 @@ public class DeviceAppManagement extends Entity implements Parsable {
         return this.backingStore.get("mobileAppConfigurations");
     }
     /**
+     * Gets the mobileAppRelationships property value. The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
+     * @return a {@link java.util.List<MobileAppRelationship>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MobileAppRelationship> getMobileAppRelationships() {
+        return this.backingStore.get("mobileAppRelationships");
+    }
+    /**
      * Gets the mobileApps property value. The mobile apps.
      * @return a {@link java.util.List<MobileApp>}
      */
@@ -220,6 +229,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("microsoftStoreForBusinessLastSuccessfulSyncDateTime", this.getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime());
         writer.writeCollectionOfObjectValues("mobileAppCategories", this.getMobileAppCategories());
         writer.writeCollectionOfObjectValues("mobileAppConfigurations", this.getMobileAppConfigurations());
+        writer.writeCollectionOfObjectValues("mobileAppRelationships", this.getMobileAppRelationships());
         writer.writeCollectionOfObjectValues("mobileApps", this.getMobileApps());
         writer.writeCollectionOfObjectValues("targetedManagedAppConfigurations", this.getTargetedManagedAppConfigurations());
         writer.writeCollectionOfObjectValues("vppTokens", this.getVppTokens());
@@ -322,6 +332,13 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     public void setMobileAppConfigurations(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfiguration> value) {
         this.backingStore.set("mobileAppConfigurations", value);
+    }
+    /**
+     * Sets the mobileAppRelationships property value. The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
+     * @param value Value to set for the mobileAppRelationships property.
+     */
+    public void setMobileAppRelationships(@jakarta.annotation.Nullable final java.util.List<MobileAppRelationship> value) {
+        this.backingStore.set("mobileAppRelationships", value);
     }
     /**
      * Sets the mobileApps property value. The mobile apps.

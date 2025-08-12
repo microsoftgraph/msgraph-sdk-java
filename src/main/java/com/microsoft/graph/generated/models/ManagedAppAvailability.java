@@ -10,7 +10,7 @@ import java.util.Objects;
 public enum ManagedAppAvailability implements ValuedEnum {
     /** A globally available app to all tenants. */
     Global("global"),
-    /** A line of business apps private to an organization. */
+    /** A line-of-business apps private to an organization. */
     LineOfBusiness("lineOfBusiness");
     public final String value;
     ManagedAppAvailability(final String value) {

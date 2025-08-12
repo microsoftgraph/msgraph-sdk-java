@@ -56,6 +56,14 @@ public class CustomExtensionOverwriteConfiguration implements AdditionalDataHold
         return this.backingStore;
     }
     /**
+     * Gets the behaviorOnError property value. The behaviorOnError property
+     * @return a {@link CustomExtensionBehaviorOnError}
+     */
+    @jakarta.annotation.Nullable
+    public CustomExtensionBehaviorOnError getBehaviorOnError() {
+        return this.backingStore.get("behaviorOnError");
+    }
+    /**
      * Gets the clientConfiguration property value. Configuration regarding properties of the custom extension which can be overwritten per event listener. If no values are provided, the properties on the custom extension are used.
      * @return a {@link CustomExtensionClientConfiguration}
      */
@@ -69,7 +77,8 @@ public class CustomExtensionOverwriteConfiguration implements AdditionalDataHold
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("behaviorOnError", (n) -> { this.setBehaviorOnError(n.getObjectValue(CustomExtensionBehaviorOnError::createFromDiscriminatorValue)); });
         deserializerMap.put("clientConfiguration", (n) -> { this.setClientConfiguration(n.getObjectValue(CustomExtensionClientConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -88,6 +97,7 @@ public class CustomExtensionOverwriteConfiguration implements AdditionalDataHold
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("behaviorOnError", this.getBehaviorOnError());
         writer.writeObjectValue("clientConfiguration", this.getClientConfiguration());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +116,13 @@ public class CustomExtensionOverwriteConfiguration implements AdditionalDataHold
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the behaviorOnError property value. The behaviorOnError property
+     * @param value Value to set for the behaviorOnError property.
+     */
+    public void setBehaviorOnError(@jakarta.annotation.Nullable final CustomExtensionBehaviorOnError value) {
+        this.backingStore.set("behaviorOnError", value);
     }
     /**
      * Sets the clientConfiguration property value. Configuration regarding properties of the custom extension which can be overwritten per event listener. If no values are provided, the properties on the custom extension are used.

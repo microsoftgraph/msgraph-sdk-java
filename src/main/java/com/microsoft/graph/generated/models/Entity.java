@@ -648,6 +648,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.mobileAppCategory": return new MobileAppCategory();
             case "#microsoft.graph.mobileAppContent": return new MobileAppContent();
             case "#microsoft.graph.mobileAppContentFile": return new MobileAppContentFile();
+            case "#microsoft.graph.mobileAppRelationship": return new MobileAppRelationship();
             case "#microsoft.graph.mobileAppTroubleshootingEvent": return new MobileAppTroubleshootingEvent();
             case "#microsoft.graph.mobileContainedApp": return new MobileContainedApp();
             case "#microsoft.graph.mobileLobApp": return new MobileLobApp();
@@ -673,11 +674,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.onAuthenticationMethodLoadStartListener": return new OnAuthenticationMethodLoadStartListener();
             case "#microsoft.graph.oneDriveForBusinessProtectionPolicy": return new OneDriveForBusinessProtectionPolicy();
             case "#microsoft.graph.oneDriveForBusinessRestoreSession": return new OneDriveForBusinessRestoreSession();
+            case "#microsoft.graph.onEmailOtpSendListener": return new OnEmailOtpSendListener();
             case "#microsoft.graph.onenote": return new Onenote();
             case "#microsoft.graph.onenoteEntityBaseModel": return new OnenoteEntityBaseModel();
             case "#microsoft.graph.onenoteEntityHierarchyModel": return new OnenoteEntityHierarchyModel();
-            case "#microsoft.graph.onenoteEntitySchemaObjectModel": return new OnenoteEntitySchemaObjectModel();
-            case "#microsoft.graph.onenoteOperation": return new OnenoteOperation();
         }
         return null;
     }
@@ -689,12 +689,15 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.onenoteEntitySchemaObjectModel": return new OnenoteEntitySchemaObjectModel();
+            case "#microsoft.graph.onenoteOperation": return new OnenoteOperation();
             case "#microsoft.graph.onenotePage": return new OnenotePage();
             case "#microsoft.graph.onenoteResource": return new OnenoteResource();
             case "#microsoft.graph.onenoteSection": return new OnenoteSection();
             case "#microsoft.graph.onInteractiveAuthFlowStartListener": return new OnInteractiveAuthFlowStartListener();
             case "#microsoft.graph.onlineMeeting": return new OnlineMeeting();
             case "#microsoft.graph.onlineMeetingBase": return new OnlineMeetingBase();
+            case "#microsoft.graph.onOtpSendCustomExtension": return new OnOtpSendCustomExtension();
             case "#microsoft.graph.onPremisesConditionalAccessSettings": return new OnPremisesConditionalAccessSettings();
             case "#microsoft.graph.onPremisesDirectorySynchronization": return new OnPremisesDirectorySynchronization();
             case "#microsoft.graph.onTokenIssuanceStartCustomExtension": return new OnTokenIssuanceStartCustomExtension();
@@ -1186,9 +1189,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.workbookTable": return new WorkbookTable();
             case "#microsoft.graph.workbookTableColumn": return new WorkbookTableColumn();
             case "#microsoft.graph.workbookTableRow": return new WorkbookTableRow();
-            case "#microsoft.graph.workbookTableSort": return new WorkbookTableSort();
-            case "#microsoft.graph.workbookWorksheet": return new WorkbookWorksheet();
-            case "#microsoft.graph.workbookWorksheetProtection": return new WorkbookWorksheetProtection();
         }
         return null;
     }
@@ -1200,6 +1200,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.workbookTableSort": return new WorkbookTableSort();
+            case "#microsoft.graph.workbookWorksheet": return new WorkbookWorksheet();
+            case "#microsoft.graph.workbookWorksheetProtection": return new WorkbookWorksheetProtection();
             case "#microsoft.graph.workforceIntegration": return new WorkforceIntegration();
             case "#microsoft.graph.workingTimeSchedule": return new WorkingTimeSchedule();
             case "#microsoft.graph.x509CertificateAuthenticationMethodConfiguration": return new X509CertificateAuthenticationMethodConfiguration();

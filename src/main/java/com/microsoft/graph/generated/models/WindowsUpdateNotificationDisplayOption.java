@@ -16,7 +16,7 @@ public enum WindowsUpdateNotificationDisplayOption implements ValuedEnum {
     RestartWarningsOnly("restartWarningsOnly"),
     /** Turn off all notifications, including restart warnings. */
     DisableAllNotifications("disableAllNotifications"),
-    /** Evolvable enum member */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsUpdateNotificationDisplayOption(final String value) {

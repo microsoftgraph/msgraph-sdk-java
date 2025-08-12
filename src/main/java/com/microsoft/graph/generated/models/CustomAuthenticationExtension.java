@@ -29,10 +29,19 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
             switch (mappingValue) {
                 case "#microsoft.graph.onAttributeCollectionStartCustomExtension": return new OnAttributeCollectionStartCustomExtension();
                 case "#microsoft.graph.onAttributeCollectionSubmitCustomExtension": return new OnAttributeCollectionSubmitCustomExtension();
+                case "#microsoft.graph.onOtpSendCustomExtension": return new OnOtpSendCustomExtension();
                 case "#microsoft.graph.onTokenIssuanceStartCustomExtension": return new OnTokenIssuanceStartCustomExtension();
             }
         }
         return new CustomAuthenticationExtension();
+    }
+    /**
+     * Gets the behaviorOnError property value. The behaviour on error for the custom authentication extension.
+     * @return a {@link CustomExtensionBehaviorOnError}
+     */
+    @jakarta.annotation.Nullable
+    public CustomExtensionBehaviorOnError getBehaviorOnError() {
+        return this.backingStore.get("behaviorOnError");
     }
     /**
      * The deserialization information for the current model
@@ -41,6 +50,7 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("behaviorOnError", (n) -> { this.setBehaviorOnError(n.getObjectValue(CustomExtensionBehaviorOnError::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -50,5 +60,13 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("behaviorOnError", this.getBehaviorOnError());
+    }
+    /**
+     * Sets the behaviorOnError property value. The behaviour on error for the custom authentication extension.
+     * @param value Value to set for the behaviorOnError property.
+     */
+    public void setBehaviorOnError(@jakarta.annotation.Nullable final CustomExtensionBehaviorOnError value) {
+        this.backingStore.set("behaviorOnError", value);
     }
 }
