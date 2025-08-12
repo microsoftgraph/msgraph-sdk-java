@@ -35,7 +35,7 @@ public class CopilotAdminSetting extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the limitedMode property value. Represents a setting that controls whether users of Microsoft 365 Copilot in Teams meetings can receive responses to sentiment-related prompts. Read-only. Nullable.
+     * Gets the limitedMode property value. The limitedMode property
      * @return a {@link CopilotAdminLimitedMode}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class CopilotAdminSetting extends Entity implements Parsable {
         writer.writeObjectValue("limitedMode", this.getLimitedMode());
     }
     /**
-     * Sets the limitedMode property value. Represents a setting that controls whether users of Microsoft 365 Copilot in Teams meetings can receive responses to sentiment-related prompts. Read-only. Nullable.
+     * Sets the limitedMode property value. The limitedMode property
      * @param value Value to set for the limitedMode property.
      */
     public void setLimitedMode(@jakarta.annotation.Nullable final CopilotAdminLimitedMode value) {

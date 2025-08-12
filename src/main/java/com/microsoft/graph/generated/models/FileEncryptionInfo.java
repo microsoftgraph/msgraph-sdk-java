@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Contains properties for file encryption information for the content version of a line of business app.
+ * Contains properties for file encryption information for the content version of a line-of-business app.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Parsable {

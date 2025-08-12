@@ -10,6 +10,7 @@ import com.microsoft.graph.deviceappmanagement.managedebooks.ManagedEBooksReques
 import com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.MdmWindowsInformationProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileappcategories.MobileAppCategoriesRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.MobileAppConfigurationsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapprelationships.MobileAppRelationshipsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.MobileAppsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.syncmicrosoftstoreforbusinessapps.SyncMicrosoftStoreForBusinessAppsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.TargetedManagedAppConfigurationsRequestBuilder;
@@ -116,6 +117,14 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
         return new MobileAppConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the mobileAppRelationships property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link MobileAppRelationshipsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MobileAppRelationshipsRequestBuilder mobileAppRelationships() {
+        return new MobileAppRelationshipsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.
      * @return a {@link MobileAppsRequestBuilder}
      */
@@ -200,7 +209,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link DeviceAppManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-partnerintegration-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement patch(@jakarta.annotation.Nonnull final DeviceAppManagement body) {
@@ -212,7 +221,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceAppManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-partnerintegration-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement patch(@jakarta.annotation.Nonnull final DeviceAppManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

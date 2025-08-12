@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Devices that are managed or pre-enrolled through Intune
+ * Devices that are managed or pre-enrolled through Intune. Limited support for $filter: Only properties whose descriptions mention support for $filter may be used, and combinations of those filtered properties must use &apos;and&apos;, not &apos;or&apos;.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDevice extends Entity implements Parsable {

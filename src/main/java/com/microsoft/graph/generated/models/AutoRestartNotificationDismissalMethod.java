@@ -14,7 +14,7 @@ public enum AutoRestartNotificationDismissalMethod implements ValuedEnum {
     Automatic("automatic"),
     /** User dismissal. Allows the user to dismiss the notification */
     User("user"),
-    /** Evolvable enum member */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AutoRestartNotificationDismissalMethod(final String value) {

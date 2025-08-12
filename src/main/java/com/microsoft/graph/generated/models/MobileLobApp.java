@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * An abstract base class containing properties for all mobile line of business apps.
+ * An abstract base class containing properties for all mobile line-of-business apps.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileLobApp extends MobileApp implements Parsable {

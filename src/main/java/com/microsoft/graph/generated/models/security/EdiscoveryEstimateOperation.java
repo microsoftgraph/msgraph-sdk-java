@@ -35,6 +35,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         deserializerMap.put("indexedItemCount", (n) -> { this.setIndexedItemCount(n.getLongValue()); });
         deserializerMap.put("indexedItemsSize", (n) -> { this.setIndexedItemsSize(n.getLongValue()); });
         deserializerMap.put("mailboxCount", (n) -> { this.setMailboxCount(n.getIntegerValue()); });
+        deserializerMap.put("reportFileMetadata", (n) -> { this.setReportFileMetadata(n.getCollectionOfObjectValues(ReportFileMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         deserializerMap.put("siteCount", (n) -> { this.setSiteCount(n.getIntegerValue()); });
         deserializerMap.put("statisticsOptions", (n) -> { this.setStatisticsOptions(n.getEnumSetValue(StatisticsOptions::forValue)); });
@@ -65,6 +66,14 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     @jakarta.annotation.Nullable
     public Integer getMailboxCount() {
         return this.backingStore.get("mailboxCount");
+    }
+    /**
+     * Gets the reportFileMetadata property value. Contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @return a {@link java.util.List<ReportFileMetadata>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ReportFileMetadata> getReportFileMetadata() {
+        return this.backingStore.get("reportFileMetadata");
     }
     /**
      * Gets the search property value. eDiscovery search.
@@ -116,6 +125,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
         writer.writeLongValue("indexedItemCount", this.getIndexedItemCount());
         writer.writeLongValue("indexedItemsSize", this.getIndexedItemsSize());
         writer.writeIntegerValue("mailboxCount", this.getMailboxCount());
+        writer.writeCollectionOfObjectValues("reportFileMetadata", this.getReportFileMetadata());
         writer.writeObjectValue("search", this.getSearch());
         writer.writeIntegerValue("siteCount", this.getSiteCount());
         writer.writeEnumSetValue("statisticsOptions", this.getStatisticsOptions());
@@ -142,6 +152,13 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     public void setMailboxCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("mailboxCount", value);
+    }
+    /**
+     * Sets the reportFileMetadata property value. Contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @param value Value to set for the reportFileMetadata property.
+     */
+    public void setReportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ReportFileMetadata> value) {
+        this.backingStore.set("reportFileMetadata", value);
     }
     /**
      * Sets the search property value. eDiscovery search.

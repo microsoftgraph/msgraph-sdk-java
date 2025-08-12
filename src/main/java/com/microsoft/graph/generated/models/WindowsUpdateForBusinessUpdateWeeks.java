@@ -20,7 +20,7 @@ public enum WindowsUpdateForBusinessUpdateWeeks implements ValuedEnum {
     FourthWeek("fourthWeek"),
     /** Scheduled the update installation on every week of the month */
     EveryWeek("everyWeek"),
-    /** Evolvable enum member */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsUpdateForBusinessUpdateWeeks(final String value) {

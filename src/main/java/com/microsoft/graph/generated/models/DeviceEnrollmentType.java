@@ -33,7 +33,9 @@ public enum DeviceEnrollmentType implements ValuedEnum {
     /** Indicates the device is enrolled via Apple User Enrollment with Company Portal. It results in an enrollment with a new partition for managed apps and data and which supports a limited set of management capabilities */
     AppleUserEnrollment("appleUserEnrollment"),
     /** Indicates the device is enrolled via Apple User Enrollment with Company Portal using a device enrollment manager user. It results in an enrollment with a new partition for managed apps and data and which supports a limited set of management capabilities */
-    AppleUserEnrollmentWithServiceAccount("appleUserEnrollmentWithServiceAccount");
+    AppleUserEnrollmentWithServiceAccount("appleUserEnrollmentWithServiceAccount"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceEnrollmentType(final String value) {
         this.value = value;
@@ -57,6 +59,7 @@ public enum DeviceEnrollmentType implements ValuedEnum {
             case "windowsAzureADJoinUsingDeviceAuth": return WindowsAzureADJoinUsingDeviceAuth;
             case "appleUserEnrollment": return AppleUserEnrollment;
             case "appleUserEnrollmentWithServiceAccount": return AppleUserEnrollmentWithServiceAccount;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

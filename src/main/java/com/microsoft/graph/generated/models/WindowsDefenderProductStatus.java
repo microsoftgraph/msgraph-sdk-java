@@ -18,11 +18,11 @@ public enum WindowsDefenderProductStatus implements ValuedEnum {
     PendingFullScanDueToThreatAction("pendingFullScanDueToThreatAction"),
     /** Pending reboot due to threat action */
     PendingRebootDueToThreatAction("pendingRebootDueToThreatAction"),
-    /** Pending manual steps due to threat action  */
+    /** Pending manual steps due to threat action */
     PendingManualStepsDueToThreatAction("pendingManualStepsDueToThreatAction"),
-    /** AV signatures out of date */
+    /** Antivirus (AV) signatures out of date */
     AvSignaturesOutOfDate("avSignaturesOutOfDate"),
-    /** AS signatures out of date */
+    /** Antisypware (AS) signatures out of date */
     AsSignaturesOutOfDate("asSignaturesOutOfDate"),
     /** No quick scan has happened for a specified period */
     NoQuickScanHappenedForSpecifiedPeriod("noQuickScanHappenedForSpecifiedPeriod"),

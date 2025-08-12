@@ -11,7 +11,7 @@ public enum DiskType implements ValuedEnum {
     Hdd("hdd"),
     /** Enum member for SSD devices. */
     Ssd("ssd"),
-    /** Evolvable enumeration sentinel value.Do not use. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DiskType(final String value) {

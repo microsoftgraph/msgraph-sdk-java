@@ -45,7 +45,7 @@ public class AiInteractionMentionedIdentitySet extends IdentitySet implements Pa
         return deserializerMap;
     }
     /**
-     * Gets the tag property value. The tag details.
+     * Gets the tag property value. The tag property
      * @return a {@link TeamworkTagIdentity}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class AiInteractionMentionedIdentitySet extends IdentitySet implements Pa
         this.backingStore.set("conversation", value);
     }
     /**
-     * Sets the tag property value. The tag details.
+     * Sets the tag property value. The tag property
      * @param value Value to set for the tag property.
      */
     public void setTag(@jakarta.annotation.Nullable final TeamworkTagIdentity value) {

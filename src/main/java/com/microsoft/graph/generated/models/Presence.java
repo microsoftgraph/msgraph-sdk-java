@@ -33,7 +33,7 @@ public class Presence extends Entity implements Parsable {
         return this.backingStore.get("activity");
     }
     /**
-     * Gets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
+     * Gets the availability property value. The base presence information for a user. Possible values are Available, availableIdle,  Away, beRightBack, Busy, busyIdle, DoNotDisturb, Offline, presenceUnknown.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class Presence extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the outOfOfficeSettings property value. The outOfOfficeSettings property
+     * Gets the outOfOfficeSettings property value. The user&apos;s out-of-office settings.
      * @return a {@link OutOfOfficeSettings}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class Presence extends Entity implements Parsable {
         return this.backingStore.get("outOfOfficeSettings");
     }
     /**
-     * Gets the sequenceNumber property value. The sequenceNumber property
+     * Gets the sequenceNumber property value. The lexicographically sortable string stamp that represents the version of a presence object.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -98,21 +98,21 @@ public class Presence extends Entity implements Parsable {
         this.backingStore.set("activity", value);
     }
     /**
-     * Sets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
+     * Sets the availability property value. The base presence information for a user. Possible values are Available, availableIdle,  Away, beRightBack, Busy, busyIdle, DoNotDisturb, Offline, presenceUnknown.
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("availability", value);
     }
     /**
-     * Sets the outOfOfficeSettings property value. The outOfOfficeSettings property
+     * Sets the outOfOfficeSettings property value. The user&apos;s out-of-office settings.
      * @param value Value to set for the outOfOfficeSettings property.
      */
     public void setOutOfOfficeSettings(@jakarta.annotation.Nullable final OutOfOfficeSettings value) {
         this.backingStore.set("outOfOfficeSettings", value);
     }
     /**
-     * Sets the sequenceNumber property value. The sequenceNumber property
+     * Sets the sequenceNumber property value. The lexicographically sortable string stamp that represents the version of a presence object.
      * @param value Value to set for the sequenceNumber property.
      */
     public void setSequenceNumber(@jakarta.annotation.Nullable final String value) {

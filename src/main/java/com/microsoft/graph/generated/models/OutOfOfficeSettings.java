@@ -68,7 +68,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the isOutOfOffice property value. The isOutOfOffice property
+     * Gets the isOutOfOffice property value. If true, either of the following is met:The current time falls within the out-of-office window configured in Outlook or Teams.An event marked as &apos;Show as Out of Office&apos; appears on the user&apos;s calendar.Otherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("isOutOfOffice");
     }
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. The out-of-office message configured by the user in the Outlook client (Automatic replies) or the Teams client (Schedule out of office).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the isOutOfOffice property value. The isOutOfOffice property
+     * Sets the isOutOfOffice property value. If true, either of the following is met:The current time falls within the out-of-office window configured in Outlook or Teams.An event marked as &apos;Show as Out of Office&apos; appears on the user&apos;s calendar.Otherwise, false.
      * @param value Value to set for the isOutOfOffice property.
      */
     public void setIsOutOfOffice(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isOutOfOffice", value);
     }
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. The out-of-office message configured by the user in the Outlook client (Automatic replies) or the Teams client (Schedule out of office).
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
