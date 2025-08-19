@@ -206,7 +206,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEndToEndEncryptionEnabled property value. The isEndToEndEncryptionEnabled property
+     * Gets the isEndToEndEncryptionEnabled property value. Indicates whether end-to-end encryption (E2EE) is enabled for the online meeting.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -449,7 +449,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("chatRestrictions", value);
     }
     /**
-     * Sets the isEndToEndEncryptionEnabled property value. The isEndToEndEncryptionEnabled property
+     * Sets the isEndToEndEncryptionEnabled property value. Indicates whether end-to-end encryption (E2EE) is enabled for the online meeting.
      * @param value Value to set for the isEndToEndEncryptionEnabled property.
      */
     public void setIsEndToEndEncryptionEnabled(@jakarta.annotation.Nullable final Boolean value) {
