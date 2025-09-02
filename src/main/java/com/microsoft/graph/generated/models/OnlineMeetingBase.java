@@ -57,6 +57,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowBreakoutRooms");
     }
     /**
+     * Gets the allowCopyingAndSharingMeetingContent property value. The allowCopyingAndSharingMeetingContent property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowCopyingAndSharingMeetingContent() {
+        return this.backingStore.get("allowCopyingAndSharingMeetingContent");
+    }
+    /**
      * Gets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. Possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
      * @return a {@link AllowedLobbyAdmitterRoles}
      */
@@ -178,6 +186,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("allowAttendeeToEnableCamera", (n) -> { this.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
         deserializerMap.put("allowAttendeeToEnableMic", (n) -> { this.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
         deserializerMap.put("allowBreakoutRooms", (n) -> { this.setAllowBreakoutRooms(n.getBooleanValue()); });
+        deserializerMap.put("allowCopyingAndSharingMeetingContent", (n) -> { this.setAllowCopyingAndSharingMeetingContent(n.getBooleanValue()); });
         deserializerMap.put("allowedLobbyAdmitters", (n) -> { this.setAllowedLobbyAdmitters(n.getEnumValue(AllowedLobbyAdmitterRoles::forValue)); });
         deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters::forValue)); });
         deserializerMap.put("allowLiveShare", (n) -> { this.setAllowLiveShare(n.getEnumValue(MeetingLiveShareOptions::forValue)); });
@@ -303,6 +312,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeBooleanValue("allowAttendeeToEnableCamera", this.getAllowAttendeeToEnableCamera());
         writer.writeBooleanValue("allowAttendeeToEnableMic", this.getAllowAttendeeToEnableMic());
         writer.writeBooleanValue("allowBreakoutRooms", this.getAllowBreakoutRooms());
+        writer.writeBooleanValue("allowCopyingAndSharingMeetingContent", this.getAllowCopyingAndSharingMeetingContent());
         writer.writeEnumValue("allowedLobbyAdmitters", this.getAllowedLobbyAdmitters());
         writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
         writer.writeEnumValue("allowLiveShare", this.getAllowLiveShare());
@@ -349,6 +359,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      */
     public void setAllowBreakoutRooms(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowBreakoutRooms", value);
+    }
+    /**
+     * Sets the allowCopyingAndSharingMeetingContent property value. The allowCopyingAndSharingMeetingContent property
+     * @param value Value to set for the allowCopyingAndSharingMeetingContent property.
+     */
+    public void setAllowCopyingAndSharingMeetingContent(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowCopyingAndSharingMeetingContent", value);
     }
     /**
      * Sets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. Possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
