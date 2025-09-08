@@ -4,17 +4,17 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Storage locations where managed apps can potentially store their data
+ * The storage locations where managed apps can potentially store their data.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppDataStorageLocation implements ValuedEnum {
-    /** OneDrive for business */
+    /** Indicates allowed storage location for the managed app to save files is &apos;OneDrive for Business&apos;. */
     OneDriveForBusiness("oneDriveForBusiness"),
-    /** SharePoint */
+    /** Indicates allowed storage location for the managed app to save files is &apos;Sharepoint&apos;. */
     SharePoint("sharePoint"),
-    /** Box */
+    /** Indicates that the allowed storage location for a managed app to save files is to &apos;Box&apos;. Box is a non-Microsoft solution that enables cloud-based file storage capabilities. */
     Box("box"),
-    /** Local storage on the device */
+    /** Indicates allowed storage location for the managed app to save files is local storage on the device. */
     LocalStorage("localStorage");
     public final String value;
     ManagedAppDataStorageLocation(final String value) {

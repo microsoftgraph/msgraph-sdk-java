@@ -30,6 +30,14 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return new Win32LobApp();
     }
     /**
+     * Gets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the `allowedArchitectures` property, the value of the `applicableArchitectures` property is set to `none`. Possible values are: `null`, `x86`, `x64`, `arm64`.
+     * @return a {@link EnumSet<WindowsArchitecture>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<WindowsArchitecture> getAllowedArchitectures() {
+        return this.backingStore.get("allowedArchitectures");
+    }
+    /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return a {@link EnumSet<WindowsArchitecture>}
      */
@@ -44,6 +52,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedArchitectures", (n) -> { this.setAllowedArchitectures(n.getEnumSetValue(WindowsArchitecture::forValue)); });
         deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture::forValue)); });
         deserializerMap.put("installCommandLine", (n) -> { this.setInstallCommandLine(n.getStringValue()); });
         deserializerMap.put("installExperience", (n) -> { this.setInstallExperience(n.getObjectValue(Win32LobAppInstallExperience::createFromDiscriminatorValue)); });
@@ -162,6 +171,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumSetValue("allowedArchitectures", this.getAllowedArchitectures());
         writer.writeEnumSetValue("applicableArchitectures", this.getApplicableArchitectures());
         writer.writeStringValue("installCommandLine", this.getInstallCommandLine());
         writer.writeObjectValue("installExperience", this.getInstallExperience());
@@ -175,6 +185,13 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         writer.writeCollectionOfObjectValues("rules", this.getRules());
         writer.writeStringValue("setupFilePath", this.getSetupFilePath());
         writer.writeStringValue("uninstallCommandLine", this.getUninstallCommandLine());
+    }
+    /**
+     * Sets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the `allowedArchitectures` property, the value of the `applicableArchitectures` property is set to `none`. Possible values are: `null`, `x86`, `x64`, `arm64`.
+     * @param value Value to set for the allowedArchitectures property.
+     */
+    public void setAllowedArchitectures(@jakarta.annotation.Nullable final EnumSet<WindowsArchitecture> value) {
+        this.backingStore.set("allowedArchitectures", value);
     }
     /**
      * Sets the applicableArchitectures property value. Contains properties for Windows architecture.

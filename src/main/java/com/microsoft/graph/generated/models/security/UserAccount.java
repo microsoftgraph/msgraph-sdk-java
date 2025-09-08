@@ -10,6 +10,7 @@ import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable {
     /**
@@ -41,6 +42,14 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.backingStore.get("accountName");
+    }
+    /**
+     * Gets the activeDirectoryObjectGuid property value. The unique user identifier assigned by the on-premises Active Directory.
+     * @return a {@link UUID}
+     */
+    @jakarta.annotation.Nullable
+    public UUID getActiveDirectoryObjectGuid() {
+        return this.backingStore.get("activeDirectoryObjectGuid");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -93,8 +102,9 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
+        deserializerMap.put("activeDirectoryObjectGuid", (n) -> { this.setActiveDirectoryObjectGuid(n.getUUIDValue()); });
         deserializerMap.put("azureAdUserId", (n) -> { this.setAzureAdUserId(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
@@ -143,6 +153,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountName", this.getAccountName());
+        writer.writeUUIDValue("activeDirectoryObjectGuid", this.getActiveDirectoryObjectGuid());
         writer.writeStringValue("azureAdUserId", this.getAzureAdUserId());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("domainName", this.getDomainName());
@@ -158,6 +169,13 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("accountName", value);
+    }
+    /**
+     * Sets the activeDirectoryObjectGuid property value. The unique user identifier assigned by the on-premises Active Directory.
+     * @param value Value to set for the activeDirectoryObjectGuid property.
+     */
+    public void setActiveDirectoryObjectGuid(@jakarta.annotation.Nullable final UUID value) {
+        this.backingStore.set("activeDirectoryObjectGuid", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.

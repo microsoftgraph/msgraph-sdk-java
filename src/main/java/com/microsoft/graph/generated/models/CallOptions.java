@@ -69,10 +69,11 @@ public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("hideBotAfterEscalation", (n) -> { this.setHideBotAfterEscalation(n.getBooleanValue()); });
         deserializerMap.put("isContentSharingNotificationEnabled", (n) -> { this.setIsContentSharingNotificationEnabled(n.getBooleanValue()); });
         deserializerMap.put("isDeltaRosterEnabled", (n) -> { this.setIsDeltaRosterEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isInteractiveRosterEnabled", (n) -> { this.setIsInteractiveRosterEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -101,6 +102,14 @@ public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("isDeltaRosterEnabled");
     }
     /**
+     * Gets the isInteractiveRosterEnabled property value. Indicates whether delta roster filtering by participant interactivity is enabled.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsInteractiveRosterEnabled() {
+        return this.backingStore.get("isInteractiveRosterEnabled");
+    }
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return a {@link String}
      */
@@ -117,6 +126,7 @@ public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable 
         writer.writeBooleanValue("hideBotAfterEscalation", this.getHideBotAfterEscalation());
         writer.writeBooleanValue("isContentSharingNotificationEnabled", this.getIsContentSharingNotificationEnabled());
         writer.writeBooleanValue("isDeltaRosterEnabled", this.getIsDeltaRosterEnabled());
+        writer.writeBooleanValue("isInteractiveRosterEnabled", this.getIsInteractiveRosterEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -155,6 +165,13 @@ public class CallOptions implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setIsDeltaRosterEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDeltaRosterEnabled", value);
+    }
+    /**
+     * Sets the isInteractiveRosterEnabled property value. Indicates whether delta roster filtering by participant interactivity is enabled.
+     * @param value Value to set for the isInteractiveRosterEnabled property.
+     */
+    public void setIsInteractiveRosterEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isInteractiveRosterEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

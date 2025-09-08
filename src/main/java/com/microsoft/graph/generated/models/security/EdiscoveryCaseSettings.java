@@ -4,6 +4,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -26,14 +27,24 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         return new EdiscoveryCaseSettings();
     }
     /**
+     * Gets the caseType property value. The caseType property
+     * @return a {@link CaseType}
+     */
+    @jakarta.annotation.Nullable
+    public CaseType getCaseType() {
+        return this.backingStore.get("caseType");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("caseType", (n) -> { this.setCaseType(n.getEnumValue(CaseType::forValue)); });
         deserializerMap.put("ocr", (n) -> { this.setOcr(n.getObjectValue(OcrSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("redundancyDetection", (n) -> { this.setRedundancyDetection(n.getObjectValue(RedundancyDetectionSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewSetSettings", (n) -> { this.setReviewSetSettings(n.getEnumSetValue(ReviewSetSettings::forValue)); });
         deserializerMap.put("topicModeling", (n) -> { this.setTopicModeling(n.getObjectValue(TopicModelingSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -54,6 +65,14 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         return this.backingStore.get("redundancyDetection");
     }
     /**
+     * Gets the reviewSetSettings property value. The reviewSetSettings property
+     * @return a {@link EnumSet<ReviewSetSettings>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<ReviewSetSettings> getReviewSetSettings() {
+        return this.backingStore.get("reviewSetSettings");
+    }
+    /**
      * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
      * @return a {@link TopicModelingSettings}
      */
@@ -68,9 +87,18 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("caseType", this.getCaseType());
         writer.writeObjectValue("ocr", this.getOcr());
         writer.writeObjectValue("redundancyDetection", this.getRedundancyDetection());
+        writer.writeEnumSetValue("reviewSetSettings", this.getReviewSetSettings());
         writer.writeObjectValue("topicModeling", this.getTopicModeling());
+    }
+    /**
+     * Sets the caseType property value. The caseType property
+     * @param value Value to set for the caseType property.
+     */
+    public void setCaseType(@jakarta.annotation.Nullable final CaseType value) {
+        this.backingStore.set("caseType", value);
     }
     /**
      * Sets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
@@ -85,6 +113,13 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     public void setRedundancyDetection(@jakarta.annotation.Nullable final RedundancyDetectionSettings value) {
         this.backingStore.set("redundancyDetection", value);
+    }
+    /**
+     * Sets the reviewSetSettings property value. The reviewSetSettings property
+     * @param value Value to set for the reviewSetSettings property.
+     */
+    public void setReviewSetSettings(@jakarta.annotation.Nullable final EnumSet<ReviewSetSettings> value) {
+        this.backingStore.set("reviewSetSettings", value);
     }
     /**
      * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
