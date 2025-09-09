@@ -78,7 +78,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the operatingSystem property value. The operating system (OS) of the image. For example, Windows 10 Enterprise. Read-only.
+     * Gets the operatingSystem property value. The operating system (OS) of the image. For example, Windows 11 Enterprise. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the operatingSystem property value. The operating system (OS) of the image. For example, Windows 10 Enterprise. Read-only.
+     * Sets the operatingSystem property value. The operating system (OS) of the image. For example, Windows 11 Enterprise. Read-only.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
