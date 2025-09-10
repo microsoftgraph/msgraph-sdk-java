@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
     /**
@@ -26,6 +27,14 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
         return new SecurityGroupEvidence();
     }
     /**
+     * Gets the activeDirectoryObjectGuid property value. The unique group identifier assigned by the on-premises Active Directory.
+     * @return a {@link UUID}
+     */
+    @jakarta.annotation.Nullable
+    public UUID getActiveDirectoryObjectGuid() {
+        return this.backingStore.get("activeDirectoryObjectGuid");
+    }
+    /**
      * Gets the displayName property value. The name of the security group.
      * @return a {@link String}
      */
@@ -34,15 +43,35 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the distinguishedName property value. The distinguished name of the security group.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDistinguishedName() {
+        return this.backingStore.get("distinguishedName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDirectoryObjectGuid", (n) -> { this.setActiveDirectoryObjectGuid(n.getUUIDValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("distinguishedName", (n) -> { this.setDistinguishedName(n.getStringValue()); });
+        deserializerMap.put("friendlyName", (n) -> { this.setFriendlyName(n.getStringValue()); });
         deserializerMap.put("securityGroupId", (n) -> { this.setSecurityGroupId(n.getStringValue()); });
+        deserializerMap.put("sid", (n) -> { this.setSid(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the friendlyName property value. The friendly name of the security group.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getFriendlyName() {
+        return this.backingStore.get("friendlyName");
     }
     /**
      * Gets the securityGroupId property value. Unique identifier of the security group.
@@ -53,14 +82,33 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("securityGroupId");
     }
     /**
+     * Gets the sid property value. The security identifier of the group.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSid() {
+        return this.backingStore.get("sid");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeUUIDValue("activeDirectoryObjectGuid", this.getActiveDirectoryObjectGuid());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("distinguishedName", this.getDistinguishedName());
+        writer.writeStringValue("friendlyName", this.getFriendlyName());
         writer.writeStringValue("securityGroupId", this.getSecurityGroupId());
+        writer.writeStringValue("sid", this.getSid());
+    }
+    /**
+     * Sets the activeDirectoryObjectGuid property value. The unique group identifier assigned by the on-premises Active Directory.
+     * @param value Value to set for the activeDirectoryObjectGuid property.
+     */
+    public void setActiveDirectoryObjectGuid(@jakarta.annotation.Nullable final UUID value) {
+        this.backingStore.set("activeDirectoryObjectGuid", value);
     }
     /**
      * Sets the displayName property value. The name of the security group.
@@ -70,10 +118,31 @@ public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the distinguishedName property value. The distinguished name of the security group.
+     * @param value Value to set for the distinguishedName property.
+     */
+    public void setDistinguishedName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("distinguishedName", value);
+    }
+    /**
+     * Sets the friendlyName property value. The friendly name of the security group.
+     * @param value Value to set for the friendlyName property.
+     */
+    public void setFriendlyName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("friendlyName", value);
+    }
+    /**
      * Sets the securityGroupId property value. Unique identifier of the security group.
      * @param value Value to set for the securityGroupId property.
      */
     public void setSecurityGroupId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("securityGroupId", value);
+    }
+    /**
+     * Sets the sid property value. The security identifier of the group.
+     * @param value Value to set for the sid property.
+     */
+    public void setSid(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("sid", value);
     }
 }

@@ -25,7 +25,7 @@ public class GranularMailboxRestoreArtifact extends MailboxRestoreArtifact imple
         return new GranularMailboxRestoreArtifact();
     }
     /**
-     * Gets the artifactCount property value. .
+     * Gets the artifactCount property value. This property will be deprecated soon. Don&apos;t use.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class GranularMailboxRestoreArtifact extends MailboxRestoreArtifact imple
         writer.writeStringValue("searchResponseId", this.getSearchResponseId());
     }
     /**
-     * Sets the artifactCount property value. .
+     * Sets the artifactCount property value. This property will be deprecated soon. Don&apos;t use.
      * @param value Value to set for the artifactCount property.
      */
     public void setArtifactCount(@jakarta.annotation.Nullable final Integer value) {
