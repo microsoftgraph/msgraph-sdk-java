@@ -1,5 +1,4 @@
 # Microsoft Graph SDK for Java
-## Version 6.1.0 now Generally Available (GA)! 
 
 [![Download](https://img.shields.io/maven-central/v/com.microsoft.graph/microsoft-graph.svg)](https://search.maven.org/artifact/com.microsoft.graph/microsoft-graph)
 
