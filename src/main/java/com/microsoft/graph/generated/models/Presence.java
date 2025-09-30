@@ -25,7 +25,7 @@ public class Presence extends Entity implements Parsable {
         return new Presence();
     }
     /**
-     * Gets the activity property value. The supplemental information to a user&apos;s availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.
+     * Gets the activity property value. The supplemental information to a user&apos;s availability. Possible values are available, away, beRightBack, busy, doNotDisturb, offline, outOfOffice, presenceUnknown.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class Presence extends Entity implements Parsable {
         return this.backingStore.get("activity");
     }
     /**
-     * Gets the availability property value. The base presence information for a user. Possible values are Available, availableIdle,  Away, beRightBack, Busy, busyIdle, DoNotDisturb, Offline, presenceUnknown.
+     * Gets the availability property value. The base presence information for a user. Possible values are available, away, beRightBack, busy, doNotDisturb, focusing, inACall, inAMeeting, offline, presenting, presenceUnknown.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class Presence extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the outOfOfficeSettings property value. The user&apos;s out-of-office settings.
+     * Gets the outOfOfficeSettings property value. The out of office settings for a user.
      * @return a {@link OutOfOfficeSettings}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class Presence extends Entity implements Parsable {
         return this.backingStore.get("outOfOfficeSettings");
     }
     /**
-     * Gets the sequenceNumber property value. The lexicographically sortable string stamp that represents the version of a presence object.
+     * Gets the sequenceNumber property value. The lexicographically sortable String stamp that represents the version of a presence object.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,28 +91,28 @@ public class Presence extends Entity implements Parsable {
         writer.writeObjectValue("statusMessage", this.getStatusMessage());
     }
     /**
-     * Sets the activity property value. The supplemental information to a user&apos;s availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.
+     * Sets the activity property value. The supplemental information to a user&apos;s availability. Possible values are available, away, beRightBack, busy, doNotDisturb, offline, outOfOffice, presenceUnknown.
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("activity", value);
     }
     /**
-     * Sets the availability property value. The base presence information for a user. Possible values are Available, availableIdle,  Away, beRightBack, Busy, busyIdle, DoNotDisturb, Offline, presenceUnknown.
+     * Sets the availability property value. The base presence information for a user. Possible values are available, away, beRightBack, busy, doNotDisturb, focusing, inACall, inAMeeting, offline, presenting, presenceUnknown.
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("availability", value);
     }
     /**
-     * Sets the outOfOfficeSettings property value. The user&apos;s out-of-office settings.
+     * Sets the outOfOfficeSettings property value. The out of office settings for a user.
      * @param value Value to set for the outOfOfficeSettings property.
      */
     public void setOutOfOfficeSettings(@jakarta.annotation.Nullable final OutOfOfficeSettings value) {
         this.backingStore.set("outOfOfficeSettings", value);
     }
     /**
-     * Sets the sequenceNumber property value. The lexicographically sortable string stamp that represents the version of a presence object.
+     * Sets the sequenceNumber property value. The lexicographically sortable String stamp that represents the version of a presence object.
      * @param value Value to set for the sequenceNumber property.
      */
     public void setSequenceNumber(@jakarta.annotation.Nullable final String value) {
