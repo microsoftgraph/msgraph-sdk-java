@@ -36,7 +36,7 @@ public class ReportsRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the readingAssignmentSubmissions property value. The readingAssignmentSubmissions property
+     * Gets the readingAssignmentSubmissions property value. Details of submitted reading assignments.
      * @return a {@link java.util.List<ReadingAssignmentSubmission>}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class ReportsRoot extends Entity implements Parsable {
         return this.backingStore.get("readingAssignmentSubmissions");
     }
     /**
-     * Gets the reflectCheckInResponses property value. The reflectCheckInResponses property
+     * Gets the reflectCheckInResponses property value. Details of check-in responses.
      * @return a {@link java.util.List<ReflectCheckInResponse>}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class ReportsRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("reflectCheckInResponses", this.getReflectCheckInResponses());
     }
     /**
-     * Sets the readingAssignmentSubmissions property value. The readingAssignmentSubmissions property
+     * Sets the readingAssignmentSubmissions property value. Details of submitted reading assignments.
      * @param value Value to set for the readingAssignmentSubmissions property.
      */
     public void setReadingAssignmentSubmissions(@jakarta.annotation.Nullable final java.util.List<ReadingAssignmentSubmission> value) {
         this.backingStore.set("readingAssignmentSubmissions", value);
     }
     /**
-     * Sets the reflectCheckInResponses property value. The reflectCheckInResponses property
+     * Sets the reflectCheckInResponses property value. Details of check-in responses.
      * @param value Value to set for the reflectCheckInResponses property.
      */
     public void setReflectCheckInResponses(@jakarta.annotation.Nullable final java.util.List<ReflectCheckInResponse> value) {

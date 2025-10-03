@@ -35,7 +35,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return new ProtectionUnitBase();
     }
     /**
-     * Gets the createdBy property value. The identity of person who created the protection unit.
+     * Gets the createdBy property value. The identity of the person who created the protection unit.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The time of creation of the protection unit.
+     * Gets the createdDateTime property value. The time of creation of the protection unit. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. Timestamp of the last modification of this protection unit.
+     * Gets the lastModifiedDateTime property value. Timestamp of the last modification of this protection unit. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("policyId");
     }
     /**
-     * Gets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue.
+     * Gets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue, offboardRequested, offboarded, cancelOffboardRequested. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: offboardRequested, offboarded, cancelOffboardRequested.
      * @return a {@link ProtectionUnitStatus}
      */
     @jakarta.annotation.Nullable
@@ -122,14 +122,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the createdBy property value. The identity of person who created the protection unit.
+     * Sets the createdBy property value. The identity of the person who created the protection unit.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The time of creation of the protection unit.
+     * Sets the createdDateTime property value. The time of creation of the protection unit. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -150,7 +150,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Timestamp of the last modification of this protection unit.
+     * Sets the lastModifiedDateTime property value. Timestamp of the last modification of this protection unit. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -164,7 +164,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         this.backingStore.set("policyId", value);
     }
     /**
-     * Sets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue.
+     * Sets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue, offboardRequested, offboarded, cancelOffboardRequested. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: offboardRequested, offboarded, cancelOffboardRequested.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ProtectionUnitStatus value) {
