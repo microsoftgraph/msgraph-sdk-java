@@ -96,21 +96,21 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of organization objects. There&apos;s only one organization object in the collection.
+     * List properties and relationships of the organization objects.
      * @return a {@link OrganizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of organization objects. There&apos;s only one organization object in the collection.
+     * List properties and relationships of the organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OrganizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OrganizationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -145,7 +145,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Organization::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of organization objects. There&apos;s only one organization object in the collection.
+     * List properties and relationships of the organization objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +153,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of organization objects. There&apos;s only one organization object in the collection.
+     * List properties and relationships of the organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -199,7 +199,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder {
         return new OrganizationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of organization objects. There&apos;s only one organization object in the collection.
+     * List properties and relationships of the organization objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
