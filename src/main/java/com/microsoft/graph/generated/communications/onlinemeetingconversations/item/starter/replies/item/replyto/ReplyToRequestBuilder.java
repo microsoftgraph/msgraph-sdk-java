@@ -1,5 +1,6 @@
-package com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.count;
+package com.microsoft.graph.communications.onlinemeetingconversations.item.starter.replies.item.replyto;
 
+import com.microsoft.graph.models.EngagementConversationMessage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -15,50 +16,50 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to count the resources in the collection.
+ * Provides operations to manage the replyTo property of the microsoft.graph.engagementConversationMessage entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CountRequestBuilder extends BaseRequestBuilder {
+public class ReplyToRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link CountRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ReplyToRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/telecomExpenseManagementPartners/$count{?%24filter,%24search}", pathParameters);
+    public ReplyToRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}/starter/replies/{engagementConversationMessage%2Did}/replyTo{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link CountRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ReplyToRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/telecomExpenseManagementPartners/$count{?%24filter,%24search}", rawUrl);
+    public ReplyToRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}/starter/replies/{engagementConversationMessage%2Did}/replyTo{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get the number of the resource
-     * @return a {@link Integer}
+     * The parent message to which this message is a reply, if it is part of a reply chain.
+     * @return a {@link EngagementConversationMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public Integer get() {
+    public EngagementConversationMessage get() {
         return get(null);
     }
     /**
-     * Get the number of the resource
+     * The parent message to which this message is a reply, if it is part of a reply chain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link Integer}
+     * @return a {@link EngagementConversationMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public Integer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public EngagementConversationMessage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Integer.class);
+        return this.requestAdapter.send(requestInfo, errorMapping, EngagementConversationMessage::createFromDiscriminatorValue);
     }
     /**
-     * Get the number of the resource
+     * The parent message to which this message is a reply, if it is part of a reply chain.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +67,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the number of the resource
+     * The parent message to which this message is a reply, if it is part of a reply chain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -74,34 +75,34 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
-        requestInfo.headers.tryAdd("Accept", "text/plain;q=0.9");
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link CountRequestBuilder}
+     * @return a {@link ReplyToRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public CountRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public ReplyToRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new CountRequestBuilder(rawUrl, requestAdapter);
+        return new ReplyToRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the number of the resource
+     * The parent message to which this message is a reply, if it is part of a reply chain.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
-         * Filter items by property values
+         * Expand related entities
          */
         @jakarta.annotation.Nullable
-        public String filter;
+        public String[] expand;
         /**
-         * Search items by search phrases
+         * Select properties to be returned
          */
         @jakarta.annotation.Nullable
-        public String search;
+        public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}
@@ -109,8 +110,8 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
-            allQueryParams.put("%24filter", filter);
-            allQueryParams.put("%24search", search);
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
             return allQueryParams;
         }
     }

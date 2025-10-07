@@ -41,6 +41,8 @@ public enum DetectionSource implements ValuedEnum {
     BuiltInMl("builtInMl"),
     MicrosoftInsiderRiskManagement("microsoftInsiderRiskManagement"),
     MicrosoftThreatIntelligence("microsoftThreatIntelligence"),
+    MicrosoftDefenderForAIServices("microsoftDefenderForAIServices"),
+    SecurityCopilot("securityCopilot"),
     MicrosoftSentinel("microsoftSentinel");
     public final String value;
     DetectionSource(final String value) {
@@ -88,6 +90,8 @@ public enum DetectionSource implements ValuedEnum {
             case "builtInMl": return BuiltInMl;
             case "microsoftInsiderRiskManagement": return MicrosoftInsiderRiskManagement;
             case "microsoftThreatIntelligence": return MicrosoftThreatIntelligence;
+            case "microsoftDefenderForAIServices": return MicrosoftDefenderForAIServices;
+            case "securityCopilot": return SecurityCopilot;
             case "microsoftSentinel": return MicrosoftSentinel;
             default: return null;
         }

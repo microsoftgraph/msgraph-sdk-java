@@ -7,22 +7,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TelecomExpenseManagementPartnerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
+public class SpeakerAssignmentSubmissionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new {@link TelecomExpenseManagementPartnerCollectionResponse} and sets the default values.
+     * Instantiates a new {@link SpeakerAssignmentSubmissionCollectionResponse} and sets the default values.
      */
-    public TelecomExpenseManagementPartnerCollectionResponse() {
+    public SpeakerAssignmentSubmissionCollectionResponse() {
         super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link TelecomExpenseManagementPartnerCollectionResponse}
+     * @return a {@link SpeakerAssignmentSubmissionCollectionResponse}
      */
     @jakarta.annotation.Nonnull
-    public static TelecomExpenseManagementPartnerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static SpeakerAssignmentSubmissionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new TelecomExpenseManagementPartnerCollectionResponse();
+        return new SpeakerAssignmentSubmissionCollectionResponse();
     }
     /**
      * The deserialization information for the current model
@@ -31,15 +31,15 @@ public class TelecomExpenseManagementPartnerCollectionResponse extends BaseColle
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(SpeakerAssignmentSubmission::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
-     * @return a {@link java.util.List<TelecomExpenseManagementPartner>}
+     * @return a {@link java.util.List<SpeakerAssignmentSubmission>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<TelecomExpenseManagementPartner> getValue() {
+    public java.util.List<SpeakerAssignmentSubmission> getValue() {
         return this.backingStore.get("value");
     }
     /**
@@ -55,7 +55,7 @@ public class TelecomExpenseManagementPartnerCollectionResponse extends BaseColle
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<SpeakerAssignmentSubmission> value) {
         this.backingStore.set("value", value);
     }
 }

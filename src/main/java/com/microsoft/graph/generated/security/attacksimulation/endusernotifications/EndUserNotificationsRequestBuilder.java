@@ -60,21 +60,21 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/endUserNotifications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of an endUserNotification object.
+     * Get a list of endUserNotification objects and their properties.
      * @return a {@link EndUserNotificationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/endusernotification-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-endusernotifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an endUserNotification object.
+     * Get a list of endUserNotification objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EndUserNotificationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/endusernotification-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-endusernotifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +109,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EndUserNotification::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of an endUserNotification object.
+     * Get a list of endUserNotification objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an endUserNotification object.
+     * Get a list of endUserNotification objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +163,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
         return new EndUserNotificationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of an endUserNotification object.
+     * Get a list of endUserNotification objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
