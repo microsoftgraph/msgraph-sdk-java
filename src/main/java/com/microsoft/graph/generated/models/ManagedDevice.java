@@ -281,6 +281,7 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("managedDeviceOwnerType", (n) -> { this.setManagedDeviceOwnerType(n.getEnumValue(ManagedDeviceOwnerType::forValue)); });
         deserializerMap.put("managementAgent", (n) -> { this.setManagementAgent(n.getEnumValue(ManagementAgentType::forValue)); });
         deserializerMap.put("managementCertificateExpirationDate", (n) -> { this.setManagementCertificateExpirationDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managementState", (n) -> { this.setManagementState(n.getEnumValue(ManagementState::forValue)); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("meid", (n) -> { this.setMeid(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
@@ -400,6 +401,14 @@ public class ManagedDevice extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getManagementCertificateExpirationDate() {
         return this.backingStore.get("managementCertificateExpirationDate");
+    }
+    /**
+     * Gets the managementState property value. Management state of device in Microsoft Intune.
+     * @return a {@link ManagementState}
+     */
+    @jakarta.annotation.Nullable
+    public ManagementState getManagementState() {
+        return this.backingStore.get("managementState");
     }
     /**
      * Gets the manufacturer property value. Manufacturer of the device. This property is read-only.
@@ -596,6 +605,7 @@ public class ManagedDevice extends Entity implements Parsable {
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeEnumValue("managedDeviceOwnerType", this.getManagedDeviceOwnerType());
         writer.writeEnumValue("managementAgent", this.getManagementAgent());
+        writer.writeEnumValue("managementState", this.getManagementState());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeEnumValue("partnerReportedThreatState", this.getPartnerReportedThreatState());
         writer.writeCollectionOfObjectValues("users", this.getUsers());
@@ -866,6 +876,13 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     public void setManagementCertificateExpirationDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("managementCertificateExpirationDate", value);
+    }
+    /**
+     * Sets the managementState property value. Management state of device in Microsoft Intune.
+     * @param value Value to set for the managementState property.
+     */
+    public void setManagementState(@jakarta.annotation.Nullable final ManagementState value) {
+        this.backingStore.set("managementState", value);
     }
     /**
      * Sets the manufacturer property value. Manufacturer of the device. This property is read-only.

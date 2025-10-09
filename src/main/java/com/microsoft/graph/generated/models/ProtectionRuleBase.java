@@ -75,7 +75,7 @@ public class ProtectionRuleBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isAutoApplyEnabled property value. The isAutoApplyEnabled property
+     * Gets the isAutoApplyEnabled property value. true indicates that the protection rule is dynamic; false that it&apos;s static.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ProtectionRuleBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue. The draft member is currently unsupported.
+     * Gets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue, updateRequested, deleteRequested. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: updateRequested , deleteRequested. The draft member is currently unsupported.
      * @return a {@link ProtectionRuleStatus}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class ProtectionRuleBase extends Entity implements Parsable {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the isAutoApplyEnabled property value. The isAutoApplyEnabled property
+     * Sets the isAutoApplyEnabled property value. true indicates that the protection rule is dynamic; false that it&apos;s static.
      * @param value Value to set for the isAutoApplyEnabled property.
      */
     public void setIsAutoApplyEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -164,7 +164,7 @@ public class ProtectionRuleBase extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue. The draft member is currently unsupported.
+     * Sets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue, updateRequested, deleteRequested. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: updateRequested , deleteRequested. The draft member is currently unsupported.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ProtectionRuleStatus value) {

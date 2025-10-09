@@ -184,7 +184,6 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(DeviceManagementSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("softwareUpdateStatusSummary", (n) -> { this.setSoftwareUpdateStatusSummary(n.getObjectValue(SoftwareUpdateStatusSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptionState", (n) -> { this.setSubscriptionState(n.getEnumValue(DeviceManagementSubscriptionState::forValue)); });
-        deserializerMap.put("telecomExpenseManagementPartners", (n) -> { this.setTelecomExpenseManagementPartners(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("termsAndConditions", (n) -> { this.setTermsAndConditions(n.getCollectionOfObjectValues(TermsAndConditions::createFromDiscriminatorValue)); });
         deserializerMap.put("troubleshootingEvents", (n) -> { this.setTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthApplicationPerformance::createFromDiscriminatorValue)); });
@@ -354,14 +353,6 @@ public class DeviceManagement extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public DeviceManagementSubscriptionState getSubscriptionState() {
         return this.backingStore.get("subscriptionState");
-    }
-    /**
-     * Gets the telecomExpenseManagementPartners property value. The telecom expense management partners.
-     * @return a {@link java.util.List<TelecomExpenseManagementPartner>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<TelecomExpenseManagementPartner> getTelecomExpenseManagementPartners() {
-        return this.backingStore.get("telecomExpenseManagementPartners");
     }
     /**
      * Gets the termsAndConditions property value. The terms and conditions associated with device management of the company.
@@ -658,7 +649,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeObjectValue("softwareUpdateStatusSummary", this.getSoftwareUpdateStatusSummary());
         writer.writeEnumValue("subscriptionState", this.getSubscriptionState());
-        writer.writeCollectionOfObjectValues("telecomExpenseManagementPartners", this.getTelecomExpenseManagementPartners());
         writer.writeCollectionOfObjectValues("termsAndConditions", this.getTermsAndConditions());
         writer.writeCollectionOfObjectValues("troubleshootingEvents", this.getTroubleshootingEvents());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformance", this.getUserExperienceAnalyticsAppHealthApplicationPerformance());
@@ -915,13 +905,6 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setSubscriptionState(@jakarta.annotation.Nullable final DeviceManagementSubscriptionState value) {
         this.backingStore.set("subscriptionState", value);
-    }
-    /**
-     * Sets the telecomExpenseManagementPartners property value. The telecom expense management partners.
-     * @param value Value to set for the telecomExpenseManagementPartners property.
-     */
-    public void setTelecomExpenseManagementPartners(@jakarta.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
-        this.backingStore.set("telecomExpenseManagementPartners", value);
     }
     /**
      * Sets the termsAndConditions property value. The terms and conditions associated with device management of the company.

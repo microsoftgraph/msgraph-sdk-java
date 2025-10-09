@@ -11,6 +11,9 @@ import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents a container that exposes navigation properties for cloud communications resources.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable {
     /**
@@ -78,10 +81,11 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("callRecords", (n) -> { this.setCallRecords(n.getCollectionOfObjectValues(CallRecord::createFromDiscriminatorValue)); });
         deserializerMap.put("calls", (n) -> { this.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onlineMeetingConversations", (n) -> { this.setOnlineMeetingConversations(n.getCollectionOfObjectValues(OnlineMeetingEngagementConversation::createFromDiscriminatorValue)); });
         deserializerMap.put("onlineMeetings", (n) -> { this.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
         deserializerMap.put("presences", (n) -> { this.setPresences(n.getCollectionOfObjectValues(Presence::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -93,6 +97,14 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the onlineMeetingConversations property value. A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
+     * @return a {@link java.util.List<OnlineMeetingEngagementConversation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OnlineMeetingEngagementConversation> getOnlineMeetingConversations() {
+        return this.backingStore.get("onlineMeetingConversations");
     }
     /**
      * Gets the onlineMeetings property value. The onlineMeetings property
@@ -119,6 +131,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
         writer.writeCollectionOfObjectValues("callRecords", this.getCallRecords());
         writer.writeCollectionOfObjectValues("calls", this.getCalls());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeCollectionOfObjectValues("onlineMeetingConversations", this.getOnlineMeetingConversations());
         writer.writeCollectionOfObjectValues("onlineMeetings", this.getOnlineMeetings());
         writer.writeCollectionOfObjectValues("presences", this.getPresences());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -158,6 +171,13 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the onlineMeetingConversations property value. A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
+     * @param value Value to set for the onlineMeetingConversations property.
+     */
+    public void setOnlineMeetingConversations(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingEngagementConversation> value) {
+        this.backingStore.set("onlineMeetingConversations", value);
     }
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property

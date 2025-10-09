@@ -63,6 +63,7 @@ import com.microsoft.graph.models.security.EdiscoveryCustodian;
 import com.microsoft.graph.models.security.EdiscoveryEstimateOperation;
 import com.microsoft.graph.models.security.EdiscoveryExportOperation;
 import com.microsoft.graph.models.security.EdiscoveryHoldOperation;
+import com.microsoft.graph.models.security.EdiscoveryHoldPolicySyncOperation;
 import com.microsoft.graph.models.security.EdiscoveryIndexOperation;
 import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSource;
 import com.microsoft.graph.models.security.EdiscoveryPurgeDataOperation;
@@ -476,6 +477,12 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.endUserNotification": return new EndUserNotification();
             case "#microsoft.graph.endUserNotificationDetail": return new EndUserNotificationDetail();
             case "#microsoft.graph.engagementAsyncOperation": return new EngagementAsyncOperation();
+            case "#microsoft.graph.engagementConversation": return new EngagementConversation();
+            case "#microsoft.graph.engagementConversationDiscussionMessage": return new EngagementConversationDiscussionMessage();
+            case "#microsoft.graph.engagementConversationMessage": return new EngagementConversationMessage();
+            case "#microsoft.graph.engagementConversationMessageReaction": return new EngagementConversationMessageReaction();
+            case "#microsoft.graph.engagementConversationQuestionMessage": return new EngagementConversationQuestionMessage();
+            case "#microsoft.graph.engagementConversationSystemMessage": return new EngagementConversationSystemMessage();
             case "#microsoft.graph.enrollmentConfigurationAssignment": return new EnrollmentConfigurationAssignment();
             case "#microsoft.graph.enrollmentTroubleshootingEvent": return new EnrollmentTroubleshootingEvent();
             case "#microsoft.graph.enterpriseCodeSigningCertificate": return new EnterpriseCodeSigningCertificate();
@@ -672,12 +679,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.onAttributeCollectionSubmitCustomExtension": return new OnAttributeCollectionSubmitCustomExtension();
             case "#microsoft.graph.onAttributeCollectionSubmitListener": return new OnAttributeCollectionSubmitListener();
             case "#microsoft.graph.onAuthenticationMethodLoadStartListener": return new OnAuthenticationMethodLoadStartListener();
-            case "#microsoft.graph.oneDriveForBusinessProtectionPolicy": return new OneDriveForBusinessProtectionPolicy();
-            case "#microsoft.graph.oneDriveForBusinessRestoreSession": return new OneDriveForBusinessRestoreSession();
-            case "#microsoft.graph.onEmailOtpSendListener": return new OnEmailOtpSendListener();
-            case "#microsoft.graph.onenote": return new Onenote();
-            case "#microsoft.graph.onenoteEntityBaseModel": return new OnenoteEntityBaseModel();
-            case "#microsoft.graph.onenoteEntityHierarchyModel": return new OnenoteEntityHierarchyModel();
         }
         return null;
     }
@@ -689,6 +690,12 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.oneDriveForBusinessProtectionPolicy": return new OneDriveForBusinessProtectionPolicy();
+            case "#microsoft.graph.oneDriveForBusinessRestoreSession": return new OneDriveForBusinessRestoreSession();
+            case "#microsoft.graph.onEmailOtpSendListener": return new OnEmailOtpSendListener();
+            case "#microsoft.graph.onenote": return new Onenote();
+            case "#microsoft.graph.onenoteEntityBaseModel": return new OnenoteEntityBaseModel();
+            case "#microsoft.graph.onenoteEntityHierarchyModel": return new OnenoteEntityHierarchyModel();
             case "#microsoft.graph.onenoteEntitySchemaObjectModel": return new OnenoteEntitySchemaObjectModel();
             case "#microsoft.graph.onenoteOperation": return new OnenoteOperation();
             case "#microsoft.graph.onenotePage": return new OnenotePage();
@@ -697,9 +704,11 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.onInteractiveAuthFlowStartListener": return new OnInteractiveAuthFlowStartListener();
             case "#microsoft.graph.onlineMeeting": return new OnlineMeeting();
             case "#microsoft.graph.onlineMeetingBase": return new OnlineMeetingBase();
+            case "#microsoft.graph.onlineMeetingEngagementConversation": return new OnlineMeetingEngagementConversation();
             case "#microsoft.graph.onOtpSendCustomExtension": return new OnOtpSendCustomExtension();
             case "#microsoft.graph.onPremisesConditionalAccessSettings": return new OnPremisesConditionalAccessSettings();
             case "#microsoft.graph.onPremisesDirectorySynchronization": return new OnPremisesDirectorySynchronization();
+            case "#microsoft.graph.onPremisesSyncBehavior": return new OnPremisesSyncBehavior();
             case "#microsoft.graph.onTokenIssuanceStartCustomExtension": return new OnTokenIssuanceStartCustomExtension();
             case "#microsoft.graph.onTokenIssuanceStartListener": return new OnTokenIssuanceStartListener();
             case "#microsoft.graph.onUserCreateStartListener": return new OnUserCreateStartListener();
@@ -798,6 +807,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.publicKeyInfrastructureRoot": return new PublicKeyInfrastructureRoot();
             case "#microsoft.graph.rbacApplication": return new RbacApplication();
             case "#microsoft.graph.readingAssignmentSubmission": return new ReadingAssignmentSubmission();
+            case "#microsoft.graph.readingCoachPassage": return new ReadingCoachPassage();
             case "#microsoft.graph.recordOperation": return new RecordOperation();
             case "#microsoft.graph.recycleBin": return new RecycleBin();
             case "#microsoft.graph.recycleBinItem": return new RecycleBinItem();
@@ -863,6 +873,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.ediscoveryEstimateOperation": return new EdiscoveryEstimateOperation();
             case "#microsoft.graph.security.ediscoveryExportOperation": return new EdiscoveryExportOperation();
             case "#microsoft.graph.security.ediscoveryHoldOperation": return new EdiscoveryHoldOperation();
+            case "#microsoft.graph.security.ediscoveryHoldPolicySyncOperation": return new EdiscoveryHoldPolicySyncOperation();
             case "#microsoft.graph.security.ediscoveryIndexOperation": return new EdiscoveryIndexOperation();
             case "#microsoft.graph.security.ediscoveryNoncustodialDataSource": return new EdiscoveryNoncustodialDataSource();
             case "#microsoft.graph.security.ediscoveryPurgeDataOperation": return new EdiscoveryPurgeDataOperation();
@@ -959,6 +970,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
             case "#microsoft.graph.softwareOathAuthenticationMethodConfiguration": return new SoftwareOathAuthenticationMethodConfiguration();
             case "#microsoft.graph.softwareUpdateStatusSummary": return new SoftwareUpdateStatusSummary();
+            case "#microsoft.graph.speakerAssignmentSubmission": return new SpeakerAssignmentSubmission();
             case "#microsoft.graph.standardWebPart": return new StandardWebPart();
             case "#microsoft.graph.startHoldMusicOperation": return new StartHoldMusicOperation();
             case "#microsoft.graph.stopHoldMusicOperation": return new StopHoldMusicOperation();
@@ -993,7 +1005,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
             case "#microsoft.graph.teamworkTag": return new TeamworkTag();
             case "#microsoft.graph.teamworkTagMember": return new TeamworkTagMember();
-            case "#microsoft.graph.telecomExpenseManagementPartner": return new TelecomExpenseManagementPartner();
             case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
             case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
             case "#microsoft.graph.tenantAppManagementPolicy": return new TenantAppManagementPolicy();
@@ -1179,16 +1190,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.workbookNamedItem": return new WorkbookNamedItem();
             case "#microsoft.graph.workbookOperation": return new WorkbookOperation();
             case "#microsoft.graph.workbookPivotTable": return new WorkbookPivotTable();
-            case "#microsoft.graph.workbookRange": return new WorkbookRange();
-            case "#microsoft.graph.workbookRangeBorder": return new WorkbookRangeBorder();
-            case "#microsoft.graph.workbookRangeFill": return new WorkbookRangeFill();
-            case "#microsoft.graph.workbookRangeFont": return new WorkbookRangeFont();
-            case "#microsoft.graph.workbookRangeFormat": return new WorkbookRangeFormat();
-            case "#microsoft.graph.workbookRangeSort": return new WorkbookRangeSort();
-            case "#microsoft.graph.workbookRangeView": return new WorkbookRangeView();
-            case "#microsoft.graph.workbookTable": return new WorkbookTable();
-            case "#microsoft.graph.workbookTableColumn": return new WorkbookTableColumn();
-            case "#microsoft.graph.workbookTableRow": return new WorkbookTableRow();
         }
         return null;
     }
@@ -1200,6 +1201,16 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.workbookRange": return new WorkbookRange();
+            case "#microsoft.graph.workbookRangeBorder": return new WorkbookRangeBorder();
+            case "#microsoft.graph.workbookRangeFill": return new WorkbookRangeFill();
+            case "#microsoft.graph.workbookRangeFont": return new WorkbookRangeFont();
+            case "#microsoft.graph.workbookRangeFormat": return new WorkbookRangeFormat();
+            case "#microsoft.graph.workbookRangeSort": return new WorkbookRangeSort();
+            case "#microsoft.graph.workbookRangeView": return new WorkbookRangeView();
+            case "#microsoft.graph.workbookTable": return new WorkbookTable();
+            case "#microsoft.graph.workbookTableColumn": return new WorkbookTableColumn();
+            case "#microsoft.graph.workbookTableRow": return new WorkbookTableRow();
             case "#microsoft.graph.workbookTableSort": return new WorkbookTableSort();
             case "#microsoft.graph.workbookWorksheet": return new WorkbookWorksheet();
             case "#microsoft.graph.workbookWorksheetProtection": return new WorkbookWorksheetProtection();

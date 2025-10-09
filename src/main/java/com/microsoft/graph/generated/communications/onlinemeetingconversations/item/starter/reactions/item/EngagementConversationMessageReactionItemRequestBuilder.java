@@ -1,7 +1,7 @@
-package com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.item;
+package com.microsoft.graph.communications.onlinemeetingconversations.item.starter.reactions.item;
 
+import com.microsoft.graph.models.EngagementConversationMessageReaction;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.TelecomExpenseManagementPartner;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,39 +16,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
+ * Provides operations to manage the reactions property of the microsoft.graph.engagementConversationMessage entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseRequestBuilder {
+public class EngagementConversationMessageReactionItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link TelecomExpenseManagementPartnerItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link EngagementConversationMessageReactionItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public TelecomExpenseManagementPartnerItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/telecomExpenseManagementPartners/{telecomExpenseManagementPartner%2Did}{?%24expand,%24select}", pathParameters);
+    public EngagementConversationMessageReactionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}/starter/reactions/{engagementConversationMessageReaction%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link TelecomExpenseManagementPartnerItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link EngagementConversationMessageReactionItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public TelecomExpenseManagementPartnerItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/telecomExpenseManagementPartners/{telecomExpenseManagementPartner%2Did}{?%24expand,%24select}", rawUrl);
+    public EngagementConversationMessageReactionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}/starter/reactions/{engagementConversationMessageReaction%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a telecomExpenseManagementPartner.
+     * Delete navigation property reactions for communications
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a telecomExpenseManagementPartner.
+     * Delete navigation property reactions for communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,58 +55,54 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the telecomExpenseManagementPartner object.
-     * @return a {@link TelecomExpenseManagementPartner}
+     * A collection of reactions (such as like and smile) that users have applied to this message.
+     * @return a {@link EngagementConversationMessageReaction}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public TelecomExpenseManagementPartner get() {
+    public EngagementConversationMessageReaction get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the telecomExpenseManagementPartner object.
+     * A collection of reactions (such as like and smile) that users have applied to this message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link TelecomExpenseManagementPartner}
+     * @return a {@link EngagementConversationMessageReaction}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public TelecomExpenseManagementPartner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public EngagementConversationMessageReaction get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, TelecomExpenseManagementPartner::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, EngagementConversationMessageReaction::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a telecomExpenseManagementPartner object.
+     * Update the navigation property reactions in communications
      * @param body The request body
-     * @return a {@link TelecomExpenseManagementPartner}
+     * @return a {@link EngagementConversationMessageReaction}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public TelecomExpenseManagementPartner patch(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body) {
+    public EngagementConversationMessageReaction patch(@jakarta.annotation.Nonnull final EngagementConversationMessageReaction body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a telecomExpenseManagementPartner object.
+     * Update the navigation property reactions in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link TelecomExpenseManagementPartner}
+     * @return a {@link EngagementConversationMessageReaction}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public TelecomExpenseManagementPartner patch(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public EngagementConversationMessageReaction patch(@jakarta.annotation.Nonnull final EngagementConversationMessageReaction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, TelecomExpenseManagementPartner::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, EngagementConversationMessageReaction::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a telecomExpenseManagementPartner.
+     * Delete navigation property reactions for communications
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a telecomExpenseManagementPartner.
+     * Delete navigation property reactions for communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the telecomExpenseManagementPartner object.
+     * A collection of reactions (such as like and smile) that users have applied to this message.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the telecomExpenseManagementPartner object.
+     * A collection of reactions (such as like and smile) that users have applied to this message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,22 +142,22 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Update the properties of a telecomExpenseManagementPartner object.
+     * Update the navigation property reactions in communications
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EngagementConversationMessageReaction body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a telecomExpenseManagementPartner object.
+     * Update the navigation property reactions in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EngagementConversationMessageReaction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
@@ -174,12 +168,12 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link TelecomExpenseManagementPartnerItemRequestBuilder}
+     * @return a {@link EngagementConversationMessageReactionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public TelecomExpenseManagementPartnerItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public EngagementConversationMessageReactionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new TelecomExpenseManagementPartnerItemRequestBuilder(rawUrl, requestAdapter);
+        return new EngagementConversationMessageReactionItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -188,7 +182,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the telecomExpenseManagementPartner object.
+     * A collection of reactions (such as like and smile) that users have applied to this message.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
