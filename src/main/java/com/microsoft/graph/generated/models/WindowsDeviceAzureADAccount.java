@@ -36,7 +36,7 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
         return deserializerMap;
     }
     /**
-     * Gets the userPrincipalName property value. Not yet documented
+     * Gets the userPrincipalName property value. The userPrincipalName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the userPrincipalName property value. Not yet documented
+     * Sets the userPrincipalName property value. The userPrincipalName property
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

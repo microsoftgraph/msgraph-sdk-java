@@ -35,20 +35,18 @@ public class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/windowsDefenderScan", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action windowsDefenderScan
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderscan?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final WindowsDefenderScanPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action windowsDefenderScan
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderscan?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final WindowsDefenderScanPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -58,7 +56,7 @@ public class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Not yet documented
+     * Invoke action windowsDefenderScan
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +65,7 @@ public class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action windowsDefenderScan
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

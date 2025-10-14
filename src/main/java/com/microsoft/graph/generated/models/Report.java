@@ -59,7 +59,7 @@ public class Report implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the content property value. Not yet documented
+     * Gets the content property value. The http content that has the data
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class Report implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the content property value. Not yet documented
+     * Sets the content property value. The http content that has the data
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {

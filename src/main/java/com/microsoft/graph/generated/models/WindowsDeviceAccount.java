@@ -83,7 +83,7 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the password property value. Not yet documented
+     * Gets the password property value. The password property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class WindowsDeviceAccount implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the password property value. Not yet documented
+     * Sets the password property value. The password property
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {

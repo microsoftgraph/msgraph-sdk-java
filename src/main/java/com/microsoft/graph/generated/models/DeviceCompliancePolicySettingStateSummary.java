@@ -44,7 +44,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
         return this.backingStore.get("conflictDeviceCount");
     }
     /**
-     * Gets the deviceComplianceSettingStates property value. Not yet documented
+     * Gets the deviceComplianceSettingStates property value. The deviceComplianceSettingStates property
      * @return a {@link java.util.List<DeviceComplianceSettingState>}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
         this.backingStore.set("conflictDeviceCount", value);
     }
     /**
-     * Sets the deviceComplianceSettingStates property value. Not yet documented
+     * Sets the deviceComplianceSettingStates property value. The deviceComplianceSettingStates property
      * @param value Value to set for the deviceComplianceSettingStates property.
      */
     public void setDeviceComplianceSettingStates(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceSettingState> value) {

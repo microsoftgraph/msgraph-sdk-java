@@ -37,18 +37,16 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection%2Did}/assignments/{targetedManagedAppPolicyAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a targetedManagedAppPolicyAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a targetedManagedAppPolicyAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the targetedManagedAppPolicyAssignment object.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @return a {@link TargetedManagedAppPolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppPolicyAssignment get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the targetedManagedAppPolicyAssignment object.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TargetedManagedAppPolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppPolicyAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a targetedManagedAppPolicyAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @return a {@link TargetedManagedAppPolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppPolicyAssignment patch(@jakarta.annotation.Nonnull final TargetedManagedAppPolicyAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a targetedManagedAppPolicyAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TargetedManagedAppPolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppPolicyAssignment patch(@jakarta.annotation.Nonnull final TargetedManagedAppPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a targetedManagedAppPolicyAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a targetedManagedAppPolicyAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the targetedManagedAppPolicyAssignment object.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the targetedManagedAppPolicyAssignment object.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Update the properties of a targetedManagedAppPolicyAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a targetedManagedAppPolicyAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the targetedManagedAppPolicyAssignment object.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

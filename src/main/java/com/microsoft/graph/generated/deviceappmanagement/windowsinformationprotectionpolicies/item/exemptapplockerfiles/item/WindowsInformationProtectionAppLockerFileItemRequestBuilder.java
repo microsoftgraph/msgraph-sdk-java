@@ -37,18 +37,16 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         super(requestAdapter, "{+baseurl}/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy%2Did}/exemptAppLockerFiles/{windowsInformationProtectionAppLockerFile%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a windowsInformationProtectionAppLockerFile.
+     * Delete navigation property exemptAppLockerFiles for deviceAppManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a windowsInformationProtectionAppLockerFile.
+     * Delete navigation property exemptAppLockerFiles for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the windowsInformationProtectionAppLockerFile object.
+     * Another way to input exempt apps through xml files
      * @return a {@link WindowsInformationProtectionAppLockerFile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the windowsInformationProtectionAppLockerFile object.
+     * Another way to input exempt apps through xml files
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsInformationProtectionAppLockerFile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a windowsInformationProtectionAppLockerFile object.
+     * Update the navigation property exemptAppLockerFiles in deviceAppManagement
      * @param body The request body
      * @return a {@link WindowsInformationProtectionAppLockerFile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a windowsInformationProtectionAppLockerFile object.
+     * Update the navigation property exemptAppLockerFiles in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsInformationProtectionAppLockerFile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionAppLockerFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a windowsInformationProtectionAppLockerFile.
+     * Delete navigation property exemptAppLockerFiles for deviceAppManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a windowsInformationProtectionAppLockerFile.
+     * Delete navigation property exemptAppLockerFiles for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the windowsInformationProtectionAppLockerFile object.
+     * Another way to input exempt apps through xml files
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the windowsInformationProtectionAppLockerFile object.
+     * Another way to input exempt apps through xml files
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         return requestInfo;
     }
     /**
-     * Update the properties of a windowsInformationProtectionAppLockerFile object.
+     * Update the navigation property exemptAppLockerFiles in deviceAppManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a windowsInformationProtectionAppLockerFile object.
+     * Update the navigation property exemptAppLockerFiles in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the windowsInformationProtectionAppLockerFile object.
+     * Another way to input exempt apps through xml files
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -118,7 +118,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Virtual endpoint
+     * Get virtualEndpoint from deviceManagement
      * @return a {@link VirtualEndpoint}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -127,7 +127,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Virtual endpoint
+     * Get virtualEndpoint from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEndpoint}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -185,7 +185,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Virtual endpoint
+     * Get virtualEndpoint from deviceManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -193,7 +193,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Virtual endpoint
+     * Get virtualEndpoint from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -245,7 +245,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Virtual endpoint
+     * Get virtualEndpoint from deviceManagement
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
