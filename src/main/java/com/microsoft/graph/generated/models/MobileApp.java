@@ -77,7 +77,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("categories");
     }
     /**
-     * Gets the createdDateTime property value. The date and time the app was created.
+     * Gets the createdDateTime property value. The date and time the app was created. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("largeIcon");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time the app was last modified.
+     * Gets the lastModifiedDateTime property value. The date and time the app was last modified. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -240,7 +240,7 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("categories", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time the app was created.
+     * Sets the createdDateTime property value. The date and time the app was created. This property is read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -289,7 +289,7 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("largeIcon", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time the app was last modified.
+     * Sets the lastModifiedDateTime property value. The date and time the app was last modified. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

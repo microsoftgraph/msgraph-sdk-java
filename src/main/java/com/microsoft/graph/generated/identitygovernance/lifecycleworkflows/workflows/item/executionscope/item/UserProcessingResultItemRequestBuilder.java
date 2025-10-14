@@ -37,7 +37,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/executionScope/{userProcessingResult%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @return a {@link UserProcessingResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserProcessingResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserProcessingResult::createFromDiscriminatorValue);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return new UserProcessingResultItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -165,7 +165,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("managedBrowserToOpenLinksRequired");
     }
     /**
-     * Gets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
+     * Gets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped. Valid values 1 to 65535
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -405,7 +405,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this.backingStore.set("managedBrowserToOpenLinksRequired", value);
     }
     /**
-     * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
+     * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped. Valid values 1 to 65535
      * @param value Value to set for the maximumPinRetries property.
      */
     public void setMaximumPinRetries(@jakarta.annotation.Nullable final Integer value) {

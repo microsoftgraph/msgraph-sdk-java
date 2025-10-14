@@ -299,7 +299,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("remoteAssistancePartners");
     }
     /**
-     * Gets the reports property value. Reports singleton
+     * Gets the reports property value. The reports property
      * @return a {@link DeviceManagementReports}
      */
     @jakarta.annotation.Nullable
@@ -563,7 +563,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("userExperienceAnalyticsWorkFromAnywhereModelPerformance");
     }
     /**
-     * Gets the virtualEndpoint property value. Virtual endpoint
+     * Gets the virtualEndpoint property value. The virtualEndpoint property
      * @return a {@link VirtualEndpoint}
      */
     @jakarta.annotation.Nullable
@@ -858,7 +858,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("remoteAssistancePartners", value);
     }
     /**
-     * Sets the reports property value. Reports singleton
+     * Sets the reports property value. The reports property
      * @param value Value to set for the reports property.
      */
     public void setReports(@jakarta.annotation.Nullable final DeviceManagementReports value) {
@@ -1089,7 +1089,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("userExperienceAnalyticsWorkFromAnywhereModelPerformance", value);
     }
     /**
-     * Sets the virtualEndpoint property value. Virtual endpoint
+     * Sets the virtualEndpoint property value. The virtualEndpoint property
      * @param value Value to set for the virtualEndpoint property.
      */
     public void setVirtualEndpoint(@jakarta.annotation.Nullable final VirtualEndpoint value) {

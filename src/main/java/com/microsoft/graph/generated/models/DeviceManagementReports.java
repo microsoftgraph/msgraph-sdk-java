@@ -25,7 +25,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
         return new DeviceManagementReports();
     }
     /**
-     * Gets the exportJobs property value. Entity representing a job to export a report
+     * Gets the exportJobs property value. Entity representing a job to export a report.
      * @return a {@link java.util.List<DeviceManagementExportJob>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("exportJobs", this.getExportJobs());
     }
     /**
-     * Sets the exportJobs property value. Entity representing a job to export a report
+     * Sets the exportJobs property value. Entity representing a job to export a report.
      * @param value Value to set for the exportJobs property.
      */
     public void setExportJobs(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExportJob> value) {

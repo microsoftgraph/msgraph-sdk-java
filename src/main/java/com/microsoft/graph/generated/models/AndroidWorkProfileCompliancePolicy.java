@@ -147,7 +147,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         return this.backingStore.get("passwordRequiredType");
     }
     /**
-     * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
+     * Gets the securityBlockJailbrokenDevices property value. Indicates the device should not be rooted. When TRUE, if the device is detected as rooted it will be reported non-compliant. When FALSE, the device is not reported as non-compliant regardless of device rooted state. Default is FALSE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         return this.backingStore.get("securityRequireGooglePlayServices");
     }
     /**
-     * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
+     * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the Play Integrity basic integrity check.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         return this.backingStore.get("securityRequireSafetyNetAttestationBasicIntegrity");
     }
     /**
-     * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
+     * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the Play Integrity device integrity check.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -333,7 +333,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         this.backingStore.set("passwordRequiredType", value);
     }
     /**
-     * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
+     * Sets the securityBlockJailbrokenDevices property value. Indicates the device should not be rooted. When TRUE, if the device is detected as rooted it will be reported non-compliant. When FALSE, the device is not reported as non-compliant regardless of device rooted state. Default is FALSE.
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      */
     public void setSecurityBlockJailbrokenDevices(@jakarta.annotation.Nullable final Boolean value) {
@@ -368,14 +368,14 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         this.backingStore.set("securityRequireGooglePlayServices", value);
     }
     /**
-     * Sets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
+     * Sets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the Play Integrity basic integrity check.
      * @param value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
      */
     public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("securityRequireSafetyNetAttestationBasicIntegrity", value);
     }
     /**
-     * Sets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
+     * Sets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the Play Integrity device integrity check.
      * @param value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
      */
     public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@jakarta.annotation.Nullable final Boolean value) {

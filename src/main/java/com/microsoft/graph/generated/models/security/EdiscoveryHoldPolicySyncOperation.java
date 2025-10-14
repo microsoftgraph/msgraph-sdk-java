@@ -35,7 +35,7 @@ public class EdiscoveryHoldPolicySyncOperation extends CaseOperation implements 
         return deserializerMap;
     }
     /**
-     * Gets the reportFileMetadata property value. The reportFileMetadata property
+     * Gets the reportFileMetadata property value. Contains the properties for report file metadata, including downloadUrl, fileName, and size.
      * @return a {@link java.util.List<ReportFileMetadata>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class EdiscoveryHoldPolicySyncOperation extends CaseOperation implements 
         writer.writeCollectionOfObjectValues("reportFileMetadata", this.getReportFileMetadata());
     }
     /**
-     * Sets the reportFileMetadata property value. The reportFileMetadata property
+     * Sets the reportFileMetadata property value. Contains the properties for report file metadata, including downloadUrl, fileName, and size.
      * @param value Value to set for the reportFileMetadata property.
      */
     public void setReportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ReportFileMetadata> value) {

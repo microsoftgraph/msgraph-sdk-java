@@ -45,7 +45,7 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
         return this.backingStore.get("committedContentVersion");
     }
     /**
-     * Gets the contentVersions property value. The list of content versions for this app.
+     * Gets the contentVersions property value. The list of content versions for this app. This property is read-only.
      * @return a {@link java.util.List<MobileAppContent>}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
         return this.backingStore.get("fileName");
     }
     /**
-     * Gets the size property value. The total size, including all uploaded files.
+     * Gets the size property value. The total size, including all uploaded files. This property is read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
         this.backingStore.set("committedContentVersion", value);
     }
     /**
-     * Sets the contentVersions property value. The list of content versions for this app.
+     * Sets the contentVersions property value. The list of content versions for this app. This property is read-only.
      * @param value Value to set for the contentVersions property.
      */
     public void setContentVersions(@jakarta.annotation.Nullable final java.util.List<MobileAppContent> value) {
@@ -114,7 +114,7 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
         this.backingStore.set("fileName", value);
     }
     /**
-     * Sets the size property value. The total size, including all uploaded files.
+     * Sets the size property value. The total size, including all uploaded files. This property is read-only.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {

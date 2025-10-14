@@ -60,21 +60,19 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/iosUpdateStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the iosUpdateDeviceStatus objects.
+     * The IOS software update installation statuses for this account.
      * @return a {@link IosUpdateDeviceStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IosUpdateDeviceStatusCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the iosUpdateDeviceStatus objects.
+     * The IOS software update installation statuses for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IosUpdateDeviceStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IosUpdateDeviceStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IosUpdateDeviceStatusCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new iosUpdateDeviceStatus object.
+     * Create new navigation property to iosUpdateStatuses for deviceManagement
      * @param body The request body
      * @return a {@link IosUpdateDeviceStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IosUpdateDeviceStatus post(@jakarta.annotation.Nonnull final IosUpdateDeviceStatus body) {
         return post(body, null);
     }
     /**
-     * Create a new iosUpdateDeviceStatus object.
+     * Create new navigation property to iosUpdateStatuses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IosUpdateDeviceStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IosUpdateDeviceStatus post(@jakarta.annotation.Nonnull final IosUpdateDeviceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IosUpdateDeviceStatus::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the iosUpdateDeviceStatus objects.
+     * The IOS software update installation statuses for this account.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the iosUpdateDeviceStatus objects.
+     * The IOS software update installation statuses for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new iosUpdateDeviceStatus object.
+     * Create new navigation property to iosUpdateStatuses for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new iosUpdateDeviceStatus object.
+     * Create new navigation property to iosUpdateStatuses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return new IosUpdateStatusesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the iosUpdateDeviceStatus objects.
+     * The IOS software update installation statuses for this account.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

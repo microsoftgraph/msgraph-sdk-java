@@ -37,18 +37,16 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceManagement/complianceManagementPartners/{complianceManagementPartner%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a complianceManagementPartner.
+     * Delete navigation property complianceManagementPartners for deviceManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a complianceManagementPartner.
+     * Delete navigation property complianceManagementPartners for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the complianceManagementPartner object.
+     * The list of Compliance Management Partners configured by the tenant.
      * @return a {@link ComplianceManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceManagementPartner get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the complianceManagementPartner object.
+     * The list of Compliance Management Partners configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ComplianceManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceManagementPartner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceManagementPartner::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a complianceManagementPartner object.
+     * Update the navigation property complianceManagementPartners in deviceManagement
      * @param body The request body
      * @return a {@link ComplianceManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceManagementPartner patch(@jakarta.annotation.Nonnull final ComplianceManagementPartner body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a complianceManagementPartner object.
+     * Update the navigation property complianceManagementPartners in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ComplianceManagementPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceManagementPartner patch(@jakarta.annotation.Nonnull final ComplianceManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceManagementPartner::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a complianceManagementPartner.
+     * Delete navigation property complianceManagementPartners for deviceManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a complianceManagementPartner.
+     * Delete navigation property complianceManagementPartners for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the complianceManagementPartner object.
+     * The list of Compliance Management Partners configured by the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the complianceManagementPartner object.
+     * The list of Compliance Management Partners configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of a complianceManagementPartner object.
+     * Update the navigation property complianceManagementPartners in deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a complianceManagementPartner object.
+     * Update the navigation property complianceManagementPartners in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the complianceManagementPartner object.
+     * The list of Compliance Management Partners configured by the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -347,7 +347,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         return this.backingStore.get("tpmVersion");
     }
     /**
-     * Gets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
+     * Gets the virtualSecureMode property value. Indicates whether the device has Virtual Secure Mode (VSM) enabled. Virtual Secure Mode (VSM) is a container that protects high value assets from a compromised kernel. This property will be deprecated in beta from August 2023. Support for this property will end in August 2025 for v1.0 API. A new property virtualizationBasedSecurity is added and used instead. The value used for virtualSecureMode will be passed by virtualizationBasedSecurity during the deprecation process. Possible values are &apos;enabled&apos;, &apos;disabled&apos; and &apos;notApplicable&apos;. &apos;enabled&apos; indicates Virtual Secure Mode (VSM) is enabled. &apos;disabled&apos; indicates Virtual Secure Mode (VSM) is disabled. &apos;notApplicable&apos; indicates the device is not a Windows 11 device. Default value is &apos;notApplicable&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -636,7 +636,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         this.backingStore.set("tpmVersion", value);
     }
     /**
-     * Sets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
+     * Sets the virtualSecureMode property value. Indicates whether the device has Virtual Secure Mode (VSM) enabled. Virtual Secure Mode (VSM) is a container that protects high value assets from a compromised kernel. This property will be deprecated in beta from August 2023. Support for this property will end in August 2025 for v1.0 API. A new property virtualizationBasedSecurity is added and used instead. The value used for virtualSecureMode will be passed by virtualizationBasedSecurity during the deprecation process. Possible values are &apos;enabled&apos;, &apos;disabled&apos; and &apos;notApplicable&apos;. &apos;enabled&apos; indicates Virtual Secure Mode (VSM) is enabled. &apos;disabled&apos; indicates Virtual Secure Mode (VSM) is disabled. &apos;notApplicable&apos; indicates the device is not a Windows 11 device. Default value is &apos;notApplicable&apos;.
      * @param value Value to set for the virtualSecureMode property.
      */
     public void setVirtualSecureMode(@jakarta.annotation.Nullable final String value) {

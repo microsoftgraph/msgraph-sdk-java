@@ -55,7 +55,7 @@ public class MobileContainedAppItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @return a {@link MobileContainedApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class MobileContainedAppItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileContainedApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class MobileContainedAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class MobileContainedAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class MobileContainedAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

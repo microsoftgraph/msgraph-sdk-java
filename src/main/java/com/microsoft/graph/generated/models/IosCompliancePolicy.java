@@ -156,7 +156,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
         return this.backingStore.get("passcodeRequiredType");
     }
     /**
-     * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
+     * Gets the securityBlockJailbrokenDevices property value. Indicates the device should not be jailbroken. When TRUE, if the device is detected as jailbroken it will be reported non-compliant. When FALSE, the device is not reported as non-compliant regardless of device jailbroken state. Default is FALSE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -277,7 +277,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
         this.backingStore.set("passcodeRequiredType", value);
     }
     /**
-     * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
+     * Sets the securityBlockJailbrokenDevices property value. Indicates the device should not be jailbroken. When TRUE, if the device is detected as jailbroken it will be reported non-compliant. When FALSE, the device is not reported as non-compliant regardless of device jailbroken state. Default is FALSE.
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      */
     public void setSecurityBlockJailbrokenDevices(@jakarta.annotation.Nullable final Boolean value) {

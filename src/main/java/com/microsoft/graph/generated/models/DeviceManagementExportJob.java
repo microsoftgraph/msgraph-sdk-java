@@ -29,7 +29,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return new DeviceManagementExportJob();
     }
     /**
-     * Gets the expirationDateTime property value. Time that the exported report expires
+     * Gets the expirationDateTime property value. Time that the exported report expires.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the filter property value. Filters applied on the report
+     * Gets the filter property value. Filters applied on the report. The maximum length allowed for this property is 2000 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("localizationType");
     }
     /**
-     * Gets the reportName property value. Name of the report
+     * Gets the reportName property value. Name of the report. The maximum length allowed for this property is 2000 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("reportName");
     }
     /**
-     * Gets the requestDateTime property value. Time that the exported report was requested
+     * Gets the requestDateTime property value. Time that the exported report was requested.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("requestDateTime");
     }
     /**
-     * Gets the select property value. Columns selected from the report
+     * Gets the select property value. Columns selected from the report. The maximum number of allowed columns names is 256. The maximum length allowed for each column name in this property is 1000 characters.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("select");
     }
     /**
-     * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
+     * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. The maximum length allowed for this property is 128 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the url property value. Temporary location of the exported report
+     * Gets the url property value. Temporary location of the exported report.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -146,14 +146,14 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the expirationDateTime property value. Time that the exported report expires
+     * Sets the expirationDateTime property value. Time that the exported report expires.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the filter property value. Filters applied on the report
+     * Sets the filter property value. Filters applied on the report. The maximum length allowed for this property is 2000 characters.
      * @param value Value to set for the filter property.
      */
     public void setFilter(@jakarta.annotation.Nullable final String value) {
@@ -174,28 +174,28 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         this.backingStore.set("localizationType", value);
     }
     /**
-     * Sets the reportName property value. Name of the report
+     * Sets the reportName property value. Name of the report. The maximum length allowed for this property is 2000 characters.
      * @param value Value to set for the reportName property.
      */
     public void setReportName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("reportName", value);
     }
     /**
-     * Sets the requestDateTime property value. Time that the exported report was requested
+     * Sets the requestDateTime property value. Time that the exported report was requested.
      * @param value Value to set for the requestDateTime property.
      */
     public void setRequestDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("requestDateTime", value);
     }
     /**
-     * Sets the select property value. Columns selected from the report
+     * Sets the select property value. Columns selected from the report. The maximum number of allowed columns names is 256. The maximum length allowed for each column name in this property is 1000 characters.
      * @param value Value to set for the select property.
      */
     public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("select", value);
     }
     /**
-     * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
+     * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. The maximum length allowed for this property is 128 characters.
      * @param value Value to set for the snapshotId property.
      */
     public void setSnapshotId(@jakarta.annotation.Nullable final String value) {
@@ -209,7 +209,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the url property value. Temporary location of the exported report
+     * Sets the url property value. Temporary location of the exported report.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

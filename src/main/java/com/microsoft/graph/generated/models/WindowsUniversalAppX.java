@@ -46,7 +46,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("applicableDeviceTypes");
     }
     /**
-     * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @return a {@link java.util.List<MobileContainedApp>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityName property value. The Identity Name.
+     * Gets the identityName property value. The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: &apos;Contoso.DemoApp&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("identityName");
     }
     /**
-     * Gets the identityPublisherHash property value. The Identity Publisher Hash.
+     * Gets the identityPublisherHash property value. The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: &apos;AB82CD0XYZ&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("identityPublisherHash");
     }
     /**
-     * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
+     * Gets the identityResourceIdentifier property value. The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: &apos;TestResourceId&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("identityResourceIdentifier");
     }
     /**
-     * Gets the identityVersion property value. The identity version.
+     * Gets the identityVersion property value. The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: &apos;1.0.0.0&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("identityVersion");
     }
     /**
-     * Gets the isBundle property value. Whether or not the app is a bundle.
+     * Gets the isBundle property value. Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -151,42 +151,42 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         this.backingStore.set("applicableDeviceTypes", value);
     }
     /**
-     * Sets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * Sets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param value Value to set for the committedContainedApps property.
      */
     public void setCommittedContainedApps(@jakarta.annotation.Nullable final java.util.List<MobileContainedApp> value) {
         this.backingStore.set("committedContainedApps", value);
     }
     /**
-     * Sets the identityName property value. The Identity Name.
+     * Sets the identityName property value. The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: &apos;Contoso.DemoApp&apos;.
      * @param value Value to set for the identityName property.
      */
     public void setIdentityName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identityName", value);
     }
     /**
-     * Sets the identityPublisherHash property value. The Identity Publisher Hash.
+     * Sets the identityPublisherHash property value. The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: &apos;AB82CD0XYZ&apos;.
      * @param value Value to set for the identityPublisherHash property.
      */
     public void setIdentityPublisherHash(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identityPublisherHash", value);
     }
     /**
-     * Sets the identityResourceIdentifier property value. The Identity Resource Identifier.
+     * Sets the identityResourceIdentifier property value. The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: &apos;TestResourceId&apos;.
      * @param value Value to set for the identityResourceIdentifier property.
      */
     public void setIdentityResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identityResourceIdentifier", value);
     }
     /**
-     * Sets the identityVersion property value. The identity version.
+     * Sets the identityVersion property value. The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: &apos;1.0.0.0&apos;.
      * @param value Value to set for the identityVersion property.
      */
     public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identityVersion", value);
     }
     /**
-     * Sets the isBundle property value. Whether or not the app is a bundle.
+     * Sets the isBundle property value. Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
      * @param value Value to set for the isBundle property.
      */
     public void setIsBundle(@jakarta.annotation.Nullable final Boolean value) {

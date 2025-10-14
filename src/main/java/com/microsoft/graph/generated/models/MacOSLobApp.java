@@ -71,7 +71,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app&apos;s version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app&apos;s version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
+     * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app&apos;s version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app&apos;s version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("ignoreVersionDetection");
     }
     /**
-     * Gets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
+     * Gets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged. The default value is FALSE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -157,14 +157,14 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         this.backingStore.set("childApps", value);
     }
     /**
-     * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app&apos;s version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app&apos;s version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
+     * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app&apos;s version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app&apos;s version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
      * @param value Value to set for the ignoreVersionDetection property.
      */
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("ignoreVersionDetection", value);
     }
     /**
-     * Sets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
+     * Sets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged. The default value is FALSE.
      * @param value Value to set for the installAsManaged property.
      */
     public void setInstallAsManaged(@jakarta.annotation.Nullable final Boolean value) {

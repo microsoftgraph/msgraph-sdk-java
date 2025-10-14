@@ -57,7 +57,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
         return this.backingStore.get("minimumSupportedOperatingSystem");
     }
     /**
-     * Gets the packageId property value. The package identifier.
+     * Gets the packageId property value. The package identifier. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
         this.backingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
-     * Sets the packageId property value. The package identifier.
+     * Sets the packageId property value. The package identifier. This property is read-only.
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {

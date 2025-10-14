@@ -59,7 +59,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/executionScope{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @return a {@link UserProcessingResultCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserProcessingResultCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserProcessingResultCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
         return new ExecutionScopeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

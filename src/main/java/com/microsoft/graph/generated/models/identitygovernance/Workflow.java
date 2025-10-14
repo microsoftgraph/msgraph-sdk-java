@@ -35,7 +35,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         return this.backingStore.get("deletedDateTime");
     }
     /**
-     * Gets the executionScope property value. The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * Gets the executionScope property value. The list of users that meet the workflowExecutionConditions of a workflow.
      * @return a {@link java.util.List<UserProcessingResult>}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         this.backingStore.set("deletedDateTime", value);
     }
     /**
-     * Sets the executionScope property value. The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * Sets the executionScope property value. The list of users that meet the workflowExecutionConditions of a workflow.
      * @param value Value to set for the executionScope property.
      */
     public void setExecutionScope(@jakarta.annotation.Nullable final java.util.List<UserProcessingResult> value) {

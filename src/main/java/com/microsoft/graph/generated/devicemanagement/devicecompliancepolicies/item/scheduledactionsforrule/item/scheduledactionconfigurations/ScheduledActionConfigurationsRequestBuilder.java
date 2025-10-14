@@ -60,21 +60,19 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/scheduledActionsForRule/{deviceComplianceScheduledActionForRule%2Did}/scheduledActionConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @return a {@link DeviceComplianceActionItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceActionItemCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceComplianceActionItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceActionItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceActionItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @return a {@link DeviceComplianceActionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceActionItem post(@jakarta.annotation.Nonnull final DeviceComplianceActionItem body) {
         return post(body, null);
     }
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceComplianceActionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceActionItem post(@jakarta.annotation.Nonnull final DeviceComplianceActionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceActionItem::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return new ScheduledActionConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

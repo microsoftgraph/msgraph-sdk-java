@@ -29,7 +29,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
         return new ManagedAppPolicyDeploymentSummary();
     }
     /**
-     * Gets the configurationDeployedUserCount property value. Not yet documented
+     * Gets the configurationDeployedUserCount property value. The configurationDeployedUserCount property
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
         return this.backingStore.get("configurationDeployedUserCount");
     }
     /**
-     * Gets the configurationDeploymentSummaryPerApp property value. Not yet documented
+     * Gets the configurationDeploymentSummaryPerApp property value. The configurationDeploymentSummaryPerApp property
      * @return a {@link java.util.List<ManagedAppPolicyDeploymentSummaryPerApp>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
         return this.backingStore.get("configurationDeploymentSummaryPerApp");
     }
     /**
-     * Gets the displayName property value. Not yet documented
+     * Gets the displayName property value. The displayName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the lastRefreshTime property value. Not yet documented
+     * Gets the lastRefreshTime property value. The lastRefreshTime property
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -96,28 +96,28 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the configurationDeployedUserCount property value. Not yet documented
+     * Sets the configurationDeployedUserCount property value. The configurationDeployedUserCount property
      * @param value Value to set for the configurationDeployedUserCount property.
      */
     public void setConfigurationDeployedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("configurationDeployedUserCount", value);
     }
     /**
-     * Sets the configurationDeploymentSummaryPerApp property value. Not yet documented
+     * Sets the configurationDeploymentSummaryPerApp property value. The configurationDeploymentSummaryPerApp property
      * @param value Value to set for the configurationDeploymentSummaryPerApp property.
      */
     public void setConfigurationDeploymentSummaryPerApp(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> value) {
         this.backingStore.set("configurationDeploymentSummaryPerApp", value);
     }
     /**
-     * Sets the displayName property value. Not yet documented
+     * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastRefreshTime property value. Not yet documented
+     * Sets the lastRefreshTime property value. The lastRefreshTime property
      * @param value Value to set for the lastRefreshTime property.
      */
     public void setLastRefreshTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

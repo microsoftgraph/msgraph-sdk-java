@@ -60,7 +60,7 @@ public class CommittedContainedAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/graph.windowsUniversalAppX/committedContainedApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @return a {@link MobileContainedAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class CommittedContainedAppsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileContainedAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class CommittedContainedAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileContainedApp::createFromDiscriminatorValue);
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class CommittedContainedAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class CommittedContainedAppsRequestBuilder extends BaseRequestBuilder {
         return new CommittedContainedAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

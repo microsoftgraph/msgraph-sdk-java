@@ -37,7 +37,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleAssignments/{deviceAndAppManagementRoleAssignment%2Did}/roleDefinition{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Role definition this assignment is part of.
+     * Indicates the role definition for this role assignment.
      * @return a {@link RoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Role definition this assignment is part of.
+     * Indicates the role definition for this role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Role definition this assignment is part of.
+     * Indicates the role definition for this role assignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Role definition this assignment is part of.
+     * Indicates the role definition for this role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
         return new RoleDefinitionRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Role definition this assignment is part of.
+     * Indicates the role definition for this role assignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

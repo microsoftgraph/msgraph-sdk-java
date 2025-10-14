@@ -60,21 +60,19 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
+     * The Role Definitions.
      * @return a {@link RoleDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
+     * The Role Definitions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RoleDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new deviceAndAppManagementRoleDefinition object.
+     * Create new navigation property to roleDefinitions for deviceManagement
      * @param body The request body
      * @return a {@link RoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleDefinition post(@jakarta.annotation.Nonnull final RoleDefinition body) {
         return post(body, null);
     }
     /**
-     * Create a new deviceAndAppManagementRoleDefinition object.
+     * Create new navigation property to roleDefinitions for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleDefinition post(@jakarta.annotation.Nonnull final RoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
+     * The Role Definitions.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
+     * The Role Definitions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new deviceAndAppManagementRoleDefinition object.
+     * Create new navigation property to roleDefinitions for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deviceAndAppManagementRoleDefinition object.
+     * Create new navigation property to roleDefinitions for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return new RoleDefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
+     * The Role Definitions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

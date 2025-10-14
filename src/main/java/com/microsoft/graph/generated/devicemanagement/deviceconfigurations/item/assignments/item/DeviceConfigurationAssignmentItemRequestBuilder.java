@@ -37,18 +37,16 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/assignments/{deviceConfigurationAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a deviceConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a deviceConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the deviceConfigurationAssignment object.
+     * The list of assignments for the device configuration profile.
      * @return a {@link DeviceConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationAssignment get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the deviceConfigurationAssignment object.
+     * The list of assignments for the device configuration profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a deviceConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @return a {@link DeviceConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationAssignment patch(@jakarta.annotation.Nonnull final DeviceConfigurationAssignment body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a deviceConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationAssignment patch(@jakarta.annotation.Nonnull final DeviceConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a deviceConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceConfigurationAssignment object.
+     * The list of assignments for the device configuration profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceConfigurationAssignment object.
+     * The list of assignments for the device configuration profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceConfigurationAssignment object.
+     * The list of assignments for the device configuration profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

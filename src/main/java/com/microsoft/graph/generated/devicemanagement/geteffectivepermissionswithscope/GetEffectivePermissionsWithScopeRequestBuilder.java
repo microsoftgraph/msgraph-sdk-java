@@ -41,7 +41,6 @@ public class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestB
      * Retrieves the effective permissions of the currently authenticated user
      * @return a {@link GetEffectivePermissionsWithScopeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-devicemanagement-geteffectivepermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetEffectivePermissionsWithScopeGetResponse get() {
@@ -52,7 +51,6 @@ public class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestB
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetEffectivePermissionsWithScopeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-devicemanagement-geteffectivepermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetEffectivePermissionsWithScopeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
