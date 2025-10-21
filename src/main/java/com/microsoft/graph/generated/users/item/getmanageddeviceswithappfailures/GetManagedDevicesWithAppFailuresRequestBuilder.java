@@ -39,7 +39,6 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
      * Retrieves the list of devices with failed apps
      * @return a {@link GetManagedDevicesWithAppFailuresGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-troubleshooting-user-getmanageddeviceswithappfailures?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetManagedDevicesWithAppFailuresGetResponse get() {
@@ -50,7 +49,6 @@ public class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestB
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetManagedDevicesWithAppFailuresGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-troubleshooting-user-getmanageddeviceswithappfailures?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetManagedDevicesWithAppFailuresGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

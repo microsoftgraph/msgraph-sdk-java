@@ -41,7 +41,7 @@ public class CallEvent extends Entity implements Parsable {
         return this.backingStore.get("callEventType");
     }
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. The date and time when the event occurred. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class CallEvent extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. Participants collection for the call event.
      * @return a {@link java.util.List<Participant>}
      */
     @jakarta.annotation.Nullable
@@ -87,14 +87,14 @@ public class CallEvent extends Entity implements Parsable {
         this.backingStore.set("callEventType", value);
     }
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. The date and time when the event occurred. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("eventDateTime", value);
     }
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. Participants collection for the call event.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {

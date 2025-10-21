@@ -36,23 +36,21 @@ public class GetDeviceManagementIntentPerSettingContributingProfilesRequestBuild
         super(requestAdapter, "{+baseurl}/deviceManagement/reports/getDeviceManagementIntentPerSettingContributingProfiles", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action getDeviceManagementIntentPerSettingContributingProfiles
      * @param body The request body
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getdevicemanagementintentpersettingcontributingprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetDeviceManagementIntentPerSettingContributingProfilesPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action getDeviceManagementIntentPerSettingContributingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getdevicemanagementintentpersettingcontributingprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetDeviceManagementIntentPerSettingContributingProfilesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -63,7 +61,7 @@ public class GetDeviceManagementIntentPerSettingContributingProfilesRequestBuild
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Not yet documented
+     * Invoke action getDeviceManagementIntentPerSettingContributingProfiles
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +70,7 @@ public class GetDeviceManagementIntentPerSettingContributingProfilesRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action getDeviceManagementIntentPerSettingContributingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

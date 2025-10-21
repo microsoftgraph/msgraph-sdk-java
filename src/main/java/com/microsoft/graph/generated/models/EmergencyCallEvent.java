@@ -25,7 +25,7 @@ public class EmergencyCallEvent extends CallEvent implements Parsable {
         return new EmergencyCallEvent();
     }
     /**
-     * Gets the callerInfo property value. The callerInfo property
+     * Gets the callerInfo property value. The information of the emergency caller.
      * @return a {@link EmergencyCallerInfo}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class EmergencyCallEvent extends CallEvent implements Parsable {
         return this.backingStore.get("callerInfo");
     }
     /**
-     * Gets the emergencyNumberDialed property value. The emergencyNumberDialed property
+     * Gets the emergencyNumberDialed property value. The emergency number dialed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EmergencyCallEvent extends CallEvent implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the policyName property value. The policyName property
+     * Gets the policyName property value. The policy name for the emergency call event.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class EmergencyCallEvent extends CallEvent implements Parsable {
         writer.writeStringValue("policyName", this.getPolicyName());
     }
     /**
-     * Sets the callerInfo property value. The callerInfo property
+     * Sets the callerInfo property value. The information of the emergency caller.
      * @param value Value to set for the callerInfo property.
      */
     public void setCallerInfo(@jakarta.annotation.Nullable final EmergencyCallerInfo value) {
         this.backingStore.set("callerInfo", value);
     }
     /**
-     * Sets the emergencyNumberDialed property value. The emergencyNumberDialed property
+     * Sets the emergencyNumberDialed property value. The emergency number dialed.
      * @param value Value to set for the emergencyNumberDialed property.
      */
     public void setEmergencyNumberDialed(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emergencyNumberDialed", value);
     }
     /**
-     * Sets the policyName property value. The policyName property
+     * Sets the policyName property value. The policy name for the emergency call event.
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {

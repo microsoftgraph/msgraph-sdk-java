@@ -33,6 +33,13 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public static AccessPackageApprovalStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.accessPackageDynamicApprovalStage": return new AccessPackageDynamicApprovalStage();
+            }
+        }
         return new AccessPackageApprovalStage();
     }
     /**

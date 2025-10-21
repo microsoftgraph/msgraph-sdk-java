@@ -70,21 +70,19 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/auditEvents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      * @return a {@link AuditEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuditEventCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuditEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuditEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,23 +102,21 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return new GetAuditActivityTypesWithCategoryRequestBuilder(pathParameters, requestAdapter, category);
     }
     /**
-     * Create a new auditEvent object.
+     * Create new navigation property to auditEvents for deviceManagement
      * @param body The request body
      * @return a {@link AuditEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuditEvent post(@jakarta.annotation.Nonnull final AuditEvent body) {
         return post(body, null);
     }
     /**
-     * Create a new auditEvent object.
+     * Create new navigation property to auditEvents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuditEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuditEvent post(@jakarta.annotation.Nonnull final AuditEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -131,7 +127,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuditEvent::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +135,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +147,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new auditEvent object.
+     * Create new navigation property to auditEvents for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +156,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new auditEvent object.
+     * Create new navigation property to auditEvents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -185,7 +181,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return new AuditEventsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

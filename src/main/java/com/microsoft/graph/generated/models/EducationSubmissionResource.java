@@ -25,12 +25,20 @@ public class EducationSubmissionResource extends Entity implements Parsable {
         return new EducationSubmissionResource();
     }
     /**
-     * Gets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied, and if null, the student uploaded the resource.
+     * Gets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignmentResourceUrl() {
         return this.backingStore.get("assignmentResourceUrl");
+    }
+    /**
+     * Gets the dependentResources property value. A collection of submission resources that depend on the parent educationSubmissionResource.
+     * @return a {@link java.util.List<EducationSubmissionResource>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EducationSubmissionResource> getDependentResources() {
+        return this.backingStore.get("dependentResources");
     }
     /**
      * The deserialization information for the current model
@@ -40,6 +48,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignmentResourceUrl", (n) -> { this.setAssignmentResourceUrl(n.getStringValue()); });
+        deserializerMap.put("dependentResources", (n) -> { this.setDependentResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -59,14 +68,22 @@ public class EducationSubmissionResource extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("assignmentResourceUrl", this.getAssignmentResourceUrl());
+        writer.writeCollectionOfObjectValues("dependentResources", this.getDependentResources());
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied, and if null, the student uploaded the resource.
+     * Sets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
      * @param value Value to set for the assignmentResourceUrl property.
      */
     public void setAssignmentResourceUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("assignmentResourceUrl", value);
+    }
+    /**
+     * Sets the dependentResources property value. A collection of submission resources that depend on the parent educationSubmissionResource.
+     * @param value Value to set for the dependentResources property.
+     */
+    public void setDependentResources(@jakarta.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
+        this.backingStore.set("dependentResources", value);
     }
     /**
      * Sets the resource property value. Resource object.

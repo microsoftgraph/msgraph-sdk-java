@@ -38,7 +38,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
         return deserializerMap;
     }
     /**
-     * Gets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
+     * Gets the members property value. Indicates the list of role member security group Entra IDs. For example: {dec942f4-6777-4998-96b4-522e383b08e2}.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
         writer.writeCollectionOfPrimitiveValues("members", this.getMembers());
     }
     /**
-     * Sets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
+     * Sets the members property value. Indicates the list of role member security group Entra IDs. For example: {dec942f4-6777-4998-96b4-522e383b08e2}.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<String> value) {

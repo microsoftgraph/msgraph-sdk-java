@@ -37,7 +37,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
         return this.backingStore.get("appleIdentifier");
     }
     /**
-     * Gets the certificate property value. Not yet documented
+     * Gets the certificate property value. The certificate property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
         this.backingStore.set("appleIdentifier", value);
     }
     /**
-     * Sets the certificate property value. Not yet documented
+     * Sets the certificate property value. The certificate property
      * @param value Value to set for the certificate property.
      */
     public void setCertificate(@jakarta.annotation.Nullable final String value) {
