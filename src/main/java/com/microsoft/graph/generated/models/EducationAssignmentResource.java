@@ -25,6 +25,14 @@ public class EducationAssignmentResource extends Entity implements Parsable {
         return new EducationAssignmentResource();
     }
     /**
+     * Gets the dependentResources property value. A collection of assignment resources that depend on the parent educationAssignmentResource.
+     * @return a {@link java.util.List<EducationAssignmentResource>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EducationAssignmentResource> getDependentResources() {
+        return this.backingStore.get("dependentResources");
+    }
+    /**
      * Gets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
      * @return a {@link Boolean}
      */
@@ -39,6 +47,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("dependentResources", (n) -> { this.setDependentResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
         deserializerMap.put("distributeForStudentWork", (n) -> { this.setDistributeForStudentWork(n.getBooleanValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -58,8 +67,16 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("dependentResources", this.getDependentResources());
         writer.writeBooleanValue("distributeForStudentWork", this.getDistributeForStudentWork());
         writer.writeObjectValue("resource", this.getResource());
+    }
+    /**
+     * Sets the dependentResources property value. A collection of assignment resources that depend on the parent educationAssignmentResource.
+     * @param value Value to set for the dependentResources property.
+     */
+    public void setDependentResources(@jakarta.annotation.Nullable final java.util.List<EducationAssignmentResource> value) {
+        this.backingStore.set("dependentResources", value);
     }
     /**
      * Sets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required

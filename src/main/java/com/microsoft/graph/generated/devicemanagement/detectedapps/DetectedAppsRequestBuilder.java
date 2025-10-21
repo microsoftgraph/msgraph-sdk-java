@@ -60,21 +60,19 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/detectedApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @return a {@link DetectedAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-detectedapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetectedAppCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DetectedAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-detectedapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetectedAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DetectedAppCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param body The request body
      * @return a {@link DetectedApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-detectedapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetectedApp post(@jakarta.annotation.Nonnull final DetectedApp body) {
         return post(body, null);
     }
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DetectedApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-detectedapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetectedApp post(@jakarta.annotation.Nonnull final DetectedApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DetectedApp::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return new DetectedAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

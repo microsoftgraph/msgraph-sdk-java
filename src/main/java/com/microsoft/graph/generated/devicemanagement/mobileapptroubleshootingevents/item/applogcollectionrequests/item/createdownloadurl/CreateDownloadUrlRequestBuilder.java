@@ -36,21 +36,19 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEvent%2Did}/appLogCollectionRequests/{appLogCollectionRequest%2Did}/createDownloadUrl", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action createDownloadUrl
      * @return a {@link AppLogCollectionDownloadDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-createdownloadurl?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppLogCollectionDownloadDetails post() {
         return post(null);
     }
     /**
-     * Not yet documented
+     * Invoke action createDownloadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppLogCollectionDownloadDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-createdownloadurl?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppLogCollectionDownloadDetails post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -60,7 +58,7 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppLogCollectionDownloadDetails::createFromDiscriminatorValue);
     }
     /**
-     * Not yet documented
+     * Invoke action createDownloadUrl
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +66,7 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Not yet documented
+     * Invoke action createDownloadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

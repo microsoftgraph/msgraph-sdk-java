@@ -56,7 +56,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         return this.backingStore;
     }
     /**
-     * Gets the calendarSyncEnabled property value. Not yet documented
+     * Gets the calendarSyncEnabled property value. The calendarSyncEnabled property
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         return this.backingStore.get("calendarSyncEnabled");
     }
     /**
-     * Gets the deviceAccount property value. Not yet documented
+     * Gets the deviceAccount property value. The deviceAccount property
      * @return a {@link WindowsDeviceAccount}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         return this.backingStore.get("deviceAccount");
     }
     /**
-     * Gets the deviceAccountEmail property value. Not yet documented
+     * Gets the deviceAccountEmail property value. The deviceAccountEmail property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         return this.backingStore.get("deviceAccountEmail");
     }
     /**
-     * Gets the exchangeServer property value. Not yet documented
+     * Gets the exchangeServer property value. The exchangeServer property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the passwordRotationEnabled property value. Not yet documented
+     * Gets the passwordRotationEnabled property value. The passwordRotationEnabled property
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         return this.backingStore.get("passwordRotationEnabled");
     }
     /**
-     * Gets the sessionInitiationProtocalAddress property value. Not yet documented
+     * Gets the sessionInitiationProtocalAddress property value. The sessionInitiationProtocalAddress property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,28 +158,28 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         this.backingStore = value;
     }
     /**
-     * Sets the calendarSyncEnabled property value. Not yet documented
+     * Sets the calendarSyncEnabled property value. The calendarSyncEnabled property
      * @param value Value to set for the calendarSyncEnabled property.
      */
     public void setCalendarSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("calendarSyncEnabled", value);
     }
     /**
-     * Sets the deviceAccount property value. Not yet documented
+     * Sets the deviceAccount property value. The deviceAccount property
      * @param value Value to set for the deviceAccount property.
      */
     public void setDeviceAccount(@jakarta.annotation.Nullable final WindowsDeviceAccount value) {
         this.backingStore.set("deviceAccount", value);
     }
     /**
-     * Sets the deviceAccountEmail property value. Not yet documented
+     * Sets the deviceAccountEmail property value. The deviceAccountEmail property
      * @param value Value to set for the deviceAccountEmail property.
      */
     public void setDeviceAccountEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceAccountEmail", value);
     }
     /**
-     * Sets the exchangeServer property value. Not yet documented
+     * Sets the exchangeServer property value. The exchangeServer property
      * @param value Value to set for the exchangeServer property.
      */
     public void setExchangeServer(@jakarta.annotation.Nullable final String value) {
@@ -193,14 +193,14 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the passwordRotationEnabled property value. Not yet documented
+     * Sets the passwordRotationEnabled property value. The passwordRotationEnabled property
      * @param value Value to set for the passwordRotationEnabled property.
      */
     public void setPasswordRotationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("passwordRotationEnabled", value);
     }
     /**
-     * Sets the sessionInitiationProtocalAddress property value. Not yet documented
+     * Sets the sessionInitiationProtocalAddress property value. The sessionInitiationProtocalAddress property
      * @param value Value to set for the sessionInitiationProtocalAddress property.
      */
     public void setSessionInitiationProtocalAddress(@jakarta.annotation.Nullable final String value) {

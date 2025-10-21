@@ -59,7 +59,7 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, BackedM
         return this.backingStore;
     }
     /**
-     * Gets the content property value. Not yet documented
+     * Gets the content property value. The content property
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class DeviceAndAppManagementData implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the content property value. Not yet documented
+     * Sets the content property value. The content property
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {

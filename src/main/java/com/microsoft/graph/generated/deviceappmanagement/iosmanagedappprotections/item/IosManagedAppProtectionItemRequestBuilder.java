@@ -64,18 +64,16 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a iosManagedAppProtection.
+     * Delete navigation property iosManagedAppProtections for deviceAppManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a iosManagedAppProtection.
+     * Delete navigation property iosManagedAppProtections for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -84,21 +82,19 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the iosManagedAppProtection object.
+     * iOS managed app policies.
      * @return a {@link IosManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IosManagedAppProtection get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the iosManagedAppProtection object.
+     * iOS managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IosManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IosManagedAppProtection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -108,23 +104,21 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, IosManagedAppProtection::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a iosManagedAppProtection object.
+     * Update the navigation property iosManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @return a {@link IosManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IosManagedAppProtection patch(@jakarta.annotation.Nonnull final IosManagedAppProtection body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a iosManagedAppProtection object.
+     * Update the navigation property iosManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IosManagedAppProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IosManagedAppProtection patch(@jakarta.annotation.Nonnull final IosManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -135,7 +129,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, IosManagedAppProtection::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a iosManagedAppProtection.
+     * Delete navigation property iosManagedAppProtections for deviceAppManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +137,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a iosManagedAppProtection.
+     * Delete navigation property iosManagedAppProtections for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -155,7 +149,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the iosManagedAppProtection object.
+     * iOS managed app policies.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +157,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the iosManagedAppProtection object.
+     * iOS managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the properties of a iosManagedAppProtection object.
+     * Update the navigation property iosManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -184,7 +178,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a iosManagedAppProtection object.
+     * Update the navigation property iosManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -215,7 +209,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the iosManagedAppProtection object.
+     * iOS managed app policies.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
