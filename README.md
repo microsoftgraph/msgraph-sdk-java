@@ -101,7 +101,7 @@ For more detailed documentation, see:
 
 ## 5. Update Schedule
 
-The Microsoft Graph Java SDK is scheduled to be updated during the week of the second and fourth Tuesday of each month.
+The Microsoft Graph Java SDK is scheduled to be updated during the second and fourth week of each month
 
 ## 6. Issues
 
