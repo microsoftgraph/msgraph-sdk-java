@@ -25,7 +25,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         return new ApplicationTemplate();
     }
     /**
-     * Gets the categories property value. The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
+     * Gets the categories property value. The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.  Supports $filter (contains).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The name of the application.
+     * Gets the displayName property value. The name of the application. Supports $filter (contains).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("supportedSingleSignOnModes", this.getSupportedSingleSignOnModes());
     }
     /**
-     * Sets the categories property value. The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
+     * Sets the categories property value. The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.  Supports $filter (contains).
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -136,7 +136,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The name of the application.
+     * Sets the displayName property value. The name of the application. Supports $filter (contains).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
