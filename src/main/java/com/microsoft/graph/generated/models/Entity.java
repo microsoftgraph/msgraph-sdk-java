@@ -222,6 +222,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.aiInteraction": return new AiInteraction();
             case "#microsoft.graph.aiInteractionHistory": return new AiInteractionHistory();
             case "#microsoft.graph.aiUser": return new AiUser();
+            case "#microsoft.graph.akamaiWebApplicationFirewallProvider": return new AkamaiWebApplicationFirewallProvider();
             case "#microsoft.graph.alert": return new Alert();
             case "#microsoft.graph.allowedValue": return new AllowedValue();
             case "#microsoft.graph.androidCompliancePolicy": return new AndroidCompliancePolicy();
@@ -328,6 +329,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.claimsMappingPolicy": return new ClaimsMappingPolicy();
             case "#microsoft.graph.cloudClipboardItem": return new CloudClipboardItem();
             case "#microsoft.graph.cloudClipboardRoot": return new CloudClipboardRoot();
+            case "#microsoft.graph.cloudFlareWebApplicationFirewallProvider": return new CloudFlareWebApplicationFirewallProvider();
             case "#microsoft.graph.cloudPC": return new CloudPC();
             case "#microsoft.graph.cloudPcAuditEvent": return new CloudPcAuditEvent();
             case "#microsoft.graph.cloudPcDeviceImage": return new CloudPcDeviceImage();
@@ -457,6 +459,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.educationFeedbackOutcome": return new EducationFeedbackOutcome();
             case "#microsoft.graph.educationFeedbackResourceOutcome": return new EducationFeedbackResourceOutcome();
             case "#microsoft.graph.educationGradingCategory": return new EducationGradingCategory();
+            case "#microsoft.graph.educationGradingScheme": return new EducationGradingScheme();
             case "#microsoft.graph.educationModule": return new EducationModule();
             case "#microsoft.graph.educationModuleResource": return new EducationModuleResource();
             case "#microsoft.graph.educationOrganization": return new EducationOrganization();
@@ -676,9 +679,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.onAttributeCollectionListener": return new OnAttributeCollectionListener();
             case "#microsoft.graph.onAttributeCollectionStartCustomExtension": return new OnAttributeCollectionStartCustomExtension();
             case "#microsoft.graph.onAttributeCollectionStartListener": return new OnAttributeCollectionStartListener();
-            case "#microsoft.graph.onAttributeCollectionSubmitCustomExtension": return new OnAttributeCollectionSubmitCustomExtension();
-            case "#microsoft.graph.onAttributeCollectionSubmitListener": return new OnAttributeCollectionSubmitListener();
-            case "#microsoft.graph.onAuthenticationMethodLoadStartListener": return new OnAuthenticationMethodLoadStartListener();
         }
         return null;
     }
@@ -690,6 +690,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.onAttributeCollectionSubmitCustomExtension": return new OnAttributeCollectionSubmitCustomExtension();
+            case "#microsoft.graph.onAttributeCollectionSubmitListener": return new OnAttributeCollectionSubmitListener();
+            case "#microsoft.graph.onAuthenticationMethodLoadStartListener": return new OnAuthenticationMethodLoadStartListener();
             case "#microsoft.graph.oneDriveForBusinessProtectionPolicy": return new OneDriveForBusinessProtectionPolicy();
             case "#microsoft.graph.oneDriveForBusinessRestoreSession": return new OneDriveForBusinessRestoreSession();
             case "#microsoft.graph.onEmailOtpSendListener": return new OnEmailOtpSendListener();
@@ -1118,6 +1121,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
             case "#microsoft.graph.vppToken": return new VppToken();
             case "#microsoft.graph.webApp": return new WebApp();
+            case "#microsoft.graph.webApplicationFirewallProvider": return new WebApplicationFirewallProvider();
+            case "#microsoft.graph.webApplicationFirewallVerificationModel": return new WebApplicationFirewallVerificationModel();
             case "#microsoft.graph.webPart": return new WebPart();
             case "#microsoft.graph.whatIfAnalysisResult": return new WhatIfAnalysisResult();
             case "#microsoft.graph.win32LobApp": return new Win32LobApp();
@@ -1185,11 +1190,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.workbookCommentReply": return new WorkbookCommentReply();
             case "#microsoft.graph.workbookFilter": return new WorkbookFilter();
             case "#microsoft.graph.workbookFormatProtection": return new WorkbookFormatProtection();
-            case "#microsoft.graph.workbookFunctionResult": return new WorkbookFunctionResult();
-            case "#microsoft.graph.workbookFunctions": return new WorkbookFunctions();
-            case "#microsoft.graph.workbookNamedItem": return new WorkbookNamedItem();
-            case "#microsoft.graph.workbookOperation": return new WorkbookOperation();
-            case "#microsoft.graph.workbookPivotTable": return new WorkbookPivotTable();
         }
         return null;
     }
@@ -1201,6 +1201,11 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.workbookFunctionResult": return new WorkbookFunctionResult();
+            case "#microsoft.graph.workbookFunctions": return new WorkbookFunctions();
+            case "#microsoft.graph.workbookNamedItem": return new WorkbookNamedItem();
+            case "#microsoft.graph.workbookOperation": return new WorkbookOperation();
+            case "#microsoft.graph.workbookPivotTable": return new WorkbookPivotTable();
             case "#microsoft.graph.workbookRange": return new WorkbookRange();
             case "#microsoft.graph.workbookRangeBorder": return new WorkbookRangeBorder();
             case "#microsoft.graph.workbookRangeFill": return new WorkbookRangeFill();

@@ -36,7 +36,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/channels/{channel%2Did}/doesUserHaveAccess(userId='@userId',tenantId='@tenantId',userPrincipalName='@userPrincipalName'){?tenantId*,userId*,userPrincipalName*}", rawUrl);
     }
     /**
-     * Determine whether a user has access to a shared channel.
+     * Determine whether a user has access to a channel.
      * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/channel-doesuserhaveaccess?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         return get(null);
     }
     /**
-     * Determine whether a user has access to a shared channel.
+     * Determine whether a user has access to a channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         return this.requestAdapter.send(requestInfo, errorMapping, DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Determine whether a user has access to a shared channel.
+     * Determine whether a user has access to a channel.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         return toGetRequestInformation(null);
     }
     /**
-     * Determine whether a user has access to a shared channel.
+     * Determine whether a user has access to a channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +90,7 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
         return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Determine whether a user has access to a shared channel.
+     * Determine whether a user has access to a channel.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -4,6 +4,7 @@ import com.microsoft.graph.education.users.item.assignments.item.activate.Activa
 import com.microsoft.graph.education.users.item.assignments.item.categories.CategoriesRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.deactivate.DeactivateRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.gradingcategory.GradingCategoryRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.gradingscheme.GradingSchemeRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.publish.PublishRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.rubric.RubricRequestBuilder;
@@ -61,6 +62,14 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GradingCategoryRequestBuilder gradingCategory() {
         return new GradingCategoryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the gradingScheme property of the microsoft.graph.educationAssignment entity.
+     * @return a {@link GradingSchemeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GradingSchemeRequestBuilder gradingScheme() {
+        return new GradingSchemeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the publish method.

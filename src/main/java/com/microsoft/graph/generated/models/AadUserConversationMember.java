@@ -47,7 +47,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
+     * Gets the tenantId property value. The tenant ID of the Microsoft Entra user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
         return this.backingStore.get("user");
     }
     /**
-     * Gets the userId property value. The guid of the user.
+     * Gets the userId property value. The user ID of the Microsoft Entra user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
+     * Sets the tenantId property value. The tenant ID of the Microsoft Entra user.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
@@ -104,7 +104,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
         this.backingStore.set("user", value);
     }
     /**
-     * Sets the userId property value. The guid of the user.
+     * Sets the userId property value. The user ID of the Microsoft Entra user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

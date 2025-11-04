@@ -7,6 +7,7 @@ import com.microsoft.graph.identity.b2xuserflows.B2xUserFlowsRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.ConditionalAccessRequestBuilder;
 import com.microsoft.graph.identity.customauthenticationextensions.CustomAuthenticationExtensionsRequestBuilder;
 import com.microsoft.graph.identity.identityproviders.IdentityProvidersRequestBuilder;
+import com.microsoft.graph.identity.riskprevention.RiskPreventionRequestBuilder;
 import com.microsoft.graph.identity.userflowattributes.UserFlowAttributesRequestBuilder;
 import com.microsoft.graph.models.IdentityContainer;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -83,6 +84,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the riskPrevention property of the microsoft.graph.identityContainer entity.
+     * @return a {@link RiskPreventionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RiskPreventionRequestBuilder riskPrevention() {
+        return new RiskPreventionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.

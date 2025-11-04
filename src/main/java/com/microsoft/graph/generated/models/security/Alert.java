@@ -171,6 +171,7 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("firstActivityDateTime", (n) -> { this.setFirstActivityDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("incidentId", (n) -> { this.setIncidentId(n.getStringValue()); });
         deserializerMap.put("incidentWebUrl", (n) -> { this.setIncidentWebUrl(n.getStringValue()); });
+        deserializerMap.put("investigationState", (n) -> { this.setInvestigationState(n.getEnumValue(InvestigationState::forValue)); });
         deserializerMap.put("lastActivityDateTime", (n) -> { this.setLastActivityDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("mitreTechniques", (n) -> { this.setMitreTechniques(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -211,6 +212,14 @@ public class Alert extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getIncidentWebUrl() {
         return this.backingStore.get("incidentWebUrl");
+    }
+    /**
+     * Gets the investigationState property value. Information on the current status of the investigation. Possible values are: unknown, terminated, successfullyRemediated, benign, failed, partiallyRemediated, running, pendingApproval, pendingResource, queued, innerFailure, preexistingAlert, unsupportedOs, unsupportedAlertType, suppressedAlert, partiallyInvestigated, terminatedByUser, terminatedBySystem, unknownFutureValue.
+     * @return a {@link InvestigationState}
+     */
+    @jakarta.annotation.Nullable
+    public InvestigationState getInvestigationState() {
+        return this.backingStore.get("investigationState");
     }
     /**
      * Gets the lastActivityDateTime property value. The oldest activity associated with the alert.
@@ -357,6 +366,7 @@ public class Alert extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("firstActivityDateTime", this.getFirstActivityDateTime());
         writer.writeStringValue("incidentId", this.getIncidentId());
         writer.writeStringValue("incidentWebUrl", this.getIncidentWebUrl());
+        writer.writeEnumValue("investigationState", this.getInvestigationState());
         writer.writeOffsetDateTimeValue("lastActivityDateTime", this.getLastActivityDateTime());
         writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
         writer.writeCollectionOfPrimitiveValues("mitreTechniques", this.getMitreTechniques());
@@ -498,6 +508,13 @@ public class Alert extends Entity implements Parsable {
      */
     public void setIncidentWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("incidentWebUrl", value);
+    }
+    /**
+     * Sets the investigationState property value. Information on the current status of the investigation. Possible values are: unknown, terminated, successfullyRemediated, benign, failed, partiallyRemediated, running, pendingApproval, pendingResource, queued, innerFailure, preexistingAlert, unsupportedOs, unsupportedAlertType, suppressedAlert, partiallyInvestigated, terminatedByUser, terminatedBySystem, unknownFutureValue.
+     * @param value Value to set for the investigationState property.
+     */
+    public void setInvestigationState(@jakarta.annotation.Nullable final InvestigationState value) {
+        this.backingStore.set("investigationState", value);
     }
     /**
      * Sets the lastActivityDateTime property value. The oldest activity associated with the alert.
