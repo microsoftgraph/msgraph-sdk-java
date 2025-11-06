@@ -22,6 +22,7 @@ import com.microsoft.graph.groups.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.groups.item.members.MembersRequestBuilder;
 import com.microsoft.graph.groups.item.memberswithlicenseerrors.MembersWithLicenseErrorsRequestBuilder;
 import com.microsoft.graph.groups.item.onenote.OnenoteRequestBuilder;
+import com.microsoft.graph.groups.item.onpremisessyncbehavior.OnPremisesSyncBehaviorRequestBuilder;
 import com.microsoft.graph.groups.item.owners.OwnersRequestBuilder;
 import com.microsoft.graph.groups.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.groups.item.photo.PhotoRequestBuilder;
@@ -238,6 +239,14 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the onPremisesSyncBehavior property of the microsoft.graph.group entity.
+     * @return a {@link OnPremisesSyncBehaviorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OnPremisesSyncBehaviorRequestBuilder onPremisesSyncBehavior() {
+        return new OnPremisesSyncBehaviorRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the owners property of the microsoft.graph.group entity.

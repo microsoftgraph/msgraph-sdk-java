@@ -56,7 +56,7 @@ public class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, P
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the emergency caller.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. The location of the emergency caller.
      * @return a {@link Location}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the phoneNumber property value. The phoneNumber property
+     * Gets the phoneNumber property value. The phone number of the emergency caller.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("phoneNumber");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The tenant ID of the emergency caller.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("tenantId");
     }
     /**
-     * Gets the upn property value. The upn property
+     * Gets the upn property value. The user principal name of the emergency caller.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,14 +148,14 @@ public class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the emergency caller.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. The location of the emergency caller.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final Location value) {
@@ -169,21 +169,21 @@ public class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the phoneNumber property value. The phoneNumber property
+     * Sets the phoneNumber property value. The phone number of the emergency caller.
      * @param value Value to set for the phoneNumber property.
      */
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("phoneNumber", value);
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The tenant ID of the emergency caller.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("tenantId", value);
     }
     /**
-     * Sets the upn property value. The upn property
+     * Sets the upn property value. The user principal name of the emergency caller.
      * @param value Value to set for the upn property.
      */
     public void setUpn(@jakarta.annotation.Nullable final String value) {

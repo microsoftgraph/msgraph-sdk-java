@@ -1,6 +1,8 @@
 package com.microsoft.graph.education.classes.item.assignmentsettings;
 
+import com.microsoft.graph.education.classes.item.assignmentsettings.defaultgradingscheme.DefaultGradingSchemeRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignmentsettings.gradingcategories.GradingCategoriesRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignmentsettings.gradingschemes.GradingSchemesRequestBuilder;
 import com.microsoft.graph.models.EducationAssignmentSettings;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -22,12 +24,28 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the defaultGradingScheme property of the microsoft.graph.educationAssignmentSettings entity.
+     * @return a {@link DefaultGradingSchemeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DefaultGradingSchemeRequestBuilder defaultGradingScheme() {
+        return new DefaultGradingSchemeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the gradingCategories property of the microsoft.graph.educationAssignmentSettings entity.
      * @return a {@link GradingCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GradingCategoriesRequestBuilder gradingCategories() {
         return new GradingCategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the gradingSchemes property of the microsoft.graph.educationAssignmentSettings entity.
+     * @return a {@link GradingSchemesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GradingSchemesRequestBuilder gradingSchemes() {
+        return new GradingSchemesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AssignmentSettingsRequestBuilder} and sets the default values.

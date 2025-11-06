@@ -182,6 +182,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("cloudClipboard");
     }
     /**
+     * Gets the cloudPCs property value. The user&apos;s Cloud PCs. Read-only. Nullable.
+     * @return a {@link java.util.List<CloudPC>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudPC> getCloudPCs() {
+        return this.backingStore.get("cloudPCs");
+    }
+    /**
      * Gets the companyName property value. The name of the company that the user is associated with. This property can be useful for describing the company that a guest comes from. The maximum length is 64 characters.Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
@@ -431,6 +439,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("chats", (n) -> { this.setChats(n.getCollectionOfObjectValues(Chat::createFromDiscriminatorValue)); });
         deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
         deserializerMap.put("cloudClipboard", (n) -> { this.setCloudClipboard(n.getObjectValue(CloudClipboardRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
         deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
         deserializerMap.put("consentProvidedForMinor", (n) -> { this.setConsentProvidedForMinor(n.getStringValue()); });
         deserializerMap.put("contactFolders", (n) -> { this.setContactFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
@@ -1234,6 +1243,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("chats", this.getChats());
         writer.writeStringValue("city", this.getCity());
         writer.writeObjectValue("cloudClipboard", this.getCloudClipboard());
+        writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeStringValue("companyName", this.getCompanyName());
         writer.writeStringValue("consentProvidedForMinor", this.getConsentProvidedForMinor());
         writer.writeCollectionOfObjectValues("contactFolders", this.getContactFolders());
@@ -1478,6 +1488,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setCloudClipboard(@jakarta.annotation.Nullable final CloudClipboardRoot value) {
         this.backingStore.set("cloudClipboard", value);
+    }
+    /**
+     * Sets the cloudPCs property value. The user&apos;s Cloud PCs. Read-only. Nullable.
+     * @param value Value to set for the cloudPCs property.
+     */
+    public void setCloudPCs(@jakarta.annotation.Nullable final java.util.List<CloudPC> value) {
+        this.backingStore.set("cloudPCs", value);
     }
     /**
      * Sets the companyName property value. The name of the company that the user is associated with. This property can be useful for describing the company that a guest comes from. The maximum length is 64 characters.Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).

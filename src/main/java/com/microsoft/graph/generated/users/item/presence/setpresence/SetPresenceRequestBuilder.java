@@ -35,7 +35,7 @@ public class SetPresenceRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/presence/setPresence", rawUrl);
     }
     /**
-     * Set the state of a user&apos;s presence session as an application.
+     * Set the state of a user&apos;s presence session as an application. For more information about presence sessions, states permutations, and timeouts, see Manage presence state using the Microsoft Graph API.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/presence-setpresence?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +44,7 @@ public class SetPresenceRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Set the state of a user&apos;s presence session as an application.
+     * Set the state of a user&apos;s presence session as an application. For more information about presence sessions, states permutations, and timeouts, see Manage presence state using the Microsoft Graph API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class SetPresenceRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Set the state of a user&apos;s presence session as an application.
+     * Set the state of a user&apos;s presence session as an application. For more information about presence sessions, states permutations, and timeouts, see Manage presence state using the Microsoft Graph API.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class SetPresenceRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set the state of a user&apos;s presence session as an application.
+     * Set the state of a user&apos;s presence session as an application. For more information about presence sessions, states permutations, and timeouts, see Manage presence state using the Microsoft Graph API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

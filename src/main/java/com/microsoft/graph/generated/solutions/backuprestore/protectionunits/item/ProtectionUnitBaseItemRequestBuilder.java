@@ -2,9 +2,11 @@ package com.microsoft.graph.solutions.backuprestore.protectionunits.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProtectionUnitBase;
+import com.microsoft.graph.solutions.backuprestore.protectionunits.item.canceloffboard.CancelOffboardRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.protectionunits.item.graphdriveprotectionunit.GraphDriveProtectionUnitRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.protectionunits.item.graphmailboxprotectionunit.GraphMailboxProtectionUnitRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.protectionunits.item.graphsiteprotectionunit.GraphSiteProtectionUnitRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.protectionunits.item.offboard.OffboardRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -23,6 +25,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProtectionUnitBaseItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the cancelOffboard method.
+     * @return a {@link CancelOffboardRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CancelOffboardRequestBuilder cancelOffboard() {
+        return new CancelOffboardRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Casts the previous resource to driveProtectionUnit.
      * @return a {@link GraphDriveProtectionUnitRequestBuilder}
@@ -46,6 +56,14 @@ public class ProtectionUnitBaseItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GraphSiteProtectionUnitRequestBuilder graphSiteProtectionUnit() {
         return new GraphSiteProtectionUnitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the offboard method.
+     * @return a {@link OffboardRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OffboardRequestBuilder offboard() {
+        return new OffboardRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ProtectionUnitBaseItemRequestBuilder} and sets the default values.

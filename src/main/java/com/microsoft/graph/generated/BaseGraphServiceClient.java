@@ -457,7 +457,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
         return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * The places property
+     * Provides operations to manage the collection of place entities.
      * @return a {@link PlacesRequestBuilder}
      */
     @jakarta.annotation.Nonnull

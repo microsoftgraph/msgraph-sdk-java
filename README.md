@@ -20,7 +20,7 @@ repositories {
 dependencies {
     // Include the sdk as a dependency
     // x-release-please-start-version
-    implementation 'com.microsoft.graph:microsoft-graph:6.52.0'
+    implementation 'com.microsoft.graph:microsoft-graph:6.55.0'
     // x-release-please-end
     // This dependency is only needed if you are using a TokenCredential object for authentication
     implementation 'com.azure:azure-identity:1.15.0'
@@ -37,7 +37,7 @@ Add the dependency in `dependencies` in pom.xml
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
   <!--x-release-please-start-version-->
-  <version>6.52.0</version>
+  <version>6.55.0</version>
   <!--x-release-please-end-->
 </dependency>
 <dependency>
@@ -99,24 +99,28 @@ For more detailed documentation, see:
 * [Known issues](https://github.com/MicrosoftGraph/msgraph-sdk-java/issues)
 * [Contributions](https://github.com/microsoftgraph/msgraph-sdk-java/blob/main/CONTRIBUTING.md)
 
-## 5. Issues
+## 5. Update Schedule
+
+The Microsoft Graph Java SDK is scheduled to be updated during the second and fourth week of each month
+
+## 6. Issues
 
 For known issues, see [issues](https://github.com/MicrosoftGraph/msgraph-sdk-java/issues).
 
-## 6. Contributions
+## 7. Contributions
 
 The Microsoft Graph SDK is open for contribution. To contribute to this project, see [Contributing](https://github.com/microsoftgraph/msgraph-sdk-java/blob/main/CONTRIBUTING.md).
 
-## 7. Supported Java versions
+## 8. Supported Java versions
 
 The Microsoft Graph SDK for Java library is supported at runtime for Java 8+ and [Android API revision 26](http://source.android.com/source/build-numbers.html) and greater.
 
 
-## 8. License
+## 9. License
 
 Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MIT license](LICENSE).
 
-## 9. Third-party notices
+## 10. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
 

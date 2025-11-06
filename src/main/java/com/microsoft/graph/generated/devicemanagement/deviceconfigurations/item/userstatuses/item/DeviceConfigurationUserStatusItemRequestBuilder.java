@@ -37,18 +37,16 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/userStatuses/{deviceConfigurationUserStatus%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a deviceConfigurationUserStatus.
+     * Delete navigation property userStatuses for deviceManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a deviceConfigurationUserStatus.
+     * Delete navigation property userStatuses for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read properties and relationships of the deviceConfigurationUserStatus object.
+     * Device configuration installation status by user.
      * @return a {@link DeviceConfigurationUserStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationUserStatus get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the deviceConfigurationUserStatus object.
+     * Device configuration installation status by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceConfigurationUserStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationUserStatus get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationUserStatus::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a deviceConfigurationUserStatus object.
+     * Update the navigation property userStatuses in deviceManagement
      * @param body The request body
      * @return a {@link DeviceConfigurationUserStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationUserStatus patch(@jakarta.annotation.Nonnull final DeviceConfigurationUserStatus body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a deviceConfigurationUserStatus object.
+     * Update the navigation property userStatuses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceConfigurationUserStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationUserStatus patch(@jakarta.annotation.Nonnull final DeviceConfigurationUserStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceConfigurationUserStatus::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a deviceConfigurationUserStatus.
+     * Delete navigation property userStatuses for deviceManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceConfigurationUserStatus.
+     * Delete navigation property userStatuses for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceConfigurationUserStatus object.
+     * Device configuration installation status by user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceConfigurationUserStatus object.
+     * Device configuration installation status by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceConfigurationUserStatus object.
+     * Update the navigation property userStatuses in deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceConfigurationUserStatus object.
+     * Update the navigation property userStatuses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class DeviceConfigurationUserStatusItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceConfigurationUserStatus object.
+     * Device configuration installation status by user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

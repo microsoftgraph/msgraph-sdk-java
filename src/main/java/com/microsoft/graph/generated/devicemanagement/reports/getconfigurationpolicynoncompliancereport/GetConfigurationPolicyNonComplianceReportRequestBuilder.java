@@ -36,23 +36,21 @@ public class GetConfigurationPolicyNonComplianceReportRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/deviceManagement/reports/getConfigurationPolicyNonComplianceReport", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action getConfigurationPolicyNonComplianceReport
      * @param body The request body
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getconfigurationpolicynoncompliancereport?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetConfigurationPolicyNonComplianceReportPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action getConfigurationPolicyNonComplianceReport
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getconfigurationpolicynoncompliancereport?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetConfigurationPolicyNonComplianceReportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -63,7 +61,7 @@ public class GetConfigurationPolicyNonComplianceReportRequestBuilder extends Bas
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Not yet documented
+     * Invoke action getConfigurationPolicyNonComplianceReport
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +70,7 @@ public class GetConfigurationPolicyNonComplianceReportRequestBuilder extends Bas
         return toPostRequestInformation(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action getConfigurationPolicyNonComplianceReport
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

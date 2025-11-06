@@ -57,7 +57,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowBreakoutRooms");
     }
     /**
-     * Gets the allowCopyingAndSharingMeetingContent property value. The allowCopyingAndSharingMeetingContent property
+     * Gets the allowCopyingAndSharingMeetingContent property value. Indicates whether the ability to copy and share meeting content is enabled for the meeting.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -361,7 +361,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("allowBreakoutRooms", value);
     }
     /**
-     * Sets the allowCopyingAndSharingMeetingContent property value. The allowCopyingAndSharingMeetingContent property
+     * Sets the allowCopyingAndSharingMeetingContent property value. Indicates whether the ability to copy and share meeting content is enabled for the meeting.
      * @param value Value to set for the allowCopyingAndSharingMeetingContent property.
      */
     public void setAllowCopyingAndSharingMeetingContent(@jakarta.annotation.Nullable final Boolean value) {

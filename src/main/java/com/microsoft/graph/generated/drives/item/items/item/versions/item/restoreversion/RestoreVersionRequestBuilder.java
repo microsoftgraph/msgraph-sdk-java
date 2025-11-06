@@ -35,18 +35,18 @@ public class RestoreVersionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/versions/{driveItemVersion%2Did}/restoreVersion", rawUrl);
     }
     /**
-     * Restore a previous version of a DriveItem to be the current version. This will create a new version with the contents of the previous version, but preserves all existing versions of the file.
+     * Restore a previous version of a driveItem to be the current version. This operation creates a new version with the contents of the previous version, and it preserves all existing versions of the file.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/driveitemversion-restore?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitemversion-restoreversion?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Restore a previous version of a DriveItem to be the current version. This will create a new version with the contents of the previous version, but preserves all existing versions of the file.
+     * Restore a previous version of a driveItem to be the current version. This operation creates a new version with the contents of the previous version, and it preserves all existing versions of the file.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/driveitemversion-restore?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitemversion-restoreversion?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
@@ -55,7 +55,7 @@ public class RestoreVersionRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Restore a previous version of a DriveItem to be the current version. This will create a new version with the contents of the previous version, but preserves all existing versions of the file.
+     * Restore a previous version of a driveItem to be the current version. This operation creates a new version with the contents of the previous version, and it preserves all existing versions of the file.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RestoreVersionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Restore a previous version of a DriveItem to be the current version. This will create a new version with the contents of the previous version, but preserves all existing versions of the file.
+     * Restore a previous version of a driveItem to be the current version. This operation creates a new version with the contents of the previous version, and it preserves all existing versions of the file.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

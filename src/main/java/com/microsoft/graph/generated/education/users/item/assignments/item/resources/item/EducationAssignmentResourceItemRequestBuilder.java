@@ -1,5 +1,6 @@
 package com.microsoft.graph.education.users.item.assignments.item.resources.item;
 
+import com.microsoft.graph.education.users.item.assignments.item.resources.item.dependentresources.DependentResourcesRequestBuilder;
 import com.microsoft.graph.models.EducationAssignmentResource;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the dependentResources property of the microsoft.graph.educationAssignmentResource entity.
+     * @return a {@link DependentResourcesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DependentResourcesRequestBuilder dependentResources() {
+        return new DependentResourcesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link EducationAssignmentResourceItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

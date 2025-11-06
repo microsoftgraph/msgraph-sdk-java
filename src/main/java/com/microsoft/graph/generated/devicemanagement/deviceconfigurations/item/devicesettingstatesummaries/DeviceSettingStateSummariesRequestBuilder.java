@@ -60,21 +60,19 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/deviceSettingStateSummaries{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the settingStateDeviceSummary objects.
+     * Device Configuration Setting State Device Summary
      * @return a {@link SettingStateDeviceSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SettingStateDeviceSummaryCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the settingStateDeviceSummary objects.
+     * Device Configuration Setting State Device Summary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SettingStateDeviceSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SettingStateDeviceSummaryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new settingStateDeviceSummary object.
+     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param body The request body
      * @return a {@link SettingStateDeviceSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SettingStateDeviceSummary post(@jakarta.annotation.Nonnull final SettingStateDeviceSummary body) {
         return post(body, null);
     }
     /**
-     * Create a new settingStateDeviceSummary object.
+     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SettingStateDeviceSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SettingStateDeviceSummary post(@jakarta.annotation.Nonnull final SettingStateDeviceSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, SettingStateDeviceSummary::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the settingStateDeviceSummary objects.
+     * Device Configuration Setting State Device Summary
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the settingStateDeviceSummary objects.
+     * Device Configuration Setting State Device Summary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Create a new settingStateDeviceSummary object.
+     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new settingStateDeviceSummary object.
+     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return new DeviceSettingStateSummariesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the settingStateDeviceSummary objects.
+     * Device Configuration Setting State Device Summary
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -1,7 +1,9 @@
 package com.microsoft.graph.education.reports;
 
 import com.microsoft.graph.education.reports.readingassignmentsubmissions.ReadingAssignmentSubmissionsRequestBuilder;
+import com.microsoft.graph.education.reports.readingcoachpassages.ReadingCoachPassagesRequestBuilder;
 import com.microsoft.graph.education.reports.reflectcheckinresponses.ReflectCheckInResponsesRequestBuilder;
+import com.microsoft.graph.education.reports.speakerassignmentsubmissions.SpeakerAssignmentSubmissionsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ReportsRoot;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -31,12 +33,28 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new ReadingAssignmentSubmissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the readingCoachPassages property of the microsoft.graph.reportsRoot entity.
+     * @return a {@link ReadingCoachPassagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReadingCoachPassagesRequestBuilder readingCoachPassages() {
+        return new ReadingCoachPassagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the reflectCheckInResponses property of the microsoft.graph.reportsRoot entity.
      * @return a {@link ReflectCheckInResponsesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReflectCheckInResponsesRequestBuilder reflectCheckInResponses() {
         return new ReflectCheckInResponsesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the speakerAssignmentSubmissions property of the microsoft.graph.reportsRoot entity.
+     * @return a {@link SpeakerAssignmentSubmissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SpeakerAssignmentSubmissionsRequestBuilder speakerAssignmentSubmissions() {
+        return new SpeakerAssignmentSubmissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.

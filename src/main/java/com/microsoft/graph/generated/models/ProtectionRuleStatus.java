@@ -9,7 +9,9 @@ public enum ProtectionRuleStatus implements ValuedEnum {
     Active("active"),
     Completed("completed"),
     CompletedWithErrors("completedWithErrors"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    UpdateRequested("updateRequested"),
+    DeleteRequested("deleteRequested");
     public final String value;
     ProtectionRuleStatus(final String value) {
         this.value = value;
@@ -25,6 +27,8 @@ public enum ProtectionRuleStatus implements ValuedEnum {
             case "completed": return Completed;
             case "completedWithErrors": return CompletedWithErrors;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "updateRequested": return UpdateRequested;
+            case "deleteRequested": return DeleteRequested;
             default: return null;
         }
     }

@@ -55,7 +55,7 @@ public class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get readingAssignmentSubmissions from education
+     * Details of submitted reading assignments.
      * @return a {@link ReadingAssignmentSubmission}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get readingAssignmentSubmissions from education
+     * Details of submitted reading assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ReadingAssignmentSubmission}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get readingAssignmentSubmissions from education
+     * Details of submitted reading assignments.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get readingAssignmentSubmissions from education
+     * Details of submitted reading assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get readingAssignmentSubmissions from education
+     * Details of submitted reading assignments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

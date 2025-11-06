@@ -34,6 +34,7 @@ public class CaseOperation extends Entity implements Parsable {
                 case "#microsoft.graph.security.ediscoveryEstimateOperation": return new EdiscoveryEstimateOperation();
                 case "#microsoft.graph.security.ediscoveryExportOperation": return new EdiscoveryExportOperation();
                 case "#microsoft.graph.security.ediscoveryHoldOperation": return new EdiscoveryHoldOperation();
+                case "#microsoft.graph.security.ediscoveryHoldPolicySyncOperation": return new EdiscoveryHoldPolicySyncOperation();
                 case "#microsoft.graph.security.ediscoveryIndexOperation": return new EdiscoveryIndexOperation();
                 case "#microsoft.graph.security.ediscoveryPurgeDataOperation": return new EdiscoveryPurgeDataOperation();
                 case "#microsoft.graph.security.ediscoverySearchExportOperation": return new EdiscoverySearchExportOperation();
@@ -43,7 +44,7 @@ public class CaseOperation extends Entity implements Parsable {
         return new CaseOperation();
     }
     /**
-     * Gets the action property value. The type of action the operation represents. Possible values are: contentExport,  applyTags, convertToPdf, index, estimateStatistics, addToReviewSet, holdUpdate, unknownFutureValue, purgeData, exportReport, exportResult. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: purgeData, exportReport, exportResult.
+     * Gets the action property value. The type of action the operation represents. Possible values are: contentExport,  applyTags, convertToPdf, index, estimateStatistics, addToReviewSet, holdUpdate, unknownFutureValue, purgeData, exportReport, exportResult, holdPolicySync. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: purgeData, exportReport, exportResult, holdPolicySync.
      * @return a {@link CaseAction}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +108,7 @@ public class CaseOperation extends Entity implements Parsable {
         return this.backingStore.get("resultInfo");
     }
     /**
-     * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
+     * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed, unknownFutureValue.
      * @return a {@link CaseOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +131,7 @@ public class CaseOperation extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the action property value. The type of action the operation represents. Possible values are: contentExport,  applyTags, convertToPdf, index, estimateStatistics, addToReviewSet, holdUpdate, unknownFutureValue, purgeData, exportReport, exportResult. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: purgeData, exportReport, exportResult.
+     * Sets the action property value. The type of action the operation represents. Possible values are: contentExport,  applyTags, convertToPdf, index, estimateStatistics, addToReviewSet, holdUpdate, unknownFutureValue, purgeData, exportReport, exportResult, holdPolicySync. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: purgeData, exportReport, exportResult, holdPolicySync.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final CaseAction value) {
@@ -172,7 +173,7 @@ public class CaseOperation extends Entity implements Parsable {
         this.backingStore.set("resultInfo", value);
     }
     /**
-     * Sets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
+     * Sets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CaseOperationStatus value) {

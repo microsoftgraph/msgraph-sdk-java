@@ -10,7 +10,10 @@ public enum ProtectionUnitStatus implements ValuedEnum {
     UnprotectRequested("unprotectRequested"),
     Unprotected("unprotected"),
     RemoveRequested("removeRequested"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    OffboardRequested("offboardRequested"),
+    Offboarded("offboarded"),
+    CancelOffboardRequested("cancelOffboardRequested");
     public final String value;
     ProtectionUnitStatus(final String value) {
         this.value = value;
@@ -27,6 +30,9 @@ public enum ProtectionUnitStatus implements ValuedEnum {
             case "unprotected": return Unprotected;
             case "removeRequested": return RemoveRequested;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "offboardRequested": return OffboardRequested;
+            case "offboarded": return Offboarded;
+            case "cancelOffboardRequested": return CancelOffboardRequested;
             default: return null;
         }
     }

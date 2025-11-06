@@ -38,6 +38,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.accessPackageRequestApprovalStageCallbackConfiguration": return new AccessPackageRequestApprovalStageCallbackConfiguration();
                 case "#microsoft.graph.identityGovernance.customTaskExtensionCallbackConfiguration": return new CustomTaskExtensionCallbackConfiguration();
             }
         }

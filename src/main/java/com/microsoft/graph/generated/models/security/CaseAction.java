@@ -15,7 +15,8 @@ public enum CaseAction implements ValuedEnum {
     UnknownFutureValue("unknownFutureValue"),
     PurgeData("purgeData"),
     ExportReport("exportReport"),
-    ExportResult("exportResult");
+    ExportResult("exportResult"),
+    HoldPolicySync("holdPolicySync");
     public final String value;
     CaseAction(final String value) {
         this.value = value;
@@ -37,6 +38,7 @@ public enum CaseAction implements ValuedEnum {
             case "purgeData": return PurgeData;
             case "exportReport": return ExportReport;
             case "exportResult": return ExportResult;
+            case "holdPolicySync": return HoldPolicySync;
             default: return null;
         }
     }

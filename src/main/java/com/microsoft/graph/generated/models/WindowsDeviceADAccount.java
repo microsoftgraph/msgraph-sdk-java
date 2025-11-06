@@ -26,7 +26,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
         return new WindowsDeviceADAccount();
     }
     /**
-     * Gets the domainName property value. Not yet documented
+     * Gets the domainName property value. The domainName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the userName property value. Not yet documented
+     * Gets the userName property value. The userName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
         writer.writeStringValue("userName", this.getUserName());
     }
     /**
-     * Sets the domainName property value. Not yet documented
+     * Sets the domainName property value. The domainName property
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("domainName", value);
     }
     /**
-     * Sets the userName property value. Not yet documented
+     * Sets the userName property value. The userName property
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {

@@ -36,7 +36,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/restore", rawUrl);
     }
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a deleted driveItem that is currently in the recycle bin.
      * @param body The request body
      * @return a {@link DriveItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a deleted driveItem that is currently in the recycle bin.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveItem}
@@ -63,7 +63,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a deleted driveItem that is currently in the recycle bin.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a deleted driveItem that is currently in the recycle bin.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

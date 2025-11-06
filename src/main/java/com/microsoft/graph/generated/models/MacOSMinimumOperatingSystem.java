@@ -89,7 +89,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the v10_10 property value. When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_10 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.10 or later is required to install the app. If &apos;False&apos;, OS X Version 10.10 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v1010");
     }
     /**
-     * Gets the v10_11 property value. When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_11 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.11 or later is required to install the app. If &apos;False&apos;, OS X Version 10.11 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v1011");
     }
     /**
-     * Gets the v10_12 property value. When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_12 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.12 or later is required to install the app. If &apos;False&apos;, OS X Version 10.12 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v1012");
     }
     /**
-     * Gets the v10_13 property value. When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_13 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.13 or later is required to install the app. If &apos;False&apos;, OS X Version 10.13 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v1013");
     }
     /**
-     * Gets the v10_14 property value. When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_14 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.14 or later is required to install the app. If &apos;False&apos;, OS X Version 10.14 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v1014");
     }
     /**
-     * Gets the v10_15 property value. When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_15 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.15 or later is required to install the app. If &apos;False&apos;, OS X Version 10.15 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v1015");
     }
     /**
-     * Gets the v10_7 property value. When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_7 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.7 or later is required to install the app. If &apos;False&apos;, OS X Version 10.7 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v107");
     }
     /**
-     * Gets the v10_8 property value. When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_8 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.8 or later is required to install the app. If &apos;False&apos;, OS X Version 10.8 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v108");
     }
     /**
-     * Gets the v10_9 property value. When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v10_9 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.9 or later is required to install the app. If &apos;False&apos;, OS X Version 10.9 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -161,7 +161,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v109");
     }
     /**
-     * Gets the v11_0 property value. When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v11_0 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 11.0 or later is required to install the app. If &apos;False&apos;, OS X Version 11.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v110");
     }
     /**
-     * Gets the v12_0 property value. When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v12_0 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 12.0 or later is required to install the app. If &apos;False&apos;, OS X Version 12.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v120");
     }
     /**
-     * Gets the v13_0 property value. When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Gets the v13_0 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 13.0 or later is required to install the app. If &apos;False&apos;, OS X Version 13.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -228,84 +228,84 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the v10_10 property value. When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_10 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.10 or later is required to install the app. If &apos;False&apos;, OS X Version 10.10 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_10 property.
      */
     public void setV1010(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v1010", value);
     }
     /**
-     * Sets the v10_11 property value. When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_11 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.11 or later is required to install the app. If &apos;False&apos;, OS X Version 10.11 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_11 property.
      */
     public void setV1011(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v1011", value);
     }
     /**
-     * Sets the v10_12 property value. When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_12 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.12 or later is required to install the app. If &apos;False&apos;, OS X Version 10.12 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_12 property.
      */
     public void setV1012(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v1012", value);
     }
     /**
-     * Sets the v10_13 property value. When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_13 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.13 or later is required to install the app. If &apos;False&apos;, OS X Version 10.13 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_13 property.
      */
     public void setV1013(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v1013", value);
     }
     /**
-     * Sets the v10_14 property value. When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_14 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.14 or later is required to install the app. If &apos;False&apos;, OS X Version 10.14 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_14 property.
      */
     public void setV1014(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v1014", value);
     }
     /**
-     * Sets the v10_15 property value. When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_15 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.15 or later is required to install the app. If &apos;False&apos;, OS X Version 10.15 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_15 property.
      */
     public void setV1015(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v1015", value);
     }
     /**
-     * Sets the v10_7 property value. When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_7 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.7 or later is required to install the app. If &apos;False&apos;, OS X Version 10.7 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_7 property.
      */
     public void setV107(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v107", value);
     }
     /**
-     * Sets the v10_8 property value. When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_8 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.8 or later is required to install the app. If &apos;False&apos;, OS X Version 10.8 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_8 property.
      */
     public void setV108(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v108", value);
     }
     /**
-     * Sets the v10_9 property value. When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v10_9 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 10.9 or later is required to install the app. If &apos;False&apos;, OS X Version 10.9 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_9 property.
      */
     public void setV109(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v109", value);
     }
     /**
-     * Sets the v11_0 property value. When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v11_0 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 11.0 or later is required to install the app. If &apos;False&apos;, OS X Version 11.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v11_0 property.
      */
     public void setV110(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v110", value);
     }
     /**
-     * Sets the v12_0 property value. When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v12_0 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 12.0 or later is required to install the app. If &apos;False&apos;, OS X Version 12.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v12_0 property.
      */
     public void setV120(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v120", value);
     }
     /**
-     * Sets the v13_0 property value. When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * Sets the v13_0 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 13.0 or later is required to install the app. If &apos;False&apos;, OS X Version 13.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v13_0 property.
      */
     public void setV130(@jakarta.annotation.Nullable final Boolean value) {

@@ -28,7 +28,6 @@ import com.microsoft.graph.devicemanagement.resourceoperations.ResourceOperation
 import com.microsoft.graph.devicemanagement.roleassignments.RoleAssignmentsRequestBuilder;
 import com.microsoft.graph.devicemanagement.roledefinitions.RoleDefinitionsRequestBuilder;
 import com.microsoft.graph.devicemanagement.softwareupdatestatussummary.SoftwareUpdateStatusSummaryRequestBuilder;
-import com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.TelecomExpenseManagementPartnersRequestBuilder;
 import com.microsoft.graph.devicemanagement.termsandconditions.TermsAndConditionsRequestBuilder;
 import com.microsoft.graph.devicemanagement.troubleshootingevents.TroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformance.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
@@ -298,14 +297,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new SoftwareUpdateStatusSummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link TelecomExpenseManagementPartnersRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public TelecomExpenseManagementPartnersRequestBuilder telecomExpenseManagementPartners() {
-        return new TelecomExpenseManagementPartnersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity.
      * @return a {@link TermsAndConditionsRequestBuilder}
      */
@@ -570,21 +561,19 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      * @return a {@link DeviceManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement get() {
         return get(null);
     }
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -604,23 +593,21 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new GetEffectivePermissionsWithScopeRequestBuilder(pathParameters, requestAdapter, scope);
     }
     /**
-     * Update the properties of a deviceManagement object.
+     * Update deviceManagement
      * @param body The request body
      * @return a {@link DeviceManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a deviceManagement object.
+     * Update deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -631,7 +618,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagement::createFromDiscriminatorValue);
     }
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -639,7 +626,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -651,7 +638,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceManagement object.
+     * Update deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -660,7 +647,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceManagement object.
+     * Update deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -695,7 +682,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new DeviceManagementRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

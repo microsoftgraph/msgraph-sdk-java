@@ -60,21 +60,19 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
+     * Windows information protection for apps running on devices which are MDM enrolled.
      * @return a {@link MdmWindowsInformationProtectionPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MdmWindowsInformationProtectionPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
+     * Windows information protection for apps running on devices which are MDM enrolled.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MdmWindowsInformationProtectionPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MdmWindowsInformationProtectionPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, MdmWindowsInformationProtectionPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new mdmWindowsInformationProtectionPolicy object.
+     * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
      * @param body The request body
      * @return a {@link MdmWindowsInformationProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MdmWindowsInformationProtectionPolicy post(@jakarta.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body) {
         return post(body, null);
     }
     /**
-     * Create a new mdmWindowsInformationProtectionPolicy object.
+     * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MdmWindowsInformationProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MdmWindowsInformationProtectionPolicy post(@jakarta.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, MdmWindowsInformationProtectionPolicy::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
+     * Windows information protection for apps running on devices which are MDM enrolled.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
+     * Windows information protection for apps running on devices which are MDM enrolled.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Create a new mdmWindowsInformationProtectionPolicy object.
+     * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new mdmWindowsInformationProtectionPolicy object.
+     * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         return new MdmWindowsInformationProtectionPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
+     * Windows information protection for apps running on devices which are MDM enrolled.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
