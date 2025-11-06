@@ -86,6 +86,7 @@ public class IdentityContainer extends Entity implements Parsable {
         deserializerMap.put("conditionalAccess", (n) -> { this.setConditionalAccess(n.getObjectValue(ConditionalAccessRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("customAuthenticationExtensions", (n) -> { this.setCustomAuthenticationExtensions(n.getCollectionOfObjectValues(CustomAuthenticationExtension::createFromDiscriminatorValue)); });
         deserializerMap.put("identityProviders", (n) -> { this.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("riskPrevention", (n) -> { this.setRiskPrevention(n.getObjectValue(RiskPreventionContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("userFlowAttributes", (n) -> { this.setUserFlowAttributes(n.getCollectionOfObjectValues(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -96,6 +97,14 @@ public class IdentityContainer extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getIdentityProviders() {
         return this.backingStore.get("identityProviders");
+    }
+    /**
+     * Gets the riskPrevention property value. The riskPrevention property
+     * @return a {@link RiskPreventionContainer}
+     */
+    @jakarta.annotation.Nullable
+    public RiskPreventionContainer getRiskPrevention() {
+        return this.backingStore.get("riskPrevention");
     }
     /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
@@ -119,6 +128,7 @@ public class IdentityContainer extends Entity implements Parsable {
         writer.writeObjectValue("conditionalAccess", this.getConditionalAccess());
         writer.writeCollectionOfObjectValues("customAuthenticationExtensions", this.getCustomAuthenticationExtensions());
         writer.writeCollectionOfObjectValues("identityProviders", this.getIdentityProviders());
+        writer.writeObjectValue("riskPrevention", this.getRiskPrevention());
         writer.writeCollectionOfObjectValues("userFlowAttributes", this.getUserFlowAttributes());
     }
     /**
@@ -169,6 +179,13 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this.backingStore.set("identityProviders", value);
+    }
+    /**
+     * Sets the riskPrevention property value. The riskPrevention property
+     * @param value Value to set for the riskPrevention property.
+     */
+    public void setRiskPrevention(@jakarta.annotation.Nullable final RiskPreventionContainer value) {
+        this.backingStore.set("riskPrevention", value);
     }
     /**
      * Sets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
