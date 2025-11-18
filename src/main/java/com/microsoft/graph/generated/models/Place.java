@@ -41,6 +41,14 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("address");
     }
     /**
+     * Gets the checkIns property value. The checkIns property
+     * @return a {@link java.util.List<CheckInClaim>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CheckInClaim> getCheckIns() {
+        return this.backingStore.get("checkIns");
+    }
+    /**
      * Gets the displayName property value. The name associated with the place.
      * @return a {@link String}
      */
@@ -56,6 +64,7 @@ public class Place extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("checkIns", (n) -> { this.setCheckIns(n.getCollectionOfObjectValues(CheckInClaim::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("geoCoordinates", (n) -> { this.setGeoCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
         deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
@@ -85,6 +94,7 @@ public class Place extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("address", this.getAddress());
+        writer.writeCollectionOfObjectValues("checkIns", this.getCheckIns());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("geoCoordinates", this.getGeoCoordinates());
         writer.writeStringValue("phone", this.getPhone());
@@ -95,6 +105,13 @@ public class Place extends Entity implements Parsable {
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.backingStore.set("address", value);
+    }
+    /**
+     * Sets the checkIns property value. The checkIns property
+     * @param value Value to set for the checkIns property.
+     */
+    public void setCheckIns(@jakarta.annotation.Nullable final java.util.List<CheckInClaim> value) {
+        this.backingStore.set("checkIns", value);
     }
     /**
      * Sets the displayName property value. The name associated with the place.

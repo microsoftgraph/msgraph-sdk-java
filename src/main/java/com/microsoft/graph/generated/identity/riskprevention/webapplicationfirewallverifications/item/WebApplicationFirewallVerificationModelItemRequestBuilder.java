@@ -46,16 +46,18 @@ public class WebApplicationFirewallVerificationModelItemRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/identity/riskPrevention/webApplicationFirewallVerifications/{webApplicationFirewallVerificationModel%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property webApplicationFirewallVerifications for identity
+     * Delete a webApplicationFirewallVerificationModel object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/riskpreventioncontainer-delete-webapplicationfirewallverifications?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property webApplicationFirewallVerifications for identity
+     * Delete a webApplicationFirewallVerificationModel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/riskpreventioncontainer-delete-webapplicationfirewallverifications?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class WebApplicationFirewallVerificationModelItemRequestBuilder extends B
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get webApplicationFirewallVerifications from identity
+     * Read the properties and relationships of webApplicationFirewallVerificationModel object.
      * @return a {@link WebApplicationFirewallVerificationModel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/webapplicationfirewallverificationmodel-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebApplicationFirewallVerificationModel get() {
         return get(null);
     }
     /**
-     * Get webApplicationFirewallVerifications from identity
+     * Read the properties and relationships of webApplicationFirewallVerificationModel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WebApplicationFirewallVerificationModel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/webapplicationfirewallverificationmodel-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebApplicationFirewallVerificationModel get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +115,7 @@ public class WebApplicationFirewallVerificationModelItemRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, WebApplicationFirewallVerificationModel::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property webApplicationFirewallVerifications for identity
+     * Delete a webApplicationFirewallVerificationModel object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +123,7 @@ public class WebApplicationFirewallVerificationModelItemRequestBuilder extends B
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property webApplicationFirewallVerifications for identity
+     * Delete a webApplicationFirewallVerificationModel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +135,7 @@ public class WebApplicationFirewallVerificationModelItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Get webApplicationFirewallVerifications from identity
+     * Read the properties and relationships of webApplicationFirewallVerificationModel object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +143,7 @@ public class WebApplicationFirewallVerificationModelItemRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Get webApplicationFirewallVerifications from identity
+     * Read the properties and relationships of webApplicationFirewallVerificationModel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +195,7 @@ public class WebApplicationFirewallVerificationModelItemRequestBuilder extends B
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get webApplicationFirewallVerifications from identity
+     * Read the properties and relationships of webApplicationFirewallVerificationModel object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -25,12 +25,21 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
         return new EmployeeExperienceUser();
     }
     /**
+     * Gets the assignedRoles property value. Represents the collection of Viva Engage roles assigned to a user.
+     * @return a {@link java.util.List<EngagementRole>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EngagementRole> getAssignedRoles() {
+        return this.backingStore.get("assignedRoles");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedRoles", (n) -> { this.setAssignedRoles(n.getCollectionOfObjectValues(EngagementRole::createFromDiscriminatorValue)); });
         deserializerMap.put("learningCourseActivities", (n) -> { this.setLearningCourseActivities(n.getCollectionOfObjectValues(LearningCourseActivity::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -49,7 +58,15 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("assignedRoles", this.getAssignedRoles());
         writer.writeCollectionOfObjectValues("learningCourseActivities", this.getLearningCourseActivities());
+    }
+    /**
+     * Sets the assignedRoles property value. Represents the collection of Viva Engage roles assigned to a user.
+     * @param value Value to set for the assignedRoles property.
+     */
+    public void setAssignedRoles(@jakarta.annotation.Nullable final java.util.List<EngagementRole> value) {
+        this.backingStore.set("assignedRoles", value);
     }
     /**
      * Sets the learningCourseActivities property value. The learningCourseActivities property

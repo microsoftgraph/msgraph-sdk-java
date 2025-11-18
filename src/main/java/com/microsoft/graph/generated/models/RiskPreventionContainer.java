@@ -61,11 +61,20 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("fraudProtectionProviders", (n) -> { this.setFraudProtectionProviders(n.getCollectionOfObjectValues(FraudProtectionProvider::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("webApplicationFirewallProviders", (n) -> { this.setWebApplicationFirewallProviders(n.getCollectionOfObjectValues(WebApplicationFirewallProvider::createFromDiscriminatorValue)); });
         deserializerMap.put("webApplicationFirewallVerifications", (n) -> { this.setWebApplicationFirewallVerifications(n.getCollectionOfObjectValues(WebApplicationFirewallVerificationModel::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the fraudProtectionProviders property value. Represents entry point for fraud protection provider configurations for Microsoft Entra External ID tenants.
+     * @return a {@link java.util.List<FraudProtectionProvider>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<FraudProtectionProvider> getFraudProtectionProviders() {
+        return this.backingStore.get("fraudProtectionProviders");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -76,7 +85,7 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the webApplicationFirewallProviders property value. The webApplicationFirewallProviders property
+     * Gets the webApplicationFirewallProviders property value. Collection of WAF provider configurations registered in the External ID tenant.
      * @return a {@link java.util.List<WebApplicationFirewallProvider>}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +93,7 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("webApplicationFirewallProviders");
     }
     /**
-     * Gets the webApplicationFirewallVerifications property value. The webApplicationFirewallVerifications property
+     * Gets the webApplicationFirewallVerifications property value. Collection of verification operations performed for domains or hosts with WAF providers registered in the External ID tenant.
      * @return a {@link java.util.List<WebApplicationFirewallVerificationModel>}
      */
     @jakarta.annotation.Nullable
@@ -97,6 +106,7 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("fraudProtectionProviders", this.getFraudProtectionProviders());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("webApplicationFirewallProviders", this.getWebApplicationFirewallProviders());
         writer.writeCollectionOfObjectValues("webApplicationFirewallVerifications", this.getWebApplicationFirewallVerifications());
@@ -118,6 +128,13 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
+     * Sets the fraudProtectionProviders property value. Represents entry point for fraud protection provider configurations for Microsoft Entra External ID tenants.
+     * @param value Value to set for the fraudProtectionProviders property.
+     */
+    public void setFraudProtectionProviders(@jakarta.annotation.Nullable final java.util.List<FraudProtectionProvider> value) {
+        this.backingStore.set("fraudProtectionProviders", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
@@ -125,14 +142,14 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the webApplicationFirewallProviders property value. The webApplicationFirewallProviders property
+     * Sets the webApplicationFirewallProviders property value. Collection of WAF provider configurations registered in the External ID tenant.
      * @param value Value to set for the webApplicationFirewallProviders property.
      */
     public void setWebApplicationFirewallProviders(@jakarta.annotation.Nullable final java.util.List<WebApplicationFirewallProvider> value) {
         this.backingStore.set("webApplicationFirewallProviders", value);
     }
     /**
-     * Sets the webApplicationFirewallVerifications property value. The webApplicationFirewallVerifications property
+     * Sets the webApplicationFirewallVerifications property value. Collection of verification operations performed for domains or hosts with WAF providers registered in the External ID tenant.
      * @param value Value to set for the webApplicationFirewallVerifications property.
      */
     public void setWebApplicationFirewallVerifications(@jakarta.annotation.Nullable final java.util.List<WebApplicationFirewallVerificationModel> value) {

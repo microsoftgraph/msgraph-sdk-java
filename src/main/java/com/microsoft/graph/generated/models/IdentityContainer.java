@@ -99,7 +99,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("identityProviders");
     }
     /**
-     * Gets the riskPrevention property value. The riskPrevention property
+     * Gets the riskPrevention property value. Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      * @return a {@link RiskPreventionContainer}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this.backingStore.set("identityProviders", value);
     }
     /**
-     * Sets the riskPrevention property value. The riskPrevention property
+     * Sets the riskPrevention property value. Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      * @param value Value to set for the riskPrevention property.
      */
     public void setRiskPrevention(@jakarta.annotation.Nullable final RiskPreventionContainer value) {

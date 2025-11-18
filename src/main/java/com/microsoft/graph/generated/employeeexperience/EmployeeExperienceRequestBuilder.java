@@ -5,6 +5,7 @@ import com.microsoft.graph.employeeexperience.engagementasyncoperations.Engageme
 import com.microsoft.graph.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
+import com.microsoft.graph.employeeexperience.roles.RolesRequestBuilder;
 import com.microsoft.graph.models.EmployeeExperience;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -56,6 +57,14 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public LearningProvidersRequestBuilder learningProviders() {
         return new LearningProvidersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the roles property of the microsoft.graph.employeeExperience entity.
+     * @return a {@link RolesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RolesRequestBuilder roles() {
+        return new RolesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link EmployeeExperienceRequestBuilder} and sets the default values.

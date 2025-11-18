@@ -57,7 +57,7 @@ public class WebApplicationFirewallVerificationResult implements AdditionalDataH
         return this.backingStore;
     }
     /**
-     * Gets the errors property value. The errors property
+     * Gets the errors property value. List of errors encountered during the verification process.
      * @return a {@link java.util.List<GenericError>}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class WebApplicationFirewallVerificationResult implements AdditionalDataH
         return this.backingStore.get("status");
     }
     /**
-     * Gets the verifiedOnDateTime property value. The verifiedOnDateTime property
+     * Gets the verifiedOnDateTime property value. UTC timestamp when the verification was performed or last updated. This indicates when the verification result was produced.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class WebApplicationFirewallVerificationResult implements AdditionalDataH
         return this.backingStore.get("verifiedOnDateTime");
     }
     /**
-     * Gets the warnings property value. The warnings property
+     * Gets the warnings property value. List of warnings produced during verification.
      * @return a {@link java.util.List<GenericError>}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class WebApplicationFirewallVerificationResult implements AdditionalDataH
         this.backingStore = value;
     }
     /**
-     * Sets the errors property value. The errors property
+     * Sets the errors property value. List of errors encountered during the verification process.
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final java.util.List<GenericError> value) {
@@ -160,14 +160,14 @@ public class WebApplicationFirewallVerificationResult implements AdditionalDataH
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the verifiedOnDateTime property value. The verifiedOnDateTime property
+     * Sets the verifiedOnDateTime property value. UTC timestamp when the verification was performed or last updated. This indicates when the verification result was produced.
      * @param value Value to set for the verifiedOnDateTime property.
      */
     public void setVerifiedOnDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("verifiedOnDateTime", value);
     }
     /**
-     * Sets the warnings property value. The warnings property
+     * Sets the warnings property value. List of warnings produced during verification.
      * @param value Value to set for the warnings property.
      */
     public void setWarnings(@jakarta.annotation.Nullable final java.util.List<GenericError> value) {

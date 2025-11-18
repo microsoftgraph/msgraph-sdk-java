@@ -80,12 +80,13 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("communities", (n) -> { this.setCommunities(n.getCollectionOfObjectValues(Community::createFromDiscriminatorValue)); });
         deserializerMap.put("engagementAsyncOperations", (n) -> { this.setEngagementAsyncOperations(n.getCollectionOfObjectValues(EngagementAsyncOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("learningCourseActivities", (n) -> { this.setLearningCourseActivities(n.getCollectionOfObjectValues(LearningCourseActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("learningProviders", (n) -> { this.setLearningProviders(n.getCollectionOfObjectValues(LearningProvider::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfObjectValues(EngagementRole::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -113,6 +114,14 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the roles property value. A collection of roles in Viva Engage.
+     * @return a {@link java.util.List<EngagementRole>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EngagementRole> getRoles() {
+        return this.backingStore.get("roles");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -123,6 +132,7 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
         writer.writeCollectionOfObjectValues("learningCourseActivities", this.getLearningCourseActivities());
         writer.writeCollectionOfObjectValues("learningProviders", this.getLearningProviders());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeCollectionOfObjectValues("roles", this.getRoles());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -174,5 +184,12 @@ public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Pa
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the roles property value. A collection of roles in Viva Engage.
+     * @param value Value to set for the roles property.
+     */
+    public void setRoles(@jakarta.annotation.Nullable final java.util.List<EngagementRole> value) {
+        this.backingStore.set("roles", value);
     }
 }
