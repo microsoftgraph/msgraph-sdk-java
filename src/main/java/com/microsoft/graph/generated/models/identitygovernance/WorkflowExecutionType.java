@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum WorkflowExecutionType implements ValuedEnum {
     Scheduled("scheduled"),
     OnDemand("onDemand"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ActivatedWithScope("activatedWithScope");
     public final String value;
     WorkflowExecutionType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum WorkflowExecutionType implements ValuedEnum {
             case "scheduled": return Scheduled;
             case "onDemand": return OnDemand;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "activatedWithScope": return ActivatedWithScope;
             default: return null;
         }
     }

@@ -71,7 +71,7 @@ public class WebApplicationFirewallDnsConfiguration implements AdditionalDataHol
         return deserializerMap;
     }
     /**
-     * Gets the isDomainVerified property value. The isDomainVerified property
+     * Gets the isDomainVerified property value. Indicates whether the domain owning this DNS record has been verified by the WAF provider.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class WebApplicationFirewallDnsConfiguration implements AdditionalDataHol
         return this.backingStore.get("isDomainVerified");
     }
     /**
-     * Gets the isProxied property value. The isProxied property
+     * Gets the isProxied property value. Indicates whether traffic for this DNS record is proxied through the WAF provider&apos;s network (for example, using a CDN or reverse proxy).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class WebApplicationFirewallDnsConfiguration implements AdditionalDataHol
         return this.backingStore.get("isProxied");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The DNS record name (for example, www.contoso.com or contoso.com). This is the host or zone name to which the configuration applies.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class WebApplicationFirewallDnsConfiguration implements AdditionalDataHol
         return this.backingStore.get("recordType");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The value of the DNS record.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,21 +148,21 @@ public class WebApplicationFirewallDnsConfiguration implements AdditionalDataHol
         this.backingStore = value;
     }
     /**
-     * Sets the isDomainVerified property value. The isDomainVerified property
+     * Sets the isDomainVerified property value. Indicates whether the domain owning this DNS record has been verified by the WAF provider.
      * @param value Value to set for the isDomainVerified property.
      */
     public void setIsDomainVerified(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDomainVerified", value);
     }
     /**
-     * Sets the isProxied property value. The isProxied property
+     * Sets the isProxied property value. Indicates whether traffic for this DNS record is proxied through the WAF provider&apos;s network (for example, using a CDN or reverse proxy).
      * @param value Value to set for the isProxied property.
      */
     public void setIsProxied(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isProxied", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The DNS record name (for example, www.contoso.com or contoso.com). This is the host or zone name to which the configuration applies.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -183,7 +183,7 @@ public class WebApplicationFirewallDnsConfiguration implements AdditionalDataHol
         this.backingStore.set("recordType", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The value of the DNS record.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

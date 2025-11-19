@@ -69,7 +69,7 @@ public class CloudFlareRulesetModel implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Friendly name for the ruleset, used in UIs and logs to help administrators identify the ruleset.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class CloudFlareRulesetModel implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the phaseName property value. The phaseName property
+     * Gets the phaseName property value. Name of the phase during which the ruleset is evaluated (for example, httprequestfirewallmanaged, httprequestfirewallcustom, or provider-specific phase names). This indicates when in the request/response lifecycle the rules apply.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CloudFlareRulesetModel implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("phaseName");
     }
     /**
-     * Gets the rulesetId property value. The rulesetId property
+     * Gets the rulesetId property value. Unique identifier assigned to the ruleset by Cloudflare or the integration.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class CloudFlareRulesetModel implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Friendly name for the ruleset, used in UIs and logs to help administrators identify the ruleset.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -142,14 +142,14 @@ public class CloudFlareRulesetModel implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the phaseName property value. The phaseName property
+     * Sets the phaseName property value. Name of the phase during which the ruleset is evaluated (for example, httprequestfirewallmanaged, httprequestfirewallcustom, or provider-specific phase names). This indicates when in the request/response lifecycle the rules apply.
      * @param value Value to set for the phaseName property.
      */
     public void setPhaseName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("phaseName", value);
     }
     /**
-     * Sets the rulesetId property value. The rulesetId property
+     * Sets the rulesetId property value. Unique identifier assigned to the ruleset by Cloudflare or the integration.
      * @param value Value to set for the rulesetId property.
      */
     public void setRulesetId(@jakarta.annotation.Nullable final String value) {

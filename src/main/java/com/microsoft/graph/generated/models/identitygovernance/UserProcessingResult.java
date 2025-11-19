@@ -53,6 +53,7 @@ public class UserProcessingResult extends Entity implements Parsable {
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("failedTasksCount", (n) -> { this.setFailedTasksCount(n.getIntegerValue()); });
         deserializerMap.put("processingStatus", (n) -> { this.setProcessingStatus(n.getEnumValue(LifecycleWorkflowProcessingStatus::forValue)); });
+        deserializerMap.put("reprocessedRuns", (n) -> { this.setReprocessedRuns(n.getCollectionOfObjectValues(Run::createFromDiscriminatorValue)); });
         deserializerMap.put("scheduledDateTime", (n) -> { this.setScheduledDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
@@ -72,6 +73,14 @@ public class UserProcessingResult extends Entity implements Parsable {
         return this.backingStore.get("processingStatus");
     }
     /**
+     * Gets the reprocessedRuns property value. The related reprocessed workflow run.
+     * @return a {@link java.util.List<Run>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Run> getReprocessedRuns() {
+        return this.backingStore.get("reprocessedRuns");
+    }
+    /**
      * Gets the scheduledDateTime property value. The date time that the workflow is scheduled to be executed for a user.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a {@link OffsetDateTime}
      */
@@ -80,7 +89,7 @@ public class UserProcessingResult extends Entity implements Parsable {
         return this.backingStore.get("scheduledDateTime");
     }
     /**
-     * Gets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution has not started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Gets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution hasn&apos;t started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -145,6 +154,7 @@ public class UserProcessingResult extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
         writer.writeIntegerValue("failedTasksCount", this.getFailedTasksCount());
         writer.writeEnumValue("processingStatus", this.getProcessingStatus());
+        writer.writeCollectionOfObjectValues("reprocessedRuns", this.getReprocessedRuns());
         writer.writeOffsetDateTimeValue("scheduledDateTime", this.getScheduledDateTime());
         writer.writeOffsetDateTimeValue("startedDateTime", this.getStartedDateTime());
         writer.writeObjectValue("subject", this.getSubject());
@@ -176,6 +186,13 @@ public class UserProcessingResult extends Entity implements Parsable {
         this.backingStore.set("processingStatus", value);
     }
     /**
+     * Sets the reprocessedRuns property value. The related reprocessed workflow run.
+     * @param value Value to set for the reprocessedRuns property.
+     */
+    public void setReprocessedRuns(@jakarta.annotation.Nullable final java.util.List<Run> value) {
+        this.backingStore.set("reprocessedRuns", value);
+    }
+    /**
      * Sets the scheduledDateTime property value. The date time that the workflow is scheduled to be executed for a user.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the scheduledDateTime property.
      */
@@ -183,7 +200,7 @@ public class UserProcessingResult extends Entity implements Parsable {
         this.backingStore.set("scheduledDateTime", value);
     }
     /**
-     * Sets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution has not started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Sets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution hasn&apos;t started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -35,7 +35,7 @@ public class AkamaiCustomRuleModel implements AdditionalDataHolder, BackedModel,
         return new AkamaiCustomRuleModel();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. The action Akamai applies when the rule matches traffic. Common values include deny, none or alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class AkamaiCustomRuleModel implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Friendly name for the rule, used in UIs or logs to help administrators identify the rule (for example, &apos;Block suspicious user agents&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AkamaiCustomRuleModel implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the ruleId property value. The ruleId property
+     * Gets the ruleId property value. Unique identifier assigned to the rule by Akamai or the integration. Use this identifier to reference, update, or remove the rule in API requests.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class AkamaiCustomRuleModel implements AdditionalDataHolder, BackedModel,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. The action Akamai applies when the rule matches traffic. Common values include deny, none or alert.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final String value) {
@@ -135,7 +135,7 @@ public class AkamaiCustomRuleModel implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Friendly name for the rule, used in UIs or logs to help administrators identify the rule (for example, &apos;Block suspicious user agents&apos;).
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class AkamaiCustomRuleModel implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the ruleId property value. The ruleId property
+     * Sets the ruleId property value. Unique identifier assigned to the rule by Akamai or the integration. Use this identifier to reference, update, or remove the rule in API requests.
      * @param value Value to set for the ruleId property.
      */
     public void setRuleId(@jakarta.annotation.Nullable final String value) {

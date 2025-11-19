@@ -39,7 +39,7 @@ public class WebApplicationFirewallVerificationModel extends Entity implements P
         return deserializerMap;
     }
     /**
-     * Gets the provider property value. The provider property
+     * Gets the provider property value. Reference to a provider resource associated with this verification model. Represents a WAF provider that can be used to verify or manage the host.
      * @return a {@link WebApplicationFirewallProvider}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class WebApplicationFirewallVerificationModel extends Entity implements P
         return this.backingStore.get("providerType");
     }
     /**
-     * Gets the verificationResult property value. The verificationResult property
+     * Gets the verificationResult property value. An object describing the outcome of the verification operation, including status, errors or warnings
      * @return a {@link WebApplicationFirewallVerificationResult}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class WebApplicationFirewallVerificationModel extends Entity implements P
         return this.backingStore.get("verificationResult");
     }
     /**
-     * Gets the verifiedDetails property value. The verifiedDetails property
+     * Gets the verifiedDetails property value. Details of DNS configuration
      * @return a {@link WebApplicationFirewallVerifiedDetails}
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class WebApplicationFirewallVerificationModel extends Entity implements P
         return this.backingStore.get("verifiedDetails");
     }
     /**
-     * Gets the verifiedHost property value. The verifiedHost property
+     * Gets the verifiedHost property value. The host (domain or subdomain) that was verified as part of this verification operation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class WebApplicationFirewallVerificationModel extends Entity implements P
         writer.writeStringValue("verifiedHost", this.getVerifiedHost());
     }
     /**
-     * Sets the provider property value. The provider property
+     * Sets the provider property value. Reference to a provider resource associated with this verification model. Represents a WAF provider that can be used to verify or manage the host.
      * @param value Value to set for the provider property.
      */
     public void setProvider(@jakarta.annotation.Nullable final WebApplicationFirewallProvider value) {
@@ -106,21 +106,21 @@ public class WebApplicationFirewallVerificationModel extends Entity implements P
         this.backingStore.set("providerType", value);
     }
     /**
-     * Sets the verificationResult property value. The verificationResult property
+     * Sets the verificationResult property value. An object describing the outcome of the verification operation, including status, errors or warnings
      * @param value Value to set for the verificationResult property.
      */
     public void setVerificationResult(@jakarta.annotation.Nullable final WebApplicationFirewallVerificationResult value) {
         this.backingStore.set("verificationResult", value);
     }
     /**
-     * Sets the verifiedDetails property value. The verifiedDetails property
+     * Sets the verifiedDetails property value. Details of DNS configuration
      * @param value Value to set for the verifiedDetails property.
      */
     public void setVerifiedDetails(@jakarta.annotation.Nullable final WebApplicationFirewallVerifiedDetails value) {
         this.backingStore.set("verifiedDetails", value);
     }
     /**
-     * Sets the verifiedHost property value. The verifiedHost property
+     * Sets the verifiedHost property value. The host (domain or subdomain) that was verified as part of this verification operation.
      * @param value Value to set for the verifiedHost property.
      */
     public void setVerifiedHost(@jakarta.annotation.Nullable final String value) {

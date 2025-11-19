@@ -46,16 +46,18 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identity/riskPrevention/webApplicationFirewallProviders/{webApplicationFirewallProvider%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property webApplicationFirewallProviders for identity
+     * Delete a webApplicationFirewallProvider object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/riskpreventioncontainer-delete-webapplicationfirewallproviders?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property webApplicationFirewallProviders for identity
+     * Delete a webApplicationFirewallProvider object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/riskpreventioncontainer-delete-webapplicationfirewallproviders?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get webApplicationFirewallProviders from identity
+     * Read the properties and relationships of webApplicationFirewallProvider object.
      * @return a {@link WebApplicationFirewallProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/webapplicationfirewallprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebApplicationFirewallProvider get() {
         return get(null);
     }
     /**
-     * Get webApplicationFirewallProviders from identity
+     * Read the properties and relationships of webApplicationFirewallProvider object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WebApplicationFirewallProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/webapplicationfirewallprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebApplicationFirewallProvider get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, WebApplicationFirewallProvider::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property webApplicationFirewallProviders in identity
+     * Update the properties of a webApplicationFirewallProvider object.
      * @param body The request body
      * @return a {@link WebApplicationFirewallProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/webapplicationfirewallprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebApplicationFirewallProvider patch(@jakarta.annotation.Nonnull final WebApplicationFirewallProvider body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property webApplicationFirewallProviders in identity
+     * Update the properties of a webApplicationFirewallProvider object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WebApplicationFirewallProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/webapplicationfirewallprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebApplicationFirewallProvider patch(@jakarta.annotation.Nonnull final WebApplicationFirewallProvider body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, WebApplicationFirewallProvider::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property webApplicationFirewallProviders for identity
+     * Delete a webApplicationFirewallProvider object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property webApplicationFirewallProviders for identity
+     * Delete a webApplicationFirewallProvider object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Get webApplicationFirewallProviders from identity
+     * Read the properties and relationships of webApplicationFirewallProvider object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Get webApplicationFirewallProviders from identity
+     * Read the properties and relationships of webApplicationFirewallProvider object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Update the navigation property webApplicationFirewallProviders in identity
+     * Update the properties of a webApplicationFirewallProvider object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property webApplicationFirewallProviders in identity
+     * Update the properties of a webApplicationFirewallProvider object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class WebApplicationFirewallProviderItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get webApplicationFirewallProviders from identity
+     * Read the properties and relationships of webApplicationFirewallProvider object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -35,7 +35,7 @@ public class AkamaiAttackGroupActionModel implements AdditionalDataHolder, Backe
         return new AkamaiAttackGroupActionModel();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. The action Akamai applies to the attack group when a matching threat is detected. Common values include deny, none or alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class AkamaiAttackGroupActionModel implements AdditionalDataHolder, Backe
         return deserializerMap;
     }
     /**
-     * Gets the group property value. The group property
+     * Gets the group property value. The name or identifier of the attack group. This value categorizes the type of attack the action applies to.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class AkamaiAttackGroupActionModel implements AdditionalDataHolder, Backe
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. The action Akamai applies to the attack group when a matching threat is detected. Common values include deny, none or alert.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final String value) {
@@ -125,7 +125,7 @@ public class AkamaiAttackGroupActionModel implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the group property value. The group property
+     * Sets the group property value. The name or identifier of the attack group. This value categorizes the type of attack the action applies to.
      * @param value Value to set for the group property.
      */
     public void setGroup(@jakarta.annotation.Nullable final String value) {
