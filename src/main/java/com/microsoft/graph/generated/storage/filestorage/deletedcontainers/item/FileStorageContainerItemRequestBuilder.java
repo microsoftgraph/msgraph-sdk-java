@@ -6,8 +6,10 @@ import com.microsoft.graph.storage.filestorage.deletedcontainers.item.activate.A
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.lock.LockRequestBuilder;
+import com.microsoft.graph.storage.filestorage.deletedcontainers.item.migrationjobs.MigrationJobsRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.PermissionsRequestBuilder;
+import com.microsoft.graph.storage.filestorage.deletedcontainers.item.provisionmigrationcontainers.ProvisionMigrationContainersRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.unlock.UnlockRequestBuilder;
@@ -62,6 +64,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         return new LockRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the migrationJobs property of the microsoft.graph.fileStorageContainer entity.
+     * @return a {@link MigrationJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MigrationJobsRequestBuilder migrationJobs() {
+        return new MigrationJobsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the permanentDelete method.
      * @return a {@link PermanentDeleteRequestBuilder}
      */
@@ -76,6 +86,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PermissionsRequestBuilder permissions() {
         return new PermissionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the provisionMigrationContainers method.
+     * @return a {@link ProvisionMigrationContainersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProvisionMigrationContainersRequestBuilder provisionMigrationContainers() {
+        return new ProvisionMigrationContainersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the recycleBin property of the microsoft.graph.fileStorageContainer entity.

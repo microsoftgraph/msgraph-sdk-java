@@ -117,7 +117,7 @@ public class RestoreSessionBase extends Entity implements Parsable {
         return this.backingStore.get("restoreSessionArtifactCount");
     }
     /**
-     * Gets the status property value. Status of the restore session. The value is an aggregated status of the restored artifacts. The possible values are: draft, activating, active, completedWithError, completed, unknownFutureValue, failed. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: failed.
+     * Gets the status property value. Status of the restore session. The value is an aggregated status of the restored artifacts. The possible values are: draft, activating, active, completedWithError, completed, unknownFutureValue, failed. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: failed.
      * @return a {@link RestoreSessionStatus}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class RestoreSessionBase extends Entity implements Parsable {
         this.backingStore.set("restoreSessionArtifactCount", value);
     }
     /**
-     * Sets the status property value. Status of the restore session. The value is an aggregated status of the restored artifacts. The possible values are: draft, activating, active, completedWithError, completed, unknownFutureValue, failed. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: failed.
+     * Sets the status property value. Status of the restore session. The value is an aggregated status of the restored artifacts. The possible values are: draft, activating, active, completedWithError, completed, unknownFutureValue, failed. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: failed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final RestoreSessionStatus value) {

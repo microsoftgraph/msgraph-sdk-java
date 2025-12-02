@@ -88,10 +88,7 @@ public class Room extends Place implements Parsable {
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("floorLabel", (n) -> { this.setFloorLabel(n.getStringValue()); });
         deserializerMap.put("floorNumber", (n) -> { this.setFloorNumber(n.getIntegerValue()); });
-        deserializerMap.put("isWheelChairAccessible", (n) -> { this.setIsWheelChairAccessible(n.getBooleanValue()); });
-        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
         deserializerMap.put("nickname", (n) -> { this.setNickname(n.getStringValue()); });
-        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("videoDeviceName", (n) -> { this.setVideoDeviceName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -112,36 +109,12 @@ public class Room extends Place implements Parsable {
         return this.backingStore.get("floorNumber");
     }
     /**
-     * Gets the isWheelChairAccessible property value. Specifies whether the room is wheelchair accessible.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getIsWheelChairAccessible() {
-        return this.backingStore.get("isWheelChairAccessible");
-    }
-    /**
-     * Gets the label property value. Specifies a descriptive label for the room, for example, a number or name.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getLabel() {
-        return this.backingStore.get("label");
-    }
-    /**
      * Gets the nickname property value. Specifies a nickname for the room, for example, &apos;conf room&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNickname() {
         return this.backingStore.get("nickname");
-    }
-    /**
-     * Gets the tags property value. Specifies other features of the room, for example, details like the type of view or furniture type.
-     * @return a {@link java.util.List<String>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<String> getTags() {
-        return this.backingStore.get("tags");
     }
     /**
      * Gets the videoDeviceName property value. Specifies the name of the video device in the room.
@@ -166,10 +139,7 @@ public class Room extends Place implements Parsable {
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeStringValue("floorLabel", this.getFloorLabel());
         writer.writeIntegerValue("floorNumber", this.getFloorNumber());
-        writer.writeBooleanValue("isWheelChairAccessible", this.getIsWheelChairAccessible());
-        writer.writeStringValue("label", this.getLabel());
         writer.writeStringValue("nickname", this.getNickname());
-        writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
         writer.writeStringValue("videoDeviceName", this.getVideoDeviceName());
     }
     /**
@@ -229,32 +199,11 @@ public class Room extends Place implements Parsable {
         this.backingStore.set("floorNumber", value);
     }
     /**
-     * Sets the isWheelChairAccessible property value. Specifies whether the room is wheelchair accessible.
-     * @param value Value to set for the isWheelChairAccessible property.
-     */
-    public void setIsWheelChairAccessible(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("isWheelChairAccessible", value);
-    }
-    /**
-     * Sets the label property value. Specifies a descriptive label for the room, for example, a number or name.
-     * @param value Value to set for the label property.
-     */
-    public void setLabel(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("label", value);
-    }
-    /**
      * Sets the nickname property value. Specifies a nickname for the room, for example, &apos;conf room&apos;.
      * @param value Value to set for the nickname property.
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("nickname", value);
-    }
-    /**
-     * Sets the tags property value. Specifies other features of the room, for example, details like the type of view or furniture type.
-     * @param value Value to set for the tags property.
-     */
-    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.backingStore.set("tags", value);
     }
     /**
      * Sets the videoDeviceName property value. Specifies the name of the video device in the room.

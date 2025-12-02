@@ -3,6 +3,7 @@ package com.microsoft.graph.security.identities;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.IdentityContainer;
 import com.microsoft.graph.security.identities.healthissues.HealthIssuesRequestBuilder;
+import com.microsoft.graph.security.identities.identityaccounts.IdentityAccountsRequestBuilder;
 import com.microsoft.graph.security.identities.sensorcandidateactivationconfiguration.SensorCandidateActivationConfigurationRequestBuilder;
 import com.microsoft.graph.security.identities.sensorcandidates.SensorCandidatesRequestBuilder;
 import com.microsoft.graph.security.identities.sensors.SensorsRequestBuilder;
@@ -31,6 +32,14 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HealthIssuesRequestBuilder healthIssues() {
         return new HealthIssuesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the identityAccounts property of the microsoft.graph.security.identityContainer entity.
+     * @return a {@link IdentityAccountsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IdentityAccountsRequestBuilder identityAccounts() {
+        return new IdentityAccountsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sensorCandidateActivationConfiguration property of the microsoft.graph.security.identityContainer entity.

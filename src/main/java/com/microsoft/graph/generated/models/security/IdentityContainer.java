@@ -33,6 +33,7 @@ public class IdentityContainer extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("healthIssues", (n) -> { this.setHealthIssues(n.getCollectionOfObjectValues(HealthIssue::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityAccounts", (n) -> { this.setIdentityAccounts(n.getCollectionOfObjectValues(IdentityAccounts::createFromDiscriminatorValue)); });
         deserializerMap.put("sensorCandidateActivationConfiguration", (n) -> { this.setSensorCandidateActivationConfiguration(n.getObjectValue(SensorCandidateActivationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("sensorCandidates", (n) -> { this.setSensorCandidates(n.getCollectionOfObjectValues(SensorCandidate::createFromDiscriminatorValue)); });
         deserializerMap.put("sensors", (n) -> { this.setSensors(n.getCollectionOfObjectValues(Sensor::createFromDiscriminatorValue)); });
@@ -45,6 +46,14 @@ public class IdentityContainer extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<HealthIssue> getHealthIssues() {
         return this.backingStore.get("healthIssues");
+    }
+    /**
+     * Gets the identityAccounts property value. Represents an identity&apos;s details in the context of Microsoft Defender for Identity.
+     * @return a {@link java.util.List<IdentityAccounts>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<IdentityAccounts> getIdentityAccounts() {
+        return this.backingStore.get("identityAccounts");
     }
     /**
      * Gets the sensorCandidateActivationConfiguration property value. The sensorCandidateActivationConfiguration property
@@ -78,6 +87,7 @@ public class IdentityContainer extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("healthIssues", this.getHealthIssues());
+        writer.writeCollectionOfObjectValues("identityAccounts", this.getIdentityAccounts());
         writer.writeObjectValue("sensorCandidateActivationConfiguration", this.getSensorCandidateActivationConfiguration());
         writer.writeCollectionOfObjectValues("sensorCandidates", this.getSensorCandidates());
         writer.writeCollectionOfObjectValues("sensors", this.getSensors());
@@ -88,6 +98,13 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public void setHealthIssues(@jakarta.annotation.Nullable final java.util.List<HealthIssue> value) {
         this.backingStore.set("healthIssues", value);
+    }
+    /**
+     * Sets the identityAccounts property value. Represents an identity&apos;s details in the context of Microsoft Defender for Identity.
+     * @param value Value to set for the identityAccounts property.
+     */
+    public void setIdentityAccounts(@jakarta.annotation.Nullable final java.util.List<IdentityAccounts> value) {
+        this.backingStore.set("identityAccounts", value);
     }
     /**
      * Sets the sensorCandidateActivationConfiguration property value. The sensorCandidateActivationConfiguration property

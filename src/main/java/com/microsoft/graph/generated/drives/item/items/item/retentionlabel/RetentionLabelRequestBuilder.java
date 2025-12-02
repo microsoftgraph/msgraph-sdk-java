@@ -57,19 +57,21 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Information about retention label and settings enforced on the driveItem. Read-write.
+     * Get metadata information for a retention label applied on a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @return a {@link ItemRetentionLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-getretentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemRetentionLabel get() {
         return get(null);
     }
     /**
-     * Information about retention label and settings enforced on the driveItem. Read-write.
+     * Get metadata information for a retention label applied on a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemRetentionLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-getretentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemRetentionLabel get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +128,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Information about retention label and settings enforced on the driveItem. Read-write.
+     * Get metadata information for a retention label applied on a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +136,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Information about retention label and settings enforced on the driveItem. Read-write.
+     * Get metadata information for a retention label applied on a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -186,7 +188,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Information about retention label and settings enforced on the driveItem. Read-write.
+     * Get metadata information for a retention label applied on a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

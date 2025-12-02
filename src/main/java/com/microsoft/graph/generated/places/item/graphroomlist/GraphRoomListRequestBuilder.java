@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RoomList;
 import com.microsoft.graph.places.item.graphroomlist.checkins.CheckInsRequestBuilder;
 import com.microsoft.graph.places.item.graphroomlist.rooms.RoomsRequestBuilder;
+import com.microsoft.graph.places.item.graphroomlist.workspaces.WorkspacesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RoomsRequestBuilder rooms() {
         return new RoomsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the workspaces property of the microsoft.graph.roomList entity.
+     * @return a {@link WorkspacesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WorkspacesRequestBuilder workspaces() {
+        return new WorkspacesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link GraphRoomListRequestBuilder} and sets the default values.
