@@ -4,7 +4,7 @@ package com.microsoft.graph.info;
 public final class Constants {
     /** The SDK version */
     // x-release-please-start-version
-    public static final String VERSION_NAME = "6.57.0";
+    public static final String VERSION_NAME = "6.58.0";
     // x-release-please-end
 }
 
