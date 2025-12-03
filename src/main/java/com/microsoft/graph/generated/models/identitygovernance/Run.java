@@ -27,6 +27,14 @@ public class Run extends Entity implements Parsable {
         return new Run();
     }
     /**
+     * Gets the activatedOnScope property value. The scope for which the workflow runs.
+     * @return a {@link ActivationScope}
+     */
+    @jakarta.annotation.Nullable
+    public ActivationScope getActivatedOnScope() {
+        return this.backingStore.get("activatedOnScope");
+    }
+    /**
      * Gets the completedDateTime property value. The date time that the run completed. Value is null if the workflow hasn&apos;t completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a {@link OffsetDateTime}
      */
@@ -57,11 +65,13 @@ public class Run extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activatedOnScope", (n) -> { this.setActivatedOnScope(n.getObjectValue(ActivationScope::createFromDiscriminatorValue)); });
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("failedTasksCount", (n) -> { this.setFailedTasksCount(n.getIntegerValue()); });
         deserializerMap.put("failedUsersCount", (n) -> { this.setFailedUsersCount(n.getIntegerValue()); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("processingStatus", (n) -> { this.setProcessingStatus(n.getEnumValue(LifecycleWorkflowProcessingStatus::forValue)); });
+        deserializerMap.put("reprocessedRuns", (n) -> { this.setReprocessedRuns(n.getCollectionOfObjectValues(Run::createFromDiscriminatorValue)); });
         deserializerMap.put("scheduledDateTime", (n) -> { this.setScheduledDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("successfulUsersCount", (n) -> { this.setSuccessfulUsersCount(n.getIntegerValue()); });
@@ -88,6 +98,14 @@ public class Run extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
         return this.backingStore.get("processingStatus");
+    }
+    /**
+     * Gets the reprocessedRuns property value. The related reprocessed workflow run.
+     * @return a {@link java.util.List<Run>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Run> getReprocessedRuns() {
+        return this.backingStore.get("reprocessedRuns");
     }
     /**
      * Gets the scheduledDateTime property value. The date time that the run is scheduled to be executed for a workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -168,11 +186,13 @@ public class Run extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("activatedOnScope", this.getActivatedOnScope());
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
         writer.writeIntegerValue("failedTasksCount", this.getFailedTasksCount());
         writer.writeIntegerValue("failedUsersCount", this.getFailedUsersCount());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeEnumValue("processingStatus", this.getProcessingStatus());
+        writer.writeCollectionOfObjectValues("reprocessedRuns", this.getReprocessedRuns());
         writer.writeOffsetDateTimeValue("scheduledDateTime", this.getScheduledDateTime());
         writer.writeOffsetDateTimeValue("startedDateTime", this.getStartedDateTime());
         writer.writeIntegerValue("successfulUsersCount", this.getSuccessfulUsersCount());
@@ -182,6 +202,13 @@ public class Run extends Entity implements Parsable {
         writer.writeIntegerValue("totalUsersCount", this.getTotalUsersCount());
         writer.writeCollectionOfObjectValues("userProcessingResults", this.getUserProcessingResults());
         writer.writeEnumValue("workflowExecutionType", this.getWorkflowExecutionType());
+    }
+    /**
+     * Sets the activatedOnScope property value. The scope for which the workflow runs.
+     * @param value Value to set for the activatedOnScope property.
+     */
+    public void setActivatedOnScope(@jakarta.annotation.Nullable final ActivationScope value) {
+        this.backingStore.set("activatedOnScope", value);
     }
     /**
      * Sets the completedDateTime property value. The date time that the run completed. Value is null if the workflow hasn&apos;t completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -217,6 +244,13 @@ public class Run extends Entity implements Parsable {
      */
     public void setProcessingStatus(@jakarta.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
         this.backingStore.set("processingStatus", value);
+    }
+    /**
+     * Sets the reprocessedRuns property value. The related reprocessed workflow run.
+     * @param value Value to set for the reprocessedRuns property.
+     */
+    public void setReprocessedRuns(@jakarta.annotation.Nullable final java.util.List<Run> value) {
+        this.backingStore.set("reprocessedRuns", value);
     }
     /**
      * Sets the scheduledDateTime property value. The date time that the run is scheduled to be executed for a workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.

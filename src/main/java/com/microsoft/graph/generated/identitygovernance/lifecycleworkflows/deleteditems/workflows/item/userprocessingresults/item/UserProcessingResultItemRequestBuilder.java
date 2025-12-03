@@ -1,5 +1,6 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.userprocessingresults.item;
 
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.userprocessingresults.item.reprocessedruns.ReprocessedRunsRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.userprocessingresults.item.subject.SubjectRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.userprocessingresults.item.taskprocessingresults.TaskProcessingResultsRequestBuilder;
 import com.microsoft.graph.models.identitygovernance.UserProcessingResult;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the reprocessedRuns property of the microsoft.graph.identityGovernance.userProcessingResult entity.
+     * @return a {@link ReprocessedRunsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReprocessedRunsRequestBuilder reprocessedRuns() {
+        return new ReprocessedRunsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the subject property of the microsoft.graph.identityGovernance.userProcessingResult entity.
      * @return a {@link SubjectRequestBuilder}

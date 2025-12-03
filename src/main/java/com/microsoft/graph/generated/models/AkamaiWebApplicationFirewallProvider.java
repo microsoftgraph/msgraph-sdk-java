@@ -26,7 +26,7 @@ public class AkamaiWebApplicationFirewallProvider extends WebApplicationFirewall
         return new AkamaiWebApplicationFirewallProvider();
     }
     /**
-     * Gets the accessToken property value. The accessToken property
+     * Gets the accessToken property value. Akamai API access token used to authenticate to the Akamai account. Contact your Akamai Customer Success Manager for assistance with your accessToken.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AkamaiWebApplicationFirewallProvider extends WebApplicationFirewall
         return this.backingStore.get("accessToken");
     }
     /**
-     * Gets the clientSecret property value. The clientSecret property
+     * Gets the clientSecret property value. Akamai API client secret used in conjunction with the client token and access token for authentication. Contact your Akamai Customer Success Manager for assistance with this information.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class AkamaiWebApplicationFirewallProvider extends WebApplicationFirewall
         return this.backingStore.get("clientSecret");
     }
     /**
-     * Gets the clientToken property value. The clientToken property
+     * Gets the clientToken property value. Akamai API client token used for authentication to the Akamai account. Contact your Akamai Customer Success Manager for assistance with this information.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class AkamaiWebApplicationFirewallProvider extends WebApplicationFirewall
         return deserializerMap;
     }
     /**
-     * Gets the hostPrefix property value. The hostPrefix property
+     * Gets the hostPrefix property value. Prefix used to identify the host or domain in Akamai configuration operations. This value may be required for certain API calls or configuration scenarios.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class AkamaiWebApplicationFirewallProvider extends WebApplicationFirewall
         writer.writeStringValue("hostPrefix", this.getHostPrefix());
     }
     /**
-     * Sets the accessToken property value. The accessToken property
+     * Sets the accessToken property value. Akamai API access token used to authenticate to the Akamai account. Contact your Akamai Customer Success Manager for assistance with your accessToken.
      * @param value Value to set for the accessToken property.
      */
     public void setAccessToken(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("accessToken", value);
     }
     /**
-     * Sets the clientSecret property value. The clientSecret property
+     * Sets the clientSecret property value. Akamai API client secret used in conjunction with the client token and access token for authentication. Contact your Akamai Customer Success Manager for assistance with this information.
      * @param value Value to set for the clientSecret property.
      */
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientSecret", value);
     }
     /**
-     * Sets the clientToken property value. The clientToken property
+     * Sets the clientToken property value. Akamai API client token used for authentication to the Akamai account. Contact your Akamai Customer Success Manager for assistance with this information.
      * @param value Value to set for the clientToken property.
      */
     public void setClientToken(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientToken", value);
     }
     /**
-     * Sets the hostPrefix property value. The hostPrefix property
+     * Sets the hostPrefix property value. Prefix used to identify the host or domain in Akamai configuration operations. This value may be required for certain API calls or configuration scenarios.
      * @param value Value to set for the hostPrefix property.
      */
     public void setHostPrefix(@jakarta.annotation.Nullable final String value) {

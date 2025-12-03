@@ -2,6 +2,7 @@ package com.microsoft.graph.places.item.graphroom;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Room;
+import com.microsoft.graph.places.item.graphroom.checkins.CheckInsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GraphRoomRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the checkIns property of the microsoft.graph.place entity.
+     * @return a {@link CheckInsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CheckInsRequestBuilder checkIns() {
+        return new CheckInsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link GraphRoomRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

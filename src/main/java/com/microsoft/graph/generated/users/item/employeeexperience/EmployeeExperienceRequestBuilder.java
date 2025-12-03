@@ -2,6 +2,7 @@ package com.microsoft.graph.users.item.employeeexperience;
 
 import com.microsoft.graph.models.EmployeeExperienceUser;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.employeeexperience.assignedroles.AssignedRolesRequestBuilder;
 import com.microsoft.graph.users.item.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.users.item.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the assignedRoles property of the microsoft.graph.employeeExperienceUser entity.
+     * @return a {@link AssignedRolesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AssignedRolesRequestBuilder assignedRoles() {
+        return new AssignedRolesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperienceUser entity.
      * @return a {@link LearningCourseActivitiesRequestBuilder}

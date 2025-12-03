@@ -64,7 +64,7 @@ public class WebApplicationFirewallVerifiedDetails implements AdditionalDataHold
         return this.backingStore;
     }
     /**
-     * Gets the dnsConfiguration property value. The dnsConfiguration property
+     * Gets the dnsConfiguration property value. DNS-related details discovered during verification for the host, such as the DNS record name, record type, record value, whether the record is proxied through the provider, and whether the domain is verified.
      * @return a {@link WebApplicationFirewallDnsConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class WebApplicationFirewallVerifiedDetails implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the dnsConfiguration property value. The dnsConfiguration property
+     * Sets the dnsConfiguration property value. DNS-related details discovered during verification for the host, such as the DNS record name, record type, record value, whether the record is proxied through the provider, and whether the domain is verified.
      * @param value Value to set for the dnsConfiguration property.
      */
     public void setDnsConfiguration(@jakarta.annotation.Nullable final WebApplicationFirewallDnsConfiguration value) {

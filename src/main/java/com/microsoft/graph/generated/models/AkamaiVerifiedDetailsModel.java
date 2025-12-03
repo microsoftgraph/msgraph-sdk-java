@@ -26,7 +26,7 @@ public class AkamaiVerifiedDetailsModel extends WebApplicationFirewallVerifiedDe
         return new AkamaiVerifiedDetailsModel();
     }
     /**
-     * Gets the activeAttackGroups property value. The activeAttackGroups property
+     * Gets the activeAttackGroups property value. Collection of Akamai attack groups that are currently active for the zone or host, including the action applied to each group (for example, deny, none or alert).
      * @return a {@link java.util.List<AkamaiAttackGroupActionModel>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AkamaiVerifiedDetailsModel extends WebApplicationFirewallVerifiedDe
         return this.backingStore.get("activeAttackGroups");
     }
     /**
-     * Gets the activeCustomRules property value. The activeCustomRules property
+     * Gets the activeCustomRules property value. Collection of Akamai custom rules that are currently enabled for the zone or host. Each entry includes rule metadata such as the rule identifier, friendly name, and the action taken when the rule matches traffic.
      * @return a {@link java.util.List<AkamaiCustomRuleModel>}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class AkamaiVerifiedDetailsModel extends WebApplicationFirewallVerifiedDe
         return deserializerMap;
     }
     /**
-     * Gets the rapidRules property value. The rapidRules property
+     * Gets the rapidRules property value. Configuration for Akamai Rapid Rules, including whether Rapid Rules are enabled and the default action applied to matching traffic.
      * @return a {@link AkamaiRapidRulesModel}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class AkamaiVerifiedDetailsModel extends WebApplicationFirewallVerifiedDe
         writer.writeObjectValue("rapidRules", this.getRapidRules());
     }
     /**
-     * Sets the activeAttackGroups property value. The activeAttackGroups property
+     * Sets the activeAttackGroups property value. Collection of Akamai attack groups that are currently active for the zone or host, including the action applied to each group (for example, deny, none or alert).
      * @param value Value to set for the activeAttackGroups property.
      */
     public void setActiveAttackGroups(@jakarta.annotation.Nullable final java.util.List<AkamaiAttackGroupActionModel> value) {
         this.backingStore.set("activeAttackGroups", value);
     }
     /**
-     * Sets the activeCustomRules property value. The activeCustomRules property
+     * Sets the activeCustomRules property value. Collection of Akamai custom rules that are currently enabled for the zone or host. Each entry includes rule metadata such as the rule identifier, friendly name, and the action taken when the rule matches traffic.
      * @param value Value to set for the activeCustomRules property.
      */
     public void setActiveCustomRules(@jakarta.annotation.Nullable final java.util.List<AkamaiCustomRuleModel> value) {
         this.backingStore.set("activeCustomRules", value);
     }
     /**
-     * Sets the rapidRules property value. The rapidRules property
+     * Sets the rapidRules property value. Configuration for Akamai Rapid Rules, including whether Rapid Rules are enabled and the default action applied to matching traffic.
      * @param value Value to set for the rapidRules property.
      */
     public void setRapidRules(@jakarta.annotation.Nullable final AkamaiRapidRulesModel value) {

@@ -56,7 +56,7 @@ public class AkamaiRapidRulesModel implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the defaultAction property value. The defaultAction property
+     * Gets the defaultAction property value. The default action Akamai applies to traffic that matches Rapid Rules. Common values include deny, none or alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class AkamaiRapidRulesModel implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether Akamai Rapid Rules are enabled for the WAF integration. If true, Rapid Rules are active and applied to incoming traffic.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class AkamaiRapidRulesModel implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the defaultAction property value. The defaultAction property
+     * Sets the defaultAction property value. The default action Akamai applies to traffic that matches Rapid Rules. Common values include deny, none or alert.
      * @param value Value to set for the defaultAction property.
      */
     public void setDefaultAction(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("defaultAction", value);
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether Akamai Rapid Rules are enabled for the WAF integration. If true, Rapid Rules are active and applied to incoming traffic.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

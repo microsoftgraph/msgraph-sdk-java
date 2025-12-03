@@ -26,7 +26,7 @@ public class CloudFlareWebApplicationFirewallProvider extends WebApplicationFire
         return new CloudFlareWebApplicationFirewallProvider();
     }
     /**
-     * Gets the apiToken property value. The apiToken property
+     * Gets the apiToken property value. Cloudflare API token or credential used by Microsoft services to authenticate to the Cloudflare account. Contact your Cloudflare Customer Success Manager for assistance with your apitoken.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class CloudFlareWebApplicationFirewallProvider extends WebApplicationFire
         return deserializerMap;
     }
     /**
-     * Gets the zoneId property value. The zoneId property
+     * Gets the zoneId property value. Default Cloudflare Zone ID associated with this provider configuration. This ID identifies the DNS zone in Cloudflare that is commonly used for verification and configuration operations for the provider.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class CloudFlareWebApplicationFirewallProvider extends WebApplicationFire
         writer.writeStringValue("zoneId", this.getZoneId());
     }
     /**
-     * Sets the apiToken property value. The apiToken property
+     * Sets the apiToken property value. Cloudflare API token or credential used by Microsoft services to authenticate to the Cloudflare account. Contact your Cloudflare Customer Success Manager for assistance with your apitoken.
      * @param value Value to set for the apiToken property.
      */
     public void setApiToken(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("apiToken", value);
     }
     /**
-     * Sets the zoneId property value. The zoneId property
+     * Sets the zoneId property value. Default Cloudflare Zone ID associated with this provider configuration. This ID identifies the DNS zone in Cloudflare that is commonly used for verification and configuration operations for the provider.
      * @param value Value to set for the zoneId property.
      */
     public void setZoneId(@jakarta.annotation.Nullable final String value) {

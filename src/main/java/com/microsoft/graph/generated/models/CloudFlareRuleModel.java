@@ -35,7 +35,7 @@ public class CloudFlareRuleModel implements AdditionalDataHolder, BackedModel, P
         return new CloudFlareRuleModel();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. The action Cloudflare applies when the rule matches traffic. Common values include Managed Challenge, Interactive Challenge, Log, Block, JS Challenge, or Skip.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class CloudFlareRuleModel implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Friendly name for the rule, used in UIs or logs to help administrators identify the rule.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CloudFlareRuleModel implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the ruleId property value. The ruleId property
+     * Gets the ruleId property value. Unique identifier assigned to the rule by Cloudflare or the integration.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class CloudFlareRuleModel implements AdditionalDataHolder, BackedModel, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. The action Cloudflare applies when the rule matches traffic. Common values include Managed Challenge, Interactive Challenge, Log, Block, JS Challenge, or Skip.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final String value) {
@@ -135,7 +135,7 @@ public class CloudFlareRuleModel implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Friendly name for the rule, used in UIs or logs to help administrators identify the rule.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class CloudFlareRuleModel implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the ruleId property value. The ruleId property
+     * Sets the ruleId property value. Unique identifier assigned to the rule by Cloudflare or the integration.
      * @param value Value to set for the ruleId property.
      */
     public void setRuleId(@jakarta.annotation.Nullable final String value) {
