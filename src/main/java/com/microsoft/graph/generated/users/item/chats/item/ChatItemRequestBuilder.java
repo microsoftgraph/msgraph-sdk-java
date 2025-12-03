@@ -11,6 +11,7 @@ import com.microsoft.graph.users.item.chats.item.members.MembersRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.removeallaccessforuser.RemoveAllAccessForUserRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.unhideforuser.UnhideForUserRequestBuilder;
@@ -103,6 +104,14 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PinnedMessagesRequestBuilder pinnedMessages() {
         return new PinnedMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the removeAllAccessForUser method.
+     * @return a {@link RemoveAllAccessForUserRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveAllAccessForUserRequestBuilder removeAllAccessForUser() {
+        return new RemoveAllAccessForUserRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the sendActivityNotification method.

@@ -97,6 +97,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("lockState", (n) -> { this.setLockState(n.getEnumValue(SiteLockState::forValue)); });
+        deserializerMap.put("migrationJobs", (n) -> { this.setMigrationJobs(n.getCollectionOfObjectValues(SharePointMigrationJob::createFromDiscriminatorValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("recycleBin", (n) -> { this.setRecycleBin(n.getObjectValue(RecycleBin::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(FileStorageContainerSettings::createFromDiscriminatorValue)); });
@@ -111,6 +112,14 @@ public class FileStorageContainer extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public SiteLockState getLockState() {
         return this.backingStore.get("lockState");
+    }
+    /**
+     * Gets the migrationJobs property value. The collection of sharePointMigrationJob objects local to the container. Read-write.
+     * @return a {@link java.util.List<SharePointMigrationJob>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SharePointMigrationJob> getMigrationJobs() {
+        return this.backingStore.get("migrationJobs");
     }
     /**
      * Gets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are: reader, writer, manager, and owner. Read-write.
@@ -167,6 +176,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeEnumValue("lockState", this.getLockState());
+        writer.writeCollectionOfObjectValues("migrationJobs", this.getMigrationJobs());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("recycleBin", this.getRecycleBin());
         writer.writeObjectValue("settings", this.getSettings());
@@ -228,6 +238,13 @@ public class FileStorageContainer extends Entity implements Parsable {
      */
     public void setLockState(@jakarta.annotation.Nullable final SiteLockState value) {
         this.backingStore.set("lockState", value);
+    }
+    /**
+     * Sets the migrationJobs property value. The collection of sharePointMigrationJob objects local to the container. Read-write.
+     * @param value Value to set for the migrationJobs property.
+     */
+    public void setMigrationJobs(@jakarta.annotation.Nullable final java.util.List<SharePointMigrationJob> value) {
+        this.backingStore.set("migrationJobs", value);
     }
     /**
      * Sets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are: reader, writer, manager, and owner. Read-write.

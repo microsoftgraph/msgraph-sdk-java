@@ -43,7 +43,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: timeOffReason.
+     * Gets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: timeOffReason.
      * @return a {@link EnumSet<EligibilityFilteringEnabledEntities>}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: timeOffReason.
+     * Sets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: timeOffReason.
      * @param value Value to set for the eligibilityFilteringEnabledEntities property.
      */
     public void setEligibilityFilteringEnabledEntities(@jakarta.annotation.Nullable final EnumSet<EligibilityFilteringEnabledEntities> value) {

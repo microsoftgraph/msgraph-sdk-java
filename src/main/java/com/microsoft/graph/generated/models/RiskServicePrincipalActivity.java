@@ -56,7 +56,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Backe
         return this.backingStore;
     }
     /**
-     * Gets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
+     * Gets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden.
      * @return a {@link RiskDetail}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class RiskServicePrincipalActivity implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
+     * Sets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final RiskDetail value) {

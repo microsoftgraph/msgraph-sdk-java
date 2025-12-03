@@ -42,6 +42,7 @@ public class RoomList extends Place implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("rooms", (n) -> { this.setRooms(n.getCollectionOfObjectValues(Room::createFromDiscriminatorValue)); });
+        deserializerMap.put("workspaces", (n) -> { this.setWorkspaces(n.getCollectionOfObjectValues(Workspace::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class RoomList extends Place implements Parsable {
         return this.backingStore.get("rooms");
     }
     /**
+     * Gets the workspaces property value. The workspaces property
+     * @return a {@link java.util.List<Workspace>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Workspace> getWorkspaces() {
+        return this.backingStore.get("workspaces");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class RoomList extends Place implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeCollectionOfObjectValues("rooms", this.getRooms());
+        writer.writeCollectionOfObjectValues("workspaces", this.getWorkspaces());
     }
     /**
      * Sets the emailAddress property value. The email address of the room list.
@@ -75,5 +85,12 @@ public class RoomList extends Place implements Parsable {
      */
     public void setRooms(@jakarta.annotation.Nullable final java.util.List<Room> value) {
         this.backingStore.set("rooms", value);
+    }
+    /**
+     * Sets the workspaces property value. The workspaces property
+     * @param value Value to set for the workspaces property.
+     */
+    public void setWorkspaces(@jakarta.annotation.Nullable final java.util.List<Workspace> value) {
+        this.backingStore.set("workspaces", value);
     }
 }
