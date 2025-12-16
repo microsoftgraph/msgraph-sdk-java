@@ -26,7 +26,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
         return new TeamworkConversationIdentity();
     }
     /**
-     * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+     * Gets the conversationIdentityType property value. Type of conversation. The possible values are: team, channel, chat, and unknownFutureValue.
      * @return a {@link TeamworkConversationIdentityType}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
         writer.writeEnumValue("conversationIdentityType", this.getConversationIdentityType());
     }
     /**
-     * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+     * Sets the conversationIdentityType property value. Type of conversation. The possible values are: team, channel, chat, and unknownFutureValue.
      * @param value Value to set for the conversationIdentityType property.
      */
     public void setConversationIdentityType(@jakarta.annotation.Nullable final TeamworkConversationIdentityType value) {

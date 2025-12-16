@@ -57,7 +57,7 @@ public class CheckInClaim implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore;
     }
     /**
-     * Gets the calendarEventId property value. The calendarEventId property
+     * Gets the calendarEventId property value. The unique identifier for an Outlook calendar event associated with the checkInClaim object. For more information, see the iCalUId property in event.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class CheckInClaim implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("checkInMethod");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the checkInClaim object was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class CheckInClaim implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the calendarEventId property value. The calendarEventId property
+     * Sets the calendarEventId property value. The unique identifier for an Outlook calendar event associated with the checkInClaim object. For more information, see the iCalUId property in event.
      * @param value Value to set for the calendarEventId property.
      */
     public void setCalendarEventId(@jakarta.annotation.Nullable final String value) {
@@ -143,7 +143,7 @@ public class CheckInClaim implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("checkInMethod", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the checkInClaim object was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

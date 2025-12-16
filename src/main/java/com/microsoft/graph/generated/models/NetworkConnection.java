@@ -105,7 +105,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("destinationUrl");
     }
     /**
-     * Gets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
+     * Gets the direction property value. Network connection direction. The possible values are: unknown, inbound, outbound.
      * @return a {@link ConnectionDirection}
      */
     @jakarta.annotation.Nullable
@@ -199,7 +199,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
+     * Gets the protocol property value. Network protocol. The possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
      * @return a {@link SecurityNetworkProtocol}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("sourcePort");
     }
     /**
-     * Gets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
+     * Gets the status property value. Network connection status. The possible values are: unknown, attempted, succeeded, blocked, failed.
      * @return a {@link ConnectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -341,7 +341,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("destinationUrl", value);
     }
     /**
-     * Sets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
+     * Sets the direction property value. Network connection direction. The possible values are: unknown, inbound, outbound.
      * @param value Value to set for the direction property.
      */
     public void setDirection(@jakarta.annotation.Nullable final ConnectionDirection value) {
@@ -397,7 +397,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
+     * Sets the protocol property value. Network protocol. The possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final SecurityNetworkProtocol value) {
@@ -432,7 +432,7 @@ public class NetworkConnection implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("sourcePort", value);
     }
     /**
-     * Sets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
+     * Sets the status property value. Network connection status. The possible values are: unknown, attempted, succeeded, blocked, failed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ConnectionStatus value) {

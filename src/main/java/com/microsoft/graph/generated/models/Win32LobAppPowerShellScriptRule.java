@@ -94,7 +94,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
         return this.backingStore.get("runAs32Bit");
     }
     /**
-     * Gets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
+     * Gets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. The possible values are: system, user.
      * @return a {@link RunAsAccountType}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
         this.backingStore.set("runAs32Bit", value);
     }
     /**
-     * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
+     * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. The possible values are: system, user.
      * @param value Value to set for the runAsAccount property.
      */
     public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {

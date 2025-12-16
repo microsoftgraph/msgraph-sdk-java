@@ -65,7 +65,7 @@ public class Operation extends Entity implements Parsable {
         return this.backingStore.get("lastActionDateTime");
     }
     /**
-     * Gets the status property value. The status of the operation. Possible values are: notStarted, running, completed, failed, unknownFutureValue.
+     * Gets the status property value. The status of the operation. The possible values are: notStarted, running, completed, failed, unknownFutureValue.
      * @return a {@link LongRunningOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class Operation extends Entity implements Parsable {
         this.backingStore.set("lastActionDateTime", value);
     }
     /**
-     * Sets the status property value. The status of the operation. Possible values are: notStarted, running, completed, failed, unknownFutureValue.
+     * Sets the status property value. The status of the operation. The possible values are: notStarted, running, completed, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {

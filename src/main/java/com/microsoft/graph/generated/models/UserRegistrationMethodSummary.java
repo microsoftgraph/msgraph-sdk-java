@@ -94,7 +94,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Back
         return this.backingStore.get("userRegistrationMethodCounts");
     }
     /**
-     * Gets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
+     * Gets the userRoles property value. The role type of the user. The possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @return a {@link IncludedUserRoles}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Back
         return this.backingStore.get("userRoles");
     }
     /**
-     * Gets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
+     * Gets the userTypes property value. User type. The possible values are: all, member, guest, unknownFutureValue.
      * @return a {@link IncludedUserTypes}
      */
     @jakarta.annotation.Nullable
@@ -159,14 +159,14 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Back
         this.backingStore.set("userRegistrationMethodCounts", value);
     }
     /**
-     * Sets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
+     * Sets the userRoles property value. The role type of the user. The possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @param value Value to set for the userRoles property.
      */
     public void setUserRoles(@jakarta.annotation.Nullable final IncludedUserRoles value) {
         this.backingStore.set("userRoles", value);
     }
     /**
-     * Sets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
+     * Sets the userTypes property value. User type. The possible values are: all, member, guest, unknownFutureValue.
      * @param value Value to set for the userTypes property.
      */
     public void setUserTypes(@jakarta.annotation.Nullable final IncludedUserTypes value) {

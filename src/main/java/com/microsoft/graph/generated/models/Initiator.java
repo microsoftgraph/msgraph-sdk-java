@@ -36,7 +36,7 @@ public class Initiator extends Identity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
+     * Gets the initiatorType property value. Type of initiator. The possible values are: user, application, system, unknownFutureValue.
      * @return a {@link InitiatorType}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class Initiator extends Identity implements Parsable {
         writer.writeEnumValue("initiatorType", this.getInitiatorType());
     }
     /**
-     * Sets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
+     * Sets the initiatorType property value. Type of initiator. The possible values are: user, application, system, unknownFutureValue.
      * @param value Value to set for the initiatorType property.
      */
     public void setInitiatorType(@jakarta.annotation.Nullable final InitiatorType value) {

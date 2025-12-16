@@ -84,7 +84,7 @@ public class SecurityResource implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("resource");
     }
     /**
-     * Gets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
+     * Gets the resourceType property value. Represents type of security resources related to an alert. The possible values are: attacked, related.
      * @return a {@link SecurityResourceType}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class SecurityResource implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("resource", value);
     }
     /**
-     * Sets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
+     * Sets the resourceType property value. Represents type of security resources related to an alert. The possible values are: attacked, related.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final SecurityResourceType value) {

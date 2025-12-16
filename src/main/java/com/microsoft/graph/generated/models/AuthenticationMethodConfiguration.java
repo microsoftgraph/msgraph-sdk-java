@@ -58,7 +58,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the state property value. The state of the policy. Possible values are: enabled, disabled.
+     * Gets the state property value. The state of the policy. The possible values are: enabled, disabled.
      * @return a {@link AuthenticationMethodState}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
         this.backingStore.set("excludeTargets", value);
     }
     /**
-     * Sets the state property value. The state of the policy. Possible values are: enabled, disabled.
+     * Sets the state property value. The state of the policy. The possible values are: enabled, disabled.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AuthenticationMethodState value) {

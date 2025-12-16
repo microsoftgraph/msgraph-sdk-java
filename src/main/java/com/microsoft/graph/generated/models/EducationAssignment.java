@@ -281,7 +281,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("rubric");
     }
     /**
-     * Gets the status property value. Status of the assignment.  You can&apos;t PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: inactive.
+     * Gets the status property value. Status of the assignment.  You can&apos;t PATCH this value. The possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: inactive.
      * @return a {@link EducationAssignmentStatus}
      */
     @jakarta.annotation.Nullable
@@ -522,7 +522,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("rubric", value);
     }
     /**
-     * Sets the status property value. Status of the assignment.  You can&apos;t PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: inactive.
+     * Sets the status property value. Status of the assignment.  You can&apos;t PATCH this value. The possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: inactive.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationAssignmentStatus value) {

@@ -35,7 +35,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
+     * Gets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. The possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
      * @return a {@link CloudPcDeviceImageErrorCode}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("osBuildNumber");
     }
     /**
-     * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
+     * Gets the osStatus property value. The OS status of this image. The possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
      * @return a {@link CloudPcDeviceImageOsStatus}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("sourceImageResourceId");
     }
     /**
-     * Gets the status property value. The status of the image on the Cloud PC. Possible values are: pending, ready, failed, unknownFutureValue. Read-only.
+     * Gets the status property value. The status of the image on the Cloud PC. The possible values are: pending, ready, failed, unknownFutureValue. Read-only.
      * @return a {@link CloudPcDeviceImageStatus}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
+     * Sets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. The possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final CloudPcDeviceImageErrorCode value) {
@@ -186,7 +186,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("osBuildNumber", value);
     }
     /**
-     * Sets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
+     * Sets the osStatus property value. The OS status of this image. The possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
      * @param value Value to set for the osStatus property.
      */
     public void setOsStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageOsStatus value) {
@@ -200,7 +200,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("sourceImageResourceId", value);
     }
     /**
-     * Sets the status property value. The status of the image on the Cloud PC. Possible values are: pending, ready, failed, unknownFutureValue. Read-only.
+     * Sets the status property value. The status of the image on the Cloud PC. The possible values are: pending, ready, failed, unknownFutureValue. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageStatus value) {

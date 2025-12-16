@@ -56,7 +56,7 @@ public class MailboxDetails implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore;
     }
     /**
-     * Gets the emailAddress property value. The emailAddress property
+     * Gets the emailAddress property value. The primary SMTP address associated with the mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class MailboxDetails implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("emailAddress");
     }
     /**
-     * Gets the externalDirectoryObjectId property value. The externalDirectoryObjectId property
+     * Gets the externalDirectoryObjectId property value. The unique identifier of the mailbox in the external directory (such as Microsoft Entra).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class MailboxDetails implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the emailAddress property value. The emailAddress property
+     * Sets the emailAddress property value. The primary SMTP address associated with the mailbox.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailAddress", value);
     }
     /**
-     * Sets the externalDirectoryObjectId property value. The externalDirectoryObjectId property
+     * Sets the externalDirectoryObjectId property value. The unique identifier of the mailbox in the external directory (such as Microsoft Entra).
      * @param value Value to set for the externalDirectoryObjectId property.
      */
     public void setExternalDirectoryObjectId(@jakarta.annotation.Nullable final String value) {

@@ -53,7 +53,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         return this.backingStore.get("multivaluedComparisonType");
     }
     /**
-     * Gets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
+     * Gets the supportedAttributeTypes property value. Attribute types supported by the operator. The possible values are: Boolean, Binary, Reference, Integer, String.
      * @return a {@link java.util.List<AttributeType>}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         this.backingStore.set("multivaluedComparisonType", value);
     }
     /**
-     * Sets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
+     * Sets the supportedAttributeTypes property value. Attribute types supported by the operator. The possible values are: Boolean, Binary, Reference, Integer, String.
      * @param value Value to set for the supportedAttributeTypes property.
      */
     public void setSupportedAttributeTypes(@jakarta.annotation.Nullable final java.util.List<AttributeType> value) {

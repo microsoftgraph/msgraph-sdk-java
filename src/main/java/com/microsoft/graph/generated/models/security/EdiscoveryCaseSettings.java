@@ -65,7 +65,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         return this.backingStore.get("redundancyDetection");
     }
     /**
-     * Gets the reviewSetSettings property value. The settings of the review set for the case. Possible values are: none, disableGrouping, unknownFutureValue.
+     * Gets the reviewSetSettings property value. The settings of the review set for the case. The possible values are: none, disableGrouping, unknownFutureValue.
      * @return a {@link EnumSet<ReviewSetSettings>}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
         this.backingStore.set("redundancyDetection", value);
     }
     /**
-     * Sets the reviewSetSettings property value. The settings of the review set for the case. Possible values are: none, disableGrouping, unknownFutureValue.
+     * Sets the reviewSetSettings property value. The settings of the review set for the case. The possible values are: none, disableGrouping, unknownFutureValue.
      * @param value Value to set for the reviewSetSettings property.
      */
     public void setReviewSetSettings(@jakarta.annotation.Nullable final EnumSet<ReviewSetSettings> value) {

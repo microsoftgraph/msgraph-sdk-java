@@ -27,7 +27,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return new Contract();
     }
     /**
-     * Gets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
+     * Gets the contractType property value. Type of contract. The possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class Contract extends DirectoryObject implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
+     * Sets the contractType property value. Type of contract. The possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
      * @param value Value to set for the contractType property.
      */
     public void setContractType(@jakarta.annotation.Nullable final String value) {

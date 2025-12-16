@@ -51,7 +51,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
         return this.backingStore.get("callRecordingDuration");
     }
     /**
-     * Gets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
+     * Gets the callRecordingStatus property value. Status of the call recording. The possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      * @return a {@link CallRecordingStatus}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
         this.backingStore.set("callRecordingDuration", value);
     }
     /**
-     * Sets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
+     * Sets the callRecordingStatus property value. Status of the call recording. The possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      * @param value Value to set for the callRecordingStatus property.
      */
     public void setCallRecordingStatus(@jakarta.annotation.Nullable final CallRecordingStatus value) {

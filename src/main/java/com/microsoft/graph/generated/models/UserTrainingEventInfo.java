@@ -79,7 +79,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. The possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @return a {@link TrainingStatus}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. The possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the latestTrainingStatus property.
      */
     public void setLatestTrainingStatus(@jakarta.annotation.Nullable final TrainingStatus value) {

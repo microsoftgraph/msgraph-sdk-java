@@ -77,7 +77,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the source property value. Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
+     * Gets the source property value. Type of source. The possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
      * @return a {@link TeamworkActivityTopicSource}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the source property value. Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
+     * Sets the source property value. Type of source. The possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final TeamworkActivityTopicSource value) {
