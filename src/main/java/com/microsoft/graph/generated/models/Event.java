@@ -360,7 +360,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("responseStatus");
     }
     /**
-     * Gets the sensitivity property value. Possible values are: normal, personal, private, and confidential.
+     * Gets the sensitivity property value. The possible values are: normal, personal, private, and confidential.
      * @return a {@link Sensitivity}
      */
     @jakarta.annotation.Nullable
@@ -376,7 +376,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("seriesMasterId");
     }
     /**
-     * Gets the showAs property value. The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Gets the showAs property value. The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return a {@link FreeBusyStatus}
      */
     @jakarta.annotation.Nullable
@@ -416,7 +416,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("transactionId");
     }
     /**
-     * Gets the type property value. The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only
+     * Gets the type property value. The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only
      * @return a {@link EventType}
      */
     @jakarta.annotation.Nullable
@@ -729,7 +729,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("responseStatus", value);
     }
     /**
-     * Sets the sensitivity property value. Possible values are: normal, personal, private, and confidential.
+     * Sets the sensitivity property value. The possible values are: normal, personal, private, and confidential.
      * @param value Value to set for the sensitivity property.
      */
     public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
@@ -743,7 +743,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("seriesMasterId", value);
     }
     /**
-     * Sets the showAs property value. The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Sets the showAs property value. The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the showAs property.
      */
     public void setShowAs(@jakarta.annotation.Nullable final FreeBusyStatus value) {
@@ -778,7 +778,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("transactionId", value);
     }
     /**
-     * Sets the type property value. The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only
+     * Sets the type property value. The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final EventType value) {

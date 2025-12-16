@@ -47,7 +47,7 @@ public class BaseMapFeature extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. Concatenated key-value pair of all properties of a GeoJSON file for this baseMapFeature.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class BaseMapFeature extends Entity implements Parsable {
         writer.writeStringValue("properties", this.getProperties());
     }
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. Concatenated key-value pair of all properties of a GeoJSON file for this baseMapFeature.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final String value) {

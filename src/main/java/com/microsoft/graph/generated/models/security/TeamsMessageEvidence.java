@@ -44,7 +44,7 @@ public class TeamsMessageEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("channelId");
     }
     /**
-     * Gets the deliveryAction property value. The delivery action of this Teams message. Possible values are: unknown, deliveredAsSpam, delivered, blocked, replaced, unknownFutureValue.
+     * Gets the deliveryAction property value. The delivery action of this Teams message. The possible values are: unknown, deliveredAsSpam, delivered, blocked, replaced, unknownFutureValue.
      * @return a {@link TeamsMessageDeliveryAction}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class TeamsMessageEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("deliveryAction");
     }
     /**
-     * Gets the deliveryLocation property value. The delivery location of this Teams message. Possible values are: unknown, teams, quarantine, failed, unknownFutureValue.
+     * Gets the deliveryLocation property value. The delivery location of this Teams message. The possible values are: unknown, teams, quarantine, failed, unknownFutureValue.
      * @return a {@link TeamsDeliveryLocation}
      */
     @jakarta.annotation.Nullable
@@ -299,14 +299,14 @@ public class TeamsMessageEvidence extends AlertEvidence implements Parsable {
         this.backingStore.set("channelId", value);
     }
     /**
-     * Sets the deliveryAction property value. The delivery action of this Teams message. Possible values are: unknown, deliveredAsSpam, delivered, blocked, replaced, unknownFutureValue.
+     * Sets the deliveryAction property value. The delivery action of this Teams message. The possible values are: unknown, deliveredAsSpam, delivered, blocked, replaced, unknownFutureValue.
      * @param value Value to set for the deliveryAction property.
      */
     public void setDeliveryAction(@jakarta.annotation.Nullable final TeamsMessageDeliveryAction value) {
         this.backingStore.set("deliveryAction", value);
     }
     /**
-     * Sets the deliveryLocation property value. The delivery location of this Teams message. Possible values are: unknown, teams, quarantine, failed, unknownFutureValue.
+     * Sets the deliveryLocation property value. The delivery location of this Teams message. The possible values are: unknown, teams, quarantine, failed, unknownFutureValue.
      * @param value Value to set for the deliveryLocation property.
      */
     public void setDeliveryLocation(@jakarta.annotation.Nullable final TeamsDeliveryLocation value) {

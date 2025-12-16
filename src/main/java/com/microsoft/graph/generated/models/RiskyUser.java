@@ -59,7 +59,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("history");
     }
     /**
-     * Gets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
+     * Gets the isDeleted property value. Indicates whether the user is deleted. The possible values are: true, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("riskLastUpdatedDateTime");
     }
     /**
-     * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Gets the riskLevel property value. Level of the detected risky user. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this.backingStore.get("riskLevel");
     }
     /**
-     * Gets the riskState property value. State of the user&apos;s risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Gets the riskState property value. State of the user&apos;s risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @return a {@link RiskState}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class RiskyUser extends Entity implements Parsable {
         this.backingStore.set("history", value);
     }
     /**
-     * Sets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
+     * Sets the isDeleted property value. Indicates whether the user is deleted. The possible values are: true, false.
      * @param value Value to set for the isDeleted property.
      */
     public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
@@ -175,14 +175,14 @@ public class RiskyUser extends Entity implements Parsable {
         this.backingStore.set("riskLastUpdatedDateTime", value);
     }
     /**
-     * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Sets the riskLevel property value. Level of the detected risky user. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @param value Value to set for the riskLevel property.
      */
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.backingStore.set("riskLevel", value);
     }
     /**
-     * Sets the riskState property value. State of the user&apos;s risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Sets the riskState property value. State of the user&apos;s risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {

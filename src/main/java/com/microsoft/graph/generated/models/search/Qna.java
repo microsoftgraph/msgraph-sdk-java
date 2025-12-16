@@ -93,7 +93,7 @@ public class Qna extends SearchAnswer implements Parsable {
         return this.backingStore.get("languageTags");
     }
     /**
-     * Gets the platforms property value. List of devices and operating systems that are able to view this QnA. Possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
+     * Gets the platforms property value. List of devices and operating systems that are able to view this QnA. The possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      * @return a {@link java.util.List<DevicePlatformType>}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class Qna extends SearchAnswer implements Parsable {
         this.backingStore.set("languageTags", value);
     }
     /**
-     * Sets the platforms property value. List of devices and operating systems that are able to view this QnA. Possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
+     * Sets the platforms property value. List of devices and operating systems that are able to view this QnA. The possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      * @param value Value to set for the platforms property.
      */
     public void setPlatforms(@jakarta.annotation.Nullable final java.util.List<DevicePlatformType> value) {

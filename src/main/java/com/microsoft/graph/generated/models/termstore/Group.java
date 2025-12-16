@@ -74,7 +74,7 @@ public class Group extends Entity implements Parsable {
         return this.backingStore.get("parentSiteId");
     }
     /**
-     * Gets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
+     * Gets the scope property value. Returns the type of the group. The possible values are: global, system, and siteCollection.
      * @return a {@link TermGroupScope}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class Group extends Entity implements Parsable {
         this.backingStore.set("parentSiteId", value);
     }
     /**
-     * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
+     * Sets the scope property value. Returns the type of the group. The possible values are: global, system, and siteCollection.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final TermGroupScope value) {

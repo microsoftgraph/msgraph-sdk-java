@@ -110,7 +110,7 @@ public class LandingPage extends Entity implements Parsable {
         return this.backingStore.get("locale");
     }
     /**
-     * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Gets the source property value. The source of the content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @return a {@link SimulationContentSource}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class LandingPage extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Gets the status property value. The status of the simulation. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return a {@link SimulationContentStatus}
      */
     @jakarta.annotation.Nullable
@@ -209,14 +209,14 @@ public class LandingPage extends Entity implements Parsable {
         this.backingStore.set("locale", value);
     }
     /**
-     * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Sets the source property value. The source of the content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Sets the status property value. The status of the simulation. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {

@@ -68,7 +68,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default is notManaged.
+     * Gets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. The possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default is notManaged.
      * @return a {@link MicrosoftManagedDesktopType}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default is notManaged.
+     * Sets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. The possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default is notManaged.
      * @param value Value to set for the managedType property.
      */
     public void setManagedType(@jakarta.annotation.Nullable final MicrosoftManagedDesktopType value) {

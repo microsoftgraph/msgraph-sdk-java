@@ -25,7 +25,7 @@ public class CalendarPermission extends Entity implements Parsable {
         return new CalendarPermission();
     }
     /**
-     * Gets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
+     * Gets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. The possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      * @return a {@link java.util.List<CalendarRoleType>}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class CalendarPermission extends Entity implements Parsable {
         writer.writeEnumValue("role", this.getRole());
     }
     /**
-     * Sets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
+     * Sets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. The possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      * @param value Value to set for the allowedRoles property.
      */
     public void setAllowedRoles(@jakarta.annotation.Nullable final java.util.List<CalendarRoleType> value) {

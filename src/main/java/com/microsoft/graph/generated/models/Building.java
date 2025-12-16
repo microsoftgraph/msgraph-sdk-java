@@ -37,7 +37,7 @@ public class Building extends Place implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the map property value. The map property
+     * Gets the map property value. Map file associated with a building in Places. This object is the IMDF-format representation of building.geojson.
      * @return a {@link BuildingMap}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class Building extends Place implements Parsable {
         return this.backingStore.get("map");
     }
     /**
-     * Gets the resourceLinks property value. The resourceLinks property
+     * Gets the resourceLinks property value. A set of links to external resources that are associated with the building. Inherited from place.
      * @return a {@link java.util.List<ResourceLink>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class Building extends Place implements Parsable {
         writer.writeCollectionOfObjectValues("resourceLinks", this.getResourceLinks());
     }
     /**
-     * Sets the map property value. The map property
+     * Sets the map property value. Map file associated with a building in Places. This object is the IMDF-format representation of building.geojson.
      * @param value Value to set for the map property.
      */
     public void setMap(@jakarta.annotation.Nullable final BuildingMap value) {
         this.backingStore.set("map", value);
     }
     /**
-     * Sets the resourceLinks property value. The resourceLinks property
+     * Sets the resourceLinks property value. A set of links to external resources that are associated with the building. Inherited from place.
      * @param value Value to set for the resourceLinks property.
      */
     public void setResourceLinks(@jakarta.annotation.Nullable final java.util.List<ResourceLink> value) {

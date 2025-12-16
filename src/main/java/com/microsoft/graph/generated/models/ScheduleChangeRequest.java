@@ -37,7 +37,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return new ScheduleChangeRequest();
     }
     /**
-     * Gets the assignedTo property value. Indicates who the request is assigned to. Possible values are: sender, recipient, manager, system, unknownFutureValue.
+     * Gets the assignedTo property value. Indicates who the request is assigned to. The possible values are: sender, recipient, manager, system, unknownFutureValue.
      * @return a {@link ScheduleChangeRequestActor}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         return this.backingStore.get("senderUserId");
     }
     /**
-     * Gets the state property value. The state of the scheduleChangeRequest. Possible values are: pending, approved, declined, unknownFutureValue.
+     * Gets the state property value. The state of the scheduleChangeRequest. The possible values are: pending, approved, declined, unknownFutureValue.
      * @return a {@link ScheduleChangeState}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         writer.writeEnumValue("state", this.getState());
     }
     /**
-     * Sets the assignedTo property value. Indicates who the request is assigned to. Possible values are: sender, recipient, manager, system, unknownFutureValue.
+     * Sets the assignedTo property value. Indicates who the request is assigned to. The possible values are: sender, recipient, manager, system, unknownFutureValue.
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final ScheduleChangeRequestActor value) {
@@ -179,7 +179,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         this.backingStore.set("senderUserId", value);
     }
     /**
-     * Sets the state property value. The state of the scheduleChangeRequest. Possible values are: pending, approved, declined, unknownFutureValue.
+     * Sets the state property value. The state of the scheduleChangeRequest. The possible values are: pending, approved, declined, unknownFutureValue.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ScheduleChangeState value) {

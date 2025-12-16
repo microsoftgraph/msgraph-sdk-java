@@ -76,7 +76,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
         return deserializerMap;
     }
     /**
-     * Gets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
+     * Gets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. The possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
      * @return a {@link RegistryHive}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("oldValueName");
     }
     /**
-     * Gets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
+     * Gets the operation property value. Operation that changed the registry key name and/or value. The possible values are: unknown, create, modify, delete.
      * @return a {@link RegistryOperation}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("valueName");
     }
     /**
-     * Gets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
+     * Gets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ The possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
      * @return a {@link RegistryValueType}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
+     * Sets the hive property value. A Windows registry hive : HKEYCURRENTCONFIG HKEYCURRENTUSER HKEYLOCALMACHINE/SAM HKEYLOCALMACHINE/Security HKEYLOCALMACHINE/Software HKEYLOCALMACHINE/System HKEY_USERS/.Default. The possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
      * @param value Value to set for the hive property.
      */
     public void setHive(@jakarta.annotation.Nullable final RegistryHive value) {
@@ -240,7 +240,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("oldValueName", value);
     }
     /**
-     * Sets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
+     * Sets the operation property value. Operation that changed the registry key name and/or value. The possible values are: unknown, create, modify, delete.
      * @param value Value to set for the operation property.
      */
     public void setOperation(@jakarta.annotation.Nullable final RegistryOperation value) {
@@ -268,7 +268,7 @@ public class RegistryKeyState implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("valueName", value);
     }
     /**
-     * Sets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
+     * Sets the valueType property value. Registry key value type REGBINARY REGDWORD REGDWORDLITTLEENDIAN REGDWORDBIGENDIANREGEXPANDSZ REGLINK REGMULTISZ REGNONE REGQWORD REGQWORDLITTLEENDIAN REG_SZ The possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
      * @param value Value to set for the valueType property.
      */
     public void setValueType(@jakarta.annotation.Nullable final RegistryValueType value) {

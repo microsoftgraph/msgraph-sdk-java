@@ -36,7 +36,7 @@ public class Floor extends Place implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sortOrder property value. The sortOrder property
+     * Gets the sortOrder property value. Specifies the sort order of the floor. For example, a floor might be named &apos;Lobby&apos; with a sort order of 0 to show this floor first in ordered lists.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class Floor extends Place implements Parsable {
         writer.writeIntegerValue("sortOrder", this.getSortOrder());
     }
     /**
-     * Sets the sortOrder property value. The sortOrder property
+     * Sets the sortOrder property value. Specifies the sort order of the floor. For example, a floor might be named &apos;Lobby&apos; with a sort order of 0 to show this floor first in ordered lists.
      * @param value Value to set for the sortOrder property.
      */
     public void setSortOrder(@jakarta.annotation.Nullable final Integer value) {

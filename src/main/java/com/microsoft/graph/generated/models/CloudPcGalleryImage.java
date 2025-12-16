@@ -108,7 +108,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("startDate");
     }
     /**
-     * Gets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
+     * Gets the status property value. The status of the gallery image on the Cloud PC. The possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
      * @return a {@link CloudPcGalleryImageStatus}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         this.backingStore.set("startDate", value);
     }
     /**
-     * Sets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
+     * Sets the status property value. The status of the gallery image on the Cloud PC. The possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CloudPcGalleryImageStatus value) {

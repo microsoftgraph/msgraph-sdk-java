@@ -44,7 +44,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         return this.backingStore.get("category");
     }
     /**
-     * Gets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
+     * Gets the contentType property value. The content type of threat assessment. The possible values are: mail, url, file.
      * @return a {@link ThreatAssessmentContentType}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
+     * Gets the requestSource property value. The source of the threat assessment request. The possible values are: administrator.
      * @return a {@link ThreatAssessmentRequestSource}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         return this.backingStore.get("results");
     }
     /**
-     * Gets the status property value. The assessment process status. Possible values are: pending, completed.
+     * Gets the status property value. The assessment process status. The possible values are: pending, completed.
      * @return a {@link ThreatAssessmentStatus}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
+     * Sets the contentType property value. The content type of threat assessment. The possible values are: mail, url, file.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final ThreatAssessmentContentType value) {
@@ -168,7 +168,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         this.backingStore.set("expectedAssessment", value);
     }
     /**
-     * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
+     * Sets the requestSource property value. The source of the threat assessment request. The possible values are: administrator.
      * @param value Value to set for the requestSource property.
      */
     public void setRequestSource(@jakarta.annotation.Nullable final ThreatAssessmentRequestSource value) {
@@ -182,7 +182,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         this.backingStore.set("results", value);
     }
     /**
-     * Sets the status property value. The assessment process status. Possible values are: pending, completed.
+     * Sets the status property value. The assessment process status. The possible values are: pending, completed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ThreatAssessmentStatus value) {

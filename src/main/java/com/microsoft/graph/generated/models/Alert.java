@@ -138,7 +138,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("eventDateTime");
     }
     /**
-     * Gets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
+     * Gets the feedback property value. Analyst feedback on the alert. The possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
      * @return a {@link AlertFeedback}
      */
     @jakarta.annotation.Nullable
@@ -531,7 +531,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("eventDateTime", value);
     }
     /**
-     * Sets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
+     * Sets the feedback property value. Analyst feedback on the alert. The possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final AlertFeedback value) {

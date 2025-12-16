@@ -25,7 +25,7 @@ public class SendDtmfTonesOperation extends CommsOperation implements Parsable {
         return new SendDtmfTonesOperation();
     }
     /**
-     * Gets the completionReason property value. The results of the action. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
+     * Gets the completionReason property value. The results of the action. The possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
      * @return a {@link SendDtmfCompletionReason}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class SendDtmfTonesOperation extends CommsOperation implements Parsable {
         writer.writeEnumValue("completionReason", this.getCompletionReason());
     }
     /**
-     * Sets the completionReason property value. The results of the action. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
+     * Sets the completionReason property value. The results of the action. The possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
      * @param value Value to set for the completionReason property.
      */
     public void setCompletionReason(@jakarta.annotation.Nullable final SendDtmfCompletionReason value) {

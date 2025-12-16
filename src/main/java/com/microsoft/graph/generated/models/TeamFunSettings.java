@@ -94,7 +94,7 @@ public class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
+     * Gets the giphyContentRating property value. Giphy content rating. The possible values are: moderate, strict.
      * @return a {@link GiphyRatingType}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
+     * Sets the giphyContentRating property value. Giphy content rating. The possible values are: moderate, strict.
      * @param value Value to set for the giphyContentRating property.
      */
     public void setGiphyContentRating(@jakarta.annotation.Nullable final GiphyRatingType value) {

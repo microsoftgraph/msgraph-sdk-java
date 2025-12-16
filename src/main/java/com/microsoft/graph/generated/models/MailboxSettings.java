@@ -80,7 +80,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("dateFormat");
     }
     /**
-     * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+     * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. The possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      * @return a {@link DelegateMeetingMessageDeliveryOptions}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("timeZone");
     }
     /**
-     * Gets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
+     * Gets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. The possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
      * @return a {@link UserPurpose}
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("dateFormat", value);
     }
     /**
-     * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+     * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. The possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      * @param value Value to set for the delegateMeetingMessageDeliveryOptions property.
      */
     public void setDelegateMeetingMessageDeliveryOptions(@jakarta.annotation.Nullable final DelegateMeetingMessageDeliveryOptions value) {
@@ -244,7 +244,7 @@ public class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("timeZone", value);
     }
     /**
-     * Sets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
+     * Sets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. The possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
      * @param value Value to set for the userPurpose property.
      */
     public void setUserPurpose(@jakarta.annotation.Nullable final UserPurpose value) {

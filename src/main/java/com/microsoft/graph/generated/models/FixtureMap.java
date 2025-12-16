@@ -36,7 +36,7 @@ public class FixtureMap extends BaseMapFeature implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the placeId property value. The placeId property
+     * Gets the placeId property value. Identifier for the floor to which this fixtureMap belongs.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class FixtureMap extends BaseMapFeature implements Parsable {
         writer.writeStringValue("placeId", this.getPlaceId());
     }
     /**
-     * Sets the placeId property value. The placeId property
+     * Sets the placeId property value. Identifier for the floor to which this fixtureMap belongs.
      * @param value Value to set for the placeId property.
      */
     public void setPlaceId(@jakarta.annotation.Nullable final String value) {

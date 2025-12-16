@@ -77,7 +77,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
+     * Gets the notificationPreference property value. Notification preference. The possible values are: unknown, microsoft, custom, unknownFutureValue.
      * @return a {@link EndUserNotificationPreference}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
         return this.backingStore.get("positiveReinforcement");
     }
     /**
-     * Gets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
+     * Gets the settingType property value. End user notification type. The possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      * @return a {@link EndUserNotificationSettingType}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
+     * Sets the notificationPreference property value. Notification preference. The possible values are: unknown, microsoft, custom, unknownFutureValue.
      * @param value Value to set for the notificationPreference property.
      */
     public void setNotificationPreference(@jakarta.annotation.Nullable final EndUserNotificationPreference value) {
@@ -157,7 +157,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, BackedM
         this.backingStore.set("positiveReinforcement", value);
     }
     /**
-     * Sets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
+     * Sets the settingType property value. End user notification type. The possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      * @param value Value to set for the settingType property.
      */
     public void setSettingType(@jakarta.annotation.Nullable final EndUserNotificationSettingType value) {

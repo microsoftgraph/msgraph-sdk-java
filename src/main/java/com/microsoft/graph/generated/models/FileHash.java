@@ -68,7 +68,7 @@ public class FileHash implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
+     * Gets the hashType property value. File hash type. The possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
      * @return a {@link FileHashType}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class FileHash implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
+     * Sets the hashType property value. File hash type. The possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
      * @param value Value to set for the hashType property.
      */
     public void setHashType(@jakarta.annotation.Nullable final FileHashType value) {

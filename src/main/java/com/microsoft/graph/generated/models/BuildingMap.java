@@ -38,7 +38,7 @@ public class BuildingMap extends BaseMapFeature implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the footprints property value. The footprints property
+     * Gets the footprints property value. Represents the approximate physical extent of a referenced building. It corresponds to footprint.geojson in IMDF format.
      * @return a {@link java.util.List<FootprintMap>}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class BuildingMap extends BaseMapFeature implements Parsable {
         return this.backingStore.get("footprints");
     }
     /**
-     * Gets the levels property value. The levels property
+     * Gets the levels property value. Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @return a {@link java.util.List<LevelMap>}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class BuildingMap extends BaseMapFeature implements Parsable {
         return this.backingStore.get("levels");
     }
     /**
-     * Gets the placeId property value. The placeId property
+     * Gets the placeId property value. Identifier for the building to which this buildingMap belongs.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class BuildingMap extends BaseMapFeature implements Parsable {
         writer.writeStringValue("placeId", this.getPlaceId());
     }
     /**
-     * Sets the footprints property value. The footprints property
+     * Sets the footprints property value. Represents the approximate physical extent of a referenced building. It corresponds to footprint.geojson in IMDF format.
      * @param value Value to set for the footprints property.
      */
     public void setFootprints(@jakarta.annotation.Nullable final java.util.List<FootprintMap> value) {
         this.backingStore.set("footprints", value);
     }
     /**
-     * Sets the levels property value. The levels property
+     * Sets the levels property value. Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @param value Value to set for the levels property.
      */
     public void setLevels(@jakarta.annotation.Nullable final java.util.List<LevelMap> value) {
         this.backingStore.set("levels", value);
     }
     /**
-     * Sets the placeId property value. The placeId property
+     * Sets the placeId property value. Identifier for the building to which this buildingMap belongs.
      * @param value Value to set for the placeId property.
      */
     public void setPlaceId(@jakarta.annotation.Nullable final String value) {

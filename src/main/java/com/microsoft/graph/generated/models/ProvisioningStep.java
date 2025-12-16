@@ -103,7 +103,7 @@ public class ProvisioningStep implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
+     * Gets the provisioningStepType property value. Type of step. The possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
      * @return a {@link ProvisioningStepType}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class ProvisioningStep implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("provisioningStepType");
     }
     /**
-     * Gets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
+     * Gets the status property value. Status of the step. The possible values are: success, warning,  failure, skipped, unknownFutureValue.
      * @return a {@link ProvisioningResult}
      */
     @jakarta.annotation.Nullable
@@ -176,14 +176,14 @@ public class ProvisioningStep implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
+     * Sets the provisioningStepType property value. Type of step. The possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
      * @param value Value to set for the provisioningStepType property.
      */
     public void setProvisioningStepType(@jakarta.annotation.Nullable final ProvisioningStepType value) {
         this.backingStore.set("provisioningStepType", value);
     }
     /**
-     * Sets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
+     * Sets the status property value. Status of the step. The possible values are: success, warning,  failure, skipped, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ProvisioningResult value) {

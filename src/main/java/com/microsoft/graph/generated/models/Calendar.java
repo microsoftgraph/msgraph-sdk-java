@@ -25,7 +25,7 @@ public class Calendar extends Entity implements Parsable {
         return new Calendar();
     }
     /**
-     * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. The possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @return a {@link java.util.List<OnlineMeetingProviderType>}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class Calendar extends Entity implements Parsable {
         return this.backingStore.get("color");
     }
     /**
-     * Gets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Gets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. The possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @return a {@link OnlineMeetingProviderType}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class Calendar extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
     }
     /**
-     * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. The possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @param value Value to set for the allowedOnlineMeetingProviders property.
      */
     public void setAllowedOnlineMeetingProviders(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingProviderType> value) {
@@ -278,7 +278,7 @@ public class Calendar extends Entity implements Parsable {
         this.backingStore.set("color", value);
     }
     /**
-     * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. The possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @param value Value to set for the defaultOnlineMeetingProvider property.
      */
     public void setDefaultOnlineMeetingProvider(@jakarta.annotation.Nullable final OnlineMeetingProviderType value) {

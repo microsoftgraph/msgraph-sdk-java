@@ -229,7 +229,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return deserializerMap;
     }
     /**
-     * Gets the installationSchedule property value. The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
+     * Gets the installationSchedule property value. The Installation Schedule. The possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
      * @return a {@link WindowsUpdateInstallScheduleType}
      */
     @jakarta.annotation.Nullable
@@ -341,7 +341,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this.backingStore.get("updateNotificationLevel");
     }
     /**
-     * Gets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
+     * Gets the updateWeeks property value. Schedule the update installation on the weeks of the month. The possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. The possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
      * @return a {@link EnumSet<WindowsUpdateForBusinessUpdateWeeks>}
      */
     @jakarta.annotation.Nullable
@@ -540,7 +540,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this.backingStore.set("featureUpdatesWillBeRolledBack", value);
     }
     /**
-     * Sets the installationSchedule property value. The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
+     * Sets the installationSchedule property value. The Installation Schedule. The possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
      * @param value Value to set for the installationSchedule property.
      */
     public void setInstallationSchedule(@jakarta.annotation.Nullable final WindowsUpdateInstallScheduleType value) {
@@ -638,7 +638,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this.backingStore.set("updateNotificationLevel", value);
     }
     /**
-     * Sets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
+     * Sets the updateWeeks property value. Schedule the update installation on the weeks of the month. The possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. The possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
      * @param value Value to set for the updateWeeks property.
      */
     public void setUpdateWeeks(@jakarta.annotation.Nullable final EnumSet<WindowsUpdateForBusinessUpdateWeeks> value) {

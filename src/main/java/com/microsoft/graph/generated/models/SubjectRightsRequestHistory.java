@@ -96,7 +96,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: approval.
+     * Gets the stage property value. The stage when the entity was changed.
      * @return a {@link SubjectRightsRequestStage}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Backed
         return this.backingStore.get("stage");
     }
     /**
-     * Gets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     * Gets the stageStatus property value. The status of the stage when the entity was changed. The possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @return a {@link SubjectRightsRequestStageStatus}
      */
     @jakarta.annotation.Nullable
@@ -170,14 +170,14 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: approval.
+     * Sets the stage property value. The stage when the entity was changed.
      * @param value Value to set for the stage property.
      */
     public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {
         this.backingStore.set("stage", value);
     }
     /**
-     * Sets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     * Sets the stageStatus property value. The status of the stage when the entity was changed. The possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @param value Value to set for the stageStatus property.
      */
     public void setStageStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStageStatus value) {

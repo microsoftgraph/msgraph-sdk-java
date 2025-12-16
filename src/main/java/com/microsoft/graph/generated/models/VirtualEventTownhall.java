@@ -26,7 +26,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         return new VirtualEventTownhall();
     }
     /**
-     * Gets the audience property value. The audience to whom the town hall is visible. Possible values are: everyone, organization, and unknownFutureValue.
+     * Gets the audience property value. The audience to whom the town hall is visible. The possible values are: everyone, organization, and unknownFutureValue.
      * @return a {@link MeetingAudience}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         writer.writeBooleanValue("isInviteOnly", this.getIsInviteOnly());
     }
     /**
-     * Sets the audience property value. The audience to whom the town hall is visible. Possible values are: everyone, organization, and unknownFutureValue.
+     * Sets the audience property value. The audience to whom the town hall is visible. The possible values are: everyone, organization, and unknownFutureValue.
      * @param value Value to set for the audience property.
      */
     public void setAudience(@jakarta.annotation.Nullable final MeetingAudience value) {

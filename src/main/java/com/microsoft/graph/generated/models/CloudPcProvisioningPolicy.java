@@ -171,7 +171,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("microsoftManagedDesktop");
     }
     /**
-     * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn&apos;t specified when you create the cloudPcProvisioningPolicy. You can&apos;t change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue.
+     * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn&apos;t specified when you create the cloudPcProvisioningPolicy. You can&apos;t change this property after the cloudPcProvisioningPolicy was created. The possible values are: dedicated, shared, unknownFutureValue.
      * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
@@ -317,7 +317,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("microsoftManagedDesktop", value);
     }
     /**
-     * Sets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn&apos;t specified when you create the cloudPcProvisioningPolicy. You can&apos;t change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue.
+     * Sets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn&apos;t specified when you create the cloudPcProvisioningPolicy. You can&apos;t change this property after the cloudPcProvisioningPolicy was created. The possible values are: dedicated, shared, unknownFutureValue.
      * @param value Value to set for the provisioningType property.
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {

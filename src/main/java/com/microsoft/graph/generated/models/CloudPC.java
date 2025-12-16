@@ -129,7 +129,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisioningPolicyName");
     }
     /**
-     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. The default value is dedicated.
+     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. The possible values are: dedicated, shared, unknownFutureValue. The default value is dedicated.
      * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
@@ -253,7 +253,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisioningPolicyName", value);
     }
     /**
-     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. The default value is dedicated.
+     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. The possible values are: dedicated, shared, unknownFutureValue. The default value is dedicated.
      * @param value Value to set for the provisioningType property.
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {

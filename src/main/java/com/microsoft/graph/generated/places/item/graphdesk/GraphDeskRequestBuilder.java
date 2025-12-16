@@ -46,19 +46,21 @@ public class GraphDeskRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.desk{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.desk
+     * Get a collection of the specified type of place objects defined in a tenant. You can do the following for a given tenant:- List all buildings.- List all floors.- List all sections.- List all desks.- List all rooms.- List all workspaces.- List all room lists.- List rooms in a specific room list.- List workspaces in a specific room list.
      * @return a {@link Desk}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Desk get() {
         return get(null);
     }
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.desk
+     * Get a collection of the specified type of place objects defined in a tenant. You can do the following for a given tenant:- List all buildings.- List all floors.- List all sections.- List all desks.- List all rooms.- List all workspaces.- List all room lists.- List rooms in a specific room list.- List workspaces in a specific room list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Desk}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Desk get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -68,7 +70,7 @@ public class GraphDeskRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Desk::createFromDiscriminatorValue);
     }
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.desk
+     * Get a collection of the specified type of place objects defined in a tenant. You can do the following for a given tenant:- List all buildings.- List all floors.- List all sections.- List all desks.- List all rooms.- List all workspaces.- List all room lists.- List rooms in a specific room list.- List workspaces in a specific room list.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +78,7 @@ public class GraphDeskRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.desk
+     * Get a collection of the specified type of place objects defined in a tenant. You can do the following for a given tenant:- List all buildings.- List all floors.- List all sections.- List all desks.- List all rooms.- List all workspaces.- List all room lists.- List rooms in a specific room list.- List workspaces in a specific room list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +100,7 @@ public class GraphDeskRequestBuilder extends BaseRequestBuilder {
         return new GraphDeskRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.desk
+     * Get a collection of the specified type of place objects defined in a tenant. You can do the following for a given tenant:- List all buildings.- List all floors.- List all sections.- List all desks.- List all rooms.- List all workspaces.- List all room lists.- List rooms in a specific room list.- List workspaces in a specific room list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

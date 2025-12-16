@@ -90,7 +90,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this.backingStore.get("dataSubject");
     }
     /**
-     * Gets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
+     * Gets the dataSubjectType property value. The type of the data subject. The possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      * @return a {@link DataSubjectType}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this.backingStore.get("stages");
     }
     /**
-     * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
+     * Gets the status property value. The status of the request. The possible values are: active, closed, unknownFutureValue.
      * @return a {@link SubjectRightsRequestStatus}
      */
     @jakarta.annotation.Nullable
@@ -279,7 +279,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this.backingStore.get("team");
     }
     /**
-     * Gets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
+     * Gets the type property value. The type of the request. The possible values are: export, delete, access, tagForAction, unknownFutureValue.
      * @return a {@link SubjectRightsRequestType}
      */
     @jakarta.annotation.Nullable
@@ -379,7 +379,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this.backingStore.set("dataSubject", value);
     }
     /**
-     * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
+     * Sets the dataSubjectType property value. The type of the data subject. The possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      * @param value Value to set for the dataSubjectType property.
      */
     public void setDataSubjectType(@jakarta.annotation.Nullable final DataSubjectType value) {
@@ -498,7 +498,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this.backingStore.set("stages", value);
     }
     /**
-     * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
+     * Sets the status property value. The status of the request. The possible values are: active, closed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStatus value) {
@@ -512,7 +512,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this.backingStore.set("team", value);
     }
     /**
-     * Sets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
+     * Sets the type property value. The type of the request. The possible values are: export, delete, access, tagForAction, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final SubjectRightsRequestType value) {
