@@ -64,7 +64,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         return deserializerMap;
     }
     /**
-     * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
+     * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. The possible values are: normal, weak, unknown.
      * @return a {@link AuthenticationMethodKeyStrength}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
+     * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. The possible values are: normal, weak, unknown.
      * @param value Value to set for the keyStrength property.
      */
     public void setKeyStrength(@jakarta.annotation.Nullable final AuthenticationMethodKeyStrength value) {

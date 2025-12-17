@@ -66,7 +66,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         return this.backingStore.get("scope");
     }
     /**
-     * Gets the type property value. The type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Gets the type property value. The type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         this.backingStore.set("scope", value);
     }
     /**
-     * Sets the type property value. The type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Sets the type property value. The type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

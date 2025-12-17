@@ -75,7 +75,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
         return this.backingStore.get("font");
     }
     /**
-     * Gets the horizontalAlignment property value. The horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Gets the horizontalAlignment property value. The horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
         return this.backingStore.get("rowHeight");
     }
     /**
-     * Gets the verticalAlignment property value. The vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Gets the verticalAlignment property value. The vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
         this.backingStore.set("font", value);
     }
     /**
-     * Sets the horizontalAlignment property value. The horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Sets the horizontalAlignment property value. The horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @param value Value to set for the horizontalAlignment property.
      */
     public void setHorizontalAlignment(@jakarta.annotation.Nullable final String value) {
@@ -181,7 +181,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
         this.backingStore.set("rowHeight", value);
     }
     /**
-     * Sets the verticalAlignment property value. The vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Sets the verticalAlignment property value. The vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      * @param value Value to set for the verticalAlignment property.
      */
     public void setVerticalAlignment(@jakarta.annotation.Nullable final String value) {

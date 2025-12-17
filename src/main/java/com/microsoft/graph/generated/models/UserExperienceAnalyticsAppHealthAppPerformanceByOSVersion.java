@@ -44,7 +44,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
         return this.backingStore.get("appCrashCount");
     }
     /**
-     * Gets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
+     * Gets the appDisplayName property value. The friendly name of the application. The possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
         return this.backingStore.get("appDisplayName");
     }
     /**
-     * Gets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
+     * Gets the appName property value. The name of the application. The possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,14 +149,14 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
         this.backingStore.set("appCrashCount", value);
     }
     /**
-     * Sets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
+     * Sets the appDisplayName property value. The friendly name of the application. The possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appDisplayName", value);
     }
     /**
-     * Sets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
+     * Sets the appName property value. The name of the application. The possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {

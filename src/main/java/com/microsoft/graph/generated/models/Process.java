@@ -111,7 +111,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("fileHash");
     }
     /**
-     * Gets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
+     * Gets the integrityLevel property value. The integrity level of the process. The possible values are: unknown, untrusted, low, medium, high, system.
      * @return a {@link ProcessIntegrityLevel}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class Process implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("fileHash", value);
     }
     /**
-     * Sets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
+     * Sets the integrityLevel property value. The integrity level of the process. The possible values are: unknown, untrusted, low, medium, high, system.
      * @param value Value to set for the integrityLevel property.
      */
     public void setIntegrityLevel(@jakarta.annotation.Nullable final ProcessIntegrityLevel value) {

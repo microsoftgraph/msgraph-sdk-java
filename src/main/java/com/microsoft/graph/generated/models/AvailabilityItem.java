@@ -102,7 +102,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
+     * Gets the status property value. The status of the staff member. The possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
      * @return a {@link BookingsAvailabilityStatus}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class AvailabilityItem implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
+     * Sets the status property value. The status of the staff member. The possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final BookingsAvailabilityStatus value) {

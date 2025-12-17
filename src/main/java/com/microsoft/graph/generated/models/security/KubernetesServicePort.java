@@ -112,7 +112,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("port");
     }
     /**
-     * Gets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
+     * Gets the protocol property value. The protocol name. The possible values are: udp, tcp, sctp, unknownFutureValue.
      * @return a {@link ContainerPortProtocol}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("port", value);
     }
     /**
-     * Sets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
+     * Sets the protocol property value. The protocol name. The possible values are: udp, tcp, sctp, unknownFutureValue.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final ContainerPortProtocol value) {

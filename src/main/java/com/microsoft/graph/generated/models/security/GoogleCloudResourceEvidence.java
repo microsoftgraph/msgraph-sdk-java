@@ -58,7 +58,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
         return this.backingStore.get("location");
     }
     /**
-     * Gets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
+     * Gets the locationType property value. The type of location. The possible values are: unknown, regional, zonal, global, unknownFutureValue.
      * @return a {@link GoogleCloudLocationType}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
         this.backingStore.set("location", value);
     }
     /**
-     * Sets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
+     * Sets the locationType property value. The type of location. The possible values are: unknown, regional, zonal, global, unknownFutureValue.
      * @param value Value to set for the locationType property.
      */
     public void setLocationType(@jakarta.annotation.Nullable final GoogleCloudLocationType value) {

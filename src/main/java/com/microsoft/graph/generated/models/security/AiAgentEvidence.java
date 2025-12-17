@@ -55,7 +55,7 @@ public class AiAgentEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hostingPlatformType property value. Type of the platform the agent runs on. Possible values are: unknown, azureAIFoundry, copilotStudio, copilot, unknownFutureValue.
+     * Gets the hostingPlatformType property value. Type of the platform the agent runs on. The possible values are: unknown, azureAIFoundry, copilotStudio, copilot, unknownFutureValue.
      * @return a {@link AiAgentPlatform}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class AiAgentEvidence extends AlertEvidence implements Parsable {
         this.backingStore.set("agentName", value);
     }
     /**
-     * Sets the hostingPlatformType property value. Type of the platform the agent runs on. Possible values are: unknown, azureAIFoundry, copilotStudio, copilot, unknownFutureValue.
+     * Sets the hostingPlatformType property value. Type of the platform the agent runs on. The possible values are: unknown, azureAIFoundry, copilotStudio, copilot, unknownFutureValue.
      * @param value Value to set for the hostingPlatformType property.
      */
     public void setHostingPlatformType(@jakarta.annotation.Nullable final AiAgentPlatform value) {

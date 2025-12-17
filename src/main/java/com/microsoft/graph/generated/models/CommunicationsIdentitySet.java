@@ -58,7 +58,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         return this.backingStore.get("encrypted");
     }
     /**
-     * Gets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
+     * Gets the endpointType property value. Type of endpoint that the participant uses. The possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
      * @return a {@link EndpointType}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
         this.backingStore.set("encrypted", value);
     }
     /**
-     * Sets the endpointType property value. Type of endpoint that the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
+     * Sets the endpointType property value. Type of endpoint that the participant uses. The possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone, unknownFutureValue.
      * @param value Value to set for the endpointType property.
      */
     public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {

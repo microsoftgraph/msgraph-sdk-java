@@ -64,7 +64,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("countryCode");
     }
     /**
-     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     * Gets the endpointType property value. The type of endpoint the participant is using. The possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      * @return a {@link EndpointType}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class ParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("countryCode", value);
     }
     /**
-     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     * Sets the endpointType property value. The type of endpoint the participant is using. The possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      * @param value Value to set for the endpointType property.
      */
     public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {

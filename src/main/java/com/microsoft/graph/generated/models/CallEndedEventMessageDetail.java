@@ -35,7 +35,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
         return this.backingStore.get("callDuration");
     }
     /**
-     * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+     * Gets the callEventType property value. Represents the call event type. The possible values are: call, meeting, screenShare, unknownFutureValue.
      * @return a {@link TeamworkCallEventType}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
         this.backingStore.set("callDuration", value);
     }
     /**
-     * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+     * Sets the callEventType property value. Represents the call event type. The possible values are: call, meeting, screenShare, unknownFutureValue.
      * @param value Value to set for the callEventType property.
      */
     public void setCallEventType(@jakarta.annotation.Nullable final TeamworkCallEventType value) {

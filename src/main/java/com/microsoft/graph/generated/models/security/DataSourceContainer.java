@@ -90,7 +90,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         return this.backingStore.get("releasedDateTime");
     }
     /**
-     * Gets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
+     * Gets the status property value. Latest status of the dataSourceContainer. The possible values are: Active, Released.
      * @return a {@link DataSourceContainerStatus}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         this.backingStore.set("releasedDateTime", value);
     }
     /**
-     * Sets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
+     * Sets the status property value. Latest status of the dataSourceContainer. The possible values are: Active, Released.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DataSourceContainerStatus value) {

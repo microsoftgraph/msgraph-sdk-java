@@ -26,7 +26,7 @@ public class Desk extends Place implements Parsable {
         return new Desk();
     }
     /**
-     * Gets the displayDeviceName property value. The displayDeviceName property
+     * Gets the displayDeviceName property value. The name of the display device (for example, monitor or projector) that is available at the desk.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class Desk extends Place implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mailboxDetails property value. The mailboxDetails property
+     * Gets the mailboxDetails property value. The mailbox object id and email address that are associated with the desk.
      * @return a {@link MailboxDetails}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class Desk extends Place implements Parsable {
         return this.backingStore.get("mailboxDetails");
     }
     /**
-     * Gets the mode property value. The mode property
+     * Gets the mode property value. The mode of the desk. The supported modes are:assignedPlaceMode - Desks that are assigned to a user.reservablePlaceMode - Desks that can be booked in advance using desk reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks, the desk is booked for you, assuming the peripheral is associated with the desk in the Microsoft Teams Rooms Pro management portal.
      * @return a {@link PlaceMode}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class Desk extends Place implements Parsable {
         writer.writeObjectValue("mode", this.getMode());
     }
     /**
-     * Sets the displayDeviceName property value. The displayDeviceName property
+     * Sets the displayDeviceName property value. The name of the display device (for example, monitor or projector) that is available at the desk.
      * @param value Value to set for the displayDeviceName property.
      */
     public void setDisplayDeviceName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayDeviceName", value);
     }
     /**
-     * Sets the mailboxDetails property value. The mailboxDetails property
+     * Sets the mailboxDetails property value. The mailbox object id and email address that are associated with the desk.
      * @param value Value to set for the mailboxDetails property.
      */
     public void setMailboxDetails(@jakarta.annotation.Nullable final MailboxDetails value) {
         this.backingStore.set("mailboxDetails", value);
     }
     /**
-     * Sets the mode property value. The mode property
+     * Sets the mode property value. The mode of the desk. The supported modes are:assignedPlaceMode - Desks that are assigned to a user.reservablePlaceMode - Desks that can be booked in advance using desk reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks, the desk is booked for you, assuming the peripheral is associated with the desk in the Microsoft Teams Rooms Pro management portal.
      * @param value Value to set for the mode property.
      */
     public void setMode(@jakarta.annotation.Nullable final PlaceMode value) {

@@ -55,7 +55,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
         return this.backingStore.get("trainingAssignmentMappings");
     }
     /**
-     * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
+     * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      * @return a {@link TrainingCompletionDuration}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
         this.backingStore.set("trainingAssignmentMappings", value);
     }
     /**
-     * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
+     * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      * @param value Value to set for the trainingCompletionDuration property.
      */
     public void setTrainingCompletionDuration(@jakarta.annotation.Nullable final TrainingCompletionDuration value) {

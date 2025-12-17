@@ -98,7 +98,7 @@ public class LearningCourseActivity extends Entity implements Parsable {
         return this.backingStore.get("learningProviderId");
     }
     /**
-     * Gets the status property value. The status of the course activity. Possible values are: notStarted, inProgress, completed. Required.
+     * Gets the status property value. The status of the course activity. The possible values are: notStarted, inProgress, completed. Required.
      * @return a {@link CourseStatus}
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class LearningCourseActivity extends Entity implements Parsable {
         this.backingStore.set("learningProviderId", value);
     }
     /**
-     * Sets the status property value. The status of the course activity. Possible values are: notStarted, inProgress, completed. Required.
+     * Sets the status property value. The status of the course activity. The possible values are: notStarted, inProgress, completed. Required.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CourseStatus value) {

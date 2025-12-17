@@ -93,7 +93,7 @@ public class AlterationResponse implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("queryAlteration");
     }
     /**
-     * Gets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
+     * Gets the queryAlterationType property value. Defines the type of the spelling correction. The possible values are: suggestion, modification.
      * @return a {@link SearchAlterationType}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class AlterationResponse implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("queryAlteration", value);
     }
     /**
-     * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
+     * Sets the queryAlterationType property value. Defines the type of the spelling correction. The possible values are: suggestion, modification.
      * @param value Value to set for the queryAlterationType property.
      */
     public void setQueryAlterationType(@jakarta.annotation.Nullable final SearchAlterationType value) {

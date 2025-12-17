@@ -68,7 +68,7 @@ public class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the key property value. Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
+     * Gets the key property value. The possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
      * @return a {@link ObjectMappingMetadata}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the key property value. Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
+     * Sets the key property value. The possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final ObjectMappingMetadata value) {

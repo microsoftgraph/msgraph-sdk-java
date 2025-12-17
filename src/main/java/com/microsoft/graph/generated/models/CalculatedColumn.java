@@ -69,7 +69,7 @@ public class CalculatedColumn implements AdditionalDataHolder, BackedModel, Pars
         return deserializerMap;
     }
     /**
-     * Gets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
+     * Gets the format property value. For dateTime output types, the format of the value. The possible values are: dateOnly or dateTime.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CalculatedColumn implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
+     * Gets the outputType property value. The output type used to format values in this column. The possible values are: boolean, currency, dateTime, number, or text.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class CalculatedColumn implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
+     * Sets the format property value. For dateTime output types, the format of the value. The possible values are: dateOnly or dateTime.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class CalculatedColumn implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
+     * Sets the outputType property value. The output type used to format values in this column. The possible values are: boolean, currency, dateTime, number, or text.
      * @param value Value to set for the outputType property.
      */
     public void setOutputType(@jakarta.annotation.Nullable final String value) {

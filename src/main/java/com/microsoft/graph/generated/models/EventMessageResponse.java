@@ -45,7 +45,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
         return this.backingStore.get("proposedNewTime");
     }
     /**
-     * Gets the responseType property value. Specifies the type of response to a meeting request. Possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
+     * Gets the responseType property value. Specifies the type of response to a meeting request. The possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
      * @return a {@link ResponseType}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
         this.backingStore.set("proposedNewTime", value);
     }
     /**
-     * Sets the responseType property value. Specifies the type of response to a meeting request. Possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
+     * Sets the responseType property value. Specifies the type of response to a meeting request. The possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
      * @param value Value to set for the responseType property.
      */
     public void setResponseType(@jakarta.annotation.Nullable final ResponseType value) {

@@ -26,7 +26,7 @@ public class Payload extends Entity implements Parsable {
         return new Payload();
     }
     /**
-     * Gets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+     * Gets the brand property value. The branch of a payload. The possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      * @return a {@link PayloadBrand}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class Payload extends Entity implements Parsable {
         return this.backingStore.get("brand");
     }
     /**
-     * Gets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
+     * Gets the complexity property value. The complexity of a payload. The possible values are: unknown, low, medium, high, unknownFutureValue.
      * @return a {@link PayloadComplexity}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class Payload extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
+     * Gets the industry property value. Industry of a payload. The possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      * @return a {@link PayloadIndustry}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class Payload extends Entity implements Parsable {
         return this.backingStore.get("payloadTags");
     }
     /**
-     * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * Gets the platform property value. The payload delivery platform for a simulation. The possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @return a {@link PayloadDeliveryPlatform}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class Payload extends Entity implements Parsable {
         return this.backingStore.get("predictedCompromiseRate");
     }
     /**
-     * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @return a {@link SimulationAttackType}
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class Payload extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Gets the status property value. Simulation content status. Supports $filter and $orderby. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return a {@link SimulationContentStatus}
      */
     @jakarta.annotation.Nullable
@@ -217,7 +217,7 @@ public class Payload extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
+     * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @return a {@link SimulationAttackTechnique}
      */
     @jakarta.annotation.Nullable
@@ -225,7 +225,7 @@ public class Payload extends Entity implements Parsable {
         return this.backingStore.get("technique");
     }
     /**
-     * Gets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+     * Gets the theme property value. The theme of a payload. The possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      * @return a {@link PayloadTheme}
      */
     @jakarta.annotation.Nullable
@@ -263,14 +263,14 @@ public class Payload extends Entity implements Parsable {
         writer.writeEnumValue("theme", this.getTheme());
     }
     /**
-     * Sets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+     * Sets the brand property value. The branch of a payload. The possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      * @param value Value to set for the brand property.
      */
     public void setBrand(@jakarta.annotation.Nullable final PayloadBrand value) {
         this.backingStore.set("brand", value);
     }
     /**
-     * Sets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
+     * Sets the complexity property value. The complexity of a payload. The possible values are: unknown, low, medium, high, unknownFutureValue.
      * @param value Value to set for the complexity property.
      */
     public void setComplexity(@jakarta.annotation.Nullable final PayloadComplexity value) {
@@ -312,7 +312,7 @@ public class Payload extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
+     * Sets the industry property value. Industry of a payload. The possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      * @param value Value to set for the industry property.
      */
     public void setIndustry(@jakarta.annotation.Nullable final PayloadIndustry value) {
@@ -368,7 +368,7 @@ public class Payload extends Entity implements Parsable {
         this.backingStore.set("payloadTags", value);
     }
     /**
-     * Sets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * Sets the platform property value. The payload delivery platform for a simulation. The possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final PayloadDeliveryPlatform value) {
@@ -382,7 +382,7 @@ public class Payload extends Entity implements Parsable {
         this.backingStore.set("predictedCompromiseRate", value);
     }
     /**
-     * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @param value Value to set for the simulationAttackType property.
      */
     public void setSimulationAttackType(@jakarta.annotation.Nullable final SimulationAttackType value) {
@@ -396,21 +396,21 @@ public class Payload extends Entity implements Parsable {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Sets the status property value. Simulation content status. Supports $filter and $orderby. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
+     * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @param value Value to set for the technique property.
      */
     public void setTechnique(@jakarta.annotation.Nullable final SimulationAttackTechnique value) {
         this.backingStore.set("technique", value);
     }
     /**
-     * Sets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+     * Sets the theme property value. The theme of a payload. The possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      * @param value Value to set for the theme property.
      */
     public void setTheme(@jakarta.annotation.Nullable final PayloadTheme value) {

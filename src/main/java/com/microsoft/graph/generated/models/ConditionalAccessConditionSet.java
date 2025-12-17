@@ -81,7 +81,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("clientApplications");
     }
     /**
-     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
+     * Gets the clientAppTypes property value. Client application types included in the policy. The possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
      * @return a {@link java.util.List<ConditionalAccessClientApp>}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("platforms");
     }
     /**
-     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. The possible values are: low, medium, high, none, unknownFutureValue.
      * @return a {@link java.util.List<RiskLevel>}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("servicePrincipalRiskLevels");
     }
     /**
-     * Gets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     * Gets the signInRiskLevels property value. Sign-in risk levels included in the policy. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @return a {@link java.util.List<RiskLevel>}
      */
     @jakarta.annotation.Nullable
@@ -167,7 +167,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("signInRiskLevels");
     }
     /**
-     * Gets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     * Gets the userRiskLevels property value. User risk levels included in the policy. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @return a {@link java.util.List<RiskLevel>}
      */
     @jakarta.annotation.Nullable
@@ -240,7 +240,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         this.backingStore.set("clientApplications", value);
     }
     /**
-     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
+     * Sets the clientAppTypes property value. Client application types included in the policy. The possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
      * @param value Value to set for the clientAppTypes property.
      */
     public void setClientAppTypes(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessClientApp> value) {
@@ -282,21 +282,21 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         this.backingStore.set("platforms", value);
     }
     /**
-     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. The possible values are: low, medium, high, none, unknownFutureValue.
      * @param value Value to set for the servicePrincipalRiskLevels property.
      */
     public void setServicePrincipalRiskLevels(@jakarta.annotation.Nullable final java.util.List<RiskLevel> value) {
         this.backingStore.set("servicePrincipalRiskLevels", value);
     }
     /**
-     * Sets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     * Sets the signInRiskLevels property value. Sign-in risk levels included in the policy. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @param value Value to set for the signInRiskLevels property.
      */
     public void setSignInRiskLevels(@jakarta.annotation.Nullable final java.util.List<RiskLevel> value) {
         this.backingStore.set("signInRiskLevels", value);
     }
     /**
-     * Sets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     * Sets the userRiskLevels property value. User risk levels included in the policy. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @param value Value to set for the userRiskLevels property.
      */
     public void setUserRiskLevels(@jakarta.annotation.Nullable final java.util.List<RiskLevel> value) {

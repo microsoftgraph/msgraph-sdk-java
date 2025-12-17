@@ -96,7 +96,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("enableTopResults");
     }
     /**
-     * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * Gets the entityTypes property value. One or more types of resources expected in the response. The possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
      * @return a {@link java.util.List<EntityType>}
      */
     @jakarta.annotation.Nullable
@@ -283,7 +283,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("enableTopResults", value);
     }
     /**
-     * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * Sets the entityTypes property value. One or more types of resources expected in the response. The possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
      * @param value Value to set for the entityTypes property.
      */
     public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {

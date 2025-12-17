@@ -68,7 +68,7 @@ public class SynchronizationMetadataEntry implements AdditionalDataHolder, Backe
         return deserializerMap;
     }
     /**
-     * Gets the key property value. Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
+     * Gets the key property value. The possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
      * @return a {@link SynchronizationMetadata}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class SynchronizationMetadataEntry implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the key property value. Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
+     * Sets the key property value. The possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final SynchronizationMetadata value) {

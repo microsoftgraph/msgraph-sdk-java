@@ -25,7 +25,7 @@ public class WorkbookApplication extends Entity implements Parsable {
         return new WorkbookApplication();
     }
     /**
-     * Gets the calculationMode property value. Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
+     * Gets the calculationMode property value. Returns the calculation mode used in the workbook. The possible values are: Automatic, AutomaticExceptTables, Manual.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class WorkbookApplication extends Entity implements Parsable {
         writer.writeStringValue("calculationMode", this.getCalculationMode());
     }
     /**
-     * Sets the calculationMode property value. Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
+     * Sets the calculationMode property value. Returns the calculation mode used in the workbook. The possible values are: Automatic, AutomaticExceptTables, Manual.
      * @param value Value to set for the calculationMode property.
      */
     public void setCalculationMode(@jakarta.annotation.Nullable final String value) {

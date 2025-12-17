@@ -58,7 +58,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("clientAppUsed");
     }
     /**
-     * Gets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
+     * Gets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. The possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
      * @return a {@link ConditionalAccessStatus}
      */
     @jakarta.annotation.Nullable
@@ -301,7 +301,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("clientAppUsed", value);
     }
     /**
-     * Sets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
+     * Sets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. The possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
      * @param value Value to set for the conditionalAccessStatus property.
      */
     public void setConditionalAccessStatus(@jakarta.annotation.Nullable final ConditionalAccessStatus value) {

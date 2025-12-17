@@ -34,7 +34,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("additionalOptions");
     }
     /**
-     * Gets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
+     * Gets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. The possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return a {@link CloudAttachmentVersion}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the documentVersion property value. The versions of files in SharePoint to include. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
+     * Gets the documentVersion property value. The versions of files in SharePoint to include. The possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return a {@link DocumentVersion}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         this.backingStore.set("additionalOptions", value);
     }
     /**
-     * Sets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
+     * Sets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. The possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param value Value to set for the cloudAttachmentVersion property.
      */
     public void setCloudAttachmentVersion(@jakarta.annotation.Nullable final CloudAttachmentVersion value) {
@@ -181,7 +181,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the documentVersion property value. The versions of files in SharePoint to include. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
+     * Sets the documentVersion property value. The versions of files in SharePoint to include. The possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param value Value to set for the documentVersion property.
      */
     public void setDocumentVersion(@jakarta.annotation.Nullable final DocumentVersion value) {

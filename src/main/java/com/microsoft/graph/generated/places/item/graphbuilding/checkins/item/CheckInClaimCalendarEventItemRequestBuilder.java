@@ -55,7 +55,7 @@ public class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get checkIns from places
+     * A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @return a {@link CheckInClaim}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Get checkIns from places
+     * A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CheckInClaim}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Get checkIns from places
+     * A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get checkIns from places
+     * A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get checkIns from places
+     * A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

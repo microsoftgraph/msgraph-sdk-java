@@ -57,7 +57,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
         return this.backingStore.get("progress");
     }
     /**
-     * Gets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
+     * Gets the status property value. The possible values are: notStarted, running, complete, failed, unknownFutureValue.
      * @return a {@link DataPolicyOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
         this.backingStore.set("progress", value);
     }
     /**
-     * Sets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
+     * Sets the status property value. The possible values are: notStarted, running, complete, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DataPolicyOperationStatus value) {

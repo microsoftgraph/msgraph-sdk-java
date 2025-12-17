@@ -65,7 +65,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowCopyingAndSharingMeetingContent");
     }
     /**
-     * Gets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. Possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
+     * Gets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. The possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
      * @return a {@link AllowedLobbyAdmitterRoles}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowedLobbyAdmitters");
     }
     /**
-     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
+     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. The possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
      * @return a {@link OnlineMeetingPresenters}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowedPresenters");
     }
     /**
-     * Gets the allowLiveShare property value. Indicates whether live share is enabled for the meeting. Possible values are: enabled, disabled, unknownFutureValue.
+     * Gets the allowLiveShare property value. Indicates whether live share is enabled for the meeting. The possible values are: enabled, disabled, unknownFutureValue.
      * @return a {@link MeetingLiveShareOptions}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +271,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("recordAutomatically");
     }
     /**
-     * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
+     * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  The possible values are: all, none, unknownFutureValue.
      * @return a {@link MeetingChatHistoryDefaultMode}
      */
     @jakarta.annotation.Nullable
@@ -368,21 +368,21 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("allowCopyingAndSharingMeetingContent", value);
     }
     /**
-     * Sets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. Possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
+     * Sets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. The possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
      * @param value Value to set for the allowedLobbyAdmitters property.
      */
     public void setAllowedLobbyAdmitters(@jakarta.annotation.Nullable final AllowedLobbyAdmitterRoles value) {
         this.backingStore.set("allowedLobbyAdmitters", value);
     }
     /**
-     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
+     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. The possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
      * @param value Value to set for the allowedPresenters property.
      */
     public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingPresenters value) {
         this.backingStore.set("allowedPresenters", value);
     }
     /**
-     * Sets the allowLiveShare property value. Indicates whether live share is enabled for the meeting. Possible values are: enabled, disabled, unknownFutureValue.
+     * Sets the allowLiveShare property value. Indicates whether live share is enabled for the meeting. The possible values are: enabled, disabled, unknownFutureValue.
      * @param value Value to set for the allowLiveShare property.
      */
     public void setAllowLiveShare(@jakarta.annotation.Nullable final MeetingLiveShareOptions value) {
@@ -515,7 +515,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("recordAutomatically", value);
     }
     /**
-     * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
+     * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  The possible values are: all, none, unknownFutureValue.
      * @param value Value to set for the shareMeetingChatHistoryDefault property.
      */
     public void setShareMeetingChatHistoryDefault(@jakarta.annotation.Nullable final MeetingChatHistoryDefaultMode value) {

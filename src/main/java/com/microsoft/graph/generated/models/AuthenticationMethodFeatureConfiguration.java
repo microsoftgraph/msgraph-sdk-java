@@ -93,7 +93,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn&apos;t been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
+     * Gets the state property value. Enable or disable the feature. The possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn&apos;t been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @return a {@link AdvancedConfigState}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn&apos;t been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
+     * Sets the state property value. Enable or disable the feature. The possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn&apos;t been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {

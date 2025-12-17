@@ -121,21 +121,23 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places", rawUrl);
     }
     /**
-     * Add new entity to places
+     * Create a new place object. You can also use this method to create the following child object types: building, floor, section, room, workspace, or desk.
      * @param body The request body
      * @return a {@link Place}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Place post(@jakarta.annotation.Nonnull final Place body) {
         return post(body, null);
     }
     /**
-     * Add new entity to places
+     * Create a new place object. You can also use this method to create the following child object types: building, floor, section, room, workspace, or desk.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Place}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Place post(@jakarta.annotation.Nonnull final Place body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -146,7 +148,7 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Place::createFromDiscriminatorValue);
     }
     /**
-     * Add new entity to places
+     * Create a new place object. You can also use this method to create the following child object types: building, floor, section, room, workspace, or desk.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +157,7 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add new entity to places
+     * Create a new place object. You can also use this method to create the following child object types: building, floor, section, room, workspace, or desk.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
