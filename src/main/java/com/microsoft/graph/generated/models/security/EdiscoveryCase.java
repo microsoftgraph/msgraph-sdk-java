@@ -28,6 +28,14 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
         return new EdiscoveryCase();
     }
     /**
+     * Gets the caseMembers property value. Represents members of an eDiscovery case.
+     * @return a {@link java.util.List<EdiscoveryCaseMember>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EdiscoveryCaseMember> getCaseMembers() {
+        return this.backingStore.get("caseMembers");
+    }
+    /**
      * Gets the closedBy property value. The user who closed the case.
      * @return a {@link IdentitySet}
      */
@@ -66,6 +74,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("caseMembers", (n) -> { this.setCaseMembers(n.getCollectionOfObjectValues(EdiscoveryCaseMember::createFromDiscriminatorValue)); });
         deserializerMap.put("closedBy", (n) -> { this.setClosedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("closedDateTime", (n) -> { this.setClosedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("custodians", (n) -> { this.setCustodians(n.getCollectionOfObjectValues(EdiscoveryCustodian::createFromDiscriminatorValue)); });
@@ -133,6 +142,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("caseMembers", this.getCaseMembers());
         writer.writeObjectValue("closedBy", this.getClosedBy());
         writer.writeOffsetDateTimeValue("closedDateTime", this.getClosedDateTime());
         writer.writeCollectionOfObjectValues("custodians", this.getCustodians());
@@ -143,6 +153,13 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
         writer.writeCollectionOfObjectValues("searches", this.getSearches());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("tags", this.getTags());
+    }
+    /**
+     * Sets the caseMembers property value. Represents members of an eDiscovery case.
+     * @param value Value to set for the caseMembers property.
+     */
+    public void setCaseMembers(@jakarta.annotation.Nullable final java.util.List<EdiscoveryCaseMember> value) {
+        this.backingStore.set("caseMembers", value);
     }
     /**
      * Sets the closedBy property value. The user who closed the case.

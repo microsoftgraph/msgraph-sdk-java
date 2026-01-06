@@ -1,7 +1,11 @@
 package com.microsoft.graph.communications.presences.item;
 
+import com.microsoft.graph.communications.presences.item.clearautomaticlocation.ClearAutomaticLocationRequestBuilder;
+import com.microsoft.graph.communications.presences.item.clearlocation.ClearLocationRequestBuilder;
 import com.microsoft.graph.communications.presences.item.clearpresence.ClearPresenceRequestBuilder;
 import com.microsoft.graph.communications.presences.item.clearuserpreferredpresence.ClearUserPreferredPresenceRequestBuilder;
+import com.microsoft.graph.communications.presences.item.setautomaticlocation.SetAutomaticLocationRequestBuilder;
+import com.microsoft.graph.communications.presences.item.setmanuallocation.SetManualLocationRequestBuilder;
 import com.microsoft.graph.communications.presences.item.setpresence.SetPresenceRequestBuilder;
 import com.microsoft.graph.communications.presences.item.setstatusmessage.SetStatusMessageRequestBuilder;
 import com.microsoft.graph.communications.presences.item.setuserpreferredpresence.SetUserPreferredPresenceRequestBuilder;
@@ -26,6 +30,22 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PresenceItemRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the clearAutomaticLocation method.
+     * @return a {@link ClearAutomaticLocationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ClearAutomaticLocationRequestBuilder clearAutomaticLocation() {
+        return new ClearAutomaticLocationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the clearLocation method.
+     * @return a {@link ClearLocationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ClearLocationRequestBuilder clearLocation() {
+        return new ClearLocationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the clearPresence method.
      * @return a {@link ClearPresenceRequestBuilder}
      */
@@ -40,6 +60,22 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ClearUserPreferredPresenceRequestBuilder clearUserPreferredPresence() {
         return new ClearUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setAutomaticLocation method.
+     * @return a {@link SetAutomaticLocationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetAutomaticLocationRequestBuilder setAutomaticLocation() {
+        return new SetAutomaticLocationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setManualLocation method.
+     * @return a {@link SetManualLocationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetManualLocationRequestBuilder setManualLocation() {
+        return new SetManualLocationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the setPresence method.

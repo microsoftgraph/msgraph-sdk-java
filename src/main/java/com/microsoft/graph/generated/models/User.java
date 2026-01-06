@@ -54,6 +54,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("activities");
     }
     /**
+     * Gets the adhocCalls property value. Ad hoc calls associated with the user. Read-only. Nullable.
+     * @return a {@link java.util.List<AdhocCall>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AdhocCall> getAdhocCalls() {
+        return this.backingStore.get("adhocCalls");
+    }
+    /**
      * Gets the ageGroup property value. Sets the age group of the user. Allowed values: null, Minor, NotAdult, and Adult. For more information, see legal age group property definitions. Returned only on $select. Supports $filter (eq, ne, not, and in).
      * @return a {@link String}
      */
@@ -423,6 +431,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("aboutMe", (n) -> { this.setAboutMe(n.getStringValue()); });
         deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(UserActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("adhocCalls", (n) -> { this.setAdhocCalls(n.getCollectionOfObjectValues(AdhocCall::createFromDiscriminatorValue)); });
         deserializerMap.put("ageGroup", (n) -> { this.setAgeGroup(n.getStringValue()); });
         deserializerMap.put("agreementAcceptances", (n) -> { this.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
         deserializerMap.put("appRoleAssignments", (n) -> { this.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
@@ -507,6 +516,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("onPremisesProvisioningErrors", (n) -> { this.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSamAccountName", (n) -> { this.setOnPremisesSamAccountName(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("onPremisesSyncBehavior", (n) -> { this.setOnPremisesSyncBehavior(n.getObjectValue(OnPremisesSyncBehavior::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("onPremisesUserPrincipalName", (n) -> { this.setOnPremisesUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("otherMails", (n) -> { this.setOtherMails(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -864,6 +874,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
         return this.backingStore.get("onPremisesSecurityIdentifier");
+    }
+    /**
+     * Gets the onPremisesSyncBehavior property value. The onPremisesSyncBehavior property
+     * @return a {@link OnPremisesSyncBehavior}
+     */
+    @jakarta.annotation.Nullable
+    public OnPremisesSyncBehavior getOnPremisesSyncBehavior() {
+        return this.backingStore.get("onPremisesSyncBehavior");
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn&apos;t being synced and can be managed in Microsoft Entra ID. Read-only. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -1227,6 +1245,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("aboutMe", this.getAboutMe());
         writer.writeBooleanValue("accountEnabled", this.getAccountEnabled());
         writer.writeCollectionOfObjectValues("activities", this.getActivities());
+        writer.writeCollectionOfObjectValues("adhocCalls", this.getAdhocCalls());
         writer.writeStringValue("ageGroup", this.getAgeGroup());
         writer.writeCollectionOfObjectValues("agreementAcceptances", this.getAgreementAcceptances());
         writer.writeCollectionOfObjectValues("appRoleAssignments", this.getAppRoleAssignments());
@@ -1311,6 +1330,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("onPremisesProvisioningErrors", this.getOnPremisesProvisioningErrors());
         writer.writeStringValue("onPremisesSamAccountName", this.getOnPremisesSamAccountName());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
+        writer.writeObjectValue("onPremisesSyncBehavior", this.getOnPremisesSyncBehavior());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
         writer.writeStringValue("onPremisesUserPrincipalName", this.getOnPremisesUserPrincipalName());
         writer.writeCollectionOfPrimitiveValues("otherMails", this.getOtherMails());
@@ -1376,6 +1396,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<UserActivity> value) {
         this.backingStore.set("activities", value);
+    }
+    /**
+     * Sets the adhocCalls property value. Ad hoc calls associated with the user. Read-only. Nullable.
+     * @param value Value to set for the adhocCalls property.
+     */
+    public void setAdhocCalls(@jakarta.annotation.Nullable final java.util.List<AdhocCall> value) {
+        this.backingStore.set("adhocCalls", value);
     }
     /**
      * Sets the ageGroup property value. Sets the age group of the user. Allowed values: null, Minor, NotAdult, and Adult. For more information, see legal age group property definitions. Returned only on $select. Supports $filter (eq, ne, not, and in).
@@ -1964,6 +1991,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("onPremisesSecurityIdentifier", value);
+    }
+    /**
+     * Sets the onPremisesSyncBehavior property value. The onPremisesSyncBehavior property
+     * @param value Value to set for the onPremisesSyncBehavior property.
+     */
+    public void setOnPremisesSyncBehavior(@jakarta.annotation.Nullable final OnPremisesSyncBehavior value) {
+        this.backingStore.set("onPremisesSyncBehavior", value);
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn&apos;t being synced and can be managed in Microsoft Entra ID. Read-only. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).

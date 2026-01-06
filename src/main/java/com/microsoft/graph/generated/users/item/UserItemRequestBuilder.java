@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.users.item.activities.ActivitiesRequestBuilder;
+import com.microsoft.graph.users.item.adhoccalls.AdhocCallsRequestBuilder;
 import com.microsoft.graph.users.item.agreementacceptances.AgreementAcceptancesRequestBuilder;
 import com.microsoft.graph.users.item.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.graph.users.item.assignlicense.AssignLicenseRequestBuilder;
@@ -53,6 +54,7 @@ import com.microsoft.graph.users.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.users.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.users.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.OnlineMeetingsRequestBuilder;
+import com.microsoft.graph.users.item.onpremisessyncbehavior.OnPremisesSyncBehaviorRequestBuilder;
 import com.microsoft.graph.users.item.outlook.OutlookRequestBuilder;
 import com.microsoft.graph.users.item.owneddevices.OwnedDevicesRequestBuilder;
 import com.microsoft.graph.users.item.ownedobjects.OwnedObjectsRequestBuilder;
@@ -105,6 +107,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder activities() {
         return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the adhocCalls property of the microsoft.graph.user entity.
+     * @return a {@link AdhocCallsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AdhocCallsRequestBuilder adhocCalls() {
+        return new AdhocCallsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the agreementAcceptances property of the microsoft.graph.user entity.
@@ -497,6 +507,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OnlineMeetingsRequestBuilder onlineMeetings() {
         return new OnlineMeetingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the onPremisesSyncBehavior property of the microsoft.graph.user entity.
+     * @return a {@link OnPremisesSyncBehaviorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OnPremisesSyncBehaviorRequestBuilder onPremisesSyncBehavior() {
+        return new OnPremisesSyncBehaviorRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the outlook property of the microsoft.graph.user entity.
