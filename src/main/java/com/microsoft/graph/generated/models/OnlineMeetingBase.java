@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -177,6 +178,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("chatRestrictions");
     }
     /**
+     * Gets the expiryDateTime property value. Indicates the date and time when the meeting resource expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getExpiryDateTime() {
+        return this.backingStore.get("expiryDateTime");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -201,13 +210,17 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("chatRestrictions", (n) -> { this.setChatRestrictions(n.getObjectValue(ChatRestrictions::createFromDiscriminatorValue)); });
+        deserializerMap.put("expiryDateTime", (n) -> { this.setExpiryDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("isEndToEndEncryptionEnabled", (n) -> { this.setIsEndToEndEncryptionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isEntryExitAnnounced", (n) -> { this.setIsEntryExitAnnounced(n.getBooleanValue()); });
         deserializerMap.put("joinInformation", (n) -> { this.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("joinMeetingIdSettings", (n) -> { this.setJoinMeetingIdSettings(n.getObjectValue(JoinMeetingIdSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
         deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingOptionsWebUrl", (n) -> { this.setMeetingOptionsWebUrl(n.getStringValue()); });
+        deserializerMap.put("meetingSpokenLanguageTag", (n) -> { this.setMeetingSpokenLanguageTag(n.getStringValue()); });
         deserializerMap.put("recordAutomatically", (n) -> { this.setRecordAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("sensitivityLabelAssignment", (n) -> { this.setSensitivityLabelAssignment(n.getObjectValue(OnlineMeetingSensitivityLabelAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("shareMeetingChatHistoryDefault", (n) -> { this.setShareMeetingChatHistoryDefault(n.getEnumValue(MeetingChatHistoryDefaultMode::forValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         deserializerMap.put("videoTeleconferenceId", (n) -> { this.setVideoTeleconferenceId(n.getStringValue()); });
@@ -263,12 +276,36 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("lobbyBypassSettings");
     }
     /**
+     * Gets the meetingOptionsWebUrl property value. Provides the URL to the Teams meeting options page for the specified meeting. This link allows only the organizer to configure meeting settings.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMeetingOptionsWebUrl() {
+        return this.backingStore.get("meetingOptionsWebUrl");
+    }
+    /**
+     * Gets the meetingSpokenLanguageTag property value. Specifies the spoken language used during the meeting for recording and transcription purposes.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMeetingSpokenLanguageTag() {
+        return this.backingStore.get("meetingSpokenLanguageTag");
+    }
+    /**
      * Gets the recordAutomatically property value. Indicates whether to record the meeting automatically.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRecordAutomatically() {
         return this.backingStore.get("recordAutomatically");
+    }
+    /**
+     * Gets the sensitivityLabelAssignment property value. Specifies the sensitivity label applied to the Teams meeting.
+     * @return a {@link OnlineMeetingSensitivityLabelAssignment}
+     */
+    @jakarta.annotation.Nullable
+    public OnlineMeetingSensitivityLabelAssignment getSensitivityLabelAssignment() {
+        return this.backingStore.get("sensitivityLabelAssignment");
     }
     /**
      * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  The possible values are: all, none, unknownFutureValue.
@@ -327,13 +364,17 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
         writer.writeObjectValue("chatRestrictions", this.getChatRestrictions());
+        writer.writeOffsetDateTimeValue("expiryDateTime", this.getExpiryDateTime());
         writer.writeBooleanValue("isEndToEndEncryptionEnabled", this.getIsEndToEndEncryptionEnabled());
         writer.writeBooleanValue("isEntryExitAnnounced", this.getIsEntryExitAnnounced());
         writer.writeObjectValue("joinInformation", this.getJoinInformation());
         writer.writeObjectValue("joinMeetingIdSettings", this.getJoinMeetingIdSettings());
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
         writer.writeObjectValue("lobbyBypassSettings", this.getLobbyBypassSettings());
+        writer.writeStringValue("meetingOptionsWebUrl", this.getMeetingOptionsWebUrl());
+        writer.writeStringValue("meetingSpokenLanguageTag", this.getMeetingSpokenLanguageTag());
         writer.writeBooleanValue("recordAutomatically", this.getRecordAutomatically());
+        writer.writeObjectValue("sensitivityLabelAssignment", this.getSensitivityLabelAssignment());
         writer.writeEnumValue("shareMeetingChatHistoryDefault", this.getShareMeetingChatHistoryDefault());
         writer.writeStringValue("subject", this.getSubject());
         writer.writeStringValue("videoTeleconferenceId", this.getVideoTeleconferenceId());
@@ -466,6 +507,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("chatRestrictions", value);
     }
     /**
+     * Sets the expiryDateTime property value. Indicates the date and time when the meeting resource expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the expiryDateTime property.
+     */
+    public void setExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("expiryDateTime", value);
+    }
+    /**
      * Sets the isEndToEndEncryptionEnabled property value. Indicates whether end-to-end encryption (E2EE) is enabled for the online meeting.
      * @param value Value to set for the isEndToEndEncryptionEnabled property.
      */
@@ -508,11 +556,32 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("lobbyBypassSettings", value);
     }
     /**
+     * Sets the meetingOptionsWebUrl property value. Provides the URL to the Teams meeting options page for the specified meeting. This link allows only the organizer to configure meeting settings.
+     * @param value Value to set for the meetingOptionsWebUrl property.
+     */
+    public void setMeetingOptionsWebUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("meetingOptionsWebUrl", value);
+    }
+    /**
+     * Sets the meetingSpokenLanguageTag property value. Specifies the spoken language used during the meeting for recording and transcription purposes.
+     * @param value Value to set for the meetingSpokenLanguageTag property.
+     */
+    public void setMeetingSpokenLanguageTag(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("meetingSpokenLanguageTag", value);
+    }
+    /**
      * Sets the recordAutomatically property value. Indicates whether to record the meeting automatically.
      * @param value Value to set for the recordAutomatically property.
      */
     public void setRecordAutomatically(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("recordAutomatically", value);
+    }
+    /**
+     * Sets the sensitivityLabelAssignment property value. Specifies the sensitivity label applied to the Teams meeting.
+     * @param value Value to set for the sensitivityLabelAssignment property.
+     */
+    public void setSensitivityLabelAssignment(@jakarta.annotation.Nullable final OnlineMeetingSensitivityLabelAssignment value) {
+        this.backingStore.set("sensitivityLabelAssignment", value);
     }
     /**
      * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  The possible values are: all, none, unknownFutureValue.

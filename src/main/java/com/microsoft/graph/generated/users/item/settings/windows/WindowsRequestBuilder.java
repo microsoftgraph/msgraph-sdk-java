@@ -60,7 +60,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/settings/windows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @return a {@link WindowsSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsSetting::createFromDiscriminatorValue);
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
         return new WindowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

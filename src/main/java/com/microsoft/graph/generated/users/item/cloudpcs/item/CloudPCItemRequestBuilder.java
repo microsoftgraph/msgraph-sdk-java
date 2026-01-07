@@ -5,8 +5,10 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.reboot.RebootRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.rename.RenameRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.resize.ResizeRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.retrievecloudpclaunchdetail.RetrieveCloudPcLaunchDetailRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -51,6 +53,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         return new RenameRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the reprovision method.
+     * @return a {@link ReprovisionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReprovisionRequestBuilder reprovision() {
+        return new ReprovisionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the resize method.
      * @return a {@link ResizeRequestBuilder}
      */
@@ -65,6 +75,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPcLaunchDetail method.
+     * @return a {@link RetrieveCloudPcLaunchDetailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPcLaunchDetailRequestBuilder retrieveCloudPcLaunchDetail() {
+        return new RetrieveCloudPcLaunchDetailRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the troubleshoot method.

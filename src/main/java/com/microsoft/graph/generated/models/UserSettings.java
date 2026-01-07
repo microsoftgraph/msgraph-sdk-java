@@ -53,6 +53,7 @@ public class UserSettings extends Entity implements Parsable {
         deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
         deserializerMap.put("storage", (n) -> { this.setStorage(n.getObjectValue(UserStorage::createFromDiscriminatorValue)); });
         deserializerMap.put("windows", (n) -> { this.setWindows(n.getCollectionOfObjectValues(WindowsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("workHoursAndLocations", (n) -> { this.setWorkHoursAndLocations(n.getObjectValue(WorkHoursAndLocationsSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -80,12 +81,20 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("storage");
     }
     /**
-     * Gets the windows property value. The windows property
+     * Gets the windows property value. The Windows settings of the user stored in the cloud.
      * @return a {@link java.util.List<WindowsSetting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsSetting> getWindows() {
         return this.backingStore.get("windows");
+    }
+    /**
+     * Gets the workHoursAndLocations property value. The user&apos;s settings for work hours and location preferences for scheduling and availability management.
+     * @return a {@link WorkHoursAndLocationsSetting}
+     */
+    @jakarta.annotation.Nullable
+    public WorkHoursAndLocationsSetting getWorkHoursAndLocations() {
+        return this.backingStore.get("workHoursAndLocations");
     }
     /**
      * Serializes information the current object
@@ -100,6 +109,7 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
         writer.writeObjectValue("storage", this.getStorage());
         writer.writeCollectionOfObjectValues("windows", this.getWindows());
+        writer.writeObjectValue("workHoursAndLocations", this.getWorkHoursAndLocations());
     }
     /**
      * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn&apos;t have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
@@ -137,10 +147,17 @@ public class UserSettings extends Entity implements Parsable {
         this.backingStore.set("storage", value);
     }
     /**
-     * Sets the windows property value. The windows property
+     * Sets the windows property value. The Windows settings of the user stored in the cloud.
      * @param value Value to set for the windows property.
      */
     public void setWindows(@jakarta.annotation.Nullable final java.util.List<WindowsSetting> value) {
         this.backingStore.set("windows", value);
+    }
+    /**
+     * Sets the workHoursAndLocations property value. The user&apos;s settings for work hours and location preferences for scheduling and availability management.
+     * @param value Value to set for the workHoursAndLocations property.
+     */
+    public void setWorkHoursAndLocations(@jakarta.annotation.Nullable final WorkHoursAndLocationsSetting value) {
+        this.backingStore.set("workHoursAndLocations", value);
     }
 }

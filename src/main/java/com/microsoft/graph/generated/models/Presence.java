@@ -52,6 +52,7 @@ public class Presence extends Entity implements Parsable {
         deserializerMap.put("outOfOfficeSettings", (n) -> { this.setOutOfOfficeSettings(n.getObjectValue(OutOfOfficeSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("sequenceNumber", (n) -> { this.setSequenceNumber(n.getStringValue()); });
         deserializerMap.put("statusMessage", (n) -> { this.setStatusMessage(n.getObjectValue(PresenceStatusMessage::createFromDiscriminatorValue)); });
+        deserializerMap.put("workLocation", (n) -> { this.setWorkLocation(n.getObjectValue(UserWorkLocation::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -79,6 +80,14 @@ public class Presence extends Entity implements Parsable {
         return this.backingStore.get("statusMessage");
     }
     /**
+     * Gets the workLocation property value. Represents the users aggregated work location state.
+     * @return a {@link UserWorkLocation}
+     */
+    @jakarta.annotation.Nullable
+    public UserWorkLocation getWorkLocation() {
+        return this.backingStore.get("workLocation");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -89,6 +98,7 @@ public class Presence extends Entity implements Parsable {
         writer.writeStringValue("availability", this.getAvailability());
         writer.writeObjectValue("outOfOfficeSettings", this.getOutOfOfficeSettings());
         writer.writeObjectValue("statusMessage", this.getStatusMessage());
+        writer.writeObjectValue("workLocation", this.getWorkLocation());
     }
     /**
      * Sets the activity property value. The supplemental information to a user&apos;s availability. Possible values are available, away, beRightBack, busy, doNotDisturb, offline, outOfOffice, presenceUnknown.
@@ -124,5 +134,12 @@ public class Presence extends Entity implements Parsable {
      */
     public void setStatusMessage(@jakarta.annotation.Nullable final PresenceStatusMessage value) {
         this.backingStore.set("statusMessage", value);
+    }
+    /**
+     * Sets the workLocation property value. Represents the users aggregated work location state.
+     * @param value Value to set for the workLocation property.
+     */
+    public void setWorkLocation(@jakarta.annotation.Nullable final UserWorkLocation value) {
+        this.backingStore.set("workLocation", value);
     }
 }

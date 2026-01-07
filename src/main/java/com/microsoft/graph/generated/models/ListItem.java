@@ -42,6 +42,14 @@ public class ListItem extends BaseItem implements Parsable {
         return this.backingStore.get("contentType");
     }
     /**
+     * Gets the deleted property value. If present in the result of a delta enumeration, indicates that the item was deleted. Read-only.
+     * @return a {@link Deleted}
+     */
+    @jakarta.annotation.Nullable
+    public Deleted getDeleted() {
+        return this.backingStore.get("deleted");
+    }
+    /**
      * Gets the documentSetVersions property value. Version information for a document set version created by a user.
      * @return a {@link java.util.List<DocumentSetVersion>}
      */
@@ -66,6 +74,7 @@ public class ListItem extends BaseItem implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("deleted", (n) -> { this.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
         deserializerMap.put("documentSetVersions", (n) -> { this.setDocumentSetVersions(n.getCollectionOfObjectValues(DocumentSetVersion::createFromDiscriminatorValue)); });
         deserializerMap.put("driveItem", (n) -> { this.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("fields", (n) -> { this.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
@@ -106,6 +115,7 @@ public class ListItem extends BaseItem implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("analytics", this.getAnalytics());
         writer.writeObjectValue("contentType", this.getContentType());
+        writer.writeObjectValue("deleted", this.getDeleted());
         writer.writeCollectionOfObjectValues("documentSetVersions", this.getDocumentSetVersions());
         writer.writeObjectValue("driveItem", this.getDriveItem());
         writer.writeObjectValue("fields", this.getFields());
@@ -125,6 +135,13 @@ public class ListItem extends BaseItem implements Parsable {
      */
     public void setContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
         this.backingStore.set("contentType", value);
+    }
+    /**
+     * Sets the deleted property value. If present in the result of a delta enumeration, indicates that the item was deleted. Read-only.
+     * @param value Value to set for the deleted property.
+     */
+    public void setDeleted(@jakarta.annotation.Nullable final Deleted value) {
+        this.backingStore.set("deleted", value);
     }
     /**
      * Sets the documentSetVersions property value. Version information for a document set version created by a user.

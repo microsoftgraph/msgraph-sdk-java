@@ -3,6 +3,8 @@ package com.microsoft.graph.storage.filestorage;
 import com.microsoft.graph.models.FileStorage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.storage.filestorage.containers.ContainersRequestBuilder;
+import com.microsoft.graph.storage.filestorage.containertyperegistrations.ContainerTypeRegistrationsRequestBuilder;
+import com.microsoft.graph.storage.filestorage.containertypes.ContainerTypesRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.DeletedContainersRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +31,22 @@ public class FileStorageRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ContainersRequestBuilder containers() {
         return new ContainersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the containerTypeRegistrations property of the microsoft.graph.fileStorage entity.
+     * @return a {@link ContainerTypeRegistrationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContainerTypeRegistrationsRequestBuilder containerTypeRegistrations() {
+        return new ContainerTypeRegistrationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the containerTypes property of the microsoft.graph.fileStorage entity.
+     * @return a {@link ContainerTypesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContainerTypesRequestBuilder containerTypes() {
+        return new ContainerTypesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deletedContainers property of the microsoft.graph.fileStorage entity.
