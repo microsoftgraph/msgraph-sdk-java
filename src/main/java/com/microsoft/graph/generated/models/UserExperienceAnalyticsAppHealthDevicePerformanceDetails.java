@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
         return new UserExperienceAnalyticsAppHealthDevicePerformanceDetails();
     }
     /**
-     * Gets the appDisplayName property value. The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
+     * Gets the appDisplayName property value. The friendly name of the application for which the event occurred. The possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
         return this.backingStore.get("appPublisher");
     }
     /**
-     * Gets the appVersion property value. The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
+     * Gets the appVersion property value. The version of the application. The possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
         writer.writeStringValue("eventType", this.getEventType());
     }
     /**
-     * Sets the appDisplayName property value. The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
+     * Sets the appDisplayName property value. The friendly name of the application for which the event occurred. The possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -130,7 +130,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
         this.backingStore.set("appPublisher", value);
     }
     /**
-     * Sets the appVersion property value. The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
+     * Sets the appVersion property value. The version of the application. The possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appVersion property.
      */
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {

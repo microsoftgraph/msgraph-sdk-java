@@ -26,7 +26,7 @@ public class AssignedPlaceMode extends PlaceMode implements Parsable {
         return new AssignedPlaceMode();
     }
     /**
-     * Gets the assignedUserEmailAddress property value. The assignedUserEmailAddress property
+     * Gets the assignedUserEmailAddress property value. The email address of the user to whom the desk is assigned.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AssignedPlaceMode extends PlaceMode implements Parsable {
         return this.backingStore.get("assignedUserEmailAddress");
     }
     /**
-     * Gets the assignedUserId property value. The assignedUserId property
+     * Gets the assignedUserId property value. The user ID of the user to whom the desk is assigned.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class AssignedPlaceMode extends PlaceMode implements Parsable {
         writer.writeStringValue("assignedUserId", this.getAssignedUserId());
     }
     /**
-     * Sets the assignedUserEmailAddress property value. The assignedUserEmailAddress property
+     * Sets the assignedUserEmailAddress property value. The email address of the user to whom the desk is assigned.
      * @param value Value to set for the assignedUserEmailAddress property.
      */
     public void setAssignedUserEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("assignedUserEmailAddress", value);
     }
     /**
-     * Sets the assignedUserId property value. The assignedUserId property
+     * Sets the assignedUserId property value. The user ID of the user to whom the desk is assigned.
      * @param value Value to set for the assignedUserId property.
      */
     public void setAssignedUserId(@jakarta.annotation.Nullable final String value) {

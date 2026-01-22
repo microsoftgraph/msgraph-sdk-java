@@ -51,7 +51,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("clockOutEvent");
     }
     /**
-     * Gets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. Possible values are: none, user, manager, unknownFutureValue.
+     * Gets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. The possible values are: none, user, manager, unknownFutureValue.
      * @return a {@link EnumSet<ConfirmedBy>}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("clockOutEvent", value);
     }
     /**
-     * Sets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. Possible values are: none, user, manager, unknownFutureValue.
+     * Sets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. The possible values are: none, user, manager, unknownFutureValue.
      * @param value Value to set for the confirmedBy property.
      */
     public void setConfirmedBy(@jakarta.annotation.Nullable final EnumSet<ConfirmedBy> value) {

@@ -54,7 +54,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
         return this.backingStore.get("message");
     }
     /**
-     * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
+     * Gets the resultType property value. The threat assessment result type. The possible values are: checkPolicy, rescan.
      * @return a {@link ThreatAssessmentResultType}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
         this.backingStore.set("message", value);
     }
     /**
-     * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
+     * Sets the resultType property value. The threat assessment result type. The possible values are: checkPolicy, rescan.
      * @param value Value to set for the resultType property.
      */
     public void setResultType(@jakarta.annotation.Nullable final ThreatAssessmentResultType value) {

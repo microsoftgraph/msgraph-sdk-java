@@ -64,7 +64,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the enforcementType property value. Enforcement type. Possible values are: allow, block.
+     * Gets the enforcementType property value. Enforcement type. The possible values are: allow, block.
      * @return a {@link Fido2RestrictionEnforcementType}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the enforcementType property value. Enforcement type. Possible values are: allow, block.
+     * Sets the enforcementType property value. Enforcement type. The possible values are: allow, block.
      * @param value Value to set for the enforcementType property.
      */
     public void setEnforcementType(@jakarta.annotation.Nullable final Fido2RestrictionEnforcementType value) {

@@ -82,7 +82,7 @@ public class LevelMapItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get levels from places
+     * Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @return a {@link LevelMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -91,7 +91,7 @@ public class LevelMapItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get levels from places
+     * Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LevelMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -149,7 +149,7 @@ public class LevelMapItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get levels from places
+     * Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class LevelMapItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get levels from places
+     * Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -209,7 +209,7 @@ public class LevelMapItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get levels from places
+     * Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -104,7 +104,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.backingStore.get("idleSessionSignOut");
     }
     /**
-     * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
+     * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. The possible values are: disabled, basic, enhanced.
      * @return a {@link ImageTaggingChoice}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.backingStore.get("sharingBlockedDomainList");
     }
     /**
-     * Gets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
+     * Gets the sharingCapability property value. Sharing capability for the tenant. The possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
      * @return a {@link SharingCapabilities}
      */
     @jakarta.annotation.Nullable
@@ -264,7 +264,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.backingStore.get("sharingCapability");
     }
     /**
-     * Gets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
+     * Gets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. The possible values are: none, allowList, blockList.
      * @return a {@link SharingDomainRestrictionMode}
      */
     @jakarta.annotation.Nullable
@@ -368,7 +368,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.backingStore.set("idleSessionSignOut", value);
     }
     /**
-     * Sets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
+     * Sets the imageTaggingOption property value. Specifies the image tagging option for the tenant. The possible values are: disabled, basic, enhanced.
      * @param value Value to set for the imageTaggingOption property.
      */
     public void setImageTaggingOption(@jakarta.annotation.Nullable final ImageTaggingChoice value) {
@@ -501,14 +501,14 @@ public class SharepointSettings extends Entity implements Parsable {
         this.backingStore.set("sharingBlockedDomainList", value);
     }
     /**
-     * Sets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
+     * Sets the sharingCapability property value. Sharing capability for the tenant. The possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
      * @param value Value to set for the sharingCapability property.
      */
     public void setSharingCapability(@jakarta.annotation.Nullable final SharingCapabilities value) {
         this.backingStore.set("sharingCapability", value);
     }
     /**
-     * Sets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
+     * Sets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. The possible values are: none, allowList, blockList.
      * @param value Value to set for the sharingDomainRestrictionMode property.
      */
     public void setSharingDomainRestrictionMode(@jakarta.annotation.Nullable final SharingDomainRestrictionMode value) {

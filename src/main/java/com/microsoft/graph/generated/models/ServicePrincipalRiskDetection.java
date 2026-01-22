@@ -26,7 +26,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return new ServicePrincipalRiskDetection();
     }
     /**
-     * Gets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: servicePrincipal.
+     * Gets the activity property value. Indicates the activity type the detected risk is linked to.
      * @return a {@link ActivityType}
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         writer.writeEnumValue("tokenIssuerType", this.getTokenIssuerType());
     }
     /**
-     * Sets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: servicePrincipal.
+     * Sets the activity property value. Indicates the activity type the detected risk is linked to.
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final ActivityType value) {

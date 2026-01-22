@@ -51,7 +51,7 @@ public class EdiscoverySearch extends Search implements Parsable {
         return this.backingStore.get("custodianSources");
     }
     /**
-     * Gets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     * Gets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. The possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @return a {@link EnumSet<DataSourceScopes>}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class EdiscoverySearch extends Search implements Parsable {
         this.backingStore.set("custodianSources", value);
     }
     /**
-     * Sets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     * Sets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. The possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @param value Value to set for the dataSourceScopes property.
      */
     public void setDataSourceScopes(@jakarta.annotation.Nullable final EnumSet<DataSourceScopes> value) {

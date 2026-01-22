@@ -94,7 +94,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
+     * Gets the postType property value. The post type of the service issue historical post. The possible values are: regular, quick, strategic, unknownFutureValue.
      * @return a {@link PostType}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
+     * Sets the postType property value. The post type of the service issue historical post. The possible values are: regular, quick, strategic, unknownFutureValue.
      * @param value Value to set for the postType property.
      */
     public void setPostType(@jakarta.annotation.Nullable final PostType value) {

@@ -65,7 +65,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
         return deserializerMap;
     }
     /**
-     * Gets the keyStrength property value. Key strength of this Platform Credential key. Possible values are: normal, weak, unknown.
+     * Gets the keyStrength property value. Key strength of this Platform Credential key. The possible values are: normal, weak, unknown.
      * @return a {@link AuthenticationMethodKeyStrength}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
         return this.backingStore.get("keyStrength");
     }
     /**
-     * Gets the platform property value. Platform on which this Platform Credential key is present. Possible values are: unknown, windows, macOS,iOS, android, linux.
+     * Gets the platform property value. Platform on which this Platform Credential key is present. The possible values are: unknown, windows, macOS,iOS, android, linux.
      * @return a {@link AuthenticationMethodPlatform}
      */
     @jakarta.annotation.Nullable
@@ -115,14 +115,14 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the keyStrength property value. Key strength of this Platform Credential key. Possible values are: normal, weak, unknown.
+     * Sets the keyStrength property value. Key strength of this Platform Credential key. The possible values are: normal, weak, unknown.
      * @param value Value to set for the keyStrength property.
      */
     public void setKeyStrength(@jakarta.annotation.Nullable final AuthenticationMethodKeyStrength value) {
         this.backingStore.set("keyStrength", value);
     }
     /**
-     * Sets the platform property value. Platform on which this Platform Credential key is present. Possible values are: unknown, windows, macOS,iOS, android, linux.
+     * Sets the platform property value. Platform on which this Platform Credential key is present. The possible values are: unknown, windows, macOS,iOS, android, linux.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final AuthenticationMethodPlatform value) {

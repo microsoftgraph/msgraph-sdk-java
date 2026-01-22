@@ -93,7 +93,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app was submitted and is under review.publishedThe request to publish the specific version of the Teams app was approved by the admin and the app is published.rejectedThe admin rejected the request to publish the specific version of the Teams app.
+     * Gets the publishingState property value. The published status of a specific version of a Teams app. The possible values are:submittedThe specific version of the Teams app was submitted and is under review.publishedThe request to publish the specific version of the Teams app was approved by the admin and the app is published.rejectedThe admin rejected the request to publish the specific version of the Teams app.
      * @return a {@link TeamsAppPublishingState}
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app was submitted and is under review.publishedThe request to publish the specific version of the Teams app was approved by the admin and the app is published.rejectedThe admin rejected the request to publish the specific version of the Teams app.
+     * Sets the publishingState property value. The published status of a specific version of a Teams app. The possible values are:submittedThe specific version of the Teams app was submitted and is under review.publishedThe request to publish the specific version of the Teams app was approved by the admin and the app is published.rejectedThe admin rejected the request to publish the specific version of the Teams app.
      * @param value Value to set for the publishingState property.
      */
     public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppPublishingState value) {

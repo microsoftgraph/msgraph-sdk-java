@@ -47,7 +47,7 @@ public class Relation extends Entity implements Parsable {
         return this.backingStore.get("fromTerm");
     }
     /**
-     * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
+     * Gets the relationship property value. The type of relation. The possible values are: pin, reuse.
      * @return a {@link RelationType}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class Relation extends Entity implements Parsable {
         this.backingStore.set("fromTerm", value);
     }
     /**
-     * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
+     * Sets the relationship property value. The type of relation. The possible values are: pin, reuse.
      * @param value Value to set for the relationship property.
      */
     public void setRelationship(@jakarta.annotation.Nullable final RelationType value) {

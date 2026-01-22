@@ -26,7 +26,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
         return new CustomTrainingSetting();
     }
     /**
-     * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
+     * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. The possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      * @return a {@link java.util.List<TrainingAssignedTo>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
+     * Sets the assignedTo property value. A user collection that specifies to whom the training should be assigned. The possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final java.util.List<TrainingAssignedTo> value) {

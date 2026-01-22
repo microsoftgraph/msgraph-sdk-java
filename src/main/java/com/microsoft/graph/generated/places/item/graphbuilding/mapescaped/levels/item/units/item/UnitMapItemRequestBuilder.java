@@ -37,16 +37,18 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map/levels/{levelMap%2Did}/units/{unitMap%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property units for places
+     * Delete a unitMap object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unitmap-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property units for places
+     * Delete a unitMap object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unitmap-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +57,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get units from places
+     * Collection of units (such as rooms or offices) on this level. Supports upsert.
      * @return a {@link UnitMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +66,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get units from places
+     * Collection of units (such as rooms or offices) on this level. Supports upsert.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnitMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,21 +79,23 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnitMap::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property units in places
+     * Update the properties of an existing unitMap object in IMDF format on a specified floor, or create one if it doesn&apos;t exist.
      * @param body The request body
      * @return a {@link UnitMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unitmap-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnitMap patch(@jakarta.annotation.Nonnull final UnitMap body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property units in places
+     * Update the properties of an existing unitMap object in IMDF format on a specified floor, or create one if it doesn&apos;t exist.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnitMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unitmap-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnitMap patch(@jakarta.annotation.Nonnull final UnitMap body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnitMap::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property units for places
+     * Delete a unitMap object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property units for places
+     * Delete a unitMap object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get units from places
+     * Collection of units (such as rooms or offices) on this level. Supports upsert.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get units from places
+     * Collection of units (such as rooms or offices) on this level. Supports upsert.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property units in places
+     * Update the properties of an existing unitMap object in IMDF format on a specified floor, or create one if it doesn&apos;t exist.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property units in places
+     * Update the properties of an existing unitMap object in IMDF format on a specified floor, or create one if it doesn&apos;t exist.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class UnitMapItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get units from places
+     * Collection of units (such as rooms or offices) on this level. Supports upsert.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

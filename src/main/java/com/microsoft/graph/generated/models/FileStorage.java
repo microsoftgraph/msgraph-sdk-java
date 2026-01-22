@@ -25,7 +25,7 @@ public class FileStorage extends Entity implements Parsable {
         return new FileStorage();
     }
     /**
-     * Gets the containers property value. The containers property
+     * Gets the containers property value. The collection of active fileStorageContainer resources.
      * @return a {@link java.util.List<FileStorageContainer>}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,23 @@ public class FileStorage extends Entity implements Parsable {
         return this.backingStore.get("containers");
     }
     /**
-     * Gets the deletedContainers property value. The deletedContainers property
+     * Gets the containerTypeRegistrations property value. The collection of fileStorageContainerTypeRegistration resources.
+     * @return a {@link java.util.List<FileStorageContainerTypeRegistration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<FileStorageContainerTypeRegistration> getContainerTypeRegistrations() {
+        return this.backingStore.get("containerTypeRegistrations");
+    }
+    /**
+     * Gets the containerTypes property value. The collection of fileStorageContainerType resources.
+     * @return a {@link java.util.List<FileStorageContainerType>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<FileStorageContainerType> getContainerTypes() {
+        return this.backingStore.get("containerTypes");
+    }
+    /**
+     * Gets the deletedContainers property value. The collection of deleted fileStorageContainer resources.
      * @return a {@link java.util.List<FileStorageContainer>}
      */
     @jakarta.annotation.Nullable
@@ -48,6 +64,8 @@ public class FileStorage extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("containers", (n) -> { this.setContainers(n.getCollectionOfObjectValues(FileStorageContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("containerTypeRegistrations", (n) -> { this.setContainerTypeRegistrations(n.getCollectionOfObjectValues(FileStorageContainerTypeRegistration::createFromDiscriminatorValue)); });
+        deserializerMap.put("containerTypes", (n) -> { this.setContainerTypes(n.getCollectionOfObjectValues(FileStorageContainerType::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedContainers", (n) -> { this.setDeletedContainers(n.getCollectionOfObjectValues(FileStorageContainer::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -59,17 +77,33 @@ public class FileStorage extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("containers", this.getContainers());
+        writer.writeCollectionOfObjectValues("containerTypeRegistrations", this.getContainerTypeRegistrations());
+        writer.writeCollectionOfObjectValues("containerTypes", this.getContainerTypes());
         writer.writeCollectionOfObjectValues("deletedContainers", this.getDeletedContainers());
     }
     /**
-     * Sets the containers property value. The containers property
+     * Sets the containers property value. The collection of active fileStorageContainer resources.
      * @param value Value to set for the containers property.
      */
     public void setContainers(@jakarta.annotation.Nullable final java.util.List<FileStorageContainer> value) {
         this.backingStore.set("containers", value);
     }
     /**
-     * Sets the deletedContainers property value. The deletedContainers property
+     * Sets the containerTypeRegistrations property value. The collection of fileStorageContainerTypeRegistration resources.
+     * @param value Value to set for the containerTypeRegistrations property.
+     */
+    public void setContainerTypeRegistrations(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerTypeRegistration> value) {
+        this.backingStore.set("containerTypeRegistrations", value);
+    }
+    /**
+     * Sets the containerTypes property value. The collection of fileStorageContainerType resources.
+     * @param value Value to set for the containerTypes property.
+     */
+    public void setContainerTypes(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerType> value) {
+        this.backingStore.set("containerTypes", value);
+    }
+    /**
+     * Sets the deletedContainers property value. The collection of deleted fileStorageContainer resources.
      * @param value Value to set for the deletedContainers property.
      */
     public void setDeletedContainers(@jakarta.annotation.Nullable final java.util.List<FileStorageContainer> value) {

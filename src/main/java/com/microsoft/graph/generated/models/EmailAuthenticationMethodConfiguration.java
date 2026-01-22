@@ -26,7 +26,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
         return new EmailAuthenticationMethodConfiguration();
     }
     /**
-     * Gets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn&apos;t use public preview have email OTP enabled beginning in October 2021.
+     * Gets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. The possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn&apos;t use public preview have email OTP enabled beginning in October 2021.
      * @return a {@link ExternalEmailOtpState}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
     }
     /**
-     * Sets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn&apos;t use public preview have email OTP enabled beginning in October 2021.
+     * Sets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. The possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn&apos;t use public preview have email OTP enabled beginning in October 2021.
      * @param value Value to set for the allowExternalIdToUseEmailOtp property.
      */
     public void setAllowExternalIdToUseEmailOtp(@jakarta.annotation.Nullable final ExternalEmailOtpState value) {

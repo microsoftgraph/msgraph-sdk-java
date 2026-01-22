@@ -80,7 +80,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * Gets the groupType property value. When type is set to Group, this indicates the group type. The possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @return a {@link GroupType}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class TargetResource implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * Sets the groupType property value. When type is set to Group, this indicates the group type. The possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @param value Value to set for the groupType property.
      */
     public void setGroupType(@jakarta.annotation.Nullable final GroupType value) {

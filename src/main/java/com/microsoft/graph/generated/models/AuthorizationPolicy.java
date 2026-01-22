@@ -51,7 +51,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("allowEmailVerifiedUsersToJoinOrganization");
     }
     /**
-     * Gets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
+     * Gets the allowInvitesFrom property value. Indicates who can invite guests to the organization. The possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
      * @return a {@link AllowInvitesFrom}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.backingStore.set("allowEmailVerifiedUsersToJoinOrganization", value);
     }
     /**
-     * Sets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
+     * Sets the allowInvitesFrom property value. Indicates who can invite guests to the organization. The possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
      * @param value Value to set for the allowInvitesFrom property.
      */
     public void setAllowInvitesFrom(@jakarta.annotation.Nullable final AllowInvitesFrom value) {

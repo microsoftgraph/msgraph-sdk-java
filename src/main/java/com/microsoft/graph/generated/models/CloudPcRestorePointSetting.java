@@ -68,7 +68,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
+     * Gets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. The possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
      * @return a {@link CloudPcRestorePointFrequencyType}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
+     * Sets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. The possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
      * @param value Value to set for the frequencyType property.
      */
     public void setFrequencyType(@jakarta.annotation.Nullable final CloudPcRestorePointFrequencyType value) {

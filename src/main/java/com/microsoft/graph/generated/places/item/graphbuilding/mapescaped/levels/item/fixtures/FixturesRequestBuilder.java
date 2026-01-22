@@ -60,19 +60,21 @@ public class FixturesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map/levels/{levelMap%2Did}/fixtures{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get fixtures from places
+     * Get a list of the fixtureMap objects and their properties.
      * @return a {@link FixtureMapCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/levelmap-list-fixtures?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FixtureMapCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get fixtures from places
+     * Get a list of the fixtureMap objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FixtureMapCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/levelmap-list-fixtures?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FixtureMapCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class FixturesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FixtureMap::createFromDiscriminatorValue);
     }
     /**
-     * Get fixtures from places
+     * Get a list of the fixtureMap objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class FixturesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get fixtures from places
+     * Get a list of the fixtureMap objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class FixturesRequestBuilder extends BaseRequestBuilder {
         return new FixturesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get fixtures from places
+     * Get a list of the fixtureMap objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

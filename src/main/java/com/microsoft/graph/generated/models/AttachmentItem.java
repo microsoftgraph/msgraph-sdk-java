@@ -48,7 +48,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
         return value;
     }
     /**
-     * Gets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
+     * Gets the attachmentType property value. The type of attachment. The possible values are: file, item, reference. Required.
      * @return a {@link AttachmentType}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
+     * Sets the attachmentType property value. The type of attachment. The possible values are: file, item, reference. Required.
      * @param value Value to set for the attachmentType property.
      */
     public void setAttachmentType(@jakarta.annotation.Nullable final AttachmentType value) {

@@ -57,7 +57,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
+     * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      * @return a {@link BehaviorDuringRetentionPeriod}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
+     * Sets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      * @param value Value to set for the behaviorDuringRetentionPeriod property.
      */
     public void setBehaviorDuringRetentionPeriod(@jakarta.annotation.Nullable final BehaviorDuringRetentionPeriod value) {

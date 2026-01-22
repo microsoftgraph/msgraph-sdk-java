@@ -159,7 +159,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its &apos;partner&apos;. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It&apos;s also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
+     * Gets the recipientScope property value. The scope of the recipient. The possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its &apos;partner&apos;. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It&apos;s also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @return a {@link EnumSet<RecipientScopeType>}
      */
     @jakarta.annotation.Nullable
@@ -289,7 +289,7 @@ public class MailTips implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its &apos;partner&apos;. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It&apos;s also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
+     * Sets the recipientScope property value. The scope of the recipient. The possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its &apos;partner&apos;. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It&apos;s also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @param value Value to set for the recipientScope property.
      */
     public void setRecipientScope(@jakarta.annotation.Nullable final EnumSet<RecipientScopeType> value) {

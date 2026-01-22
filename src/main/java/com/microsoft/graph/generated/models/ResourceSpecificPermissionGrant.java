@@ -64,7 +64,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
         return this.backingStore.get("permission");
     }
     /**
-     * Gets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
+     * Gets the permissionType property value. The type of permission. The possible values are: Application, Delegated. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
         this.backingStore.set("permission", value);
     }
     /**
-     * Sets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
+     * Sets the permissionType property value. The type of permission. The possible values are: Application, Delegated. Read-only.
      * @param value Value to set for the permissionType property.
      */
     public void setPermissionType(@jakarta.annotation.Nullable final String value) {

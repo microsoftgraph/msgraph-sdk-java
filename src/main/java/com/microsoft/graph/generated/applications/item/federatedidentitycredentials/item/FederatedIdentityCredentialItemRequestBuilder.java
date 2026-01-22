@@ -57,7 +57,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application.
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0">Find more info here</a>
@@ -67,7 +67,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -128,7 +128,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -188,7 +188,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

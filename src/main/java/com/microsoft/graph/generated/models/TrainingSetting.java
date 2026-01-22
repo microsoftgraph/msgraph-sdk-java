@@ -86,7 +86,7 @@ public class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the settingType property value. Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
+     * Gets the settingType property value. Type of setting. The possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
      * @return a {@link TrainingSettingType}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the settingType property value. Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
+     * Sets the settingType property value. Type of setting. The possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
      * @param value Value to set for the settingType property.
      */
     public void setSettingType(@jakarta.annotation.Nullable final TrainingSettingType value) {

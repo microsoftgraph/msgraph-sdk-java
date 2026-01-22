@@ -103,7 +103,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Gets the trainingStatus property value. The status of the training assigned to the user. The possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @return a {@link TrainingStatus}
      */
     @jakarta.annotation.Nullable
@@ -167,7 +167,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Sets the trainingStatus property value. The status of the training assigned to the user. The possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the trainingStatus property.
      */
     public void setTrainingStatus(@jakarta.annotation.Nullable final TrainingStatus value) {

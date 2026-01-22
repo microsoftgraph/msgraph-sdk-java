@@ -81,7 +81,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("domainName");
     }
     /**
-     * Gets the emailRole property value. For email-related alerts - user account&apos;s email &apos;role&apos;. Possible values are: unknown, sender, recipient.
+     * Gets the emailRole property value. For email-related alerts - user account&apos;s email &apos;role&apos;. The possible values are: unknown, sender, recipient.
      * @return a {@link EmailRole}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("logonLocation");
     }
     /**
-     * Gets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
+     * Gets the logonType property value. Method of user sign in. The possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @return a {@link LogonType}
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("riskScore");
     }
     /**
-     * Gets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
+     * Gets the userAccountType property value. User account type (group membership), per Windows definition. The possible values are: unknown, standard, power, administrator.
      * @return a {@link UserAccountSecurityType}
      */
     @jakarta.annotation.Nullable
@@ -260,7 +260,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("domainName", value);
     }
     /**
-     * Sets the emailRole property value. For email-related alerts - user account&apos;s email &apos;role&apos;. Possible values are: unknown, sender, recipient.
+     * Sets the emailRole property value. For email-related alerts - user account&apos;s email &apos;role&apos;. The possible values are: unknown, sender, recipient.
      * @param value Value to set for the emailRole property.
      */
     public void setEmailRole(@jakarta.annotation.Nullable final EmailRole value) {
@@ -302,7 +302,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("logonLocation", value);
     }
     /**
-     * Sets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
+     * Sets the logonType property value. Method of user sign in. The possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param value Value to set for the logonType property.
      */
     public void setLogonType(@jakarta.annotation.Nullable final LogonType value) {
@@ -330,7 +330,7 @@ public class UserSecurityState implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("riskScore", value);
     }
     /**
-     * Sets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
+     * Sets the userAccountType property value. User account type (group membership), per Windows definition. The possible values are: unknown, standard, power, administrator.
      * @param value Value to set for the userAccountType property.
      */
     public void setUserAccountType(@jakarta.annotation.Nullable final UserAccountSecurityType value) {

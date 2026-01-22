@@ -76,7 +76,7 @@ public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
+     * Gets the protocol property value. The possible values are: sharedSecret, unknownFutureValue.
      * @return a {@link WorkforceIntegrationEncryptionProtocol}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
+     * Sets the protocol property value. The possible values are: sharedSecret, unknownFutureValue.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final WorkforceIntegrationEncryptionProtocol value) {

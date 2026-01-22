@@ -64,7 +64,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
         return this.backingStore.get("name");
     }
     /**
-     * Gets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
+     * Gets the platform property value. The platform the cluster runs on. The possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @return a {@link KubernetesPlatform}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
+     * Sets the platform property value. The platform the cluster runs on. The possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final KubernetesPlatform value) {

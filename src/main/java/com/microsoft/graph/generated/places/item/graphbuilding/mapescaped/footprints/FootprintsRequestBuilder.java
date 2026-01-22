@@ -60,19 +60,21 @@ public class FootprintsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map/footprints{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get footprints from places
+     * Get a list of footprintMap objects for building footprints and their properties.
      * @return a {@link FootprintMapCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/buildingmap-list-footprints?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FootprintMapCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get footprints from places
+     * Get a list of footprintMap objects for building footprints and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FootprintMapCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/buildingmap-list-footprints?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FootprintMapCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class FootprintsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FootprintMap::createFromDiscriminatorValue);
     }
     /**
-     * Get footprints from places
+     * Get a list of footprintMap objects for building footprints and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class FootprintsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get footprints from places
+     * Get a list of footprintMap objects for building footprints and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class FootprintsRequestBuilder extends BaseRequestBuilder {
         return new FootprintsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get footprints from places
+     * Get a list of footprintMap objects for building footprints and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

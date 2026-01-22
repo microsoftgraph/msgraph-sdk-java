@@ -83,7 +83,7 @@ public class AccountTargetContent implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
+     * Gets the type property value. The type of account target content. The possible values are: unknown, includeAll, addressBook, unknownFutureValue.
      * @return a {@link AccountTargetContentType}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class AccountTargetContent implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. The type of account target content. Possible values are: unknown, includeAll, addressBook, unknownFutureValue.
+     * Sets the type property value. The type of account target content. The possible values are: unknown, includeAll, addressBook, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AccountTargetContentType value) {

@@ -89,7 +89,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return this.backingStore.get("endDateTime");
     }
     /**
-     * Gets the errorType property value. The type of error that occurred during this health check. Possible values are: endpointConnectivityCheckCloudPcUrlNotAllowListed, endpointConnectivityCheckWVDUrlNotAllowListed, etc. (The all possible values can refer to cloudPcOnPremisesConnectionHealthCheckErrorType) Read-Only.
+     * Gets the errorType property value. The type of error that occurred during this health check. The possible values are: endpointConnectivityCheckCloudPcUrlNotAllowListed, endpointConnectivityCheckWVDUrlNotAllowListed, etc. (The all possible values can refer to cloudPcOnPremisesConnectionHealthCheckErrorType) Read-Only.
      * @return a {@link CloudPcOnPremisesConnectionHealthCheckErrorType}
      */
     @jakarta.annotation.Nullable
@@ -207,7 +207,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the errorType property value. The type of error that occurred during this health check. Possible values are: endpointConnectivityCheckCloudPcUrlNotAllowListed, endpointConnectivityCheckWVDUrlNotAllowListed, etc. (The all possible values can refer to cloudPcOnPremisesConnectionHealthCheckErrorType) Read-Only.
+     * Sets the errorType property value. The type of error that occurred during this health check. The possible values are: endpointConnectivityCheckCloudPcUrlNotAllowListed, endpointConnectivityCheckWVDUrlNotAllowListed, etc. (The all possible values can refer to cloudPcOnPremisesConnectionHealthCheckErrorType) Read-Only.
      * @param value Value to set for the errorType property.
      */
     public void setErrorType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionHealthCheckErrorType value) {

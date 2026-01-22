@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.teamsadministration.TeamsAdminRoot;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -69,7 +70,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoft365Apps", (n) -> { this.setMicrosoft365Apps(n.getObjectValue(AdminMicrosoft365Apps::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -77,6 +78,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("reportSettings", (n) -> { this.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceAnnouncement", (n) -> { this.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepoint", (n) -> { this.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
+        deserializerMap.put("teams", (n) -> { this.setTeams(n.getObjectValue(TeamsAdminRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -128,6 +130,14 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("sharepoint");
     }
     /**
+     * Gets the teams property value. Represents a collection of user configurations.
+     * @return a {@link TeamsAdminRoot}
+     */
+    @jakarta.annotation.Nullable
+    public TeamsAdminRoot getTeams() {
+        return this.backingStore.get("teams");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -140,6 +150,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("reportSettings", this.getReportSettings());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
         writer.writeObjectValue("sharepoint", this.getSharepoint());
+        writer.writeObjectValue("teams", this.getTeams());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -205,5 +216,12 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setSharepoint(@jakarta.annotation.Nullable final Sharepoint value) {
         this.backingStore.set("sharepoint", value);
+    }
+    /**
+     * Sets the teams property value. Represents a collection of user configurations.
+     * @param value Value to set for the teams property.
+     */
+    public void setTeams(@jakarta.annotation.Nullable final TeamsAdminRoot value) {
+        this.backingStore.set("teams", value);
     }
 }

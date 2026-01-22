@@ -55,7 +55,7 @@ public class SectionMapItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get sections from places
+     * Collection of sections (such as zones or partitions) on this level. Supports upsert.
      * @return a {@link SectionMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class SectionMapItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get sections from places
+     * Collection of sections (such as zones or partitions) on this level. Supports upsert.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SectionMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class SectionMapItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get sections from places
+     * Collection of sections (such as zones or partitions) on this level. Supports upsert.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class SectionMapItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sections from places
+     * Collection of sections (such as zones or partitions) on this level. Supports upsert.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class SectionMapItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get sections from places
+     * Collection of sections (such as zones or partitions) on this level. Supports upsert.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -63,7 +63,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
         return this.backingStore;
     }
     /**
-     * Gets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
+     * Gets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. The possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
      * @return a {@link B2bIdentityProvidersType}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
+     * Gets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. The possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
      * @return a {@link java.util.List<B2bIdentityProvidersType>}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
         this.backingStore = value;
     }
     /**
-     * Sets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
+     * Sets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. The possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
      * @param value Value to set for the fallbackIdentityProvider property.
      */
     public void setFallbackIdentityProvider(@jakarta.annotation.Nullable final B2bIdentityProvidersType value) {
@@ -139,7 +139,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
+     * Sets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. The possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
      * @param value Value to set for the primaryIdentityProviderPrecedenceOrder property.
      */
     public void setPrimaryIdentityProviderPrecedenceOrder(@jakarta.annotation.Nullable final java.util.List<B2bIdentityProvidersType> value) {

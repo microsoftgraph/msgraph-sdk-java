@@ -26,7 +26,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
         return new EducationAssignmentDefaults();
     }
     /**
-     * Gets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
+     * Gets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. The possible values are: none, assignIfOpen.
      * @return a {@link EducationAddedStudentAction}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
     }
     /**
-     * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
+     * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. The possible values are: none, assignIfOpen.
      * @param value Value to set for the addedStudentAction property.
      */
     public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAddedStudentAction value) {

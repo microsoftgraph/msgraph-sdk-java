@@ -84,7 +84,7 @@ public class Session extends Entity implements Parsable {
         return this.backingStore.get("isTest");
     }
     /**
-     * Gets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * Gets the modalities property value. List of modalities present in the session. The possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @return a {@link java.util.List<Modality>}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class Session extends Entity implements Parsable {
         this.backingStore.set("isTest", value);
     }
     /**
-     * Sets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * Sets the modalities property value. List of modalities present in the session. The possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @param value Value to set for the modalities property.
      */
     public void setModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {

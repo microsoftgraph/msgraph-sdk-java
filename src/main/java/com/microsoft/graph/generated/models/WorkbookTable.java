@@ -144,7 +144,7 @@ public class WorkbookTable extends Entity implements Parsable {
         return this.backingStore.get("sort");
     }
     /**
-     * Gets the style property value. A constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Gets the style property value. A constant value that represents the Table style. The possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -266,7 +266,7 @@ public class WorkbookTable extends Entity implements Parsable {
         this.backingStore.set("sort", value);
     }
     /**
-     * Sets the style property value. A constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Sets the style property value. A constant value that represents the Table style. The possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @param value Value to set for the style property.
      */
     public void setStyle(@jakarta.annotation.Nullable final String value) {

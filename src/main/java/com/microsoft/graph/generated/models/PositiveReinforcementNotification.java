@@ -26,7 +26,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
         return new PositiveReinforcementNotification();
     }
     /**
-     * Gets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
+     * Gets the deliveryPreference property value. Delivery preference. The possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      * @return a {@link NotificationDeliveryPreference}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
         writer.writeEnumValue("deliveryPreference", this.getDeliveryPreference());
     }
     /**
-     * Sets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
+     * Sets the deliveryPreference property value. Delivery preference. The possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      * @param value Value to set for the deliveryPreference property.
      */
     public void setDeliveryPreference(@jakarta.annotation.Nullable final NotificationDeliveryPreference value) {

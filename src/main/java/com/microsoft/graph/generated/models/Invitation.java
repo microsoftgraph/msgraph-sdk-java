@@ -125,7 +125,7 @@ public class Invitation extends Entity implements Parsable {
         return this.backingStore.get("sendInvitationMessage");
     }
     /**
-     * Gets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
+     * Gets the status property value. The status of the invitation. The possible values are: PendingAcceptance, Completed, InProgress, and Error.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class Invitation extends Entity implements Parsable {
         this.backingStore.set("sendInvitationMessage", value);
     }
     /**
-     * Sets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
+     * Sets the status property value. The status of the invitation. The possible values are: PendingAcceptance, Completed, InProgress, and Error.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {

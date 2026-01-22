@@ -6,6 +6,7 @@ import com.microsoft.graph.admin.people.PeopleRequestBuilder;
 import com.microsoft.graph.admin.reportsettings.ReportSettingsRequestBuilder;
 import com.microsoft.graph.admin.serviceannouncement.ServiceAnnouncementRequestBuilder;
 import com.microsoft.graph.admin.sharepoint.SharepointRequestBuilder;
+import com.microsoft.graph.admin.teams.TeamsRequestBuilder;
 import com.microsoft.graph.models.Admin;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -73,6 +74,14 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SharepointRequestBuilder sharepoint() {
         return new SharepointRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the teams property of the microsoft.graph.admin entity.
+     * @return a {@link TeamsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TeamsRequestBuilder teams() {
+        return new TeamsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AdminRequestBuilder} and sets the default values.

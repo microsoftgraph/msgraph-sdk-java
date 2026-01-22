@@ -48,7 +48,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel,
         return value;
     }
     /**
-     * Gets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
+     * Gets the appScope property value. App scope. The possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @return a {@link OAuthAppScope}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
+     * Sets the appScope property value. App scope. The possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @param value Value to set for the appScope property.
      */
     public void setAppScope(@jakarta.annotation.Nullable final OAuthAppScope value) {

@@ -48,7 +48,7 @@ public class CallMediaState implements AdditionalDataHolder, BackedModel, Parsab
         return value;
     }
     /**
-     * Gets the audio property value. The audio media state. Possible values are: active, inactive, unknownFutureValue.
+     * Gets the audio property value. The audio media state. The possible values are: active, inactive, unknownFutureValue.
      * @return a {@link MediaState}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class CallMediaState implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the audio property value. The audio media state. Possible values are: active, inactive, unknownFutureValue.
+     * Sets the audio property value. The audio media state. The possible values are: active, inactive, unknownFutureValue.
      * @param value Value to set for the audio property.
      */
     public void setAudio(@jakarta.annotation.Nullable final MediaState value) {

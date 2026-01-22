@@ -46,7 +46,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("phoneNumber");
     }
     /**
-     * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
+     * Gets the phoneType property value. The type of this phone. The possible values are: mobile, alternateMobile, or office.
      * @return a {@link AuthenticationPhoneType}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("phoneType");
     }
     /**
-     * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
+     * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. The possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
      * @return a {@link AuthenticationMethodSignInState}
      */
     @jakarta.annotation.Nullable
@@ -80,14 +80,14 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
         this.backingStore.set("phoneNumber", value);
     }
     /**
-     * Sets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
+     * Sets the phoneType property value. The type of this phone. The possible values are: mobile, alternateMobile, or office.
      * @param value Value to set for the phoneType property.
      */
     public void setPhoneType(@jakarta.annotation.Nullable final AuthenticationPhoneType value) {
         this.backingStore.set("phoneType", value);
     }
     /**
-     * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
+     * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. The possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
      * @param value Value to set for the smsSignInState property.
      */
     public void setSmsSignInState(@jakarta.annotation.Nullable final AuthenticationMethodSignInState value) {

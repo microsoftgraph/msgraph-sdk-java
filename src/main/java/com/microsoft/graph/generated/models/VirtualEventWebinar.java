@@ -26,7 +26,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
         return new VirtualEventWebinar();
     }
     /**
-     * Gets the audience property value. To whom the webinar is visible. Possible values are: everyone, organization, and unknownFutureValue.
+     * Gets the audience property value. To whom the webinar is visible. The possible values are: everyone, organization, and unknownFutureValue.
      * @return a {@link MeetingAudience}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
         writer.writeCollectionOfObjectValues("registrations", this.getRegistrations());
     }
     /**
-     * Sets the audience property value. To whom the webinar is visible. Possible values are: everyone, organization, and unknownFutureValue.
+     * Sets the audience property value. To whom the webinar is visible. The possible values are: everyone, organization, and unknownFutureValue.
      * @param value Value to set for the audience property.
      */
     public void setAudience(@jakarta.annotation.Nullable final MeetingAudience value) {

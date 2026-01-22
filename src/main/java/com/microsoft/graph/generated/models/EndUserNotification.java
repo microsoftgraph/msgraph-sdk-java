@@ -102,7 +102,7 @@ public class EndUserNotification extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
+     * Gets the notificationType property value. Type of notification. The possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
      * @return a {@link EndUserNotificationType}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class EndUserNotification extends Entity implements Parsable {
         return this.backingStore.get("notificationType");
     }
     /**
-     * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Gets the source property value. The source of the content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @return a {@link SimulationContentSource}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class EndUserNotification extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Gets the status property value. The status of the notification. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return a {@link SimulationContentStatus}
      */
     @jakarta.annotation.Nullable
@@ -202,21 +202,21 @@ public class EndUserNotification extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
+     * Sets the notificationType property value. Type of notification. The possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
      * @param value Value to set for the notificationType property.
      */
     public void setNotificationType(@jakarta.annotation.Nullable final EndUserNotificationType value) {
         this.backingStore.set("notificationType", value);
     }
     /**
-     * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Sets the source property value. The source of the content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Sets the status property value. The status of the notification. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {

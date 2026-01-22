@@ -37,16 +37,18 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map/levels/{levelMap%2Did}/fixtures/{fixtureMap%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property fixtures for places
+     * Delete a fixture on a specified floor.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/fixturemap-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property fixtures for places
+     * Delete a fixture on a specified floor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/fixturemap-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +57,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get fixtures from places
+     * Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      * @return a {@link FixtureMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +66,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get fixtures from places
+     * Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FixtureMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,21 +79,23 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FixtureMap::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property fixtures in places
+     * Update the properties of an existing fixtureMap object in IMDF format on a specified floor, or create one if it doesn&apos;t exist.
      * @param body The request body
      * @return a {@link FixtureMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/fixturemap-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FixtureMap patch(@jakarta.annotation.Nonnull final FixtureMap body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property fixtures in places
+     * Update the properties of an existing fixtureMap object in IMDF format on a specified floor, or create one if it doesn&apos;t exist.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FixtureMap}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/fixturemap-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FixtureMap patch(@jakarta.annotation.Nonnull final FixtureMap body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FixtureMap::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property fixtures for places
+     * Delete a fixture on a specified floor.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property fixtures for places
+     * Delete a fixture on a specified floor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get fixtures from places
+     * Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get fixtures from places
+     * Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property fixtures in places
+     * Update the properties of an existing fixtureMap object in IMDF format on a specified floor, or create one if it doesn&apos;t exist.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property fixtures in places
+     * Update the properties of an existing fixtureMap object in IMDF format on a specified floor, or create one if it doesn&apos;t exist.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class FixtureMapItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get fixtures from places
+     * Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

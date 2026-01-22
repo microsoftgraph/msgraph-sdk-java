@@ -46,7 +46,7 @@ public class ConnectionOperation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
+     * Gets the status property value. Indicates the status of the asynchronous operation. The possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
      * @return a {@link ConnectionOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class ConnectionOperation extends Entity implements Parsable {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
+     * Sets the status property value. Indicates the status of the asynchronous operation. The possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ConnectionOperationStatus value) {

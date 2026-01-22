@@ -75,7 +75,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
         return deserializerMap;
     }
     /**
-     * Gets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
+     * Gets the membershipKind property value. The membership kind. The possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
      * @return a {@link ConditionalAccessExternalTenantsMembershipKind}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class ConditionalAccessExternalTenants implements AdditionalDataHolder, B
         this.backingStore = value;
     }
     /**
-     * Sets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
+     * Sets the membershipKind property value. The membership kind. The possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
      * @param value Value to set for the membershipKind property.
      */
     public void setMembershipKind(@jakarta.annotation.Nullable final ConditionalAccessExternalTenantsMembershipKind value) {

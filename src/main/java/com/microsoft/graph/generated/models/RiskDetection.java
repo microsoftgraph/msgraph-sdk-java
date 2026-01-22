@@ -26,7 +26,7 @@ public class RiskDetection extends Entity implements Parsable {
         return new RiskDetection();
     }
     /**
-     * Gets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
+     * Gets the activity property value. Indicates the activity type the detected risk is linked to.
      * @return a {@link ActivityType}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class RiskDetection extends Entity implements Parsable {
         return this.backingStore.get("detectedDateTime");
     }
     /**
-     * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @return a {@link RiskDetectionTimingType}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class RiskDetection extends Entity implements Parsable {
         return this.backingStore.get("riskEventType");
     }
     /**
-     * Gets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Gets the riskLevel property value. Level of the detected risk. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class RiskDetection extends Entity implements Parsable {
         return this.backingStore.get("riskLevel");
     }
     /**
-     * Gets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Gets the riskState property value. The state of a detected risky user or sign-in. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @return a {@link RiskState}
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class RiskDetection extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+     * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      * @return a {@link TokenIssuerType}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class RiskDetection extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
+     * Sets the activity property value. Indicates the activity type the detected risk is linked to.
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final ActivityType value) {
@@ -268,7 +268,7 @@ public class RiskDetection extends Entity implements Parsable {
         this.backingStore.set("detectedDateTime", value);
     }
     /**
-     * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @param value Value to set for the detectionTimingType property.
      */
     public void setDetectionTimingType(@jakarta.annotation.Nullable final RiskDetectionTimingType value) {
@@ -317,14 +317,14 @@ public class RiskDetection extends Entity implements Parsable {
         this.backingStore.set("riskEventType", value);
     }
     /**
-     * Sets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Sets the riskLevel property value. Level of the detected risk. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @param value Value to set for the riskLevel property.
      */
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.backingStore.set("riskLevel", value);
     }
     /**
-     * Sets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Sets the riskState property value. The state of a detected risky user or sign-in. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
@@ -338,7 +338,7 @@ public class RiskDetection extends Entity implements Parsable {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+     * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      * @param value Value to set for the tokenIssuerType property.
      */
     public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {

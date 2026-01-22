@@ -68,7 +68,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Back
         return deserializerMap;
     }
     /**
-     * Gets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
+     * Gets the key property value. The possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @return a {@link ObjectDefinitionMetadata}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
+     * Sets the key property value. The possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final ObjectDefinitionMetadata value) {

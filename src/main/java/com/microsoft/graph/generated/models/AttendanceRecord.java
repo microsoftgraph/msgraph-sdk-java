@@ -81,7 +81,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.backingStore.get("registrationId");
     }
     /**
-     * Gets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
+     * Gets the role property value. Role of the attendee. The possible values are: None, Attendee, Presenter, and Organizer.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         this.backingStore.set("registrationId", value);
     }
     /**
-     * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
+     * Sets the role property value. Role of the attendee. The possible values are: None, Attendee, Presenter, and Organizer.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final String value) {

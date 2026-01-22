@@ -39,9 +39,12 @@ public class SharedWithMeRequestBuilder extends BaseRequestBuilder {
      * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
      * @return a {@link SharedWithMeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after November, 2027. as of 2025-11/Removal on 2025-11-13 and will be removed 2027-11-01
      * @see <a href="https://learn.microsoft.com/graph/api/drive-sharedwithme?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharedWithMeGetResponse get() {
         return get(null);
     }
@@ -50,9 +53,12 @@ public class SharedWithMeRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharedWithMeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after November, 2027. as of 2025-11/Removal on 2025-11-13 and will be removed 2027-11-01
      * @see <a href="https://learn.microsoft.com/graph/api/drive-sharedwithme?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharedWithMeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -62,8 +68,11 @@ public class SharedWithMeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after November, 2027. as of 2025-11/Removal on 2025-11-13 and will be removed 2027-11-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -71,8 +80,11 @@ public class SharedWithMeRequestBuilder extends BaseRequestBuilder {
      * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after November, 2027. as of 2025-11/Removal on 2025-11-13 and will be removed 2027-11-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -83,8 +95,11 @@ public class SharedWithMeRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SharedWithMeRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after November, 2027. as of 2025-11/Removal on 2025-11-13 and will be removed 2027-11-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SharedWithMeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SharedWithMeRequestBuilder(rawUrl, requestAdapter);

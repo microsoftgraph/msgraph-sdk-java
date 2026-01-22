@@ -47,7 +47,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
         return this.backingStore.get("group");
     }
     /**
-     * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
+     * Gets the includedSources property value. Specifies which sources are included in this group. The possible values are: mailbox, site.
      * @return a {@link EnumSet<SourceType>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
         this.backingStore.set("group", value);
     }
     /**
-     * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
+     * Sets the includedSources property value. Specifies which sources are included in this group. The possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      */
     public void setIncludedSources(@jakarta.annotation.Nullable final EnumSet<SourceType> value) {

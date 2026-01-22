@@ -68,7 +68,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, B
         return deserializerMap;
     }
     /**
-     * Gets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
+     * Gets the key property value. The possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      * @return a {@link AttributeDefinitionMetadata}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, B
         this.backingStore = value;
     }
     /**
-     * Sets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
+     * Sets the key property value. The possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final AttributeDefinitionMetadata value) {

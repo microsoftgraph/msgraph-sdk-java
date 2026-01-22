@@ -126,7 +126,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this.backingStore.get("searchSettings");
     }
     /**
-     * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
+     * Gets the state property value. Indicates the current state of the connection. The possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @return a {@link ConnectionState}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this.backingStore.set("searchSettings", value);
     }
     /**
-     * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
+     * Sets the state property value. Indicates the current state of the connection. The possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ConnectionState value) {

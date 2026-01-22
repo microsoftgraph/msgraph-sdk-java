@@ -73,7 +73,7 @@ public class CallRecord extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * Gets the modalities property value. List of all the modalities used in the call. The possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @return a {@link java.util.List<Modality>}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class CallRecord extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * Sets the modalities property value. List of all the modalities used in the call. The possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @param value Value to set for the modalities property.
      */
     public void setModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {

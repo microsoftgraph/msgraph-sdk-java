@@ -195,7 +195,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("leftMargins");
     }
     /**
-     * Gets the mediaColors property value. The media (i.e., paper) colors supported by the printer.
+     * Gets the mediaColors property value. The media (for example, paper) colors supported by the printer.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -203,7 +203,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("mediaColors");
     }
     /**
-     * Gets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
+     * Gets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. For the list of supported values, see mediaSizes values.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -439,14 +439,14 @@ public class PrinterCapabilities implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("leftMargins", value);
     }
     /**
-     * Sets the mediaColors property value. The media (i.e., paper) colors supported by the printer.
+     * Sets the mediaColors property value. The media (for example, paper) colors supported by the printer.
      * @param value Value to set for the mediaColors property.
      */
     public void setMediaColors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("mediaColors", value);
     }
     /**
-     * Sets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
+     * Sets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. For the list of supported values, see mediaSizes values.
      * @param value Value to set for the mediaSizes property.
      */
     public void setMediaSizes(@jakarta.annotation.Nullable final java.util.List<String> value) {

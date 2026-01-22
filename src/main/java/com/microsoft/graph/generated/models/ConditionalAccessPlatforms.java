@@ -56,7 +56,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedM
         return this.backingStore;
     }
     /**
-     * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * Gets the excludePlatforms property value. The possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @return a {@link java.util.List<ConditionalAccessDevicePlatform>}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * Gets the includePlatforms property value. The possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @return a {@link java.util.List<ConditionalAccessDevicePlatform>}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * Sets the excludePlatforms property value. The possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @param value Value to set for the excludePlatforms property.
      */
     public void setExcludePlatforms(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
         this.backingStore.set("excludePlatforms", value);
     }
     /**
-     * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * Sets the includePlatforms property value. The possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @param value Value to set for the includePlatforms property.
      */
     public void setIncludePlatforms(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {

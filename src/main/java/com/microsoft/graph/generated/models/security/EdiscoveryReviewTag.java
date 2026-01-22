@@ -26,7 +26,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
         return new EdiscoveryReviewTag();
     }
     /**
-     * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
+     * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. The possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      * @return a {@link ChildSelectability}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
         writer.writeObjectValue("parent", this.getParent());
     }
     /**
-     * Sets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
+     * Sets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. The possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      * @param value Value to set for the childSelectability property.
      */
     public void setChildSelectability(@jakarta.annotation.Nullable final ChildSelectability value) {

@@ -98,7 +98,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
+     * Gets the externalSource property value. Where this user was created from. The possible values are: sis, manual.
      * @return a {@link EducationExternalSource}
      */
     @jakarta.annotation.Nullable
@@ -486,7 +486,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
+     * Sets the externalSource property value. Where this user was created from. The possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
      */
     public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {

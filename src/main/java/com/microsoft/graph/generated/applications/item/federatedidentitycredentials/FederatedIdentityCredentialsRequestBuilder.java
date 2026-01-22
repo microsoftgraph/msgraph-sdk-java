@@ -60,21 +60,21 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Get a list of the federatedIdentityCredential objects and their properties assigned to an application.
      * @return a {@link FederatedIdentityCredentialCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredentialCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Get a list of the federatedIdentityCredential objects and their properties assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredentialCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredentialCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredential post(@jakarta.annotation.Nonnull final FederatedIdentityCredential body) {
@@ -100,7 +100,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedIdentityCredential post(@jakarta.annotation.Nonnull final FederatedIdentityCredential body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Get a list of the federatedIdentityCredential objects and their properties assigned to an application.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Get a list of the federatedIdentityCredential objects and their properties assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -165,7 +165,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
         return new FederatedIdentityCredentialsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Get a list of the federatedIdentityCredential objects and their properties assigned to an application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

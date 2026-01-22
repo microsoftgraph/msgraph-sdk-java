@@ -77,7 +77,7 @@ public class ResourceLink implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("linkType");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The link text that is visible in the Places app. The maximum length is 200 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ResourceLink implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The URL of the resource link. The maximum length is 200 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class ResourceLink implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("linkType", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The link text that is visible in the Places app. The maximum length is 200 characters.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class ResourceLink implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The URL of the resource link. The maximum length is 200 characters.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

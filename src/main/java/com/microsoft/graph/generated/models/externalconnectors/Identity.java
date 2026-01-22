@@ -36,7 +36,7 @@ public class Identity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the type property value. The type of identity. Possible values are: user or group for Microsoft Entra identities and externalgroup for groups in an external system.
+     * Gets the type property value. The type of identity. The possible values are: user or group for Microsoft Entra identities and externalgroup for groups in an external system.
      * @return a {@link IdentityType}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class Identity extends Entity implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the type property value. The type of identity. Possible values are: user or group for Microsoft Entra identities and externalgroup for groups in an external system.
+     * Sets the type property value. The type of identity. The possible values are: user or group for Microsoft Entra identities and externalgroup for groups in an external system.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final IdentityType value) {

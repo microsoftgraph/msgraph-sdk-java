@@ -26,7 +26,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
         return new TeamworkApplicationIdentity();
     }
     /**
-     * Gets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
+     * Gets the applicationIdentityType property value. Type of application that is referenced. The possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      * @return a {@link TeamworkApplicationIdentityType}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
         writer.writeEnumValue("applicationIdentityType", this.getApplicationIdentityType());
     }
     /**
-     * Sets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
+     * Sets the applicationIdentityType property value. Type of application that is referenced. The possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      * @param value Value to set for the applicationIdentityType property.
      */
     public void setApplicationIdentityType(@jakarta.annotation.Nullable final TeamworkApplicationIdentityType value) {

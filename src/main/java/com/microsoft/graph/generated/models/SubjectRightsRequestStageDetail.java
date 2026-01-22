@@ -85,7 +85,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: approval.
+     * Gets the stage property value. The stage of the subject rights request.
      * @return a {@link SubjectRightsRequestStage}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
         return this.backingStore.get("stage");
     }
     /**
-     * Gets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     * Gets the status property value. Status of the current stage. The possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @return a {@link SubjectRightsRequestStageStatus}
      */
     @jakarta.annotation.Nullable
@@ -142,14 +142,14 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Ba
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: approval.
+     * Sets the stage property value. The stage of the subject rights request.
      * @param value Value to set for the stage property.
      */
     public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {
         this.backingStore.set("stage", value);
     }
     /**
-     * Sets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     * Sets the status property value. Status of the current stage. The possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStageStatus value) {

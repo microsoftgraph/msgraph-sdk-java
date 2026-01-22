@@ -127,7 +127,7 @@ public class CompanySubscription extends Entity implements Parsable {
         return this.backingStore.get("skuPartNumber");
     }
     /**
-     * Gets the status property value. The status of this subscription. Possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
+     * Gets the status property value. The status of this subscription. The possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class CompanySubscription extends Entity implements Parsable {
         this.backingStore.set("skuPartNumber", value);
     }
     /**
-     * Sets the status property value. The status of this subscription. Possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
+     * Sets the status property value. The status of this subscription. The possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {

@@ -43,7 +43,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("assignedTo");
     }
     /**
-     * Gets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
+     * Gets the classification property value. The specification for the incident. The possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @return a {@link AlertClassification}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
+     * Gets the determination property value. Specifies the determination of the incident. The possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @return a {@link AlertDetermination}
      */
     @jakarta.annotation.Nullable
@@ -248,7 +248,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("assignedTo", value);
     }
     /**
-     * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
+     * Sets the classification property value. The specification for the incident. The possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final AlertClassification value) {
@@ -283,7 +283,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
+     * Sets the determination property value. Specifies the determination of the incident. The possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param value Value to set for the determination property.
      */
     public void setDetermination(@jakarta.annotation.Nullable final AlertDetermination value) {

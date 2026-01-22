@@ -38,7 +38,7 @@ public class Place extends Entity implements Parsable {
         return new Place();
     }
     /**
-     * Gets the address property value. The street address of the place.
+     * Gets the address property value. The physical address of the place, including the street, city, state, country or region, and postal code.
      * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("address");
     }
     /**
-     * Gets the checkIns property value. The checkIns property
+     * Gets the checkIns property value. A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @return a {@link java.util.List<CheckInClaim>}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("checkIns");
     }
     /**
-     * Gets the displayName property value. The name associated with the place.
+     * Gets the displayName property value. The name that is associated with the place.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("geoCoordinates");
     }
     /**
-     * Gets the isWheelChairAccessible property value. The isWheelChairAccessible property
+     * Gets the isWheelChairAccessible property value. Indicates whether the place is wheelchair accessible.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("isWheelChairAccessible");
     }
     /**
-     * Gets the label property value. The label property
+     * Gets the label property value. User-defined description of the place.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("label");
     }
     /**
-     * Gets the parentId property value. The parentId property
+     * Gets the parentId property value. The ID of a parent place.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("phone");
     }
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. Custom tags that are associated with the place for categorization or filtering.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -145,21 +145,21 @@ public class Place extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
     }
     /**
-     * Sets the address property value. The street address of the place.
+     * Sets the address property value. The physical address of the place, including the street, city, state, country or region, and postal code.
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.backingStore.set("address", value);
     }
     /**
-     * Sets the checkIns property value. The checkIns property
+     * Sets the checkIns property value. A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @param value Value to set for the checkIns property.
      */
     public void setCheckIns(@jakarta.annotation.Nullable final java.util.List<CheckInClaim> value) {
         this.backingStore.set("checkIns", value);
     }
     /**
-     * Sets the displayName property value. The name associated with the place.
+     * Sets the displayName property value. The name that is associated with the place.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -173,21 +173,21 @@ public class Place extends Entity implements Parsable {
         this.backingStore.set("geoCoordinates", value);
     }
     /**
-     * Sets the isWheelChairAccessible property value. The isWheelChairAccessible property
+     * Sets the isWheelChairAccessible property value. Indicates whether the place is wheelchair accessible.
      * @param value Value to set for the isWheelChairAccessible property.
      */
     public void setIsWheelChairAccessible(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isWheelChairAccessible", value);
     }
     /**
-     * Sets the label property value. The label property
+     * Sets the label property value. User-defined description of the place.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("label", value);
     }
     /**
-     * Sets the parentId property value. The parentId property
+     * Sets the parentId property value. The ID of a parent place.
      * @param value Value to set for the parentId property.
      */
     public void setParentId(@jakarta.annotation.Nullable final String value) {
@@ -201,7 +201,7 @@ public class Place extends Entity implements Parsable {
         this.backingStore.set("phone", value);
     }
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. Custom tags that are associated with the place for categorization or filtering.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
