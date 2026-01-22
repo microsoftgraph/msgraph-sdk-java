@@ -35,6 +35,14 @@ public class SensorCandidate extends Entity implements Parsable {
         return this.backingStore.get("computerDnsName");
     }
     /**
+     * Gets the domainName property value. The domain name of the sensor.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDomainName() {
+        return this.backingStore.get("domainName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -42,6 +50,7 @@ public class SensorCandidate extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("computerDnsName", (n) -> { this.setComputerDnsName(n.getStringValue()); });
+        deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
         deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("senseClientVersion", (n) -> { this.setSenseClientVersion(n.getStringValue()); });
         return deserializerMap;
@@ -70,6 +79,7 @@ public class SensorCandidate extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("computerDnsName", this.getComputerDnsName());
+        writer.writeStringValue("domainName", this.getDomainName());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
         writer.writeStringValue("senseClientVersion", this.getSenseClientVersion());
     }
@@ -79,6 +89,13 @@ public class SensorCandidate extends Entity implements Parsable {
      */
     public void setComputerDnsName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("computerDnsName", value);
+    }
+    /**
+     * Sets the domainName property value. The domain name of the sensor.
+     * @param value Value to set for the domainName property.
+     */
+    public void setDomainName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("domainName", value);
     }
     /**
      * Sets the lastSeenDateTime property value. The date and time when the sensor was last seen.
