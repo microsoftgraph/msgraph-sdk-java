@@ -32,11 +32,20 @@ public class TeamsAdminRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(TeamsPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("userConfigurations", (n) -> { this.setUserConfigurations(n.getCollectionOfObjectValues(TeamsUserConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams.
+     * Gets the policy property value. Represents a navigation property to the Teams policy assignment object.
+     * @return a {@link TeamsPolicyAssignment}
+     */
+    @jakarta.annotation.Nullable
+    public TeamsPolicyAssignment getPolicy() {
+        return this.backingStore.get("policy");
+    }
+    /**
+     * Gets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams
      * @return a {@link java.util.List<TeamsUserConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -50,10 +59,18 @@ public class TeamsAdminRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("policy", this.getPolicy());
         writer.writeCollectionOfObjectValues("userConfigurations", this.getUserConfigurations());
     }
     /**
-     * Sets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams.
+     * Sets the policy property value. Represents a navigation property to the Teams policy assignment object.
+     * @param value Value to set for the policy property.
+     */
+    public void setPolicy(@jakarta.annotation.Nullable final TeamsPolicyAssignment value) {
+        this.backingStore.set("policy", value);
+    }
+    /**
+     * Sets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams
      * @param value Value to set for the userConfigurations property.
      */
     public void setUserConfigurations(@jakarta.annotation.Nullable final java.util.List<TeamsUserConfiguration> value) {

@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -51,14 +50,6 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("attestationLevel");
     }
     /**
-     * Gets the createdDateTime property value. The timestamp when this key was registered to the user.
-     * @return a {@link OffsetDateTime}
-     */
-    @jakarta.annotation.Nullable
-    public OffsetDateTime getCreatedDateTime() {
-        return this.backingStore.get("createdDateTime");
-    }
-    /**
      * Gets the displayName property value. The display name of the key as given by the user.
      * @return a {@link String}
      */
@@ -76,7 +67,6 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         deserializerMap.put("aaGuid", (n) -> { this.setAaGuid(n.getStringValue()); });
         deserializerMap.put("attestationCertificates", (n) -> { this.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(AttestationLevel::forValue)); });
-        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         return deserializerMap;
@@ -99,7 +89,6 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         writer.writeStringValue("aaGuid", this.getAaGuid());
         writer.writeCollectionOfPrimitiveValues("attestationCertificates", this.getAttestationCertificates());
         writer.writeEnumValue("attestationLevel", this.getAttestationLevel());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("model", this.getModel());
     }
@@ -123,13 +112,6 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     public void setAttestationLevel(@jakarta.annotation.Nullable final AttestationLevel value) {
         this.backingStore.set("attestationLevel", value);
-    }
-    /**
-     * Sets the createdDateTime property value. The timestamp when this key was registered to the user.
-     * @param value Value to set for the createdDateTime property.
-     */
-    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The display name of the key as given by the user.

@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.authentication;
 import com.microsoft.graph.models.Authentication;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.authentication.emailmethods.EmailMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.externalauthenticationmethods.ExternalAuthenticationMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.fido2methods.Fido2MethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.methods.MethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.MicrosoftAuthenticatorMethodsRequestBuilder;
@@ -38,6 +39,14 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EmailMethodsRequestBuilder emailMethods() {
         return new EmailMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the externalAuthenticationMethods property of the microsoft.graph.authentication entity.
+     * @return a {@link ExternalAuthenticationMethodsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExternalAuthenticationMethodsRequestBuilder externalAuthenticationMethods() {
+        return new ExternalAuthenticationMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
