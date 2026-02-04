@@ -53,10 +53,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Set up JDK
+      - name: Set up JDK 8 for toolchain
         uses: actions/setup-java@v5
         with:
           java-version: 8
+          distribution: 'temurin'
+      - name: Set up JDK 17 for Gradle
+        uses: actions/setup-java@v5
+        with:
+          java-version: 17
           distribution: 'temurin'
           cache: gradle
       - name: Move generated sources to correct package
