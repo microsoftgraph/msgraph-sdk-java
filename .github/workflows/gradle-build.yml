@@ -53,11 +53,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      # Set up JDK 8 first for the Java toolchain to compile Java 8 bytecode
       - name: Set up JDK 8 for toolchain
         uses: actions/setup-java@v5
         with:
           java-version: 8
           distribution: 'temurin'
+      # Set up JDK 17 as the primary JDK for running Gradle (Gradle 9.3.1 requires Java 17+)
+      # Cache is configured here since this is the JDK that Gradle will use
       - name: Set up JDK 17 for Gradle
         uses: actions/setup-java@v5
         with:
