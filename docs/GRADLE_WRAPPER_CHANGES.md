@@ -11,7 +11,8 @@ During the upgrade from Gradle 8.14.2 to Gradle 9.3.1, you may notice that the `
 ### Before (Gradle 8.14.2 and earlier)
 ```bash
 # In gradlew
-CLASSPATH="\\\"\\\""
+CLASSPATH="\\\"\\\""  # Empty classpath with escaped quotes
+# ... later, for Cygwin/MSYS:
 CLASSPATH=$( cygpath --path --mixed "$CLASSPATH" )
 
 # Command execution
@@ -25,6 +26,8 @@ set CLASSPATH=
 @rem Command execution
 java -classpath "%CLASSPATH%" -jar "%APP_HOME%\gradle\wrapper\gradle-wrapper.jar" %*
 ```
+
+**Note**: The CLASSPATH was actually empty in both cases, but was still being passed as an argument to Java.
 
 ### After (Gradle 9.3.1)
 ```bash
@@ -70,20 +73,27 @@ Starting with Gradle 8.14, the Gradle wrapper JAR (`gradle-wrapper.jar`) was upd
 
 ### 3. Technical Details
 
-The old approach manually constructed a classpath and specified the main class:
+The old approach set an empty CLASSPATH variable and still used `-jar`:
 ```bash
-java -cp gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain [args...]
+# Old wrapper scripts
+java -classpath "$CLASSPATH" -jar gradle-wrapper.jar [args...]
+# The -classpath was redundant because -jar ignores the classpath anyway
 ```
 
-The new approach uses the executable JAR's manifest:
+The new approach removes the redundant classpath:
 ```bash
+# New wrapper scripts  
 java -jar gradle-wrapper.jar [args...]
 ```
 
-The `gradle-wrapper.jar` manifest now contains:
+**Important**: When you use `java -jar`, Java ignores any `-classpath` or `-cp` argument. The classpath is determined solely by the JAR's manifest `Class-Path` entry and the JAR itself. The old wrapper scripts were passing an empty classpath that was being ignored anyway.
+
+The `gradle-wrapper.jar` manifest contains:
 ```
 Main-Class: org.gradle.wrapper.GradleWrapperMain
 ```
+
+This is why the simplification works - the classpath was never actually being used.
 
 ## Impact on This Project
 
