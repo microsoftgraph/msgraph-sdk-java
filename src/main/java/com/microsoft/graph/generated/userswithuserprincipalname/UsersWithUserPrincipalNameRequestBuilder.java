@@ -2,6 +2,7 @@ package com.microsoft.graph.userswithuserprincipalname;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
+import com.microsoft.graph.users.item.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -57,6 +58,14 @@ public class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity.
+     * @return a {@link AppRoleAssignmentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
+        return new AppRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option. Because the user resource supports extensions, you can also use the GET operation to get custom properties and extension data in a user instance. Customers through Microsoft Entra ID for customers can also use this API operation to retrieve their details.

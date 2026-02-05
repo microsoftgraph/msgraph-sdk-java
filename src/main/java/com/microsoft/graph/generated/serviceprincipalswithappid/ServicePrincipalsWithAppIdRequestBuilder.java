@@ -2,6 +2,7 @@ package com.microsoft.graph.serviceprincipalswithappid;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ServicePrincipal;
+import com.microsoft.graph.serviceprincipals.item.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -57,6 +58,14 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link AppRoleAssignmentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
+        return new AppRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.
