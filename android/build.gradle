@@ -57,6 +57,7 @@ android {
         disable "GradleDependency"
         disable "NewerVersionAvailable"
         disable "KotlinPropertyAccess" // getting false positives because of odata actions & functions (getOrder setOrder)
+        disable 'AndroidGradlePluginVersion' // We will not be upgrading gradle to version 9 as it does not support our minimum required version of jdk8
     }
 	sourceSets {
 		main {
