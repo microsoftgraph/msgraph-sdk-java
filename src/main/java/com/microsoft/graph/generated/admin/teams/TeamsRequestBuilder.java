@@ -1,5 +1,6 @@
 package com.microsoft.graph.admin.teams;
 
+import com.microsoft.graph.admin.teams.policy.PolicyRequestBuilder;
 import com.microsoft.graph.admin.teams.userconfigurations.UserConfigurationsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.teamsadministration.TeamsAdminRoot;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the policy property of the microsoft.graph.teamsAdministration.teamsAdminRoot entity.
+     * @return a {@link PolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PolicyRequestBuilder policy() {
+        return new PolicyRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the userConfigurations property of the microsoft.graph.teamsAdministration.teamsAdminRoot entity.
      * @return a {@link UserConfigurationsRequestBuilder}
@@ -64,7 +73,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents a collection of user configurations.
+     * A container for Teams administration functionalities, such as user configurations and policy assignments.
      * @return a {@link TeamsAdminRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +82,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents a collection of user configurations.
+     * A container for Teams administration functionalities, such as user configurations and policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAdminRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +140,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a collection of user configurations.
+     * A container for Teams administration functionalities, such as user configurations and policy assignments.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +148,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a collection of user configurations.
+     * A container for Teams administration functionalities, such as user configurations and policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +200,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a collection of user configurations.
+     * A container for Teams administration functionalities, such as user configurations and policy assignments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

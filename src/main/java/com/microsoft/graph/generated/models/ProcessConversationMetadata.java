@@ -34,6 +34,22 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         return this.backingStore.get("accessedResources");
     }
     /**
+     * Gets the accessedResources_v2 property value. The accessedResources_v2 property
+     * @return a {@link java.util.List<ResourceAccessDetail>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ResourceAccessDetail> getAccessedResourcesV2() {
+        return this.backingStore.get("accessedResourcesV2");
+    }
+    /**
+     * Gets the agents property value. The agents property
+     * @return a {@link java.util.List<AiAgentInfo>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AiAgentInfo> getAgents() {
+        return this.backingStore.get("agents");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -41,6 +57,8 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessedResources", (n) -> { this.setAccessedResources(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("accessedResources_v2", (n) -> { this.setAccessedResourcesV2(n.getCollectionOfObjectValues(ResourceAccessDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("agents", (n) -> { this.setAgents(n.getCollectionOfObjectValues(AiAgentInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("parentMessageId", (n) -> { this.setParentMessageId(n.getStringValue()); });
         deserializerMap.put("plugins", (n) -> { this.setPlugins(n.getCollectionOfObjectValues(AiInteractionPlugin::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -69,6 +87,8 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("accessedResources", this.getAccessedResources());
+        writer.writeCollectionOfObjectValues("accessedResources_v2", this.getAccessedResourcesV2());
+        writer.writeCollectionOfObjectValues("agents", this.getAgents());
         writer.writeStringValue("parentMessageId", this.getParentMessageId());
         writer.writeCollectionOfObjectValues("plugins", this.getPlugins());
     }
@@ -78,6 +98,20 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
      */
     public void setAccessedResources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("accessedResources", value);
+    }
+    /**
+     * Sets the accessedResources_v2 property value. The accessedResources_v2 property
+     * @param value Value to set for the accessedResources_v2 property.
+     */
+    public void setAccessedResourcesV2(@jakarta.annotation.Nullable final java.util.List<ResourceAccessDetail> value) {
+        this.backingStore.set("accessedResourcesV2", value);
+    }
+    /**
+     * Sets the agents property value. The agents property
+     * @param value Value to set for the agents property.
+     */
+    public void setAgents(@jakarta.annotation.Nullable final java.util.List<AiAgentInfo> value) {
+        this.backingStore.set("agents", value);
     }
     /**
      * Sets the parentMessageId property value. Identifier of the parent message in a threaded conversation, if applicable.
