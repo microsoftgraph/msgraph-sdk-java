@@ -26,7 +26,7 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         return new ProcessConversationMetadata();
     }
     /**
-     * Gets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions).
+     * Gets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions). The accessedResources property is deprecated and stopped returning data on August 20, 2025. Going forward, use the accessedResources_v2 property.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         return this.backingStore.get("accessedResources");
     }
     /**
-     * Gets the accessedResources_v2 property value. The accessedResources_v2 property
+     * Gets the accessedResources_v2 property value. Lists details about the resources accessed by AI agents, such as identifiers, access type, and status.
      * @return a {@link java.util.List<ResourceAccessDetail>}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         return this.backingStore.get("accessedResourcesV2");
     }
     /**
-     * Gets the agents property value. The agents property
+     * Gets the agents property value. Indicates the information about an AI agent that participated in the preparation of the message.
      * @return a {@link java.util.List<AiAgentInfo>}
      */
     @jakarta.annotation.Nullable
@@ -93,21 +93,21 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         writer.writeCollectionOfObjectValues("plugins", this.getPlugins());
     }
     /**
-     * Sets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions).
+     * Sets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions). The accessedResources property is deprecated and stopped returning data on August 20, 2025. Going forward, use the accessedResources_v2 property.
      * @param value Value to set for the accessedResources property.
      */
     public void setAccessedResources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("accessedResources", value);
     }
     /**
-     * Sets the accessedResources_v2 property value. The accessedResources_v2 property
+     * Sets the accessedResources_v2 property value. Lists details about the resources accessed by AI agents, such as identifiers, access type, and status.
      * @param value Value to set for the accessedResources_v2 property.
      */
     public void setAccessedResourcesV2(@jakarta.annotation.Nullable final java.util.List<ResourceAccessDetail> value) {
         this.backingStore.set("accessedResourcesV2", value);
     }
     /**
-     * Sets the agents property value. The agents property
+     * Sets the agents property value. Indicates the information about an AI agent that participated in the preparation of the message.
      * @param value Value to set for the agents property.
      */
     public void setAgents(@jakarta.annotation.Nullable final java.util.List<AiAgentInfo> value) {

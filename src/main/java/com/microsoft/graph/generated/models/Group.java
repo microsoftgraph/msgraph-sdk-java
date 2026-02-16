@@ -244,6 +244,8 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("proxyAddresses", (n) -> { this.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("rejectedSenders", (n) -> { this.setRejectedSenders(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("renewedDateTime", (n) -> { this.setRenewedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("resourceBehaviorOptions", (n) -> { this.setResourceBehaviorOptions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("resourceProvisioningOptions", (n) -> { this.setResourceProvisioningOptions(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("securityEnabled", (n) -> { this.setSecurityEnabled(n.getBooleanValue()); });
         deserializerMap.put("securityIdentifier", (n) -> { this.setSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("serviceProvisioningErrors", (n) -> { this.setServiceProvisioningErrors(n.getCollectionOfObjectValues(ServiceProvisioningError::createFromDiscriminatorValue)); });
@@ -556,6 +558,22 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("renewedDateTime");
     }
     /**
+     * Gets the resourceBehaviorOptions property value. Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This property can be set only as part of creation (POST). For the list of possible values, see Microsoft 365 group behaviors and provisioning options.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getResourceBehaviorOptions() {
+        return this.backingStore.get("resourceBehaviorOptions");
+    }
+    /**
+     * Gets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith).
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getResourceProvisioningOptions() {
+        return this.backingStore.get("resourceProvisioningOptions");
+    }
+    /**
      * Gets the securityEnabled property value. Specifies whether the group is a security group. Required. Returned by default. Supports $filter (eq, ne, not, in).
      * @return a {@link Boolean}
      */
@@ -722,6 +740,8 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeCollectionOfPrimitiveValues("proxyAddresses", this.getProxyAddresses());
         writer.writeCollectionOfObjectValues("rejectedSenders", this.getRejectedSenders());
         writer.writeOffsetDateTimeValue("renewedDateTime", this.getRenewedDateTime());
+        writer.writeCollectionOfPrimitiveValues("resourceBehaviorOptions", this.getResourceBehaviorOptions());
+        writer.writeCollectionOfPrimitiveValues("resourceProvisioningOptions", this.getResourceProvisioningOptions());
         writer.writeBooleanValue("securityEnabled", this.getSecurityEnabled());
         writer.writeStringValue("securityIdentifier", this.getSecurityIdentifier());
         writer.writeCollectionOfObjectValues("serviceProvisioningErrors", this.getServiceProvisioningErrors());
@@ -1127,6 +1147,20 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setRenewedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("renewedDateTime", value);
+    }
+    /**
+     * Sets the resourceBehaviorOptions property value. Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This property can be set only as part of creation (POST). For the list of possible values, see Microsoft 365 group behaviors and provisioning options.
+     * @param value Value to set for the resourceBehaviorOptions property.
+     */
+    public void setResourceBehaviorOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("resourceBehaviorOptions", value);
+    }
+    /**
+     * Sets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith).
+     * @param value Value to set for the resourceProvisioningOptions property.
+     */
+    public void setResourceProvisioningOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("resourceProvisioningOptions", value);
     }
     /**
      * Sets the securityEnabled property value. Specifies whether the group is a security group. Required. Returned by default. Supports $filter (eq, ne, not, in).

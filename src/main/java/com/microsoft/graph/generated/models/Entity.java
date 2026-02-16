@@ -517,11 +517,15 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.eventMessage": return new EventMessage();
             case "#microsoft.graph.eventMessageRequest": return new EventMessageRequest();
             case "#microsoft.graph.eventMessageResponse": return new EventMessageResponse();
+            case "#microsoft.graph.exchangeAdmin": return new ExchangeAdmin();
+            case "#microsoft.graph.exchangeMessageTrace": return new ExchangeMessageTrace();
+            case "#microsoft.graph.exchangeMessageTraceDetail": return new ExchangeMessageTraceDetail();
             case "#microsoft.graph.exchangeProtectionPolicy": return new ExchangeProtectionPolicy();
             case "#microsoft.graph.exchangeRestoreSession": return new ExchangeRestoreSession();
             case "#microsoft.graph.extension": return new Extension();
             case "#microsoft.graph.extensionProperty": return new ExtensionProperty();
             case "#microsoft.graph.externalAuthenticationMethod": return new ExternalAuthenticationMethod();
+            case "#microsoft.graph.externalAuthenticationMethodConfiguration": return new ExternalAuthenticationMethodConfiguration();
             case "#microsoft.graph.externalConnectors.connectionOperation": return new ConnectionOperation();
             case "#microsoft.graph.externalConnectors.externalActivity": return new ExternalActivity();
             case "#microsoft.graph.externalConnectors.externalActivityResult": return new ExternalActivityResult();
@@ -679,16 +683,12 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.membershipOutlierInsight": return new MembershipOutlierInsight();
             case "#microsoft.graph.message": return new Message();
             case "#microsoft.graph.messageRule": return new MessageRule();
+            case "#microsoft.graph.messageTracingRoot": return new MessageTracingRoot();
             case "#microsoft.graph.microsoftAccountUserConversationMember": return new MicrosoftAccountUserConversationMember();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod": return new MicrosoftAuthenticatorAuthenticationMethod();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget": return new MicrosoftAuthenticatorAuthenticationMethodTarget();
             case "#microsoft.graph.microsoftStoreForBusinessApp": return new MicrosoftStoreForBusinessApp();
-            case "#microsoft.graph.mobileApp": return new MobileApp();
-            case "#microsoft.graph.mobileAppAssignment": return new MobileAppAssignment();
-            case "#microsoft.graph.mobileAppCategory": return new MobileAppCategory();
-            case "#microsoft.graph.mobileAppContent": return new MobileAppContent();
-            case "#microsoft.graph.mobileAppContentFile": return new MobileAppContentFile();
         }
         return null;
     }
@@ -700,6 +700,11 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.mobileApp": return new MobileApp();
+            case "#microsoft.graph.mobileAppAssignment": return new MobileAppAssignment();
+            case "#microsoft.graph.mobileAppCategory": return new MobileAppCategory();
+            case "#microsoft.graph.mobileAppContent": return new MobileAppContent();
+            case "#microsoft.graph.mobileAppContentFile": return new MobileAppContentFile();
             case "#microsoft.graph.mobileAppRelationship": return new MobileAppRelationship();
             case "#microsoft.graph.mobileAppTroubleshootingEvent": return new MobileAppTroubleshootingEvent();
             case "#microsoft.graph.mobileContainedApp": return new MobileContainedApp();
@@ -1195,11 +1200,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.windows81GeneralConfiguration": return new Windows81GeneralConfiguration();
             case "#microsoft.graph.windowsAppX": return new WindowsAppX();
             case "#microsoft.graph.windowsAutopilotDeploymentProfile": return new WindowsAutopilotDeploymentProfile();
-            case "#microsoft.graph.windowsAutopilotDeploymentProfileAssignment": return new WindowsAutopilotDeploymentProfileAssignment();
-            case "#microsoft.graph.windowsAutopilotDeviceIdentity": return new WindowsAutopilotDeviceIdentity();
-            case "#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration": return new WindowsDefenderAdvancedThreatProtectionConfiguration();
-            case "#microsoft.graph.windowsDeviceMalwareState": return new WindowsDeviceMalwareState();
-            case "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod": return new WindowsHelloForBusinessAuthenticationMethod();
         }
         return null;
     }
@@ -1211,6 +1211,11 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.windowsAutopilotDeploymentProfileAssignment": return new WindowsAutopilotDeploymentProfileAssignment();
+            case "#microsoft.graph.windowsAutopilotDeviceIdentity": return new WindowsAutopilotDeviceIdentity();
+            case "#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration": return new WindowsDefenderAdvancedThreatProtectionConfiguration();
+            case "#microsoft.graph.windowsDeviceMalwareState": return new WindowsDeviceMalwareState();
+            case "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod": return new WindowsHelloForBusinessAuthenticationMethod();
             case "#microsoft.graph.windowsInformationProtection": return new WindowsInformationProtection();
             case "#microsoft.graph.windowsInformationProtectionAppLearningSummary": return new WindowsInformationProtectionAppLearningSummary();
             case "#microsoft.graph.windowsInformationProtectionAppLockerFile": return new WindowsInformationProtectionAppLockerFile();

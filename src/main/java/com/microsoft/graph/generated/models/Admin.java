@@ -65,13 +65,22 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("edge");
     }
     /**
+     * Gets the exchange property value. A container for the Exchange admin functionality. Read-only.
+     * @return a {@link ExchangeAdmin}
+     */
+    @jakarta.annotation.Nullable
+    public ExchangeAdmin getExchange() {
+        return this.backingStore.get("exchange");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
+        deserializerMap.put("exchange", (n) -> { this.setExchange(n.getObjectValue(ExchangeAdmin::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoft365Apps", (n) -> { this.setMicrosoft365Apps(n.getObjectValue(AdminMicrosoft365Apps::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("people", (n) -> { this.setPeople(n.getObjectValue(PeopleAdminSettings::createFromDiscriminatorValue)); });
@@ -144,6 +153,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("edge", this.getEdge());
+        writer.writeObjectValue("exchange", this.getExchange());
         writer.writeObjectValue("microsoft365Apps", this.getMicrosoft365Apps());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("people", this.getPeople());
@@ -174,6 +184,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setEdge(@jakarta.annotation.Nullable final Edge value) {
         this.backingStore.set("edge", value);
+    }
+    /**
+     * Sets the exchange property value. A container for the Exchange admin functionality. Read-only.
+     * @param value Value to set for the exchange property.
+     */
+    public void setExchange(@jakarta.annotation.Nullable final ExchangeAdmin value) {
+        this.backingStore.set("exchange", value);
     }
     /**
      * Sets the microsoft365Apps property value. A container for the Microsoft 365 apps admin functionality.
