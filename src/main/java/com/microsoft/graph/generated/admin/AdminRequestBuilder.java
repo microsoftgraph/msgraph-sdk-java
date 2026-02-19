@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin;
 
 import com.microsoft.graph.admin.edge.EdgeRequestBuilder;
+import com.microsoft.graph.admin.exchange.ExchangeRequestBuilder;
 import com.microsoft.graph.admin.microsoft365apps.Microsoft365AppsRequestBuilder;
 import com.microsoft.graph.admin.people.PeopleRequestBuilder;
 import com.microsoft.graph.admin.reportsettings.ReportSettingsRequestBuilder;
@@ -34,6 +35,14 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EdgeRequestBuilder edge() {
         return new EdgeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the exchange property of the microsoft.graph.admin entity.
+     * @return a {@link ExchangeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExchangeRequestBuilder exchange() {
+        return new ExchangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the microsoft365Apps property of the microsoft.graph.admin entity.

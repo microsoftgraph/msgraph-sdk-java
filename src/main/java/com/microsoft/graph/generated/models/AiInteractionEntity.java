@@ -77,7 +77,7 @@ public class AiInteractionEntity implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. The unique identifier of the AI entity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class AiInteractionEntity implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("identifier");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The display name of the AI entity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class AiInteractionEntity implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the AI entity used.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -136,14 +136,14 @@ public class AiInteractionEntity implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. The unique identifier of the AI entity.
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identifier", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The display name of the AI entity.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -157,7 +157,7 @@ public class AiInteractionEntity implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the AI entity used.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

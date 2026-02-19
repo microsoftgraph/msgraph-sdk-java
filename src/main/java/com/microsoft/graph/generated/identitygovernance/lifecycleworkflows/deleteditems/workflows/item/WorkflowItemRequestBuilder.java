@@ -1,5 +1,6 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item;
 
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.administrationscopetargets.AdministrationScopeTargetsRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.createdby.CreatedByRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.executionscope.ExecutionScopeRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.lastmodifiedby.LastModifiedByRequestBuilder;
@@ -32,6 +33,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the administrationScopeTargets property of the microsoft.graph.identityGovernance.workflowBase entity.
+     * @return a {@link AdministrationScopeTargetsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AdministrationScopeTargetsRequestBuilder administrationScopeTargets() {
+        return new AdministrationScopeTargetsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the createdBy property of the microsoft.graph.identityGovernance.workflowBase entity.
      * @return a {@link CreatedByRequestBuilder}

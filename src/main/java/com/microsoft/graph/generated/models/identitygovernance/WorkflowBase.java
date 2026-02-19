@@ -1,5 +1,6 @@
 package com.microsoft.graph.models.identitygovernance;
 
+import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -56,6 +57,14 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
             this.setAdditionalData(value);
         }
         return value;
+    }
+    /**
+     * Gets the administrationScopeTargets property value. The administrationScopeTargets property
+     * @return a {@link java.util.List<DirectoryObject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DirectoryObject> getAdministrationScopeTargets() {
+        return this.backingStore.get("administrationScopeTargets");
     }
     /**
      * Gets the backingStore property value. Stores model information.
@@ -119,7 +128,8 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        deserializerMap.put("administrationScopeTargets", (n) -> { this.setAdministrationScopeTargets(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(LifecycleWorkflowCategory::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -188,6 +198,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("administrationScopeTargets", this.getAdministrationScopeTargets());
         writer.writeEnumValue("category", this.getCategory());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -208,6 +219,13 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the administrationScopeTargets property value. The administrationScopeTargets property
+     * @param value Value to set for the administrationScopeTargets property.
+     */
+    public void setAdministrationScopeTargets(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.backingStore.set("administrationScopeTargets", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

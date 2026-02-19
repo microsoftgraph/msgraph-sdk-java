@@ -83,7 +83,7 @@ public class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, 
         return deserializerMap;
     }
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. Unique identifier of the resource accessed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("identifier");
     }
     /**
-     * Gets the isCrossPromptInjectionDetected property value. The isCrossPromptInjectionDetected property
+     * Gets the isCrossPromptInjectionDetected property value. Indicates whether cross-prompt injection was detected during the access attempt.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("isCrossPromptInjectionDetected");
     }
     /**
-     * Gets the labelId property value. The labelId property
+     * Gets the labelId property value. Identifier for the sensitivity label applied to the resource, if any.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("labelId");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the resource accessed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("status");
     }
     /**
-     * Gets the storageId property value. The storageId property
+     * Gets the storageId property value. Identifier for the resource in its native storage format. For SharePoint resources, this is the unique identifier of the list item.  For other resources, this is the name of the location, such as Box, Dropbox, Exchange, or Google Drive.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("storageId");
     }
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. URL of the resource accessed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -186,28 +186,28 @@ public class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. Unique identifier of the resource accessed.
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identifier", value);
     }
     /**
-     * Sets the isCrossPromptInjectionDetected property value. The isCrossPromptInjectionDetected property
+     * Sets the isCrossPromptInjectionDetected property value. Indicates whether cross-prompt injection was detected during the access attempt.
      * @param value Value to set for the isCrossPromptInjectionDetected property.
      */
     public void setIsCrossPromptInjectionDetected(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCrossPromptInjectionDetected", value);
     }
     /**
-     * Sets the labelId property value. The labelId property
+     * Sets the labelId property value. Identifier for the sensitivity label applied to the resource, if any.
      * @param value Value to set for the labelId property.
      */
     public void setLabelId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("labelId", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the resource accessed.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -228,14 +228,14 @@ public class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the storageId property value. The storageId property
+     * Sets the storageId property value. Identifier for the resource in its native storage format. For SharePoint resources, this is the unique identifier of the list item.  For other resources, this is the name of the location, such as Box, Dropbox, Exchange, or Google Drive.
      * @param value Value to set for the storageId property.
      */
     public void setStorageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("storageId", value);
     }
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. URL of the resource accessed.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {
