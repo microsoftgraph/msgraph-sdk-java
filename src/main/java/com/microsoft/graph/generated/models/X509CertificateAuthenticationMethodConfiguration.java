@@ -34,6 +34,14 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         return this.backingStore.get("authenticationModeConfiguration");
     }
     /**
+     * Gets the certificateAuthorityScopes property value. The certificateAuthorityScopes property
+     * @return a {@link java.util.List<X509CertificateAuthorityScope>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<X509CertificateAuthorityScope> getCertificateAuthorityScopes() {
+        return this.backingStore.get("certificateAuthorityScopes");
+    }
+    /**
      * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @return a {@link java.util.List<X509CertificateUserBinding>}
      */
@@ -57,9 +65,11 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationModeConfiguration", (n) -> { this.setAuthenticationModeConfiguration(n.getObjectValue(X509CertificateAuthenticationModeConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("certificateAuthorityScopes", (n) -> { this.setCertificateAuthorityScopes(n.getCollectionOfObjectValues(X509CertificateAuthorityScope::createFromDiscriminatorValue)); });
         deserializerMap.put("certificateUserBindings", (n) -> { this.setCertificateUserBindings(n.getCollectionOfObjectValues(X509CertificateUserBinding::createFromDiscriminatorValue)); });
         deserializerMap.put("crlValidationConfiguration", (n) -> { this.setCrlValidationConfiguration(n.getObjectValue(X509CertificateCRLValidationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("issuerHintsConfiguration", (n) -> { this.setIssuerHintsConfiguration(n.getObjectValue(X509CertificateIssuerHintsConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -71,6 +81,14 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         return this.backingStore.get("includeTargets");
     }
     /**
+     * Gets the issuerHintsConfiguration property value. The issuerHintsConfiguration property
+     * @return a {@link X509CertificateIssuerHintsConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public X509CertificateIssuerHintsConfiguration getIssuerHintsConfiguration() {
+        return this.backingStore.get("issuerHintsConfiguration");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -78,9 +96,11 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("authenticationModeConfiguration", this.getAuthenticationModeConfiguration());
+        writer.writeCollectionOfObjectValues("certificateAuthorityScopes", this.getCertificateAuthorityScopes());
         writer.writeCollectionOfObjectValues("certificateUserBindings", this.getCertificateUserBindings());
         writer.writeObjectValue("crlValidationConfiguration", this.getCrlValidationConfiguration());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
+        writer.writeObjectValue("issuerHintsConfiguration", this.getIssuerHintsConfiguration());
     }
     /**
      * Sets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
@@ -88,6 +108,13 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     public void setAuthenticationModeConfiguration(@jakarta.annotation.Nullable final X509CertificateAuthenticationModeConfiguration value) {
         this.backingStore.set("authenticationModeConfiguration", value);
+    }
+    /**
+     * Sets the certificateAuthorityScopes property value. The certificateAuthorityScopes property
+     * @param value Value to set for the certificateAuthorityScopes property.
+     */
+    public void setCertificateAuthorityScopes(@jakarta.annotation.Nullable final java.util.List<X509CertificateAuthorityScope> value) {
+        this.backingStore.set("certificateAuthorityScopes", value);
     }
     /**
      * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
@@ -109,5 +136,12 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this.backingStore.set("includeTargets", value);
+    }
+    /**
+     * Sets the issuerHintsConfiguration property value. The issuerHintsConfiguration property
+     * @param value Value to set for the issuerHintsConfiguration property.
+     */
+    public void setIssuerHintsConfiguration(@jakarta.annotation.Nullable final X509CertificateIssuerHintsConfiguration value) {
+        this.backingStore.set("issuerHintsConfiguration", value);
     }
 }

@@ -139,7 +139,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("sharepoint");
     }
     /**
-     * Gets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * Gets the teams property value. A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @return a {@link TeamsAdminRoot}
      */
     @jakarta.annotation.Nullable
@@ -235,7 +235,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("sharepoint", value);
     }
     /**
-     * Sets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * Sets the teams property value. A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @param value Value to set for the teams property.
      */
     public void setTeams(@jakarta.annotation.Nullable final TeamsAdminRoot value) {

@@ -1,7 +1,7 @@
 package com.microsoft.graph.applications.delta;
 
-import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.BaseDeltaFunctionResponse;
+import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -33,15 +33,15 @@ public class DeltaGetResponse extends BaseDeltaFunctionResponse implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(Application::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
-     * @return a {@link java.util.List<Application>}
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<Application> getValue() {
+    public java.util.List<DirectoryObject> getValue() {
         return this.backingStore.get("value");
     }
     /**
@@ -57,7 +57,7 @@ public class DeltaGetResponse extends BaseDeltaFunctionResponse implements Parsa
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final java.util.List<Application> value) {
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("value", value);
     }
 }

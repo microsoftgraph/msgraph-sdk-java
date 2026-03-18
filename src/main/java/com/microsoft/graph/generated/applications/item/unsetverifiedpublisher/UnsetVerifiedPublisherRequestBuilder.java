@@ -35,18 +35,18 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/unsetVerifiedPublisher", rawUrl);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
+     * Unset the verifiedPublisher previously set on an agentIdentityBlueprint, removing all verified publisher properties. For more information, see Publisher verification.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentidentityblueprint-unsetverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
+     * Unset the verifiedPublisher previously set on an agentIdentityBlueprint, removing all verified publisher properties. For more information, see Publisher verification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentidentityblueprint-unsetverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
@@ -55,7 +55,7 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
+     * Unset the verifiedPublisher previously set on an agentIdentityBlueprint, removing all verified publisher properties. For more information, see Publisher verification.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Unset the verifiedPublisher previously set on an application, removing all verified publisher properties. For more information, see Publisher verification.
+     * Unset the verifiedPublisher previously set on an agentIdentityBlueprint, removing all verified publisher properties. For more information, see Publisher verification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
