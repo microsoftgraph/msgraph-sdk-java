@@ -39,7 +39,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/servicePrincipals(appId='{appId}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -47,7 +47,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         delete(null);
     }
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
@@ -69,7 +69,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -83,7 +83,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
-     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param body The request body
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -94,7 +94,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipal}
@@ -110,7 +110,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -130,7 +130,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -150,7 +150,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -159,7 +159,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -190,7 +190,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

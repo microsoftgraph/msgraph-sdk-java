@@ -3,6 +3,7 @@ package com.microsoft.graph.chats.item.messages.item.replies;
 import com.microsoft.graph.chats.item.messages.item.replies.count.CountRequestBuilder;
 import com.microsoft.graph.chats.item.messages.item.replies.delta.DeltaRequestBuilder;
 import com.microsoft.graph.chats.item.messages.item.replies.item.ChatMessageItemRequestBuilder;
+import com.microsoft.graph.chats.item.messages.item.replies.replywithquote.ReplyWithQuoteRequestBuilder;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.models.ChatMessageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -39,6 +40,14 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the replyWithQuote method.
+     * @return a {@link ReplyWithQuoteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReplyWithQuoteRequestBuilder replyWithQuote() {
+        return new ReplyWithQuoteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.

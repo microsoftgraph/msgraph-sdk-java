@@ -34,7 +34,7 @@ public class ExternalAuthenticationMethod extends AuthenticationMethod implement
         return this.backingStore.get("configurationId");
     }
     /**
-     * Gets the displayName property value. Custom name given to the registered external authentication method.
+     * Gets the displayName property value. Custom name given to the registered external MFA.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class ExternalAuthenticationMethod extends AuthenticationMethod implement
         this.backingStore.set("configurationId", value);
     }
     /**
-     * Sets the displayName property value. Custom name given to the registered external authentication method.
+     * Sets the displayName property value. Custom name given to the registered external MFA.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
