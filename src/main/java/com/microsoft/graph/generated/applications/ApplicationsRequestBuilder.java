@@ -96,7 +96,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of applications in this organization.
+     * Get the list of applications in this organization. This API also returns agentIdentityBlueprint objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprint.
      * @return a {@link ApplicationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of applications in this organization.
+     * Get the list of applications in this organization. This API also returns agentIdentityBlueprint objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApplicationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -120,7 +120,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApplicationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new application object.
+     * Create a new application object. This API can also create an agentIdentityBlueprint object when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param body The request body
      * @return a {@link Application}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new application object.
+     * Create a new application object. This API can also create an agentIdentityBlueprint object when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Application}
@@ -147,7 +147,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Application::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of applications in this organization.
+     * Get the list of applications in this organization. This API also returns agentIdentityBlueprint objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprint.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of applications in this organization.
+     * Get the list of applications in this organization. This API also returns agentIdentityBlueprint objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -167,7 +167,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new application object.
+     * Create a new application object. This API can also create an agentIdentityBlueprint object when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -176,7 +176,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new application object.
+     * Create a new application object. This API can also create an agentIdentityBlueprint object when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -201,7 +201,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return new ApplicationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of applications in this organization.
+     * Get the list of applications in this organization. This API also returns agentIdentityBlueprint objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprint.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

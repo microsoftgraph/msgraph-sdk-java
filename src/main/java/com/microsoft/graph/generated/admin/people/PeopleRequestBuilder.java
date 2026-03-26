@@ -2,6 +2,8 @@ package com.microsoft.graph.admin.people;
 
 import com.microsoft.graph.admin.people.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.admin.people.profilecardproperties.ProfileCardPropertiesRequestBuilder;
+import com.microsoft.graph.admin.people.profilesources.ProfileSourcesRequestBuilder;
+import com.microsoft.graph.admin.people.profilesourceswithsourceid.ProfileSourcesWithSourceIdRequestBuilder;
 import com.microsoft.graph.admin.people.pronouns.PronounsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PeopleAdminSettings;
@@ -38,6 +40,14 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProfileCardPropertiesRequestBuilder profileCardProperties() {
         return new ProfileCardPropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the profileSources property of the microsoft.graph.peopleAdminSettings entity.
+     * @return a {@link ProfileSourcesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProfileSourcesRequestBuilder profileSources() {
+        return new ProfileSourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the pronouns property of the microsoft.graph.peopleAdminSettings entity.
@@ -86,6 +96,16 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PeopleAdminSettings::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the profileSources property of the microsoft.graph.peopleAdminSettings entity.
+     * @param sourceId Alternate key of profileSource
+     * @return a {@link ProfileSourcesWithSourceIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProfileSourcesWithSourceIdRequestBuilder profileSourcesWithSourceId(@jakarta.annotation.Nonnull final String sourceId) {
+        Objects.requireNonNull(sourceId);
+        return new ProfileSourcesWithSourceIdRequestBuilder(pathParameters, requestAdapter, sourceId);
     }
     /**
      * Retrieve the properties and relationships of a peopleAdminSettings object.

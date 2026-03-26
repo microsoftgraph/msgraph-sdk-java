@@ -66,6 +66,14 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("email");
     }
     /**
+     * Gets the enabledApps property value. The enabledApps property
+     * @return a {@link java.util.List<TeamsApp>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TeamsApp> getEnabledApps() {
+        return this.backingStore.get("enabledApps");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -77,6 +85,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("enabledApps", (n) -> { this.setEnabledApps(n.getCollectionOfObjectValues(TeamsApp::createFromDiscriminatorValue)); });
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
@@ -190,6 +199,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
+        writer.writeCollectionOfObjectValues("enabledApps", this.getEnabledApps());
         writer.writeObjectValue("filesFolder", this.getFilesFolder());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavoriteByDefault", this.getIsFavoriteByDefault());
@@ -236,6 +246,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("email", value);
+    }
+    /**
+     * Sets the enabledApps property value. The enabledApps property
+     * @param value Value to set for the enabledApps property.
+     */
+    public void setEnabledApps(@jakarta.annotation.Nullable final java.util.List<TeamsApp> value) {
+        this.backingStore.set("enabledApps", value);
     }
     /**
      * Sets the filesFolder property value. Metadata for the location where the channel&apos;s files are stored.

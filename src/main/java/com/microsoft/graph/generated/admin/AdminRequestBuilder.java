@@ -1,5 +1,6 @@
 package com.microsoft.graph.admin;
 
+import com.microsoft.graph.admin.configurationmanagement.ConfigurationManagementRequestBuilder;
 import com.microsoft.graph.admin.edge.EdgeRequestBuilder;
 import com.microsoft.graph.admin.exchange.ExchangeRequestBuilder;
 import com.microsoft.graph.admin.microsoft365apps.Microsoft365AppsRequestBuilder;
@@ -28,6 +29,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the configurationManagement property of the microsoft.graph.admin entity.
+     * @return a {@link ConfigurationManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfigurationManagementRequestBuilder configurationManagement() {
+        return new ConfigurationManagementRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the edge property of the microsoft.graph.admin entity.
      * @return a {@link EdgeRequestBuilder}

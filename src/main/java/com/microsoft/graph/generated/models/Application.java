@@ -26,6 +26,13 @@ public class Application extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.agentIdentityBlueprint": return new AgentIdentityBlueprint();
+            }
+        }
         return new Application();
     }
     /**

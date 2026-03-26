@@ -33,6 +33,7 @@ public class TeamsAdminRoot extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(TeamsPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("telephoneNumberManagement", (n) -> { this.setTelephoneNumberManagement(n.getObjectValue(TelephoneNumberManagementRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("userConfigurations", (n) -> { this.setUserConfigurations(n.getCollectionOfObjectValues(TeamsUserConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -43,6 +44,14 @@ public class TeamsAdminRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public TeamsPolicyAssignment getPolicy() {
         return this.backingStore.get("policy");
+    }
+    /**
+     * Gets the telephoneNumberManagement property value. Represents a collection of available telephone number management operations.
+     * @return a {@link TelephoneNumberManagementRoot}
+     */
+    @jakarta.annotation.Nullable
+    public TelephoneNumberManagementRoot getTelephoneNumberManagement() {
+        return this.backingStore.get("telephoneNumberManagement");
     }
     /**
      * Gets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams
@@ -60,6 +69,7 @@ public class TeamsAdminRoot extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("policy", this.getPolicy());
+        writer.writeObjectValue("telephoneNumberManagement", this.getTelephoneNumberManagement());
         writer.writeCollectionOfObjectValues("userConfigurations", this.getUserConfigurations());
     }
     /**
@@ -68,6 +78,13 @@ public class TeamsAdminRoot extends Entity implements Parsable {
      */
     public void setPolicy(@jakarta.annotation.Nullable final TeamsPolicyAssignment value) {
         this.backingStore.set("policy", value);
+    }
+    /**
+     * Sets the telephoneNumberManagement property value. Represents a collection of available telephone number management operations.
+     * @param value Value to set for the telephoneNumberManagement property.
+     */
+    public void setTelephoneNumberManagement(@jakarta.annotation.Nullable final TelephoneNumberManagementRoot value) {
+        this.backingStore.set("telephoneNumberManagement", value);
     }
     /**
      * Sets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams
