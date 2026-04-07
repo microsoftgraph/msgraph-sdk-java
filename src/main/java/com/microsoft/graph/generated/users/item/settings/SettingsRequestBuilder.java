@@ -6,6 +6,7 @@ import com.microsoft.graph.users.item.settings.iteminsights.ItemInsightsRequestB
 import com.microsoft.graph.users.item.settings.shiftpreferences.ShiftPreferencesRequestBuilder;
 import com.microsoft.graph.users.item.settings.storage.StorageRequestBuilder;
 import com.microsoft.graph.users.item.settings.windows.WindowsRequestBuilder;
+import com.microsoft.graph.users.item.settings.workhoursandlocations.WorkHoursAndLocationsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -55,6 +56,14 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public WindowsRequestBuilder windows() {
         return new WindowsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the workHoursAndLocations property of the microsoft.graph.userSettings entity.
+     * @return a {@link WorkHoursAndLocationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WorkHoursAndLocationsRequestBuilder workHoursAndLocations() {
+        return new WorkHoursAndLocationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SettingsRequestBuilder} and sets the default values.

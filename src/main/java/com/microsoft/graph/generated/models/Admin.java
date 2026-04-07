@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.teamsadministration.TeamsAdminRoot;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -64,19 +65,29 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("edge");
     }
     /**
+     * Gets the exchange property value. A container for the Exchange admin functionality. Read-only.
+     * @return a {@link ExchangeAdmin}
+     */
+    @jakarta.annotation.Nullable
+    public ExchangeAdmin getExchange() {
+        return this.backingStore.get("exchange");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
+        deserializerMap.put("exchange", (n) -> { this.setExchange(n.getObjectValue(ExchangeAdmin::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoft365Apps", (n) -> { this.setMicrosoft365Apps(n.getObjectValue(AdminMicrosoft365Apps::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("people", (n) -> { this.setPeople(n.getObjectValue(PeopleAdminSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("reportSettings", (n) -> { this.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceAnnouncement", (n) -> { this.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepoint", (n) -> { this.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
+        deserializerMap.put("teams", (n) -> { this.setTeams(n.getObjectValue(TeamsAdminRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -128,18 +139,28 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("sharepoint");
     }
     /**
+     * Gets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * @return a {@link TeamsAdminRoot}
+     */
+    @jakarta.annotation.Nullable
+    public TeamsAdminRoot getTeams() {
+        return this.backingStore.get("teams");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("edge", this.getEdge());
+        writer.writeObjectValue("exchange", this.getExchange());
         writer.writeObjectValue("microsoft365Apps", this.getMicrosoft365Apps());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("people", this.getPeople());
         writer.writeObjectValue("reportSettings", this.getReportSettings());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
         writer.writeObjectValue("sharepoint", this.getSharepoint());
+        writer.writeObjectValue("teams", this.getTeams());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -163,6 +184,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setEdge(@jakarta.annotation.Nullable final Edge value) {
         this.backingStore.set("edge", value);
+    }
+    /**
+     * Sets the exchange property value. A container for the Exchange admin functionality. Read-only.
+     * @param value Value to set for the exchange property.
+     */
+    public void setExchange(@jakarta.annotation.Nullable final ExchangeAdmin value) {
+        this.backingStore.set("exchange", value);
     }
     /**
      * Sets the microsoft365Apps property value. A container for the Microsoft 365 apps admin functionality.
@@ -205,5 +233,12 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setSharepoint(@jakarta.annotation.Nullable final Sharepoint value) {
         this.backingStore.set("sharepoint", value);
+    }
+    /**
+     * Sets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * @param value Value to set for the teams property.
+     */
+    public void setTeams(@jakarta.annotation.Nullable final TeamsAdminRoot value) {
+        this.backingStore.set("teams", value);
     }
 }

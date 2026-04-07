@@ -64,7 +64,7 @@ public class WindowsSettingItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @return a {@link WindowsSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class WindowsSettingItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class WindowsSettingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class WindowsSettingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class WindowsSettingItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

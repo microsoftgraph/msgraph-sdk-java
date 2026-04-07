@@ -27,6 +27,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         return new FileStorageContainer();
     }
     /**
+     * Gets the assignedSensitivityLabel property value. Sensitivity label assigned to the fileStorageContainer. Read-write.
+     * @return a {@link AssignedLabel}
+     */
+    @jakarta.annotation.Nullable
+    public AssignedLabel getAssignedSensitivityLabel() {
+        return this.backingStore.get("assignedSensitivityLabel");
+    }
+    /**
      * Gets the columns property value. The columns property
      * @return a {@link java.util.List<ColumnDefinition>}
      */
@@ -89,6 +97,7 @@ public class FileStorageContainer extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedSensitivityLabel", (n) -> { this.setAssignedSensitivityLabel(n.getObjectValue(AssignedLabel::createFromDiscriminatorValue)); });
         deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("containerTypeId", (n) -> { this.setContainerTypeId(n.getUUIDValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -168,6 +177,7 @@ public class FileStorageContainer extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("assignedSensitivityLabel", this.getAssignedSensitivityLabel());
         writer.writeCollectionOfObjectValues("columns", this.getColumns());
         writer.writeUUIDValue("containerTypeId", this.getContainerTypeId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -182,6 +192,13 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeObjectValue("viewpoint", this.getViewpoint());
+    }
+    /**
+     * Sets the assignedSensitivityLabel property value. Sensitivity label assigned to the fileStorageContainer. Read-write.
+     * @param value Value to set for the assignedSensitivityLabel property.
+     */
+    public void setAssignedSensitivityLabel(@jakarta.annotation.Nullable final AssignedLabel value) {
+        this.backingStore.set("assignedSensitivityLabel", value);
     }
     /**
      * Sets the columns property value. The columns property

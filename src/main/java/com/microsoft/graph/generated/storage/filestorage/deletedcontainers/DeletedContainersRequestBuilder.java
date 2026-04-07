@@ -60,7 +60,7 @@ public class DeletedContainersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/deletedContainers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @return a {@link FileStorageContainerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class DeletedContainersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class DeletedContainersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainer::createFromDiscriminatorValue);
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class DeletedContainersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class DeletedContainersRequestBuilder extends BaseRequestBuilder {
         return new DeletedContainersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

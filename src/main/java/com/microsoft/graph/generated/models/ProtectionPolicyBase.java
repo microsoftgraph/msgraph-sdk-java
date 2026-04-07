@@ -68,11 +68,21 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("protectionPolicyArtifactCount", (n) -> { this.setProtectionPolicyArtifactCount(n.getObjectValue(ProtectionPolicyArtifactCount::createFromDiscriminatorValue)); });
         deserializerMap.put("retentionSettings", (n) -> { this.setRetentionSettings(n.getCollectionOfObjectValues(RetentionSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProtectionPolicyStatus::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isEnabled property value. The isEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsEnabled() {
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the lastModifiedBy property value. The identity of the person who last modified the policy.
@@ -89,6 +99,14 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the protectionPolicyArtifactCount property value. The protectionPolicyArtifactCount property
+     * @return a {@link ProtectionPolicyArtifactCount}
+     */
+    @jakarta.annotation.Nullable
+    public ProtectionPolicyArtifactCount getProtectionPolicyArtifactCount() {
+        return this.backingStore.get("protectionPolicyArtifactCount");
     }
     /**
      * Gets the retentionSettings property value. Contains the retention setting details for the policy.
@@ -116,8 +134,10 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeObjectValue("protectionPolicyArtifactCount", this.getProtectionPolicyArtifactCount());
         writer.writeCollectionOfObjectValues("retentionSettings", this.getRetentionSettings());
         writer.writeEnumValue("status", this.getStatus());
     }
@@ -143,6 +163,13 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the isEnabled property value. The isEnabled property
+     * @param value Value to set for the isEnabled property.
+     */
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isEnabled", value);
+    }
+    /**
      * Sets the lastModifiedBy property value. The identity of the person who last modified the policy.
      * @param value Value to set for the lastModifiedBy property.
      */
@@ -155,6 +182,13 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the protectionPolicyArtifactCount property value. The protectionPolicyArtifactCount property
+     * @param value Value to set for the protectionPolicyArtifactCount property.
+     */
+    public void setProtectionPolicyArtifactCount(@jakarta.annotation.Nullable final ProtectionPolicyArtifactCount value) {
+        this.backingStore.set("protectionPolicyArtifactCount", value);
     }
     /**
      * Sets the retentionSettings property value. Contains the retention setting details for the policy.

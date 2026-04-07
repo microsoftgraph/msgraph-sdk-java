@@ -25,6 +25,7 @@ public enum UsageRights implements ValuedEnum {
     EncryptedProtectionTypeNotSupportedException("encryptedProtectionTypeNotSupportedException"),
     PurviewClaimsChallengeNotSupportedException("purviewClaimsChallengeNotSupportedException"),
     Exception("exception"),
+    LabelNotFoundException("labelNotFoundException"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     UsageRights(final String value) {
@@ -56,6 +57,7 @@ public enum UsageRights implements ValuedEnum {
             case "encryptedProtectionTypeNotSupportedException": return EncryptedProtectionTypeNotSupportedException;
             case "purviewClaimsChallengeNotSupportedException": return PurviewClaimsChallengeNotSupportedException;
             case "exception": return Exception;
+            case "labelNotFoundException": return LabelNotFoundException;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

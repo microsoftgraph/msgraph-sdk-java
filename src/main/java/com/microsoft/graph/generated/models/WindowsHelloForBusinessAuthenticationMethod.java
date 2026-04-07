@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -25,14 +24,6 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     public static WindowsHelloForBusinessAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsHelloForBusinessAuthenticationMethod();
-    }
-    /**
-     * Gets the createdDateTime property value. The date and time that this Windows Hello for Business key was registered.
-     * @return a {@link OffsetDateTime}
-     */
-    @jakarta.annotation.Nullable
-    public OffsetDateTime getCreatedDateTime() {
-        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user&apos;s Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
@@ -57,7 +48,6 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("keyStrength", (n) -> { this.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength::forValue)); });
@@ -78,17 +68,9 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("device", this.getDevice());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("keyStrength", this.getKeyStrength());
-    }
-    /**
-     * Sets the createdDateTime property value. The date and time that this Windows Hello for Business key was registered.
-     * @param value Value to set for the createdDateTime property.
-     */
-    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user&apos;s Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.

@@ -89,6 +89,8 @@ public class Room extends Place implements Parsable {
         deserializerMap.put("floorLabel", (n) -> { this.setFloorLabel(n.getStringValue()); });
         deserializerMap.put("floorNumber", (n) -> { this.setFloorNumber(n.getIntegerValue()); });
         deserializerMap.put("nickname", (n) -> { this.setNickname(n.getStringValue()); });
+        deserializerMap.put("placeId", (n) -> { this.setPlaceId(n.getStringValue()); });
+        deserializerMap.put("teamsEnabledState", (n) -> { this.setTeamsEnabledState(n.getEnumValue(PlaceFeatureEnablement::forValue)); });
         deserializerMap.put("videoDeviceName", (n) -> { this.setVideoDeviceName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -117,6 +119,22 @@ public class Room extends Place implements Parsable {
         return this.backingStore.get("nickname");
     }
     /**
+     * Gets the placeId property value. An alternative immutable unique identifier of the room. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPlaceId() {
+        return this.backingStore.get("placeId");
+    }
+    /**
+     * Gets the teamsEnabledState property value. The teamsEnabledState property
+     * @return a {@link PlaceFeatureEnablement}
+     */
+    @jakarta.annotation.Nullable
+    public PlaceFeatureEnablement getTeamsEnabledState() {
+        return this.backingStore.get("teamsEnabledState");
+    }
+    /**
      * Gets the videoDeviceName property value. Specifies the name of the video device in the room.
      * @return a {@link String}
      */
@@ -140,6 +158,8 @@ public class Room extends Place implements Parsable {
         writer.writeStringValue("floorLabel", this.getFloorLabel());
         writer.writeIntegerValue("floorNumber", this.getFloorNumber());
         writer.writeStringValue("nickname", this.getNickname());
+        writer.writeStringValue("placeId", this.getPlaceId());
+        writer.writeEnumValue("teamsEnabledState", this.getTeamsEnabledState());
         writer.writeStringValue("videoDeviceName", this.getVideoDeviceName());
     }
     /**
@@ -204,6 +224,20 @@ public class Room extends Place implements Parsable {
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("nickname", value);
+    }
+    /**
+     * Sets the placeId property value. An alternative immutable unique identifier of the room. Read-only.
+     * @param value Value to set for the placeId property.
+     */
+    public void setPlaceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("placeId", value);
+    }
+    /**
+     * Sets the teamsEnabledState property value. The teamsEnabledState property
+     * @param value Value to set for the teamsEnabledState property.
+     */
+    public void setTeamsEnabledState(@jakarta.annotation.Nullable final PlaceFeatureEnablement value) {
+        this.backingStore.set("teamsEnabledState", value);
     }
     /**
      * Sets the videoDeviceName property value. Specifies the name of the video device in the room.

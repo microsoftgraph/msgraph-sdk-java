@@ -33,6 +33,14 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("emailMethods");
     }
     /**
+     * Gets the externalAuthenticationMethods property value. Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * @return a {@link java.util.List<ExternalAuthenticationMethod>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ExternalAuthenticationMethod> getExternalAuthenticationMethods() {
+        return this.backingStore.get("externalAuthenticationMethods");
+    }
+    /**
      * Gets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
      * @return a {@link java.util.List<Fido2AuthenticationMethod>}
      */
@@ -48,6 +56,7 @@ public class Authentication extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("emailMethods", (n) -> { this.setEmailMethods(n.getCollectionOfObjectValues(EmailAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalAuthenticationMethods", (n) -> { this.setExternalAuthenticationMethods(n.getCollectionOfObjectValues(ExternalAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("fido2Methods", (n) -> { this.setFido2Methods(n.getCollectionOfObjectValues(Fido2AuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("methods", (n) -> { this.setMethods(n.getCollectionOfObjectValues(AuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoftAuthenticatorMethods", (n) -> { this.setMicrosoftAuthenticatorMethods(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue)); });
@@ -140,6 +149,7 @@ public class Authentication extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("emailMethods", this.getEmailMethods());
+        writer.writeCollectionOfObjectValues("externalAuthenticationMethods", this.getExternalAuthenticationMethods());
         writer.writeCollectionOfObjectValues("fido2Methods", this.getFido2Methods());
         writer.writeCollectionOfObjectValues("methods", this.getMethods());
         writer.writeCollectionOfObjectValues("microsoftAuthenticatorMethods", this.getMicrosoftAuthenticatorMethods());
@@ -157,6 +167,13 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setEmailMethods(@jakarta.annotation.Nullable final java.util.List<EmailAuthenticationMethod> value) {
         this.backingStore.set("emailMethods", value);
+    }
+    /**
+     * Sets the externalAuthenticationMethods property value. Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * @param value Value to set for the externalAuthenticationMethods property.
+     */
+    public void setExternalAuthenticationMethods(@jakarta.annotation.Nullable final java.util.List<ExternalAuthenticationMethod> value) {
+        this.backingStore.set("externalAuthenticationMethods", value);
     }
     /**
      * Sets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.

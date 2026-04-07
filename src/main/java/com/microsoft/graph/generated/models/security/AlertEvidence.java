@@ -37,6 +37,7 @@ public class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsabl
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.security.activeDirectoryDomainEvidence": return new ActiveDirectoryDomainEvidence();
                 case "#microsoft.graph.security.aiAgentEvidence": return new AiAgentEvidence();
                 case "#microsoft.graph.security.amazonResourceEvidence": return new AmazonResourceEvidence();
                 case "#microsoft.graph.security.analyzedMessageEvidence": return new AnalyzedMessageEvidence();

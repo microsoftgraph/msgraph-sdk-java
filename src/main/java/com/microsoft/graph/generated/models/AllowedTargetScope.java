@@ -14,6 +14,7 @@ public enum AllowedTargetScope implements ValuedEnum {
     AllDirectoryServicePrincipals("allDirectoryServicePrincipals"),
     AllConfiguredConnectedOrganizationUsers("allConfiguredConnectedOrganizationUsers"),
     AllExternalUsers("allExternalUsers"),
+    AllDirectoryAgentIdentities("allDirectoryAgentIdentities"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AllowedTargetScope(final String value) {
@@ -34,6 +35,7 @@ public enum AllowedTargetScope implements ValuedEnum {
             case "allDirectoryServicePrincipals": return AllDirectoryServicePrincipals;
             case "allConfiguredConnectedOrganizationUsers": return AllConfiguredConnectedOrganizationUsers;
             case "allExternalUsers": return AllExternalUsers;
+            case "allDirectoryAgentIdentities": return AllDirectoryAgentIdentities;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

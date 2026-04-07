@@ -61,10 +61,11 @@ public class Workspace extends Place implements Parsable {
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("mode", (n) -> { this.setMode(n.getObjectValue(PlaceMode::createFromDiscriminatorValue)); });
         deserializerMap.put("nickname", (n) -> { this.setNickname(n.getStringValue()); });
+        deserializerMap.put("placeId", (n) -> { this.setPlaceId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms Pro management portal.
+     * Gets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms pro management portal.unavailablePlaceMode - Workspaces that are taken down for maintenance or marked as not reservable.
      * @return a {@link PlaceMode}
      */
     @jakarta.annotation.Nullable
@@ -80,6 +81,14 @@ public class Workspace extends Place implements Parsable {
         return this.backingStore.get("nickname");
     }
     /**
+     * Gets the placeId property value. An alternative immutable unique identifier of the workspace. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPlaceId() {
+        return this.backingStore.get("placeId");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -91,6 +100,7 @@ public class Workspace extends Place implements Parsable {
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeObjectValue("mode", this.getMode());
         writer.writeStringValue("nickname", this.getNickname());
+        writer.writeStringValue("placeId", this.getPlaceId());
     }
     /**
      * Sets the capacity property value. The maximum number of individual desks within a workspace.
@@ -114,7 +124,7 @@ public class Workspace extends Place implements Parsable {
         this.backingStore.set("emailAddress", value);
     }
     /**
-     * Sets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms Pro management portal.
+     * Sets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms pro management portal.unavailablePlaceMode - Workspaces that are taken down for maintenance or marked as not reservable.
      * @param value Value to set for the mode property.
      */
     public void setMode(@jakarta.annotation.Nullable final PlaceMode value) {
@@ -126,5 +136,12 @@ public class Workspace extends Place implements Parsable {
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("nickname", value);
+    }
+    /**
+     * Sets the placeId property value. An alternative immutable unique identifier of the workspace. Read-only.
+     * @param value Value to set for the placeId property.
+     */
+    public void setPlaceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("placeId", value);
     }
 }

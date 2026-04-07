@@ -48,7 +48,7 @@ public class RestorePointSearchResult implements AdditionalDataHolder, BackedMod
         return value;
     }
     /**
-     * Gets the artifactHitCount property value. Total number of artifacts restored.
+     * Gets the artifactHitCount property value. Total number of mailbox items that can be restored for a granular restore session.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class RestorePointSearchResult implements AdditionalDataHolder, BackedMod
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the artifactHitCount property value. Total number of artifacts restored.
+     * Sets the artifactHitCount property value. Total number of mailbox items that can be restored for a granular restore session.
      * @param value Value to set for the artifactHitCount property.
      */
     public void setArtifactHitCount(@jakarta.annotation.Nullable final Integer value) {

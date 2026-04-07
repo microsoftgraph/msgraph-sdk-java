@@ -52,6 +52,14 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
+     * Gets the adhocCalls property value. The adhocCalls property
+     * @return a {@link java.util.List<AdhocCall>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AdhocCall> getAdhocCalls() {
+        return this.backingStore.get("adhocCalls");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -81,7 +89,8 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("adhocCalls", (n) -> { this.setAdhocCalls(n.getCollectionOfObjectValues(AdhocCall::createFromDiscriminatorValue)); });
         deserializerMap.put("callRecords", (n) -> { this.setCallRecords(n.getCollectionOfObjectValues(CallRecord::createFromDiscriminatorValue)); });
         deserializerMap.put("calls", (n) -> { this.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -128,6 +137,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("adhocCalls", this.getAdhocCalls());
         writer.writeCollectionOfObjectValues("callRecords", this.getCallRecords());
         writer.writeCollectionOfObjectValues("calls", this.getCalls());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -142,6 +152,13 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the adhocCalls property value. The adhocCalls property
+     * @param value Value to set for the adhocCalls property.
+     */
+    public void setAdhocCalls(@jakarta.annotation.Nullable final java.util.List<AdhocCall> value) {
+        this.backingStore.set("adhocCalls", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

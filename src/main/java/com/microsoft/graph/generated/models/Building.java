@@ -34,6 +34,7 @@ public class Building extends Place implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("map", (n) -> { this.setMap(n.getObjectValue(BuildingMap::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceLinks", (n) -> { this.setResourceLinks(n.getCollectionOfObjectValues(ResourceLink::createFromDiscriminatorValue)); });
+        deserializerMap.put("wifiState", (n) -> { this.setWifiState(n.getEnumValue(PlaceFeatureEnablement::forValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class Building extends Place implements Parsable {
         return this.backingStore.get("resourceLinks");
     }
     /**
+     * Gets the wifiState property value. The wifiState property
+     * @return a {@link PlaceFeatureEnablement}
+     */
+    @jakarta.annotation.Nullable
+    public PlaceFeatureEnablement getWifiState() {
+        return this.backingStore.get("wifiState");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class Building extends Place implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("map", this.getMap());
         writer.writeCollectionOfObjectValues("resourceLinks", this.getResourceLinks());
+        writer.writeEnumValue("wifiState", this.getWifiState());
     }
     /**
      * Sets the map property value. Map file associated with a building in Places. This object is the IMDF-format representation of building.geojson.
@@ -75,5 +85,12 @@ public class Building extends Place implements Parsable {
      */
     public void setResourceLinks(@jakarta.annotation.Nullable final java.util.List<ResourceLink> value) {
         this.backingStore.set("resourceLinks", value);
+    }
+    /**
+     * Sets the wifiState property value. The wifiState property
+     * @param value Value to set for the wifiState property.
+     */
+    public void setWifiState(@jakarta.annotation.Nullable final PlaceFeatureEnablement value) {
+        this.backingStore.set("wifiState", value);
     }
 }

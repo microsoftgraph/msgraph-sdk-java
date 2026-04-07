@@ -27,7 +27,7 @@ public class MailboxConfigurationEvidence extends AlertEvidence implements Parsa
         return new MailboxConfigurationEvidence();
     }
     /**
-     * Gets the configurationId property value. The configurationId property
+     * Gets the configurationId property value. The unique identifier of the mailbox configuration.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class MailboxConfigurationEvidence extends AlertEvidence implements Parsa
         return this.backingStore.get("configurationId");
     }
     /**
-     * Gets the configurationType property value. The configurationType property
+     * Gets the configurationType property value. The type of mailbox configuration. The possible values are: mailForwardingRule, owaSettings, ewsSettings, mailDelegation, userInboxRule, unknownFutureValue.
      * @return a {@link MailboxConfigurationType}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class MailboxConfigurationEvidence extends AlertEvidence implements Parsa
         return this.backingStore.get("configurationType");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class MailboxConfigurationEvidence extends AlertEvidence implements Parsa
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the externalDirectoryObjectId property value. The externalDirectoryObjectId property
+     * Gets the externalDirectoryObjectId property value. The external directory object identifier of the mailbox.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class MailboxConfigurationEvidence extends AlertEvidence implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the mailboxPrimaryAddress property value. The mailboxPrimaryAddress property
+     * Gets the mailboxPrimaryAddress property value. The primary email address of the mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class MailboxConfigurationEvidence extends AlertEvidence implements Parsa
         return this.backingStore.get("mailboxPrimaryAddress");
     }
     /**
-     * Gets the upn property value. The upn property
+     * Gets the upn property value. The user principal name (UPN) of the mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,42 +104,42 @@ public class MailboxConfigurationEvidence extends AlertEvidence implements Parsa
         writer.writeStringValue("upn", this.getUpn());
     }
     /**
-     * Sets the configurationId property value. The configurationId property
+     * Sets the configurationId property value. The unique identifier of the mailbox configuration.
      * @param value Value to set for the configurationId property.
      */
     public void setConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("configurationId", value);
     }
     /**
-     * Sets the configurationType property value. The configurationType property
+     * Sets the configurationType property value. The type of mailbox configuration. The possible values are: mailForwardingRule, owaSettings, ewsSettings, mailDelegation, userInboxRule, unknownFutureValue.
      * @param value Value to set for the configurationType property.
      */
     public void setConfigurationType(@jakarta.annotation.Nullable final MailboxConfigurationType value) {
         this.backingStore.set("configurationType", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the mailbox.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the externalDirectoryObjectId property value. The externalDirectoryObjectId property
+     * Sets the externalDirectoryObjectId property value. The external directory object identifier of the mailbox.
      * @param value Value to set for the externalDirectoryObjectId property.
      */
     public void setExternalDirectoryObjectId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("externalDirectoryObjectId", value);
     }
     /**
-     * Sets the mailboxPrimaryAddress property value. The mailboxPrimaryAddress property
+     * Sets the mailboxPrimaryAddress property value. The primary email address of the mailbox.
      * @param value Value to set for the mailboxPrimaryAddress property.
      */
     public void setMailboxPrimaryAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mailboxPrimaryAddress", value);
     }
     /**
-     * Sets the upn property value. The upn property
+     * Sets the upn property value. The user principal name (UPN) of the mailbox.
      * @param value Value to set for the upn property.
      */
     public void setUpn(@jakarta.annotation.Nullable final String value) {

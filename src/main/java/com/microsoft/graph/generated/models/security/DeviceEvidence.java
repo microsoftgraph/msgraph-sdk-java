@@ -35,7 +35,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("azureAdDeviceId");
     }
     /**
-     * Gets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
+     * Gets the defenderAvStatus property value. State of the Defender anti-malware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      * @return a {@link DefenderAvStatus}
      */
     @jakarta.annotation.Nullable
@@ -83,6 +83,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         deserializerMap.put("osPlatform", (n) -> { this.setOsPlatform(n.getStringValue()); });
         deserializerMap.put("rbacGroupId", (n) -> { this.setRbacGroupId(n.getIntegerValue()); });
         deserializerMap.put("rbacGroupName", (n) -> { this.setRbacGroupName(n.getStringValue()); });
+        deserializerMap.put("resourceAccessEvents", (n) -> { this.setResourceAccessEvents(n.getCollectionOfObjectValues(ResourceAccessEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getEnumValue(DeviceRiskScore::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         deserializerMap.put("vmMetadata", (n) -> { this.setVmMetadata(n.getObjectValue(VmMetadata::createFromDiscriminatorValue)); });
@@ -201,6 +202,14 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("rbacGroupName");
     }
     /**
+     * Gets the resourceAccessEvents property value. Information on resource access attempts made by the user account.
+     * @return a {@link java.util.List<ResourceAccessEvent>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ResourceAccessEvent> getResourceAccessEvents() {
+        return this.backingStore.get("resourceAccessEvents");
+    }
+    /**
      * Gets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
      * @return a {@link DeviceRiskScore}
      */
@@ -249,6 +258,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("osPlatform", this.getOsPlatform());
         writer.writeIntegerValue("rbacGroupId", this.getRbacGroupId());
         writer.writeStringValue("rbacGroupName", this.getRbacGroupName());
+        writer.writeCollectionOfObjectValues("resourceAccessEvents", this.getResourceAccessEvents());
         writer.writeEnumValue("riskScore", this.getRiskScore());
         writer.writeStringValue("version", this.getVersion());
         writer.writeObjectValue("vmMetadata", this.getVmMetadata());
@@ -261,7 +271,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this.backingStore.set("azureAdDeviceId", value);
     }
     /**
-     * Sets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
+     * Sets the defenderAvStatus property value. State of the Defender anti-malware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      * @param value Value to set for the defenderAvStatus property.
      */
     public void setDefenderAvStatus(@jakarta.annotation.Nullable final DefenderAvStatus value) {
@@ -378,6 +388,13 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     public void setRbacGroupName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("rbacGroupName", value);
+    }
+    /**
+     * Sets the resourceAccessEvents property value. Information on resource access attempts made by the user account.
+     * @param value Value to set for the resourceAccessEvents property.
+     */
+    public void setResourceAccessEvents(@jakarta.annotation.Nullable final java.util.List<ResourceAccessEvent> value) {
+        this.backingStore.set("resourceAccessEvents", value);
     }
     /**
      * Sets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.

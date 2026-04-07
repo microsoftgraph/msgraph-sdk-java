@@ -32,6 +32,7 @@ public class AiUser extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("interactionHistory", (n) -> { this.setInteractionHistory(n.getObjectValue(AiInteractionHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("onlineMeetings", (n) -> { this.setOnlineMeetings(n.getCollectionOfObjectValues(AiOnlineMeeting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -43,6 +44,14 @@ public class AiUser extends Entity implements Parsable {
         return this.backingStore.get("interactionHistory");
     }
     /**
+     * Gets the onlineMeetings property value. The onlineMeetings property
+     * @return a {@link java.util.List<AiOnlineMeeting>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AiOnlineMeeting> getOnlineMeetings() {
+        return this.backingStore.get("onlineMeetings");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -50,6 +59,7 @@ public class AiUser extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("interactionHistory", this.getInteractionHistory());
+        writer.writeCollectionOfObjectValues("onlineMeetings", this.getOnlineMeetings());
     }
     /**
      * Sets the interactionHistory property value. The interactionHistory property
@@ -57,5 +67,12 @@ public class AiUser extends Entity implements Parsable {
      */
     public void setInteractionHistory(@jakarta.annotation.Nullable final AiInteractionHistory value) {
         this.backingStore.set("interactionHistory", value);
+    }
+    /**
+     * Sets the onlineMeetings property value. The onlineMeetings property
+     * @param value Value to set for the onlineMeetings property.
+     */
+    public void setOnlineMeetings(@jakarta.annotation.Nullable final java.util.List<AiOnlineMeeting> value) {
+        this.backingStore.set("onlineMeetings", value);
     }
 }

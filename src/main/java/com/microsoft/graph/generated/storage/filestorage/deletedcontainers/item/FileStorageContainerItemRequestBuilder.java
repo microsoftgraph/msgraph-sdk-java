@@ -154,7 +154,7 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @return a {@link FileStorageContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -163,7 +163,7 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -221,7 +221,7 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -229,7 +229,7 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -281,7 +281,7 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

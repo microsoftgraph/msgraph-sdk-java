@@ -1,5 +1,6 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.versions.item;
 
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.versions.item.administrationscopetargets.AdministrationScopeTargetsRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.versions.item.createdby.CreatedByRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.versions.item.lastmodifiedby.LastModifiedByRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.versions.item.tasks.TasksRequestBuilder;
@@ -23,6 +24,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the administrationScopeTargets property of the microsoft.graph.identityGovernance.workflowBase entity.
+     * @return a {@link AdministrationScopeTargetsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AdministrationScopeTargetsRequestBuilder administrationScopeTargets() {
+        return new AdministrationScopeTargetsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the createdBy property of the microsoft.graph.identityGovernance.workflowBase entity.
      * @return a {@link CreatedByRequestBuilder}
