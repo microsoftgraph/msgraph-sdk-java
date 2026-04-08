@@ -11,11 +11,6 @@ trigger:
     include:
       - main
 
-parameters:
-  - name: previewBranch
-    type: string
-    default: "refs/heads/main"
-
 resources:
   repositories:
     - repository: 1ESPipelineTemplates
@@ -112,7 +107,7 @@ extends:
                   targetPath: "$(PACKAGE_PATH)"
 
       - stage: deploy
-        condition: and(or(contains(variables['build.sourceBranch'], 'refs/tags/v'), eq(variables['build.sourceBranch'], '${{ parameters.previewBranch }}')), succeeded())
+        condition: and(contains(variables['build.sourceBranch'], 'refs/tags/v'), succeeded())
         dependsOn: build
         jobs:
           - deployment: deploy_maven
