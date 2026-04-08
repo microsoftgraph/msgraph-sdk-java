@@ -41,6 +41,7 @@ public class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends Bas
      * Get a list of exchangeMessageTraceDetail objects filtered on the recipient.
      * @return a {@link GetDetailsByRecipientWithRecipientAddressGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangemessagetrace-getdetailsbyrecipient?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetDetailsByRecipientWithRecipientAddressGetResponse get() {
@@ -51,6 +52,7 @@ public class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends Bas
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetDetailsByRecipientWithRecipientAddressGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangemessagetrace-getdetailsbyrecipient?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetDetailsByRecipientWithRecipientAddressGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

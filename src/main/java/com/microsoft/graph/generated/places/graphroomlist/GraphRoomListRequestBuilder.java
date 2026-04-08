@@ -46,19 +46,21 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/graph.roomList{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the items of type microsoft.graph.roomList in the microsoft.graph.place collection
+     * Read the properties of a place object specified by its ID. The place object can be one of the following types: The listed resources are derived from the place object.
      * @return a {@link RoomListCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoomListCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the items of type microsoft.graph.roomList in the microsoft.graph.place collection
+     * Read the properties of a place object specified by its ID. The place object can be one of the following types: The listed resources are derived from the place object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoomListCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoomListCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -68,7 +70,7 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RoomListCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the items of type microsoft.graph.roomList in the microsoft.graph.place collection
+     * Read the properties of a place object specified by its ID. The place object can be one of the following types: The listed resources are derived from the place object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +78,7 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the items of type microsoft.graph.roomList in the microsoft.graph.place collection
+     * Read the properties of a place object specified by its ID. The place object can be one of the following types: The listed resources are derived from the place object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -98,7 +100,7 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
         return new GraphRoomListRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the items of type microsoft.graph.roomList in the microsoft.graph.place collection
+     * Read the properties of a place object specified by its ID. The place object can be one of the following types: The listed resources are derived from the place object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

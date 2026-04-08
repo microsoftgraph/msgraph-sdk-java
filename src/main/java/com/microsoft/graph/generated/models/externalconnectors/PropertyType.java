@@ -14,7 +14,9 @@ public enum PropertyType implements ValuedEnum {
     Int64Collection("int64Collection"),
     DoubleCollection("doubleCollection"),
     DateTimeCollection("dateTimeCollection"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Principal("principal"),
+    PrincipalCollection("principalCollection");
     public final String value;
     PropertyType(final String value) {
         this.value = value;
@@ -35,6 +37,8 @@ public enum PropertyType implements ValuedEnum {
             case "doubleCollection": return DoubleCollection;
             case "dateTimeCollection": return DateTimeCollection;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "principal": return Principal;
+            case "principalCollection": return PrincipalCollection;
             default: return null;
         }
     }

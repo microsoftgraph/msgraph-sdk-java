@@ -35,7 +35,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("assignedSensitivityLabel");
     }
     /**
-     * Gets the columns property value. The columns property
+     * Gets the columns property value. The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      * @return a {@link java.util.List<ColumnDefinition>}
      */
     @jakarta.annotation.Nullable
@@ -110,6 +110,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("recycleBin", (n) -> { this.setRecycleBin(n.getObjectValue(RecycleBin::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(FileStorageContainerSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharePointGroups", (n) -> { this.setSharePointGroups(n.getCollectionOfObjectValues(SharePointGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(FileStorageContainerStatus::forValue)); });
         deserializerMap.put("viewpoint", (n) -> { this.setViewpoint(n.getObjectValue(FileStorageContainerViewpoint::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -155,6 +156,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("settings");
     }
     /**
+     * Gets the sharePointGroups property value. The sharePointGroups property
+     * @return a {@link java.util.List<SharePointGroup>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SharePointGroup> getSharePointGroups() {
+        return this.backingStore.get("sharePointGroups");
+    }
+    /**
      * Gets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive, active. Read-only.
      * @return a {@link FileStorageContainerStatus}
      */
@@ -190,6 +199,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("recycleBin", this.getRecycleBin());
         writer.writeObjectValue("settings", this.getSettings());
+        writer.writeCollectionOfObjectValues("sharePointGroups", this.getSharePointGroups());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeObjectValue("viewpoint", this.getViewpoint());
     }
@@ -201,7 +211,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("assignedSensitivityLabel", value);
     }
     /**
-     * Sets the columns property value. The columns property
+     * Sets the columns property value. The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      * @param value Value to set for the columns property.
      */
     public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
@@ -283,6 +293,13 @@ public class FileStorageContainer extends Entity implements Parsable {
      */
     public void setSettings(@jakarta.annotation.Nullable final FileStorageContainerSettings value) {
         this.backingStore.set("settings", value);
+    }
+    /**
+     * Sets the sharePointGroups property value. The sharePointGroups property
+     * @param value Value to set for the sharePointGroups property.
+     */
+    public void setSharePointGroups(@jakarta.annotation.Nullable final java.util.List<SharePointGroup> value) {
+        this.backingStore.set("sharePointGroups", value);
     }
     /**
      * Sets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive, active. Read-only.

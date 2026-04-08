@@ -27,6 +27,13 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nonnull
     public static User createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.agentUser": return new AgentUser();
+            }
+        }
         return new User();
     }
     /**
@@ -481,6 +488,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
         deserializerMap.put("hireDate", (n) -> { this.setHireDate(n.getOffsetDateTimeValue()); });
         deserializerMap.put("identities", (n) -> { this.setIdentities(n.getCollectionOfObjectValues(ObjectIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityParentId", (n) -> { this.setIdentityParentId(n.getStringValue()); });
         deserializerMap.put("imAddresses", (n) -> { this.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
@@ -594,6 +602,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<ObjectIdentity> getIdentities() {
         return this.backingStore.get("identities");
+    }
+    /**
+     * Gets the identityParentId property value. The identityParentId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getIdentityParentId() {
+        return this.backingStore.get("identityParentId");
     }
     /**
      * Gets the imAddresses property value. The instant message voice-over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith).
@@ -1295,6 +1311,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("givenName", this.getGivenName());
         writer.writeOffsetDateTimeValue("hireDate", this.getHireDate());
         writer.writeCollectionOfObjectValues("identities", this.getIdentities());
+        writer.writeStringValue("identityParentId", this.getIdentityParentId());
         writer.writeCollectionOfPrimitiveValues("imAddresses", this.getImAddresses());
         writer.writeObjectValue("inferenceClassification", this.getInferenceClassification());
         writer.writeObjectValue("insights", this.getInsights());
@@ -1746,6 +1763,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setIdentities(@jakarta.annotation.Nullable final java.util.List<ObjectIdentity> value) {
         this.backingStore.set("identities", value);
+    }
+    /**
+     * Sets the identityParentId property value. The identityParentId property
+     * @param value Value to set for the identityParentId property.
+     */
+    public void setIdentityParentId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("identityParentId", value);
     }
     /**
      * Sets the imAddresses property value. The instant message voice-over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith).

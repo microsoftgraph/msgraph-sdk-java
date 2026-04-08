@@ -26,6 +26,13 @@ public class Application extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.agentIdentityBlueprint": return new AgentIdentityBlueprint();
+            }
+        }
         return new Application();
     }
     /**
@@ -91,6 +98,14 @@ public class Application extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Certification getCertification() {
         return this.backingStore.get("certification");
+    }
+    /**
+     * Gets the createdByAppId property value. The appId of the application that created this application. Set internally by Microsoft Entra ID. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCreatedByAppId() {
+        return this.backingStore.get("createdByAppId");
     }
     /**
      * Gets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderby.
@@ -171,6 +186,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("appRoles", (n) -> { this.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationBehaviors", (n) -> { this.setAuthenticationBehaviors(n.getObjectValue(AuthenticationBehaviors::createFromDiscriminatorValue)); });
         deserializerMap.put("certification", (n) -> { this.setCertification(n.getObjectValue(Certification::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdByAppId", (n) -> { this.setCreatedByAppId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdOnBehalfOf", (n) -> { this.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultRedirectUri", (n) -> { this.setDefaultRedirectUri(n.getStringValue()); });
@@ -484,6 +500,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("appRoles", this.getAppRoles());
         writer.writeObjectValue("authenticationBehaviors", this.getAuthenticationBehaviors());
         writer.writeObjectValue("certification", this.getCertification());
+        writer.writeStringValue("createdByAppId", this.getCreatedByAppId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("createdOnBehalfOf", this.getCreatedOnBehalfOf());
         writer.writeStringValue("defaultRedirectUri", this.getDefaultRedirectUri());
@@ -580,6 +597,13 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setCertification(@jakarta.annotation.Nullable final Certification value) {
         this.backingStore.set("certification", value);
+    }
+    /**
+     * Sets the createdByAppId property value. The appId of the application that created this application. Set internally by Microsoft Entra ID. Read-only.
+     * @param value Value to set for the createdByAppId property.
+     */
+    public void setCreatedByAppId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("createdByAppId", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderby.

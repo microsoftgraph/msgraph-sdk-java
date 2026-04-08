@@ -1,5 +1,6 @@
 package com.microsoft.graph.admin.exchange;
 
+import com.microsoft.graph.admin.exchange.mailboxes.MailboxesRequestBuilder;
 import com.microsoft.graph.admin.exchange.tracing.TracingRequestBuilder;
 import com.microsoft.graph.models.ExchangeAdmin;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExchangeRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the mailboxes property of the microsoft.graph.exchangeAdmin entity.
+     * @return a {@link MailboxesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxesRequestBuilder mailboxes() {
+        return new MailboxesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the tracing property of the microsoft.graph.exchangeAdmin entity.
      * @return a {@link TracingRequestBuilder}

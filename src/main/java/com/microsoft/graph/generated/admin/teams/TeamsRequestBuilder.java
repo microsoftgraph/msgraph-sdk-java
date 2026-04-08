@@ -1,6 +1,7 @@
 package com.microsoft.graph.admin.teams;
 
 import com.microsoft.graph.admin.teams.policy.PolicyRequestBuilder;
+import com.microsoft.graph.admin.teams.telephonenumbermanagement.TelephoneNumberManagementRequestBuilder;
 import com.microsoft.graph.admin.teams.userconfigurations.UserConfigurationsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.teamsadministration.TeamsAdminRoot;
@@ -29,6 +30,14 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PolicyRequestBuilder policy() {
         return new PolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the telephoneNumberManagement property of the microsoft.graph.teamsAdministration.teamsAdminRoot entity.
+     * @return a {@link TelephoneNumberManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TelephoneNumberManagementRequestBuilder telephoneNumberManagement() {
+        return new TelephoneNumberManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userConfigurations property of the microsoft.graph.teamsAdministration.teamsAdminRoot entity.
@@ -73,7 +82,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @return a {@link TeamsAdminRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +91,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAdminRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +149,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +157,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +209,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

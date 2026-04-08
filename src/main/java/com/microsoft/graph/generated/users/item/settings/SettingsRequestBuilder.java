@@ -2,6 +2,7 @@ package com.microsoft.graph.users.item.settings;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserSettings;
+import com.microsoft.graph.users.item.settings.exchange.ExchangeRequestBuilder;
 import com.microsoft.graph.users.item.settings.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.users.item.settings.shiftpreferences.ShiftPreferencesRequestBuilder;
 import com.microsoft.graph.users.item.settings.storage.StorageRequestBuilder;
@@ -25,6 +26,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SettingsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the exchange property of the microsoft.graph.userSettings entity.
+     * @return a {@link ExchangeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExchangeRequestBuilder exchange() {
+        return new ExchangeRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the itemInsights property of the microsoft.graph.userSettings entity.
      * @return a {@link ItemInsightsRequestBuilder}
