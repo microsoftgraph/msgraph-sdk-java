@@ -26,12 +26,28 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         return new ProcessConversationMetadata();
     }
     /**
-     * Gets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions).
+     * Gets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions). The accessedResources property is deprecated and stopped returning data on August 20, 2025. Going forward, use the accessedResources_v2 property.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAccessedResources() {
         return this.backingStore.get("accessedResources");
+    }
+    /**
+     * Gets the accessedResources_v2 property value. Lists details about the resources accessed by AI agents, such as identifiers, access type, and status.
+     * @return a {@link java.util.List<ResourceAccessDetail>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ResourceAccessDetail> getAccessedResourcesV2() {
+        return this.backingStore.get("accessedResourcesV2");
+    }
+    /**
+     * Gets the agents property value. Indicates the information about an AI agent that participated in the preparation of the message.
+     * @return a {@link java.util.List<AiAgentInfo>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AiAgentInfo> getAgents() {
+        return this.backingStore.get("agents");
     }
     /**
      * The deserialization information for the current model
@@ -41,6 +57,8 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessedResources", (n) -> { this.setAccessedResources(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("accessedResources_v2", (n) -> { this.setAccessedResourcesV2(n.getCollectionOfObjectValues(ResourceAccessDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("agents", (n) -> { this.setAgents(n.getCollectionOfObjectValues(AiAgentInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("parentMessageId", (n) -> { this.setParentMessageId(n.getStringValue()); });
         deserializerMap.put("plugins", (n) -> { this.setPlugins(n.getCollectionOfObjectValues(AiInteractionPlugin::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -69,15 +87,31 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("accessedResources", this.getAccessedResources());
+        writer.writeCollectionOfObjectValues("accessedResources_v2", this.getAccessedResourcesV2());
+        writer.writeCollectionOfObjectValues("agents", this.getAgents());
         writer.writeStringValue("parentMessageId", this.getParentMessageId());
         writer.writeCollectionOfObjectValues("plugins", this.getPlugins());
     }
     /**
-     * Sets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions).
+     * Sets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions). The accessedResources property is deprecated and stopped returning data on August 20, 2025. Going forward, use the accessedResources_v2 property.
      * @param value Value to set for the accessedResources property.
      */
     public void setAccessedResources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("accessedResources", value);
+    }
+    /**
+     * Sets the accessedResources_v2 property value. Lists details about the resources accessed by AI agents, such as identifiers, access type, and status.
+     * @param value Value to set for the accessedResources_v2 property.
+     */
+    public void setAccessedResourcesV2(@jakarta.annotation.Nullable final java.util.List<ResourceAccessDetail> value) {
+        this.backingStore.set("accessedResourcesV2", value);
+    }
+    /**
+     * Sets the agents property value. Indicates the information about an AI agent that participated in the preparation of the message.
+     * @param value Value to set for the agents property.
+     */
+    public void setAgents(@jakarta.annotation.Nullable final java.util.List<AiAgentInfo> value) {
+        this.backingStore.set("agents", value);
     }
     /**
      * Sets the parentMessageId property value. Identifier of the parent message in a threaded conversation, if applicable.

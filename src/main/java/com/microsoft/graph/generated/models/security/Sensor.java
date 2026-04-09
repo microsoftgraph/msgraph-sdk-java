@@ -73,6 +73,7 @@ public class Sensor extends Entity implements Parsable {
         deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(SensorHealthStatus::forValue)); });
         deserializerMap.put("openHealthIssuesCount", (n) -> { this.setOpenHealthIssuesCount(n.getLongValue()); });
         deserializerMap.put("sensorType", (n) -> { this.setSensorType(n.getEnumValue(SensorType::forValue)); });
+        deserializerMap.put("serviceStatus", (n) -> { this.setServiceStatus(n.getEnumValue(ServiceStatus::forValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(SensorSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
@@ -110,6 +111,14 @@ public class Sensor extends Entity implements Parsable {
         return this.backingStore.get("sensorType");
     }
     /**
+     * Gets the serviceStatus property value. The serviceStatus property
+     * @return a {@link ServiceStatus}
+     */
+    @jakarta.annotation.Nullable
+    public ServiceStatus getServiceStatus() {
+        return this.backingStore.get("serviceStatus");
+    }
+    /**
      * Gets the settings property value. The settings property
      * @return a {@link SensorSettings}
      */
@@ -140,6 +149,7 @@ public class Sensor extends Entity implements Parsable {
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
         writer.writeLongValue("openHealthIssuesCount", this.getOpenHealthIssuesCount());
         writer.writeEnumValue("sensorType", this.getSensorType());
+        writer.writeEnumValue("serviceStatus", this.getServiceStatus());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeStringValue("version", this.getVersion());
     }
@@ -198,6 +208,13 @@ public class Sensor extends Entity implements Parsable {
      */
     public void setSensorType(@jakarta.annotation.Nullable final SensorType value) {
         this.backingStore.set("sensorType", value);
+    }
+    /**
+     * Sets the serviceStatus property value. The serviceStatus property
+     * @param value Value to set for the serviceStatus property.
+     */
+    public void setServiceStatus(@jakarta.annotation.Nullable final ServiceStatus value) {
+        this.backingStore.set("serviceStatus", value);
     }
     /**
      * Sets the settings property value. The settings property

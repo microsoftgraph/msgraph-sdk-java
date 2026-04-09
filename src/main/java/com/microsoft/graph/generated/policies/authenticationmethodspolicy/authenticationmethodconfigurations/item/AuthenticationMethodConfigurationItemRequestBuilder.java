@@ -37,16 +37,18 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/{authenticationMethodConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property authenticationMethodConfigurations for policies
+     * Delete an externalAuthenticationMethodConfiguration object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property authenticationMethodConfigurations for policies
+     * Delete an externalAuthenticationMethodConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      * @return a {@link AuthenticationMethodConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration get() {
         return get(null);
     }
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationMethodConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property authenticationMethodConfigurations in policies
+     * Update the properties of an externalAuthenticationMethodConfiguration object.
      * @param body The request body
      * @return a {@link AuthenticationMethodConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration patch(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property authenticationMethodConfigurations in policies
+     * Update the properties of an externalAuthenticationMethodConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationMethodConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodConfiguration patch(@jakarta.annotation.Nonnull final AuthenticationMethodConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationMethodConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property authenticationMethodConfigurations for policies
+     * Delete an externalAuthenticationMethodConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property authenticationMethodConfigurations for policies
+     * Delete an externalAuthenticationMethodConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Update the navigation property authenticationMethodConfigurations in policies
+     * Update the properties of an externalAuthenticationMethodConfiguration object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property authenticationMethodConfigurations in policies
+     * Update the properties of an externalAuthenticationMethodConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -31,7 +31,16 @@ public class EdiscoveryPurgeDataOperation extends CaseOperation implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("reportFileMetadata", (n) -> { this.setReportFileMetadata(n.getCollectionOfObjectValues(ReportFileMetadata::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the reportFileMetadata property value. The purge job report file metadata. It contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @return a {@link java.util.List<ReportFileMetadata>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ReportFileMetadata> getReportFileMetadata() {
+        return this.backingStore.get("reportFileMetadata");
     }
     /**
      * Serializes information the current object
@@ -40,5 +49,13 @@ public class EdiscoveryPurgeDataOperation extends CaseOperation implements Parsa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("reportFileMetadata", this.getReportFileMetadata());
+    }
+    /**
+     * Sets the reportFileMetadata property value. The purge job report file metadata. It contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @param value Value to set for the reportFileMetadata property.
+     */
+    public void setReportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ReportFileMetadata> value) {
+        this.backingStore.set("reportFileMetadata", value);
     }
 }

@@ -21,7 +21,7 @@ jobs:
         run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\generated'
         shell: pwsh
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3.2.2
+        uses: android-actions/setup-android@v4.0.1
       - name: Add execution right to the script
         run: chmod +x gradlew
         working-directory: ./android
@@ -31,7 +31,7 @@ jobs:
         working-directory: ./android
       - name: Upload linting results
         if: failure() && steps.lint.outcome == 'failure'
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: lint-report
           path: ./android/build/reports
