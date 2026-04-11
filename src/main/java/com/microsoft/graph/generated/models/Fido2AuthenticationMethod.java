@@ -26,7 +26,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return new Fido2AuthenticationMethod();
     }
     /**
-     * Gets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Gets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (such as make and model) of the authenticator.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("aaGuid");
     }
     /**
-     * Gets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
+     * Gets the attestationCertificates property value. The attestation certificate or certificates attached to this passkey.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("attestationCertificates");
     }
     /**
-     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. The possible values are: attested, or notAttested.
+     * Gets the attestationLevel property value. The attestation level of this passkey (FIDO2). The possible values are: attested, notAttested, unknownFutureValue.
      * @return a {@link AttestationLevel}
      */
     @jakarta.annotation.Nullable
@@ -69,15 +69,24 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(AttestationLevel::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("passkeyType", (n) -> { this.setPasskeyType(n.getEnumValue(PasskeyType::forValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the model property value. The manufacturer-assigned model of the FIDO2 security key.
+     * Gets the model property value. The manufacturer-assigned model of the FIDO2 passkey.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
         return this.backingStore.get("model");
+    }
+    /**
+     * Gets the passkeyType property value. The type of passkey. The possible values are: deviceBound, synced, unknownFutureValue.
+     * @return a {@link PasskeyType}
+     */
+    @jakarta.annotation.Nullable
+    public PasskeyType getPasskeyType() {
+        return this.backingStore.get("passkeyType");
     }
     /**
      * Serializes information the current object
@@ -91,23 +100,24 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         writer.writeEnumValue("attestationLevel", this.getAttestationLevel());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("model", this.getModel());
+        writer.writeEnumValue("passkeyType", this.getPasskeyType());
     }
     /**
-     * Sets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Sets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (such as make and model) of the authenticator.
      * @param value Value to set for the aaGuid property.
      */
     public void setAaGuid(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("aaGuid", value);
     }
     /**
-     * Sets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
+     * Sets the attestationCertificates property value. The attestation certificate or certificates attached to this passkey.
      * @param value Value to set for the attestationCertificates property.
      */
     public void setAttestationCertificates(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("attestationCertificates", value);
     }
     /**
-     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. The possible values are: attested, or notAttested.
+     * Sets the attestationLevel property value. The attestation level of this passkey (FIDO2). The possible values are: attested, notAttested, unknownFutureValue.
      * @param value Value to set for the attestationLevel property.
      */
     public void setAttestationLevel(@jakarta.annotation.Nullable final AttestationLevel value) {
@@ -121,10 +131,17 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the model property value. The manufacturer-assigned model of the FIDO2 security key.
+     * Sets the model property value. The manufacturer-assigned model of the FIDO2 passkey.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("model", value);
+    }
+    /**
+     * Sets the passkeyType property value. The type of passkey. The possible values are: deviceBound, synced, unknownFutureValue.
+     * @param value Value to set for the passkeyType property.
+     */
+    public void setPasskeyType(@jakarta.annotation.Nullable final PasskeyType value) {
+        this.backingStore.set("passkeyType", value);
     }
 }

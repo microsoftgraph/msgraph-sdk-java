@@ -6,6 +6,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.joinedteams.item.primarychannel.messages.item.replies.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.primarychannel.messages.item.replies.delta.DeltaRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.primarychannel.messages.item.replies.item.ChatMessageItemRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.primarychannel.messages.item.replies.replywithquote.ReplyWithQuoteRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -39,6 +40,14 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the replyWithQuote method.
+     * @return a {@link ReplyWithQuoteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReplyWithQuoteRequestBuilder replyWithQuote() {
+        return new ReplyWithQuoteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.

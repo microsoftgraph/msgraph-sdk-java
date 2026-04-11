@@ -4,6 +4,7 @@ import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.sponsors.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.sponsors.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.users.item.sponsors.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -31,7 +32,15 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the sponsors property of the microsoft.graph.user entity.
+     * Provides operations to manage the collection of user entities.
+     * @return a {@link RefRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.users.item.sponsors.item collection
      * @param directoryObjectId The unique identifier of directoryObject
      * @return a {@link DirectoryObjectItemRequestBuilder}
      */

@@ -34,7 +34,7 @@ public class ExternalAuthenticationMethodConfiguration extends AuthenticationMet
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the displayName property value. Display name for the external authentication method. This name is shown to users during sign-in.
+     * Gets the displayName property value. Display name for the external MFA. This name is shown to users during sign-in.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class ExternalAuthenticationMethodConfiguration extends AuthenticationMet
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the displayName property value. Display name for the external authentication method. This name is shown to users during sign-in.
+     * Sets the displayName property value. Display name for the external MFA. This name is shown to users during sign-in.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

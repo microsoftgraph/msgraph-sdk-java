@@ -24,7 +24,10 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the resource property of the microsoft.graph.usedInsight entity.
      * @return a {@link ResourceRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ResourceRequestBuilder resource() {
         return new ResourceRequestBuilder(pathParameters, requestAdapter);
@@ -48,7 +51,10 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property used for users
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -56,7 +62,10 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property used for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -67,8 +76,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Calculated relationship that identifies the latest documents viewed or modified by a user, including OneDrive for work or school and SharePoint documents, ranked by recency of use.
      * @return a {@link UsedInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UsedInsight get() {
         return get(null);
     }
@@ -77,8 +89,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UsedInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UsedInsight get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -90,8 +105,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link UsedInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UsedInsight patch(@jakarta.annotation.Nonnull final UsedInsight body) {
         return patch(body, null);
     }
@@ -101,8 +119,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UsedInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UsedInsight patch(@jakarta.annotation.Nonnull final UsedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -113,8 +134,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property used for users
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -122,8 +146,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property used for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -133,8 +160,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Calculated relationship that identifies the latest documents viewed or modified by a user, including OneDrive for work or school and SharePoint documents, ranked by recency of use.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -142,8 +172,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Calculated relationship that identifies the latest documents viewed or modified by a user, including OneDrive for work or school and SharePoint documents, ranked by recency of use.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -154,8 +187,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property used in users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UsedInsight body) {
         return toPatchRequestInformation(body, null);
     }
@@ -164,8 +200,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UsedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -178,8 +217,11 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link UsedInsightItemRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public UsedInsightItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new UsedInsightItemRequestBuilder(rawUrl, requestAdapter);

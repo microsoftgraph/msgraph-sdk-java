@@ -55,7 +55,7 @@ public class ProtectionPolicyBaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/protectionPolicies/{protectionPolicyBase%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a protection policy. Read the properties and relationships of a protectionPolicyBase object.
+     * Delete a protectionPolicyBase object. A protection policy can be deleted only after it was deactivated. When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it&apos;s offboarded. You can restore data using previous restore points even after deletion.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/protectionpolicybase-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -63,7 +63,7 @@ public class ProtectionPolicyBaseItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a protection policy. Read the properties and relationships of a protectionPolicyBase object.
+     * Delete a protectionPolicyBase object. A protection policy can be deleted only after it was deactivated. When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it&apos;s offboarded. You can restore data using previous restore points even after deletion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/protectionpolicybase-delete?view=graph-rest-1.0">Find more info here</a>
@@ -122,7 +122,7 @@ public class ProtectionPolicyBaseItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProtectionPolicyBase::createFromDiscriminatorValue);
     }
     /**
-     * Delete a protection policy. Read the properties and relationships of a protectionPolicyBase object.
+     * Delete a protectionPolicyBase object. A protection policy can be deleted only after it was deactivated. When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it&apos;s offboarded. You can restore data using previous restore points even after deletion.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class ProtectionPolicyBaseItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a protection policy. Read the properties and relationships of a protectionPolicyBase object.
+     * Delete a protectionPolicyBase object. A protection policy can be deleted only after it was deactivated. When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it&apos;s offboarded. You can restore data using previous restore points even after deletion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

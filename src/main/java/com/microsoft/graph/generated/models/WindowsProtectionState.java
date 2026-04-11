@@ -38,6 +38,14 @@ public class WindowsProtectionState extends Entity implements Parsable {
         return this.backingStore.get("antiMalwareVersion");
     }
     /**
+     * Gets the controlledConfigurationEnabled property value. When TRUE indicates the Windows Defender controlled configuration feature is enabled, when FALSE indicates the Windows Defender controlled configuration feature is not enabled. Defaults to setting on client device.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getControlledConfigurationEnabled() {
+        return this.backingStore.get("controlledConfigurationEnabled");
+    }
+    /**
      * Gets the detectedMalwareState property value. Device malware list
      * @return a {@link java.util.List<WindowsDeviceMalwareState>}
      */
@@ -69,6 +77,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("antiMalwareVersion", (n) -> { this.setAntiMalwareVersion(n.getStringValue()); });
+        deserializerMap.put("controlledConfigurationEnabled", (n) -> { this.setControlledConfigurationEnabled(n.getBooleanValue()); });
         deserializerMap.put("detectedMalwareState", (n) -> { this.setDetectedMalwareState(n.getCollectionOfObjectValues(WindowsDeviceMalwareState::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceState", (n) -> { this.setDeviceState(n.getEnumSetValue(WindowsDeviceHealthState::forValue)); });
         deserializerMap.put("engineVersion", (n) -> { this.setEngineVersion(n.getStringValue()); });
@@ -235,6 +244,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("antiMalwareVersion", this.getAntiMalwareVersion());
+        writer.writeBooleanValue("controlledConfigurationEnabled", this.getControlledConfigurationEnabled());
         writer.writeCollectionOfObjectValues("detectedMalwareState", this.getDetectedMalwareState());
         writer.writeEnumSetValue("deviceState", this.getDeviceState());
         writer.writeStringValue("engineVersion", this.getEngineVersion());
@@ -262,6 +272,13 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     public void setAntiMalwareVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("antiMalwareVersion", value);
+    }
+    /**
+     * Sets the controlledConfigurationEnabled property value. When TRUE indicates the Windows Defender controlled configuration feature is enabled, when FALSE indicates the Windows Defender controlled configuration feature is not enabled. Defaults to setting on client device.
+     * @param value Value to set for the controlledConfigurationEnabled property.
+     */
+    public void setControlledConfigurationEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("controlledConfigurationEnabled", value);
     }
     /**
      * Sets the detectedMalwareState property value. Device malware list

@@ -31,8 +31,17 @@ public class ExchangeAdmin extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mailboxes", (n) -> { this.setMailboxes(n.getCollectionOfObjectValues(Mailbox::createFromDiscriminatorValue)); });
         deserializerMap.put("tracing", (n) -> { this.setTracing(n.getObjectValue(MessageTracingRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mailboxes property value. The mailboxes property
+     * @return a {@link java.util.List<Mailbox>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Mailbox> getMailboxes() {
+        return this.backingStore.get("mailboxes");
     }
     /**
      * Gets the tracing property value. Represents a container for administrative resources to trace messages.
@@ -49,7 +58,15 @@ public class ExchangeAdmin extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("mailboxes", this.getMailboxes());
         writer.writeObjectValue("tracing", this.getTracing());
+    }
+    /**
+     * Sets the mailboxes property value. The mailboxes property
+     * @param value Value to set for the mailboxes property.
+     */
+    public void setMailboxes(@jakarta.annotation.Nullable final java.util.List<Mailbox> value) {
+        this.backingStore.set("mailboxes", value);
     }
     /**
      * Sets the tracing property value. Represents a container for administrative resources to trace messages.

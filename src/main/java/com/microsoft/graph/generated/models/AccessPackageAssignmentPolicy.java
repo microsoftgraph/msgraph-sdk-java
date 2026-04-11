@@ -26,7 +26,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return new AccessPackageAssignmentPolicy();
     }
     /**
-     * Gets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
+     * Gets the accessPackage property value. Access package containing this policy. Read-only. Supports $expand.
      * @return a {@link AccessPackage}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this.backingStore.get("accessPackage");
     }
     /**
-     * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
+     * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, allDirectoryAgentIdentities, unknownFutureValue.
      * @return a {@link AllowedTargetScope}
      */
     @jakarta.annotation.Nullable
@@ -203,14 +203,14 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("specificAllowedTargets", this.getSpecificAllowedTargets());
     }
     /**
-     * Sets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
+     * Sets the accessPackage property value. Access package containing this policy. Read-only. Supports $expand.
      * @param value Value to set for the accessPackage property.
      */
     public void setAccessPackage(@jakarta.annotation.Nullable final AccessPackage value) {
         this.backingStore.set("accessPackage", value);
     }
     /**
-     * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
+     * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, allDirectoryAgentIdentities, unknownFutureValue.
      * @param value Value to set for the allowedTargetScope property.
      */
     public void setAllowedTargetScope(@jakarta.annotation.Nullable final AllowedTargetScope value) {

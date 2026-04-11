@@ -4,12 +4,14 @@ import com.microsoft.graph.groups.item.team.channels.item.allmembers.AllMembersR
 import com.microsoft.graph.groups.item.team.channels.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.enabledapps.EnabledAppsRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.filesfolder.FilesFolderRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.members.MembersRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.provisionemail.ProvisionEmailRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.removeemail.RemoveEmailRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.models.Channel;
@@ -65,6 +67,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the enabledApps property of the microsoft.graph.channel entity.
+     * @return a {@link EnabledAppsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EnabledAppsRequestBuilder enabledApps() {
+        return new EnabledAppsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the filesFolder property of the microsoft.graph.channel entity.
      * @return a {@link FilesFolderRequestBuilder}
      */
@@ -111,6 +121,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SharedWithTeamsRequestBuilder sharedWithTeams() {
         return new SharedWithTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the startMigration method.
+     * @return a {@link StartMigrationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StartMigrationRequestBuilder startMigration() {
+        return new StartMigrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.channel entity.

@@ -64,6 +64,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
         deserializerMap.put("osBuildNumber", (n) -> { this.setOsBuildNumber(n.getStringValue()); });
         deserializerMap.put("osStatus", (n) -> { this.setOsStatus(n.getEnumValue(CloudPcDeviceImageOsStatus::forValue)); });
+        deserializerMap.put("osVersionNumber", (n) -> { this.setOsVersionNumber(n.getStringValue()); });
+        deserializerMap.put("sizeInGB", (n) -> { this.setSizeInGB(n.getIntegerValue()); });
         deserializerMap.put("sourceImageResourceId", (n) -> { this.setSourceImageResourceId(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcDeviceImageStatus::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
@@ -100,6 +102,22 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageOsStatus getOsStatus() {
         return this.backingStore.get("osStatus");
+    }
+    /**
+     * Gets the osVersionNumber property value. The operating system version of this image. For example, 10.0.22000.296. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOsVersionNumber() {
+        return this.backingStore.get("osVersionNumber");
+    }
+    /**
+     * Gets the sizeInGB property value. The size of the image in GB. For example, 64. Read-only.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getSizeInGB() {
+        return this.backingStore.get("sizeInGB");
     }
     /**
      * Gets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}&apos;. Read-only.
@@ -139,6 +157,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
         writer.writeStringValue("osBuildNumber", this.getOsBuildNumber());
         writer.writeEnumValue("osStatus", this.getOsStatus());
+        writer.writeStringValue("osVersionNumber", this.getOsVersionNumber());
+        writer.writeIntegerValue("sizeInGB", this.getSizeInGB());
         writer.writeStringValue("sourceImageResourceId", this.getSourceImageResourceId());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("version", this.getVersion());
@@ -191,6 +211,20 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     public void setOsStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageOsStatus value) {
         this.backingStore.set("osStatus", value);
+    }
+    /**
+     * Sets the osVersionNumber property value. The operating system version of this image. For example, 10.0.22000.296. Read-only.
+     * @param value Value to set for the osVersionNumber property.
+     */
+    public void setOsVersionNumber(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("osVersionNumber", value);
+    }
+    /**
+     * Sets the sizeInGB property value. The size of the image in GB. For example, 64. Read-only.
+     * @param value Value to set for the sizeInGB property.
+     */
+    public void setSizeInGB(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("sizeInGB", value);
     }
     /**
      * Sets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}&apos;. Read-only.

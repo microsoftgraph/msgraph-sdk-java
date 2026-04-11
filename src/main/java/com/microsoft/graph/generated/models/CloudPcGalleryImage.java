@@ -60,6 +60,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getLocalDateValue()); });
         deserializerMap.put("expirationDate", (n) -> { this.setExpirationDate(n.getLocalDateValue()); });
         deserializerMap.put("offerName", (n) -> { this.setOfferName(n.getStringValue()); });
+        deserializerMap.put("osVersionNumber", (n) -> { this.setOsVersionNumber(n.getStringValue()); });
         deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
         deserializerMap.put("sizeInGB", (n) -> { this.setSizeInGB(n.getIntegerValue()); });
         deserializerMap.put("skuName", (n) -> { this.setSkuName(n.getStringValue()); });
@@ -74,6 +75,14 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getOfferName() {
         return this.backingStore.get("offerName");
+    }
+    /**
+     * Gets the osVersionNumber property value. The operating system version of this gallery image. For example, 10.0.22000.296. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOsVersionNumber() {
+        return this.backingStore.get("osVersionNumber");
     }
     /**
      * Gets the publisherName property value. The publisher name of this gallery image that is passed to Azure Resource Manager (ARM) to retrieve the image resource. Read-only.
@@ -126,6 +135,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         writer.writeLocalDateValue("endDate", this.getEndDate());
         writer.writeLocalDateValue("expirationDate", this.getExpirationDate());
         writer.writeStringValue("offerName", this.getOfferName());
+        writer.writeStringValue("osVersionNumber", this.getOsVersionNumber());
         writer.writeStringValue("publisherName", this.getPublisherName());
         writer.writeIntegerValue("sizeInGB", this.getSizeInGB());
         writer.writeStringValue("skuName", this.getSkuName());
@@ -159,6 +169,13 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      */
     public void setOfferName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("offerName", value);
+    }
+    /**
+     * Sets the osVersionNumber property value. The operating system version of this gallery image. For example, 10.0.22000.296. Read-only.
+     * @param value Value to set for the osVersionNumber property.
+     */
+    public void setOsVersionNumber(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("osVersionNumber", value);
     }
     /**
      * Sets the publisherName property value. The publisher name of this gallery image that is passed to Azure Resource Manager (ARM) to retrieve the image resource. Read-only.
