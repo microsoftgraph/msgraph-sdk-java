@@ -7,6 +7,7 @@ import com.microsoft.graph.security.identities.identityaccounts.IdentityAccounts
 import com.microsoft.graph.security.identities.sensorcandidateactivationconfiguration.SensorCandidateActivationConfigurationRequestBuilder;
 import com.microsoft.graph.security.identities.sensorcandidates.SensorCandidatesRequestBuilder;
 import com.microsoft.graph.security.identities.sensors.SensorsRequestBuilder;
+import com.microsoft.graph.security.identities.settings.SettingsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -64,6 +65,14 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SensorsRequestBuilder sensors() {
         return new SensorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.security.identityContainer entity.
+     * @return a {@link SettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SettingsRequestBuilder settings() {
+        return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link IdentitiesRequestBuilder} and sets the default values.

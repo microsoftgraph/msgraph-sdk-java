@@ -57,6 +57,14 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
+     * Gets the configurationManagement property value. A container for Tenant Configuration Management (TCM) resources. Read-only.
+     * @return a {@link ConfigurationManagement}
+     */
+    @jakarta.annotation.Nullable
+    public ConfigurationManagement getConfigurationManagement() {
+        return this.backingStore.get("configurationManagement");
+    }
+    /**
      * Gets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @return a {@link Edge}
      */
@@ -78,7 +86,8 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        deserializerMap.put("configurationManagement", (n) -> { this.setConfigurationManagement(n.getObjectValue(ConfigurationManagement::createFromDiscriminatorValue)); });
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
         deserializerMap.put("exchange", (n) -> { this.setExchange(n.getObjectValue(ExchangeAdmin::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoft365Apps", (n) -> { this.setMicrosoft365Apps(n.getObjectValue(AdminMicrosoft365Apps::createFromDiscriminatorValue)); });
@@ -139,7 +148,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("sharepoint");
     }
     /**
-     * Gets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * Gets the teams property value. A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @return a {@link TeamsAdminRoot}
      */
     @jakarta.annotation.Nullable
@@ -152,6 +161,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("configurationManagement", this.getConfigurationManagement());
         writer.writeObjectValue("edge", this.getEdge());
         writer.writeObjectValue("exchange", this.getExchange());
         writer.writeObjectValue("microsoft365Apps", this.getMicrosoft365Apps());
@@ -177,6 +187,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the configurationManagement property value. A container for Tenant Configuration Management (TCM) resources. Read-only.
+     * @param value Value to set for the configurationManagement property.
+     */
+    public void setConfigurationManagement(@jakarta.annotation.Nullable final ConfigurationManagement value) {
+        this.backingStore.set("configurationManagement", value);
     }
     /**
      * Sets the edge property value. A container for Microsoft Edge resources. Read-only.
@@ -235,7 +252,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("sharepoint", value);
     }
     /**
-     * Sets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * Sets the teams property value. A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @param value Value to set for the teams property.
      */
     public void setTeams(@jakarta.annotation.Nullable final TeamsAdminRoot value) {

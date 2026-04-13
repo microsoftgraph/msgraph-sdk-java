@@ -21,7 +21,8 @@ public enum AuthenticationMethodModes implements ValuedEnum {
     X509CertificateMultiFactor("x509CertificateMultiFactor"),
     FederatedSingleFactor("federatedSingleFactor"),
     FederatedMultiFactor("federatedMultiFactor"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    QrCodePin("qrCodePin");
     public final String value;
     AuthenticationMethodModes(final String value) {
         this.value = value;
@@ -49,6 +50,7 @@ public enum AuthenticationMethodModes implements ValuedEnum {
             case "federatedSingleFactor": return FederatedSingleFactor;
             case "federatedMultiFactor": return FederatedMultiFactor;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "qrCodePin": return QrCodePin;
             default: return null;
         }
     }

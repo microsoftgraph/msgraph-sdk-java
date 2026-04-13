@@ -57,7 +57,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * Represents the external MFA registered to a user for authentication using an external identity provider.
      * @return a {@link ExternalAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -66,7 +66,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * Represents the external MFA registered to a user for authentication using an external identity provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -124,7 +124,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * Represents the external MFA registered to a user for authentication using an external identity provider.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * Represents the external MFA registered to a user for authentication using an external identity provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +184,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * Represents the external MFA registered to a user for authentication using an external identity provider.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

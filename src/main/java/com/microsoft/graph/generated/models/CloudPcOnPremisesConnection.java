@@ -85,17 +85,28 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
         deserializerMap.put("connectionType", (n) -> { this.setConnectionType(n.getEnumValue(CloudPcOnPremisesConnectionType::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("healthCheckPaused", (n) -> { this.setHealthCheckPaused(n.getBooleanValue()); });
         deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus::forValue)); });
         deserializerMap.put("healthCheckStatusDetail", (n) -> { this.setHealthCheckStatusDetail(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("inUse", (n) -> { this.setInUse(n.getBooleanValue()); });
+        deserializerMap.put("inUseByCloudPc", (n) -> { this.setInUseByCloudPc(n.getBooleanValue()); });
         deserializerMap.put("organizationalUnit", (n) -> { this.setOrganizationalUnit(n.getStringValue()); });
         deserializerMap.put("resourceGroupId", (n) -> { this.setResourceGroupId(n.getStringValue()); });
+        deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("subnetId", (n) -> { this.setSubnetId(n.getStringValue()); });
         deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
         deserializerMap.put("subscriptionName", (n) -> { this.setSubscriptionName(n.getStringValue()); });
         deserializerMap.put("virtualNetworkId", (n) -> { this.setVirtualNetworkId(n.getStringValue()); });
         deserializerMap.put("virtualNetworkLocation", (n) -> { this.setVirtualNetworkLocation(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the healthCheckPaused property value. The healthCheckPaused property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getHealthCheckPaused() {
+        return this.backingStore.get("healthCheckPaused");
     }
     /**
      * Gets the healthCheckStatus property value. The healthCheckStatus property
@@ -122,6 +133,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("inUse");
     }
     /**
+     * Gets the inUseByCloudPc property value. The inUseByCloudPc property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getInUseByCloudPc() {
+        return this.backingStore.get("inUseByCloudPc");
+    }
+    /**
      * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant&apos;s Active Directory domain (OU) is used. Optional.
      * @return a {@link String}
      */
@@ -136,6 +155,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getResourceGroupId() {
         return this.backingStore.get("resourceGroupId");
+    }
+    /**
+     * Gets the scopeIds property value. The scopeIds property
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getScopeIds() {
+        return this.backingStore.get("scopeIds");
     }
     /**
      * Gets the subnetId property value. The unique identifier of the target subnet used associated with the on-premises network connectivity for Cloud PCs. Required format: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}&apos;
@@ -190,11 +217,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
         writer.writeEnumValue("connectionType", this.getConnectionType());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("healthCheckPaused", this.getHealthCheckPaused());
         writer.writeEnumValue("healthCheckStatus", this.getHealthCheckStatus());
         writer.writeObjectValue("healthCheckStatusDetail", this.getHealthCheckStatusDetail());
         writer.writeBooleanValue("inUse", this.getInUse());
+        writer.writeBooleanValue("inUseByCloudPc", this.getInUseByCloudPc());
         writer.writeStringValue("organizationalUnit", this.getOrganizationalUnit());
         writer.writeStringValue("resourceGroupId", this.getResourceGroupId());
+        writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
         writer.writeStringValue("subnetId", this.getSubnetId());
         writer.writeStringValue("subscriptionId", this.getSubscriptionId());
         writer.writeStringValue("subscriptionName", this.getSubscriptionName());
@@ -244,6 +274,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the healthCheckPaused property value. The healthCheckPaused property
+     * @param value Value to set for the healthCheckPaused property.
+     */
+    public void setHealthCheckPaused(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("healthCheckPaused", value);
+    }
+    /**
      * Sets the healthCheckStatus property value. The healthCheckStatus property
      * @param value Value to set for the healthCheckStatus property.
      */
@@ -265,6 +302,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("inUse", value);
     }
     /**
+     * Sets the inUseByCloudPc property value. The inUseByCloudPc property
+     * @param value Value to set for the inUseByCloudPc property.
+     */
+    public void setInUseByCloudPc(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("inUseByCloudPc", value);
+    }
+    /**
      * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant&apos;s Active Directory domain (OU) is used. Optional.
      * @param value Value to set for the organizationalUnit property.
      */
@@ -277,6 +321,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     public void setResourceGroupId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceGroupId", value);
+    }
+    /**
+     * Sets the scopeIds property value. The scopeIds property
+     * @param value Value to set for the scopeIds property.
+     */
+    public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("scopeIds", value);
     }
     /**
      * Sets the subnetId property value. The unique identifier of the target subnet used associated with the on-premises network connectivity for Cloud PCs. Required format: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}&apos;

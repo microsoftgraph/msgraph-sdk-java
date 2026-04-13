@@ -42,7 +42,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("answers");
     }
     /**
-     * Gets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created. For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+     * Gets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created. For a requestType of userRemove, adminRemove, approverRemove, or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      * @return a {@link AccessPackageAssignment}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("requestor");
     }
     /**
-     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can&apos;t be changed once set.
+     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: approverRemove. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can&apos;t be changed once set.
      * @return a {@link AccessPackageRequestType}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("requestType");
     }
     /**
-     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can&apos;t be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
+     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can&apos;t be changed once set, but a new schedule for an assignment can be included in another userUpdate or adminUpdate assignment request.
      * @return a {@link EntitlementManagementSchedule}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("answers", value);
     }
     /**
-     * Sets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created. For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+     * Sets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created. For a requestType of userRemove, adminRemove, approverRemove, or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      * @param value Value to set for the assignment property.
      */
     public void setAssignment(@jakarta.annotation.Nullable final AccessPackageAssignment value) {
@@ -219,14 +219,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("requestor", value);
     }
     /**
-     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can&apos;t be changed once set.
+     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: approverRemove. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can&apos;t be changed once set.
      * @param value Value to set for the requestType property.
      */
     public void setRequestType(@jakarta.annotation.Nullable final AccessPackageRequestType value) {
         this.backingStore.set("requestType", value);
     }
     /**
-     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can&apos;t be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
+     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can&apos;t be changed once set, but a new schedule for an assignment can be included in another userUpdate or adminUpdate assignment request.
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {

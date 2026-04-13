@@ -41,6 +41,14 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("authenticationStrength");
     }
     /**
+     * Gets the deletedItems property value. The deletedItems property
+     * @return a {@link CaPoliciesDeletableRoot}
+     */
+    @jakarta.annotation.Nullable
+    public CaPoliciesDeletableRoot getDeletedItems() {
+        return this.backingStore.get("deletedItems");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -49,6 +57,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationContextClassReferences", (n) -> { this.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContextClassReference::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationStrength", (n) -> { this.setAuthenticationStrength(n.getObjectValue(AuthenticationStrengthRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getObjectValue(CaPoliciesDeletableRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("namedLocations", (n) -> { this.setNamedLocations(n.getCollectionOfObjectValues(NamedLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("policies", (n) -> { this.setPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("templates", (n) -> { this.setTemplates(n.getCollectionOfObjectValues(ConditionalAccessTemplate::createFromDiscriminatorValue)); });
@@ -87,6 +96,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("authenticationContextClassReferences", this.getAuthenticationContextClassReferences());
         writer.writeObjectValue("authenticationStrength", this.getAuthenticationStrength());
+        writer.writeObjectValue("deletedItems", this.getDeletedItems());
         writer.writeCollectionOfObjectValues("namedLocations", this.getNamedLocations());
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
         writer.writeCollectionOfObjectValues("templates", this.getTemplates());
@@ -104,6 +114,13 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     public void setAuthenticationStrength(@jakarta.annotation.Nullable final AuthenticationStrengthRoot value) {
         this.backingStore.set("authenticationStrength", value);
+    }
+    /**
+     * Sets the deletedItems property value. The deletedItems property
+     * @param value Value to set for the deletedItems property.
+     */
+    public void setDeletedItems(@jakarta.annotation.Nullable final CaPoliciesDeletableRoot value) {
+        this.backingStore.set("deletedItems", value);
     }
     /**
      * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.

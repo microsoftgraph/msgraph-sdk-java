@@ -17,7 +17,8 @@ public enum BaseAuthenticationMethod implements ValuedEnum {
     Email("email"),
     X509Certificate("x509Certificate"),
     Federation("federation"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    QrCodePin("qrCodePin");
     public final String value;
     BaseAuthenticationMethod(final String value) {
         this.value = value;
@@ -41,6 +42,7 @@ public enum BaseAuthenticationMethod implements ValuedEnum {
             case "x509Certificate": return X509Certificate;
             case "federation": return Federation;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "qrCodePin": return QrCodePin;
             default: return null;
         }
     }

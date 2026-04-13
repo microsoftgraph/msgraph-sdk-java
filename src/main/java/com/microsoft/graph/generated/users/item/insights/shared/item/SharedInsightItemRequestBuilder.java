@@ -25,7 +25,10 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the lastSharedMethod property of the microsoft.graph.sharedInsight entity.
      * @return a {@link LastSharedMethodRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public LastSharedMethodRequestBuilder lastSharedMethod() {
         return new LastSharedMethodRequestBuilder(pathParameters, requestAdapter);
@@ -33,7 +36,10 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the resource property of the microsoft.graph.sharedInsight entity.
      * @return a {@link ResourceRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ResourceRequestBuilder resource() {
         return new ResourceRequestBuilder(pathParameters, requestAdapter);
@@ -57,7 +63,10 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property shared for users
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -65,7 +74,10 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property shared for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -76,8 +88,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Calculated relationship that identifies documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for work or school and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @return a {@link SharedInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharedInsight get() {
         return get(null);
     }
@@ -86,8 +101,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharedInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharedInsight get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -99,8 +117,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SharedInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharedInsight patch(@jakarta.annotation.Nonnull final SharedInsight body) {
         return patch(body, null);
     }
@@ -110,8 +131,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharedInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharedInsight patch(@jakarta.annotation.Nonnull final SharedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -122,8 +146,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property shared for users
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -131,8 +158,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property shared for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -142,8 +172,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Calculated relationship that identifies documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for work or school and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -151,8 +184,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Calculated relationship that identifies documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for work or school and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -163,8 +199,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property shared in users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SharedInsight body) {
         return toPatchRequestInformation(body, null);
     }
@@ -173,8 +212,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SharedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -187,8 +229,11 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SharedInsightItemRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SharedInsightItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SharedInsightItemRequestBuilder(rawUrl, requestAdapter);

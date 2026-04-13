@@ -59,7 +59,7 @@ public class AdministrationScopeTargetsRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/versions/{workflowVersion%2DversionNumber}/administrationScopeTargets{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get administrationScopeTargets from identityGovernance
+     * The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class AdministrationScopeTargetsRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get administrationScopeTargets from identityGovernance
+     * The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class AdministrationScopeTargetsRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get administrationScopeTargets from identityGovernance
+     * The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AdministrationScopeTargetsRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get administrationScopeTargets from identityGovernance
+     * The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class AdministrationScopeTargetsRequestBuilder extends BaseRequestBuilder
         return new AdministrationScopeTargetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get administrationScopeTargets from identityGovernance
+     * The administrative units in the scope of the workflow. Optional. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

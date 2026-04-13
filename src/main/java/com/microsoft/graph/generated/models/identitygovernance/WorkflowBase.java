@@ -59,7 +59,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
         return value;
     }
     /**
-     * Gets the administrationScopeTargets property value. The administrationScopeTargets property
+     * Gets the administrationScopeTargets property value. The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -221,7 +221,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the administrationScopeTargets property value. The administrationScopeTargets property
+     * Sets the administrationScopeTargets property value. The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @param value Value to set for the administrationScopeTargets property.
      */
     public void setAdministrationScopeTargets(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
