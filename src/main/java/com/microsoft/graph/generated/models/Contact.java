@@ -150,10 +150,13 @@ public class Contact extends OutlookItem implements Parsable {
         deserializerMap.put("parentFolderId", (n) -> { this.setParentFolderId(n.getStringValue()); });
         deserializerMap.put("personalNotes", (n) -> { this.setPersonalNotes(n.getStringValue()); });
         deserializerMap.put("photo", (n) -> { this.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("primaryEmailAddress", (n) -> { this.setPrimaryEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("profession", (n) -> { this.setProfession(n.getStringValue()); });
+        deserializerMap.put("secondaryEmailAddress", (n) -> { this.setSecondaryEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("spouseName", (n) -> { this.setSpouseName(n.getStringValue()); });
         deserializerMap.put("surname", (n) -> { this.setSurname(n.getStringValue()); });
+        deserializerMap.put("tertiaryEmailAddress", (n) -> { this.setTertiaryEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         deserializerMap.put("yomiCompanyName", (n) -> { this.setYomiCompanyName(n.getStringValue()); });
         deserializerMap.put("yomiGivenName", (n) -> { this.setYomiGivenName(n.getStringValue()); });
@@ -305,12 +308,28 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("photo");
     }
     /**
+     * Gets the primaryEmailAddress property value. The contact&apos;s primary email address.
+     * @return a {@link EmailAddress}
+     */
+    @jakarta.annotation.Nullable
+    public EmailAddress getPrimaryEmailAddress() {
+        return this.backingStore.get("primaryEmailAddress");
+    }
+    /**
      * Gets the profession property value. The contact&apos;s profession.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProfession() {
         return this.backingStore.get("profession");
+    }
+    /**
+     * Gets the secondaryEmailAddress property value. The contact&apos;s secondary email address.
+     * @return a {@link EmailAddress}
+     */
+    @jakarta.annotation.Nullable
+    public EmailAddress getSecondaryEmailAddress() {
+        return this.backingStore.get("secondaryEmailAddress");
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contact. Read-only. Nullable.
@@ -335,6 +354,14 @@ public class Contact extends OutlookItem implements Parsable {
     @jakarta.annotation.Nullable
     public String getSurname() {
         return this.backingStore.get("surname");
+    }
+    /**
+     * Gets the tertiaryEmailAddress property value. The contact&apos;s tertiary email address.
+     * @return a {@link EmailAddress}
+     */
+    @jakarta.annotation.Nullable
+    public EmailAddress getTertiaryEmailAddress() {
+        return this.backingStore.get("tertiaryEmailAddress");
     }
     /**
      * Gets the title property value. The contact&apos;s title.
@@ -404,10 +431,13 @@ public class Contact extends OutlookItem implements Parsable {
         writer.writeStringValue("parentFolderId", this.getParentFolderId());
         writer.writeStringValue("personalNotes", this.getPersonalNotes());
         writer.writeObjectValue("photo", this.getPhoto());
+        writer.writeObjectValue("primaryEmailAddress", this.getPrimaryEmailAddress());
         writer.writeStringValue("profession", this.getProfession());
+        writer.writeObjectValue("secondaryEmailAddress", this.getSecondaryEmailAddress());
         writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
         writer.writeStringValue("spouseName", this.getSpouseName());
         writer.writeStringValue("surname", this.getSurname());
+        writer.writeObjectValue("tertiaryEmailAddress", this.getTertiaryEmailAddress());
         writer.writeStringValue("title", this.getTitle());
         writer.writeStringValue("yomiCompanyName", this.getYomiCompanyName());
         writer.writeStringValue("yomiGivenName", this.getYomiGivenName());
@@ -617,11 +647,25 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("photo", value);
     }
     /**
+     * Sets the primaryEmailAddress property value. The contact&apos;s primary email address.
+     * @param value Value to set for the primaryEmailAddress property.
+     */
+    public void setPrimaryEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
+        this.backingStore.set("primaryEmailAddress", value);
+    }
+    /**
      * Sets the profession property value. The contact&apos;s profession.
      * @param value Value to set for the profession property.
      */
     public void setProfession(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("profession", value);
+    }
+    /**
+     * Sets the secondaryEmailAddress property value. The contact&apos;s secondary email address.
+     * @param value Value to set for the secondaryEmailAddress property.
+     */
+    public void setSecondaryEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
+        this.backingStore.set("secondaryEmailAddress", value);
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contact. Read-only. Nullable.
@@ -643,6 +687,13 @@ public class Contact extends OutlookItem implements Parsable {
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("surname", value);
+    }
+    /**
+     * Sets the tertiaryEmailAddress property value. The contact&apos;s tertiary email address.
+     * @param value Value to set for the tertiaryEmailAddress property.
+     */
+    public void setTertiaryEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
+        this.backingStore.set("tertiaryEmailAddress", value);
     }
     /**
      * Sets the title property value. The contact&apos;s title.

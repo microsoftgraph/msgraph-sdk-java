@@ -36,7 +36,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/protectionPolicies/{protectionPolicyBase%2Did}/deactivate", rawUrl);
     }
     /**
-     * Deactivate a protectionPolicyBase.
+     * Deactivate a protectionPolicyBase. When a protection policy is deactivated, backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they&apos;re offboarded. You can restore data using previous restore points even after deactivation. To reactivate a deactivated policy, use the activate API.
      * @return a {@link ProtectionPolicyBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/protectionpolicybase-deactivate?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Deactivate a protectionPolicyBase.
+     * Deactivate a protectionPolicyBase. When a protection policy is deactivated, backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they&apos;re offboarded. You can restore data using previous restore points even after deactivation. To reactivate a deactivated policy, use the activate API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProtectionPolicyBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProtectionPolicyBase::createFromDiscriminatorValue);
     }
     /**
-     * Deactivate a protectionPolicyBase.
+     * Deactivate a protectionPolicyBase. When a protection policy is deactivated, backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they&apos;re offboarded. You can restore data using previous restore points even after deactivation. To reactivate a deactivated policy, use the activate API.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Deactivate a protectionPolicyBase.
+     * Deactivate a protectionPolicyBase. When a protection policy is deactivated, backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they&apos;re offboarded. You can restore data using previous restore points even after deactivation. To reactivate a deactivated policy, use the activate API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

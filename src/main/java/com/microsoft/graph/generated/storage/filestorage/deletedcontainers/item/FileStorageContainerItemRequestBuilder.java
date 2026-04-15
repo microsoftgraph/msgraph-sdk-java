@@ -12,6 +12,7 @@ import com.microsoft.graph.storage.filestorage.deletedcontainers.item.permission
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.provisionmigrationcontainers.ProvisionMigrationContainersRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.storage.filestorage.deletedcontainers.item.sharepointgroups.SharePointGroupsRequestBuilder;
 import com.microsoft.graph.storage.filestorage.deletedcontainers.item.unlock.UnlockRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -110,6 +111,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sharePointGroups property of the microsoft.graph.fileStorageContainer entity.
+     * @return a {@link SharePointGroupsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SharePointGroupsRequestBuilder sharePointGroups() {
+        return new SharePointGroupsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unlock method.

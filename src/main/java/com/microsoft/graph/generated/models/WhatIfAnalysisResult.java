@@ -14,6 +14,7 @@ public class WhatIfAnalysisResult extends ConditionalAccessPolicy implements Par
      */
     public WhatIfAnalysisResult() {
         super();
+        this.setOdataType("#microsoft.graph.whatIfAnalysisResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

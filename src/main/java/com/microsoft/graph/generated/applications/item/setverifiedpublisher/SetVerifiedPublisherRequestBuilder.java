@@ -35,20 +35,20 @@ public class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/setVerifiedPublisher", rawUrl);
     }
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
+     * Set the the verifiedPublisher on an agentIdentityBlueprint. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-setverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentidentityblueprint-setverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final SetVerifiedPublisherPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
+     * Set the the verifiedPublisher on an agentIdentityBlueprint. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-setverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentidentityblueprint-setverifiedpublisher?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final SetVerifiedPublisherPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -58,7 +58,7 @@ public class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
+     * Set the the verifiedPublisher on an agentIdentityBlueprint. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
+     * Set the the verifiedPublisher on an agentIdentityBlueprint. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -4,6 +4,8 @@ import com.microsoft.graph.models.AdhocCall;
 import com.microsoft.graph.models.AdhocCallCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.adhoccalls.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.adhoccalls.getallrecordingsuseriduseridwithstartdatetimewithenddatetime.GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.users.item.adhoccalls.getalltranscriptsuseriduseridwithstartdatetimewithenddatetime.GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.users.item.adhoccalls.item.AdhocCallItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -30,6 +32,22 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllRecordings method.
+     * @return a {@link GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllTranscripts method.
+     * @return a {@link GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the adhocCalls property of the microsoft.graph.user entity.

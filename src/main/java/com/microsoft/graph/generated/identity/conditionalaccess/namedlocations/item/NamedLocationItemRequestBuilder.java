@@ -1,5 +1,6 @@
 package com.microsoft.graph.identity.conditionalaccess.namedlocations.item;
 
+import com.microsoft.graph.identity.conditionalaccess.namedlocations.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.models.NamedLocation;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link NamedLocationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

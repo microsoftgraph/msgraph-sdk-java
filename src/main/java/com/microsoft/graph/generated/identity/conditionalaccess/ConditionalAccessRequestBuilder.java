@@ -2,6 +2,7 @@ package com.microsoft.graph.identity.conditionalaccess;
 
 import com.microsoft.graph.identity.conditionalaccess.authenticationcontextclassreferences.AuthenticationContextClassReferencesRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.authenticationstrength.AuthenticationStrengthRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.deleteditems.DeletedItemsRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.evaluate.EvaluateRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.namedlocations.NamedLocationsRequestBuilder;
 import com.microsoft.graph.identity.conditionalaccess.policies.PoliciesRequestBuilder;
@@ -30,6 +31,14 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthRequestBuilder authenticationStrength() {
         return new AuthenticationStrengthRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deletedItems property of the microsoft.graph.conditionalAccessRoot entity.
+     * @return a {@link DeletedItemsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeletedItemsRequestBuilder deletedItems() {
+        return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the evaluate method.

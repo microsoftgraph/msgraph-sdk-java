@@ -37,7 +37,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}/accessPackage{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Access package containing this policy. Read-only.  Supports $expand.
+     * Access package containing this policy. Read-only. Supports $expand.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Access package containing this policy. Read-only.  Supports $expand.
+     * Access package containing this policy. Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackage::createFromDiscriminatorValue);
     }
     /**
-     * Access package containing this policy. Read-only.  Supports $expand.
+     * Access package containing this policy. Read-only. Supports $expand.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Access package containing this policy. Read-only.  Supports $expand.
+     * Access package containing this policy. Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         return new AccessPackageRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Access package containing this policy. Read-only.  Supports $expand.
+     * Access package containing this policy. Read-only. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

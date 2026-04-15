@@ -60,7 +60,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containers/{fileStorageContainer%2Did}/columns{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get columns from storage
+     * The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      * @return a {@link ColumnDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get columns from storage
+     * The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ColumnDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get columns from storage
+     * The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get columns from storage
+     * The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get columns from storage
+     * The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

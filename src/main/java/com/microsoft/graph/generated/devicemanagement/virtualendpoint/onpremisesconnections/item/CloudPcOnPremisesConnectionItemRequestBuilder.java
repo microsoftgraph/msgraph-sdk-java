@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item;
 
 import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.runhealthchecks.RunHealthChecksRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.item.updateaddomainpassword.UpdateAdDomainPasswordRequestBuilder;
 import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +29,14 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public RunHealthChecksRequestBuilder runHealthChecks() {
         return new RunHealthChecksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the updateAdDomainPassword method.
+     * @return a {@link UpdateAdDomainPasswordRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UpdateAdDomainPasswordRequestBuilder updateAdDomainPassword() {
+        return new UpdateAdDomainPasswordRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CloudPcOnPremisesConnectionItemRequestBuilder} and sets the default values.

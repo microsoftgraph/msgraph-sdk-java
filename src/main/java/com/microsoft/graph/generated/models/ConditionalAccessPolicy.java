@@ -8,12 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessPolicy extends Entity implements Parsable {
+public class ConditionalAccessPolicy extends PolicyDeletableItem implements Parsable {
     /**
      * Instantiates a new {@link ConditionalAccessPolicy} and sets the default values.
      */
     public ConditionalAccessPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.conditionalAccessPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,6 +77,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("grantControls", (n) -> { this.setGrantControls(n.getObjectValue(ConditionalAccessGrantControls::createFromDiscriminatorValue)); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("sessionControls", (n) -> { this.setSessionControls(n.getObjectValue(ConditionalAccessSessionControls::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConditionalAccessPolicyState::forValue)); });
@@ -89,6 +91,14 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public ConditionalAccessGrantControls getGrantControls() {
         return this.backingStore.get("grantControls");
+    }
+    /**
+     * Gets the id property value. Specifies the identifier of a conditionalAccessPolicy object. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getId() {
+        return this.backingStore.get("id");
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
@@ -134,6 +144,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("grantControls", this.getGrantControls());
+        writer.writeStringValue("id", this.getId());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
         writer.writeObjectValue("sessionControls", this.getSessionControls());
         writer.writeEnumValue("state", this.getState());
@@ -173,6 +184,13 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     public void setGrantControls(@jakarta.annotation.Nullable final ConditionalAccessGrantControls value) {
         this.backingStore.set("grantControls", value);
+    }
+    /**
+     * Sets the id property value. Specifies the identifier of a conditionalAccessPolicy object. Read-only.
+     * @param value Value to set for the id property.
+     */
+    public void setId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
