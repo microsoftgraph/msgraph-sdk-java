@@ -13,6 +13,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      */
     public IpNamedLocation() {
         super();
+        this.setOdataType("#microsoft.graph.ipNamedLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

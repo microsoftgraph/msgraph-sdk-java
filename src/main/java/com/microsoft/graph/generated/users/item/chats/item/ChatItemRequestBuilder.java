@@ -2,6 +2,7 @@ package com.microsoft.graph.users.item.chats.item;
 
 import com.microsoft.graph.models.Chat;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.chats.item.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.hideforuser.HideForUserRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.lastmessagepreview.LastMessagePreviewRequestBuilder;
@@ -13,6 +14,7 @@ import com.microsoft.graph.users.item.chats.item.permissiongrants.PermissionGran
 import com.microsoft.graph.users.item.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.removeallaccessforuser.RemoveAllAccessForUserRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.unhideforuser.UnhideForUserRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -33,6 +35,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the completeMigration method.
+     * @return a {@link CompleteMigrationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CompleteMigrationRequestBuilder completeMigration() {
+        return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the hideForUser method.
      * @return a {@link HideForUserRequestBuilder}
@@ -120,6 +130,14 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the startMigration method.
+     * @return a {@link StartMigrationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StartMigrationRequestBuilder startMigration() {
+        return new StartMigrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.chat entity.

@@ -27,6 +27,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget": return new MicrosoftAuthenticatorAuthenticationMethodTarget();
+                case "#microsoft.graph.passkeyAuthenticationMethodTarget": return new PasskeyAuthenticationMethodTarget();
                 case "#microsoft.graph.smsAuthenticationMethodTarget": return new SmsAuthenticationMethodTarget();
             }
         }

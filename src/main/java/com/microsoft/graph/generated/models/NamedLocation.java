@@ -8,12 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class NamedLocation extends Entity implements Parsable {
+public class NamedLocation extends PolicyDeletableItem implements Parsable {
     /**
      * Instantiates a new {@link NamedLocation} and sets the default values.
      */
     public NamedLocation() {
         super();
+        this.setOdataType("#microsoft.graph.namedLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,8 +59,17 @@ public class NamedLocation extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the id property value. Identifier of a namedLocation object. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getId() {
+        return this.backingStore.get("id");
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents last modified date and time of the location using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -78,6 +88,7 @@ public class NamedLocation extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("id", this.getId());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
     }
     /**
@@ -93,6 +104,13 @@ public class NamedLocation extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the id property value. Identifier of a namedLocation object. Read-only.
+     * @param value Value to set for the id property.
+     */
+    public void setId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents last modified date and time of the location using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.

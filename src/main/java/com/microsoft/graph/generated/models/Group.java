@@ -259,6 +259,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("uniqueName", (n) -> { this.setUniqueName(n.getStringValue()); });
         deserializerMap.put("unseenCount", (n) -> { this.setUnseenCount(n.getIntegerValue()); });
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getStringValue()); });
+        deserializerMap.put("welcomeMessageEnabled", (n) -> { this.setWelcomeMessageEnabled(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -678,6 +679,14 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("visibility");
     }
     /**
+     * Gets the welcomeMessageEnabled property value. The welcomeMessageEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getWelcomeMessageEnabled() {
+        return this.backingStore.get("welcomeMessageEnabled");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -755,6 +764,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeStringValue("uniqueName", this.getUniqueName());
         writer.writeIntegerValue("unseenCount", this.getUnseenCount());
         writer.writeStringValue("visibility", this.getVisibility());
+        writer.writeBooleanValue("welcomeMessageEnabled", this.getWelcomeMessageEnabled());
     }
     /**
      * Sets the acceptedSenders property value. The list of users or groups allowed to create posts or calendar events in this group. If this list is nonempty, then only users or groups listed here are allowed to post.
@@ -1252,5 +1262,12 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setVisibility(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("visibility", value);
+    }
+    /**
+     * Sets the welcomeMessageEnabled property value. The welcomeMessageEnabled property
+     * @param value Value to set for the welcomeMessageEnabled property.
+     */
+    public void setWelcomeMessageEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("welcomeMessageEnabled", value);
     }
 }

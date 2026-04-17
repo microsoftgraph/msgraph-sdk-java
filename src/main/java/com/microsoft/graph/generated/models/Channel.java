@@ -66,6 +66,14 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("email");
     }
     /**
+     * Gets the enabledApps property value. A collection of enabled apps in the channel.
+     * @return a {@link java.util.List<TeamsApp>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TeamsApp> getEnabledApps() {
+        return this.backingStore.get("enabledApps");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -77,12 +85,15 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("enabledApps", (n) -> { this.setEnabledApps(n.getCollectionOfObjectValues(TeamsApp::createFromDiscriminatorValue)); });
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
+        deserializerMap.put("migrationMode", (n) -> { this.setMigrationMode(n.getEnumValue(MigrationMode::forValue)); });
+        deserializerMap.put("originalCreatedDateTime", (n) -> { this.setOriginalCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(ChannelSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
@@ -139,6 +150,22 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("messages");
     }
     /**
+     * Gets the migrationMode property value. The migrationMode property
+     * @return a {@link MigrationMode}
+     */
+    @jakarta.annotation.Nullable
+    public MigrationMode getMigrationMode() {
+        return this.backingStore.get("migrationMode");
+    }
+    /**
+     * Gets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getOriginalCreatedDateTime() {
+        return this.backingStore.get("originalCreatedDateTime");
+    }
+    /**
      * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
      * @return a {@link java.util.List<SharedWithChannelTeamInfo>}
      */
@@ -190,12 +217,15 @@ public class Channel extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
+        writer.writeCollectionOfObjectValues("enabledApps", this.getEnabledApps());
         writer.writeObjectValue("filesFolder", this.getFilesFolder());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavoriteByDefault", this.getIsFavoriteByDefault());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeEnumValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
+        writer.writeEnumValue("migrationMode", this.getMigrationMode());
+        writer.writeOffsetDateTimeValue("originalCreatedDateTime", this.getOriginalCreatedDateTime());
         writer.writeCollectionOfObjectValues("sharedWithTeams", this.getSharedWithTeams());
         writer.writeObjectValue("summary", this.getSummary());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
@@ -238,6 +268,13 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("email", value);
     }
     /**
+     * Sets the enabledApps property value. A collection of enabled apps in the channel.
+     * @param value Value to set for the enabledApps property.
+     */
+    public void setEnabledApps(@jakarta.annotation.Nullable final java.util.List<TeamsApp> value) {
+        this.backingStore.set("enabledApps", value);
+    }
+    /**
      * Sets the filesFolder property value. Metadata for the location where the channel&apos;s files are stored.
      * @param value Value to set for the filesFolder property.
      */
@@ -278,6 +315,20 @@ public class Channel extends Entity implements Parsable {
      */
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<ChatMessage> value) {
         this.backingStore.set("messages", value);
+    }
+    /**
+     * Sets the migrationMode property value. The migrationMode property
+     * @param value Value to set for the migrationMode property.
+     */
+    public void setMigrationMode(@jakarta.annotation.Nullable final MigrationMode value) {
+        this.backingStore.set("migrationMode", value);
+    }
+    /**
+     * Sets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * @param value Value to set for the originalCreatedDateTime property.
+     */
+    public void setOriginalCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("originalCreatedDateTime", value);
     }
     /**
      * Sets the sharedWithTeams property value. A collection of teams with which a channel is shared.

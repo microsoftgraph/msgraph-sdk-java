@@ -37,6 +37,7 @@ public class IdentityContainer extends Entity implements Parsable {
         deserializerMap.put("sensorCandidateActivationConfiguration", (n) -> { this.setSensorCandidateActivationConfiguration(n.getObjectValue(SensorCandidateActivationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("sensorCandidates", (n) -> { this.setSensorCandidates(n.getCollectionOfObjectValues(SensorCandidate::createFromDiscriminatorValue)); });
         deserializerMap.put("sensors", (n) -> { this.setSensors(n.getCollectionOfObjectValues(Sensor::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(SettingsContainer::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -80,6 +81,14 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("sensors");
     }
     /**
+     * Gets the settings property value. Represents a container for security identities settings APIs.
+     * @return a {@link SettingsContainer}
+     */
+    @jakarta.annotation.Nullable
+    public SettingsContainer getSettings() {
+        return this.backingStore.get("settings");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -91,6 +100,7 @@ public class IdentityContainer extends Entity implements Parsable {
         writer.writeObjectValue("sensorCandidateActivationConfiguration", this.getSensorCandidateActivationConfiguration());
         writer.writeCollectionOfObjectValues("sensorCandidates", this.getSensorCandidates());
         writer.writeCollectionOfObjectValues("sensors", this.getSensors());
+        writer.writeObjectValue("settings", this.getSettings());
     }
     /**
      * Sets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer&apos;s Microsoft Defender for Identity configuration.
@@ -126,5 +136,12 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public void setSensors(@jakarta.annotation.Nullable final java.util.List<Sensor> value) {
         this.backingStore.set("sensors", value);
+    }
+    /**
+     * Sets the settings property value. Represents a container for security identities settings APIs.
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final SettingsContainer value) {
+        this.backingStore.set("settings", value);
     }
 }

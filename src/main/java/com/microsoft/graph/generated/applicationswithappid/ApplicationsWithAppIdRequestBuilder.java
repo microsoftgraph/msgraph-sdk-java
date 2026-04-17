@@ -39,7 +39,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications(appId='{appId}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -47,7 +47,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of an application object.
+     * Get the properties and relationships of an application object. This API can be used to get agentIdentityBlueprint objects as well by their ID.
      * @return a {@link Application}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
@@ -69,7 +69,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of an application object.
+     * Get the properties and relationships of an application object. This API can be used to get agentIdentityBlueprint objects as well by their ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Application}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -83,7 +83,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Application::createFromDiscriminatorValue);
     }
     /**
-     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object. This API can also create an agentIdentityBlueprint object if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprint, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param body The request body
      * @return a {@link Application}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -94,7 +94,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object. This API can also create an agentIdentityBlueprint object if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprint, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Application}
@@ -110,7 +110,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Application::createFromDiscriminatorValue);
     }
     /**
-     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -130,7 +130,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of an application object.
+     * Get the properties and relationships of an application object. This API can be used to get agentIdentityBlueprint objects as well by their ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of an application object.
+     * Get the properties and relationships of an application object. This API can be used to get agentIdentityBlueprint objects as well by their ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -150,7 +150,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object. This API can also create an agentIdentityBlueprint object if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprint, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -159,7 +159,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn&apos;t exist, or update the properties of an existing application object. This API can also create an agentIdentityBlueprint object if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprint, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -190,7 +190,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of an application object.
+     * Get the properties and relationships of an application object. This API can be used to get agentIdentityBlueprint objects as well by their ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

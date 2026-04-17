@@ -24,6 +24,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.agentIdentity": return new AgentIdentity();
+                case "#microsoft.graph.agentIdentityBlueprintPrincipal": return new AgentIdentityBlueprintPrincipal();
+            }
+        }
         return new ServicePrincipal();
     }
     /**
@@ -139,6 +147,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("claimsMappingPolicies");
     }
     /**
+     * Gets the createdByAppId property value. The appId of the application that created this service principal. Set internally by Microsoft Entra ID. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCreatedByAppId() {
+        return this.backingStore.get("createdByAppId");
+    }
+    /**
      * Gets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
      * @return a {@link java.util.List<DirectoryObject>}
      */
@@ -223,6 +239,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("appRoleAssignments", (n) -> { this.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("appRoles", (n) -> { this.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdByAppId", (n) -> { this.setCreatedByAppId(n.getStringValue()); });
         deserializerMap.put("createdObjects", (n) -> { this.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributes", (n) -> { this.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
         deserializerMap.put("delegatedPermissionClassifications", (n) -> { this.setDelegatedPermissionClassifications(n.getCollectionOfObjectValues(DelegatedPermissionClassification::createFromDiscriminatorValue)); });
@@ -234,6 +251,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("homepage", (n) -> { this.setHomepage(n.getStringValue()); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDisabled", (n) -> { this.setIsDisabled(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("loginUrl", (n) -> { this.setLoginUrl(n.getStringValue()); });
         deserializerMap.put("logoutUrl", (n) -> { this.setLogoutUrl(n.getStringValue()); });
@@ -286,6 +304,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public InformationalUrl getInfo() {
         return this.backingStore.get("info");
+    }
+    /**
+     * Gets the isDisabled property value. The isDisabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDisabled() {
+        return this.backingStore.get("isDisabled");
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
@@ -524,6 +550,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("appRoleAssignments", this.getAppRoleAssignments());
         writer.writeCollectionOfObjectValues("appRoles", this.getAppRoles());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
+        writer.writeStringValue("createdByAppId", this.getCreatedByAppId());
         writer.writeCollectionOfObjectValues("createdObjects", this.getCreatedObjects());
         writer.writeObjectValue("customSecurityAttributes", this.getCustomSecurityAttributes());
         writer.writeCollectionOfObjectValues("delegatedPermissionClassifications", this.getDelegatedPermissionClassifications());
@@ -535,6 +562,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeStringValue("homepage", this.getHomepage());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeObjectValue("info", this.getInfo());
+        writer.writeBooleanValue("isDisabled", this.getIsDisabled());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeStringValue("loginUrl", this.getLoginUrl());
         writer.writeStringValue("logoutUrl", this.getLogoutUrl());
@@ -662,6 +690,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("claimsMappingPolicies", value);
     }
     /**
+     * Sets the createdByAppId property value. The appId of the application that created this service principal. Set internally by Microsoft Entra ID. Read-only.
+     * @param value Value to set for the createdByAppId property.
+     */
+    public void setCreatedByAppId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("createdByAppId", value);
+    }
+    /**
      * Sets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
      * @param value Value to set for the createdObjects property.
      */
@@ -737,6 +772,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setInfo(@jakarta.annotation.Nullable final InformationalUrl value) {
         this.backingStore.set("info", value);
+    }
+    /**
+     * Sets the isDisabled property value. The isDisabled property
+     * @param value Value to set for the isDisabled property.
+     */
+    public void setIsDisabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDisabled", value);
     }
     /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
