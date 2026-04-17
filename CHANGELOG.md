@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.63.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.62.0...v6.63.0) (2026-04-17)
+
+
+### Features
+
+* **generation:** update request builders and models ([aa6302a](https://github.com/microsoftgraph/msgraph-sdk-java/commit/aa6302a84312d44bc98d46ba12019437b5a39adc))
+
+
+### Bug Fixes
+
+* remove previewBranch param and align deploy stage condition with deploy_maven job ([8c970c6](https://github.com/microsoftgraph/msgraph-sdk-java/commit/8c970c69215998195833dd10393e389cc47a8252))
+* remove previewBranch parameter and align deploy stage condition ([53507c0](https://github.com/microsoftgraph/msgraph-sdk-java/commit/53507c090b1834e155503b81e0fb95bd7c1728dd))
+
 ## [6.62.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.61.0...v6.62.0) (2026-02-19)
 
 
