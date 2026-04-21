@@ -26,7 +26,7 @@ public class ConversationThread extends Entity implements Parsable {
         return new ConversationThread();
     }
     /**
-     * Gets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
+     * Gets the ccRecipients property value. The Cc: recipients for the thread. Requires $select to retrieve.
      * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ConversationThread extends Entity implements Parsable {
         return this.backingStore.get("topic");
     }
     /**
-     * Gets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
+     * Gets the toRecipients property value. The To: recipients for the thread. Requires $select to retrieve.
      * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class ConversationThread extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("uniqueSenders", this.getUniqueSenders());
     }
     /**
-     * Sets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
+     * Sets the ccRecipients property value. The Cc: recipients for the thread. Requires $select to retrieve.
      * @param value Value to set for the ccRecipients property.
      */
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
@@ -182,7 +182,7 @@ public class ConversationThread extends Entity implements Parsable {
         this.backingStore.set("topic", value);
     }
     /**
-     * Sets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
+     * Sets the toRecipients property value. The To: recipients for the thread. Requires $select to retrieve.
      * @param value Value to set for the toRecipients property.
      */
     public void setToRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {

@@ -204,6 +204,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("isFallbackPublicClient", (n) -> { this.setIsFallbackPublicClient(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("logo", (n) -> { this.setLogo(n.getByteArrayValue()); });
+        deserializerMap.put("managerApplications", (n) -> { this.setManagerApplications(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("nativeAuthenticationApisEnabled", (n) -> { this.setNativeAuthenticationApisEnabled(n.getEnumSetValue(NativeAuthenticationApisEnabled::forValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
         deserializerMap.put("oauth2RequirePostResponse", (n) -> { this.setOauth2RequirePostResponse(n.getBooleanValue()); });
@@ -301,6 +302,14 @@ public class Application extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public byte[] getLogo() {
         return this.backingStore.get("logo");
+    }
+    /**
+     * Gets the managerApplications property value. A collection of application IDs for Microsoft first-party applications designated as managers. Manager applications can create service principals, agent identities, and agent users for managed agent blueprints. Limited to a maximum of 10 entries. Not nullable. Only supported on agentIdentityBlueprint objects; attempts to set this property on non-agent-blueprint applications return an error. Not returned by default; must be explicitly requested via $select.
+     * @return a {@link java.util.List<UUID>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<UUID> getManagerApplications() {
+        return this.backingStore.get("managerApplications");
     }
     /**
      * Gets the nativeAuthenticationApisEnabled property value. Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: none and all. Default is none. For more information, see Native Authentication.
@@ -527,6 +536,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("isFallbackPublicClient", this.getIsFallbackPublicClient());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeByteArrayValue("logo", this.getLogo());
+        writer.writeCollectionOfPrimitiveValues("managerApplications", this.getManagerApplications());
         writer.writeEnumSetValue("nativeAuthenticationApisEnabled", this.getNativeAuthenticationApisEnabled());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeBooleanValue("oauth2RequirePostResponse", this.getOauth2RequirePostResponse());
@@ -733,6 +743,13 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setLogo(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("logo", value);
+    }
+    /**
+     * Sets the managerApplications property value. A collection of application IDs for Microsoft first-party applications designated as managers. Manager applications can create service principals, agent identities, and agent users for managed agent blueprints. Limited to a maximum of 10 entries. Not nullable. Only supported on agentIdentityBlueprint objects; attempts to set this property on non-agent-blueprint applications return an error. Not returned by default; must be explicitly requested via $select.
+     * @param value Value to set for the managerApplications property.
+     */
+    public void setManagerApplications(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
+        this.backingStore.set("managerApplications", value);
     }
     /**
      * Sets the nativeAuthenticationApisEnabled property value. Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: none and all. Default is none. For more information, see Native Authentication.

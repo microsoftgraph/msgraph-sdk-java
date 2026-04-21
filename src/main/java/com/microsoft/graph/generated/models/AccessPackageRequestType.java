@@ -16,7 +16,8 @@ public enum AccessPackageRequestType implements ValuedEnum {
     SystemUpdate("systemUpdate"),
     SystemRemove("systemRemove"),
     OnBehalfAdd("onBehalfAdd"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ApproverRemove("approverRemove");
     public final String value;
     AccessPackageRequestType(final String value) {
         this.value = value;
@@ -39,6 +40,7 @@ public enum AccessPackageRequestType implements ValuedEnum {
             case "systemRemove": return SystemRemove;
             case "onBehalfAdd": return OnBehalfAdd;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "approverRemove": return ApproverRemove;
             default: return null;
         }
     }

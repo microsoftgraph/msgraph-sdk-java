@@ -75,7 +75,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("calendar");
     }
     /**
-     * Gets the cancelledOccurrences property value. Contains occurrenceId property values of canceled instances in a recurring series, if the event is the series master. Instances in a recurring series that are canceled are called canceled occurences.Returned only on $select in a Get operation which specifies the ID (seriesMasterId property value) of a series master event.
+     * Gets the cancelledOccurrences property value. Contains occurrenceId property values of canceled instances in a recurring series, if the event is the series master. Instances in a recurring series that are canceled are called canceled occurences.Requires $select to retrieve. Only returned in a Get operation that specifies the ID (seriesMasterId property value) of a series master event.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("end");
     }
     /**
-     * Gets the exceptionOccurrences property value. Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don&apos;t include canceled occurrences.Returned only on $select and $expand in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
+     * Gets the exceptionOccurrences property value. Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don&apos;t include canceled occurrences.Requires $select and $expand to retrieve. Only returned in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
      * @return a {@link java.util.List<Event>}
      */
     @jakarta.annotation.Nullable
@@ -526,7 +526,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("calendar", value);
     }
     /**
-     * Sets the cancelledOccurrences property value. Contains occurrenceId property values of canceled instances in a recurring series, if the event is the series master. Instances in a recurring series that are canceled are called canceled occurences.Returned only on $select in a Get operation which specifies the ID (seriesMasterId property value) of a series master event.
+     * Sets the cancelledOccurrences property value. Contains occurrenceId property values of canceled instances in a recurring series, if the event is the series master. Instances in a recurring series that are canceled are called canceled occurences.Requires $select to retrieve. Only returned in a Get operation that specifies the ID (seriesMasterId property value) of a series master event.
      * @param value Value to set for the cancelledOccurrences property.
      */
     public void setCancelledOccurrences(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -540,7 +540,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("end", value);
     }
     /**
-     * Sets the exceptionOccurrences property value. Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don&apos;t include canceled occurrences.Returned only on $select and $expand in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
+     * Sets the exceptionOccurrences property value. Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don&apos;t include canceled occurrences.Requires $select and $expand to retrieve. Only returned in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
      * @param value Value to set for the exceptionOccurrences property.
      */
     public void setExceptionOccurrences(@jakarta.annotation.Nullable final java.util.List<Event> value) {

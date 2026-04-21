@@ -66,7 +66,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the errorDetails property value. Details of errors related to the reasons why the snapshot can&apos;t complete. Returned only on $select.
+     * Gets the errorDetails property value. Details of errors related to the reasons why the snapshot can&apos;t complete. Requires $select to retrieve.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resourceLocation property value. The URL at which the snapshot file resides. Returned only on $select.
+     * Gets the resourceLocation property value. The URL at which the snapshot file resides. Requires $select to retrieve.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return this.backingStore.get("resourceLocation");
     }
     /**
-     * Gets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Returned only on $select.
+     * Gets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Requires $select to retrieve.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -173,21 +173,21 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the errorDetails property value. Details of errors related to the reasons why the snapshot can&apos;t complete. Returned only on $select.
+     * Sets the errorDetails property value. Details of errors related to the reasons why the snapshot can&apos;t complete. Requires $select to retrieve.
      * @param value Value to set for the errorDetails property.
      */
     public void setErrorDetails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("errorDetails", value);
     }
     /**
-     * Sets the resourceLocation property value. The URL at which the snapshot file resides. Returned only on $select.
+     * Sets the resourceLocation property value. The URL at which the snapshot file resides. Requires $select to retrieve.
      * @param value Value to set for the resourceLocation property.
      */
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceLocation", value);
     }
     /**
-     * Sets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Returned only on $select.
+     * Sets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Requires $select to retrieve.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<String> value) {

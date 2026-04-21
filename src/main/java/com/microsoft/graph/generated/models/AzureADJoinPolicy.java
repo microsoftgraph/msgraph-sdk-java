@@ -69,9 +69,10 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("allowedToJoin", (n) -> { this.setAllowedToJoin(n.getObjectValue(DeviceRegistrationMembership::createFromDiscriminatorValue)); });
         deserializerMap.put("isAdminConfigurable", (n) -> { this.setIsAdminConfigurable(n.getBooleanValue()); });
+        deserializerMap.put("localAdmins", (n) -> { this.setLocalAdmins(n.getObjectValue(LocalAdminSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -82,6 +83,14 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nullable
     public Boolean getIsAdminConfigurable() {
         return this.backingStore.get("isAdminConfigurable");
+    }
+    /**
+     * Gets the localAdmins property value. The localAdmins property
+     * @return a {@link LocalAdminSettings}
+     */
+    @jakarta.annotation.Nullable
+    public LocalAdminSettings getLocalAdmins() {
+        return this.backingStore.get("localAdmins");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -99,6 +108,7 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         Objects.requireNonNull(writer);
         writer.writeObjectValue("allowedToJoin", this.getAllowedToJoin());
         writer.writeBooleanValue("isAdminConfigurable", this.getIsAdminConfigurable());
+        writer.writeObjectValue("localAdmins", this.getLocalAdmins());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -130,6 +140,13 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
      */
     public void setIsAdminConfigurable(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAdminConfigurable", value);
+    }
+    /**
+     * Sets the localAdmins property value. The localAdmins property
+     * @param value Value to set for the localAdmins property.
+     */
+    public void setLocalAdmins(@jakarta.annotation.Nullable final LocalAdminSettings value) {
+        this.backingStore.set("localAdmins", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

@@ -34,7 +34,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("baselineResourceDisplayName");
     }
     /**
-     * Gets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Returned only on $select.
+     * Gets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Requires $select to retrieve.
      * @return a {@link java.util.List<DriftedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         this.backingStore.set("baselineResourceDisplayName", value);
     }
     /**
-     * Sets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Returned only on $select.
+     * Sets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Requires $select to retrieve.
      * @param value Value to set for the driftedProperties property.
      */
     public void setDriftedProperties(@jakarta.annotation.Nullable final java.util.List<DriftedProperty> value) {

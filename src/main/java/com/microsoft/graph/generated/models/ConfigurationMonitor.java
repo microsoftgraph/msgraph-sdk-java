@@ -88,7 +88,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the inactivationReason property value. The reason for the monitor&apos;s inactivation. Returned only on $select.
+     * Gets the inactivationReason property value. The reason for the monitor&apos;s inactivation. Requires $select to retrieve.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return this.backingStore.get("monitorRunFrequencyInHours");
     }
     /**
-     * Gets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline. Returned only on $select.
+     * Gets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline. Requires $select to retrieve.
      * @return a {@link OpenComplexDictionaryType}
      */
     @jakarta.annotation.Nullable
@@ -203,7 +203,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the inactivationReason property value. The reason for the monitor&apos;s inactivation. Returned only on $select.
+     * Sets the inactivationReason property value. The reason for the monitor&apos;s inactivation. Requires $select to retrieve.
      * @param value Value to set for the inactivationReason property.
      */
     public void setInactivationReason(@jakarta.annotation.Nullable final String value) {
@@ -238,7 +238,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         this.backingStore.set("monitorRunFrequencyInHours", value);
     }
     /**
-     * Sets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline. Returned only on $select.
+     * Sets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline. Requires $select to retrieve.
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final OpenComplexDictionaryType value) {

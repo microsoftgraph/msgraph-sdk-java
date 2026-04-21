@@ -55,7 +55,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
+     * Gets the key property value. The BitLocker recovery key. Requires $select to retrieve. Not nullable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         this.backingStore.set("deviceId", value);
     }
     /**
-     * Sets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
+     * Sets the key property value. The BitLocker recovery key. Requires $select to retrieve. Not nullable.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
