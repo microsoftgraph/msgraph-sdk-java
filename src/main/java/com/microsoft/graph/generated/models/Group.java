@@ -38,7 +38,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("acceptedSenders");
     }
     /**
-     * Gets the allowExternalSenders property value. Indicates if people external to the organization can send messages to the group. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the allowExternalSenders property value. Indicates if people external to the organization can send messages to the group. The default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoleAssignments");
     }
     /**
-     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
+     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Requires $select to retrieve. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
      * @return a {@link java.util.List<AssignedLabel>}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("assignedLabels");
     }
     /**
-     * Gets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq). Read-only.
+     * Gets the assignedLicenses property value. The licenses that are assigned to the group. Requires $select to retrieve. Supports $filter (eq). Read-only.
      * @return a {@link java.util.List<AssignedLicense>}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("assignedLicenses");
     }
     /**
-     * Gets the autoSubscribeNewMembers property value. Indicates if new members added to the group are autosubscribed to receive email notifications. You can set this property in a PATCH request for the group; don&apos;t set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the autoSubscribeNewMembers property value. Indicates if new members added to the group are autosubscribed to receive email notifications. You can set this property in a PATCH request for the group; don&apos;t set it in the initial POST request that creates the group. Default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("hasMembersWithLicenseErrors");
     }
     /**
-     * Gets the hideFromAddressLists property value. True if the group isn&apos;t displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the hideFromAddressLists property value. True if the group isn&apos;t displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. The default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -295,7 +295,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("hideFromAddressLists");
     }
     /**
-     * Gets the hideFromOutlookClients property value. True if the group isn&apos;t displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the hideFromOutlookClients property value. True if the group isn&apos;t displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -319,7 +319,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("isAssignableToRole");
     }
     /**
-     * Gets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Returned only on $select.
+     * Gets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Requires $select to retrieve.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -327,7 +327,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManagementRestricted");
     }
     /**
-     * Gets the isSubscribedByMail property value. Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the isSubscribedByMail property value. Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -335,7 +335,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("isSubscribedByMail");
     }
     /**
-     * Gets the licenseProcessingState property value. Indicates the status of the group license assignment to all group members. The default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+     * Gets the licenseProcessingState property value. Indicates the status of the group license assignment to all group members. The default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Requires $select to retrieve. Read-only.
      * @return a {@link LicenseProcessingState}
      */
     @jakarta.annotation.Nullable
@@ -663,7 +663,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("uniqueName");
     }
     /**
-     * Gets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -774,7 +774,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("acceptedSenders", value);
     }
     /**
-     * Sets the allowExternalSenders property value. Indicates if people external to the organization can send messages to the group. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the allowExternalSenders property value. Indicates if people external to the organization can send messages to the group. The default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the allowExternalSenders property.
      */
     public void setAllowExternalSenders(@jakarta.annotation.Nullable final Boolean value) {
@@ -788,21 +788,21 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("appRoleAssignments", value);
     }
     /**
-     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
+     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Requires $select to retrieve. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
      * @param value Value to set for the assignedLabels property.
      */
     public void setAssignedLabels(@jakarta.annotation.Nullable final java.util.List<AssignedLabel> value) {
         this.backingStore.set("assignedLabels", value);
     }
     /**
-     * Sets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq). Read-only.
+     * Sets the assignedLicenses property value. The licenses that are assigned to the group. Requires $select to retrieve. Supports $filter (eq). Read-only.
      * @param value Value to set for the assignedLicenses property.
      */
     public void setAssignedLicenses(@jakarta.annotation.Nullable final java.util.List<AssignedLicense> value) {
         this.backingStore.set("assignedLicenses", value);
     }
     /**
-     * Sets the autoSubscribeNewMembers property value. Indicates if new members added to the group are autosubscribed to receive email notifications. You can set this property in a PATCH request for the group; don&apos;t set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the autoSubscribeNewMembers property value. Indicates if new members added to the group are autosubscribed to receive email notifications. You can set this property in a PATCH request for the group; don&apos;t set it in the initial POST request that creates the group. Default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the autoSubscribeNewMembers property.
      */
     public void setAutoSubscribeNewMembers(@jakarta.annotation.Nullable final Boolean value) {
@@ -921,14 +921,14 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("hasMembersWithLicenseErrors", value);
     }
     /**
-     * Sets the hideFromAddressLists property value. True if the group isn&apos;t displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the hideFromAddressLists property value. True if the group isn&apos;t displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. The default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the hideFromAddressLists property.
      */
     public void setHideFromAddressLists(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hideFromAddressLists", value);
     }
     /**
-     * Sets the hideFromOutlookClients property value. True if the group isn&apos;t displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the hideFromOutlookClients property value. True if the group isn&apos;t displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. The default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the hideFromOutlookClients property.
      */
     public void setHideFromOutlookClients(@jakarta.annotation.Nullable final Boolean value) {
@@ -949,21 +949,21 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("isAssignableToRole", value);
     }
     /**
-     * Sets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Returned only on $select.
+     * Sets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Requires $select to retrieve.
      * @param value Value to set for the isManagementRestricted property.
      */
     public void setIsManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isManagementRestricted", value);
     }
     /**
-     * Sets the isSubscribedByMail property value. Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the isSubscribedByMail property value. Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the isSubscribedByMail property.
      */
     public void setIsSubscribedByMail(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isSubscribedByMail", value);
     }
     /**
-     * Sets the licenseProcessingState property value. Indicates the status of the group license assignment to all group members. The default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+     * Sets the licenseProcessingState property value. Indicates the status of the group license assignment to all group members. The default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Requires $select to retrieve. Read-only.
      * @param value Value to set for the licenseProcessingState property.
      */
     public void setLicenseProcessingState(@jakarta.annotation.Nullable final LicenseProcessingState value) {
@@ -1250,7 +1250,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("uniqueName", value);
     }
     /**
-     * Sets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the unseenCount property.
      */
     public void setUnseenCount(@jakarta.annotation.Nullable final Integer value) {

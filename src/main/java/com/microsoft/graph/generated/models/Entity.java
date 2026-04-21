@@ -270,6 +270,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.appRoleAssignment": return new AppRoleAssignment();
             case "#microsoft.graph.approval": return new Approval();
             case "#microsoft.graph.approvalStage": return new ApprovalStage();
+            case "#microsoft.graph.approvedClientApp": return new ApprovedClientApp();
             case "#microsoft.graph.appScope": return new AppScope();
             case "#microsoft.graph.arkoseFraudProtectionProvider": return new ArkoseFraudProtectionProvider();
             case "#microsoft.graph.associatedTeamInfo": return new AssociatedTeamInfo();
@@ -693,7 +694,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.managedEBookAssignment": return new ManagedEBookAssignment();
             case "#microsoft.graph.managedIOSLobApp": return new ManagedIOSLobApp();
             case "#microsoft.graph.managedIOSStoreApp": return new ManagedIOSStoreApp();
-            case "#microsoft.graph.managedMobileApp": return new ManagedMobileApp();
         }
         return null;
     }
@@ -705,6 +705,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.managedMobileApp": return new ManagedMobileApp();
             case "#microsoft.graph.managedMobileLobApp": return new ManagedMobileLobApp();
             case "#microsoft.graph.mdmWindowsInformationProtectionPolicy": return new MdmWindowsInformationProtectionPolicy();
             case "#microsoft.graph.meetingAttendanceReport": return new MeetingAttendanceReport();
@@ -1204,7 +1205,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.virtualEventPresenter": return new VirtualEventPresenter();
             case "#microsoft.graph.virtualEventRegistration": return new VirtualEventRegistration();
             case "#microsoft.graph.virtualEventRegistrationConfiguration": return new VirtualEventRegistrationConfiguration();
-            case "#microsoft.graph.virtualEventRegistrationCustomQuestion": return new VirtualEventRegistrationCustomQuestion();
         }
         return null;
     }
@@ -1216,6 +1216,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.virtualEventRegistrationCustomQuestion": return new VirtualEventRegistrationCustomQuestion();
             case "#microsoft.graph.virtualEventRegistrationPredefinedQuestion": return new VirtualEventRegistrationPredefinedQuestion();
             case "#microsoft.graph.virtualEventRegistrationQuestionBase": return new VirtualEventRegistrationQuestionBase();
             case "#microsoft.graph.virtualEventSession": return new VirtualEventSession();

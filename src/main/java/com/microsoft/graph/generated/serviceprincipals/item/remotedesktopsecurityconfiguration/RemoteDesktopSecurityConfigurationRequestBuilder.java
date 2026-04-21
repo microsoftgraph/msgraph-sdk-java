@@ -2,6 +2,7 @@ package com.microsoft.graph.serviceprincipals.item.remotedesktopsecurityconfigur
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RemoteDesktopSecurityConfiguration;
+import com.microsoft.graph.serviceprincipals.item.remotedesktopsecurityconfiguration.approvedclientapps.ApprovedClientAppsRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.remotedesktopsecurityconfiguration.targetdevicegroups.TargetDeviceGroupsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteDesktopSecurityConfigurationRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the approvedClientApps property of the microsoft.graph.remoteDesktopSecurityConfiguration entity.
+     * @return a {@link ApprovedClientAppsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ApprovedClientAppsRequestBuilder approvedClientApps() {
+        return new ApprovedClientAppsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the targetDeviceGroups property of the microsoft.graph.remoteDesktopSecurityConfiguration entity.
      * @return a {@link TargetDeviceGroupsRequestBuilder}

@@ -34,7 +34,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         return this.backingStore.get("driftsCount");
     }
     /**
-     * Gets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity. Returned only on $select.
+     * Gets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity. Requires $select to retrieve.
      * @return a {@link java.util.List<ErrorDetail>}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         this.backingStore.set("driftsCount", value);
     }
     /**
-     * Sets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity. Returned only on $select.
+     * Sets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity. Requires $select to retrieve.
      * @param value Value to set for the errorDetails property.
      */
     public void setErrorDetails(@jakarta.annotation.Nullable final java.util.List<ErrorDetail> value) {

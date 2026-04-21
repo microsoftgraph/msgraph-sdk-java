@@ -89,6 +89,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
+        deserializerMap.put("layoutType", (n) -> { this.setLayoutType(n.getEnumValue(ChannelLayoutType::forValue)); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
@@ -124,6 +125,14 @@ public class Channel extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsFavoriteByDefault() {
         return this.backingStore.get("isFavoriteByDefault");
+    }
+    /**
+     * Gets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional postreply conversation format, and channels with the chat layout provide a chatlike threading experience similar to group chats.
+     * @return a {@link ChannelLayoutType}
+     */
+    @jakarta.annotation.Nullable
+    public ChannelLayoutType getLayoutType() {
+        return this.backingStore.get("layoutType");
     }
     /**
      * Gets the members property value. A collection of membership records associated with the channel.
@@ -221,6 +230,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeObjectValue("filesFolder", this.getFilesFolder());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavoriteByDefault", this.getIsFavoriteByDefault());
+        writer.writeEnumValue("layoutType", this.getLayoutType());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeEnumValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
@@ -294,6 +304,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setIsFavoriteByDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFavoriteByDefault", value);
+    }
+    /**
+     * Sets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional postreply conversation format, and channels with the chat layout provide a chatlike threading experience similar to group chats.
+     * @param value Value to set for the layoutType property.
+     */
+    public void setLayoutType(@jakarta.annotation.Nullable final ChannelLayoutType value) {
+        this.backingStore.set("layoutType", value);
     }
     /**
      * Sets the members property value. A collection of membership records associated with the channel.

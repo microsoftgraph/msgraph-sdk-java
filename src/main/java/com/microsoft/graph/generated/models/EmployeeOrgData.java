@@ -56,7 +56,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the costCenter property value. The cost center associated with the user. Returned only on $select. Supports $filter.
+     * Gets the costCenter property value. The cost center associated with the user. Requires $select to retrieve. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("costCenter");
     }
     /**
-     * Gets the division property value. The name of the division in which the user works. Returned only on $select. Supports $filter.
+     * Gets the division property value. The name of the division in which the user works. Requires $select to retrieve. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class EmployeeOrgData implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the costCenter property value. The cost center associated with the user. Returned only on $select. Supports $filter.
+     * Sets the costCenter property value. The cost center associated with the user. Requires $select to retrieve. Supports $filter.
      * @param value Value to set for the costCenter property.
      */
     public void setCostCenter(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("costCenter", value);
     }
     /**
-     * Sets the division property value. The name of the division in which the user works. Returned only on $select. Supports $filter.
+     * Sets the division property value. The name of the division in which the user works. Requires $select to retrieve. Supports $filter.
      * @param value Value to set for the division property.
      */
     public void setDivision(@jakarta.annotation.Nullable final String value) {
