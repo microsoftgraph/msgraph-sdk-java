@@ -67,7 +67,7 @@ public class LocalAdminPasswordSettings implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Specifies whether LAPS is enabled. The default value is false. An admin can set it to true to enable Local Admin Password Solution (LAPS) within their organization.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class LocalAdminPasswordSettings implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Specifies whether LAPS is enabled. The default value is false. An admin can set it to true to enable Local Admin Password Solution (LAPS) within their organization.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

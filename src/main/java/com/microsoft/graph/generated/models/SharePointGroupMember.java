@@ -35,7 +35,7 @@ public class SharePointGroupMember extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identity property value. The identity property
+     * Gets the identity property value. The identity represented by the sharePointGroupMember object.
      * @return a {@link SharePointIdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class SharePointGroupMember extends Entity implements Parsable {
         writer.writeObjectValue("identity", this.getIdentity());
     }
     /**
-     * Sets the identity property value. The identity property
+     * Sets the identity property value. The identity represented by the sharePointGroupMember object.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final SharePointIdentitySet value) {

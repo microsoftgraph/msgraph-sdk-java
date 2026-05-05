@@ -61,11 +61,20 @@ public class TaskProcessingResult extends Entity implements Parsable {
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("failureReason", (n) -> { this.setFailureReason(n.getStringValue()); });
+        deserializerMap.put("processingInfo", (n) -> { this.setProcessingInfo(n.getStringValue()); });
         deserializerMap.put("processingStatus", (n) -> { this.setProcessingStatus(n.getEnumValue(LifecycleWorkflowProcessingStatus::forValue)); });
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the processingInfo property value. The processingInfo property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getProcessingInfo() {
+        return this.backingStore.get("processingInfo");
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
@@ -109,6 +118,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("failureReason", this.getFailureReason());
+        writer.writeStringValue("processingInfo", this.getProcessingInfo());
         writer.writeEnumValue("processingStatus", this.getProcessingStatus());
         writer.writeOffsetDateTimeValue("startedDateTime", this.getStartedDateTime());
         writer.writeObjectValue("subject", this.getSubject());
@@ -134,6 +144,13 @@ public class TaskProcessingResult extends Entity implements Parsable {
      */
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("failureReason", value);
+    }
+    /**
+     * Sets the processingInfo property value. The processingInfo property
+     * @param value Value to set for the processingInfo property.
+     */
+    public void setProcessingInfo(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("processingInfo", value);
     }
     /**
      * Sets the processingStatus property value. The processingStatus property

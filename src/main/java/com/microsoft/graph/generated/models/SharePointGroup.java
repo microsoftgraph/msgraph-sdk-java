@@ -25,7 +25,7 @@ public class SharePointGroup extends Entity implements Parsable {
         return new SharePointGroup();
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The user-visible description of the sharePointGroup. Read-write.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class SharePointGroup extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the members property value. The members property
+     * Gets the members property value. The set of members in the sharePointGroup. Read-write.
      * @return a {@link java.util.List<SharePointGroupMember>}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class SharePointGroup extends Entity implements Parsable {
         return this.backingStore.get("members");
     }
     /**
-     * Gets the principalId property value. The principalId property
+     * Gets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class SharePointGroup extends Entity implements Parsable {
         return this.backingStore.get("principalId");
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. The user-visible title of the sharePointGroup. Read-write.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,28 +82,28 @@ public class SharePointGroup extends Entity implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The user-visible description of the sharePointGroup. Read-write.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the members property value. The members property
+     * Sets the members property value. The set of members in the sharePointGroup. Read-write.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<SharePointGroupMember> value) {
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the principalId property value. The principalId property
+     * Sets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("principalId", value);
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. The user-visible title of the sharePointGroup. Read-write.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

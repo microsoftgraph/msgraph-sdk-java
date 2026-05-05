@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum RestoreJobType implements ValuedEnum {
     Standard("standard"),
     Bulk("bulk"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Granular("granular");
     public final String value;
     RestoreJobType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum RestoreJobType implements ValuedEnum {
             case "standard": return Standard;
             case "bulk": return Bulk;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "granular": return Granular;
             default: return null;
         }
     }

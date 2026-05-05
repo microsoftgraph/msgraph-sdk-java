@@ -2,6 +2,7 @@ package com.microsoft.graph.solutions.backuprestore;
 
 import com.microsoft.graph.models.BackupRestoreRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.solutions.backuprestore.browsesessions.BrowseSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.driveinclusionrules.DriveInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.driveprotectionunits.DriveProtectionUnitsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.driveprotectionunitsbulkadditionjobs.DriveProtectionUnitsBulkAdditionJobsRequestBuilder;
@@ -11,6 +12,7 @@ import com.microsoft.graph.solutions.backuprestore.exchangerestoresessions.Excha
 import com.microsoft.graph.solutions.backuprestore.mailboxinclusionrules.MailboxInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.mailboxprotectionunits.MailboxProtectionUnitsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.mailboxprotectionunitsbulkadditionjobs.MailboxProtectionUnitsBulkAdditionJobsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessbrowsesessions.OneDriveForBusinessBrowseSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessprotectionpolicies.OneDriveForBusinessProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessrestoresessions.OneDriveForBusinessRestoreSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.protectionpolicies.ProtectionPoliciesRequestBuilder;
@@ -18,6 +20,7 @@ import com.microsoft.graph.solutions.backuprestore.protectionunits.ProtectionUni
 import com.microsoft.graph.solutions.backuprestore.restorepoints.RestorePointsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.restoresessions.RestoreSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.serviceapps.ServiceAppsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.sharepointbrowsesessions.SharePointBrowseSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.sharepointprotectionpolicies.SharePointProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.SharePointRestoreSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.siteinclusionrules.SiteInclusionRulesRequestBuilder;
@@ -41,6 +44,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the browseSessions property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link BrowseSessionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BrowseSessionsRequestBuilder browseSessions() {
+        return new BrowseSessionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the driveInclusionRules property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link DriveInclusionRulesRequestBuilder}
@@ -114,6 +125,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
         return new MailboxProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the oneDriveForBusinessBrowseSessions property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link OneDriveForBusinessBrowseSessionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OneDriveForBusinessBrowseSessionsRequestBuilder oneDriveForBusinessBrowseSessions() {
+        return new OneDriveForBusinessBrowseSessionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the oneDriveForBusinessProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link OneDriveForBusinessProtectionPoliciesRequestBuilder}
      */
@@ -168,6 +187,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ServiceAppsRequestBuilder serviceApps() {
         return new ServiceAppsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sharePointBrowseSessions property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link SharePointBrowseSessionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SharePointBrowseSessionsRequestBuilder sharePointBrowseSessions() {
+        return new SharePointBrowseSessionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sharePointProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.

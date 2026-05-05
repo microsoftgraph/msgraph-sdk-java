@@ -50,7 +50,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         return value;
     }
     /**
-     * Gets the assignedByGroup property value. The assignedByGroup property
+     * Gets the assignedByGroup property value. Indicates whether the license is directly-assigned or inherited from a group. If directly-assigned, this field is null; if inherited through a group membership, this field contains the ID of the group. Read-Only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the disabledPlans property value. The disabledPlans property
+     * Gets the disabledPlans property value. The service plans that are disabled in this assignment. Read-Only.
      * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("disabledPlans");
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors, see here.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Gets the lastUpdatedDateTime property value. The timestamp when the state of the license assignment was last updated.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the skuId property value. The skuId property
+     * Gets the skuId property value. The unique identifier for the SKU. Read-Only.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("skuId");
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the assignedByGroup property value. The assignedByGroup property
+     * Sets the assignedByGroup property value. Indicates whether the license is directly-assigned or inherited from a group. If directly-assigned, this field is null; if inherited through a group membership, this field contains the ID of the group. Read-Only.
      * @param value Value to set for the assignedByGroup property.
      */
     public void setAssignedByGroup(@jakarta.annotation.Nullable final String value) {
@@ -167,21 +167,21 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the disabledPlans property value. The disabledPlans property
+     * Sets the disabledPlans property value. The service plans that are disabled in this assignment. Read-Only.
      * @param value Value to set for the disabledPlans property.
      */
     public void setDisabledPlans(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
         this.backingStore.set("disabledPlans", value);
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors, see here.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Sets the lastUpdatedDateTime property value. The timestamp when the state of the license assignment was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -195,14 +195,14 @@ public class LicenseAssignmentState implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the skuId property value. The skuId property
+     * Sets the skuId property value. The unique identifier for the SKU. Read-Only.
      * @param value Value to set for the skuId property.
      */
     public void setSkuId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("skuId", value);
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {

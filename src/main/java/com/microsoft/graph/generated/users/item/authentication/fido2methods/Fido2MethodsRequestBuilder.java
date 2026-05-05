@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.authentication.fido2methods;
 import com.microsoft.graph.models.Fido2AuthenticationMethodCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.authentication.fido2methods.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.fido2methods.creationoptions.CreationOptionsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.fido2methods.item.Fido2AuthenticationMethodItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,14 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the creationOptions method.
+     * @return a {@link CreationOptionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CreationOptionsRequestBuilder creationOptions() {
+        return new CreationOptionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.

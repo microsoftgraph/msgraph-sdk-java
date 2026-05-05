@@ -37,7 +37,7 @@ public class EnumeratedDeviceRegistrationMembership extends DeviceRegistrationMe
         return deserializerMap;
     }
     /**
-     * Gets the groups property value. The groups property
+     * Gets the groups property value. List of groups that this policy applies to.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class EnumeratedDeviceRegistrationMembership extends DeviceRegistrationMe
         return this.backingStore.get("groups");
     }
     /**
-     * Gets the users property value. The users property
+     * Gets the users property value. List of users that this policy applies to.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class EnumeratedDeviceRegistrationMembership extends DeviceRegistrationMe
         writer.writeCollectionOfPrimitiveValues("users", this.getUsers());
     }
     /**
-     * Sets the groups property value. The groups property
+     * Sets the groups property value. List of groups that this policy applies to.
      * @param value Value to set for the groups property.
      */
     public void setGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("groups", value);
     }
     /**
-     * Sets the users property value. The users property
+     * Sets the users property value. List of users that this policy applies to.
      * @param value Value to set for the users property.
      */
     public void setUsers(@jakarta.annotation.Nullable final java.util.List<String> value) {

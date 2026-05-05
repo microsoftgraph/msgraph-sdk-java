@@ -32,9 +32,18 @@ public class SharePointRestoreSession extends RestoreSessionBase implements Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("granularSiteRestoreArtifacts", (n) -> { this.setGranularSiteRestoreArtifacts(n.getCollectionOfObjectValues(GranularSiteRestoreArtifact::createFromDiscriminatorValue)); });
         deserializerMap.put("siteRestoreArtifacts", (n) -> { this.setSiteRestoreArtifacts(n.getCollectionOfObjectValues(SiteRestoreArtifact::createFromDiscriminatorValue)); });
         deserializerMap.put("siteRestoreArtifactsBulkAdditionRequests", (n) -> { this.setSiteRestoreArtifactsBulkAdditionRequests(n.getCollectionOfObjectValues(SiteRestoreArtifactsBulkAdditionRequest::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the granularSiteRestoreArtifacts property value. The granularSiteRestoreArtifacts property
+     * @return a {@link java.util.List<GranularSiteRestoreArtifact>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<GranularSiteRestoreArtifact> getGranularSiteRestoreArtifacts() {
+        return this.backingStore.get("granularSiteRestoreArtifacts");
     }
     /**
      * Gets the siteRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore SharePoint sites.
@@ -59,8 +68,16 @@ public class SharePointRestoreSession extends RestoreSessionBase implements Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("granularSiteRestoreArtifacts", this.getGranularSiteRestoreArtifacts());
         writer.writeCollectionOfObjectValues("siteRestoreArtifacts", this.getSiteRestoreArtifacts());
         writer.writeCollectionOfObjectValues("siteRestoreArtifactsBulkAdditionRequests", this.getSiteRestoreArtifactsBulkAdditionRequests());
+    }
+    /**
+     * Sets the granularSiteRestoreArtifacts property value. The granularSiteRestoreArtifacts property
+     * @param value Value to set for the granularSiteRestoreArtifacts property.
+     */
+    public void setGranularSiteRestoreArtifacts(@jakarta.annotation.Nullable final java.util.List<GranularSiteRestoreArtifact> value) {
+        this.backingStore.set("granularSiteRestoreArtifacts", value);
     }
     /**
      * Sets the siteRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore SharePoint sites.

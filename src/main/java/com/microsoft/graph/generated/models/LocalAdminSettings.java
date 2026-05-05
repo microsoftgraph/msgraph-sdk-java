@@ -56,7 +56,7 @@ public class LocalAdminSettings implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
-     * Gets the enableGlobalAdmins property value. The enableGlobalAdmins property
+     * Gets the enableGlobalAdmins property value. Indicates whether global administrators are local administrators on all Microsoft Entra-joined devices. This setting only applies to future registrations. Default is true.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class LocalAdminSettings implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the registeringUsers property value. The registeringUsers property
+     * Gets the registeringUsers property value. Determines the users and groups that become local administrators on Microsoft Entra joined devices that they register.
      * @return a {@link DeviceRegistrationMembership}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class LocalAdminSettings implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the enableGlobalAdmins property value. The enableGlobalAdmins property
+     * Sets the enableGlobalAdmins property value. Indicates whether global administrators are local administrators on all Microsoft Entra-joined devices. This setting only applies to future registrations. Default is true.
      * @param value Value to set for the enableGlobalAdmins property.
      */
     public void setEnableGlobalAdmins(@jakarta.annotation.Nullable final Boolean value) {
@@ -132,7 +132,7 @@ public class LocalAdminSettings implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the registeringUsers property value. The registeringUsers property
+     * Sets the registeringUsers property value. Determines the users and groups that become local administrators on Microsoft Entra joined devices that they register.
      * @param value Value to set for the registeringUsers property.
      */
     public void setRegisteringUsers(@jakarta.annotation.Nullable final DeviceRegistrationMembership value) {

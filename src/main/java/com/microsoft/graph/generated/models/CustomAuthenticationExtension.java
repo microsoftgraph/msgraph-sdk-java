@@ -32,6 +32,7 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
                 case "#microsoft.graph.onOtpSendCustomExtension": return new OnOtpSendCustomExtension();
                 case "#microsoft.graph.onPasswordSubmitCustomExtension": return new OnPasswordSubmitCustomExtension();
                 case "#microsoft.graph.onTokenIssuanceStartCustomExtension": return new OnTokenIssuanceStartCustomExtension();
+                case "#microsoft.graph.onVerifiedIdClaimValidationCustomExtension": return new OnVerifiedIdClaimValidationCustomExtension();
             }
         }
         return new CustomAuthenticationExtension();

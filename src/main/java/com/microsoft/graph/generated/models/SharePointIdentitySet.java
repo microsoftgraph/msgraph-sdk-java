@@ -47,7 +47,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         return this.backingStore.get("group");
     }
     /**
-     * Gets the sharePointGroup property value. The sharePointGroup property
+     * Gets the sharePointGroup property value. The SharePoint group associated with this action, identified by a globally unique ID. Use this property instead of siteGroup when available. Optional.
      * @return a {@link SharePointGroupIdentity}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         return this.backingStore.get("sharePointGroup");
     }
     /**
-     * Gets the siteGroup property value. The SharePoint group associated with this action. Optional.
+     * Gets the siteGroup property value. The SharePoint group associated with this action, identified by a principal ID that is unique only within the site. Optional.
      * @return a {@link SharePointIdentity}
      */
     @jakarta.annotation.Nullable
@@ -90,14 +90,14 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         this.backingStore.set("group", value);
     }
     /**
-     * Sets the sharePointGroup property value. The sharePointGroup property
+     * Sets the sharePointGroup property value. The SharePoint group associated with this action, identified by a globally unique ID. Use this property instead of siteGroup when available. Optional.
      * @param value Value to set for the sharePointGroup property.
      */
     public void setSharePointGroup(@jakarta.annotation.Nullable final SharePointGroupIdentity value) {
         this.backingStore.set("sharePointGroup", value);
     }
     /**
-     * Sets the siteGroup property value. The SharePoint group associated with this action. Optional.
+     * Sets the siteGroup property value. The SharePoint group associated with this action, identified by a principal ID that is unique only within the site. Optional.
      * @param value Value to set for the siteGroup property.
      */
     public void setSiteGroup(@jakarta.annotation.Nullable final SharePointIdentity value) {

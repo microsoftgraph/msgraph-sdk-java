@@ -2,6 +2,7 @@ package com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.it
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharePointRestoreSession;
+import com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.item.granularsiterestoreartifacts.GranularSiteRestoreArtifactsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.item.siterestoreartifacts.SiteRestoreArtifactsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.sharepointrestoresessions.item.siterestoreartifactsbulkadditionrequests.SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the granularSiteRestoreArtifacts property of the microsoft.graph.sharePointRestoreSession entity.
+     * @return a {@link GranularSiteRestoreArtifactsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GranularSiteRestoreArtifactsRequestBuilder granularSiteRestoreArtifacts() {
+        return new GranularSiteRestoreArtifactsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the siteRestoreArtifacts property of the microsoft.graph.sharePointRestoreSession entity.
      * @return a {@link SiteRestoreArtifactsRequestBuilder}

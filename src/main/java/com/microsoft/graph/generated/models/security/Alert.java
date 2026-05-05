@@ -67,6 +67,14 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("assignedTo");
     }
     /**
+     * Gets the categories property value. The categories property
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getCategories() {
+        return this.backingStore.get("categories");
+    }
+    /**
      * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework.
      * @return a {@link String}
      */
@@ -158,6 +166,7 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("alertPolicyId", (n) -> { this.setAlertPolicyId(n.getStringValue()); });
         deserializerMap.put("alertWebUrl", (n) -> { this.setAlertWebUrl(n.getStringValue()); });
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(AlertClassification::forValue)); });
         deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfObjectValues(AlertComment::createFromDiscriminatorValue)); });
@@ -353,6 +362,7 @@ public class Alert extends Entity implements Parsable {
         writer.writeStringValue("alertPolicyId", this.getAlertPolicyId());
         writer.writeStringValue("alertWebUrl", this.getAlertWebUrl());
         writer.writeStringValue("assignedTo", this.getAssignedTo());
+        writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
         writer.writeStringValue("category", this.getCategory());
         writer.writeEnumValue("classification", this.getClassification());
         writer.writeCollectionOfObjectValues("comments", this.getComments());
@@ -417,6 +427,13 @@ public class Alert extends Entity implements Parsable {
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("assignedTo", value);
+    }
+    /**
+     * Sets the categories property value. The categories property
+     * @param value Value to set for the categories property.
+     */
+    public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("categories", value);
     }
     /**
      * Sets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework.

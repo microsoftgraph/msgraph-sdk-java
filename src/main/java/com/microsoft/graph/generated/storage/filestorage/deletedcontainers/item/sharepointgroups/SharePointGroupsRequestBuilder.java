@@ -60,7 +60,7 @@ public class SharePointGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/deletedContainers/{fileStorageContainer%2Did}/sharePointGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get sharePointGroups from storage
+     * The collection of sharePointGroup objects local to the container. Read-write.
      * @return a {@link SharePointGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class SharePointGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get sharePointGroups from storage
+     * The collection of sharePointGroup objects local to the container. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class SharePointGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get sharePointGroups from storage
+     * The collection of sharePointGroup objects local to the container. Read-write.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class SharePointGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sharePointGroups from storage
+     * The collection of sharePointGroup objects local to the container. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class SharePointGroupsRequestBuilder extends BaseRequestBuilder {
         return new SharePointGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sharePointGroups from storage
+     * The collection of sharePointGroup objects local to the container. Read-write.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
