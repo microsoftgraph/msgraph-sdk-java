@@ -17,6 +17,7 @@ import com.microsoft.graph.policies.deviceregistrationpolicy.DeviceRegistrationP
 import com.microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
 import com.microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
 import com.microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.policies.ownerlessgrouppolicy.OwnerlessGroupPolicyRequestBuilder;
 import com.microsoft.graph.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
 import com.microsoft.graph.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
 import com.microsoft.graph.policies.rolemanagementpolicyassignments.RoleManagementPolicyAssignmentsRequestBuilder;
@@ -159,6 +160,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the ownerlessGroupPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link OwnerlessGroupPolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OwnerlessGroupPolicyRequestBuilder ownerlessGroupPolicy() {
+        return new OwnerlessGroupPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.

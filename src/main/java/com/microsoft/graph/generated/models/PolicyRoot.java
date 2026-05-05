@@ -150,6 +150,7 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("featureRolloutPolicies", (n) -> { this.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { this.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("ownerlessGroupPolicy", (n) -> { this.setOwnerlessGroupPolicy(n.getObjectValue(OwnerlessGroupPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrantPolicies", (n) -> { this.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicies", (n) -> { this.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicyAssignments", (n) -> { this.setRoleManagementPolicyAssignments(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue)); });
@@ -172,6 +173,14 @@ public class PolicyRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy getIdentitySecurityDefaultsEnforcementPolicy() {
         return this.backingStore.get("identitySecurityDefaultsEnforcementPolicy");
+    }
+    /**
+     * Gets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * @return a {@link OwnerlessGroupPolicy}
+     */
+    @jakarta.annotation.Nullable
+    public OwnerlessGroupPolicy getOwnerlessGroupPolicy() {
+        return this.backingStore.get("ownerlessGroupPolicy");
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
@@ -235,6 +244,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("featureRolloutPolicies", this.getFeatureRolloutPolicies());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeObjectValue("identitySecurityDefaultsEnforcementPolicy", this.getIdentitySecurityDefaultsEnforcementPolicy());
+        writer.writeObjectValue("ownerlessGroupPolicy", this.getOwnerlessGroupPolicy());
         writer.writeCollectionOfObjectValues("permissionGrantPolicies", this.getPermissionGrantPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicies", this.getRoleManagementPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicyAssignments", this.getRoleManagementPolicyAssignments());
@@ -345,6 +355,13 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setIdentitySecurityDefaultsEnforcementPolicy(@jakarta.annotation.Nullable final IdentitySecurityDefaultsEnforcementPolicy value) {
         this.backingStore.set("identitySecurityDefaultsEnforcementPolicy", value);
+    }
+    /**
+     * Sets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * @param value Value to set for the ownerlessGroupPolicy property.
+     */
+    public void setOwnerlessGroupPolicy(@jakarta.annotation.Nullable final OwnerlessGroupPolicy value) {
+        this.backingStore.set("ownerlessGroupPolicy", value);
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.

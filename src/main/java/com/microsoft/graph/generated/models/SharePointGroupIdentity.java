@@ -37,7 +37,7 @@ public class SharePointGroupIdentity extends Identity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the principalId property value. The principalId property
+     * Gets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class SharePointGroupIdentity extends Identity implements Parsable {
         return this.backingStore.get("principalId");
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. The title of the SharePoint group. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class SharePointGroupIdentity extends Identity implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the principalId property value. The principalId property
+     * Sets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("principalId", value);
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. The title of the SharePoint group. Read-only.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

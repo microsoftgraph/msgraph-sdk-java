@@ -25,7 +25,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return new DeviceRegistrationPolicy();
     }
     /**
-     * Gets the azureADJoin property value. The azureADJoin property
+     * Gets the azureADJoin property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra join within your organization. Required. For more information, see What is a device identity?.
      * @return a {@link AzureADJoinPolicy}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("azureADJoin");
     }
     /**
-     * Gets the azureADRegistration property value. The azureADRegistration property
+     * Gets the azureADRegistration property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra registered within your organization. Required. For more information, see What is a device identity?.
      * @return a {@link AzureADRegistrationPolicy}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("azureADRegistration");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the device registration policy. Always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the device registration policy. Always set to Device Registration Policy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the localAdminPassword property value. The localAdminPassword property
+     * Gets the localAdminPassword property value. Specifies the setting for Local Admin Password Solution (LAPS) within your organization.
      * @return a {@link LocalAdminPasswordSettings}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("multiFactorAuthConfiguration");
     }
     /**
-     * Gets the userDeviceQuota property value. The userDeviceQuota property
+     * Gets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn&apos;t specified during the policy update operation, it&apos;s automatically reset to 0 to indicate that users aren&apos;t allowed to join any devices.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -112,35 +112,35 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         writer.writeIntegerValue("userDeviceQuota", this.getUserDeviceQuota());
     }
     /**
-     * Sets the azureADJoin property value. The azureADJoin property
+     * Sets the azureADJoin property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra join within your organization. Required. For more information, see What is a device identity?.
      * @param value Value to set for the azureADJoin property.
      */
     public void setAzureADJoin(@jakarta.annotation.Nullable final AzureADJoinPolicy value) {
         this.backingStore.set("azureADJoin", value);
     }
     /**
-     * Sets the azureADRegistration property value. The azureADRegistration property
+     * Sets the azureADRegistration property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra registered within your organization. Required. For more information, see What is a device identity?.
      * @param value Value to set for the azureADRegistration property.
      */
     public void setAzureADRegistration(@jakarta.annotation.Nullable final AzureADRegistrationPolicy value) {
         this.backingStore.set("azureADRegistration", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the device registration policy. Always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the device registration policy. Always set to Device Registration Policy. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the localAdminPassword property value. The localAdminPassword property
+     * Sets the localAdminPassword property value. Specifies the setting for Local Admin Password Solution (LAPS) within your organization.
      * @param value Value to set for the localAdminPassword property.
      */
     public void setLocalAdminPassword(@jakarta.annotation.Nullable final LocalAdminPasswordSettings value) {
@@ -154,7 +154,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         this.backingStore.set("multiFactorAuthConfiguration", value);
     }
     /**
-     * Sets the userDeviceQuota property value. The userDeviceQuota property
+     * Sets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn&apos;t specified during the policy update operation, it&apos;s automatically reset to 0 to indicate that users aren&apos;t allowed to join any devices.
      * @param value Value to set for the userDeviceQuota property.
      */
     public void setUserDeviceQuota(@jakarta.annotation.Nullable final Integer value) {

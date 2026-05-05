@@ -60,7 +60,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containers/{fileStorageContainer%2Did}/sharePointGroups/{sharePointGroup%2Did}/members{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get members from storage
+     * The set of members in the sharePointGroup. Read-write.
      * @return a {@link SharePointGroupMemberCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get members from storage
+     * The set of members in the sharePointGroup. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointGroupMemberCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointGroupMember::createFromDiscriminatorValue);
     }
     /**
-     * Get members from storage
+     * The set of members in the sharePointGroup. Read-write.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get members from storage
+     * The set of members in the sharePointGroup. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new MembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get members from storage
+     * The set of members in the sharePointGroup. Read-write.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

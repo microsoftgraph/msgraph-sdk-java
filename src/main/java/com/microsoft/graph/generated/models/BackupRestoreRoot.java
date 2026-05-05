@@ -25,6 +25,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return new BackupRestoreRoot();
     }
     /**
+     * Gets the browseSessions property value. The browseSessions property
+     * @return a {@link java.util.List<BrowseSessionBase>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<BrowseSessionBase> getBrowseSessions() {
+        return this.backingStore.get("browseSessions");
+    }
+    /**
      * Gets the driveInclusionRules property value. The list of drive inclusion rules applied to the tenant.
      * @return a {@link java.util.List<DriveProtectionRule>}
      */
@@ -71,6 +79,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("browseSessions", (n) -> { this.setBrowseSessions(n.getCollectionOfObjectValues(BrowseSessionBase::createFromDiscriminatorValue)); });
         deserializerMap.put("driveInclusionRules", (n) -> { this.setDriveInclusionRules(n.getCollectionOfObjectValues(DriveProtectionRule::createFromDiscriminatorValue)); });
         deserializerMap.put("driveProtectionUnits", (n) -> { this.setDriveProtectionUnits(n.getCollectionOfObjectValues(DriveProtectionUnit::createFromDiscriminatorValue)); });
         deserializerMap.put("driveProtectionUnitsBulkAdditionJobs", (n) -> { this.setDriveProtectionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(DriveProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
@@ -79,6 +88,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         deserializerMap.put("mailboxInclusionRules", (n) -> { this.setMailboxInclusionRules(n.getCollectionOfObjectValues(MailboxProtectionRule::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxProtectionUnits", (n) -> { this.setMailboxProtectionUnits(n.getCollectionOfObjectValues(MailboxProtectionUnit::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxProtectionUnitsBulkAdditionJobs", (n) -> { this.setMailboxProtectionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(MailboxProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
+        deserializerMap.put("oneDriveForBusinessBrowseSessions", (n) -> { this.setOneDriveForBusinessBrowseSessions(n.getCollectionOfObjectValues(OneDriveForBusinessBrowseSession::createFromDiscriminatorValue)); });
         deserializerMap.put("oneDriveForBusinessProtectionPolicies", (n) -> { this.setOneDriveForBusinessProtectionPolicies(n.getCollectionOfObjectValues(OneDriveForBusinessProtectionPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("oneDriveForBusinessRestoreSessions", (n) -> { this.setOneDriveForBusinessRestoreSessions(n.getCollectionOfObjectValues(OneDriveForBusinessRestoreSession::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionPolicies", (n) -> { this.setProtectionPolicies(n.getCollectionOfObjectValues(ProtectionPolicyBase::createFromDiscriminatorValue)); });
@@ -87,6 +97,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         deserializerMap.put("restoreSessions", (n) -> { this.setRestoreSessions(n.getCollectionOfObjectValues(RestoreSessionBase::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceApps", (n) -> { this.setServiceApps(n.getCollectionOfObjectValues(ServiceApp::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceStatus", (n) -> { this.setServiceStatus(n.getObjectValue(ServiceStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharePointBrowseSessions", (n) -> { this.setSharePointBrowseSessions(n.getCollectionOfObjectValues(SharePointBrowseSession::createFromDiscriminatorValue)); });
         deserializerMap.put("sharePointProtectionPolicies", (n) -> { this.setSharePointProtectionPolicies(n.getCollectionOfObjectValues(SharePointProtectionPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("sharePointRestoreSessions", (n) -> { this.setSharePointRestoreSessions(n.getCollectionOfObjectValues(SharePointRestoreSession::createFromDiscriminatorValue)); });
         deserializerMap.put("siteInclusionRules", (n) -> { this.setSiteInclusionRules(n.getCollectionOfObjectValues(SiteProtectionRule::createFromDiscriminatorValue)); });
@@ -117,6 +128,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<MailboxProtectionUnitsBulkAdditionJob> getMailboxProtectionUnitsBulkAdditionJobs() {
         return this.backingStore.get("mailboxProtectionUnitsBulkAdditionJobs");
+    }
+    /**
+     * Gets the oneDriveForBusinessBrowseSessions property value. The oneDriveForBusinessBrowseSessions property
+     * @return a {@link java.util.List<OneDriveForBusinessBrowseSession>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OneDriveForBusinessBrowseSession> getOneDriveForBusinessBrowseSessions() {
+        return this.backingStore.get("oneDriveForBusinessBrowseSessions");
     }
     /**
      * Gets the oneDriveForBusinessProtectionPolicies property value. The list of OneDrive for Business protection policies in the tenant.
@@ -183,6 +202,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("serviceStatus");
     }
     /**
+     * Gets the sharePointBrowseSessions property value. The sharePointBrowseSessions property
+     * @return a {@link java.util.List<SharePointBrowseSession>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SharePointBrowseSession> getSharePointBrowseSessions() {
+        return this.backingStore.get("sharePointBrowseSessions");
+    }
+    /**
      * Gets the sharePointProtectionPolicies property value. The list of SharePoint protection policies in the tenant.
      * @return a {@link java.util.List<SharePointProtectionPolicy>}
      */
@@ -229,6 +256,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("browseSessions", this.getBrowseSessions());
         writer.writeCollectionOfObjectValues("driveInclusionRules", this.getDriveInclusionRules());
         writer.writeCollectionOfObjectValues("driveProtectionUnits", this.getDriveProtectionUnits());
         writer.writeCollectionOfObjectValues("driveProtectionUnitsBulkAdditionJobs", this.getDriveProtectionUnitsBulkAdditionJobs());
@@ -237,6 +265,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("mailboxInclusionRules", this.getMailboxInclusionRules());
         writer.writeCollectionOfObjectValues("mailboxProtectionUnits", this.getMailboxProtectionUnits());
         writer.writeCollectionOfObjectValues("mailboxProtectionUnitsBulkAdditionJobs", this.getMailboxProtectionUnitsBulkAdditionJobs());
+        writer.writeCollectionOfObjectValues("oneDriveForBusinessBrowseSessions", this.getOneDriveForBusinessBrowseSessions());
         writer.writeCollectionOfObjectValues("oneDriveForBusinessProtectionPolicies", this.getOneDriveForBusinessProtectionPolicies());
         writer.writeCollectionOfObjectValues("oneDriveForBusinessRestoreSessions", this.getOneDriveForBusinessRestoreSessions());
         writer.writeCollectionOfObjectValues("protectionPolicies", this.getProtectionPolicies());
@@ -245,11 +274,19 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("restoreSessions", this.getRestoreSessions());
         writer.writeCollectionOfObjectValues("serviceApps", this.getServiceApps());
         writer.writeObjectValue("serviceStatus", this.getServiceStatus());
+        writer.writeCollectionOfObjectValues("sharePointBrowseSessions", this.getSharePointBrowseSessions());
         writer.writeCollectionOfObjectValues("sharePointProtectionPolicies", this.getSharePointProtectionPolicies());
         writer.writeCollectionOfObjectValues("sharePointRestoreSessions", this.getSharePointRestoreSessions());
         writer.writeCollectionOfObjectValues("siteInclusionRules", this.getSiteInclusionRules());
         writer.writeCollectionOfObjectValues("siteProtectionUnits", this.getSiteProtectionUnits());
         writer.writeCollectionOfObjectValues("siteProtectionUnitsBulkAdditionJobs", this.getSiteProtectionUnitsBulkAdditionJobs());
+    }
+    /**
+     * Sets the browseSessions property value. The browseSessions property
+     * @param value Value to set for the browseSessions property.
+     */
+    public void setBrowseSessions(@jakarta.annotation.Nullable final java.util.List<BrowseSessionBase> value) {
+        this.backingStore.set("browseSessions", value);
     }
     /**
      * Sets the driveInclusionRules property value. The list of drive inclusion rules applied to the tenant.
@@ -308,6 +345,13 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("mailboxProtectionUnitsBulkAdditionJobs", value);
     }
     /**
+     * Sets the oneDriveForBusinessBrowseSessions property value. The oneDriveForBusinessBrowseSessions property
+     * @param value Value to set for the oneDriveForBusinessBrowseSessions property.
+     */
+    public void setOneDriveForBusinessBrowseSessions(@jakarta.annotation.Nullable final java.util.List<OneDriveForBusinessBrowseSession> value) {
+        this.backingStore.set("oneDriveForBusinessBrowseSessions", value);
+    }
+    /**
      * Sets the oneDriveForBusinessProtectionPolicies property value. The list of OneDrive for Business protection policies in the tenant.
      * @param value Value to set for the oneDriveForBusinessProtectionPolicies property.
      */
@@ -362,6 +406,13 @@ public class BackupRestoreRoot extends Entity implements Parsable {
      */
     public void setServiceStatus(@jakarta.annotation.Nullable final ServiceStatus value) {
         this.backingStore.set("serviceStatus", value);
+    }
+    /**
+     * Sets the sharePointBrowseSessions property value. The sharePointBrowseSessions property
+     * @param value Value to set for the sharePointBrowseSessions property.
+     */
+    public void setSharePointBrowseSessions(@jakarta.annotation.Nullable final java.util.List<SharePointBrowseSession> value) {
+        this.backingStore.set("sharePointBrowseSessions", value);
     }
     /**
      * Sets the sharePointProtectionPolicies property value. The list of SharePoint protection policies in the tenant.

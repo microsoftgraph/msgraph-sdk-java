@@ -12,7 +12,8 @@ public enum ConditionalAccessGrantControl implements ValuedEnum {
     ApprovedApplication("approvedApplication"),
     CompliantApplication("compliantApplication"),
     PasswordChange("passwordChange"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    RiskRemediation("riskRemediation");
     public final String value;
     ConditionalAccessGrantControl(final String value) {
         this.value = value;
@@ -31,6 +32,7 @@ public enum ConditionalAccessGrantControl implements ValuedEnum {
             case "compliantApplication": return CompliantApplication;
             case "passwordChange": return PasswordChange;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "riskRemediation": return RiskRemediation;
             default: return null;
         }
     }

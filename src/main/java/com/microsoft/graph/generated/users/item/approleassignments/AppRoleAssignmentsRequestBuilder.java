@@ -60,21 +60,21 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/appRoleAssignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the list of appRoleAssignments that are currently granted to a user. This operation also returns app role assignments granted to groups that the user is a direct member of.
+     * Retrieve the list of appRoleAssignments granted to an agentUser.
      * @return a {@link AppRoleAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppRoleAssignmentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the list of appRoleAssignments that are currently granted to a user. This operation also returns app role assignments granted to groups that the user is a direct member of.
+     * Retrieve the list of appRoleAssignments granted to an agentUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppRoleAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppRoleAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +84,23 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppRoleAssignmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
+     * Grant an app role assignment to an agentUser.
      * @param body The request body
      * @return a {@link AppRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppRoleAssignment post(@jakarta.annotation.Nonnull final AppRoleAssignment body) {
         return post(body, null);
     }
     /**
-     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
+     * Grant an app role assignment to an agentUser.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppRoleAssignment post(@jakarta.annotation.Nonnull final AppRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppRoleAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the list of appRoleAssignments that are currently granted to a user. This operation also returns app role assignments granted to groups that the user is a direct member of.
+     * Retrieve the list of appRoleAssignments granted to an agentUser.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of appRoleAssignments that are currently granted to a user. This operation also returns app role assignments granted to groups that the user is a direct member of.
+     * Retrieve the list of appRoleAssignments granted to an agentUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +131,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
+     * Grant an app role assignment to an agentUser.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
+     * Grant an app role assignment to an agentUser.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +165,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return new AppRoleAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the list of appRoleAssignments that are currently granted to a user. This operation also returns app role assignments granted to groups that the user is a direct member of.
+     * Retrieve the list of appRoleAssignments granted to an agentUser.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -9,6 +9,7 @@ import com.microsoft.graph.identity.customauthenticationextensions.CustomAuthent
 import com.microsoft.graph.identity.identityproviders.IdentityProvidersRequestBuilder;
 import com.microsoft.graph.identity.riskprevention.RiskPreventionRequestBuilder;
 import com.microsoft.graph.identity.userflowattributes.UserFlowAttributesRequestBuilder;
+import com.microsoft.graph.identity.verifiedid.VerifiedIdRequestBuilder;
 import com.microsoft.graph.models.IdentityContainer;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -100,6 +101,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public UserFlowAttributesRequestBuilder userFlowAttributes() {
         return new UserFlowAttributesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the verifiedId property of the microsoft.graph.identityContainer entity.
+     * @return a {@link VerifiedIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public VerifiedIdRequestBuilder verifiedId() {
+        return new VerifiedIdRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link IdentityRequestBuilder} and sets the default values.

@@ -37,7 +37,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/retentionLabel{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Remove a retention label from a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
+     * Remove the retention label from a driveItem. This operation clears the retention label and all associated retention settings enforced on the item. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-removeretentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Remove a retention label from a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
+     * Remove the retention label from a driveItem. This operation clears the retention label and all associated retention settings enforced on the item. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-removeretentionlabel?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemRetentionLabel::createFromDiscriminatorValue);
     }
     /**
-     * Remove a retention label from a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
+     * Remove the retention label from a driveItem. This operation clears the retention label and all associated retention settings enforced on the item. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a retention label from a driveItem. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
+     * Remove the retention label from a driveItem. This operation clears the retention label and all associated retention settings enforced on the item. For information about retention labels from an administrator&apos;s perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

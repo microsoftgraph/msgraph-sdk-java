@@ -88,6 +88,7 @@ public class IdentityContainer extends Entity implements Parsable {
         deserializerMap.put("identityProviders", (n) -> { this.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("riskPrevention", (n) -> { this.setRiskPrevention(n.getObjectValue(RiskPreventionContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("userFlowAttributes", (n) -> { this.setUserFlowAttributes(n.getCollectionOfObjectValues(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
+        deserializerMap.put("verifiedId", (n) -> { this.setVerifiedId(n.getObjectValue(IdentityVerifiedIdRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -115,6 +116,14 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("userFlowAttributes");
     }
     /**
+     * Gets the verifiedId property value. The verifiedId property
+     * @return a {@link IdentityVerifiedIdRoot}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityVerifiedIdRoot getVerifiedId() {
+        return this.backingStore.get("verifiedId");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -130,6 +139,7 @@ public class IdentityContainer extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("identityProviders", this.getIdentityProviders());
         writer.writeObjectValue("riskPrevention", this.getRiskPrevention());
         writer.writeCollectionOfObjectValues("userFlowAttributes", this.getUserFlowAttributes());
+        writer.writeObjectValue("verifiedId", this.getVerifiedId());
     }
     /**
      * Sets the apiConnectors property value. Represents entry point for API connectors.
@@ -193,5 +203,12 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public void setUserFlowAttributes(@jakarta.annotation.Nullable final java.util.List<IdentityUserFlowAttribute> value) {
         this.backingStore.set("userFlowAttributes", value);
+    }
+    /**
+     * Sets the verifiedId property value. The verifiedId property
+     * @param value Value to set for the verifiedId property.
+     */
+    public void setVerifiedId(@jakarta.annotation.Nullable final IdentityVerifiedIdRoot value) {
+        this.backingStore.set("verifiedId", value);
     }
 }

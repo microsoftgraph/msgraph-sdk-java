@@ -101,7 +101,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthCheckPaused property value. The healthCheckPaused property
+     * Gets the healthCheckPaused property value. Indicates whether regular health checks on the network or domain configuration are paused or active. false if the regular health checks on the network or domain configuration are currently active. true if the checks are paused. If you perform a create or update operation on a onPremisesNetworkConnection resource, this value is set to false for four weeks. If you retry a health check on network or domain configuration, this value is set to false for two weeks. If the onPremisesNetworkConnection resource is attached in a provisioningPolicy or used by a Cloud PC in the past four weeks, healthCheckPaused is set to false. Read-only. Default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("healthCheckStatusDetail");
     }
     /**
-     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn&apos;t in use. You can&apos;t delete a connection thats in use. Requires $select to retrieve. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn&apos;t in use. You can&apos;t delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("inUse");
     }
     /**
-     * Gets the inUseByCloudPc property value. The inUseByCloudPc property
+     * Gets the inUseByCloudPc property value. Indicates whether a Cloud PC is using this on-premises network connection. true if at least one Cloud PC is using it. Otherwise, false. Read-only. Default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("resourceGroupId");
     }
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it&apos;s the Intune scope tag ID.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -274,7 +274,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the healthCheckPaused property value. The healthCheckPaused property
+     * Sets the healthCheckPaused property value. Indicates whether regular health checks on the network or domain configuration are paused or active. false if the regular health checks on the network or domain configuration are currently active. true if the checks are paused. If you perform a create or update operation on a onPremisesNetworkConnection resource, this value is set to false for four weeks. If you retry a health check on network or domain configuration, this value is set to false for two weeks. If the onPremisesNetworkConnection resource is attached in a provisioningPolicy or used by a Cloud PC in the past four weeks, healthCheckPaused is set to false. Read-only. Default is false.
      * @param value Value to set for the healthCheckPaused property.
      */
     public void setHealthCheckPaused(@jakarta.annotation.Nullable final Boolean value) {
@@ -295,14 +295,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("healthCheckStatusDetail", value);
     }
     /**
-     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn&apos;t in use. You can&apos;t delete a connection thats in use. Requires $select to retrieve. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn&apos;t in use. You can&apos;t delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @param value Value to set for the inUse property.
      */
     public void setInUse(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("inUse", value);
     }
     /**
-     * Sets the inUseByCloudPc property value. The inUseByCloudPc property
+     * Sets the inUseByCloudPc property value. Indicates whether a Cloud PC is using this on-premises network connection. true if at least one Cloud PC is using it. Otherwise, false. Read-only. Default is false.
      * @param value Value to set for the inUseByCloudPc property.
      */
     public void setInUseByCloudPc(@jakarta.annotation.Nullable final Boolean value) {
@@ -323,7 +323,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("resourceGroupId", value);
     }
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it&apos;s the Intune scope tag ID.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

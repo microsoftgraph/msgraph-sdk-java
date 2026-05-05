@@ -37,19 +37,21 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/deviceRegistrationPolicy{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get deviceRegistrationPolicy from policies
+     * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @return a {@link DeviceRegistrationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceRegistrationPolicy get() {
         return get(null);
     }
     /**
-     * Get deviceRegistrationPolicy from policies
+     * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceRegistrationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceRegistrationPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceRegistrationPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Get deviceRegistrationPolicy from policies
+     * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deviceRegistrationPolicy from policies
+     * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
         return new DeviceRegistrationPolicyRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get deviceRegistrationPolicy from policies
+     * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

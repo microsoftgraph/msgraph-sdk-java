@@ -156,7 +156,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("settings");
     }
     /**
-     * Gets the sharePointGroups property value. The sharePointGroups property
+     * Gets the sharePointGroups property value. The collection of sharePointGroup objects local to the container. Read-write.
      * @return a {@link java.util.List<SharePointGroup>}
      */
     @jakarta.annotation.Nullable
@@ -295,7 +295,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("settings", value);
     }
     /**
-     * Sets the sharePointGroups property value. The sharePointGroups property
+     * Sets the sharePointGroups property value. The collection of sharePointGroup objects local to the container. Read-write.
      * @param value Value to set for the sharePointGroups property.
      */
     public void setSharePointGroups(@jakarta.annotation.Nullable final java.util.List<SharePointGroup> value) {

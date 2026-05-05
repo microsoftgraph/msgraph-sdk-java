@@ -38,18 +38,18 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/sponsors/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Remove a user&apos;s sponsor.
+     * Remove an agentUser&apos;s sponsor.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-delete-sponsors?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-delete-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Remove a user&apos;s sponsor.
+     * Remove an agentUser&apos;s sponsor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-delete-sponsors?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-delete-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -58,21 +58,21 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a user&apos;s sponsors. Sponsors are users and groups that are responsible for this guest&apos;s privileges in the tenant and for keeping the guest&apos;s information and access up to date.
+     * Get an agentUser&apos;s sponsors. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-sponsors?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-list-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StringCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a user&apos;s sponsors. Sponsors are users and groups that are responsible for this guest&apos;s privileges in the tenant and for keeping the guest&apos;s information and access up to date.
+     * Get an agentUser&apos;s sponsors. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-sponsors?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-list-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StringCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,20 +82,20 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Assign a user a sponsor. Sponsors are users and groups that are responsible for this guest user&apos;s privileges in the tenant and for keeping the guest user&apos;s information and access up to date.
+     * Assign an agentUser a sponsor. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-post-sponsors?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-post-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body) {
         post(body, null);
     }
     /**
-     * Assign a user a sponsor. Sponsors are users and groups that are responsible for this guest user&apos;s privileges in the tenant and for keeping the guest user&apos;s information and access up to date.
+     * Assign an agentUser a sponsor. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-post-sponsors?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-post-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -105,7 +105,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove a user&apos;s sponsor.
+     * Remove an agentUser&apos;s sponsor.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove a user&apos;s sponsor.
+     * Remove an agentUser&apos;s sponsor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -125,7 +125,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a user&apos;s sponsors. Sponsors are users and groups that are responsible for this guest&apos;s privileges in the tenant and for keeping the guest&apos;s information and access up to date.
+     * Get an agentUser&apos;s sponsors. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a user&apos;s sponsors. Sponsors are users and groups that are responsible for this guest&apos;s privileges in the tenant and for keeping the guest&apos;s information and access up to date.
+     * Get an agentUser&apos;s sponsors. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -145,7 +145,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Assign a user a sponsor. Sponsors are users and groups that are responsible for this guest user&apos;s privileges in the tenant and for keeping the guest user&apos;s information and access up to date.
+     * Assign an agentUser a sponsor. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -154,7 +154,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign a user a sponsor. Sponsors are users and groups that are responsible for this guest user&apos;s privileges in the tenant and for keeping the guest user&apos;s information and access up to date.
+     * Assign an agentUser a sponsor. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -179,7 +179,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Remove a user&apos;s sponsor.
+     * Remove an agentUser&apos;s sponsor.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters implements QueryParameters {
@@ -211,7 +211,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }
     /**
-     * Get a user&apos;s sponsors. Sponsors are users and groups that are responsible for this guest&apos;s privileges in the tenant and for keeping the guest&apos;s information and access up to date.
+     * Get an agentUser&apos;s sponsors. Sponsors are users and groups that are responsible for this agent user&apos;s privileges in the tenant and for keeping the agent user&apos;s information and access up to date.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

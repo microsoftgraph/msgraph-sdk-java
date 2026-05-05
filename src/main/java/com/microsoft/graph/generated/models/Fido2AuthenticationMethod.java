@@ -70,6 +70,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         deserializerMap.put("passkeyType", (n) -> { this.setPasskeyType(n.getEnumValue(PasskeyType::forValue)); });
+        deserializerMap.put("publicKeyCredential", (n) -> { this.setPublicKeyCredential(n.getObjectValue(WebauthnPublicKeyCredential::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -89,6 +90,14 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("passkeyType");
     }
     /**
+     * Gets the publicKeyCredential property value. The publicKeyCredential property
+     * @return a {@link WebauthnPublicKeyCredential}
+     */
+    @jakarta.annotation.Nullable
+    public WebauthnPublicKeyCredential getPublicKeyCredential() {
+        return this.backingStore.get("publicKeyCredential");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -101,6 +110,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("model", this.getModel());
         writer.writeEnumValue("passkeyType", this.getPasskeyType());
+        writer.writeObjectValue("publicKeyCredential", this.getPublicKeyCredential());
     }
     /**
      * Sets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (such as make and model) of the authenticator.
@@ -143,5 +153,12 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     public void setPasskeyType(@jakarta.annotation.Nullable final PasskeyType value) {
         this.backingStore.set("passkeyType", value);
+    }
+    /**
+     * Sets the publicKeyCredential property value. The publicKeyCredential property
+     * @param value Value to set for the publicKeyCredential property.
+     */
+    public void setPublicKeyCredential(@jakarta.annotation.Nullable final WebauthnPublicKeyCredential value) {
+        this.backingStore.set("publicKeyCredential", value);
     }
 }

@@ -48,7 +48,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, BackedMo
         return value;
     }
     /**
-     * Gets the allowedToRegister property value. The allowedToRegister property
+     * Gets the allowedToRegister property value. Determines if Microsoft Entra registered is allowed.
      * @return a {@link DeviceRegistrationMembership}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, BackedMo
         return deserializerMap;
     }
     /**
-     * Gets the isAdminConfigurable property value. The isAdminConfigurable property
+     * Gets the isAdminConfigurable property value. Determines if administrators can modify this policy.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, BackedMo
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowedToRegister property value. The allowedToRegister property
+     * Sets the allowedToRegister property value. Determines if Microsoft Entra registered is allowed.
      * @param value Value to set for the allowedToRegister property.
      */
     public void setAllowedToRegister(@jakarta.annotation.Nullable final DeviceRegistrationMembership value) {
@@ -125,7 +125,7 @@ public class AzureADRegistrationPolicy implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the isAdminConfigurable property value. The isAdminConfigurable property
+     * Sets the isAdminConfigurable property value. Determines if administrators can modify this policy.
      * @param value Value to set for the isAdminConfigurable property.
      */
     public void setIsAdminConfigurable(@jakarta.annotation.Nullable final Boolean value) {
