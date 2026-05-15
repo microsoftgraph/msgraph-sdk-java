@@ -1,0 +1,54 @@
+trigger: none
+pr: none
+
+schedules:
+  - cron: '0 0 * * *'
+    displayName: Daily builds
+    branches:
+      include:
+        - main
+    always: true
+
+resources:
+  repositories:
+    - repository: 1ESPipelineTemplates
+      type: git
+      name: 1ESPipelineTemplates/1ESPipelineTemplates
+      ref: refs/tags/release
+
+extends:
+  template: v1/1ES.Unofficial.PipelineTemplate.yml@1ESPipelineTemplates
+  parameters:
+    pool:
+      name: Azure-Pipelines-1ESPT-ExDShared
+      os: linux
+    sdl:
+      sourceAnalysisPool:
+        name: Azure-Pipelines-1ESPT-ExDShared
+        image: windows-2022
+        os: windows
+      credscan:
+        enabled: true
+      policheck:
+        enabled: true
+      binskim:
+        enabled: true
+    stages:
+      - stage: Build
+        jobs:
+          - job: Build
+            displayName: Build Java SDK
+            steps:
+              - checkout: self
+                submodules: recursive
+
+              - task: JavaToolInstaller@0
+                displayName: Set up Java
+                inputs:
+                  versionSpec: '17'
+                  jdkArchitectureOption: 'x64'
+                  jdkSourceOption: 'PreInstalled'
+
+              - script: chmod +x gradlew && ./gradlew assemble
+                displayName: Build SDK
+                workingDirectory: $(Build.SourcesDirectory)
