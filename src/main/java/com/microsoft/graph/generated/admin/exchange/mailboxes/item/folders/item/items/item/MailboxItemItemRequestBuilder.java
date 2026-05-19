@@ -37,19 +37,21 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/folders/{mailboxFolder%2Did}/items/{mailboxItem%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get items from admin
+     * Read the properties and relationships of a mailboxItem object.
      * @return a {@link MailboxItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxItem get() {
         return get(null);
     }
     /**
-     * Get items from admin
+     * Read the properties and relationships of a mailboxItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxItem::createFromDiscriminatorValue);
     }
     /**
-     * Get items from admin
+     * Read the properties and relationships of a mailboxItem object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get items from admin
+     * Read the properties and relationships of a mailboxItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         return new MailboxItemItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get items from admin
+     * Read the properties and relationships of a mailboxItem object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

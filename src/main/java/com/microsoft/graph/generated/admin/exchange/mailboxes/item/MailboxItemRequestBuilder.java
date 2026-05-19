@@ -82,7 +82,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get mailboxes from admin
+     * Represents a user&apos;s mailboxes.
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -91,7 +91,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get mailboxes from admin
+     * Represents a user&apos;s mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -149,7 +149,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get mailboxes from admin
+     * Represents a user&apos;s mailboxes.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get mailboxes from admin
+     * Represents a user&apos;s mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -209,7 +209,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get mailboxes from admin
+     * Represents a user&apos;s mailboxes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

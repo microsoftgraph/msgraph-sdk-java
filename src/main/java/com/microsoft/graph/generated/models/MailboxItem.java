@@ -39,7 +39,7 @@ public class MailboxItem extends OutlookItem implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
+     * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailboxItem.
      * @return a {@link java.util.List<MultiValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class MailboxItem extends OutlookItem implements Parsable {
         return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
-     * Gets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailboxItem.
      * @return a {@link java.util.List<SingleValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class MailboxItem extends OutlookItem implements Parsable {
         return this.backingStore.get("singleValueExtendedProperties");
     }
     /**
-     * Gets the size property value. The size property
+     * Gets the size property value. The length of the item in bytes.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class MailboxItem extends OutlookItem implements Parsable {
         return this.backingStore.get("size");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The message class ID of the item.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class MailboxItem extends OutlookItem implements Parsable {
         writer.writeStringValue("type", this.getType());
     }
     /**
-     * Sets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
+     * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailboxItem.
      * @param value Value to set for the multiValueExtendedProperties property.
      */
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
-     * Sets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailboxItem.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.backingStore.set("singleValueExtendedProperties", value);
     }
     /**
-     * Sets the size property value. The size property
+     * Sets the size property value. The length of the item in bytes.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("size", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The message class ID of the item.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

@@ -26,7 +26,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
         return new DnsEvidence();
     }
     /**
-     * Gets the dnsServerIp property value. The dnsServerIp property
+     * Gets the dnsServerIp property value. An IP entity that represents the DNS server that resolves the request.
      * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("dnsServerIp");
     }
     /**
-     * Gets the domainName property value. The domainName property
+     * Gets the domainName property value. The name of the DNS record associated with the alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hostIpAddress property value. The hostIpAddress property
+     * Gets the hostIpAddress property value. An IP entity that represents the DNS request client.
      * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("hostIpAddress");
     }
     /**
-     * Gets the ipAddresses property value. The ipAddresses property
+     * Gets the ipAddresses property value. IP entities that represent the resolved IP addresses.
      * @return a {@link java.util.List<IpEvidence>}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class DnsEvidence extends AlertEvidence implements Parsable {
         writer.writeCollectionOfObjectValues("ipAddresses", this.getIpAddresses());
     }
     /**
-     * Sets the dnsServerIp property value. The dnsServerIp property
+     * Sets the dnsServerIp property value. An IP entity that represents the DNS server that resolves the request.
      * @param value Value to set for the dnsServerIp property.
      */
     public void setDnsServerIp(@jakarta.annotation.Nullable final IpEvidence value) {
         this.backingStore.set("dnsServerIp", value);
     }
     /**
-     * Sets the domainName property value. The domainName property
+     * Sets the domainName property value. The name of the DNS record associated with the alert.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("domainName", value);
     }
     /**
-     * Sets the hostIpAddress property value. The hostIpAddress property
+     * Sets the hostIpAddress property value. An IP entity that represents the DNS request client.
      * @param value Value to set for the hostIpAddress property.
      */
     public void setHostIpAddress(@jakarta.annotation.Nullable final IpEvidence value) {
         this.backingStore.set("hostIpAddress", value);
     }
     /**
-     * Sets the ipAddresses property value. The ipAddresses property
+     * Sets the ipAddresses property value. IP entities that represent the resolved IP addresses.
      * @param value Value to set for the ipAddresses property.
      */
     public void setIpAddresses(@jakarta.annotation.Nullable final java.util.List<IpEvidence> value) {

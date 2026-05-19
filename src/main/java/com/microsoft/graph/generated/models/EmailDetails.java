@@ -56,7 +56,7 @@ public class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore;
     }
     /**
-     * Gets the body property value. The body property
+     * Gets the body property value. The body content of the notification email in plain text format.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the senderEmailAddress property value. The senderEmailAddress property
+     * Gets the senderEmailAddress property value. The email address of the sender for notification emails. Shared mailboxes aren&apos;t supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("senderEmailAddress");
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject line of the notification email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the body property value. The body property
+     * Sets the body property value. The body content of the notification email in plain text format.
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final String value) {
@@ -142,14 +142,14 @@ public class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the senderEmailAddress property value. The senderEmailAddress property
+     * Sets the senderEmailAddress property value. The email address of the sender for notification emails. Shared mailboxes aren&apos;t supported.
      * @param value Value to set for the senderEmailAddress property.
      */
     public void setSenderEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("senderEmailAddress", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject line of the notification email.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {

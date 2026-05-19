@@ -55,19 +55,21 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/folders/{mailboxFolder%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get folders from admin
+     * Read the properties and relationships of a mailboxFolder object.
      * @return a {@link MailboxFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxFolder get() {
         return get(null);
     }
     /**
-     * Get folders from admin
+     * Read the properties and relationships of a mailboxFolder object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxFolder get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxFolder::createFromDiscriminatorValue);
     }
     /**
-     * Get folders from admin
+     * Read the properties and relationships of a mailboxFolder object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +87,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get folders from admin
+     * Read the properties and relationships of a mailboxFolder object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -107,7 +109,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
         return new MailboxFolderItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get folders from admin
+     * Read the properties and relationships of a mailboxFolder object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

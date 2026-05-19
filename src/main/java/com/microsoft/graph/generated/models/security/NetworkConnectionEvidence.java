@@ -26,7 +26,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
         return new NetworkConnectionEvidence();
     }
     /**
-     * Gets the destinationAddress property value. The destinationAddress property
+     * Gets the destinationAddress property value. An entity of type IP that is the destination for this connection.
      * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
         return this.backingStore.get("destinationAddress");
     }
     /**
-     * Gets the destinationPort property value. The destinationPort property
+     * Gets the destinationPort property value. The destination port number. For example, 80.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the protocol property value. The protocol property
+     * Gets the protocol property value. The protocol type. Possible values are tcp, udp, unknownFutureValue.
      * @return a {@link ProtocolType}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
         return this.backingStore.get("protocol");
     }
     /**
-     * Gets the sourceAddress property value. The sourceAddress property
+     * Gets the sourceAddress property value. An entity of type IP that is the source for this connection.
      * @return a {@link IpEvidence}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
         return this.backingStore.get("sourceAddress");
     }
     /**
-     * Gets the sourcePort property value. The sourcePort property
+     * Gets the sourcePort property value. The source port number. For example, 80.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -93,35 +93,35 @@ public class NetworkConnectionEvidence extends AlertEvidence implements Parsable
         writer.writeIntegerValue("sourcePort", this.getSourcePort());
     }
     /**
-     * Sets the destinationAddress property value. The destinationAddress property
+     * Sets the destinationAddress property value. An entity of type IP that is the destination for this connection.
      * @param value Value to set for the destinationAddress property.
      */
     public void setDestinationAddress(@jakarta.annotation.Nullable final IpEvidence value) {
         this.backingStore.set("destinationAddress", value);
     }
     /**
-     * Sets the destinationPort property value. The destinationPort property
+     * Sets the destinationPort property value. The destination port number. For example, 80.
      * @param value Value to set for the destinationPort property.
      */
     public void setDestinationPort(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("destinationPort", value);
     }
     /**
-     * Sets the protocol property value. The protocol property
+     * Sets the protocol property value. The protocol type. Possible values are tcp, udp, unknownFutureValue.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final ProtocolType value) {
         this.backingStore.set("protocol", value);
     }
     /**
-     * Sets the sourceAddress property value. The sourceAddress property
+     * Sets the sourceAddress property value. An entity of type IP that is the source for this connection.
      * @param value Value to set for the sourceAddress property.
      */
     public void setSourceAddress(@jakarta.annotation.Nullable final IpEvidence value) {
         this.backingStore.set("sourceAddress", value);
     }
     /**
-     * Sets the sourcePort property value. The sourcePort property
+     * Sets the sourcePort property value. The source port number. For example, 80.
      * @param value Value to set for the sourcePort property.
      */
     public void setSourcePort(@jakarta.annotation.Nullable final Integer value) {

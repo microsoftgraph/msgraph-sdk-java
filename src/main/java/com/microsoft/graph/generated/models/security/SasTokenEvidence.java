@@ -27,7 +27,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return new SasTokenEvidence();
     }
     /**
-     * Gets the allowedIpAddresses property value. The allowedIpAddresses property
+     * Gets the allowedIpAddresses property value. All IP addresses accessible with this SAS. The default value is Allows all IP addresses.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("allowedIpAddresses");
     }
     /**
-     * Gets the allowedResourceTypes property value. The allowedResourceTypes property
+     * Gets the allowedResourceTypes property value. All resource types accessible with this SAS.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("allowedResourceTypes");
     }
     /**
-     * Gets the allowedServices property value. The allowedServices property
+     * Gets the allowedServices property value. All services accessible with this SAS.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("allowedServices");
     }
     /**
-     * Gets the expiryDateTime property value. The expiryDateTime property
+     * Gets the expiryDateTime property value. The SAS expiration time. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the permissions property value. The permissions property
+     * Gets the permissions property value. All permissions granted to this SAS.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("permissions");
     }
     /**
-     * Gets the protocol property value. The protocol property
+     * Gets the protocol property value. The protocol that is allowed with this SAS.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("protocol");
     }
     /**
-     * Gets the signatureHash property value. The signatureHash property
+     * Gets the signatureHash property value. The SAS signature hash, which is a unique identifier for each SAS.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("signatureHash");
     }
     /**
-     * Gets the signedWith property value. The signedWith property
+     * Gets the signedWith property value. The storage key that was used to generate the SAS.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("signedWith");
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The SAS activation time. This property can be null. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the storageResource property value. The storageResource property
+     * Gets the storageResource property value. A link to the storage resource for this SAS.
      * @return a {@link AzureResourceEvidence}
      */
     @jakarta.annotation.Nullable
@@ -144,70 +144,70 @@ public class SasTokenEvidence extends AlertEvidence implements Parsable {
         writer.writeObjectValue("storageResource", this.getStorageResource());
     }
     /**
-     * Sets the allowedIpAddresses property value. The allowedIpAddresses property
+     * Sets the allowedIpAddresses property value. All IP addresses accessible with this SAS. The default value is Allows all IP addresses.
      * @param value Value to set for the allowedIpAddresses property.
      */
     public void setAllowedIpAddresses(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("allowedIpAddresses", value);
     }
     /**
-     * Sets the allowedResourceTypes property value. The allowedResourceTypes property
+     * Sets the allowedResourceTypes property value. All resource types accessible with this SAS.
      * @param value Value to set for the allowedResourceTypes property.
      */
     public void setAllowedResourceTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("allowedResourceTypes", value);
     }
     /**
-     * Sets the allowedServices property value. The allowedServices property
+     * Sets the allowedServices property value. All services accessible with this SAS.
      * @param value Value to set for the allowedServices property.
      */
     public void setAllowedServices(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("allowedServices", value);
     }
     /**
-     * Sets the expiryDateTime property value. The expiryDateTime property
+     * Sets the expiryDateTime property value. The SAS expiration time. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @param value Value to set for the expiryDateTime property.
      */
     public void setExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expiryDateTime", value);
     }
     /**
-     * Sets the permissions property value. The permissions property
+     * Sets the permissions property value. All permissions granted to this SAS.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("permissions", value);
     }
     /**
-     * Sets the protocol property value. The protocol property
+     * Sets the protocol property value. The protocol that is allowed with this SAS.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("protocol", value);
     }
     /**
-     * Sets the signatureHash property value. The signatureHash property
+     * Sets the signatureHash property value. The SAS signature hash, which is a unique identifier for each SAS.
      * @param value Value to set for the signatureHash property.
      */
     public void setSignatureHash(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("signatureHash", value);
     }
     /**
-     * Sets the signedWith property value. The signedWith property
+     * Sets the signedWith property value. The storage key that was used to generate the SAS.
      * @param value Value to set for the signedWith property.
      */
     public void setSignedWith(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("signedWith", value);
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The SAS activation time. This property can be null. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the storageResource property value. The storageResource property
+     * Sets the storageResource property value. A link to the storage resource for this SAS.
      * @param value Value to set for the storageResource property.
      */
     public void setStorageResource(@jakarta.annotation.Nullable final AzureResourceEvidence value) {

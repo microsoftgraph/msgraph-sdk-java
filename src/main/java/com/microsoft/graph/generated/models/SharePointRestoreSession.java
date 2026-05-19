@@ -38,7 +38,7 @@ public class SharePointRestoreSession extends RestoreSessionBase implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the granularSiteRestoreArtifacts property value. The granularSiteRestoreArtifacts property
+     * Gets the granularSiteRestoreArtifacts property value. A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @return a {@link java.util.List<GranularSiteRestoreArtifact>}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class SharePointRestoreSession extends RestoreSessionBase implements Pars
         writer.writeCollectionOfObjectValues("siteRestoreArtifactsBulkAdditionRequests", this.getSiteRestoreArtifactsBulkAdditionRequests());
     }
     /**
-     * Sets the granularSiteRestoreArtifacts property value. The granularSiteRestoreArtifacts property
+     * Sets the granularSiteRestoreArtifacts property value. A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @param value Value to set for the granularSiteRestoreArtifacts property.
      */
     public void setGranularSiteRestoreArtifacts(@jakarta.annotation.Nullable final java.util.List<GranularSiteRestoreArtifact> value) {

@@ -104,21 +104,23 @@ public class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointRestoreSession::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property sharePointRestoreSessions in solutions
+     * Update the properties of a sharePointRestoreSession object.
      * @param body The request body
      * @return a {@link SharePointRestoreSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointrestoresession-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointRestoreSession patch(@jakarta.annotation.Nonnull final SharePointRestoreSession body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property sharePointRestoreSessions in solutions
+     * Update the properties of a sharePointRestoreSession object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointRestoreSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointrestoresession-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointRestoreSession patch(@jakarta.annotation.Nonnull final SharePointRestoreSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -169,7 +171,7 @@ public class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the navigation property sharePointRestoreSessions in solutions
+     * Update the properties of a sharePointRestoreSession object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -178,7 +180,7 @@ public class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property sharePointRestoreSessions in solutions
+     * Update the properties of a sharePointRestoreSession object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

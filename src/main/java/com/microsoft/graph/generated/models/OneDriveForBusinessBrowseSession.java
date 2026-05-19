@@ -26,7 +26,7 @@ public class OneDriveForBusinessBrowseSession extends BrowseSessionBase implemen
         return new OneDriveForBusinessBrowseSession();
     }
     /**
-     * Gets the directoryObjectId property value. The directoryObjectId property
+     * Gets the directoryObjectId property value. Id of the backed-up OneDrive.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class OneDriveForBusinessBrowseSession extends BrowseSessionBase implemen
         writer.writeStringValue("directoryObjectId", this.getDirectoryObjectId());
     }
     /**
-     * Sets the directoryObjectId property value. The directoryObjectId property
+     * Sets the directoryObjectId property value. Id of the backed-up OneDrive.
      * @param value Value to set for the directoryObjectId property.
      */
     public void setDirectoryObjectId(@jakarta.annotation.Nullable final String value) {

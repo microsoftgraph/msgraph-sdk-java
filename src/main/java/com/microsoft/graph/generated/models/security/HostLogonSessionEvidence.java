@@ -27,7 +27,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
         return new HostLogonSessionEvidence();
     }
     /**
-     * Gets the account property value. The account property
+     * Gets the account property value. The account that is associated with the sign-in session ID.
      * @return a {@link UserEvidence}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
         return this.backingStore.get("account");
     }
     /**
-     * Gets the endUtcDateTime property value. The endUtcDateTime property
+     * Gets the endUtcDateTime property value. The session end time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the host property value. The host property
+     * Gets the host property value. The host for the session.
      * @return a {@link DeviceEvidence}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
         return this.backingStore.get("host");
     }
     /**
-     * Gets the sessionId property value. The sessionId property
+     * Gets the sessionId property value. The session ID for the account reported in the alert, for example, 0x3e7.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
         return this.backingStore.get("sessionId");
     }
     /**
-     * Gets the startUtcDateTime property value. The startUtcDateTime property
+     * Gets the startUtcDateTime property value. The session start time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -94,35 +94,35 @@ public class HostLogonSessionEvidence extends AlertEvidence implements Parsable 
         writer.writeOffsetDateTimeValue("startUtcDateTime", this.getStartUtcDateTime());
     }
     /**
-     * Sets the account property value. The account property
+     * Sets the account property value. The account that is associated with the sign-in session ID.
      * @param value Value to set for the account property.
      */
     public void setAccount(@jakarta.annotation.Nullable final UserEvidence value) {
         this.backingStore.set("account", value);
     }
     /**
-     * Sets the endUtcDateTime property value. The endUtcDateTime property
+     * Sets the endUtcDateTime property value. The session end time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @param value Value to set for the endUtcDateTime property.
      */
     public void setEndUtcDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("endUtcDateTime", value);
     }
     /**
-     * Sets the host property value. The host property
+     * Sets the host property value. The host for the session.
      * @param value Value to set for the host property.
      */
     public void setHost(@jakarta.annotation.Nullable final DeviceEvidence value) {
         this.backingStore.set("host", value);
     }
     /**
-     * Sets the sessionId property value. The sessionId property
+     * Sets the sessionId property value. The session ID for the account reported in the alert, for example, 0x3e7.
      * @param value Value to set for the sessionId property.
      */
     public void setSessionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sessionId", value);
     }
     /**
-     * Sets the startUtcDateTime property value. The startUtcDateTime property
+     * Sets the startUtcDateTime property value. The session start time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @param value Value to set for the startUtcDateTime property.
      */
     public void setStartUtcDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

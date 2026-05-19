@@ -36,19 +36,21 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/createImportSession", rawUrl);
     }
     /**
-     * Invoke action createImportSession
+     * Create a session to import an Exchange mailbox item that was exported using the exportItems API.
      * @return a {@link MailboxItemImportSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-createimportsession?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxItemImportSession post() {
         return post(null);
     }
     /**
-     * Invoke action createImportSession
+     * Create a session to import an Exchange mailbox item that was exported using the exportItems API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxItemImportSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-createimportsession?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxItemImportSession post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxItemImportSession::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action createImportSession
+     * Create a session to import an Exchange mailbox item that was exported using the exportItems API.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action createImportSession
+     * Create a session to import an Exchange mailbox item that was exported using the exportItems API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

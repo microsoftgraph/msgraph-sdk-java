@@ -48,6 +48,14 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         return value;
     }
     /**
+     * Gets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. The allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled() {
+        return this.backingStore.get("allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -125,7 +133,8 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(20);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(21);
+        deserializerMap.put("allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled", (n) -> { this.setAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled(n.getBooleanValue()); });
         deserializerMap.put("blockCloudObjectTakeoverThroughHardMatchEnabled", (n) -> { this.setBlockCloudObjectTakeoverThroughHardMatchEnabled(n.getBooleanValue()); });
         deserializerMap.put("blockSoftMatchEnabled", (n) -> { this.setBlockSoftMatchEnabled(n.getBooleanValue()); });
         deserializerMap.put("bypassDirSyncOverridesEnabled", (n) -> { this.setBypassDirSyncOverridesEnabled(n.getBooleanValue()); });
@@ -250,6 +259,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled", this.getAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled());
         writer.writeBooleanValue("blockCloudObjectTakeoverThroughHardMatchEnabled", this.getBlockCloudObjectTakeoverThroughHardMatchEnabled());
         writer.writeBooleanValue("blockSoftMatchEnabled", this.getBlockSoftMatchEnabled());
         writer.writeBooleanValue("bypassDirSyncOverridesEnabled", this.getBypassDirSyncOverridesEnabled());
@@ -278,6 +288,13 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. The allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property
+     * @param value Value to set for the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property.
+     */
+    public void setAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

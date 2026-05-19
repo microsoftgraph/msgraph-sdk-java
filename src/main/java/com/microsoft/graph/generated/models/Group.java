@@ -212,6 +212,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("hasMembersWithLicenseErrors", (n) -> { this.setHasMembersWithLicenseErrors(n.getBooleanValue()); });
         deserializerMap.put("hideFromAddressLists", (n) -> { this.setHideFromAddressLists(n.getBooleanValue()); });
         deserializerMap.put("hideFromOutlookClients", (n) -> { this.setHideFromOutlookClients(n.getBooleanValue()); });
+        deserializerMap.put("infoCatalogs", (n) -> { this.setInfoCatalogs(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isAssignableToRole", (n) -> { this.setIsAssignableToRole(n.getBooleanValue()); });
         deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
@@ -301,6 +302,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getHideFromOutlookClients() {
         return this.backingStore.get("hideFromOutlookClients");
+    }
+    /**
+     * Gets the infoCatalogs property value. The infoCatalogs property
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getInfoCatalogs() {
+        return this.backingStore.get("infoCatalogs");
     }
     /**
      * Gets the isArchived property value. When a group is associated with a team, this property determines whether the team is in read-only mode.To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.
@@ -717,6 +726,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("hasMembersWithLicenseErrors", this.getHasMembersWithLicenseErrors());
         writer.writeBooleanValue("hideFromAddressLists", this.getHideFromAddressLists());
         writer.writeBooleanValue("hideFromOutlookClients", this.getHideFromOutlookClients());
+        writer.writeCollectionOfPrimitiveValues("infoCatalogs", this.getInfoCatalogs());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isAssignableToRole", this.getIsAssignableToRole());
         writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
@@ -933,6 +943,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setHideFromOutlookClients(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hideFromOutlookClients", value);
+    }
+    /**
+     * Sets the infoCatalogs property value. The infoCatalogs property
+     * @param value Value to set for the infoCatalogs property.
+     */
+    public void setInfoCatalogs(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("infoCatalogs", value);
     }
     /**
      * Sets the isArchived property value. When a group is associated with a team, this property determines whether the team is in read-only mode.To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.

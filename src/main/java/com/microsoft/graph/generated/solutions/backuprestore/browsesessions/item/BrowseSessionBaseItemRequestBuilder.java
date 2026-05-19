@@ -75,7 +75,7 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get browseSessions from solutions
+     * The list of browse sessions in the tenant.
      * @return a {@link BrowseSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -84,7 +84,7 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get browseSessions from solutions
+     * The list of browse sessions in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BrowseSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -142,7 +142,7 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get browseSessions from solutions
+     * The list of browse sessions in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get browseSessions from solutions
+     * The list of browse sessions in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -202,7 +202,7 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get browseSessions from solutions
+     * The list of browse sessions in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,7 +55,7 @@ public class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get granularDriveRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @return a {@link GranularDriveRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Get granularDriveRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GranularDriveRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get granularDriveRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get granularDriveRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get granularDriveRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

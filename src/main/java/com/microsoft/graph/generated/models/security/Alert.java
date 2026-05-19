@@ -67,7 +67,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("assignedTo");
     }
     /**
-     * Gets the categories property value. The categories property
+     * Gets the categories property value. The attack kill-chain categories that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("categories");
     }
     /**
-     * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework.
+     * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework. This property is in the process of being deprecated. Use the categories property instead.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -429,14 +429,14 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("assignedTo", value);
     }
     /**
-     * Sets the categories property value. The categories property
+     * Sets the categories property value. The attack kill-chain categories that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework.
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("categories", value);
     }
     /**
-     * Sets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework.
+     * Sets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework. This property is in the process of being deprecated. Use the categories property instead.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
