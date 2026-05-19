@@ -45,7 +45,7 @@ public class FileHashEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The hash value.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class FileHashEvidence extends AlertEvidence implements Parsable {
         this.backingStore.set("algorithm", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The hash value.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

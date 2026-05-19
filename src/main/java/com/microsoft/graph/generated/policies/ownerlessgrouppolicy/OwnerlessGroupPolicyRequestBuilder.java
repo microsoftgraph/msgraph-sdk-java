@@ -37,19 +37,21 @@ public class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/ownerlessGroupPolicy{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get ownerlessGroupPolicy from policies
+     * Read the properties of an ownerlessGroupPolicy object.
      * @return a {@link OwnerlessGroupPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/ownerlessgrouppolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OwnerlessGroupPolicy get() {
         return get(null);
     }
     /**
-     * Get ownerlessGroupPolicy from policies
+     * Read the properties of an ownerlessGroupPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OwnerlessGroupPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/ownerlessgrouppolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OwnerlessGroupPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,21 +61,23 @@ public class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OwnerlessGroupPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property ownerlessGroupPolicy in policies
+     * Create or update the ownerlessGroupPolicy for the tenant. If the policy doesn&apos;t exist, it creates a new one; if the policy exists, it updates the existing policy. To disable the policy, set isEnabled to false. Setting isEnabled to false clears the values of all other policy parameters.
      * @param body The request body
      * @return a {@link OwnerlessGroupPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/ownerlessgrouppolicy-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OwnerlessGroupPolicy patch(@jakarta.annotation.Nonnull final OwnerlessGroupPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property ownerlessGroupPolicy in policies
+     * Create or update the ownerlessGroupPolicy for the tenant. If the policy doesn&apos;t exist, it creates a new one; if the policy exists, it updates the existing policy. To disable the policy, set isEnabled to false. Setting isEnabled to false clears the values of all other policy parameters.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OwnerlessGroupPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/ownerlessgrouppolicy-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OwnerlessGroupPolicy patch(@jakarta.annotation.Nonnull final OwnerlessGroupPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -84,7 +88,7 @@ public class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OwnerlessGroupPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Get ownerlessGroupPolicy from policies
+     * Read the properties of an ownerlessGroupPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +96,7 @@ public class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get ownerlessGroupPolicy from policies
+     * Read the properties of an ownerlessGroupPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -104,7 +108,7 @@ public class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property ownerlessGroupPolicy in policies
+     * Create or update the ownerlessGroupPolicy for the tenant. If the policy doesn&apos;t exist, it creates a new one; if the policy exists, it updates the existing policy. To disable the policy, set isEnabled to false. Setting isEnabled to false clears the values of all other policy parameters.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -113,7 +117,7 @@ public class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property ownerlessGroupPolicy in policies
+     * Create or update the ownerlessGroupPolicy for the tenant. If the policy doesn&apos;t exist, it creates a new one; if the policy exists, it updates the existing policy. To disable the policy, set isEnabled to false. Setting isEnabled to false clears the values of all other policy parameters.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -138,7 +142,7 @@ public class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder {
         return new OwnerlessGroupPolicyRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get ownerlessGroupPolicy from policies
+     * Read the properties of an ownerlessGroupPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -37,19 +37,21 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/settings/exchange{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get exchange from users
+     * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user&apos;s primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @return a {@link ExchangeSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/usersettings-list-exchange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExchangeSettings get() {
         return get(null);
     }
     /**
-     * Get exchange from users
+     * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user&apos;s primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExchangeSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/usersettings-list-exchange?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExchangeSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExchangeSettings::createFromDiscriminatorValue);
     }
     /**
-     * Get exchange from users
+     * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user&apos;s primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get exchange from users
+     * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user&apos;s primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
         return new ExchangeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get exchange from users
+     * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user&apos;s primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

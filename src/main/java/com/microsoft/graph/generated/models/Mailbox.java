@@ -36,7 +36,7 @@ public class Mailbox extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the folders property value. The folders property
+     * Gets the folders property value. The collection of folders in the mailbox.
      * @return a {@link java.util.List<MailboxFolder>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class Mailbox extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("folders", this.getFolders());
     }
     /**
-     * Sets the folders property value. The folders property
+     * Sets the folders property value. The collection of folders in the mailbox.
      * @param value Value to set for the folders property.
      */
     public void setFolders(@jakarta.annotation.Nullable final java.util.List<MailboxFolder> value) {

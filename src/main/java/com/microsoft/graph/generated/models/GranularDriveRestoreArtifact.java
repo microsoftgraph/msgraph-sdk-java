@@ -25,7 +25,7 @@ public class GranularDriveRestoreArtifact extends GranularRestoreArtifactBase im
         return new GranularDriveRestoreArtifact();
     }
     /**
-     * Gets the directoryObjectId property value. The directoryObjectId property
+     * Gets the directoryObjectId property value. Id of the drive in which artifact is present.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class GranularDriveRestoreArtifact extends GranularRestoreArtifactBase im
         writer.writeStringValue("directoryObjectId", this.getDirectoryObjectId());
     }
     /**
-     * Sets the directoryObjectId property value. The directoryObjectId property
+     * Sets the directoryObjectId property value. Id of the drive in which artifact is present.
      * @param value Value to set for the directoryObjectId property.
      */
     public void setDirectoryObjectId(@jakarta.annotation.Nullable final String value) {

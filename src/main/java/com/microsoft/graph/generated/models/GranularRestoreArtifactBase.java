@@ -34,7 +34,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return new GranularRestoreArtifactBase();
     }
     /**
-     * Gets the browseSessionId property value. The browseSessionId property
+     * Gets the browseSessionId property value. The unique identifier of the browseSession
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return this.backingStore.get("browseSessionId");
     }
     /**
-     * Gets the completionDateTime property value. The completionDateTime property
+     * Gets the completionDateTime property value. Date time when the artifact&apos;s restoration completes.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the restoredItemKey property value. The restoredItemKey property
+     * Gets the restoredItemKey property value. The unique identifier for the restored artifact.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return this.backingStore.get("restoredItemKey");
     }
     /**
-     * Gets the restoredItemPath property value. The restoredItemPath property
+     * Gets the restoredItemPath property value. The path of the restored artifact. It&apos;s the path of the folder where all the artifacts are restored within a granular restore session.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return this.backingStore.get("restoredItemPath");
     }
     /**
-     * Gets the restoredItemWebUrl property value. The restoredItemWebUrl property
+     * Gets the restoredItemWebUrl property value. The web url of the restored artifact.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return this.backingStore.get("restoredItemWebUrl");
     }
     /**
-     * Gets the restorePointDateTime property value. The restorePointDateTime property
+     * Gets the restorePointDateTime property value. The restore point date time to which the artifact is restored.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return this.backingStore.get("restorePointDateTime");
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The start time of the restoration.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The original web url of the artifact being restored.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -141,49 +141,49 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the browseSessionId property value. The browseSessionId property
+     * Sets the browseSessionId property value. The unique identifier of the browseSession
      * @param value Value to set for the browseSessionId property.
      */
     public void setBrowseSessionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("browseSessionId", value);
     }
     /**
-     * Sets the completionDateTime property value. The completionDateTime property
+     * Sets the completionDateTime property value. Date time when the artifact&apos;s restoration completes.
      * @param value Value to set for the completionDateTime property.
      */
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("completionDateTime", value);
     }
     /**
-     * Sets the restoredItemKey property value. The restoredItemKey property
+     * Sets the restoredItemKey property value. The unique identifier for the restored artifact.
      * @param value Value to set for the restoredItemKey property.
      */
     public void setRestoredItemKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("restoredItemKey", value);
     }
     /**
-     * Sets the restoredItemPath property value. The restoredItemPath property
+     * Sets the restoredItemPath property value. The path of the restored artifact. It&apos;s the path of the folder where all the artifacts are restored within a granular restore session.
      * @param value Value to set for the restoredItemPath property.
      */
     public void setRestoredItemPath(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("restoredItemPath", value);
     }
     /**
-     * Sets the restoredItemWebUrl property value. The restoredItemWebUrl property
+     * Sets the restoredItemWebUrl property value. The web url of the restored artifact.
      * @param value Value to set for the restoredItemWebUrl property.
      */
     public void setRestoredItemWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("restoredItemWebUrl", value);
     }
     /**
-     * Sets the restorePointDateTime property value. The restorePointDateTime property
+     * Sets the restorePointDateTime property value. The restore point date time to which the artifact is restored.
      * @param value Value to set for the restorePointDateTime property.
      */
     public void setRestorePointDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("restorePointDateTime", value);
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The start time of the restoration.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -197,7 +197,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The original web url of the artifact being restored.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

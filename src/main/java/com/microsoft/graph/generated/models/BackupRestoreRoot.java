@@ -25,7 +25,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return new BackupRestoreRoot();
     }
     /**
-     * Gets the browseSessions property value. The browseSessions property
+     * Gets the browseSessions property value. The list of browse sessions in the tenant.
      * @return a {@link java.util.List<BrowseSessionBase>}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("mailboxProtectionUnitsBulkAdditionJobs");
     }
     /**
-     * Gets the oneDriveForBusinessBrowseSessions property value. The oneDriveForBusinessBrowseSessions property
+     * Gets the oneDriveForBusinessBrowseSessions property value. The list of OneDrive for Business browse sessions in the tenant.
      * @return a {@link java.util.List<OneDriveForBusinessBrowseSession>}
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("serviceStatus");
     }
     /**
-     * Gets the sharePointBrowseSessions property value. The sharePointBrowseSessions property
+     * Gets the sharePointBrowseSessions property value. The list of SharePoint browse sessions in the tenant.
      * @return a {@link java.util.List<SharePointBrowseSession>}
      */
     @jakarta.annotation.Nullable
@@ -282,7 +282,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("siteProtectionUnitsBulkAdditionJobs", this.getSiteProtectionUnitsBulkAdditionJobs());
     }
     /**
-     * Sets the browseSessions property value. The browseSessions property
+     * Sets the browseSessions property value. The list of browse sessions in the tenant.
      * @param value Value to set for the browseSessions property.
      */
     public void setBrowseSessions(@jakarta.annotation.Nullable final java.util.List<BrowseSessionBase> value) {
@@ -345,7 +345,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("mailboxProtectionUnitsBulkAdditionJobs", value);
     }
     /**
-     * Sets the oneDriveForBusinessBrowseSessions property value. The oneDriveForBusinessBrowseSessions property
+     * Sets the oneDriveForBusinessBrowseSessions property value. The list of OneDrive for Business browse sessions in the tenant.
      * @param value Value to set for the oneDriveForBusinessBrowseSessions property.
      */
     public void setOneDriveForBusinessBrowseSessions(@jakarta.annotation.Nullable final java.util.List<OneDriveForBusinessBrowseSession> value) {
@@ -408,7 +408,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("serviceStatus", value);
     }
     /**
-     * Sets the sharePointBrowseSessions property value. The sharePointBrowseSessions property
+     * Sets the sharePointBrowseSessions property value. The list of SharePoint browse sessions in the tenant.
      * @param value Value to set for the sharePointBrowseSessions property.
      */
     public void setSharePointBrowseSessions(@jakarta.annotation.Nullable final java.util.List<SharePointBrowseSession> value) {

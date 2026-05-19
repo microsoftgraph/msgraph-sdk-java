@@ -57,7 +57,7 @@ public class MailboxItemImportSession implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time in UTC when the import session expires. The date and time information uses ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class MailboxItemImportSession implements AdditionalDataHolder, BackedMod
         return deserializerMap;
     }
     /**
-     * Gets the importUrl property value. The importUrl property
+     * Gets the importUrl property value. The URL endpoint that accepts POST requests for uploading a mailbox item exported using exportItems.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -119,14 +119,14 @@ public class MailboxItemImportSession implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time in UTC when the import session expires. The date and time information uses ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the importUrl property value. The importUrl property
+     * Sets the importUrl property value. The URL endpoint that accepts POST requests for uploading a mailbox item exported using exportItems.
      * @param value Value to set for the importUrl property.
      */
     public void setImportUrl(@jakarta.annotation.Nullable final String value) {

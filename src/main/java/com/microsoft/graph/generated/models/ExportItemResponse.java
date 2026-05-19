@@ -56,7 +56,7 @@ public class ExportItemResponse implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
-     * Gets the changeKey property value. The changeKey property
+     * Gets the changeKey property value. The version of the item.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class ExportItemResponse implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("changeKey");
     }
     /**
-     * Gets the data property value. The data property
+     * Gets the data property value. Data that represents an item in a Base64-encoded opaque stream.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ExportItemResponse implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("data");
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. An error that occurs during an action.
      * @return a {@link MailTipsError}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class ExportItemResponse implements AdditionalDataHolder, BackedModel, Pa
         return deserializerMap;
     }
     /**
-     * Gets the itemId property value. The itemId property
+     * Gets the itemId property value. The unique identifier of the item.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,28 +138,28 @@ public class ExportItemResponse implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the changeKey property value. The changeKey property
+     * Sets the changeKey property value. The version of the item.
      * @param value Value to set for the changeKey property.
      */
     public void setChangeKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("changeKey", value);
     }
     /**
-     * Sets the data property value. The data property
+     * Sets the data property value. Data that represents an item in a Base64-encoded opaque stream.
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("data", value);
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. An error that occurs during an action.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final MailTipsError value) {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the itemId property value. The itemId property
+     * Sets the itemId property value. The unique identifier of the item.
      * @param value Value to set for the itemId property.
      */
     public void setItemId(@jakarta.annotation.Nullable final String value) {
