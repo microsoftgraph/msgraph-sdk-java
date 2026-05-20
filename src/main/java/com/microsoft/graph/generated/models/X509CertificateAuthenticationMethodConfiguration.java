@@ -34,7 +34,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         return this.backingStore.get("authenticationModeConfiguration");
     }
     /**
-     * Gets the certificateAuthorityScopes property value. The certificateAuthorityScopes property
+     * Gets the certificateAuthorityScopes property value. Defines configuration to allow a group of users to use certificates from specific issuing certificate authorities to successfully authenticate.
      * @return a {@link java.util.List<X509CertificateAuthorityScope>}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         return this.backingStore.get("includeTargets");
     }
     /**
-     * Gets the issuerHintsConfiguration property value. The issuerHintsConfiguration property
+     * Gets the issuerHintsConfiguration property value. Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
      * @return a {@link X509CertificateIssuerHintsConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         this.backingStore.set("authenticationModeConfiguration", value);
     }
     /**
-     * Sets the certificateAuthorityScopes property value. The certificateAuthorityScopes property
+     * Sets the certificateAuthorityScopes property value. Defines configuration to allow a group of users to use certificates from specific issuing certificate authorities to successfully authenticate.
      * @param value Value to set for the certificateAuthorityScopes property.
      */
     public void setCertificateAuthorityScopes(@jakarta.annotation.Nullable final java.util.List<X509CertificateAuthorityScope> value) {
@@ -138,7 +138,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         this.backingStore.set("includeTargets", value);
     }
     /**
-     * Sets the issuerHintsConfiguration property value. The issuerHintsConfiguration property
+     * Sets the issuerHintsConfiguration property value. Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
      * @param value Value to set for the issuerHintsConfiguration property.
      */
     public void setIssuerHintsConfiguration(@jakarta.annotation.Nullable final X509CertificateIssuerHintsConfiguration value) {

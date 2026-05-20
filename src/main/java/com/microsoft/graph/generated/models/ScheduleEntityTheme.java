@@ -17,7 +17,30 @@ public enum ScheduleEntityTheme implements ValuedEnum {
     DarkPurple("darkPurple"),
     DarkPink("darkPink"),
     DarkYellow("darkYellow"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    DarkRed("darkRed"),
+    Cranberry("cranberry"),
+    DarkOrange("darkOrange"),
+    Bronze("bronze"),
+    Peach("peach"),
+    Gold("gold"),
+    Lime("lime"),
+    Forest("forest"),
+    LightGreen("lightGreen"),
+    Jade("jade"),
+    LightTeal("lightTeal"),
+    DarkTeal("darkTeal"),
+    Steel("steel"),
+    SkyBlue("skyBlue"),
+    BlueGray("blueGray"),
+    Lavender("lavender"),
+    Lilac("lilac"),
+    Plum("plum"),
+    Magenta("magenta"),
+    DarkBrown("darkBrown"),
+    Beige("beige"),
+    Charcoal("charcoal"),
+    Silver("silver");
     public final String value;
     ScheduleEntityTheme(final String value) {
         this.value = value;
@@ -41,6 +64,29 @@ public enum ScheduleEntityTheme implements ValuedEnum {
             case "darkPink": return DarkPink;
             case "darkYellow": return DarkYellow;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "darkRed": return DarkRed;
+            case "cranberry": return Cranberry;
+            case "darkOrange": return DarkOrange;
+            case "bronze": return Bronze;
+            case "peach": return Peach;
+            case "gold": return Gold;
+            case "lime": return Lime;
+            case "forest": return Forest;
+            case "lightGreen": return LightGreen;
+            case "jade": return Jade;
+            case "lightTeal": return LightTeal;
+            case "darkTeal": return DarkTeal;
+            case "steel": return Steel;
+            case "skyBlue": return SkyBlue;
+            case "blueGray": return BlueGray;
+            case "lavender": return Lavender;
+            case "lilac": return Lilac;
+            case "plum": return Plum;
+            case "magenta": return Magenta;
+            case "darkBrown": return DarkBrown;
+            case "beige": return Beige;
+            case "charcoal": return Charcoal;
+            case "silver": return Silver;
             default: return null;
         }
     }

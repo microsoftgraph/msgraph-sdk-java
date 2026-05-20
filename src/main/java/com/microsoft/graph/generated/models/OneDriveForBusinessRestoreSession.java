@@ -54,7 +54,7 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         return deserializerMap;
     }
     /**
-     * Gets the granularDriveRestoreArtifacts property value. The granularDriveRestoreArtifacts property
+     * Gets the granularDriveRestoreArtifacts property value. A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @return a {@link java.util.List<GranularDriveRestoreArtifact>}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         this.backingStore.set("driveRestoreArtifactsBulkAdditionRequests", value);
     }
     /**
-     * Sets the granularDriveRestoreArtifacts property value. The granularDriveRestoreArtifacts property
+     * Sets the granularDriveRestoreArtifacts property value. A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @param value Value to set for the granularDriveRestoreArtifacts property.
      */
     public void setGranularDriveRestoreArtifacts(@jakarta.annotation.Nullable final java.util.List<GranularDriveRestoreArtifact> value) {

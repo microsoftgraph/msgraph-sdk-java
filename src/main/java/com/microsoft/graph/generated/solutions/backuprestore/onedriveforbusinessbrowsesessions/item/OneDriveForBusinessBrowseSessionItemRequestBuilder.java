@@ -55,19 +55,21 @@ public class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get oneDriveForBusinessBrowseSessions from solutions
+     * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
      * @return a {@link OneDriveForBusinessBrowseSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessbrowsesession-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OneDriveForBusinessBrowseSession get() {
         return get(null);
     }
     /**
-     * Get oneDriveForBusinessBrowseSessions from solutions
+     * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OneDriveForBusinessBrowseSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessbrowsesession-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OneDriveForBusinessBrowseSession get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Get oneDriveForBusinessBrowseSessions from solutions
+     * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Get oneDriveForBusinessBrowseSessions from solutions
+     * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get oneDriveForBusinessBrowseSessions from solutions
+     * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

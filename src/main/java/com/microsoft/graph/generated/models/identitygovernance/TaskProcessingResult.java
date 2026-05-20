@@ -44,7 +44,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the failureReason property value. Describes why the taskProcessingResult has failed.
+     * Gets the failureReason property value. Describes why the taskProcessingResult failed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the processingInfo property value. The processingInfo property
+     * Gets the processingInfo property value. Additional human-readable context about the task processing outcome. This property contains information about edge cases where the task completed successfully but the expected action wasn&apos;t performed because the target was already in the desired state, such as when the user was already a member of the specified group. Returns null when no additional context is needed. Nullable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         return this.backingStore.get("processingStatus");
     }
     /**
-     * Gets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Gets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution hasn&apos;t started yet.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -139,14 +139,14 @@ public class TaskProcessingResult extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the failureReason property value. Describes why the taskProcessingResult has failed.
+     * Sets the failureReason property value. Describes why the taskProcessingResult failed.
      * @param value Value to set for the failureReason property.
      */
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("failureReason", value);
     }
     /**
-     * Sets the processingInfo property value. The processingInfo property
+     * Sets the processingInfo property value. Additional human-readable context about the task processing outcome. This property contains information about edge cases where the task completed successfully but the expected action wasn&apos;t performed because the target was already in the desired state, such as when the user was already a member of the specified group. Returns null when no additional context is needed. Nullable.
      * @param value Value to set for the processingInfo property.
      */
     public void setProcessingInfo(@jakarta.annotation.Nullable final String value) {
@@ -160,7 +160,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         this.backingStore.set("processingStatus", value);
     }
     /**
-     * Sets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Sets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution hasn&apos;t started yet.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

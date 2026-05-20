@@ -26,7 +26,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
         return new GitHubUserEvidence();
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. The email address of the user account.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the login property value. The login property
+     * Gets the login property value. The user&apos;s login (GitHub handle).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("login");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The user&apos;s name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The unique and immutable ID of the user account.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The URL of the user&apos;s profile web page. For example, https://github.com/my-login.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,35 +93,35 @@ public class GitHubUserEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. The email address of the user account.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the login property value. The login property
+     * Sets the login property value. The user&apos;s login (GitHub handle).
      * @param value Value to set for the login property.
      */
     public void setLogin(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("login", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The user&apos;s name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The unique and immutable ID of the user account.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The URL of the user&apos;s profile web page. For example, https://github.com/my-login.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

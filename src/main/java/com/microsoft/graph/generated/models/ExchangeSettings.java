@@ -35,7 +35,7 @@ public class ExchangeSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the primaryMailboxId property value. The primaryMailboxId property
+     * Gets the primaryMailboxId property value. The unique identifier for the user&apos;s primary mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class ExchangeSettings extends Entity implements Parsable {
         writer.writeStringValue("primaryMailboxId", this.getPrimaryMailboxId());
     }
     /**
-     * Sets the primaryMailboxId property value. The primaryMailboxId property
+     * Sets the primaryMailboxId property value. The unique identifier for the user&apos;s primary mailbox.
      * @param value Value to set for the primaryMailboxId property.
      */
     public void setPrimaryMailboxId(@jakarta.annotation.Nullable final String value) {

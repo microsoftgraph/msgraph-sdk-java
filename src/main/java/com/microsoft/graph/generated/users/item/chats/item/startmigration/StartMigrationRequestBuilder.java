@@ -35,18 +35,20 @@ public class StartMigrationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/startMigration", rawUrl);
     }
     /**
-     * Invoke action startMigration
+     * Start the migration of external messages by enabling migration mode in an existing chat. Import operations were limited to newly created standard channels that were in an empty state. For more information, see Import third-party platform messages to Teams using Microsoft Graph. You can define a minimum timestamp for content migration that enables the import of messages from the past. The specified timestamp must be earlier than the current createdDateTime of the chat. Imported content is always limited by the createdDateTime of the target thread. An optional createdDateTime property in the payload allows you to update this value, but with strict rules: This API supportes the following channel types.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-startmigration?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final StartMigrationPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action startMigration
+     * Start the migration of external messages by enabling migration mode in an existing chat. Import operations were limited to newly created standard channels that were in an empty state. For more information, see Import third-party platform messages to Teams using Microsoft Graph. You can define a minimum timestamp for content migration that enables the import of messages from the past. The specified timestamp must be earlier than the current createdDateTime of the chat. Imported content is always limited by the createdDateTime of the target thread. An optional createdDateTime property in the payload allows you to update this value, but with strict rules: This API supportes the following channel types.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-startmigration?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final StartMigrationPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -56,7 +58,7 @@ public class StartMigrationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action startMigration
+     * Start the migration of external messages by enabling migration mode in an existing chat. Import operations were limited to newly created standard channels that were in an empty state. For more information, see Import third-party platform messages to Teams using Microsoft Graph. You can define a minimum timestamp for content migration that enables the import of messages from the past. The specified timestamp must be earlier than the current createdDateTime of the chat. Imported content is always limited by the createdDateTime of the target thread. An optional createdDateTime property in the payload allows you to update this value, but with strict rules: This API supportes the following channel types.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +67,7 @@ public class StartMigrationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action startMigration
+     * Start the migration of external messages by enabling migration mode in an existing chat. Import operations were limited to newly created standard channels that were in an empty state. For more information, see Import third-party platform messages to Teams using Microsoft Graph. You can define a minimum timestamp for content migration that enables the import of messages from the past. The specified timestamp must be earlier than the current createdDateTime of the chat. Imported content is always limited by the createdDateTime of the target thread. An optional createdDateTime property in the payload allows you to update this value, but with strict rules: This API supportes the following channel types.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

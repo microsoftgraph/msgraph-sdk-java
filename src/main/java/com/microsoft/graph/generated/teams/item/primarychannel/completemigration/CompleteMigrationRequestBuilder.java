@@ -35,7 +35,7 @@ public class CompleteMigrationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/primaryChannel/completeMigration", rawUrl);
     }
     /**
-     * Complete the message migration process by removing migration mode from a channel in a team. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process. After a completeMigration request is made, you can&apos;t import additional messages into the team. You can add members to the team after the request returns a successful response.
+     * Complete migration on existing channels or new channels. Complete migration operations were initially restricted to newly created standard channels using migration templates specifically designed for the initial migration process. For more information, see Import third-party platform messages to Teams using Microsoft Graph. Consider the following points when completing migration for new and existing channels: After a completeMigration request is made for existing or new channels, you can still import more messages into the team by calling channel: startMigration. This API supportes the following channel types.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/channel-completemigration?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class CompleteMigrationRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Complete the message migration process by removing migration mode from a channel in a team. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process. After a completeMigration request is made, you can&apos;t import additional messages into the team. You can add members to the team after the request returns a successful response.
+     * Complete migration on existing channels or new channels. Complete migration operations were initially restricted to newly created standard channels using migration templates specifically designed for the initial migration process. For more information, see Import third-party platform messages to Teams using Microsoft Graph. Consider the following points when completing migration for new and existing channels: After a completeMigration request is made for existing or new channels, you can still import more messages into the team by calling channel: startMigration. This API supportes the following channel types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/channel-completemigration?view=graph-rest-1.0">Find more info here</a>
@@ -55,7 +55,7 @@ public class CompleteMigrationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Complete the message migration process by removing migration mode from a channel in a team. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process. After a completeMigration request is made, you can&apos;t import additional messages into the team. You can add members to the team after the request returns a successful response.
+     * Complete migration on existing channels or new channels. Complete migration operations were initially restricted to newly created standard channels using migration templates specifically designed for the initial migration process. For more information, see Import third-party platform messages to Teams using Microsoft Graph. Consider the following points when completing migration for new and existing channels: After a completeMigration request is made for existing or new channels, you can still import more messages into the team by calling channel: startMigration. This API supportes the following channel types.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class CompleteMigrationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Complete the message migration process by removing migration mode from a channel in a team. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process. After a completeMigration request is made, you can&apos;t import additional messages into the team. You can add members to the team after the request returns a successful response.
+     * Complete migration on existing channels or new channels. Complete migration operations were initially restricted to newly created standard channels using migration templates specifically designed for the initial migration process. For more information, see Import third-party platform messages to Teams using Microsoft Graph. Consider the following points when completing migration for new and existing channels: After a completeMigration request is made for existing or new channels, you can still import more messages into the team by calling channel: startMigration. This API supportes the following channel types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

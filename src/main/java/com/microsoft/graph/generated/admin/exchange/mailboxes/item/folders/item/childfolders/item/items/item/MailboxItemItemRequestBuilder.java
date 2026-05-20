@@ -37,7 +37,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/folders/{mailboxFolder%2Did}/childFolders/{mailboxFolder%2Did1}/items/{mailboxItem%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get items from admin
+     * The collection of items in this folder.
      * @return a {@link MailboxItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get items from admin
+     * The collection of items in this folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxItem::createFromDiscriminatorValue);
     }
     /**
-     * Get items from admin
+     * The collection of items in this folder.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get items from admin
+     * The collection of items in this folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         return new MailboxItemItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get items from admin
+     * The collection of items in this folder.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

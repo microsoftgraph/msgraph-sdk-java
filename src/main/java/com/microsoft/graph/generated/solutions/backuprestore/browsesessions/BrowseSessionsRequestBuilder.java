@@ -60,19 +60,21 @@ public class BrowseSessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/browseSessions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get browseSessions from solutions
+     * Get a list of the browseSessionBase objects and their properties.
      * @return a {@link BrowseSessionBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-list-browsesessions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowseSessionBaseCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get browseSessions from solutions
+     * Get a list of the browseSessionBase objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BrowseSessionBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-list-browsesessions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BrowseSessionBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class BrowseSessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BrowseSessionBase::createFromDiscriminatorValue);
     }
     /**
-     * Get browseSessions from solutions
+     * Get a list of the browseSessionBase objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class BrowseSessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get browseSessions from solutions
+     * Get a list of the browseSessionBase objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class BrowseSessionsRequestBuilder extends BaseRequestBuilder {
         return new BrowseSessionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get browseSessions from solutions
+     * Get a list of the browseSessionBase objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -117,7 +117,7 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("messages");
     }
     /**
-     * Gets the migrationMode property value. The migrationMode property
+     * Gets the migrationMode property value. Indicates whether a chat is in migration mode. This value is null for chats that never entered migration mode. The possible values are: inProgress, completed, unknownFutureValue.
      * @return a {@link MigrationMode}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("onlineMeetingInfo");
     }
     /**
-     * Gets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * Gets the originalCreatedDateTime property value. Timestamp of the original creation time for the chat. The value is null if the chat never entered migration mode.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -279,7 +279,7 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("messages", value);
     }
     /**
-     * Sets the migrationMode property value. The migrationMode property
+     * Sets the migrationMode property value. Indicates whether a chat is in migration mode. This value is null for chats that never entered migration mode. The possible values are: inProgress, completed, unknownFutureValue.
      * @param value Value to set for the migrationMode property.
      */
     public void setMigrationMode(@jakarta.annotation.Nullable final MigrationMode value) {
@@ -293,7 +293,7 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("onlineMeetingInfo", value);
     }
     /**
-     * Sets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * Sets the originalCreatedDateTime property value. Timestamp of the original creation time for the chat. The value is null if the chat never entered migration mode.
      * @param value Value to set for the originalCreatedDateTime property.
      */
     public void setOriginalCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

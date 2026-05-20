@@ -33,7 +33,7 @@ public class OwnerlessGroupPolicy extends Entity implements Parsable {
         return this.backingStore.get("emailInfo");
     }
     /**
-     * Gets the enabledGroupIds property value. The enabledGroupIds property
+     * Gets the enabledGroupIds property value. The collection of IDs for groups to which the policy is enabled. If empty, the policy is enabled for all groups in the tenant.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class OwnerlessGroupPolicy extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether the ownerless group policy is enabled in the tenant. Setting this property to false clears the values of all other policy parameters.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class OwnerlessGroupPolicy extends Entity implements Parsable {
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the maxMembersToNotify property value. The maxMembersToNotify property
+     * Gets the maxMembersToNotify property value. The maximum number of members to notify. Value range is 0-90. Members are prioritized by recent group activity (most active first). If there aren&apos;t enough active members to fill the limit, remaining slots are filled with other eligible group members from the directory.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class OwnerlessGroupPolicy extends Entity implements Parsable {
         return this.backingStore.get("maxMembersToNotify");
     }
     /**
-     * Gets the notificationDurationInWeeks property value. The notificationDurationInWeeks property
+     * Gets the notificationDurationInWeeks property value. The number of weeks for the notification duration. Value range is 1-7.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class OwnerlessGroupPolicy extends Entity implements Parsable {
         return this.backingStore.get("notificationDurationInWeeks");
     }
     /**
-     * Gets the policyWebUrl property value. The policyWebUrl property
+     * Gets the policyWebUrl property value. The URL to the policy documentation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -119,35 +119,35 @@ public class OwnerlessGroupPolicy extends Entity implements Parsable {
         this.backingStore.set("emailInfo", value);
     }
     /**
-     * Sets the enabledGroupIds property value. The enabledGroupIds property
+     * Sets the enabledGroupIds property value. The collection of IDs for groups to which the policy is enabled. If empty, the policy is enabled for all groups in the tenant.
      * @param value Value to set for the enabledGroupIds property.
      */
     public void setEnabledGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("enabledGroupIds", value);
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether the ownerless group policy is enabled in the tenant. Setting this property to false clears the values of all other policy parameters.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the maxMembersToNotify property value. The maxMembersToNotify property
+     * Sets the maxMembersToNotify property value. The maximum number of members to notify. Value range is 0-90. Members are prioritized by recent group activity (most active first). If there aren&apos;t enough active members to fill the limit, remaining slots are filled with other eligible group members from the directory.
      * @param value Value to set for the maxMembersToNotify property.
      */
     public void setMaxMembersToNotify(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("maxMembersToNotify", value);
     }
     /**
-     * Sets the notificationDurationInWeeks property value. The notificationDurationInWeeks property
+     * Sets the notificationDurationInWeeks property value. The number of weeks for the notification duration. Value range is 1-7.
      * @param value Value to set for the notificationDurationInWeeks property.
      */
     public void setNotificationDurationInWeeks(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("notificationDurationInWeeks", value);
     }
     /**
-     * Sets the policyWebUrl property value. The policyWebUrl property
+     * Sets the policyWebUrl property value. The URL to the policy documentation.
      * @param value Value to set for the policyWebUrl property.
      */
     public void setPolicyWebUrl(@jakarta.annotation.Nullable final String value) {

@@ -69,7 +69,7 @@ public class X509CertificateAuthorityScope implements AdditionalDataHolder, Back
         return deserializerMap;
     }
     /**
-     * Gets the includeTargets property value. The includeTargets property
+     * Gets the includeTargets property value. A collection of groups that are enabled to be in scope to use certificates issued by specific certificate authority.
      * @return a {@link java.util.List<IncludeTarget>}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class X509CertificateAuthorityScope implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the publicKeyInfrastructureIdentifier property value. The publicKeyInfrastructureIdentifier property
+     * Gets the publicKeyInfrastructureIdentifier property value. Public Key Infrastructure container object under which the certificate authorities are stored in the Entra PKI based trust store.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class X509CertificateAuthorityScope implements AdditionalDataHolder, Back
         return this.backingStore.get("publicKeyInfrastructureIdentifier");
     }
     /**
-     * Gets the subjectKeyIdentifier property value. The subjectKeyIdentifier property
+     * Gets the subjectKeyIdentifier property value. Subject Key Identifier that identifies the certificate authority uniquely.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class X509CertificateAuthorityScope implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the includeTargets property value. The includeTargets property
+     * Sets the includeTargets property value. A collection of groups that are enabled to be in scope to use certificates issued by specific certificate authority.
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<IncludeTarget> value) {
@@ -142,14 +142,14 @@ public class X509CertificateAuthorityScope implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the publicKeyInfrastructureIdentifier property value. The publicKeyInfrastructureIdentifier property
+     * Sets the publicKeyInfrastructureIdentifier property value. Public Key Infrastructure container object under which the certificate authorities are stored in the Entra PKI based trust store.
      * @param value Value to set for the publicKeyInfrastructureIdentifier property.
      */
     public void setPublicKeyInfrastructureIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publicKeyInfrastructureIdentifier", value);
     }
     /**
-     * Sets the subjectKeyIdentifier property value. The subjectKeyIdentifier property
+     * Sets the subjectKeyIdentifier property value. Subject Key Identifier that identifies the certificate authority uniquely.
      * @param value Value to set for the subjectKeyIdentifier property.
      */
     public void setSubjectKeyIdentifier(@jakarta.annotation.Nullable final String value) {

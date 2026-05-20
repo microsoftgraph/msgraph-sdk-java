@@ -58,12 +58,21 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         return this.backingStore;
     }
     /**
+     * Gets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute defined in this section, they&apos;re exempted from the restriction.  This means that calls the user or service principal makes to create or update apps are exempt from this policy enforcement.
+     * @return a {@link AppManagementPolicyActorExemptions}
+     */
+    @jakarta.annotation.Nullable
+    public AppManagementPolicyActorExemptions getExcludeActors() {
+        return this.backingStore.get("excludeActors");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("excludeActors", (n) -> { this.setExcludeActors(n.getObjectValue(AppManagementPolicyActorExemptions::createFromDiscriminatorValue)); });
         deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
@@ -117,6 +126,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("excludeActors", this.getExcludeActors());
         writer.writePeriodAndDurationValue("maxLifetime", this.getMaxLifetime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restrictForAppsCreatedAfterDateTime", this.getRestrictForAppsCreatedAfterDateTime());
@@ -138,6 +148,13 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute defined in this section, they&apos;re exempted from the restriction.  This means that calls the user or service principal makes to create or update apps are exempt from this policy enforcement.
+     * @param value Value to set for the excludeActors property.
+     */
+    public void setExcludeActors(@jakarta.annotation.Nullable final AppManagementPolicyActorExemptions value) {
+        this.backingStore.set("excludeActors", value);
     }
     /**
      * Sets the maxLifetime property value. String value that indicates the maximum lifetime for password expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to passwordLifetime.
