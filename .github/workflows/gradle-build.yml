@@ -81,3 +81,19 @@ jobs:
             exit 1
           fi
 
+  dependency-submission:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: 21
+          distribution: 'temurin'
+          cache: gradle
+      - name: Generate and submit dependency graph
+        uses: gradle/actions/dependency-submission@v4
+
