@@ -23,7 +23,6 @@ java {
 sourceSets {
     main {
         java {
-            exclude 'pom.xml'
         }
     }
 }
