@@ -49,6 +49,6 @@ extends:
                   jdkArchitectureOption: 'x64'
                   jdkSourceOption: 'PreInstalled'
 
-              - script: chmod +x gradlew && ./gradlew assemble
+              - script: chmod +x gradlew && ./gradlew build
                 displayName: Build SDK
                 workingDirectory: $(Build.SourcesDirectory)
