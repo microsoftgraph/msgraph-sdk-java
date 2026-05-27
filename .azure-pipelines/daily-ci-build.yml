@@ -21,6 +21,7 @@ extends:
   parameters:
     pool:
       name: Azure-Pipelines-1ESPT-ExDShared
+      image: ubuntu-latest
       os: linux
     sdl:
       sourceAnalysisPool:
@@ -42,13 +43,21 @@ extends:
               - checkout: self
                 submodules: recursive
 
-              - task: JavaToolInstaller@0
-                displayName: Set up Java
-                inputs:
-                  versionSpec: '17'
-                  jdkArchitectureOption: 'x64'
-                  jdkSourceOption: 'PreInstalled'
+              - script: |
+                  sed -i "/mavenCentral()/d" build.gradle
+                  sed -i "/gradlePluginPortal()/d" settings.gradle
+                  sed -i "/mavenCentral()/d" settings.gradle
+                displayName: Strip public repos for network-isolated build
 
-              - script: chmod +x gradlew && ./gradlew assemble
-                displayName: Build SDK
-                workingDirectory: $(Build.SourcesDirectory)
+              - task: Gradle@4
+                displayName: Build and Test SDK
+                inputs:
+                  gradleWrapperFile: 'gradlew'
+                  workingDirectory: '$(Build.SourcesDirectory)'
+                  tasks: 'assemble test'
+                  options: '--no-daemon -PGraphDeveloperExperiencesPublicPassword=$(ARTIFACTS_PAT)'
+                  publishJUnitResults: true
+                  testResultsFiles: '**/TEST-*.xml'
+                  javaHomeOption: 'JDKVersion'
+                  jdkVersionOption: '1.17'
+                  jdkArchitectureOption: 'x64'
