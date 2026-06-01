@@ -45,7 +45,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the networkMessageId property value. The networkMessageId property
+     * Gets the networkMessageId property value. The network message ID of the email to which the submission belongs.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("networkMessageId");
     }
     /**
-     * Gets the recipient property value. The recipient property
+     * Gets the recipient property value. The recipient of the email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("recipient");
     }
     /**
-     * Gets the reportType property value. The reportType property
+     * Gets the reportType property value. The submission type for the specified instance that maps to Junk, Phish, Malware, or NotJunk.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("reportType");
     }
     /**
-     * Gets the sender property value. The sender property
+     * Gets the sender property value. The sender of the email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("sender");
     }
     /**
-     * Gets the senderIp property value. The senderIp property
+     * Gets the senderIp property value. The sender&apos;s IP.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("senderIp");
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the submission mail.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the submissionDateTime property value. The submissionDateTime property
+     * Gets the submissionDateTime property value. The reported date and time of this submission. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("submissionDateTime");
     }
     /**
-     * Gets the submissionId property value. The submissionId property
+     * Gets the submissionId property value. The submission ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("submissionId");
     }
     /**
-     * Gets the submitter property value. The submitter property
+     * Gets the submitter property value. The submitter&apos;s email address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -134,63 +134,63 @@ public class SubmissionMailEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("submitter", this.getSubmitter());
     }
     /**
-     * Sets the networkMessageId property value. The networkMessageId property
+     * Sets the networkMessageId property value. The network message ID of the email to which the submission belongs.
      * @param value Value to set for the networkMessageId property.
      */
     public void setNetworkMessageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("networkMessageId", value);
     }
     /**
-     * Sets the recipient property value. The recipient property
+     * Sets the recipient property value. The recipient of the email.
      * @param value Value to set for the recipient property.
      */
     public void setRecipient(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("recipient", value);
     }
     /**
-     * Sets the reportType property value. The reportType property
+     * Sets the reportType property value. The submission type for the specified instance that maps to Junk, Phish, Malware, or NotJunk.
      * @param value Value to set for the reportType property.
      */
     public void setReportType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("reportType", value);
     }
     /**
-     * Sets the sender property value. The sender property
+     * Sets the sender property value. The sender of the email.
      * @param value Value to set for the sender property.
      */
     public void setSender(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sender", value);
     }
     /**
-     * Sets the senderIp property value. The senderIp property
+     * Sets the senderIp property value. The sender&apos;s IP.
      * @param value Value to set for the senderIp property.
      */
     public void setSenderIp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("senderIp", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the submission mail.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the submissionDateTime property value. The submissionDateTime property
+     * Sets the submissionDateTime property value. The reported date and time of this submission. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @param value Value to set for the submissionDateTime property.
      */
     public void setSubmissionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("submissionDateTime", value);
     }
     /**
-     * Sets the submissionId property value. The submissionId property
+     * Sets the submissionId property value. The submission ID.
      * @param value Value to set for the submissionId property.
      */
     public void setSubmissionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("submissionId", value);
     }
     /**
-     * Sets the submitter property value. The submitter property
+     * Sets the submitter property value. The submitter&apos;s email address.
      * @param value Value to set for the submitter property.
      */
     public void setSubmitter(@jakarta.annotation.Nullable final String value) {

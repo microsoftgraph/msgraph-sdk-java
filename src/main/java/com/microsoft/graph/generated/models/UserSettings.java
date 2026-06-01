@@ -41,7 +41,7 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("contributionToContentDiscoveryDisabled");
     }
     /**
-     * Gets the exchange property value. The exchange property
+     * Gets the exchange property value. The Exchange settings for mailbox discovery.
      * @return a {@link ExchangeSettings}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class UserSettings extends Entity implements Parsable {
         this.backingStore.set("contributionToContentDiscoveryDisabled", value);
     }
     /**
-     * Sets the exchange property value. The exchange property
+     * Sets the exchange property value. The Exchange settings for mailbox discovery.
      * @param value Value to set for the exchange property.
      */
     public void setExchange(@jakarta.annotation.Nullable final ExchangeSettings value) {

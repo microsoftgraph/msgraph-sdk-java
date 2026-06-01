@@ -68,7 +68,7 @@ public class IncludeTarget implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The ID of the entity targeted.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class IncludeTarget implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The ID of the entity targeted.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

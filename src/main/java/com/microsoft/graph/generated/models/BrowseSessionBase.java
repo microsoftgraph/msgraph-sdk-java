@@ -34,7 +34,7 @@ public class BrowseSessionBase extends Entity implements Parsable {
         return new BrowseSessionBase();
     }
     /**
-     * Gets the backupSizeInBytes property value. The backupSizeInBytes property
+     * Gets the backupSizeInBytes property value. The size of the backup in bytes.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class BrowseSessionBase extends Entity implements Parsable {
         return this.backingStore.get("backupSizeInBytes");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the browse session was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class BrowseSessionBase extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Contains the error details if the browse session creation fails.
      * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class BrowseSessionBase extends Entity implements Parsable {
         return this.backingStore.get("error");
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time after which the browse session is deleted automatically.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class BrowseSessionBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the restorePointDateTime property value. The restorePointDateTime property
+     * Gets the restorePointDateTime property value. The date and time of the restore point on which the browse session is created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -121,35 +121,35 @@ public class BrowseSessionBase extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the backupSizeInBytes property value. The backupSizeInBytes property
+     * Sets the backupSizeInBytes property value. The size of the backup in bytes.
      * @param value Value to set for the backupSizeInBytes property.
      */
     public void setBackupSizeInBytes(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("backupSizeInBytes", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the browse session was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Contains the error details if the browse session creation fails.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time after which the browse session is deleted automatically.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the restorePointDateTime property value. The restorePointDateTime property
+     * Sets the restorePointDateTime property value. The date and time of the restore point on which the browse session is created.
      * @param value Value to set for the restorePointDateTime property.
      */
     public void setRestorePointDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

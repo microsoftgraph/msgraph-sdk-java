@@ -27,14 +27,14 @@ jobs:
         run: ./gradlew build
       - name: Upload Unit Test Results
         if: ${{ always() }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: UnitTests
           path: |
             build/reports/tests/test/**
             build/test-results/**
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: drop
           path: |
@@ -80,4 +80,20 @@ jobs:
           else
             exit 1
           fi
+
+  dependency-submission:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: 21
+          distribution: 'temurin'
+          cache: gradle
+      - name: Generate and submit dependency graph
+        uses: gradle/actions/dependency-submission@v4
 

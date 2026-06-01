@@ -36,7 +36,7 @@ public class SharePointBrowseSession extends BrowseSessionBase implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the siteId property value. The siteId property
+     * Gets the siteId property value. Id of the backed-up SharePoint site.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class SharePointBrowseSession extends BrowseSessionBase implements Parsab
         writer.writeStringValue("siteId", this.getSiteId());
     }
     /**
-     * Sets the siteId property value. The siteId property
+     * Sets the siteId property value. Id of the backed-up SharePoint site.
      * @param value Value to set for the siteId property.
      */
     public void setSiteId(@jakarta.annotation.Nullable final String value) {

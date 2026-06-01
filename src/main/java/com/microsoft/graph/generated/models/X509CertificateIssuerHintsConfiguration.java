@@ -75,7 +75,7 @@ public class X509CertificateIssuerHintsConfiguration implements AdditionalDataHo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The possible values are: disabled, enabled, unknownFutureValue.
      * @return a {@link X509CertificateIssuerHintsState}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class X509CertificateIssuerHintsConfiguration implements AdditionalDataHo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The possible values are: disabled, enabled, unknownFutureValue.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final X509CertificateIssuerHintsState value) {

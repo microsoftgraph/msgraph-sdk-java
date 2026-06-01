@@ -32,7 +32,16 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("identifierUris", (n) -> { this.setIdentifierUris(n.getObjectValue(IdentifierUriConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application.
+     * @return a {@link IdentifierUriConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public IdentifierUriConfiguration getIdentifierUris() {
+        return this.backingStore.get("identifierUris");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("identifierUris", this.getIdentifierUris());
+    }
+    /**
+     * Sets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application.
+     * @param value Value to set for the identifierUris property.
+     */
+    public void setIdentifierUris(@jakarta.annotation.Nullable final IdentifierUriConfiguration value) {
+        this.backingStore.set("identifierUris", value);
     }
 }

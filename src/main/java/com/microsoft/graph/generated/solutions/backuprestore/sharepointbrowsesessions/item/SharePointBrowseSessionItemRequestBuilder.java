@@ -55,19 +55,21 @@ public class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get sharePointBrowseSessions from solutions
+     * Read the properties and relationships of sharePointBrowseSession object.
      * @return a {@link SharePointBrowseSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointbrowsesession-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointBrowseSession get() {
         return get(null);
     }
     /**
-     * Get sharePointBrowseSessions from solutions
+     * Read the properties and relationships of sharePointBrowseSession object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointBrowseSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointbrowsesession-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointBrowseSession get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get sharePointBrowseSessions from solutions
+     * Read the properties and relationships of sharePointBrowseSession object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get sharePointBrowseSessions from solutions
+     * Read the properties and relationships of sharePointBrowseSession object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get sharePointBrowseSessions from solutions
+     * Read the properties and relationships of sharePointBrowseSession object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

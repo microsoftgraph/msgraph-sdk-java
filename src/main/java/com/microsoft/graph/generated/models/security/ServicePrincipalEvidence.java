@@ -26,7 +26,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
         return new ServicePrincipalEvidence();
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. The unique identifier for the associated application, represented by its appId property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the appOwnerTenantId property value. The appOwnerTenantId property
+     * Gets the appOwnerTenantId property value. The tenant ID where the application is registered.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the servicePrincipalName property value. The servicePrincipalName property
+     * Gets the servicePrincipalName property value. The display name for the service principal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
         return this.backingStore.get("servicePrincipalName");
     }
     /**
-     * Gets the servicePrincipalObjectId property value. The servicePrincipalObjectId property
+     * Gets the servicePrincipalObjectId property value. The unique identifier for the service principal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
         return this.backingStore.get("servicePrincipalObjectId");
     }
     /**
-     * Gets the servicePrincipalType property value. The servicePrincipalType property
+     * Gets the servicePrincipalType property value. The service principal type. Possible values are: unknown, application, managedIdentity, legacy, unknownFutureValue.
      * @return a {@link ServicePrincipalType}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
         return this.backingStore.get("servicePrincipalType");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The Microsoft Entra tenant ID of the service principal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,42 +103,42 @@ public class ServicePrincipalEvidence extends AlertEvidence implements Parsable 
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. The unique identifier for the associated application, represented by its appId property.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the appOwnerTenantId property value. The appOwnerTenantId property
+     * Sets the appOwnerTenantId property value. The tenant ID where the application is registered.
      * @param value Value to set for the appOwnerTenantId property.
      */
     public void setAppOwnerTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appOwnerTenantId", value);
     }
     /**
-     * Sets the servicePrincipalName property value. The servicePrincipalName property
+     * Sets the servicePrincipalName property value. The display name for the service principal.
      * @param value Value to set for the servicePrincipalName property.
      */
     public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("servicePrincipalName", value);
     }
     /**
-     * Sets the servicePrincipalObjectId property value. The servicePrincipalObjectId property
+     * Sets the servicePrincipalObjectId property value. The unique identifier for the service principal.
      * @param value Value to set for the servicePrincipalObjectId property.
      */
     public void setServicePrincipalObjectId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("servicePrincipalObjectId", value);
     }
     /**
-     * Sets the servicePrincipalType property value. The servicePrincipalType property
+     * Sets the servicePrincipalType property value. The service principal type. Possible values are: unknown, application, managedIdentity, legacy, unknownFutureValue.
      * @param value Value to set for the servicePrincipalType property.
      */
     public void setServicePrincipalType(@jakarta.annotation.Nullable final ServicePrincipalType value) {
         this.backingStore.set("servicePrincipalType", value);
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The Microsoft Entra tenant ID of the service principal.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

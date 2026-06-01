@@ -26,7 +26,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
         return new GitHubOrganizationEvidence();
     }
     /**
-     * Gets the company property value. The company property
+     * Gets the company property value. The name of the company that owns the organization.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
         return this.backingStore.get("company");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the organization.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. The email address of the organization.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the login property value. The login property
+     * Gets the login property value. The login (name) of the organization.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
         return this.backingStore.get("login");
     }
     /**
-     * Gets the orgId property value. The orgId property
+     * Gets the orgId property value. The unique and immutable ID of the organization.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
         return this.backingStore.get("orgId");
     }
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The URL of the web page for the organization.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,42 +103,42 @@ public class GitHubOrganizationEvidence extends AlertEvidence implements Parsabl
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the company property value. The company property
+     * Sets the company property value. The name of the company that owns the organization.
      * @param value Value to set for the company property.
      */
     public void setCompany(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("company", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the organization.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. The email address of the organization.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the login property value. The login property
+     * Sets the login property value. The login (name) of the organization.
      * @param value Value to set for the login property.
      */
     public void setLogin(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("login", value);
     }
     /**
-     * Sets the orgId property value. The orgId property
+     * Sets the orgId property value. The unique and immutable ID of the organization.
      * @param value Value to set for the orgId property.
      */
     public void setOrgId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("orgId", value);
     }
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The URL of the web page for the organization.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

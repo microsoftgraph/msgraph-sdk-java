@@ -16,12 +16,7 @@
       "extra-files": [
         "gradle.properties",
         "README.md",
-        "src/main/java/com/microsoft/graph/info/Constants.java",
-        {
-          "type": "xml",
-          "path": "pom.xml",
-          "xpath": "//project/version"
-        }
+        "src/main/java/com/microsoft/graph/info/Constants.java"
       ]
     }
   },

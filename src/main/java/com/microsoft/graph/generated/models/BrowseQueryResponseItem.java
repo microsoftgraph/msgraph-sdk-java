@@ -72,7 +72,7 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the itemKey property value. The itemKey property
+     * Gets the itemKey property value. Unique identifier of the returned item.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("itemKey");
     }
     /**
-     * Gets the itemsCount property value. The itemsCount property
+     * Gets the itemsCount property value. The count of items present within the items; for example, the count of files in a folder.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("itemsCount");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the item.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sizeInBytes property value. The sizeInBytes property
+     * Gets the sizeInBytes property value. The size of the item in bytes.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("type");
     }
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The web URL of the item.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,21 +158,21 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the itemKey property value. The itemKey property
+     * Sets the itemKey property value. Unique identifier of the returned item.
      * @param value Value to set for the itemKey property.
      */
     public void setItemKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("itemKey", value);
     }
     /**
-     * Sets the itemsCount property value. The itemsCount property
+     * Sets the itemsCount property value. The count of items present within the items; for example, the count of files in a folder.
      * @param value Value to set for the itemsCount property.
      */
     public void setItemsCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("itemsCount", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the item.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -186,7 +186,7 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sizeInBytes property value. The sizeInBytes property
+     * Sets the sizeInBytes property value. The size of the item in bytes.
      * @param value Value to set for the sizeInBytes property.
      */
     public void setSizeInBytes(@jakarta.annotation.Nullable final String value) {
@@ -200,7 +200,7 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         this.backingStore.set("type", value);
     }
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The web URL of the item.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

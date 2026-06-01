@@ -55,7 +55,7 @@ public class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get granularSiteRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @return a {@link GranularSiteRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get granularSiteRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GranularSiteRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get granularSiteRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get granularSiteRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get granularSiteRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

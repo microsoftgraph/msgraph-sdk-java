@@ -101,7 +101,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the importance property value. The importance level for the IoT device. Possible values are low, normal, high, and unknownFutureValue.
+     * Gets the importance property value. The importance level for the IoT device. The possible values are: unknown, low, normal, high, unknownFutureValue.
      * @return a {@link IoTDeviceImportanceType}
      */
     @jakarta.annotation.Nullable
@@ -338,7 +338,7 @@ public class IoTDeviceEvidence extends AlertEvidence implements Parsable {
         this.backingStore.set("deviceType", value);
     }
     /**
-     * Sets the importance property value. The importance level for the IoT device. Possible values are low, normal, high, and unknownFutureValue.
+     * Sets the importance property value. The importance level for the IoT device. The possible values are: unknown, low, normal, high, unknownFutureValue.
      * @param value Value to set for the importance property.
      */
     public void setImportance(@jakarta.annotation.Nullable final IoTDeviceImportanceType value) {

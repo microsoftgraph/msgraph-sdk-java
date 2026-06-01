@@ -4,6 +4,7 @@ updates:
   directories:
     - "/"
     - "/java-8"
+    - "/android"
   schedule:
     interval: daily
     time: "09:00" # 9am UTC
@@ -12,45 +13,27 @@ updates:
     kiota-dependencies:
       patterns:
         - "*kiota*"
+    microsoft-graph:
+      patterns:
+        - "*microsoft-graph*"
     junit-dependencies:
       patterns:
         - "*junit*"
     open-telemetry:
       patterns:
         - "*opentelemetry*"
-- package-ecosystem: gradle
-  directory: "/android"
-  schedule:
-    interval: daily
-    time: "10:00" # 10am UTC. After core projects are updated to prevent duplicate PRs
-  open-pull-requests-limit: 10
-  groups:
-    kiota-dependencies:
+    android-build-tools:
       patterns:
-        - "*kiota*"
-    junit-dependencies:
-      patterns:
-        - "*junit*"
-    open-telemetry:
-      patterns:
-        - "*opentelemetry*"
-- package-ecosystem: maven
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-  groups:
-    kiota-dependencies:
-      patterns:
-        - "*kiota*"
-    junit-dependencies:
-      patterns:
-        - "*junit*"
-    open-telemetry:
-      patterns:
-        - "*opentelemetry*"
+        - "*android*"
+        - "*gradle-enterprise*"
+        - "*gradle-util*"
+        - "*gradle-versions*"
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  groups:
+    all-actions:
+      patterns:
+        - "*"

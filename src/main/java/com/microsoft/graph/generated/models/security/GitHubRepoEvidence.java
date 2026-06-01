@@ -26,7 +26,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
         return new GitHubRepoEvidence();
     }
     /**
-     * Gets the baseUrl property value. The baseUrl property
+     * Gets the baseUrl property value. The base URL of the web page for the repository.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the login property value. The login property
+     * Gets the login property value. The login (name) of the repository.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("login");
     }
     /**
-     * Gets the owner property value. The owner property
+     * Gets the owner property value. The login of the owner of the repository.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("owner");
     }
     /**
-     * Gets the ownerType property value. The ownerType property
+     * Gets the ownerType property value. The type of owner of the repository, for example, User or Organization.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
         return this.backingStore.get("ownerType");
     }
     /**
-     * Gets the repoId property value. The repoId property
+     * Gets the repoId property value. The unique and immutable ID of the GitHub repository.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,35 +93,35 @@ public class GitHubRepoEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("repoId", this.getRepoId());
     }
     /**
-     * Sets the baseUrl property value. The baseUrl property
+     * Sets the baseUrl property value. The base URL of the web page for the repository.
      * @param value Value to set for the baseUrl property.
      */
     public void setBaseUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("baseUrl", value);
     }
     /**
-     * Sets the login property value. The login property
+     * Sets the login property value. The login (name) of the repository.
      * @param value Value to set for the login property.
      */
     public void setLogin(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("login", value);
     }
     /**
-     * Sets the owner property value. The owner property
+     * Sets the owner property value. The login of the owner of the repository.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("owner", value);
     }
     /**
-     * Sets the ownerType property value. The ownerType property
+     * Sets the ownerType property value. The type of owner of the repository, for example, User or Organization.
      * @param value Value to set for the ownerType property.
      */
     public void setOwnerType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ownerType", value);
     }
     /**
-     * Sets the repoId property value. The repoId property
+     * Sets the repoId property value. The unique and immutable ID of the GitHub repository.
      * @param value Value to set for the repoId property.
      */
     public void setRepoId(@jakarta.annotation.Nullable final String value) {
