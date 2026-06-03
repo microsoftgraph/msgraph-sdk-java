@@ -10,7 +10,7 @@ import com.microsoft.graph.sites.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.sites.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
 import com.microsoft.graph.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
-import com.microsoft.graph.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetime_3adc0b7b.GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb;
 import com.microsoft.graph.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
 import com.microsoft.graph.sites.item.getbypathwithpath.GetByPathWithPathRequestBuilder;
 import com.microsoft.graph.sites.item.items.ItemsRequestBuilder;
@@ -191,7 +191,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SiteItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link SiteItemRequestBuilder} and sets the default values.
@@ -199,7 +199,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SiteItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
@@ -230,14 +230,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime=&apos;{endDateTime}&apos;
      * @param interval Usage: interval=&apos;{interval}&apos;
      * @param startDateTime Usage: startDateTime=&apos;{startDateTime}&apos;
-     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
+     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb}
      */
     @jakarta.annotation.Nonnull
-    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
+    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(interval);
         Objects.requireNonNull(startDateTime);
-        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
     }
     /**
      * Provides operations to call the getApplicableContentTypesForList method.

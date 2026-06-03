@@ -35,7 +35,7 @@ public class WorkspaceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WorkspaceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.roomList/workspaces/{workspace%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.roomList/workspaces/{workspace%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link WorkspaceItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class WorkspaceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WorkspaceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.roomList/workspaces/{workspace%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.roomList/workspaces/{workspace%2Did}", rawUrl);
     }
     /**
      * Delete navigation property workspaces for places

@@ -35,7 +35,7 @@ public class ProtectionScopesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProtectionScopesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/protectionScopes{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/protectionScopes", pathParameters);
     }
     /**
      * Instantiates a new {@link ProtectionScopesRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class ProtectionScopesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProtectionScopesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/protectionScopes{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/protectionScopes", rawUrl);
     }
     /**
      * Delete navigation property protectionScopes for security

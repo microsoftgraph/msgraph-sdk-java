@@ -56,7 +56,7 @@ public class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHold
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. A human-readable name for the user account, intended for display.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHold
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. A user identifier, determined by the relying party. This value is opaque to the authenticator and is Base64URL-encoded without padding.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHold
         return this.backingStore.get("id");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. A human-readable identifier for the user account, such as a username or email address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. A human-readable name for the user account, intended for display.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. A user identifier, determined by the relying party. This value is opaque to the authenticator and is Base64URL-encoded without padding.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. A human-readable identifier for the user account, such as a username or email address.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

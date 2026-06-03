@@ -26,7 +26,7 @@ public class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SpeakerAssignmentSubmissionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/reports/speakerAssignmentSubmissions/{speakerAssignmentSubmission%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/reports/speakerAssignmentSubmissions/{speakerAssignmentSubmission%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link SpeakerAssignmentSubmissionItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SpeakerAssignmentSubmissionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/reports/speakerAssignmentSubmissions/{speakerAssignmentSubmission%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/reports/speakerAssignmentSubmissions/{speakerAssignmentSubmission%2Did}", rawUrl);
     }
     /**
      * Delete navigation property speakerAssignmentSubmissions for education

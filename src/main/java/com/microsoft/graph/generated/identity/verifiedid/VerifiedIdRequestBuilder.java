@@ -35,7 +35,7 @@ public class VerifiedIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public VerifiedIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/verifiedId{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identity/verifiedId", pathParameters);
     }
     /**
      * Instantiates a new {@link VerifiedIdRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class VerifiedIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public VerifiedIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/verifiedId{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identity/verifiedId", rawUrl);
     }
     /**
      * Delete navigation property verifiedId for identity

@@ -44,7 +44,7 @@ public class MapRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MapRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map", pathParameters);
     }
     /**
      * Instantiates a new {@link MapRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class MapRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MapRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map", rawUrl);
     }
     /**
      * Delete the map of a specific building.

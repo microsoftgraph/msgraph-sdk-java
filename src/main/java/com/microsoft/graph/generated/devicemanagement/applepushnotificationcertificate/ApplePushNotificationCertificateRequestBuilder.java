@@ -1,6 +1,6 @@
 package com.microsoft.graph.devicemanagement.applepushnotificationcertificate;
 
-import com.microsoft.graph.devicemanagement.applepushnotificationcertificate.downloadapplepushnotificationcertificatesigningrequest.DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
+import com.microsoft.graph.devicemanagement.applepushnotificationcertificate.downloadapplepushnotificationcertificatesigningrequest.DownloadApplePushNotificationCertificateSigningRequestR_030b19cc;
 import com.microsoft.graph.models.ApplePushNotificationCertificate;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +23,11 @@ import java.util.Objects;
 public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method.
-     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestRequestBuilder}
+     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestR_030b19cc}
      */
     @jakarta.annotation.Nonnull
-    public DownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest() {
-        return new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder(pathParameters, requestAdapter);
+    public DownloadApplePushNotificationCertificateSigningRequestR_030b19cc downloadApplePushNotificationCertificateSigningRequest() {
+        return new DownloadApplePushNotificationCertificateSigningRequestR_030b19cc(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ApplePushNotificationCertificateRequestBuilder} and sets the default values.
@@ -35,7 +35,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ApplePushNotificationCertificateRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate", pathParameters);
     }
     /**
      * Instantiates a new {@link ApplePushNotificationCertificateRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ApplePushNotificationCertificateRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate", rawUrl);
     }
     /**
      * Delete navigation property applePushNotificationCertificate for deviceManagement

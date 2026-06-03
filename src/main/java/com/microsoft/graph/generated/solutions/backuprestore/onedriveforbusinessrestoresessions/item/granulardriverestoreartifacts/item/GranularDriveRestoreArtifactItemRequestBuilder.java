@@ -26,7 +26,7 @@ public class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GranularDriveRestoreArtifactItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBusinessRestoreSession%2Did}/granularDriveRestoreArtifacts/{granularDriveRestoreArtifact%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBusinessRestoreSession%2Did}/granularDriveRestoreArtifacts/{granularDriveRestoreArtifact%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link GranularDriveRestoreArtifactItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GranularDriveRestoreArtifactItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBusinessRestoreSession%2Did}/granularDriveRestoreArtifacts/{granularDriveRestoreArtifact%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBusinessRestoreSession%2Did}/granularDriveRestoreArtifacts/{granularDriveRestoreArtifact%2Did}", rawUrl);
     }
     /**
      * Delete navigation property granularDriveRestoreArtifacts for solutions

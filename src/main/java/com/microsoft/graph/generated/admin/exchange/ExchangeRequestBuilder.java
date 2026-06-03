@@ -44,7 +44,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExchangeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/exchange{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/exchange", pathParameters);
     }
     /**
      * Instantiates a new {@link ExchangeRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExchangeRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/exchange{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/exchange", rawUrl);
     }
     /**
      * Delete navigation property exchange for admin

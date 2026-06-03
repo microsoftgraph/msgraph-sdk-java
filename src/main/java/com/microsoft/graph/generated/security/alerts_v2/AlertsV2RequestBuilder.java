@@ -5,6 +5,7 @@ import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.AlertCollectionResponse;
 import com.microsoft.graph.security.alerts_v2.count.CountRequestBuilder;
 import com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder;
+import com.microsoft.graph.security.alerts_v2.microsoftgraphsecuritymovealerts.MicrosoftGraphSecurityMoveAlertsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,14 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the moveAlerts method.
+     * @return a {@link MicrosoftGraphSecurityMoveAlertsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityMoveAlertsRequestBuilder microsoftGraphSecurityMoveAlerts() {
+        return new MicrosoftGraphSecurityMoveAlertsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
      * @param alertId The unique identifier of alert
      * @return a {@link AlertItemRequestBuilder}
@@ -49,7 +58,7 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertsV2RequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/alerts_v2{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link AlertsV2RequestBuilder} and sets the default values.
@@ -57,7 +66,7 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertsV2RequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/alerts_v2{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get a list of alert resources created to track suspicious activities in an organization. This operation lets you filter and sort through alerts to create an informed cyber security response. It exposes a collection of alerts that were flagged in your network, within the time range you specified in your environment retention policy. The most recent alerts are displayed at the top of the list.

@@ -26,7 +26,7 @@ public class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudClipboardItemItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudClipboard/items/{cloudClipboardItem%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudClipboard/items/{cloudClipboardItem%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link CloudClipboardItemItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudClipboardItemItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudClipboard/items/{cloudClipboardItem%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudClipboard/items/{cloudClipboardItem%2Did}", rawUrl);
     }
     /**
      * Delete navigation property items for users

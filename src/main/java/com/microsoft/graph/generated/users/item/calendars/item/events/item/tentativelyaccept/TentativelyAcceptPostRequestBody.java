@@ -24,6 +24,7 @@ public class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, B
     public TentativelyAcceptPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setSendResponse(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

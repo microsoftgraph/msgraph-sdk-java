@@ -71,7 +71,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContractItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/contracts/{contract%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/contracts/{contract%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ContractItemRequestBuilder} and sets the default values.
@@ -79,7 +79,7 @@ public class ContractItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContractItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/contracts/{contract%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/contracts/{contract%2Did}", rawUrl);
     }
     /**
      * Delete entity from contracts

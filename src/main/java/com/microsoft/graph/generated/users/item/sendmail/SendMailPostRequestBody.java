@@ -24,6 +24,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, BackedMode
     public SendMailPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setSaveToSentItems(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -23,6 +23,7 @@ public class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder,
     public WindowsDefenderScanPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setQuickScan(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -27,7 +27,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FederatedIdentityCredentialsWithNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String name) {
-        super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/federatedIdentityCredentials(name='{name}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/federatedIdentityCredentials(name='{name}')", pathParameters);
         this.pathParameters.put("name", name);
     }
     /**
@@ -36,7 +36,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FederatedIdentityCredentialsWithNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/federatedIdentityCredentials(name='{name}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/federatedIdentityCredentials(name='{name}')", rawUrl);
     }
     /**
      * Delete navigation property federatedIdentityCredentials for servicePrincipals

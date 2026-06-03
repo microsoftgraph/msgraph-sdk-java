@@ -98,7 +98,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DomainItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/domains/{domain%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/domains/{domain%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DomainItemRequestBuilder} and sets the default values.
@@ -106,7 +106,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DomainItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/domains/{domain%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/domains/{domain%2Did}", rawUrl);
     }
     /**
      * Delete a domain from a tenant.

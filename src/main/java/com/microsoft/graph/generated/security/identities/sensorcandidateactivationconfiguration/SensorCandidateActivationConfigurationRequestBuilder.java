@@ -26,7 +26,7 @@ public class SensorCandidateActivationConfigurationRequestBuilder extends BaseRe
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SensorCandidateActivationConfigurationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/identities/sensorCandidateActivationConfiguration{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/identities/sensorCandidateActivationConfiguration", pathParameters);
     }
     /**
      * Instantiates a new {@link SensorCandidateActivationConfigurationRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class SensorCandidateActivationConfigurationRequestBuilder extends BaseRe
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SensorCandidateActivationConfigurationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/identities/sensorCandidateActivationConfiguration{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/identities/sensorCandidateActivationConfiguration", rawUrl);
     }
     /**
      * Delete navigation property sensorCandidateActivationConfiguration for security

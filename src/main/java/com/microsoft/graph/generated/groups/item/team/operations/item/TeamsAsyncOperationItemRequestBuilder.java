@@ -26,7 +26,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamsAsyncOperationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/operations/{teamsAsyncOperation%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/operations/{teamsAsyncOperation%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link TeamsAsyncOperationItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamsAsyncOperationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/operations/{teamsAsyncOperation%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/operations/{teamsAsyncOperation%2Did}", rawUrl);
     }
     /**
      * Delete navigation property operations for groups

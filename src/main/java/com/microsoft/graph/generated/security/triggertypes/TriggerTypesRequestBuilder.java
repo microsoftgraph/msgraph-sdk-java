@@ -35,7 +35,7 @@ public class TriggerTypesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TriggerTypesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/triggerTypes{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/triggerTypes", pathParameters);
     }
     /**
      * Instantiates a new {@link TriggerTypesRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class TriggerTypesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TriggerTypesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/triggerTypes{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/triggerTypes", rawUrl);
     }
     /**
      * Delete navigation property triggerTypes for security

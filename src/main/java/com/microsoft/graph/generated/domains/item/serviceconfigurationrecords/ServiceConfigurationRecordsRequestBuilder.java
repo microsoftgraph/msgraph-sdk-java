@@ -49,7 +49,7 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ServiceConfigurationRecordsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/serviceConfigurationRecords{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link ServiceConfigurationRecordsRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ServiceConfigurationRecordsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/serviceConfigurationRecords{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Retrieves a list of domainDnsRecord objects needed to enable services for the domain. Use the returned list to add records to the zone file of the domain. This can be done through the domain registrar or DNS server configuration.

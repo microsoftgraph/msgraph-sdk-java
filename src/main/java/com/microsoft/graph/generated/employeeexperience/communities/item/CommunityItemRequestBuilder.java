@@ -45,7 +45,7 @@ public class CommunityItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CommunityItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience/communities/{community%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/employeeExperience/communities/{community%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link CommunityItemRequestBuilder} and sets the default values.
@@ -53,7 +53,7 @@ public class CommunityItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CommunityItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience/communities/{community%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/employeeExperience/communities/{community%2Did}", rawUrl);
     }
     /**
      * Delete a Viva Engage community along with all associated Microsoft 365 content, including the connected Microsoft 365 group, OneNote notebook, and Planner plans. For more information, see What happens if I delete a Viva Engage community connected to Microsoft 365 groups.

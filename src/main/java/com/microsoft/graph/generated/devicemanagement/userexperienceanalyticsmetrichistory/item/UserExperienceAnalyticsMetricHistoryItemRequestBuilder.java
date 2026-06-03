@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends Base
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsMetricHistoryItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsMetricHistory/{userExperienceAnalyticsMetricHistory%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsMetricHistory/{userExperienceAnalyticsMetricHistory%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsMetricHistoryItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends Base
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsMetricHistoryItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsMetricHistory/{userExperienceAnalyticsMetricHistory%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsMetricHistory/{userExperienceAnalyticsMetricHistory%2Did}", rawUrl);
     }
     /**
      * Delete navigation property userExperienceAnalyticsMetricHistory for deviceManagement

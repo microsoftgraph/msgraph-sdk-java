@@ -26,7 +26,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupSettingItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groupSettings/{groupSetting%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groupSettings/{groupSetting%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link GroupSettingItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupSettingItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groupSettings/{groupSetting%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groupSettings/{groupSetting%2Did}", rawUrl);
     }
     /**
      * Delete a tenant-level or group-specific groupSetting object.

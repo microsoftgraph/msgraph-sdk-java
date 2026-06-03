@@ -62,7 +62,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public BillingRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/partners/billing{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/partners/billing", pathParameters);
     }
     /**
      * Instantiates a new {@link BillingRequestBuilder} and sets the default values.
@@ -70,7 +70,7 @@ public class BillingRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public BillingRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/partners/billing{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/partners/billing", rawUrl);
     }
     /**
      * Delete navigation property billing for reports

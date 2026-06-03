@@ -26,7 +26,7 @@ public class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends Base
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public VirtualEventRegistrationQuestionBaseItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions/{virtualEventRegistrationQuestionBase%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions/{virtualEventRegistrationQuestionBase%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link VirtualEventRegistrationQuestionBaseItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends Base
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public VirtualEventRegistrationQuestionBaseItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions/{virtualEventRegistrationQuestionBase%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions/{virtualEventRegistrationQuestionBase%2Did}", rawUrl);
     }
     /**
      * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 

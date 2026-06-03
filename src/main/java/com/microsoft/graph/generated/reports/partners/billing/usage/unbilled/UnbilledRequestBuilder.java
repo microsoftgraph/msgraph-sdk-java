@@ -35,7 +35,7 @@ public class UnbilledRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UnbilledRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/partners/billing/usage/unbilled{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/partners/billing/usage/unbilled", pathParameters);
     }
     /**
      * Instantiates a new {@link UnbilledRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class UnbilledRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UnbilledRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/partners/billing/usage/unbilled{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/partners/billing/usage/unbilled", rawUrl);
     }
     /**
      * Delete navigation property unbilled for reports

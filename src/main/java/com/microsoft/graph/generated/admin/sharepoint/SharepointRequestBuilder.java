@@ -35,7 +35,7 @@ public class SharepointRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SharepointRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/sharepoint{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/sharepoint", pathParameters);
     }
     /**
      * Instantiates a new {@link SharepointRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class SharepointRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SharepointRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/sharepoint{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/sharepoint", rawUrl);
     }
     /**
      * Delete navigation property sharepoint for admin

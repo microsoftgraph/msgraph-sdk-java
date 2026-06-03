@@ -23,6 +23,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public AddPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setHasHeaders(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

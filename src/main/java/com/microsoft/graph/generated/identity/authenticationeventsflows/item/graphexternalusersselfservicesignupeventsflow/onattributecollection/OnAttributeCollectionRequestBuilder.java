@@ -1,6 +1,6 @@
 package com.microsoft.graph.identity.authenticationeventsflows.item.graphexternalusersselfservicesignupeventsflow.onattributecollection;
 
-import com.microsoft.graph.identity.authenticationeventsflows.item.graphexternalusersselfservicesignupeventsflow.onattributecollection.graphonattributecollectionexternalusersselfservicesignup.GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder;
+import com.microsoft.graph.identity.authenticationeventsflows.item.graphexternalusersselfservicesignupeventsflow.onattributecollection.graphonattributecollectionexternalusersselfservicesignup.GraphOnAttributeCollectionExternalUsersSelfServiceSignU_8d1599ba;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnAttributeCollectionHandler;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +23,11 @@ import java.util.Objects;
 public class OnAttributeCollectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to onAttributeCollectionExternalUsersSelfServiceSignUp.
-     * @return a {@link GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder}
+     * @return a {@link GraphOnAttributeCollectionExternalUsersSelfServiceSignU_8d1599ba}
      */
     @jakarta.annotation.Nonnull
-    public GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder graphOnAttributeCollectionExternalUsersSelfServiceSignUp() {
-        return new GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder(pathParameters, requestAdapter);
+    public GraphOnAttributeCollectionExternalUsersSelfServiceSignU_8d1599ba graphOnAttributeCollectionExternalUsersSelfServiceSignUp() {
+        return new GraphOnAttributeCollectionExternalUsersSelfServiceSignU_8d1599ba(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link OnAttributeCollectionRequestBuilder} and sets the default values.

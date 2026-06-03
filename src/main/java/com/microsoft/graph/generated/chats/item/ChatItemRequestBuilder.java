@@ -14,6 +14,7 @@ import com.microsoft.graph.chats.item.removeallaccessforuser.RemoveAllAccessForU
 import com.microsoft.graph.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.graph.chats.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.chats.item.tabs.TabsRequestBuilder;
+import com.microsoft.graph.chats.item.targetedmessages.TargetedMessagesRequestBuilder;
 import com.microsoft.graph.chats.item.unhideforuser.UnhideForUserRequestBuilder;
 import com.microsoft.graph.models.Chat;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -148,6 +149,14 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the targetedMessages property of the microsoft.graph.chat entity.
+     * @return a {@link TargetedMessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TargetedMessagesRequestBuilder targetedMessages() {
+        return new TargetedMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the unhideForUser method.
      * @return a {@link UnhideForUserRequestBuilder}
      */
@@ -161,7 +170,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ChatItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/chats/{chat%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/chats/{chat%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ChatItemRequestBuilder} and sets the default values.
@@ -169,7 +178,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ChatItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/chats/{chat%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/chats/{chat%2Did}", rawUrl);
     }
     /**
      * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.

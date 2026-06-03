@@ -1,7 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.assignments;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.additionalaccess.AdditionalAccessRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.additionalaccesswithaccesspackageidwithincompatibleaccesspackageid.AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.additionalaccesswithaccesspackageidwithincompatibleacce_4602e7cf.AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_2751ca00;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.item.AccessPackageAssignmentItemRequestBuilder;
@@ -46,13 +46,13 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the additionalAccess method.
      * @param accessPackageId Usage: accessPackageId=&apos;{accessPackageId}&apos;
      * @param incompatibleAccessPackageId Usage: incompatibleAccessPackageId=&apos;{incompatibleAccessPackageId}&apos;
-     * @return a {@link AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder}
+     * @return a {@link AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_2751ca00}
      */
     @jakarta.annotation.Nonnull
-    public AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(@jakarta.annotation.Nonnull final String accessPackageId, @jakarta.annotation.Nonnull final String incompatibleAccessPackageId) {
+    public AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_2751ca00 additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(@jakarta.annotation.Nonnull final String accessPackageId, @jakarta.annotation.Nonnull final String incompatibleAccessPackageId) {
         Objects.requireNonNull(accessPackageId);
         Objects.requireNonNull(incompatibleAccessPackageId);
-        return new AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder(pathParameters, requestAdapter, accessPackageId, incompatibleAccessPackageId);
+        return new AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_2751ca00(pathParameters, requestAdapter, accessPackageId, incompatibleAccessPackageId);
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
@@ -72,7 +72,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AssignmentsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link AssignmentsRequestBuilder} and sets the default values.
@@ -80,7 +80,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AssignmentsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Provides operations to call the filterByCurrentUser method.

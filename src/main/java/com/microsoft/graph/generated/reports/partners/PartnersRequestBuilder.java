@@ -35,7 +35,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PartnersRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/partners{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/partners", pathParameters);
     }
     /**
      * Instantiates a new {@link PartnersRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PartnersRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/partners{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/partners", rawUrl);
     }
     /**
      * Delete navigation property partners for reports

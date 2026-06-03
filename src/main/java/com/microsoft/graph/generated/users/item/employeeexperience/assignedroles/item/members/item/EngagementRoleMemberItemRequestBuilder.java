@@ -35,7 +35,7 @@ public class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EngagementRoleMemberItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience/assignedRoles/{engagementRole%2Did}/members/{engagementRoleMember%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience/assignedRoles/{engagementRole%2Did}/members/{engagementRoleMember%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link EngagementRoleMemberItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EngagementRoleMemberItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience/assignedRoles/{engagementRole%2Did}/members/{engagementRoleMember%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience/assignedRoles/{engagementRole%2Did}/members/{engagementRoleMember%2Did}", rawUrl);
     }
     /**
      * Delete navigation property members for users

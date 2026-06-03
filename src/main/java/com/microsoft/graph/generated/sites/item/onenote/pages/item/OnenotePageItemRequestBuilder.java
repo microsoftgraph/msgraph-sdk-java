@@ -80,7 +80,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnenotePageItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/onenote/pages/{onenotePage%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/onenote/pages/{onenotePage%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link OnenotePageItemRequestBuilder} and sets the default values.
@@ -88,7 +88,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnenotePageItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/onenote/pages/{onenotePage%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/onenote/pages/{onenotePage%2Did}", rawUrl);
     }
     /**
      * Delete navigation property pages for sites

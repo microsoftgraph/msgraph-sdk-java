@@ -26,7 +26,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public IdentityProviderBaseItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/federationConfigurations/{identityProviderBase%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/federationConfigurations/{identityProviderBase%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link IdentityProviderBaseItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public IdentityProviderBaseItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/federationConfigurations/{identityProviderBase%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/federationConfigurations/{identityProviderBase%2Did}", rawUrl);
     }
     /**
      * Delete a samlOrWsFedExternalDomainFederation object.

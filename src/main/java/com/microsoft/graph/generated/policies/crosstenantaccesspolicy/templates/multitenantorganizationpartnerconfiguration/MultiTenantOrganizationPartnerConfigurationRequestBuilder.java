@@ -26,7 +26,7 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MultiTenantOrganizationPartnerConfigurationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/templates/multiTenantOrganizationPartnerConfiguration{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/templates/multiTenantOrganizationPartnerConfiguration", pathParameters);
     }
     /**
      * Instantiates a new {@link MultiTenantOrganizationPartnerConfigurationRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MultiTenantOrganizationPartnerConfigurationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/templates/multiTenantOrganizationPartnerConfiguration{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/templates/multiTenantOrganizationPartnerConfiguration", rawUrl);
     }
     /**
      * Delete navigation property multiTenantOrganizationPartnerConfiguration for policies

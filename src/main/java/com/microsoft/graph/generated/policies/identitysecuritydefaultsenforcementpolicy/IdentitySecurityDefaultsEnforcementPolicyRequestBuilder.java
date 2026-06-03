@@ -26,7 +26,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy", pathParameters);
     }
     /**
      * Instantiates a new {@link IdentitySecurityDefaultsEnforcementPolicyRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy", rawUrl);
     }
     /**
      * Delete navigation property identitySecurityDefaultsEnforcementPolicy for policies

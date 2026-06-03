@@ -26,7 +26,7 @@ public class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public BookingCurrencyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/bookingCurrencies/{bookingCurrency%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/bookingCurrencies/{bookingCurrency%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link BookingCurrencyItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public BookingCurrencyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/bookingCurrencies/{bookingCurrency%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/bookingCurrencies/{bookingCurrency%2Did}", rawUrl);
     }
     /**
      * Delete navigation property bookingCurrencies for solutions

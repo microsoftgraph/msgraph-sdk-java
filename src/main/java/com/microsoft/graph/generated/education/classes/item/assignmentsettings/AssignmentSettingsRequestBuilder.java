@@ -53,7 +53,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AssignmentSettingsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings", pathParameters);
     }
     /**
      * Instantiates a new {@link AssignmentSettingsRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AssignmentSettingsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings", rawUrl);
     }
     /**
      * Delete navigation property assignmentSettings for education

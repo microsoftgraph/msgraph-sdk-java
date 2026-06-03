@@ -26,7 +26,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdminConsentRequestPolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/adminConsentRequestPolicy{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/adminConsentRequestPolicy", pathParameters);
     }
     /**
      * Instantiates a new {@link AdminConsentRequestPolicyRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdminConsentRequestPolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/adminConsentRequestPolicy{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/adminConsentRequestPolicy", rawUrl);
     }
     /**
      * Delete navigation property adminConsentRequestPolicy for policies

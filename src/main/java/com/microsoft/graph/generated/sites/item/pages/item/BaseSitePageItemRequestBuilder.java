@@ -53,7 +53,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public BaseSitePageItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link BaseSitePageItemRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public BaseSitePageItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}", rawUrl);
     }
     /**
      * Delete a baseSitePage from the site pages list in a site.

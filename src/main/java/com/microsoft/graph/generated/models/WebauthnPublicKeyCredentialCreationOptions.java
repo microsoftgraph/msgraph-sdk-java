@@ -48,7 +48,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return value;
     }
     /**
-     * Gets the attestation property value. The attestation property
+     * Gets the attestation property value. Specifies the relying party&apos;s preference for attestation conveyance.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return this.backingStore.get("attestation");
     }
     /**
-     * Gets the authenticatorSelection property value. The authenticatorSelection property
+     * Gets the authenticatorSelection property value. Criteria for selecting an appropriate authenticator for credential creation.
      * @return a {@link WebauthnAuthenticatorSelectionCriteria}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return this.backingStore;
     }
     /**
-     * Gets the challenge property value. The challenge property
+     * Gets the challenge property value. The challenge that the authenticator must sign to prove possession of the credential. This value is Base64URL-encoded without padding.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return this.backingStore.get("challenge");
     }
     /**
-     * Gets the excludeCredentials property value. The excludeCredentials property
+     * Gets the excludeCredentials property value. A list of credentials that are already registered for this user, which should be excluded from selection.
      * @return a {@link java.util.List<WebauthnPublicKeyCredentialDescriptor>}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return this.backingStore.get("excludeCredentials");
     }
     /**
-     * Gets the extensions property value. The extensions property
+     * Gets the extensions property value. Inputs for requested WebAuthn extensions.
      * @return a {@link WebauthnAuthenticationExtensionsClientInputs}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the pubKeyCredParams property value. The pubKeyCredParams property
+     * Gets the pubKeyCredParams property value. The cryptographic parameters that the relying party supports, in order of preference.
      * @return a {@link java.util.List<WebauthnPublicKeyCredentialParameters>}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return this.backingStore.get("pubKeyCredParams");
     }
     /**
-     * Gets the rp property value. The rp property
+     * Gets the rp property value. Information about the relying party (RP) requesting credential creation.
      * @return a {@link WebauthnPublicKeyCredentialRpEntity}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return this.backingStore.get("rp");
     }
     /**
-     * Gets the timeout property value. The timeout property
+     * Gets the timeout property value. The time, in milliseconds, that the caller is willing to wait for the operation to complete.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         return this.backingStore.get("timeout");
     }
     /**
-     * Gets the user property value. The user property
+     * Gets the user property value. Information about the user account for which the credential is being created.
      * @return a {@link WebauthnPublicKeyCredentialUserEntity}
      */
     @jakarta.annotation.Nullable
@@ -180,14 +180,14 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the attestation property value. The attestation property
+     * Sets the attestation property value. Specifies the relying party&apos;s preference for attestation conveyance.
      * @param value Value to set for the attestation property.
      */
     public void setAttestation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("attestation", value);
     }
     /**
-     * Sets the authenticatorSelection property value. The authenticatorSelection property
+     * Sets the authenticatorSelection property value. Criteria for selecting an appropriate authenticator for credential creation.
      * @param value Value to set for the authenticatorSelection property.
      */
     public void setAuthenticatorSelection(@jakarta.annotation.Nullable final WebauthnAuthenticatorSelectionCriteria value) {
@@ -202,21 +202,21 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         this.backingStore = value;
     }
     /**
-     * Sets the challenge property value. The challenge property
+     * Sets the challenge property value. The challenge that the authenticator must sign to prove possession of the credential. This value is Base64URL-encoded without padding.
      * @param value Value to set for the challenge property.
      */
     public void setChallenge(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("challenge", value);
     }
     /**
-     * Sets the excludeCredentials property value. The excludeCredentials property
+     * Sets the excludeCredentials property value. A list of credentials that are already registered for this user, which should be excluded from selection.
      * @param value Value to set for the excludeCredentials property.
      */
     public void setExcludeCredentials(@jakarta.annotation.Nullable final java.util.List<WebauthnPublicKeyCredentialDescriptor> value) {
         this.backingStore.set("excludeCredentials", value);
     }
     /**
-     * Sets the extensions property value. The extensions property
+     * Sets the extensions property value. Inputs for requested WebAuthn extensions.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final WebauthnAuthenticationExtensionsClientInputs value) {
@@ -230,28 +230,28 @@ public class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDat
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the pubKeyCredParams property value. The pubKeyCredParams property
+     * Sets the pubKeyCredParams property value. The cryptographic parameters that the relying party supports, in order of preference.
      * @param value Value to set for the pubKeyCredParams property.
      */
     public void setPubKeyCredParams(@jakarta.annotation.Nullable final java.util.List<WebauthnPublicKeyCredentialParameters> value) {
         this.backingStore.set("pubKeyCredParams", value);
     }
     /**
-     * Sets the rp property value. The rp property
+     * Sets the rp property value. Information about the relying party (RP) requesting credential creation.
      * @param value Value to set for the rp property.
      */
     public void setRp(@jakarta.annotation.Nullable final WebauthnPublicKeyCredentialRpEntity value) {
         this.backingStore.set("rp", value);
     }
     /**
-     * Sets the timeout property value. The timeout property
+     * Sets the timeout property value. The time, in milliseconds, that the caller is willing to wait for the operation to complete.
      * @param value Value to set for the timeout property.
      */
     public void setTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("timeout", value);
     }
     /**
-     * Sets the user property value. The user property
+     * Sets the user property value. Information about the user account for which the credential is being created.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final WebauthnPublicKeyCredentialUserEntity value) {

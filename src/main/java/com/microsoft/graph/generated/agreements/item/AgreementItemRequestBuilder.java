@@ -53,7 +53,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AgreementItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}{?%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link AgreementItemRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AgreementItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}{?%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}", rawUrl);
     }
     /**
      * Delete entity from agreements

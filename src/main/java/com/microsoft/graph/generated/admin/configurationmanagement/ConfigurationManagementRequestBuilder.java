@@ -71,7 +71,7 @@ public class ConfigurationManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConfigurationManagementRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/configurationManagement{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/configurationManagement", pathParameters);
     }
     /**
      * Instantiates a new {@link ConfigurationManagementRequestBuilder} and sets the default values.
@@ -79,7 +79,7 @@ public class ConfigurationManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConfigurationManagementRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/configurationManagement{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/configurationManagement", rawUrl);
     }
     /**
      * Delete navigation property configurationManagement for admin

@@ -26,7 +26,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExternalAuthenticationMethodItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/externalAuthenticationMethods/{externalAuthenticationMethod%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/externalAuthenticationMethods/{externalAuthenticationMethod%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ExternalAuthenticationMethodItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExternalAuthenticationMethodItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/externalAuthenticationMethods/{externalAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/externalAuthenticationMethods/{externalAuthenticationMethod%2Did}", rawUrl);
     }
     /**
      * Delete an externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.

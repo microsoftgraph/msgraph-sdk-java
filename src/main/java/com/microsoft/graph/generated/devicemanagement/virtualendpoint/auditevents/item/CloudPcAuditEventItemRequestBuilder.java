@@ -26,7 +26,7 @@ public class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcAuditEventItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/auditEvents/{cloudPcAuditEvent%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/auditEvents/{cloudPcAuditEvent%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link CloudPcAuditEventItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcAuditEventItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/auditEvents/{cloudPcAuditEvent%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/auditEvents/{cloudPcAuditEvent%2Did}", rawUrl);
     }
     /**
      * Delete navigation property auditEvents for deviceManagement

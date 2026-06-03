@@ -27,7 +27,7 @@ public class SubscriptionsWithCommerceSubscriptionIdRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SubscriptionsWithCommerceSubscriptionIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String commerceSubscriptionId) {
-        super(requestAdapter, "{+baseurl}/directory/subscriptions(commerceSubscriptionId='{commerceSubscriptionId}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/subscriptions(commerceSubscriptionId='{commerceSubscriptionId}')", pathParameters);
         this.pathParameters.put("commerceSubscriptionId", commerceSubscriptionId);
     }
     /**
@@ -36,7 +36,7 @@ public class SubscriptionsWithCommerceSubscriptionIdRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SubscriptionsWithCommerceSubscriptionIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/subscriptions(commerceSubscriptionId='{commerceSubscriptionId}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/subscriptions(commerceSubscriptionId='{commerceSubscriptionId}')", rawUrl);
     }
     /**
      * Delete navigation property subscriptions for directory

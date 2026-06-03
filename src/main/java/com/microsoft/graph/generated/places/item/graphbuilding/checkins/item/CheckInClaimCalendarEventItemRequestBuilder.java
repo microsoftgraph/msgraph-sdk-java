@@ -26,7 +26,7 @@ public class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CheckInClaimCalendarEventItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/checkIns/{checkInClaim%2DcalendarEventId}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/checkIns/{checkInClaim%2DcalendarEventId}", pathParameters);
     }
     /**
      * Instantiates a new {@link CheckInClaimCalendarEventItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CheckInClaimCalendarEventItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/checkIns/{checkInClaim%2DcalendarEventId}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/checkIns/{checkInClaim%2DcalendarEventId}", rawUrl);
     }
     /**
      * Delete navigation property checkIns for places

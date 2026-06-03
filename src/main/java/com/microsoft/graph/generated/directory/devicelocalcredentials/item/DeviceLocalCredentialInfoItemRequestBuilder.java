@@ -26,7 +26,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialInfoItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials/{deviceLocalCredentialInfo%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials/{deviceLocalCredentialInfo%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceLocalCredentialInfoItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLocalCredentialInfoItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials/{deviceLocalCredentialInfo%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/deviceLocalCredentials/{deviceLocalCredentialInfo%2Did}", rawUrl);
     }
     /**
      * Delete navigation property deviceLocalCredentials for directory

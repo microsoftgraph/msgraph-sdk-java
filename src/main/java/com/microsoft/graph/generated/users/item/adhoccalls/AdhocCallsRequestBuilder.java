@@ -4,8 +4,8 @@ import com.microsoft.graph.models.AdhocCall;
 import com.microsoft.graph.models.AdhocCallCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.adhoccalls.count.CountRequestBuilder;
-import com.microsoft.graph.users.item.adhoccalls.getallrecordingsuseriduseridwithstartdatetimewithenddatetime.GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-import com.microsoft.graph.users.item.adhoccalls.getalltranscriptsuseriduseridwithstartdatetimewithenddatetime.GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.users.item.adhoccalls.getallrecordingsuseriduseridwithstartdatetimewithenddatetime.GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d;
+import com.microsoft.graph.users.item.adhoccalls.getalltranscriptsuseriduseridwithstartdatetimewithenddatetime.GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382;
 import com.microsoft.graph.users.item.adhoccalls.item.AdhocCallItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -35,19 +35,19 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAllRecordings method.
-     * @return a {@link GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d}
      */
     @jakarta.annotation.Nonnull
-    public GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime() {
-        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
+    public GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAllTranscripts method.
-     * @return a {@link GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382}
      */
     @jakarta.annotation.Nonnull
-    public GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime() {
-        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
+    public GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382 getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the adhocCalls property of the microsoft.graph.user entity.
@@ -67,7 +67,7 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdhocCallsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/adhocCalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link AdhocCallsRequestBuilder} and sets the default values.
@@ -75,7 +75,7 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdhocCallsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/adhocCalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Ad hoc calls associated with the user. Read-only. Nullable.

@@ -26,7 +26,7 @@ public class OrganizerV2RequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OrganizerV2RequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/callRecords/{callRecord%2Did}/organizer_v2{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/communications/callRecords/{callRecord%2Did}/organizer_v2", pathParameters);
     }
     /**
      * Instantiates a new {@link OrganizerV2RequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class OrganizerV2RequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OrganizerV2RequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/callRecords/{callRecord%2Did}/organizer_v2{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/communications/callRecords/{callRecord%2Did}/organizer_v2", rawUrl);
     }
     /**
      * Delete navigation property organizer_v2 for communications

@@ -26,7 +26,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ShiftItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/shifts/{shift%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/shifts/{shift%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ShiftItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ShiftItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/shifts/{shift%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/shifts/{shift%2Did}", rawUrl);
     }
     /**
      * Delete a shift from the schedule.

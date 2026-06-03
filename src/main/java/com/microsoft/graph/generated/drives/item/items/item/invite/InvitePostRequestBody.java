@@ -24,6 +24,9 @@ public class InvitePostRequestBody implements AdditionalDataHolder, BackedModel,
     public InvitePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setRequireSignIn(false);
+        this.setRetainInheritedPermissions(false);
+        this.setSendInvitation(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

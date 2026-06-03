@@ -89,7 +89,7 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public LifecycleWorkflowsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows", pathParameters);
     }
     /**
      * Instantiates a new {@link LifecycleWorkflowsRequestBuilder} and sets the default values.
@@ -97,7 +97,7 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public LifecycleWorkflowsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows", rawUrl);
     }
     /**
      * Delete navigation property lifecycleWorkflows for identityGovernance

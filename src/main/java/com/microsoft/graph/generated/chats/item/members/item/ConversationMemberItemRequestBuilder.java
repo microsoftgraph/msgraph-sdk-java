@@ -26,7 +26,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConversationMemberItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/members/{conversationMember%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/members/{conversationMember%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ConversationMemberItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConversationMemberItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/members/{conversationMember%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/members/{conversationMember%2Did}", rawUrl);
     }
     /**
      * Remove a conversationMember from a chat.

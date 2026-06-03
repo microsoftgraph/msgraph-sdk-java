@@ -3,7 +3,7 @@ package com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SensitivityLabel;
 import com.microsoft.graph.models.SensitivityLabelCollectionResponse;
-import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.item.sublabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
+import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.item.sublabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e;
 import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.item.sublabels.computerightsandinheritance.ComputeRightsAndInheritanceRequestBuilder;
 import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.item.sublabels.count.CountRequestBuilder;
 import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.item.sublabels.item.SensitivityLabelItemRequestBuilder;
@@ -58,14 +58,14 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      * @param contentFormats Usage: contentFormats={contentFormats}
      * @param labelIds Usage: labelIds={labelIds}
      * @param locale Usage: locale=&apos;{locale}&apos;
-     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder}
+     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e}
      */
     @jakarta.annotation.Nonnull
-    public ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
+    public ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
         Objects.requireNonNull(contentFormats);
         Objects.requireNonNull(labelIds);
         Objects.requireNonNull(locale);
-        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder(pathParameters, requestAdapter, contentFormats, labelIds, locale);
+        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e(pathParameters, requestAdapter, contentFormats, labelIds, locale);
     }
     /**
      * Instantiates a new {@link SublabelsRequestBuilder} and sets the default values.
@@ -73,7 +73,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SublabelsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/sensitivityLabels/{sensitivityLabel%2Did}/sublabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link SublabelsRequestBuilder} and sets the default values.
@@ -81,7 +81,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SublabelsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/sensitivityLabels/{sensitivityLabel%2Did}/sublabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get sublabels from security

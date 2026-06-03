@@ -9,7 +9,7 @@ import com.microsoft.graph.shares.item.list.items.item.documentsetversions.Docum
 import com.microsoft.graph.shares.item.list.items.item.driveitem.DriveItemRequestBuilder;
 import com.microsoft.graph.shares.item.list.items.item.fields.FieldsRequestBuilder;
 import com.microsoft.graph.shares.item.list.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
-import com.microsoft.graph.shares.item.list.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.shares.item.list.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetime_3adc0b7b.GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb;
 import com.microsoft.graph.shares.item.list.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.shares.item.list.items.item.versions.VersionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -108,7 +108,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ListItemItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ListItemItemRequestBuilder} and sets the default values.
@@ -116,7 +116,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ListItemItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}", rawUrl);
     }
     /**
      * Delete navigation property items for shares
@@ -163,14 +163,14 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime=&apos;{endDateTime}&apos;
      * @param interval Usage: interval=&apos;{interval}&apos;
      * @param startDateTime Usage: startDateTime=&apos;{startDateTime}&apos;
-     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
+     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb}
      */
     @jakarta.annotation.Nonnull
-    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
+    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(interval);
         Objects.requireNonNull(startDateTime);
-        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
     }
     /**
      * Update the navigation property items in shares

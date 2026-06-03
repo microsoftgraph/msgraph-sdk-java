@@ -35,7 +35,7 @@ public class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PublicKeyInfrastructureRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/publicKeyInfrastructure{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/publicKeyInfrastructure", pathParameters);
     }
     /**
      * Instantiates a new {@link PublicKeyInfrastructureRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PublicKeyInfrastructureRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/publicKeyInfrastructure{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/publicKeyInfrastructure", rawUrl);
     }
     /**
      * Delete navigation property publicKeyInfrastructure for directory

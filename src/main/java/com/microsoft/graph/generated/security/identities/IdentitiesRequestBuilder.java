@@ -80,7 +80,7 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public IdentitiesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/identities{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/identities", pathParameters);
     }
     /**
      * Instantiates a new {@link IdentitiesRequestBuilder} and sets the default values.
@@ -88,7 +88,7 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public IdentitiesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/identities{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/identities", rawUrl);
     }
     /**
      * Delete navigation property identities for security

@@ -1086,6 +1086,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.synchronizationSchema": return new SynchronizationSchema();
             case "#microsoft.graph.synchronizationTemplate": return new SynchronizationTemplate();
             case "#microsoft.graph.targetDeviceGroup": return new TargetDeviceGroup();
+            case "#microsoft.graph.targetedChatMessage": return new TargetedChatMessage();
             case "#microsoft.graph.targetedManagedAppConfiguration": return new TargetedManagedAppConfiguration();
             case "#microsoft.graph.targetedManagedAppPolicyAssignment": return new TargetedManagedAppPolicyAssignment();
             case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
@@ -1174,8 +1175,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.userConsentRequest": return new UserConsentRequest();
             case "#microsoft.graph.userDataSecurityAndGovernance": return new UserDataSecurityAndGovernance();
             case "#microsoft.graph.userExperienceAnalyticsAppHealthApplicationPerformance": return new UserExperienceAnalyticsAppHealthApplicationPerformance();
-            case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails": return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails();
-            case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId": return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId();
+            case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails": return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_ba5b7522();
+            case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId": return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_2e6b881b();
             case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByOSVersion": return new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion();
             case "#microsoft.graph.userExperienceAnalyticsAppHealthDeviceModelPerformance": return new UserExperienceAnalyticsAppHealthDeviceModelPerformance();
             case "#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformance": return new UserExperienceAnalyticsAppHealthDevicePerformance();
@@ -1204,7 +1205,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.userProtectionScopeContainer": return new UserProtectionScopeContainer();
             case "#microsoft.graph.userRegistrationDetails": return new UserRegistrationDetails();
             case "#microsoft.graph.userScopeTeamsAppInstallation": return new UserScopeTeamsAppInstallation();
-            case "#microsoft.graph.userSettings": return new UserSettings();
         }
         return null;
     }
@@ -1216,6 +1216,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.userSettings": return new UserSettings();
             case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
             case "#microsoft.graph.userSolutionRoot": return new UserSolutionRoot();
             case "#microsoft.graph.userStorage": return new UserStorage();

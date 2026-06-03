@@ -26,7 +26,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthorityTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/authorities/{authorityTemplate%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/labels/authorities/{authorityTemplate%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link AuthorityTemplateItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthorityTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/authorities/{authorityTemplate%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/labels/authorities/{authorityTemplate%2Did}", rawUrl);
     }
     /**
      * Delete a authorityTemplate object.

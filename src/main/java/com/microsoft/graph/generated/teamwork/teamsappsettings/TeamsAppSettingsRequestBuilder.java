@@ -26,7 +26,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamsAppSettingsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/teamsAppSettings{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teamwork/teamsAppSettings", pathParameters);
     }
     /**
      * Instantiates a new {@link TeamsAppSettingsRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamsAppSettingsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/teamsAppSettings{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/teamwork/teamsAppSettings", rawUrl);
     }
     /**
      * Delete navigation property teamsAppSettings for teamwork

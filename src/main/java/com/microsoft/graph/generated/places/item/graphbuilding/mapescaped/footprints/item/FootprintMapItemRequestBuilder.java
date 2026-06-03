@@ -26,7 +26,7 @@ public class FootprintMapItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FootprintMapItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map/footprints/{footprintMap%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map/footprints/{footprintMap%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link FootprintMapItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class FootprintMapItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FootprintMapItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map/footprints/{footprintMap%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.building/map/footprints/{footprintMap%2Did}", rawUrl);
     }
     /**
      * Delete navigation property footprints for places

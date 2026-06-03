@@ -26,7 +26,7 @@ public class OnPremisesSyncBehaviorRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnPremisesSyncBehaviorRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onPremisesSyncBehavior{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onPremisesSyncBehavior", pathParameters);
     }
     /**
      * Instantiates a new {@link OnPremisesSyncBehaviorRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class OnPremisesSyncBehaviorRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnPremisesSyncBehaviorRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onPremisesSyncBehavior{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onPremisesSyncBehavior", rawUrl);
     }
     /**
      * Delete navigation property onPremisesSyncBehavior for users

@@ -68,7 +68,7 @@ public class WebauthnPublicKeyCredentialRpEntity implements AdditionalDataHolder
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The relying party identifier. For web applications, this value is typically the domain name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class WebauthnPublicKeyCredentialRpEntity implements AdditionalDataHolder
         return this.backingStore.get("id");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The human-readable name for the relying party.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class WebauthnPublicKeyCredentialRpEntity implements AdditionalDataHolder
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The relying party identifier. For web applications, this value is typically the domain name.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The human-readable name for the relying party.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

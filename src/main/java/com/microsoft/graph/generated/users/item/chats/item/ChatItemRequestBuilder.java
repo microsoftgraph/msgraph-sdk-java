@@ -16,6 +16,7 @@ import com.microsoft.graph.users.item.chats.item.removeallaccessforuser.RemoveAl
 import com.microsoft.graph.users.item.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.tabs.TabsRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.targetedmessages.TargetedMessagesRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.unhideforuser.UnhideForUserRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -148,6 +149,14 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the targetedMessages property of the microsoft.graph.chat entity.
+     * @return a {@link TargetedMessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TargetedMessagesRequestBuilder targetedMessages() {
+        return new TargetedMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the unhideForUser method.
      * @return a {@link UnhideForUserRequestBuilder}
      */
@@ -161,7 +170,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ChatItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ChatItemRequestBuilder} and sets the default values.
@@ -169,7 +178,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ChatItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}", rawUrl);
     }
     /**
      * Delete navigation property chats for users

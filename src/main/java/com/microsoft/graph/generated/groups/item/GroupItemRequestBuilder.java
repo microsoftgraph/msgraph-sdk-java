@@ -422,7 +422,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link GroupItemRequestBuilder} and sets the default values.
@@ -430,7 +430,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}", rawUrl);
     }
     /**
      * Delete a group. When deleted, both Microsoft 365 and security groups are moved to a temporary container and can be restored within 30 days. After that time, they&apos;re permanently deleted. This doesn&apos;t apply to Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.

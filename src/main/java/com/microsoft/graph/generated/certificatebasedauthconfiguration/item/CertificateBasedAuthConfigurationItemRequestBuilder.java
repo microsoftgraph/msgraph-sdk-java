@@ -26,7 +26,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CertificateBasedAuthConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link CertificateBasedAuthConfigurationItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CertificateBasedAuthConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}", rawUrl);
     }
     /**
      * Delete entity from certificateBasedAuthConfiguration

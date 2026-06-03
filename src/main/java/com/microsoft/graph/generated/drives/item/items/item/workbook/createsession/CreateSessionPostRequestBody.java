@@ -23,6 +23,7 @@ public class CreateSessionPostRequestBody implements AdditionalDataHolder, Backe
     public CreateSessionPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setPersistChanges(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

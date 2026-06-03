@@ -35,7 +35,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrivilegedAccessRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess", pathParameters);
     }
     /**
      * Instantiates a new {@link PrivilegedAccessRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrivilegedAccessRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess", rawUrl);
     }
     /**
      * Delete navigation property privilegedAccess for identityGovernance

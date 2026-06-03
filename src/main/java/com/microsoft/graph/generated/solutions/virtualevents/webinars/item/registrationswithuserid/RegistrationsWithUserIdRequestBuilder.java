@@ -36,7 +36,7 @@ public class RegistrationsWithUserIdRequestBuilder extends BaseRequestBuilder {
      * @param userId Alternate key of virtualEventRegistration
      */
     public RegistrationsWithUserIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String userId) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(userId='{userId}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(userId='{userId}')", pathParameters);
         this.pathParameters.put("userId", userId);
     }
     /**
@@ -45,7 +45,7 @@ public class RegistrationsWithUserIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RegistrationsWithUserIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(userId='{userId}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(userId='{userId}')", rawUrl);
     }
     /**
      * Delete navigation property registrations for solutions

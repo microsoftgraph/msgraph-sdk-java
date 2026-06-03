@@ -58,7 +58,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/importedWindowsAutopilotDeviceIdentities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder} and sets the default values.
@@ -66,7 +66,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/importedWindowsAutopilotDeviceIdentities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Collection of imported Windows autopilot devices.

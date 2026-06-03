@@ -35,7 +35,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Deletes a windowsHelloForBusinessAuthenticationMethod object.

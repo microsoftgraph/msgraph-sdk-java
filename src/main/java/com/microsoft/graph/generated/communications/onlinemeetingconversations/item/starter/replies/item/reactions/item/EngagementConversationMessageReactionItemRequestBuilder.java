@@ -26,7 +26,7 @@ public class EngagementConversationMessageReactionItemRequestBuilder extends Bas
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EngagementConversationMessageReactionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}/starter/replies/{engagementConversationMessage%2Did}/reactions/{engagementConversationMessageReaction%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}/starter/replies/{engagementConversationMessage%2Did}/reactions/{engagementConversationMessageReaction%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link EngagementConversationMessageReactionItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class EngagementConversationMessageReactionItemRequestBuilder extends Bas
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EngagementConversationMessageReactionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}/starter/replies/{engagementConversationMessage%2Did}/reactions/{engagementConversationMessageReaction%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}/starter/replies/{engagementConversationMessage%2Did}/reactions/{engagementConversationMessageReaction%2Did}", rawUrl);
     }
     /**
      * Delete navigation property reactions for communications

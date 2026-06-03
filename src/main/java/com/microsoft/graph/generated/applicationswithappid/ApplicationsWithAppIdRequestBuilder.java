@@ -27,7 +27,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ApplicationsWithAppIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String appId) {
-        super(requestAdapter, "{+baseurl}/applications(appId='{appId}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/applications(appId='{appId}')", pathParameters);
         this.pathParameters.put("appId", appId);
     }
     /**
@@ -36,7 +36,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ApplicationsWithAppIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/applications(appId='{appId}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/applications(appId='{appId}')", rawUrl);
     }
     /**
      * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.

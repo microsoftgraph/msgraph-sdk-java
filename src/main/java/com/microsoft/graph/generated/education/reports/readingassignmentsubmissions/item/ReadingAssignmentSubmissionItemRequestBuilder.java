@@ -26,7 +26,7 @@ public class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReadingAssignmentSubmissionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/reports/readingAssignmentSubmissions/{readingAssignmentSubmission%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/reports/readingAssignmentSubmissions/{readingAssignmentSubmission%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ReadingAssignmentSubmissionItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReadingAssignmentSubmissionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/reports/readingAssignmentSubmissions/{readingAssignmentSubmission%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/reports/readingAssignmentSubmissions/{readingAssignmentSubmission%2Did}", rawUrl);
     }
     /**
      * Delete navigation property readingAssignmentSubmissions for education

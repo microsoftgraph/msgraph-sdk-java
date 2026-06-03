@@ -26,7 +26,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AgreementAcceptanceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}/acceptances/{agreementAcceptance%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}/acceptances/{agreementAcceptance%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link AgreementAcceptanceItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class AgreementAcceptanceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AgreementAcceptanceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}/acceptances/{agreementAcceptance%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}/acceptances/{agreementAcceptance%2Did}", rawUrl);
     }
     /**
      * Delete navigation property acceptances for agreements

@@ -27,6 +27,8 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Ba
     public FindMeetingTimesPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setIsOrganizerOptional(false);
+        this.setReturnSuggestionReasons(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

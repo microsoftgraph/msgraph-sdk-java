@@ -26,7 +26,7 @@ public class ReadingCoachPassageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReadingCoachPassageItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/reports/readingCoachPassages/{readingCoachPassage%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/reports/readingCoachPassages/{readingCoachPassage%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ReadingCoachPassageItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ReadingCoachPassageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReadingCoachPassageItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/reports/readingCoachPassages/{readingCoachPassage%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/reports/readingCoachPassages/{readingCoachPassage%2Did}", rawUrl);
     }
     /**
      * Delete navigation property readingCoachPassages for education

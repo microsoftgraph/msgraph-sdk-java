@@ -44,7 +44,7 @@ public class TelephoneNumberManagementRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TelephoneNumberManagementRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/teams/telephoneNumberManagement{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/teams/telephoneNumberManagement", pathParameters);
     }
     /**
      * Instantiates a new {@link TelephoneNumberManagementRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class TelephoneNumberManagementRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TelephoneNumberManagementRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/teams/telephoneNumberManagement{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/teams/telephoneNumberManagement", rawUrl);
     }
     /**
      * Delete navigation property telephoneNumberManagement for admin
