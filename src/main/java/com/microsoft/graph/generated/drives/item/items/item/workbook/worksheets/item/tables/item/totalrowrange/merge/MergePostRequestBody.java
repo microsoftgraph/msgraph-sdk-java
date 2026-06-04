@@ -22,6 +22,7 @@ public class MergePostRequestBody implements AdditionalDataHolder, BackedModel, 
      */
     public MergePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        this.setAcross(false);
         this.setAdditionalData(new HashMap<>());
     }
     /**

@@ -4,9 +4,9 @@ import com.microsoft.graph.models.AuthenticationMethodsRoot;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.reports.authenticationmethods.userregistrationdetails.UserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.reports.authenticationmethods.usersregisteredbyfeature.UsersRegisteredByFeatureRequestBuilder;
-import com.microsoft.graph.reports.authenticationmethods.usersregisteredbyfeaturewithincludedusertypeswithincludeduserroles.UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder;
+import com.microsoft.graph.reports.authenticationmethods.usersregisteredbyfeaturewithincludedusertypeswithinclud_5d2d9f46.UsersRegisteredByFeatureWithIncludedUserTypesWithInclud_01ebc792;
 import com.microsoft.graph.reports.authenticationmethods.usersregisteredbymethod.UsersRegisteredByMethodRequestBuilder;
-import com.microsoft.graph.reports.authenticationmethods.usersregisteredbymethodwithincludedusertypeswithincludeduserroles.UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder;
+import com.microsoft.graph.reports.authenticationmethods.usersregisteredbymethodwithincludedusertypeswithinclude_94b5abcf.UsersRegisteredByMethodWithIncludedUserTypesWithInclude_c7c52dcb;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -55,7 +55,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationMethodsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/authenticationMethods{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/authenticationMethods", pathParameters);
     }
     /**
      * Instantiates a new {@link AuthenticationMethodsRequestBuilder} and sets the default values.
@@ -63,7 +63,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationMethodsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/authenticationMethods{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/authenticationMethods", rawUrl);
     }
     /**
      * Delete navigation property authenticationMethods for reports
@@ -165,7 +165,7 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/reports/authenticationMethods{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -198,25 +198,25 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the usersRegisteredByFeature method.
      * @param includedUserRoles Usage: includedUserRoles=&apos;{includedUserRoles}&apos;
      * @param includedUserTypes Usage: includedUserTypes=&apos;{includedUserTypes}&apos;
-     * @return a {@link UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder}
+     * @return a {@link UsersRegisteredByFeatureWithIncludedUserTypesWithInclud_01ebc792}
      */
     @jakarta.annotation.Nonnull
-    public UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder usersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRoles(@jakarta.annotation.Nonnull final String includedUserRoles, @jakarta.annotation.Nonnull final String includedUserTypes) {
+    public UsersRegisteredByFeatureWithIncludedUserTypesWithInclud_01ebc792 usersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRoles(@jakarta.annotation.Nonnull final String includedUserRoles, @jakarta.annotation.Nonnull final String includedUserTypes) {
         Objects.requireNonNull(includedUserRoles);
         Objects.requireNonNull(includedUserTypes);
-        return new UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder(pathParameters, requestAdapter, includedUserRoles, includedUserTypes);
+        return new UsersRegisteredByFeatureWithIncludedUserTypesWithInclud_01ebc792(pathParameters, requestAdapter, includedUserRoles, includedUserTypes);
     }
     /**
      * Provides operations to call the usersRegisteredByMethod method.
      * @param includedUserRoles Usage: includedUserRoles=&apos;{includedUserRoles}&apos;
      * @param includedUserTypes Usage: includedUserTypes=&apos;{includedUserTypes}&apos;
-     * @return a {@link UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder}
+     * @return a {@link UsersRegisteredByMethodWithIncludedUserTypesWithInclude_c7c52dcb}
      */
     @jakarta.annotation.Nonnull
-    public UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder usersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRoles(@jakarta.annotation.Nonnull final String includedUserRoles, @jakarta.annotation.Nonnull final String includedUserTypes) {
+    public UsersRegisteredByMethodWithIncludedUserTypesWithInclude_c7c52dcb usersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRoles(@jakarta.annotation.Nonnull final String includedUserRoles, @jakarta.annotation.Nonnull final String includedUserTypes) {
         Objects.requireNonNull(includedUserRoles);
         Objects.requireNonNull(includedUserTypes);
-        return new UsersRegisteredByMethodWithIncludedUserTypesWithIncludedUserRolesRequestBuilder(pathParameters, requestAdapter, includedUserRoles, includedUserTypes);
+        return new UsersRegisteredByMethodWithIncludedUserTypesWithInclude_c7c52dcb(pathParameters, requestAdapter, includedUserRoles, includedUserTypes);
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.

@@ -48,7 +48,7 @@ public class WebauthnAuthenticatorAttestationResponse implements AdditionalDataH
         return value;
     }
     /**
-     * Gets the attestationObject property value. The attestationObject property
+     * Gets the attestationObject property value. A CBOR-encoded attestation object containing the authenticator data and attestation statement. This value is Base64URL-encoded without padding.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class WebauthnAuthenticatorAttestationResponse implements AdditionalDataH
         return this.backingStore;
     }
     /**
-     * Gets the clientDataJSON property value. The clientDataJSON property
+     * Gets the clientDataJSON property value. Contains the JSON-compatible serialization of client data passed to the authenticator by the client. This value is Base64URL-encoded without padding.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class WebauthnAuthenticatorAttestationResponse implements AdditionalDataH
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the attestationObject property value. The attestationObject property
+     * Sets the attestationObject property value. A CBOR-encoded attestation object containing the authenticator data and attestation statement. This value is Base64URL-encoded without padding.
      * @param value Value to set for the attestationObject property.
      */
     public void setAttestationObject(@jakarta.annotation.Nullable final String value) {
@@ -125,7 +125,7 @@ public class WebauthnAuthenticatorAttestationResponse implements AdditionalDataH
         this.backingStore = value;
     }
     /**
-     * Sets the clientDataJSON property value. The clientDataJSON property
+     * Sets the clientDataJSON property value. Contains the JSON-compatible serialization of client data passed to the authenticator by the client. This value is Base64URL-encoded without padding.
      * @param value Value to set for the clientDataJSON property.
      */
     public void setClientDataJSON(@jakarta.annotation.Nullable final String value) {

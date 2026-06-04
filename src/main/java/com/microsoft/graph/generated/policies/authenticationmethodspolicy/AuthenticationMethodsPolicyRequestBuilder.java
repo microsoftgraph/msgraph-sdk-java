@@ -35,7 +35,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationMethodsPolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy", pathParameters);
     }
     /**
      * Instantiates a new {@link AuthenticationMethodsPolicyRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationMethodsPolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/authenticationMethodsPolicy", rawUrl);
     }
     /**
      * Delete navigation property authenticationMethodsPolicy for policies
@@ -149,7 +149,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/policies/authenticationMethodsPolicy{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

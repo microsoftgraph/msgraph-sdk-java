@@ -53,7 +53,7 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DataSecurityAndGovernanceRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance", pathParameters);
     }
     /**
      * Instantiates a new {@link DataSecurityAndGovernanceRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DataSecurityAndGovernanceRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance", rawUrl);
     }
     /**
      * Delete navigation property dataSecurityAndGovernance for security
@@ -163,7 +163,7 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/security/dataSecurityAndGovernance{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

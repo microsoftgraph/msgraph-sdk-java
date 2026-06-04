@@ -27,7 +27,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ServicePrincipalsWithAppIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String appId) {
-        super(requestAdapter, "{+baseurl}/servicePrincipals(appId='{appId}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/servicePrincipals(appId='{appId}')", pathParameters);
         this.pathParameters.put("appId", appId);
     }
     /**
@@ -36,7 +36,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ServicePrincipalsWithAppIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/servicePrincipals(appId='{appId}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/servicePrincipals(appId='{appId}')", rawUrl);
     }
     /**
      * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
@@ -144,7 +144,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/servicePrincipals(appId='{appId}'){?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

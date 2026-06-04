@@ -23,6 +23,7 @@ public class CleanWindowsDevicePostRequestBody implements AdditionalDataHolder, 
     public CleanWindowsDevicePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setKeepUserData(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

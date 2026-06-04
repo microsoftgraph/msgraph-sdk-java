@@ -12,6 +12,8 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequ
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerolescopes.ResourceRoleScopesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.subjectswithobjectid.SubjectsWithObjectIdRequestBuilder;
 import com.microsoft.graph.models.EntitlementManagement;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -129,12 +131,20 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link SubjectsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SubjectsRequestBuilder subjects() {
+        return new SubjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new {@link EntitlementManagementRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EntitlementManagementRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement", pathParameters);
     }
     /**
      * Instantiates a new {@link EntitlementManagementRequestBuilder} and sets the default values.
@@ -142,7 +152,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EntitlementManagementRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement", rawUrl);
     }
     /**
      * Delete navigation property entitlementManagement for identityGovernance
@@ -210,6 +220,16 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EntitlementManagement::createFromDiscriminatorValue);
     }
     /**
+     * Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity.
+     * @param objectId Alternate key of accessPackageSubject
+     * @return a {@link SubjectsWithObjectIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SubjectsWithObjectIdRequestBuilder subjectsWithObjectId(@jakarta.annotation.Nonnull final String objectId) {
+        Objects.requireNonNull(objectId);
+        return new SubjectsWithObjectIdRequestBuilder(pathParameters, requestAdapter, objectId);
+    }
+    /**
      * Delete navigation property entitlementManagement for identityGovernance
      * @return a {@link RequestInformation}
      */
@@ -244,7 +264,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/identityGovernance/entitlementManagement{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

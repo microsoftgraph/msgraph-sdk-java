@@ -48,7 +48,7 @@ public class WebauthnPublicKeyCredentialParameters implements AdditionalDataHold
         return value;
     }
     /**
-     * Gets the alg property value. The alg property
+     * Gets the alg property value. A COSE algorithm identifier representing the cryptographic algorithm to use for this credential type. For example, -7 represents ES256.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class WebauthnPublicKeyCredentialParameters implements AdditionalDataHold
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of credential to create. Currently, the only supported value is public-key.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class WebauthnPublicKeyCredentialParameters implements AdditionalDataHold
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the alg property value. The alg property
+     * Sets the alg property value. A COSE algorithm identifier representing the cryptographic algorithm to use for this credential type. For example, -7 represents ES256.
      * @param value Value to set for the alg property.
      */
     public void setAlg(@jakarta.annotation.Nullable final Integer value) {
@@ -132,7 +132,7 @@ public class WebauthnPublicKeyCredentialParameters implements AdditionalDataHold
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of credential to create. Currently, the only supported value is public-key.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

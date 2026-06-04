@@ -27,7 +27,7 @@ public class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
      * @param userPrincipalName Alternate key of user
      */
     public UsersWithUserPrincipalNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String userPrincipalName) {
-        super(requestAdapter, "{+baseurl}/users(userPrincipalName='{userPrincipalName}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users(userPrincipalName='{userPrincipalName}')", pathParameters);
         this.pathParameters.put("userPrincipalName", userPrincipalName);
     }
     /**
@@ -36,7 +36,7 @@ public class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UsersWithUserPrincipalNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users(userPrincipalName='{userPrincipalName}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users(userPrincipalName='{userPrincipalName}')", rawUrl);
     }
     /**
      * Delete a user object.   When deleted, user resources, including their mailbox and license assignments, are moved to a temporary container and if the user is restored within 30 days, these objects are restored to them. The user is also restored to any groups they were a member of. After 30 days and if not restored, the user object is permanently deleted and their assigned resources freed. To manage the deleted user object, see deletedItems.
@@ -144,7 +144,7 @@ public class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/users(userPrincipalName='{userPrincipalName}'){?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

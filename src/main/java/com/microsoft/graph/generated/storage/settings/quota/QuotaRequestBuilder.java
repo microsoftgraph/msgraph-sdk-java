@@ -35,7 +35,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public QuotaRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/storage/settings/quota{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/storage/settings/quota", pathParameters);
     }
     /**
      * Instantiates a new {@link QuotaRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public QuotaRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/storage/settings/quota{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/storage/settings/quota", rawUrl);
     }
     /**
      * Delete navigation property quota for storage
@@ -145,7 +145,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/storage/settings/quota{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

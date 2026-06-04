@@ -1,8 +1,8 @@
 package com.microsoft.graph.communications.adhoccalls;
 
 import com.microsoft.graph.communications.adhoccalls.count.CountRequestBuilder;
-import com.microsoft.graph.communications.adhoccalls.getallrecordingsuseriduseridwithstartdatetimewithenddatetime.GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-import com.microsoft.graph.communications.adhoccalls.getalltranscriptsuseriduseridwithstartdatetimewithenddatetime.GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.communications.adhoccalls.getallrecordingsuseriduseridwithstartdatetimewithenddatetime.GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d;
+import com.microsoft.graph.communications.adhoccalls.getalltranscriptsuseriduseridwithstartdatetimewithenddatetime.GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382;
 import com.microsoft.graph.communications.adhoccalls.item.AdhocCallItemRequestBuilder;
 import com.microsoft.graph.models.AdhocCall;
 import com.microsoft.graph.models.AdhocCallCollectionResponse;
@@ -35,19 +35,19 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAllRecordings method.
-     * @return a {@link GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d}
      */
     @jakarta.annotation.Nonnull
-    public GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime() {
-        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
+    public GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAllTranscripts method.
-     * @return a {@link GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382}
      */
     @jakarta.annotation.Nonnull
-    public GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime() {
-        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
+    public GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382 getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the adhocCalls property of the microsoft.graph.cloudCommunications entity.
@@ -67,7 +67,7 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdhocCallsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/adhocCalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link AdhocCallsRequestBuilder} and sets the default values.
@@ -75,7 +75,7 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdhocCallsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/adhocCalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get adhocCalls from communications
@@ -139,7 +139,7 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/communications/adhocCalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -162,7 +162,7 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AdhocCall body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/communications/adhocCalls", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

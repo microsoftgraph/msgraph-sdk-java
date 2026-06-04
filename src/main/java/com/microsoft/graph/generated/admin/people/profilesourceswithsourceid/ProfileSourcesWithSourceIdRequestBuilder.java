@@ -27,7 +27,7 @@ public class ProfileSourcesWithSourceIdRequestBuilder extends BaseRequestBuilder
      * @param sourceId Alternate key of profileSource
      */
     public ProfileSourcesWithSourceIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String sourceId) {
-        super(requestAdapter, "{+baseurl}/admin/people/profileSources(sourceId='{sourceId}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/people/profileSources(sourceId='{sourceId}')", pathParameters);
         this.pathParameters.put("sourceId", sourceId);
     }
     /**
@@ -36,7 +36,7 @@ public class ProfileSourcesWithSourceIdRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProfileSourcesWithSourceIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/people/profileSources(sourceId='{sourceId}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/people/profileSources(sourceId='{sourceId}')", rawUrl);
     }
     /**
      * Delete a profileSource object.
@@ -142,7 +142,7 @@ public class ProfileSourcesWithSourceIdRequestBuilder extends BaseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/admin/people/profileSources(sourceId='{sourceId}'){?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

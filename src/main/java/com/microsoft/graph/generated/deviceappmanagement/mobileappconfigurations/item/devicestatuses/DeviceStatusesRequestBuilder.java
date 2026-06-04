@@ -1,9 +1,9 @@
 package com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses;
 
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.count.CountRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatus;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse;
+import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -34,14 +34,14 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param managedDeviceMobileAppConfigurationDeviceStatusId The unique identifier of managedDeviceMobileAppConfigurationDeviceStatus
-     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder}
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e}
      */
     @jakarta.annotation.Nonnull
-    public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder byManagedDeviceMobileAppConfigurationDeviceStatusId(@jakarta.annotation.Nonnull final String managedDeviceMobileAppConfigurationDeviceStatusId) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e byManagedDeviceMobileAppConfigurationDeviceStatusId(@jakarta.annotation.Nonnull final String managedDeviceMobileAppConfigurationDeviceStatusId) {
         Objects.requireNonNull(managedDeviceMobileAppConfigurationDeviceStatusId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDeviceMobileAppConfigurationDeviceStatus%2Did", managedDeviceMobileAppConfigurationDeviceStatusId);
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
+        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link DeviceStatusesRequestBuilder} and sets the default values.
@@ -49,7 +49,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceStatusesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}/deviceStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceStatusesRequestBuilder} and sets the default values.
@@ -57,29 +57,29 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceStatusesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}/deviceStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
-     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse}
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse get() {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f get() {
         return get(null);
     }
     /**
      * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse}
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceStatuses for deviceAppManagement
@@ -121,7 +121,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}/deviceStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -144,7 +144,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}/deviceStatuses", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

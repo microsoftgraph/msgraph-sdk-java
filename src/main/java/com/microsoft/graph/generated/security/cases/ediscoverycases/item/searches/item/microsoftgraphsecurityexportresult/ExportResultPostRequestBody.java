@@ -30,6 +30,7 @@ public class ExportResultPostRequestBody implements AdditionalDataHolder, Backed
     public ExportResultPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setExportSingleItems(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

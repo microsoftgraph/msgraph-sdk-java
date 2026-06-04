@@ -61,6 +61,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("principalName", (n) -> { this.setPrincipalName(n.getStringValue()); });
+        deserializerMap.put("subjectLifecycle", (n) -> { this.setSubjectLifecycle(n.getEnumValue(AccessPackageSubjectLifecycle::forValue)); });
         deserializerMap.put("subjectType", (n) -> { this.setSubjectType(n.getEnumValue(AccessPackageSubjectType::forValue)); });
         return deserializerMap;
     }
@@ -89,6 +90,14 @@ public class AccessPackageSubject extends Entity implements Parsable {
         return this.backingStore.get("principalName");
     }
     /**
+     * Gets the subjectLifecycle property value. The subjectLifecycle property
+     * @return a {@link AccessPackageSubjectLifecycle}
+     */
+    @jakarta.annotation.Nullable
+    public AccessPackageSubjectLifecycle getSubjectLifecycle() {
+        return this.backingStore.get("subjectLifecycle");
+    }
+    /**
      * Gets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
      * @return a {@link AccessPackageSubjectType}
      */
@@ -109,6 +118,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         writer.writeStringValue("objectId", this.getObjectId());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeStringValue("principalName", this.getPrincipalName());
+        writer.writeEnumValue("subjectLifecycle", this.getSubjectLifecycle());
         writer.writeEnumValue("subjectType", this.getSubjectType());
     }
     /**
@@ -152,6 +162,13 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("principalName", value);
+    }
+    /**
+     * Sets the subjectLifecycle property value. The subjectLifecycle property
+     * @param value Value to set for the subjectLifecycle property.
+     */
+    public void setSubjectLifecycle(@jakarta.annotation.Nullable final AccessPackageSubjectLifecycle value) {
+        this.backingStore.set("subjectLifecycle", value);
     }
     /**
      * Sets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.

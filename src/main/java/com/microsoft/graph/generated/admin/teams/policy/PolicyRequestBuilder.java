@@ -1,6 +1,6 @@
 package com.microsoft.graph.admin.teams.policy;
 
-import com.microsoft.graph.admin.teams.policy.microsoftgraphteamsadministrationgetpolicyidwithtypewithname.MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder;
+import com.microsoft.graph.admin.teams.policy.microsoftgraphteamsadministrationgetpolicyidwithtypewithname.MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_a7f81604;
 import com.microsoft.graph.admin.teams.policy.userassignments.UserAssignmentsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.teamsadministration.TeamsPolicyAssignment;
@@ -36,7 +36,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/teams/policy{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/teams/policy", pathParameters);
     }
     /**
      * Instantiates a new {@link PolicyRequestBuilder} and sets the default values.
@@ -44,7 +44,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/teams/policy{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/teams/policy", rawUrl);
     }
     /**
      * Delete navigation property policy for admin
@@ -90,13 +90,13 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getPolicyId method.
      * @param name Usage: name=&apos;{name}&apos;
      * @param type Usage: type=&apos;{type}&apos;
-     * @return a {@link MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder}
+     * @return a {@link MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_a7f81604}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder microsoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName(@jakarta.annotation.Nonnull final String name, @jakarta.annotation.Nonnull final String type) {
+    public MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_a7f81604 microsoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName(@jakarta.annotation.Nonnull final String name, @jakarta.annotation.Nonnull final String type) {
         Objects.requireNonNull(name);
         Objects.requireNonNull(type);
-        return new MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder(pathParameters, requestAdapter, name, type);
+        return new MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_a7f81604(pathParameters, requestAdapter, name, type);
     }
     /**
      * Update the navigation property policy in admin
@@ -158,7 +158,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/admin/teams/policy{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

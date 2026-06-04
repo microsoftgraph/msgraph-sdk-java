@@ -2,10 +2,10 @@ package com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilit
 
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityschedulerequests.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityschedulerequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
-import com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityschedulerequests.item.PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityschedulerequests.item.PrivilegedAccessGroupEligibilityScheduleRequestItemRequ_ae87ea31;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrivilegedAccessGroupEligibilityScheduleRequest;
-import com.microsoft.graph.models.PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse;
+import com.microsoft.graph.models.PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d406580b;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -35,14 +35,14 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to manage the eligibilityScheduleRequests property of the microsoft.graph.privilegedAccessGroup entity.
      * @param privilegedAccessGroupEligibilityScheduleRequestId The unique identifier of privilegedAccessGroupEligibilityScheduleRequest
-     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder}
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestItemRequ_ae87ea31}
      */
     @jakarta.annotation.Nonnull
-    public PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder byPrivilegedAccessGroupEligibilityScheduleRequestId(@jakarta.annotation.Nonnull final String privilegedAccessGroupEligibilityScheduleRequestId) {
+    public PrivilegedAccessGroupEligibilityScheduleRequestItemRequ_ae87ea31 byPrivilegedAccessGroupEligibilityScheduleRequestId(@jakarta.annotation.Nonnull final String privilegedAccessGroupEligibilityScheduleRequestId) {
         Objects.requireNonNull(privilegedAccessGroupEligibilityScheduleRequestId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedAccessGroupEligibilityScheduleRequest%2Did", privilegedAccessGroupEligibilityScheduleRequestId);
-        return new PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
+        return new PrivilegedAccessGroupEligibilityScheduleRequestItemRequ_ae87ea31(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link EligibilityScheduleRequestsRequestBuilder} and sets the default values.
@@ -50,7 +50,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EligibilityScheduleRequestsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/group/eligibilityScheduleRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link EligibilityScheduleRequestsRequestBuilder} and sets the default values.
@@ -58,7 +58,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EligibilityScheduleRequestsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/group/eligibilityScheduleRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Provides operations to call the filterByCurrentUser method.
@@ -72,27 +72,27 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
-     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse}
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d406580b}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse get() {
+    public PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d406580b get() {
         return get(null);
     }
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse}
+     * @return a {@link PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d406580b}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d406580b get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d406580b::createFromDiscriminatorValue);
     }
     /**
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
@@ -136,7 +136,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/identityGovernance/privilegedAccess/group/eligibilityScheduleRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -159,7 +159,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identityGovernance/privilegedAccess/group/eligibilityScheduleRequests", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
