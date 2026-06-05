@@ -24,6 +24,7 @@ public class SharePostRequestBody implements AdditionalDataHolder, BackedModel, 
     public SharePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setNotifyTeam(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

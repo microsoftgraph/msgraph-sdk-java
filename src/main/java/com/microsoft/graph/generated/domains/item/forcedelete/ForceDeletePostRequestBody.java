@@ -23,6 +23,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, BackedM
     public ForceDeletePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setDisableUserAccounts(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

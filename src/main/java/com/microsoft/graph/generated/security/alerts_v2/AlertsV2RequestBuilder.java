@@ -5,6 +5,7 @@ import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.AlertCollectionResponse;
 import com.microsoft.graph.security.alerts_v2.count.CountRequestBuilder;
 import com.microsoft.graph.security.alerts_v2.item.AlertItemRequestBuilder;
+import com.microsoft.graph.security.alerts_v2.microsoftgraphsecuritymovealerts.MicrosoftGraphSecurityMoveAlertsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -30,6 +31,14 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the moveAlerts method.
+     * @return a {@link MicrosoftGraphSecurityMoveAlertsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityMoveAlertsRequestBuilder microsoftGraphSecurityMoveAlerts() {
+        return new MicrosoftGraphSecurityMoveAlertsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.

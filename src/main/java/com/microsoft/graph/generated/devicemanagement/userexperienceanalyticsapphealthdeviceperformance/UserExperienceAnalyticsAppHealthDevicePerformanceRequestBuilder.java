@@ -1,10 +1,10 @@
 package com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthdeviceperformance;
 
 import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthdeviceperformance.count.CountRequestBuilder;
-import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthdeviceperformance.item.UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthdeviceperformance.item.UserExperienceAnalyticsAppHealthDevicePerformanceItemRe_ef0ccf8e;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerformance;
-import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse;
+import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerformanceCollec_a1e81389;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,14 +34,14 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder ext
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthDevicePerformance property of the microsoft.graph.deviceManagement entity.
      * @param userExperienceAnalyticsAppHealthDevicePerformanceId The unique identifier of userExperienceAnalyticsAppHealthDevicePerformance
-     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceItemRe_ef0ccf8e}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder byUserExperienceAnalyticsAppHealthDevicePerformanceId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsAppHealthDevicePerformanceId) {
+    public UserExperienceAnalyticsAppHealthDevicePerformanceItemRe_ef0ccf8e byUserExperienceAnalyticsAppHealthDevicePerformanceId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsAppHealthDevicePerformanceId) {
         Objects.requireNonNull(userExperienceAnalyticsAppHealthDevicePerformanceId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userExperienceAnalyticsAppHealthDevicePerformance%2Did", userExperienceAnalyticsAppHealthDevicePerformanceId);
-        return new UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new UserExperienceAnalyticsAppHealthDevicePerformanceItemRe_ef0ccf8e(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder} and sets the default values.
@@ -61,25 +61,25 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder ext
     }
     /**
      * User experience analytics appHealth Device Performance
-     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse}
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceCollec_a1e81389}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse get() {
+    public UserExperienceAnalyticsAppHealthDevicePerformanceCollec_a1e81389 get() {
         return get(null);
     }
     /**
      * User experience analytics appHealth Device Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse}
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceCollec_a1e81389}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public UserExperienceAnalyticsAppHealthDevicePerformanceCollec_a1e81389 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsAppHealthDevicePerformanceCollec_a1e81389::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthDevicePerformance for deviceManagement

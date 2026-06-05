@@ -62,6 +62,7 @@ public class Chat extends Entity implements Parsable {
         deserializerMap.put("permissionGrants", (n) -> { this.setPermissionGrants(n.getCollectionOfObjectValues(ResourceSpecificPermissionGrant::createFromDiscriminatorValue)); });
         deserializerMap.put("pinnedMessages", (n) -> { this.setPinnedMessages(n.getCollectionOfObjectValues(PinnedChatMessageInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetedMessages", (n) -> { this.setTargetedMessages(n.getCollectionOfObjectValues(TargetedChatMessage::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("topic", (n) -> { this.setTopic(n.getStringValue()); });
         deserializerMap.put("viewpoint", (n) -> { this.setViewpoint(n.getObjectValue(ChatViewpoint::createFromDiscriminatorValue)); });
@@ -165,6 +166,14 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("tabs");
     }
     /**
+     * Gets the targetedMessages property value. The targetedMessages property
+     * @return a {@link java.util.List<TargetedChatMessage>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TargetedChatMessage> getTargetedMessages() {
+        return this.backingStore.get("targetedMessages");
+    }
+    /**
      * Gets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
      * @return a {@link String}
      */
@@ -217,6 +226,7 @@ public class Chat extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("permissionGrants", this.getPermissionGrants());
         writer.writeCollectionOfObjectValues("pinnedMessages", this.getPinnedMessages());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
+        writer.writeCollectionOfObjectValues("targetedMessages", this.getTargetedMessages());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("topic", this.getTopic());
         writer.writeObjectValue("viewpoint", this.getViewpoint());
@@ -319,6 +329,13 @@ public class Chat extends Entity implements Parsable {
      */
     public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {
         this.backingStore.set("tabs", value);
+    }
+    /**
+     * Sets the targetedMessages property value. The targetedMessages property
+     * @param value Value to set for the targetedMessages property.
+     */
+    public void setTargetedMessages(@jakarta.annotation.Nullable final java.util.List<TargetedChatMessage> value) {
+        this.backingStore.set("targetedMessages", value);
     }
     /**
      * Sets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.

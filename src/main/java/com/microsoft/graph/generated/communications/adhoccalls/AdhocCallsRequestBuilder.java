@@ -1,8 +1,8 @@
 package com.microsoft.graph.communications.adhoccalls;
 
 import com.microsoft.graph.communications.adhoccalls.count.CountRequestBuilder;
-import com.microsoft.graph.communications.adhoccalls.getallrecordingsuseriduseridwithstartdatetimewithenddatetime.GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-import com.microsoft.graph.communications.adhoccalls.getalltranscriptsuseriduseridwithstartdatetimewithenddatetime.GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.communications.adhoccalls.getallrecordingsuseriduseridwithstartdatetimewithenddatetime.GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d;
+import com.microsoft.graph.communications.adhoccalls.getalltranscriptsuseriduseridwithstartdatetimewithenddatetime.GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382;
 import com.microsoft.graph.communications.adhoccalls.item.AdhocCallItemRequestBuilder;
 import com.microsoft.graph.models.AdhocCall;
 import com.microsoft.graph.models.AdhocCallCollectionResponse;
@@ -35,19 +35,19 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAllRecordings method.
-     * @return a {@link GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d}
      */
     @jakarta.annotation.Nonnull
-    public GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime() {
-        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
+    public GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAllTranscripts method.
-     * @return a {@link GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382}
      */
     @jakarta.annotation.Nonnull
-    public GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime() {
-        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
+    public GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382 getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the adhocCalls property of the microsoft.graph.cloudCommunications entity.

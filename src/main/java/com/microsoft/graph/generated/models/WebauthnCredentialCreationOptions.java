@@ -57,7 +57,7 @@ public class WebauthnCredentialCreationOptions implements AdditionalDataHolder, 
         return this.backingStore;
     }
     /**
-     * Gets the challengeTimeoutDateTime property value. The challengeTimeoutDateTime property
+     * Gets the challengeTimeoutDateTime property value. The date and time when the challenge times out and can no longer be used to create a credential.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class WebauthnCredentialCreationOptions implements AdditionalDataHolder, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the publicKey property value. The publicKey property
+     * Gets the publicKey property value. The WebAuthn public key creation options.
      * @return a {@link WebauthnPublicKeyCredentialCreationOptions}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class WebauthnCredentialCreationOptions implements AdditionalDataHolder, 
         this.backingStore = value;
     }
     /**
-     * Sets the challengeTimeoutDateTime property value. The challengeTimeoutDateTime property
+     * Sets the challengeTimeoutDateTime property value. The date and time when the challenge times out and can no longer be used to create a credential.
      * @param value Value to set for the challengeTimeoutDateTime property.
      */
     public void setChallengeTimeoutDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -133,7 +133,7 @@ public class WebauthnCredentialCreationOptions implements AdditionalDataHolder, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the publicKey property value. The publicKey property
+     * Sets the publicKey property value. The WebAuthn public key creation options.
      * @param value Value to set for the publicKey property.
      */
     public void setPublicKey(@jakarta.annotation.Nullable final WebauthnPublicKeyCredentialCreationOptions value) {

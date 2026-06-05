@@ -36,19 +36,21 @@ public class CreationOptionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/fido2Methods/creationOptions()", rawUrl);
     }
     /**
-     * Invoke function creationOptions
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. This function returns WebAuthn credential creation options that include a challenge, relying party information, and user information, which are used by the client to create a new FIDO2 credential. The challenge property and credential IDs in excludeCredentials are Base64URL-encoded without padding. All binary data in the response follows Base64URL encoding as defined in RFC 4648 Section 5.
      * @return a {@link WebauthnCredentialCreationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-creationoptions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebauthnCredentialCreationOptions get() {
         return get(null);
     }
     /**
-     * Invoke function creationOptions
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. This function returns WebAuthn credential creation options that include a challenge, relying party information, and user information, which are used by the client to create a new FIDO2 credential. The challenge property and credential IDs in excludeCredentials are Base64URL-encoded without padding. All binary data in the response follows Base64URL encoding as defined in RFC 4648 Section 5.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WebauthnCredentialCreationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-creationoptions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebauthnCredentialCreationOptions get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class CreationOptionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WebauthnCredentialCreationOptions::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function creationOptions
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. This function returns WebAuthn credential creation options that include a challenge, relying party information, and user information, which are used by the client to create a new FIDO2 credential. The challenge property and credential IDs in excludeCredentials are Base64URL-encoded without padding. All binary data in the response follows Base64URL encoding as defined in RFC 4648 Section 5.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class CreationOptionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function creationOptions
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. This function returns WebAuthn credential creation options that include a challenge, relying party information, and user information, which are used by the client to create a new FIDO2 credential. The challenge property and credential IDs in excludeCredentials are Base64URL-encoded without padding. All binary data in the response follows Base64URL encoding as defined in RFC 4648 Section 5.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

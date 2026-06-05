@@ -16,7 +16,7 @@ import com.microsoft.graph.drives.item.items.item.discardcheckout.DiscardCheckou
 import com.microsoft.graph.drives.item.items.item.extractsensitivitylabels.ExtractSensitivityLabelsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.follow.FollowRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetime_3adc0b7b.GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb;
 import com.microsoft.graph.drives.item.items.item.invite.InviteRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.listitem.ListItemRequestBuilder;
@@ -355,14 +355,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime=&apos;{endDateTime}&apos;
      * @param interval Usage: interval=&apos;{interval}&apos;
      * @param startDateTime Usage: startDateTime=&apos;{startDateTime}&apos;
-     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
+     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb}
      */
     @jakarta.annotation.Nonnull
-    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
+    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(interval);
         Objects.requireNonNull(startDateTime);
-        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
     }
     /**
      * Update the navigation property items in drives

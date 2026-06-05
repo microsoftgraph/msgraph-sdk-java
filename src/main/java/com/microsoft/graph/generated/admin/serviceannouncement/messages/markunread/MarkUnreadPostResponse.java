@@ -23,6 +23,7 @@ public class MarkUnreadPostResponse implements AdditionalDataHolder, BackedModel
     public MarkUnreadPostResponse() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setValue(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -5,6 +5,7 @@ import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.IncidentCollectionResponse;
 import com.microsoft.graph.security.incidents.count.CountRequestBuilder;
 import com.microsoft.graph.security.incidents.item.IncidentItemRequestBuilder;
+import com.microsoft.graph.security.incidents.microsoftgraphsecuritymergeincidents.MicrosoftGraphSecurityMergeIncidentsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -30,6 +31,14 @@ public class IncidentsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the mergeIncidents method.
+     * @return a {@link MicrosoftGraphSecurityMergeIncidentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityMergeIncidentsRequestBuilder microsoftGraphSecurityMergeIncidents() {
+        return new MicrosoftGraphSecurityMergeIncidentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the incidents property of the microsoft.graph.security entity.

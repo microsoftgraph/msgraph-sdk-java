@@ -23,6 +23,7 @@ public class GetMemberObjectsPostRequestBody implements AdditionalDataHolder, Ba
     public GetMemberObjectsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setSecurityEnabledOnly(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

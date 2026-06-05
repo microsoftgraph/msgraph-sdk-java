@@ -102,7 +102,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
         deserializerMap.put("activeDirectoryObjectGuid", (n) -> { this.setActiveDirectoryObjectGuid(n.getUUIDValue()); });
         deserializerMap.put("azureAdUserId", (n) -> { this.setAzureAdUserId(n.getStringValue()); });
@@ -110,6 +110,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("resourceAccessEvents", (n) -> { this.setResourceAccessEvents(n.getCollectionOfObjectValues(ResourceAccessEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("userSid", (n) -> { this.setUserSid(n.getStringValue()); });
         return deserializerMap;
@@ -129,6 +130,14 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nullable
     public java.util.List<ResourceAccessEvent> getResourceAccessEvents() {
         return this.backingStore.get("resourceAccessEvents");
+    }
+    /**
+     * Gets the tenantId property value. The tenantId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getTenantId() {
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the userPrincipalName property value. The user principal name of the account in Microsoft Entra ID.
@@ -159,6 +168,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
         writer.writeStringValue("domainName", this.getDomainName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("resourceAccessEvents", this.getResourceAccessEvents());
+        writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeStringValue("userSid", this.getUserSid());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -226,6 +236,13 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setResourceAccessEvents(@jakarta.annotation.Nullable final java.util.List<ResourceAccessEvent> value) {
         this.backingStore.set("resourceAccessEvents", value);
+    }
+    /**
+     * Sets the tenantId property value. The tenantId property
+     * @param value Value to set for the tenantId property.
+     */
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name of the account in Microsoft Entra ID.

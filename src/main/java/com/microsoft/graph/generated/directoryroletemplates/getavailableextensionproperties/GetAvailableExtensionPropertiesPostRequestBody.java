@@ -23,6 +23,7 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
     public GetAvailableExtensionPropertiesPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setIsSyncedFromOnPremises(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

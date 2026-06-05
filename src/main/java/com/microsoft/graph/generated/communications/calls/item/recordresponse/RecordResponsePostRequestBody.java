@@ -24,6 +24,8 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Back
     public RecordResponsePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setBargeInAllowed(false);
+        this.setPlayBeep(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
