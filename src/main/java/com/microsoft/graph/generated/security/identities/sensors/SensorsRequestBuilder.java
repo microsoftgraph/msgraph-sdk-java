@@ -7,7 +7,7 @@ import com.microsoft.graph.security.identities.sensors.count.CountRequestBuilder
 import com.microsoft.graph.security.identities.sensors.item.SensorItemRequestBuilder;
 import com.microsoft.graph.security.identities.sensors.microsoftgraphsecuritygetdeploymentaccesskey.MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder;
 import com.microsoft.graph.security.identities.sensors.microsoftgraphsecuritygetdeploymentpackageuri.MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilder;
-import com.microsoft.graph.security.identities.sensors.microsoftgraphsecurityregeneratedeploymentaccesskey.MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder;
+import com.microsoft.graph.security.identities.sensors.microsoftgraphsecurityregeneratedeploymentaccesskey.MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -52,11 +52,11 @@ public class SensorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the regenerateDeploymentAccessKey method.
-     * @return a {@link MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder}
+     * @return a {@link MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder microsoftGraphSecurityRegenerateDeploymentAccessKey() {
-        return new MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4 microsoftGraphSecurityRegenerateDeploymentAccessKey() {
+        return new MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sensors property of the microsoft.graph.security.identityContainer entity.

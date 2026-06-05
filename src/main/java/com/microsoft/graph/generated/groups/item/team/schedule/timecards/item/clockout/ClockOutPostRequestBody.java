@@ -24,6 +24,7 @@ public class ClockOutPostRequestBody implements AdditionalDataHolder, BackedMode
     public ClockOutPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setIsAtApprovedLocation(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

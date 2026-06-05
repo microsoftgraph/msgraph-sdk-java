@@ -24,6 +24,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, BackedModel
     public DeclinePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setSendResponse(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

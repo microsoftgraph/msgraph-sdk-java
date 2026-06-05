@@ -85,7 +85,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
+     * Gets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value can be Fido2 or microsoftAuthenticator.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
+     * Sets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value can be Fido2 or microsoftAuthenticator.
      * @param value Value to set for the targetedAuthenticationMethod property.
      */
     public void setTargetedAuthenticationMethod(@jakarta.annotation.Nullable final String value) {

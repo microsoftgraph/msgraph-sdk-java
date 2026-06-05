@@ -48,7 +48,7 @@ public class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHol
         return value;
     }
     /**
-     * Gets the authenticatorAttachment property value. The authenticatorAttachment property
+     * Gets the authenticatorAttachment property value. Specifies the preferred attachment modality for the authenticator. Possible values: platform (device-bound authenticator, such as Windows Hello), cross-platform (removable authenticator, such as a USB security key), or null (no preference).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHol
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the requireResidentKey property value. The requireResidentKey property
+     * Gets the requireResidentKey property value. Indicates whether the authenticator must create a client-side-resident credential (also known as a discoverable credential). If true, the credential can be used without providing a credential ID.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHol
         return this.backingStore.get("requireResidentKey");
     }
     /**
-     * Gets the userVerification property value. The userVerification property
+     * Gets the userVerification property value. Specifies the relying party&apos;s preference for user verification during credential creation. Possible values: required, preferred, or discouraged.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHol
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the authenticatorAttachment property value. The authenticatorAttachment property
+     * Sets the authenticatorAttachment property value. Specifies the preferred attachment modality for the authenticator. Possible values: platform (device-bound authenticator, such as Windows Hello), cross-platform (removable authenticator, such as a USB security key), or null (no preference).
      * @param value Value to set for the authenticatorAttachment property.
      */
     public void setAuthenticatorAttachment(@jakarta.annotation.Nullable final String value) {
@@ -142,14 +142,14 @@ public class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHol
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the requireResidentKey property value. The requireResidentKey property
+     * Sets the requireResidentKey property value. Indicates whether the authenticator must create a client-side-resident credential (also known as a discoverable credential). If true, the credential can be used without providing a credential ID.
      * @param value Value to set for the requireResidentKey property.
      */
     public void setRequireResidentKey(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("requireResidentKey", value);
     }
     /**
-     * Sets the userVerification property value. The userVerification property
+     * Sets the userVerification property value. Specifies the relying party&apos;s preference for user verification during credential creation. Possible values: required, preferred, or discouraged.
      * @param value Value to set for the userVerification property.
      */
     public void setUserVerification(@jakarta.annotation.Nullable final String value) {

@@ -8,7 +8,7 @@ import com.microsoft.graph.groups.item.sites.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetime_3adc0b7b.GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb;
 import com.microsoft.graph.groups.item.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getbypathwithpath.GetByPathWithPathRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.items.ItemsRequestBuilder;
@@ -228,14 +228,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime=&apos;{endDateTime}&apos;
      * @param interval Usage: interval=&apos;{interval}&apos;
      * @param startDateTime Usage: startDateTime=&apos;{startDateTime}&apos;
-     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
+     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb}
      */
     @jakarta.annotation.Nonnull
-    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
+    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(interval);
         Objects.requireNonNull(startDateTime);
-        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_41999afb(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
     }
     /**
      * Provides operations to call the getApplicableContentTypesForList method.

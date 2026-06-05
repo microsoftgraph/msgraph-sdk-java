@@ -56,7 +56,7 @@ public class WebauthnPublicKeyCredential implements AdditionalDataHolder, Backed
         return this.backingStore;
     }
     /**
-     * Gets the clientExtensionResults property value. The clientExtensionResults property
+     * Gets the clientExtensionResults property value. The output of the WebAuthn extension processing.
      * @return a {@link WebauthnAuthenticationExtensionsClientOutputs}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class WebauthnPublicKeyCredential implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The credential ID created by the WebAuthn Authenticator. This value is Base64URL-encoded without padding.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class WebauthnPublicKeyCredential implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the response property value. The response property
+     * Gets the response property value. The response from the WebAuthn Authenticator after generating an attestation.
      * @return a {@link WebauthnAuthenticatorAttestationResponse}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class WebauthnPublicKeyCredential implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the clientExtensionResults property value. The clientExtensionResults property
+     * Sets the clientExtensionResults property value. The output of the WebAuthn extension processing.
      * @param value Value to set for the clientExtensionResults property.
      */
     public void setClientExtensionResults(@jakarta.annotation.Nullable final WebauthnAuthenticationExtensionsClientOutputs value) {
         this.backingStore.set("clientExtensionResults", value);
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The credential ID created by the WebAuthn Authenticator. This value is Base64URL-encoded without padding.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class WebauthnPublicKeyCredential implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the response property value. The response property
+     * Sets the response property value. The response from the WebAuthn Authenticator after generating an attestation.
      * @param value Value to set for the response property.
      */
     public void setResponse(@jakarta.annotation.Nullable final WebauthnAuthenticatorAttestationResponse value) {

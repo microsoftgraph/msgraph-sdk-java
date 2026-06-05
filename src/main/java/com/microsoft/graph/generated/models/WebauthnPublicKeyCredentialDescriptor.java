@@ -69,7 +69,7 @@ public class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHold
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The credential ID of the credential being described. This value is Base64URL-encoded without padding.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHold
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the transports property value. The transports property
+     * Gets the transports property value. A hint about the types of transport that the authenticator supports. Possible values include: usb, nfc, ble, internal.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHold
         return this.backingStore.get("transports");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of credential. Currently, the only supported value is public-key.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The credential ID of the credential being described. This value is Base64URL-encoded without padding.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -142,14 +142,14 @@ public class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHold
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the transports property value. The transports property
+     * Sets the transports property value. A hint about the types of transport that the authenticator supports. Possible values include: usb, nfc, ble, internal.
      * @param value Value to set for the transports property.
      */
     public void setTransports(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("transports", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of credential. Currently, the only supported value is public-key.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

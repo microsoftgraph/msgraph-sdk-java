@@ -2,7 +2,7 @@ package com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item
 
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.userprocessingresults.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.userprocessingresults.item.UserProcessingResultItemRequestBuilder;
-import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.userprocessingresults.microsoftgraphidentitygovernancesummarywithstartdatetimewithenddatetime.MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.userprocessingresults.microsoftgraphidentitygovernancesummarywithstartdatetim_9a9ea30a.MicrosoftGraphIdentityGovernanceSummaryWithStartDateTim_d3859c20;
 import com.microsoft.graph.models.identitygovernance.UserProcessingResultCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -88,13 +88,13 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the summary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphIdentityGovernanceSummaryWithStartDateTim_d3859c20}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTim_d3859c20 microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
-        return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+        return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTim_d3859c20(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Get the userProcessingResult resources for a workflow.

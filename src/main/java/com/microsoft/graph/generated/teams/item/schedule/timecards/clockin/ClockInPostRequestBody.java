@@ -24,6 +24,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel
     public ClockInPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setIsAtApprovedLocation(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

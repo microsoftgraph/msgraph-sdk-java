@@ -90,7 +90,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("passkeyType");
     }
     /**
-     * Gets the publicKeyCredential property value. The publicKeyCredential property
+     * Gets the publicKeyCredential property value. Contains the WebAuthn public key credential information being registered. This property is used only for write requests and isn&apos;t returned on read operations.
      * @return a {@link WebauthnPublicKeyCredential}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         this.backingStore.set("passkeyType", value);
     }
     /**
-     * Sets the publicKeyCredential property value. The publicKeyCredential property
+     * Sets the publicKeyCredential property value. Contains the WebAuthn public key credential information being registered. This property is used only for write requests and isn&apos;t returned on read operations.
      * @param value Value to set for the publicKeyCredential property.
      */
     public void setPublicKeyCredential(@jakarta.annotation.Nullable final WebauthnPublicKeyCredential value) {

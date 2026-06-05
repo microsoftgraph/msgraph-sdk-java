@@ -24,6 +24,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     public ValidateCredentialsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setUseSavedCredentials(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -23,6 +23,7 @@ public class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel
     public ArchivePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setShouldSetSpoSiteReadOnlyForMembers(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

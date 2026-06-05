@@ -99,6 +99,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         deserializerMap.put("resourceRoleScopes", (n) -> { this.setResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
         deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(EntitlementManagementSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjects", (n) -> { this.setSubjects(n.getCollectionOfObjectValues(AccessPackageSubject::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -142,6 +143,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("settings");
     }
     /**
+     * Gets the subjects property value. The subjects property
+     * @return a {@link java.util.List<AccessPackageSubject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AccessPackageSubject> getSubjects() {
+        return this.backingStore.get("subjects");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -160,6 +169,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("resourceRoleScopes", this.getResourceRoleScopes());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
         writer.writeObjectValue("settings", this.getSettings());
+        writer.writeCollectionOfObjectValues("subjects", this.getSubjects());
     }
     /**
      * Sets the accessPackageAssignmentApprovals property value. Approval stages for decisions associated with access package assignment requests.
@@ -244,5 +254,12 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     public void setSettings(@jakarta.annotation.Nullable final EntitlementManagementSettings value) {
         this.backingStore.set("settings", value);
+    }
+    /**
+     * Sets the subjects property value. The subjects property
+     * @param value Value to set for the subjects property.
+     */
+    public void setSubjects(@jakarta.annotation.Nullable final java.util.List<AccessPackageSubject> value) {
+        this.backingStore.set("subjects", value);
     }
 }

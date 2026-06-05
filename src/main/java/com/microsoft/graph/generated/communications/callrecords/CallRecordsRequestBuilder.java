@@ -2,8 +2,8 @@ package com.microsoft.graph.communications.callrecords;
 
 import com.microsoft.graph.communications.callrecords.count.CountRequestBuilder;
 import com.microsoft.graph.communications.callrecords.item.CallRecordItemRequestBuilder;
-import com.microsoft.graph.communications.callrecords.microsoftgraphcallrecordsgetdirectroutingcallswithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-import com.microsoft.graph.communications.callrecords.microsoftgraphcallrecordsgetpstncallswithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+import com.microsoft.graph.communications.callrecords.microsoftgraphcallrecordsgetdirectroutingcallswithfromd_89393f3d.MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_973ac11c;
+import com.microsoft.graph.communications.callrecords.microsoftgraphcallrecordsgetpstncallswithfromdatetimewi_60515f08.MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_5a427c7c;
 import com.microsoft.graph.models.callrecords.CallRecord;
 import com.microsoft.graph.models.callrecords.CallRecordCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -90,25 +90,25 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getDirectRoutingCalls method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a {@link MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_973ac11c}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
+    public MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_973ac11c microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
         Objects.requireNonNull(fromDateTime);
         Objects.requireNonNull(toDateTime);
-        return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+        return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_973ac11c(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Provides operations to call the getPstnCalls method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a {@link MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_5a427c7c}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
+    public MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_5a427c7c microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
         Objects.requireNonNull(fromDateTime);
         Objects.requireNonNull(toDateTime);
-        return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+        return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_5a427c7c(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Create new navigation property to callRecords for communications

@@ -4,7 +4,7 @@ import com.microsoft.graph.models.EmployeeExperienceUser;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.employeeexperience.assignedroles.AssignedRolesRequestBuilder;
 import com.microsoft.graph.users.item.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
-import com.microsoft.graph.users.item.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
+import com.microsoft.graph.users.item.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdReq_93f96b28;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -98,12 +98,12 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperienceUser entity.
      * @param externalcourseActivityId Alternate key of learningCourseActivity
-     * @return a {@link LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder}
+     * @return a {@link LearningCourseActivitiesWithExternalcourseActivityIdReq_93f96b28}
      */
     @jakarta.annotation.Nonnull
-    public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
+    public LearningCourseActivitiesWithExternalcourseActivityIdReq_93f96b28 learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
         Objects.requireNonNull(externalcourseActivityId);
-        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
+        return new LearningCourseActivitiesWithExternalcourseActivityIdReq_93f96b28(pathParameters, requestAdapter, externalcourseActivityId);
     }
     /**
      * Update the navigation property employeeExperience in users

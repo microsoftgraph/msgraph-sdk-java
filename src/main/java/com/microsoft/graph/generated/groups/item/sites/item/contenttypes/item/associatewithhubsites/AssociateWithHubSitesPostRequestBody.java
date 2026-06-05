@@ -23,6 +23,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
     public AssociateWithHubSitesPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setPropagateToExistingLists(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

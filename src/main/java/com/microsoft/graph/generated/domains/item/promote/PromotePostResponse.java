@@ -23,6 +23,7 @@ public class PromotePostResponse implements AdditionalDataHolder, BackedModel, P
     public PromotePostResponse() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setValue(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

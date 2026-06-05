@@ -26,6 +26,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, BackedMode
     public EvaluatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setAppliedPoliciesOnly(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
