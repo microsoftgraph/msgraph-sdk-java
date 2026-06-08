@@ -71,4 +71,17 @@ android {
 	}
 }
 
-apply from: "../gradle/dependencies.gradle"
+
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+
+    api 'com.microsoft.graph:microsoft-graph-core:3.6.6'
+
+    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:1.9.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:1.9.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:1.9.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:1.9.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:1.9.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:1.9.2'
+}

@@ -20,16 +20,17 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/.gradle/
-/build/
-/bin/
+
+# Maven
+/target/
+
+# Maven wrapper
+!.mvn/wrapper/maven-wrapper.jar
 
 #Eclipse
 .project
 .classpath
 .settings
 
-# Maven
-/target/
 local.properties
 .idea

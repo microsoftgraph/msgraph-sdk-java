@@ -1,10 +1,7 @@
 version: 2
 updates:
-- package-ecosystem: gradle
-  directories:
-    - "/"
-    - "/java-8"
-    - "/android"
+- package-ecosystem: maven
+  directory: "/"
   schedule:
     interval: daily
     time: "09:00" # 9am UTC
@@ -16,12 +13,14 @@ updates:
     microsoft-graph:
       patterns:
         - "*microsoft-graph*"
-    junit-dependencies:
-      patterns:
-        - "*junit*"
-    open-telemetry:
-      patterns:
-        - "*opentelemetry*"
+- package-ecosystem: gradle
+  directories:
+    - "/android"
+  schedule:
+    interval: daily
+    time: "09:00" # 9am UTC
+  open-pull-requests-limit: 10
+  groups:
     android-build-tools:
       patterns:
         - "*android*"

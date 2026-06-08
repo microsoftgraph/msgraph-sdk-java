@@ -60,29 +60,61 @@ extends:
                   Copy-Item $(downloadLocalProperties.secureFilePath) local.properties -Verbose
                 displayName: Copy secring and 'local.properties'
 
-              - script: ./gradlew --no-daemon publishToMavenLocal -PmavenCentralPublishingEnabled=true -PmavenCentralSnapshotArtifactSuffix=""
+              - pwsh: |
+                  $props = Get-Content local.properties -Raw
+                  $keyId = ($props | Select-String -Pattern 'signing\.keyId=(.+)').Matches.Groups[1].Value
+                  $keyRingFile = ($props | Select-String -Pattern 'signing\.secretKeyRingFile=(.+)').Matches.Groups[1].Value
+                  $keyPassword = ($props | Select-String -Pattern 'signing\.password=(.+)').Matches.Groups[1].Value
+
+                  $settingsXml = @"
+                  <settings>
+                    <servers>
+                      <server>
+                        <id>GraphDeveloperExperiencesPublic</id>
+                        <username>microsoftgraph</username>
+                        <password>${{ variables.ARTIFACTS_PAT }}</password>
+                      </server>
+                    </servers>
+                    <profiles>
+                      <profile>
+                        <id>signing</id>
+                        <properties>
+                          <gpg.keyname>$keyId</gpg.keyname>
+                          <gpg.passphrase>$keyPassword</gpg.passphrase>
+                        </properties>
+                      </profile>
+                    </profiles>
+                  </settings>
+                  "@
+                  $settingsDir = Join-Path $HOME ".m2"
+                  New-Item -ItemType Directory -Path $settingsDir -Force | Out-Null
+                  $settingsXml | Set-Content (Join-Path $settingsDir "settings.xml") -Encoding UTF8
+                displayName: Configure Maven settings
+
+              - script: ./mvnw install -Psigning --no-transfer-progress -DmavenCentralSnapshotSuffix=""
                 displayName: Publish to local Maven for verification
                 condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
 
-              - script: ./gradlew --no-daemon publishToMavenLocal -PmavenCentralPublishingEnabled=true
+              - script: ./mvnw install -Psigning --no-transfer-progress
                 displayName: Publish to local Maven for verification
                 condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
 
-              - script: ./gradlew --no-daemon publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true -PmavenCentralSnapshotArtifactSuffix=""
-                displayName: Publish to local Maven ADO for ESRP
+              - script: ./mvnw deploy -Psigning --no-transfer-progress -DmavenCentralSnapshotSuffix="" -DaltDeploymentRepository=ADO::default::file://$(Build.SourcesDirectory)/target/staging-deploy
+                displayName: Stage artifacts for ESRP
                 condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
 
-              - script: ./gradlew --no-daemon publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true
-                displayName: Publish to local Maven ADO for ESRP
+              - script: ./mvnw deploy -Psigning --no-transfer-progress -DaltDeploymentRepository=ADO::default::file://$(Build.SourcesDirectory)/target/staging-deploy
+                displayName: Stage artifacts for ESRP
                 condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
 
               - pwsh: |
-                  $contents = Get-Content gradle.properties -Raw
-                  $major = $contents | Select-String -Pattern 'mavenMajorVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
-                  $minor = $contents | Select-String -Pattern 'mavenMinorVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
-                  $patch = $contents | Select-String -Pattern 'mavenPatchVersion\s*=\s*([0-9]+)' | ForEach-Object { $_.Matches.Groups[1].Value }
+                  $pomXml = [xml](Get-Content pom.xml)
+                  $version = $pomXml.project.version
                   $snapshot_suffix = if ($Env:BRANCH_NAME.StartsWith('refs/tags/v')) { '' } else { '-SNAPSHOT' }
-                  $version = "$major.$minor.$patch$snapshot_suffix"
+                  # If version already contains -SNAPSHOT and we're on a tag, strip it
+                  if ($Env:BRANCH_NAME.StartsWith('refs/tags/v')) {
+                    $version = $version -replace '-SNAPSHOT$', ''
+                  }
                   echo "Current version is $version"
                   echo "##vso[task.setvariable variable=PACKAGE_VERSION;]$version"
                 displayName: Get current version
@@ -95,7 +127,7 @@ extends:
                 displayName: Inspect contents of local Maven cache
 
               - pwsh: |
-                  $packageFullPath = Join-Path -Path "./" -ChildPath "build/publishing-repository/com/microsoft/graph/microsoft-graph" -AdditionalChildPath "$(PACKAGE_VERSION)"
+                  $packageFullPath = Join-Path -Path "./target/staging-deploy" -ChildPath "com/microsoft/graph/microsoft-graph" -AdditionalChildPath "$(PACKAGE_VERSION)"
                   echo "Package full path: $packageFullPath"
                   echo "##vso[task.setvariable variable=PACKAGE_PATH;]$packageFullPath"
                 displayName: Get the package full path
