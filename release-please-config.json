@@ -17,8 +17,7 @@
         {
           "type": "xml",
           "path": "pom.xml",
-          "xpath": "//project/version"
-        },
+          "xpath": "/*[local-name()='project']/*[local-name()='version']"
         "README.md",
         "src/main/java/com/microsoft/graph/info/Constants.java"
       ]
