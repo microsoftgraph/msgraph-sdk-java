@@ -96,7 +96,7 @@ extends:
                   $settingsXml | Set-Content (Join-Path $settingsDir "settings.xml") -Encoding UTF8
                 displayName: Configure Maven settings
 
-              - script: ./mvnw install -Psigning --no-transfer-progress -DmavenCentralSnapshotSuffix=""
+              - script: ./mvnw install -Psigning --no-transfer-progress
                 displayName: Publish to local Maven for verification
                 condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
 
