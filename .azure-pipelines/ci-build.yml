@@ -61,9 +61,14 @@ extends:
                 displayName: Copy secring and 'local.properties'
 
               - pwsh: |
+                  # maven-gpg-plugin signs via the local gpg keyring, so the key from
+                  # secring.gpg must be imported into gpg before signing can succeed.
+                  gpg --batch --import secring.gpg
+                displayName: Import GPG signing key
+
+              - pwsh: |
                   $props = Get-Content local.properties -Raw
                   $keyId = ($props | Select-String -Pattern 'signing\.keyId=(.+)').Matches.Groups[1].Value
-                  $keyRingFile = ($props | Select-String -Pattern 'signing\.secretKeyRingFile=(.+)').Matches.Groups[1].Value
                   $keyPassword = ($props | Select-String -Pattern 'signing\.password=(.+)').Matches.Groups[1].Value
 
                   $settingsXml = @"
