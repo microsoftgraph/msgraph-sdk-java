@@ -19,7 +19,9 @@ resources:
 extends:
   template: v1/1ES.Unofficial.PipelineTemplate.yml@1ESPipelineTemplates
   parameters:
-    pool: 1es-ubuntu-latest-m
+    pool:
+      name: 1es-ubuntu-latest-m
+      os: linux
     sdl:
       sourceAnalysisPool:
         name: Azure-Pipelines-1ESPT-ExDShared
