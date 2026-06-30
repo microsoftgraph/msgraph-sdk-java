@@ -104,7 +104,7 @@ extends:
                 displayName: Publish to local Maven for verification
                 condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
 
-              - script: ./mvnw deploy -Psigning --no-transfer-progress -DmavenCentralSnapshotSuffix="" -DaltDeploymentRepository=ADO::default::file://$(Build.SourcesDirectory)/target/staging-deploy
+              - script: ./mvnw deploy -Psigning --no-transfer-progress -DaltDeploymentRepository=ADO::default::file://$(Build.SourcesDirectory)/target/staging-deploy
                 displayName: Stage artifacts for ESRP
                 condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
 
