@@ -35,7 +35,7 @@
 
     <scm>
         <url>https://github.com/microsoftgraph/msgraph-sdk-java</url>
-        <connection>scm:git:git://github.com/microsoftgraph/msgraph-sdk-java.git</connection>
+        <connection>scm:git:https://github.com/microsoftgraph/msgraph-sdk-java.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:microsoftgraph/msgraph-sdk-java.git</developerConnection>
     </scm>
 
