@@ -34,7 +34,7 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("allMembers");
     }
     /**
-     * Gets the createdDateTime property value. Read only. Timestamp at which the channel was created.
+     * Gets the createdDateTime property value. Read-only. Timestamp at which the channel was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -250,7 +250,7 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("allMembers", value);
     }
     /**
-     * Sets the createdDateTime property value. Read only. Timestamp at which the channel was created.
+     * Sets the createdDateTime property value. Read-only. Timestamp at which the channel was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

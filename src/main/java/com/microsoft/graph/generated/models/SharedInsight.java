@@ -40,7 +40,7 @@ public class SharedInsight extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastShared property value. Details about the shared item. Read only.
+     * Gets the lastShared property value. Details about the shared item. Read-only.
      * @return a {@link SharingDetail}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class SharedInsight extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("sharingHistory", this.getSharingHistory());
     }
     /**
-     * Sets the lastShared property value. Details about the shared item. Read only.
+     * Sets the lastShared property value. Details about the shared item. Read-only.
      * @param value Value to set for the lastShared property.
      */
     public void setLastShared(@jakarta.annotation.Nullable final SharingDetail value) {

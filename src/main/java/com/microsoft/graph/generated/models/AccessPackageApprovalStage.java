@@ -56,6 +56,14 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         return value;
     }
     /**
+     * Gets the approverInformationVisibility property value. The approverInformationVisibility property
+     * @return a {@link ApproverInformationVisibility}
+     */
+    @jakarta.annotation.Nullable
+    public ApproverInformationVisibility getApproverInformationVisibility() {
+        return this.backingStore.get("approverInformationVisibility");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -80,7 +88,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         return this.backingStore.get("durationBeforeEscalation");
     }
     /**
-     * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
+     * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who are asked to approve requests.
      * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +117,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        deserializerMap.put("approverInformationVisibility", (n) -> { this.setApproverInformationVisibility(n.getEnumValue(ApproverInformationVisibility::forValue)); });
         deserializerMap.put("durationBeforeAutomaticDenial", (n) -> { this.setDurationBeforeAutomaticDenial(n.getPeriodAndDurationValue()); });
         deserializerMap.put("durationBeforeEscalation", (n) -> { this.setDurationBeforeEscalation(n.getPeriodAndDurationValue()); });
         deserializerMap.put("escalationApprovers", (n) -> { this.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
@@ -146,7 +155,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
+     * Gets the primaryApprovers property value. The subjects, typically users, who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
      * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
@@ -159,6 +168,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("approverInformationVisibility", this.getApproverInformationVisibility());
         writer.writePeriodAndDurationValue("durationBeforeAutomaticDenial", this.getDurationBeforeAutomaticDenial());
         writer.writePeriodAndDurationValue("durationBeforeEscalation", this.getDurationBeforeEscalation());
         writer.writeCollectionOfObjectValues("escalationApprovers", this.getEscalationApprovers());
@@ -176,6 +186,13 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the approverInformationVisibility property value. The approverInformationVisibility property
+     * @param value Value to set for the approverInformationVisibility property.
+     */
+    public void setApproverInformationVisibility(@jakarta.annotation.Nullable final ApproverInformationVisibility value) {
+        this.backingStore.set("approverInformationVisibility", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.
@@ -200,7 +217,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         this.backingStore.set("durationBeforeEscalation", value);
     }
     /**
-     * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
+     * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who are asked to approve requests.
      * @param value Value to set for the escalationApprovers property.
      */
     public void setEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
@@ -242,7 +259,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
+     * Sets the primaryApprovers property value. The subjects, typically users, who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
      * @param value Value to set for the primaryApprovers property.
      */
     public void setPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {

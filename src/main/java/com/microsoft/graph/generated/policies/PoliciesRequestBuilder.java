@@ -15,6 +15,7 @@ import com.microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPol
 import com.microsoft.graph.policies.defaultappmanagementpolicy.DefaultAppManagementPolicyRequestBuilder;
 import com.microsoft.graph.policies.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
+import com.microsoft.graph.policies.federatedtokenvalidationpolicy.FederatedTokenValidationPolicyRequestBuilder;
 import com.microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
 import com.microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.policies.ownerlessgrouppolicy.OwnerlessGroupPolicyRequestBuilder;
@@ -144,6 +145,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FeatureRolloutPoliciesRequestBuilder featureRolloutPolicies() {
         return new FeatureRolloutPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the federatedTokenValidationPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link FederatedTokenValidationPolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public FederatedTokenValidationPolicyRequestBuilder federatedTokenValidationPolicy() {
+        return new FederatedTokenValidationPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity.

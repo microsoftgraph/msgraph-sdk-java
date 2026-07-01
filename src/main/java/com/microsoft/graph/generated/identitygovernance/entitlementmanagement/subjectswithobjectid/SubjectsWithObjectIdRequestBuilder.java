@@ -79,21 +79,23 @@ public class SubjectsWithObjectIdRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageSubject::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property subjects in identityGovernance
+     * Update an external directory user represented by an existing accessPackageSubject object to change the subject lifecycle.
      * @param body The request body
      * @return a {@link AccessPackageSubject}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagesubject-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject patch(@jakarta.annotation.Nonnull final AccessPackageSubject body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property subjects in identityGovernance
+     * Update an external directory user represented by an existing accessPackageSubject object to change the subject lifecycle.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageSubject}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagesubject-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject patch(@jakarta.annotation.Nonnull final AccessPackageSubject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -144,7 +146,7 @@ public class SubjectsWithObjectIdRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property subjects in identityGovernance
+     * Update an external directory user represented by an existing accessPackageSubject object to change the subject lifecycle.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -153,7 +155,7 @@ public class SubjectsWithObjectIdRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property subjects in identityGovernance
+     * Update an external directory user represented by an existing accessPackageSubject object to change the subject lifecycle.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

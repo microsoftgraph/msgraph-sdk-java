@@ -75,7 +75,7 @@ public class MergeResponse implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the targetIncidentId property value. The targetIncidentId property
+     * Gets the targetIncidentId property value. The ID of the target incident after the operation completes.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class MergeResponse implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the targetIncidentId property value. The targetIncidentId property
+     * Sets the targetIncidentId property value. The ID of the target incident after the operation completes.
      * @param value Value to set for the targetIncidentId property.
      */
     public void setTargetIncidentId(@jakarta.annotation.Nullable final String value) {
