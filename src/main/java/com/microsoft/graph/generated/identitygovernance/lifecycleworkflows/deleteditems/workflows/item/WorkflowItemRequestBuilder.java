@@ -6,8 +6,12 @@ import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.wo
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.lastmodifiedby.LastModifiedByRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernanceactivate.MicrosoftGraphIdentityGovernanceActivateRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernanceactivatewithscope.MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernanceclearquarantine.MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernancecreatenewversion.MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernancepreviewtaskfailures.MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernancepreviewworkflow.MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernancerestore.MicrosoftGraphIdentityGovernanceRestoreRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.previewscope.PreviewScopeRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.runs.RunsRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.taskreports.TaskReportsRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.tasks.TasksRequestBuilder;
@@ -82,6 +86,14 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the clearQuarantine method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder microsoftGraphIdentityGovernanceClearQuarantine() {
+        return new MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the createNewVersion method.
      * @return a {@link MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder}
      */
@@ -90,12 +102,36 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the previewTaskFailures method.
+     * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef microsoftGraphIdentityGovernancePreviewTaskFailures() {
+        return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the previewWorkflow method.
+     * @return a {@link MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder microsoftGraphIdentityGovernancePreviewWorkflow() {
+        return new MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the restore method.
      * @return a {@link MicrosoftGraphIdentityGovernanceRestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceRestoreRequestBuilder microsoftGraphIdentityGovernanceRestore() {
         return new MicrosoftGraphIdentityGovernanceRestoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the previewScope property of the microsoft.graph.identityGovernance.workflow entity.
+     * @return a {@link PreviewScopeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PreviewScopeRequestBuilder previewScope() {
+        return new PreviewScopeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the runs property of the microsoft.graph.identityGovernance.workflow entity.

@@ -38,6 +38,14 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("acceptedSenders");
     }
     /**
+     * Gets the accessType property value. Indicates the type of access to the group. The possible values are: none, private, secret, public, unknownFutureValue. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * @return a {@link GroupAccessType}
+     */
+    @jakarta.annotation.Nullable
+    public GroupAccessType getAccessType() {
+        return this.backingStore.get("accessType");
+    }
+    /**
      * Gets the allowExternalSenders property value. Indicates if people external to the organization can send messages to the group. The default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
@@ -189,6 +197,7 @@ public class Group extends DirectoryObject implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acceptedSenders", (n) -> { this.setAcceptedSenders(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(GroupAccessType::forValue)); });
         deserializerMap.put("allowExternalSenders", (n) -> { this.setAllowExternalSenders(n.getBooleanValue()); });
         deserializerMap.put("appRoleAssignments", (n) -> { this.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("assignedLabels", (n) -> { this.setAssignedLabels(n.getCollectionOfObjectValues(AssignedLabel::createFromDiscriminatorValue)); });
@@ -215,6 +224,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("infoCatalogs", (n) -> { this.setInfoCatalogs(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isAssignableToRole", (n) -> { this.setIsAssignableToRole(n.getBooleanValue()); });
+        deserializerMap.put("isFavorite", (n) -> { this.setIsFavorite(n.getBooleanValue()); });
         deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("isSubscribedByMail", (n) -> { this.setIsSubscribedByMail(n.getBooleanValue()); });
         deserializerMap.put("licenseProcessingState", (n) -> { this.setLicenseProcessingState(n.getObjectValue(LicenseProcessingState::createFromDiscriminatorValue)); });
@@ -228,6 +238,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("membersWithLicenseErrors", (n) -> { this.setMembersWithLicenseErrors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesDomainName", (n) -> { this.setOnPremisesDomainName(n.getStringValue()); });
+        deserializerMap.put("onPremisesExtensionAttributes", (n) -> { this.setOnPremisesExtensionAttributes(n.getObjectValue(OnPremisesExtensionAttributes::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("onPremisesNetBiosName", (n) -> { this.setOnPremisesNetBiosName(n.getStringValue()); });
         deserializerMap.put("onPremisesProvisioningErrors", (n) -> { this.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
@@ -258,7 +269,9 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("transitiveMemberOf", (n) -> { this.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("transitiveMembers", (n) -> { this.setTransitiveMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("uniqueName", (n) -> { this.setUniqueName(n.getStringValue()); });
+        deserializerMap.put("unseenConversationsCount", (n) -> { this.setUnseenConversationsCount(n.getIntegerValue()); });
         deserializerMap.put("unseenCount", (n) -> { this.setUnseenCount(n.getIntegerValue()); });
+        deserializerMap.put("unseenMessagesCount", (n) -> { this.setUnseenMessagesCount(n.getIntegerValue()); });
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getStringValue()); });
         deserializerMap.put("welcomeMessageEnabled", (n) -> { this.setWelcomeMessageEnabled(n.getBooleanValue()); });
         return deserializerMap;
@@ -326,6 +339,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsAssignableToRole() {
         return this.backingStore.get("isAssignableToRole");
+    }
+    /**
+     * Gets the isFavorite property value. Indicates whether the user marked the group as favorite. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsFavorite() {
+        return this.backingStore.get("isFavorite");
     }
     /**
      * Gets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Requires $select to retrieve.
@@ -430,6 +451,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getOnPremisesDomainName() {
         return this.backingStore.get("onPremisesDomainName");
+    }
+    /**
+     * Gets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
+     * @return a {@link OnPremisesExtensionAttributes}
+     */
+    @jakarta.annotation.Nullable
+    public OnPremisesExtensionAttributes getOnPremisesExtensionAttributes() {
+        return this.backingStore.get("onPremisesExtensionAttributes");
     }
     /**
      * Gets the onPremisesLastSyncDateTime property value. Indicates the last time at which the group was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
@@ -672,12 +701,28 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("uniqueName");
     }
     /**
-     * Gets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the unseenConversationsCount property value. Count of conversations that have had one or more new posts delivered since the signed-in user&apos;s last visit to the group. This property is the same as unseenCount. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getUnseenConversationsCount() {
+        return this.backingStore.get("unseenConversationsCount");
+    }
+    /**
+     * Gets the unseenCount property value. Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnseenCount() {
         return this.backingStore.get("unseenCount");
+    }
+    /**
+     * Gets the unseenMessagesCount property value. Count of new posts that have been delivered to the group&apos;s conversations since the signed-in user&apos;s last visit to the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getUnseenMessagesCount() {
+        return this.backingStore.get("unseenMessagesCount");
     }
     /**
      * Gets the visibility property value. Specifies the group join policy and group content visibility for groups. The possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can&apos;t be updated later. Other values of visibility can be updated after group creation. If visibility value isn&apos;t specified during group creation on Microsoft Graph, a security group is created as Private by default, and the Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
@@ -703,6 +748,7 @@ public class Group extends DirectoryObject implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("acceptedSenders", this.getAcceptedSenders());
+        writer.writeEnumValue("accessType", this.getAccessType());
         writer.writeBooleanValue("allowExternalSenders", this.getAllowExternalSenders());
         writer.writeCollectionOfObjectValues("appRoleAssignments", this.getAppRoleAssignments());
         writer.writeCollectionOfObjectValues("assignedLabels", this.getAssignedLabels());
@@ -729,6 +775,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeCollectionOfPrimitiveValues("infoCatalogs", this.getInfoCatalogs());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isAssignableToRole", this.getIsAssignableToRole());
+        writer.writeBooleanValue("isFavorite", this.getIsFavorite());
         writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isSubscribedByMail", this.getIsSubscribedByMail());
         writer.writeObjectValue("licenseProcessingState", this.getLicenseProcessingState());
@@ -742,6 +789,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("membersWithLicenseErrors", this.getMembersWithLicenseErrors());
         writer.writeObjectValue("onenote", this.getOnenote());
         writer.writeStringValue("onPremisesDomainName", this.getOnPremisesDomainName());
+        writer.writeObjectValue("onPremisesExtensionAttributes", this.getOnPremisesExtensionAttributes());
         writer.writeOffsetDateTimeValue("onPremisesLastSyncDateTime", this.getOnPremisesLastSyncDateTime());
         writer.writeStringValue("onPremisesNetBiosName", this.getOnPremisesNetBiosName());
         writer.writeCollectionOfObjectValues("onPremisesProvisioningErrors", this.getOnPremisesProvisioningErrors());
@@ -772,7 +820,9 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("transitiveMemberOf", this.getTransitiveMemberOf());
         writer.writeCollectionOfObjectValues("transitiveMembers", this.getTransitiveMembers());
         writer.writeStringValue("uniqueName", this.getUniqueName());
+        writer.writeIntegerValue("unseenConversationsCount", this.getUnseenConversationsCount());
         writer.writeIntegerValue("unseenCount", this.getUnseenCount());
+        writer.writeIntegerValue("unseenMessagesCount", this.getUnseenMessagesCount());
         writer.writeStringValue("visibility", this.getVisibility());
         writer.writeBooleanValue("welcomeMessageEnabled", this.getWelcomeMessageEnabled());
     }
@@ -782,6 +832,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setAcceptedSenders(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("acceptedSenders", value);
+    }
+    /**
+     * Sets the accessType property value. Indicates the type of access to the group. The possible values are: none, private, secret, public, unknownFutureValue. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * @param value Value to set for the accessType property.
+     */
+    public void setAccessType(@jakarta.annotation.Nullable final GroupAccessType value) {
+        this.backingStore.set("accessType", value);
     }
     /**
      * Sets the allowExternalSenders property value. Indicates if people external to the organization can send messages to the group. The default value is false. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
@@ -966,6 +1023,13 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("isAssignableToRole", value);
     }
     /**
+     * Sets the isFavorite property value. Indicates whether the user marked the group as favorite. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * @param value Value to set for the isFavorite property.
+     */
+    public void setIsFavorite(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isFavorite", value);
+    }
+    /**
      * Sets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Requires $select to retrieve.
      * @param value Value to set for the isManagementRestricted property.
      */
@@ -1055,6 +1119,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesDomainName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("onPremisesDomainName", value);
+    }
+    /**
+     * Sets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
+     * @param value Value to set for the onPremisesExtensionAttributes property.
+     */
+    public void setOnPremisesExtensionAttributes(@jakarta.annotation.Nullable final OnPremisesExtensionAttributes value) {
+        this.backingStore.set("onPremisesExtensionAttributes", value);
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. Indicates the last time at which the group was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
@@ -1267,11 +1338,25 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("uniqueName", value);
     }
     /**
-     * Sets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the unseenConversationsCount property value. Count of conversations that have had one or more new posts delivered since the signed-in user&apos;s last visit to the group. This property is the same as unseenCount. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * @param value Value to set for the unseenConversationsCount property.
+     */
+    public void setUnseenConversationsCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("unseenConversationsCount", value);
+    }
+    /**
+     * Sets the unseenCount property value. Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the unseenCount property.
      */
     public void setUnseenCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("unseenCount", value);
+    }
+    /**
+     * Sets the unseenMessagesCount property value. Count of new posts that have been delivered to the group&apos;s conversations since the signed-in user&apos;s last visit to the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * @param value Value to set for the unseenMessagesCount property.
+     */
+    public void setUnseenMessagesCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("unseenMessagesCount", value);
     }
     /**
      * Sets the visibility property value. Specifies the group join policy and group content visibility for groups. The possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups when the groups are created. It can&apos;t be updated later. Other values of visibility can be updated after group creation. If visibility value isn&apos;t specified during group creation on Microsoft Graph, a security group is created as Private by default, and the Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.

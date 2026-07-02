@@ -25,12 +25,21 @@ public class CopilotAdmin extends Entity implements Parsable {
         return new CopilotAdmin();
     }
     /**
+     * Gets the catalog property value. The catalog property
+     * @return a {@link CopilotAdminCatalog}
+     */
+    @jakarta.annotation.Nullable
+    public CopilotAdminCatalog getCatalog() {
+        return this.backingStore.get("catalog");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(CopilotAdminCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(CopilotAdminSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -49,7 +58,15 @@ public class CopilotAdmin extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("catalog", this.getCatalog());
         writer.writeObjectValue("settings", this.getSettings());
+    }
+    /**
+     * Sets the catalog property value. The catalog property
+     * @param value Value to set for the catalog property.
+     */
+    public void setCatalog(@jakarta.annotation.Nullable final CopilotAdminCatalog value) {
+        this.backingStore.set("catalog", value);
     }
     /**
      * Sets the settings property value. The settings property

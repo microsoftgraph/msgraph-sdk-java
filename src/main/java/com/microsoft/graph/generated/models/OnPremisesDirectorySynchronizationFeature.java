@@ -48,7 +48,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         return value;
     }
     /**
-     * Gets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. The allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property
+     * Gets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. When true, allows on-premises directory sync clients to update the onPremisesObjectIdentifier property.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -290,7 +290,7 @@ public class OnPremisesDirectorySynchronizationFeature implements AdditionalData
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. The allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property
+     * Sets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. When true, allows on-premises directory sync clients to update the onPremisesObjectIdentifier property.
      * @param value Value to set for the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property.
      */
     public void setAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled(@jakarta.annotation.Nullable final Boolean value) {

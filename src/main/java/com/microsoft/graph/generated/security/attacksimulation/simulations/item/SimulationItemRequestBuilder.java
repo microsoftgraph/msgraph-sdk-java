@@ -108,7 +108,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Simulation::createFromDiscriminatorValue);
     }
     /**
-     * Update an attack simulation campaign for a tenant.
+     * Update an attack simulation campaign for a tenant. You can only update simulations that are in draft status.
      * @param body The request body
      * @return a {@link Simulation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -119,7 +119,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an attack simulation campaign for a tenant.
+     * Update an attack simulation campaign for a tenant. You can only update simulations that are in draft status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Simulation}
@@ -175,7 +175,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an attack simulation campaign for a tenant.
+     * Update an attack simulation campaign for a tenant. You can only update simulations that are in draft status.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -184,7 +184,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an attack simulation campaign for a tenant.
+     * Update an attack simulation campaign for a tenant. You can only update simulations that are in draft status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

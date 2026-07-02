@@ -44,7 +44,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/secrets", rawUrl);
     }
     /**
-     * Provide credentials for establishing connectivity with the target system.
+     * Provide credentials for establishing connectivity with the target system and store them in the synchronization resource.
      * @param body The request body
      * @return a {@link SecretsPutResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -55,7 +55,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * Provide credentials for establishing connectivity with the target system.
+     * Provide credentials for establishing connectivity with the target system and store them in the synchronization resource.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SecretsPutResponse}
@@ -71,7 +71,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SecretsPutResponse::createFromDiscriminatorValue);
     }
     /**
-     * Provide credentials for establishing connectivity with the target system.
+     * Provide credentials for establishing connectivity with the target system and store them in the synchronization resource.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -80,7 +80,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Provide credentials for establishing connectivity with the target system.
+     * Provide credentials for establishing connectivity with the target system and store them in the synchronization resource.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

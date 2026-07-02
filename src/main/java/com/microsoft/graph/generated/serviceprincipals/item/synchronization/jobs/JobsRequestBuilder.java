@@ -69,7 +69,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List existing jobs for a given application instance (service principal).
+     * List existing synchronizationJob objects for a given application instance (service principal).
      * @return a {@link SynchronizationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List existing jobs for a given application instance (service principal).
+     * List existing synchronizationJob objects for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -93,7 +93,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
+     * Create a new synchronizationJob with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -104,7 +104,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
+     * Create a new synchronizationJob with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJob}
@@ -120,7 +120,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationJob::createFromDiscriminatorValue);
     }
     /**
-     * List existing jobs for a given application instance (service principal).
+     * List existing synchronizationJob objects for a given application instance (service principal).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +128,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List existing jobs for a given application instance (service principal).
+     * List existing synchronizationJob objects for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
+     * Create a new synchronizationJob with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +149,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
+     * Create a new synchronizationJob with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -174,7 +174,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return new JobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List existing jobs for a given application instance (service principal).
+     * List existing synchronizationJob objects for a given application instance (service principal).
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

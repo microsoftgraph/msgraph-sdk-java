@@ -64,7 +64,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
         return this.backingStore.get("members");
     }
     /**
-     * Gets the roleTemplateId property value. The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
+     * Gets the roleTemplateId property value. The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read-only. Supports $filter (eq), $select.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the roleTemplateId property value. The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
+     * Sets the roleTemplateId property value. The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read-only. Supports $filter (eq), $select.
      * @param value Value to set for the roleTemplateId property.
      */
     public void setRoleTemplateId(@jakarta.annotation.Nullable final String value) {

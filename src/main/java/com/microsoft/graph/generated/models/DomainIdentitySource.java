@@ -26,7 +26,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
         return new DomainIdentitySource();
     }
     /**
-     * Gets the displayName property value. The name of the identity source, typically also the domain name. Read only.
+     * Gets the displayName property value. The name of the identity source, typically also the domain name. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the domainName property value. The domain name. Read only.
+     * Gets the domainName property value. The domain name. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
         writer.writeStringValue("domainName", this.getDomainName());
     }
     /**
-     * Sets the displayName property value. The name of the identity source, typically also the domain name. Read only.
+     * Sets the displayName property value. The name of the identity source, typically also the domain name. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the domainName property value. The domain name. Read only.
+     * Sets the domainName property value. The domain name. Read-only.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
