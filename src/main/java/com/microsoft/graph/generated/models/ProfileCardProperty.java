@@ -49,7 +49,16 @@ public class ProfileCardProperty extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("annotations", (n) -> { this.setAnnotations(n.getCollectionOfObjectValues(ProfileCardAnnotation::createFromDiscriminatorValue)); });
         deserializerMap.put("directoryPropertyName", (n) -> { this.setDirectoryPropertyName(n.getStringValue()); });
+        deserializerMap.put("isVisible", (n) -> { this.setIsVisible(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isVisible property value. Indicates whether the given directory property should be shown on a users profile card.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsVisible() {
+        return this.backingStore.get("isVisible");
     }
     /**
      * Serializes information the current object
@@ -60,6 +69,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("annotations", this.getAnnotations());
         writer.writeStringValue("directoryPropertyName", this.getDirectoryPropertyName());
+        writer.writeBooleanValue("isVisible", this.getIsVisible());
     }
     /**
      * Sets the annotations property value. Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant.
@@ -74,5 +84,12 @@ public class ProfileCardProperty extends Entity implements Parsable {
      */
     public void setDirectoryPropertyName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("directoryPropertyName", value);
+    }
+    /**
+     * Sets the isVisible property value. Indicates whether the given directory property should be shown on a users profile card.
+     * @param value Value to set for the isVisible property.
+     */
+    public void setIsVisible(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isVisible", value);
     }
 }

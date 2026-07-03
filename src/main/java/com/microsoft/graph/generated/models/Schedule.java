@@ -234,7 +234,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("timesOff");
     }
     /**
-     * Gets the timeZone property value. Indicates the time zone of the schedule team using tz database format. Required.
+     * Gets the timeZone property value. The time zone of the schedule team as an IANA time zone database (tz database) name; for example, America/Chicago. For the full list of valid values, see List of tz database time zones. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -434,7 +434,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("timesOff", value);
     }
     /**
-     * Sets the timeZone property value. Indicates the time zone of the schedule team using tz database format. Required.
+     * Sets the timeZone property value. The time zone of the schedule team as an IANA time zone database (tz database) name; for example, America/Chicago. For the full list of valid values, see List of tz database time zones. Required.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {

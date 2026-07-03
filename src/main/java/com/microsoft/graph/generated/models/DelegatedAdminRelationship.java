@@ -152,7 +152,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         return this.backingStore.get("requests");
     }
     /**
-     * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
+     * Gets the status property value. The status of the relationship. Read-only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      * @return a {@link DelegatedAdminRelationshipStatus}
      */
     @jakarta.annotation.Nullable
@@ -265,7 +265,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         this.backingStore.set("requests", value);
     }
     /**
-     * Sets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
+     * Sets the status property value. The status of the relationship. Read-only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DelegatedAdminRelationshipStatus value) {

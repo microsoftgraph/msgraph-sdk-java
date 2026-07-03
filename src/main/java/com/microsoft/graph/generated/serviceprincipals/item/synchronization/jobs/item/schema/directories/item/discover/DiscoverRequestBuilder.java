@@ -36,7 +36,7 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}/schema/directories/{directoryDefinition%2Did}/discover", rawUrl);
     }
     /**
-     * Discover the latest schema definition for provisioning to an application. 
+     * Discover the latest schema definition for provisioning to an application for the directoryDefinition.
      * @return a {@link DirectoryDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Discover the latest schema definition for provisioning to an application. 
+     * Discover the latest schema definition for provisioning to an application for the directoryDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Discover the latest schema definition for provisioning to an application. 
+     * Discover the latest schema definition for provisioning to an application for the directoryDefinition.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Discover the latest schema definition for provisioning to an application. 
+     * Discover the latest schema definition for provisioning to an application for the directoryDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

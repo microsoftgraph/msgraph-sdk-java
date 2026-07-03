@@ -6,6 +6,7 @@ import com.microsoft.graph.solutions.backuprestore.browsesessions.BrowseSessions
 import com.microsoft.graph.solutions.backuprestore.driveinclusionrules.DriveInclusionRulesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.driveprotectionunits.DriveProtectionUnitsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.driveprotectionunitsbulkadditionjobs.DriveProtectionUnitsBulkAdditionJobsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.emailnotificationssetting.EmailNotificationsSettingRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.enable.EnableRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.exchangeprotectionpolicies.ExchangeProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.exchangerestoresessions.ExchangeRestoreSessionsRequestBuilder;
@@ -75,6 +76,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DriveProtectionUnitsBulkAdditionJobsRequestBuilder driveProtectionUnitsBulkAdditionJobs() {
         return new DriveProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the emailNotificationsSetting property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link EmailNotificationsSettingRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EmailNotificationsSettingRequestBuilder emailNotificationsSetting() {
+        return new EmailNotificationsSettingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the enable method.

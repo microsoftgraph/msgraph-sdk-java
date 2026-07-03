@@ -26,7 +26,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         return new EdiscoveryAddToReviewSetOperation();
     }
     /**
-     * Gets the additionalDataOptions property value. The options to add items to the review set. The possible values are: allVersions, linkedFiles, unknownFutureValue, advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder.
+     * Gets the additionalDataOptions property value. The options to add items to the review set. The possible values are: allVersions, linkedFiles, unknownFutureValue, advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder, cloudNativeHtmlConversion. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder, cloudNativeHtmlConversion.
      * @return a {@link EnumSet<AdditionalDataOptions>}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
         writer.writeObjectValue("search", this.getSearch());
     }
     /**
-     * Sets the additionalDataOptions property value. The options to add items to the review set. The possible values are: allVersions, linkedFiles, unknownFutureValue, advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder.
+     * Sets the additionalDataOptions property value. The options to add items to the review set. The possible values are: allVersions, linkedFiles, unknownFutureValue, advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder, cloudNativeHtmlConversion. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder, cloudNativeHtmlConversion.
      * @param value Value to set for the additionalDataOptions property.
      */
     public void setAdditionalDataOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalDataOptions> value) {

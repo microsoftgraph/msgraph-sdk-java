@@ -129,6 +129,14 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.backingStore.get("featureRolloutPolicies");
     }
     /**
+     * Gets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
+     * @return a {@link FederatedTokenValidationPolicy}
+     */
+    @jakarta.annotation.Nullable
+    public FederatedTokenValidationPolicy getFederatedTokenValidationPolicy() {
+        return this.backingStore.get("federatedTokenValidationPolicy");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -148,6 +156,7 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("defaultAppManagementPolicy", (n) -> { this.setDefaultAppManagementPolicy(n.getObjectValue(TenantAppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceRegistrationPolicy", (n) -> { this.setDeviceRegistrationPolicy(n.getObjectValue(DeviceRegistrationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("featureRolloutPolicies", (n) -> { this.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("federatedTokenValidationPolicy", (n) -> { this.setFederatedTokenValidationPolicy(n.getObjectValue(FederatedTokenValidationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { this.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("ownerlessGroupPolicy", (n) -> { this.setOwnerlessGroupPolicy(n.getObjectValue(OwnerlessGroupPolicy::createFromDiscriminatorValue)); });
@@ -242,6 +251,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeObjectValue("defaultAppManagementPolicy", this.getDefaultAppManagementPolicy());
         writer.writeObjectValue("deviceRegistrationPolicy", this.getDeviceRegistrationPolicy());
         writer.writeCollectionOfObjectValues("featureRolloutPolicies", this.getFeatureRolloutPolicies());
+        writer.writeObjectValue("federatedTokenValidationPolicy", this.getFederatedTokenValidationPolicy());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeObjectValue("identitySecurityDefaultsEnforcementPolicy", this.getIdentitySecurityDefaultsEnforcementPolicy());
         writer.writeObjectValue("ownerlessGroupPolicy", this.getOwnerlessGroupPolicy());
@@ -341,6 +351,13 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setFeatureRolloutPolicies(@jakarta.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
         this.backingStore.set("featureRolloutPolicies", value);
+    }
+    /**
+     * Sets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
+     * @param value Value to set for the federatedTokenValidationPolicy property.
+     */
+    public void setFederatedTokenValidationPolicy(@jakarta.annotation.Nullable final FederatedTokenValidationPolicy value) {
+        this.backingStore.set("federatedTokenValidationPolicy", value);
     }
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The policy to control Microsoft Entra authentication behavior for federated users.

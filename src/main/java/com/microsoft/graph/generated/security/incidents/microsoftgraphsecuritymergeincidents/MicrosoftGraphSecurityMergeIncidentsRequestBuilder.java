@@ -36,7 +36,7 @@ public class MicrosoftGraphSecurityMergeIncidentsRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/security/incidents/microsoft.graph.security.mergeIncidents", rawUrl);
     }
     /**
-     * Invoke action mergeIncidents
+     * Merge multiple incident resources into a single incident.
      * @param body The request body
      * @return a {@link MergeResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class MicrosoftGraphSecurityMergeIncidentsRequestBuilder extends BaseRequ
         return post(body, null);
     }
     /**
-     * Invoke action mergeIncidents
+     * Merge multiple incident resources into a single incident.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MergeResponse}
@@ -61,7 +61,7 @@ public class MicrosoftGraphSecurityMergeIncidentsRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, MergeResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action mergeIncidents
+     * Merge multiple incident resources into a single incident.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +70,7 @@ public class MicrosoftGraphSecurityMergeIncidentsRequestBuilder extends BaseRequ
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action mergeIncidents
+     * Merge multiple incident resources into a single incident.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

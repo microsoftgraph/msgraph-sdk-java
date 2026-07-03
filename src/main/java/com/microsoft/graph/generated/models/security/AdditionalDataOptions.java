@@ -13,7 +13,8 @@ public enum AdditionalDataOptions implements ValuedEnum {
     HtmlTranscripts("htmlTranscripts"),
     MessageConversationExpansion("messageConversationExpansion"),
     LocationsWithoutHits("locationsWithoutHits"),
-    AllItemsInFolder("allItemsInFolder");
+    AllItemsInFolder("allItemsInFolder"),
+    CloudNativeHtmlConversion("cloudNativeHtmlConversion");
     public final String value;
     AdditionalDataOptions(final String value) {
         this.value = value;
@@ -33,6 +34,7 @@ public enum AdditionalDataOptions implements ValuedEnum {
             case "messageConversationExpansion": return MessageConversationExpansion;
             case "locationsWithoutHits": return LocationsWithoutHits;
             case "allItemsInFolder": return AllItemsInFolder;
+            case "cloudNativeHtmlConversion": return CloudNativeHtmlConversion;
             default: return null;
         }
     }

@@ -72,7 +72,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("eventEndTime");
     }
     /**
-     * Gets the eventId property value. The unique ID of the event. Read only.
+     * Gets the eventId property value. The unique ID of the event. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("eventEndTime", value);
     }
     /**
-     * Sets the eventId property value. The unique ID of the event. Read only.
+     * Sets the eventId property value. The unique ID of the event. Read-only.
      * @param value Value to set for the eventId property.
      */
     public void setEventId(@jakarta.annotation.Nullable final String value) {

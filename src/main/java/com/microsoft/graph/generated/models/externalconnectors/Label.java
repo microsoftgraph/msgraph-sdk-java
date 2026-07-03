@@ -58,7 +58,8 @@ public enum Label implements ValuedEnum {
     PersonInterests("personInterests"),
     PersonLanguages("personLanguages"),
     PersonPublications("personPublications"),
-    PersonPatents("personPatents");
+    PersonPatents("personPatents"),
+    PersonWorkPositions("personWorkPositions");
     public final String value;
     Label(final String value) {
         this.value = value;
@@ -123,6 +124,7 @@ public enum Label implements ValuedEnum {
             case "personLanguages": return PersonLanguages;
             case "personPublications": return PersonPublications;
             case "personPatents": return PersonPatents;
+            case "personWorkPositions": return PersonWorkPositions;
             default: return null;
         }
     }

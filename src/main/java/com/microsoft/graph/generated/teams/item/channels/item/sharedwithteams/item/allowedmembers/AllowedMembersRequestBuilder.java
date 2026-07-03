@@ -59,7 +59,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/sharedWithTeams/{sharedWithChannelTeamInfo%2Did}/allowedMembers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
+     * Get the list of conversationMembers who can access a shared channel. This method doesn&apos;t return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
      * @return a {@link ConversationMemberCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-list-allowedmembers?view=graph-rest-1.0">Find more info here</a>
@@ -69,7 +69,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
+     * Get the list of conversationMembers who can access a shared channel. This method doesn&apos;t return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConversationMemberCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -83,7 +83,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMemberCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
+     * Get the list of conversationMembers who can access a shared channel. This method doesn&apos;t return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
+     * Get the list of conversationMembers who can access a shared channel. This method doesn&apos;t return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +113,7 @@ public class AllowedMembersRequestBuilder extends BaseRequestBuilder {
         return new AllowedMembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
+     * Get the list of conversationMembers who can access a shared channel. This method doesn&apos;t return the following conversationMembers from the team:- Users with Guest role- Users who are externally authenticated in the tenant
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

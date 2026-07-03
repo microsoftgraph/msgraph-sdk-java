@@ -86,7 +86,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, SynchronizationTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronizationTemplate associated with a given application.
      * @param body The request body
      * @return a {@link SynchronizationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -97,7 +97,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return patch(body, null);
     }
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronizationTemplate associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationTemplate}
@@ -153,7 +153,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronizationTemplate associated with a given application.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -162,7 +162,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronizationTemplate associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
