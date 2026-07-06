@@ -20,7 +20,8 @@ extends:
   template: v1/1ES.Unofficial.PipelineTemplate.yml@1ESPipelineTemplates
   parameters:
     pool:
-      name: 1es-ubuntu-latest-m
+      name: Azure-Pipelines-1ESPT-ExDShared
+      image: ubuntu-latest
       os: linux
     sdl:
       sourceAnalysisPool:
@@ -83,3 +84,4 @@ extends:
                   javaHomeOption: 'JDKVersion'
                   jdkVersionOption: '1.17'
                   jdkArchitectureOption: 'x64'
+                  mavenOptions: '-Xmx3072m'
