@@ -41,6 +41,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("accessPackages");
     }
     /**
+     * Gets the accessPackageSuggestions property value. Suggested access packages for end users based on various criteria such as related people insights and assignment history.
+     * @return a {@link java.util.List<AccessPackageSuggestion>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AccessPackageSuggestion> getAccessPackageSuggestions() {
+        return this.backingStore.get("accessPackageSuggestions");
+    }
+    /**
      * Gets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @return a {@link java.util.List<AccessPackageAssignmentPolicy>}
      */
@@ -65,6 +73,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
+     * Gets the availableAccessPackages property value. Access packages available for end users to browse and request.
+     * @return a {@link java.util.List<AvailableAccessPackage>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AvailableAccessPackage> getAvailableAccessPackages() {
+        return this.backingStore.get("availableAccessPackages");
+    }
+    /**
      * Gets the catalogs property value. A container for access packages.
      * @return a {@link java.util.List<AccessPackageCatalog>}
      */
@@ -81,6 +97,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("connectedOrganizations");
     }
     /**
+     * Gets the controlConfigurations property value. Configuration settings that control the lifecycle and access policies of entitlement management within a tenant.
+     * @return a {@link java.util.List<ControlConfiguration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ControlConfiguration> getControlConfigurations() {
+        return this.backingStore.get("controlConfigurations");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -89,11 +113,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackageAssignmentApprovals", (n) -> { this.setAccessPackageAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
         deserializerMap.put("accessPackages", (n) -> { this.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageSuggestions", (n) -> { this.setAccessPackageSuggestions(n.getCollectionOfObjectValues(AccessPackageSuggestion::createFromDiscriminatorValue)); });
         deserializerMap.put("assignmentPolicies", (n) -> { this.setAssignmentPolicies(n.getCollectionOfObjectValues(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("assignmentRequests", (n) -> { this.setAssignmentRequests(n.getCollectionOfObjectValues(AccessPackageAssignmentRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(AccessPackageAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("availableAccessPackages", (n) -> { this.setAvailableAccessPackages(n.getCollectionOfObjectValues(AvailableAccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("catalogs", (n) -> { this.setCatalogs(n.getCollectionOfObjectValues(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("connectedOrganizations", (n) -> { this.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
+        deserializerMap.put("controlConfigurations", (n) -> { this.setControlConfigurations(n.getCollectionOfObjectValues(ControlConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceEnvironments", (n) -> { this.setResourceEnvironments(n.getCollectionOfObjectValues(AccessPackageResourceEnvironment::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceRequests", (n) -> { this.setResourceRequests(n.getCollectionOfObjectValues(AccessPackageResourceRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceRoleScopes", (n) -> { this.setResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
@@ -159,11 +186,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("accessPackageAssignmentApprovals", this.getAccessPackageAssignmentApprovals());
         writer.writeCollectionOfObjectValues("accessPackages", this.getAccessPackages());
+        writer.writeCollectionOfObjectValues("accessPackageSuggestions", this.getAccessPackageSuggestions());
         writer.writeCollectionOfObjectValues("assignmentPolicies", this.getAssignmentPolicies());
         writer.writeCollectionOfObjectValues("assignmentRequests", this.getAssignmentRequests());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
+        writer.writeCollectionOfObjectValues("availableAccessPackages", this.getAvailableAccessPackages());
         writer.writeCollectionOfObjectValues("catalogs", this.getCatalogs());
         writer.writeCollectionOfObjectValues("connectedOrganizations", this.getConnectedOrganizations());
+        writer.writeCollectionOfObjectValues("controlConfigurations", this.getControlConfigurations());
         writer.writeCollectionOfObjectValues("resourceEnvironments", this.getResourceEnvironments());
         writer.writeCollectionOfObjectValues("resourceRequests", this.getResourceRequests());
         writer.writeCollectionOfObjectValues("resourceRoleScopes", this.getResourceRoleScopes());
@@ -184,6 +214,13 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     public void setAccessPackages(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
         this.backingStore.set("accessPackages", value);
+    }
+    /**
+     * Sets the accessPackageSuggestions property value. Suggested access packages for end users based on various criteria such as related people insights and assignment history.
+     * @param value Value to set for the accessPackageSuggestions property.
+     */
+    public void setAccessPackageSuggestions(@jakarta.annotation.Nullable final java.util.List<AccessPackageSuggestion> value) {
+        this.backingStore.set("accessPackageSuggestions", value);
     }
     /**
      * Sets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
@@ -207,6 +244,13 @@ public class EntitlementManagement extends Entity implements Parsable {
         this.backingStore.set("assignments", value);
     }
     /**
+     * Sets the availableAccessPackages property value. Access packages available for end users to browse and request.
+     * @param value Value to set for the availableAccessPackages property.
+     */
+    public void setAvailableAccessPackages(@jakarta.annotation.Nullable final java.util.List<AvailableAccessPackage> value) {
+        this.backingStore.set("availableAccessPackages", value);
+    }
+    /**
      * Sets the catalogs property value. A container for access packages.
      * @param value Value to set for the catalogs property.
      */
@@ -219,6 +263,13 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     public void setConnectedOrganizations(@jakarta.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
         this.backingStore.set("connectedOrganizations", value);
+    }
+    /**
+     * Sets the controlConfigurations property value. Configuration settings that control the lifecycle and access policies of entitlement management within a tenant.
+     * @param value Value to set for the controlConfigurations property.
+     */
+    public void setControlConfigurations(@jakarta.annotation.Nullable final java.util.List<ControlConfiguration> value) {
+        this.backingStore.set("controlConfigurations", value);
     }
     /**
      * Sets the resourceEnvironments property value. A reference to the geolocation environments in which a resource is located.

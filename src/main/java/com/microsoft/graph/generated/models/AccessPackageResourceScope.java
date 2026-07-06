@@ -64,7 +64,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         return this.backingStore.get("isRootScope");
     }
     /**
-     * Gets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
+     * Gets the originId property value. The unique identifier of the resource in the origin system. If a Microsoft Entra group, originId is the identifier of the group. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         return this.backingStore.get("originId");
     }
     /**
-     * Gets the originSystem property value. The origin system for the scope.
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AadGroup, AzureResources, or CustomDataProvidedResource. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,14 +123,14 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         this.backingStore.set("isRootScope", value);
     }
     /**
-     * Sets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
+     * Sets the originId property value. The unique identifier of the resource in the origin system. If a Microsoft Entra group, originId is the identifier of the group. Supports $filter (eq).
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("originId", value);
     }
     /**
-     * Sets the originSystem property value. The origin system for the scope.
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AadGroup, AzureResources, or CustomDataProvidedResource. Supports $filter (eq).
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {

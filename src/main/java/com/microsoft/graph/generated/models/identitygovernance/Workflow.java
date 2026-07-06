@@ -1,5 +1,6 @@
 package com.microsoft.graph.models.identitygovernance;
 
+import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -53,7 +54,10 @@ public class Workflow extends WorkflowBase implements Parsable {
         deserializerMap.put("executionScope", (n) -> { this.setExecutionScope(n.getCollectionOfObjectValues(UserProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("nextScheduleRunDateTime", (n) -> { this.setNextScheduleRunDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("previewScope", (n) -> { this.setPreviewScope(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("quarantineDetails", (n) -> { this.setQuarantineDetails(n.getObjectValue(QuarantineDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("runs", (n) -> { this.setRuns(n.getCollectionOfObjectValues(Run::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(WorkflowSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("taskReports", (n) -> { this.setTaskReports(n.getCollectionOfObjectValues(TaskReport::createFromDiscriminatorValue)); });
         deserializerMap.put("userProcessingResults", (n) -> { this.setUserProcessingResults(n.getCollectionOfObjectValues(UserProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
@@ -77,12 +81,36 @@ public class Workflow extends WorkflowBase implements Parsable {
         return this.backingStore.get("nextScheduleRunDateTime");
     }
     /**
+     * Gets the previewScope property value. The preview scope for the workflow.
+     * @return a {@link java.util.List<DirectoryObject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DirectoryObject> getPreviewScope() {
+        return this.backingStore.get("previewScope");
+    }
+    /**
+     * Gets the quarantineDetails property value. The quarantineDetails property
+     * @return a {@link QuarantineDetails}
+     */
+    @jakarta.annotation.Nullable
+    public QuarantineDetails getQuarantineDetails() {
+        return this.backingStore.get("quarantineDetails");
+    }
+    /**
      * Gets the runs property value. Workflow runs.
      * @return a {@link java.util.List<Run>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Run> getRuns() {
         return this.backingStore.get("runs");
+    }
+    /**
+     * Gets the settings property value. The settings property
+     * @return a {@link WorkflowSetting}
+     */
+    @jakarta.annotation.Nullable
+    public WorkflowSetting getSettings() {
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
@@ -127,7 +155,10 @@ public class Workflow extends WorkflowBase implements Parsable {
         writer.writeCollectionOfObjectValues("executionScope", this.getExecutionScope());
         writer.writeStringValue("id", this.getId());
         writer.writeOffsetDateTimeValue("nextScheduleRunDateTime", this.getNextScheduleRunDateTime());
+        writer.writeCollectionOfObjectValues("previewScope", this.getPreviewScope());
+        writer.writeObjectValue("quarantineDetails", this.getQuarantineDetails());
         writer.writeCollectionOfObjectValues("runs", this.getRuns());
+        writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("taskReports", this.getTaskReports());
         writer.writeCollectionOfObjectValues("userProcessingResults", this.getUserProcessingResults());
         writer.writeIntegerValue("version", this.getVersion());
@@ -162,11 +193,32 @@ public class Workflow extends WorkflowBase implements Parsable {
         this.backingStore.set("nextScheduleRunDateTime", value);
     }
     /**
+     * Sets the previewScope property value. The preview scope for the workflow.
+     * @param value Value to set for the previewScope property.
+     */
+    public void setPreviewScope(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.backingStore.set("previewScope", value);
+    }
+    /**
+     * Sets the quarantineDetails property value. The quarantineDetails property
+     * @param value Value to set for the quarantineDetails property.
+     */
+    public void setQuarantineDetails(@jakarta.annotation.Nullable final QuarantineDetails value) {
+        this.backingStore.set("quarantineDetails", value);
+    }
+    /**
      * Sets the runs property value. Workflow runs.
      * @param value Value to set for the runs property.
      */
     public void setRuns(@jakarta.annotation.Nullable final java.util.List<Run> value) {
         this.backingStore.set("runs", value);
+    }
+    /**
+     * Sets the settings property value. The settings property
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final WorkflowSetting value) {
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.

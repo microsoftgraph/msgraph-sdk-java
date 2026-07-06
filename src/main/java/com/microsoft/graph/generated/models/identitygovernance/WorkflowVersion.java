@@ -32,8 +32,17 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(WorkflowSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("versionNumber", (n) -> { this.setVersionNumber(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the settings property value. The settings property
+     * @return a {@link WorkflowSetting}
+     */
+    @jakarta.annotation.Nullable
+    public WorkflowSetting getSettings() {
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the versionNumber property value. The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -50,7 +59,15 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("settings", this.getSettings());
         writer.writeIntegerValue("versionNumber", this.getVersionNumber());
+    }
+    /**
+     * Sets the settings property value. The settings property
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final WorkflowSetting value) {
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the versionNumber property value. The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.

@@ -8,7 +8,8 @@ public enum WorkflowExecutionType implements ValuedEnum {
     Scheduled("scheduled"),
     OnDemand("onDemand"),
     UnknownFutureValue("unknownFutureValue"),
-    ActivatedWithScope("activatedWithScope");
+    ActivatedWithScope("activatedWithScope"),
+    Preview("preview");
     public final String value;
     WorkflowExecutionType(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum WorkflowExecutionType implements ValuedEnum {
             case "onDemand": return OnDemand;
             case "unknownFutureValue": return UnknownFutureValue;
             case "activatedWithScope": return ActivatedWithScope;
+            case "preview": return Preview;
             default: return null;
         }
     }

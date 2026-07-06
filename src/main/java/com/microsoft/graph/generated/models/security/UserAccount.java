@@ -132,7 +132,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("resourceAccessEvents");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The Microsoft Entra tenant ID of the user account.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -238,7 +238,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("resourceAccessEvents", value);
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The Microsoft Entra tenant ID of the user account.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

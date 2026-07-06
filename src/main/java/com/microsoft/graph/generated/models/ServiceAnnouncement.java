@@ -37,7 +37,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Gets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @return a {@link java.util.List<ServiceHealth>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
         return this.backingStore.get("healthOverviews");
     }
     /**
-     * Gets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Gets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @return a {@link java.util.List<ServiceHealthIssue>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
         return this.backingStore.get("issues");
     }
     /**
-     * Gets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Gets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @return a {@link java.util.List<ServiceUpdateMessage>}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class ServiceAnnouncement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
     }
     /**
-     * Sets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Sets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @param value Value to set for the healthOverviews property.
      */
     public void setHealthOverviews(@jakarta.annotation.Nullable final java.util.List<ServiceHealth> value) {
         this.backingStore.set("healthOverviews", value);
     }
     /**
-     * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @param value Value to set for the issues property.
      */
     public void setIssues(@jakarta.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
         this.backingStore.set("issues", value);
     }
     /**
-     * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @param value Value to set for the messages property.
      */
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<ServiceUpdateMessage> value) {

@@ -26,7 +26,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
         return new AzureActiveDirectoryTenant();
     }
     /**
-     * Gets the displayName property value. The name of the Microsoft Entra tenant. Read only.
+     * Gets the displayName property value. The name of the Microsoft Entra tenant. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
+     * Gets the tenantId property value. The ID of the Microsoft Entra tenant. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the displayName property value. The name of the Microsoft Entra tenant. Read only.
+     * Sets the displayName property value. The name of the Microsoft Entra tenant. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the tenantId property value. The ID of the Microsoft Entra tenant. Read only.
+     * Sets the tenantId property value. The ID of the Microsoft Entra tenant. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

@@ -42,8 +42,17 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("emailSettings", (n) -> { this.setEmailSettings(n.getObjectValue(EmailSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("quarantineConfiguration", (n) -> { this.setQuarantineConfiguration(n.getObjectValue(QuarantineConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("workflowScheduleIntervalInHours", (n) -> { this.setWorkflowScheduleIntervalInHours(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the quarantineConfiguration property value. The tenant-level quarantine configuration that automatically halts a workflow when its threshold conditions are met. Optional.
+     * @return a {@link QuarantineConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public QuarantineConfiguration getQuarantineConfiguration() {
+        return this.backingStore.get("quarantineConfiguration");
     }
     /**
      * Gets the workflowScheduleIntervalInHours property value. The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.
@@ -61,6 +70,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("emailSettings", this.getEmailSettings());
+        writer.writeObjectValue("quarantineConfiguration", this.getQuarantineConfiguration());
         writer.writeIntegerValue("workflowScheduleIntervalInHours", this.getWorkflowScheduleIntervalInHours());
     }
     /**
@@ -69,6 +79,13 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
      */
     public void setEmailSettings(@jakarta.annotation.Nullable final EmailSettings value) {
         this.backingStore.set("emailSettings", value);
+    }
+    /**
+     * Sets the quarantineConfiguration property value. The tenant-level quarantine configuration that automatically halts a workflow when its threshold conditions are met. Optional.
+     * @param value Value to set for the quarantineConfiguration property.
+     */
+    public void setQuarantineConfiguration(@jakarta.annotation.Nullable final QuarantineConfiguration value) {
+        this.backingStore.set("quarantineConfiguration", value);
     }
     /**
      * Sets the workflowScheduleIntervalInHours property value. The interval in hours at which all workflows running in the tenant should be scheduled for execution. This interval has a minimum value of 1 and a maximum value of 24. The default value is 3 hours.

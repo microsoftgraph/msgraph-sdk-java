@@ -35,7 +35,7 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}/pause", rawUrl);
     }
     /**
-     * Temporarily stop a running synchronization job. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
+     * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-pause?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Temporarily stop a running synchronization job. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
+     * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-pause?view=graph-rest-1.0">Find more info here</a>
@@ -55,7 +55,7 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Temporarily stop a running synchronization job. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
+     * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Temporarily stop a running synchronization job. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
+     * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

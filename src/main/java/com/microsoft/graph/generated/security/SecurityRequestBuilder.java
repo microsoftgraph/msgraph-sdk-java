@@ -6,6 +6,7 @@ import com.microsoft.graph.security.alerts_v2.AlertsV2RequestBuilder;
 import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.security.cases.CasesRequestBuilder;
+import com.microsoft.graph.security.collaboration.CollaborationRequestBuilder;
 import com.microsoft.graph.security.datasecurityandgovernance.DataSecurityAndGovernanceRequestBuilder;
 import com.microsoft.graph.security.identities.IdentitiesRequestBuilder;
 import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
@@ -66,6 +67,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CasesRequestBuilder cases() {
         return new CasesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collaboration property of the microsoft.graph.security entity.
+     * @return a {@link CollaborationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CollaborationRequestBuilder collaboration() {
+        return new CollaborationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the dataSecurityAndGovernance property of the microsoft.graph.security entity.

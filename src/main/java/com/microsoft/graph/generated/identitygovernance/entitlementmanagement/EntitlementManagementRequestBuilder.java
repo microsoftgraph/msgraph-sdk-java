@@ -2,11 +2,14 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.AccessPackageAssignmentApprovalsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.AccessPackagesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagesuggestions.AccessPackageSuggestionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.AssignmentPoliciesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.AssignmentRequestsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.availableaccesspackages.AvailableAccessPackagesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.CatalogsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.controlconfigurations.ControlConfigurationsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourceenvironments.ResourceEnvironmentsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.ResourceRequestsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerolescopes.ResourceRoleScopesRequestBuilder;
@@ -51,6 +54,14 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the accessPackageSuggestions property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AccessPackageSuggestionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackageSuggestionsRequestBuilder accessPackageSuggestions() {
+        return new AccessPackageSuggestionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
      * @return a {@link AssignmentPoliciesRequestBuilder}
      */
@@ -75,6 +86,14 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the availableAccessPackages property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AvailableAccessPackagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AvailableAccessPackagesRequestBuilder availableAccessPackages() {
+        return new AvailableAccessPackagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
      * @return a {@link CatalogsRequestBuilder}
      */
@@ -89,6 +108,14 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ConnectedOrganizationsRequestBuilder connectedOrganizations() {
         return new ConnectedOrganizationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the controlConfigurations property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link ControlConfigurationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ControlConfigurationsRequestBuilder controlConfigurations() {
+        return new ControlConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the resourceEnvironments property of the microsoft.graph.entitlementManagement entity.

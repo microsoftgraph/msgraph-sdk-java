@@ -2,6 +2,7 @@ package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.CasesRoot;
+import com.microsoft.graph.models.security.CollaborationRoot;
 import com.microsoft.graph.models.security.IdentityContainer;
 import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.LabelsRoot;
@@ -65,6 +66,14 @@ public class Security extends Entity implements Parsable {
         return this.backingStore.get("cases");
     }
     /**
+     * Gets the collaboration property value. The collaboration property
+     * @return a {@link CollaborationRoot}
+     */
+    @jakarta.annotation.Nullable
+    public CollaborationRoot getCollaboration() {
+        return this.backingStore.get("collaboration");
+    }
+    /**
      * Gets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
      * @return a {@link TenantDataSecurityAndGovernance}
      */
@@ -83,6 +92,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("collaboration", (n) -> { this.setCollaboration(n.getObjectValue(CollaborationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("dataSecurityAndGovernance", (n) -> { this.setDataSecurityAndGovernance(n.getObjectValue(TenantDataSecurityAndGovernance::createFromDiscriminatorValue)); });
         deserializerMap.put("identities", (n) -> { this.setIdentities(n.getObjectValue(IdentityContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
@@ -178,6 +188,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("alerts_v2", this.getAlertsV2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
         writer.writeObjectValue("cases", this.getCases());
+        writer.writeObjectValue("collaboration", this.getCollaboration());
         writer.writeObjectValue("dataSecurityAndGovernance", this.getDataSecurityAndGovernance());
         writer.writeObjectValue("identities", this.getIdentities());
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
@@ -216,6 +227,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setCases(@jakarta.annotation.Nullable final CasesRoot value) {
         this.backingStore.set("cases", value);
+    }
+    /**
+     * Sets the collaboration property value. The collaboration property
+     * @param value Value to set for the collaboration property.
+     */
+    public void setCollaboration(@jakarta.annotation.Nullable final CollaborationRoot value) {
+        this.backingStore.set("collaboration", value);
     }
     /**
      * Sets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
