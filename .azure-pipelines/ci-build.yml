@@ -118,8 +118,10 @@ extends:
                 condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
 
               - pwsh: |
-                  $pomXml = [xml](Get-Content pom.xml)
-                  $version = $pomXml.project.version
+                  $pomXml = [xml](Get-Content pom.xml -Raw)
+                  $ns = New-Object System.Xml.XmlNamespaceManager($pomXml.NameTable)
+                  $ns.AddNamespace('m', $pomXml.DocumentElement.NamespaceURI)
+                  $version = $pomXml.SelectSingleNode('/m:project/m:version', $ns).InnerText
                   $snapshot_suffix = if ($Env:BRANCH_NAME.StartsWith('refs/tags/v')) { '' } else { '-SNAPSHOT' }
                   # If version already contains -SNAPSHOT and we're on a tag, strip it
                   if ($Env:BRANCH_NAME.StartsWith('refs/tags/v')) {
