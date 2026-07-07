@@ -73,13 +73,13 @@ extends:
 
                   $settingsXml = @"
                   <settings>
-                    <servers>
-                      <server>
-                        <id>GraphDeveloperExperiencesPublic</id>
-                        <username>microsoftgraph</username>
-                        <password>${{ variables.ARTIFACTS_PAT }}</password>
-                      </server>
-                    </servers>
+                    <mirrors>
+                      <mirror>
+                        <id>GraphDeveloperExperiences_Public</id>
+                        <mirrorOf>*</mirrorOf>
+                        <url>https://microsoftgraph.pkgs.visualstudio.com/0985d294-5762-4bc2-a565-161ef349ca3e/_packaging/GraphDeveloperExperiences_Public/maven/v1</url>
+                      </mirror>
+                    </mirrors>
                     <profiles>
                       <profile>
                         <id>signing</id>
@@ -95,6 +95,11 @@ extends:
                   New-Item -ItemType Directory -Path $settingsDir -Force | Out-Null
                   $settingsXml | Set-Content (Join-Path $settingsDir "settings.xml") -Encoding UTF8
                 displayName: Configure Maven settings
+
+              - task: MavenAuthenticate@0
+                displayName: Authenticate to Azure Artifacts feed (PAT-less)
+                inputs:
+                  artifactsFeeds: 'GraphDeveloperExperiences_Public'
 
               - script: ./mvnw install -Psigning --no-transfer-progress
                 displayName: Publish to local Maven for verification
