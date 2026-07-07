@@ -57,6 +57,14 @@ public class CopilotPackage extends Entity implements Parsable {
         return this.backingStore.get("availableTo");
     }
     /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
+    }
+    /**
      * Gets the deployedTo property value. The deployedTo property
      * @return a {@link PackageStatus}
      */
@@ -90,6 +98,7 @@ public class CopilotPackage extends Entity implements Parsable {
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("assetId", (n) -> { this.setAssetId(n.getStringValue()); });
         deserializerMap.put("availableTo", (n) -> { this.setAvailableTo(n.getEnumValue(PackageStatus::forValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deployedTo", (n) -> { this.setDeployedTo(n.getEnumValue(PackageStatus::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("elementTypes", (n) -> { this.setElementTypes(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -213,6 +222,7 @@ public class CopilotPackage extends Entity implements Parsable {
         writer.writeStringValue("appId", this.getAppId());
         writer.writeStringValue("assetId", this.getAssetId());
         writer.writeEnumValue("availableTo", this.getAvailableTo());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeEnumValue("deployedTo", this.getDeployedTo());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("elementTypes", this.getElementTypes());
@@ -249,6 +259,13 @@ public class CopilotPackage extends Entity implements Parsable {
      */
     public void setAvailableTo(@jakarta.annotation.Nullable final PackageStatus value) {
         this.backingStore.set("availableTo", value);
+    }
+    /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the deployedTo property value. The deployedTo property

@@ -6,6 +6,7 @@ import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.wo
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.lastmodifiedby.LastModifiedByRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernanceactivate.MicrosoftGraphIdentityGovernanceActivateRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernanceactivatewithscope.MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernancecancelprocessing.MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernanceclearquarantine.MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernancecreatenewversion.MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.deleteditems.workflows.item.microsoftgraphidentitygovernancepreviewtaskfailures.MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef;
@@ -84,6 +85,14 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder microsoftGraphIdentityGovernanceActivateWithScope() {
         return new MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the cancelProcessing method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder microsoftGraphIdentityGovernanceCancelProcessing() {
+        return new MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the clearQuarantine method.

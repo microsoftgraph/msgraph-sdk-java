@@ -6,6 +6,12 @@ import com.microsoft.graph.models.callrecords.Participant;
 import com.microsoft.graph.models.callrecords.ParticipantBase;
 import com.microsoft.graph.models.callrecords.Segment;
 import com.microsoft.graph.models.callrecords.Session;
+import com.microsoft.graph.models.entrarecoveryservices.Recovery;
+import com.microsoft.graph.models.entrarecoveryservices.RecoveryChangeObjectBase;
+import com.microsoft.graph.models.entrarecoveryservices.RecoveryJob;
+import com.microsoft.graph.models.entrarecoveryservices.RecoveryJobBase;
+import com.microsoft.graph.models.entrarecoveryservices.RecoveryPreviewJob;
+import com.microsoft.graph.models.entrarecoveryservices.Snapshot;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.models.externalconnectors.ExternalActivity;
 import com.microsoft.graph.models.externalconnectors.ExternalActivityResult;
@@ -46,6 +52,9 @@ import com.microsoft.graph.models.security.AnalyzedEmail;
 import com.microsoft.graph.models.security.Article;
 import com.microsoft.graph.models.security.ArticleIndicator;
 import com.microsoft.graph.models.security.Artifact;
+import com.microsoft.graph.models.security.AuditCoreRoot;
+import com.microsoft.graph.models.security.AuditLogQuery;
+import com.microsoft.graph.models.security.AuditLogRecord;
 import com.microsoft.graph.models.security.AuthorityTemplate;
 import com.microsoft.graph.models.security.AutoAuditingConfiguration;
 import com.microsoft.graph.models.security.CaseEscaped;
@@ -539,6 +548,12 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.enterpriseCodeSigningCertificate": return new EnterpriseCodeSigningCertificate();
             case "#microsoft.graph.entitlementManagement": return new EntitlementManagement();
             case "#microsoft.graph.entitlementManagementSettings": return new EntitlementManagementSettings();
+            case "#microsoft.graph.entraRecoveryServices.recovery": return new Recovery();
+            case "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase": return new RecoveryChangeObjectBase();
+            case "#microsoft.graph.entraRecoveryServices.recoveryJob": return new RecoveryJob();
+            case "#microsoft.graph.entraRecoveryServices.recoveryJobBase": return new RecoveryJobBase();
+            case "#microsoft.graph.entraRecoveryServices.recoveryPreviewJob": return new RecoveryPreviewJob();
+            case "#microsoft.graph.entraRecoveryServices.snapshot": return new Snapshot();
             case "#microsoft.graph.event": return new Event();
             case "#microsoft.graph.eventMessage": return new EventMessage();
             case "#microsoft.graph.eventMessageRequest": return new EventMessageRequest();
@@ -690,12 +705,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();
             case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();
             case "#microsoft.graph.managedApp": return new ManagedApp();
-            case "#microsoft.graph.managedAppConfiguration": return new ManagedAppConfiguration();
-            case "#microsoft.graph.managedAppOperation": return new ManagedAppOperation();
-            case "#microsoft.graph.managedAppPolicy": return new ManagedAppPolicy();
-            case "#microsoft.graph.managedAppPolicyDeploymentSummary": return new ManagedAppPolicyDeploymentSummary();
-            case "#microsoft.graph.managedAppProtection": return new ManagedAppProtection();
-            case "#microsoft.graph.managedAppRegistration": return new ManagedAppRegistration();
         }
         return null;
     }
@@ -707,6 +716,12 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.managedAppConfiguration": return new ManagedAppConfiguration();
+            case "#microsoft.graph.managedAppOperation": return new ManagedAppOperation();
+            case "#microsoft.graph.managedAppPolicy": return new ManagedAppPolicy();
+            case "#microsoft.graph.managedAppPolicyDeploymentSummary": return new ManagedAppPolicyDeploymentSummary();
+            case "#microsoft.graph.managedAppProtection": return new ManagedAppProtection();
+            case "#microsoft.graph.managedAppRegistration": return new ManagedAppRegistration();
             case "#microsoft.graph.managedAppStatus": return new ManagedAppStatus();
             case "#microsoft.graph.managedAppStatusRaw": return new ManagedAppStatusRaw();
             case "#microsoft.graph.managedDevice": return new ManagedDevice();
@@ -946,6 +961,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.article": return new Article();
             case "#microsoft.graph.security.articleIndicator": return new ArticleIndicator();
             case "#microsoft.graph.security.artifact": return new Artifact();
+            case "#microsoft.graph.security.auditCoreRoot": return new AuditCoreRoot();
+            case "#microsoft.graph.security.auditLogQuery": return new AuditLogQuery();
+            case "#microsoft.graph.security.auditLogRecord": return new AuditLogRecord();
             case "#microsoft.graph.security.authorityTemplate": return new AuthorityTemplate();
             case "#microsoft.graph.security.autoAuditingConfiguration": return new AutoAuditingConfiguration();
             case "#microsoft.graph.security.case": return new CaseEscaped();
@@ -1198,15 +1216,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.userExperienceAnalyticsBaseline": return new UserExperienceAnalyticsBaseline();
             case "#microsoft.graph.userExperienceAnalyticsCategory": return new UserExperienceAnalyticsCategory();
             case "#microsoft.graph.userExperienceAnalyticsDevicePerformance": return new UserExperienceAnalyticsDevicePerformance();
-            case "#microsoft.graph.userExperienceAnalyticsDeviceScores": return new UserExperienceAnalyticsDeviceScores();
-            case "#microsoft.graph.userExperienceAnalyticsDeviceStartupHistory": return new UserExperienceAnalyticsDeviceStartupHistory();
-            case "#microsoft.graph.userExperienceAnalyticsDeviceStartupProcess": return new UserExperienceAnalyticsDeviceStartupProcess();
-            case "#microsoft.graph.userExperienceAnalyticsDeviceStartupProcessPerformance": return new UserExperienceAnalyticsDeviceStartupProcessPerformance();
-            case "#microsoft.graph.userExperienceAnalyticsMetric": return new UserExperienceAnalyticsMetric();
-            case "#microsoft.graph.userExperienceAnalyticsMetricHistory": return new UserExperienceAnalyticsMetricHistory();
-            case "#microsoft.graph.userExperienceAnalyticsModelScores": return new UserExperienceAnalyticsModelScores();
-            case "#microsoft.graph.userExperienceAnalyticsOverview": return new UserExperienceAnalyticsOverview();
-            case "#microsoft.graph.userExperienceAnalyticsScoreHistory": return new UserExperienceAnalyticsScoreHistory();
         }
         return null;
     }
@@ -1218,6 +1227,15 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.userExperienceAnalyticsDeviceScores": return new UserExperienceAnalyticsDeviceScores();
+            case "#microsoft.graph.userExperienceAnalyticsDeviceStartupHistory": return new UserExperienceAnalyticsDeviceStartupHistory();
+            case "#microsoft.graph.userExperienceAnalyticsDeviceStartupProcess": return new UserExperienceAnalyticsDeviceStartupProcess();
+            case "#microsoft.graph.userExperienceAnalyticsDeviceStartupProcessPerformance": return new UserExperienceAnalyticsDeviceStartupProcessPerformance();
+            case "#microsoft.graph.userExperienceAnalyticsMetric": return new UserExperienceAnalyticsMetric();
+            case "#microsoft.graph.userExperienceAnalyticsMetricHistory": return new UserExperienceAnalyticsMetricHistory();
+            case "#microsoft.graph.userExperienceAnalyticsModelScores": return new UserExperienceAnalyticsModelScores();
+            case "#microsoft.graph.userExperienceAnalyticsOverview": return new UserExperienceAnalyticsOverview();
+            case "#microsoft.graph.userExperienceAnalyticsScoreHistory": return new UserExperienceAnalyticsScoreHistory();
             case "#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereDevice": return new UserExperienceAnalyticsWorkFromAnywhereDevice();
             case "#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric": return new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric();
             case "#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereMetric": return new UserExperienceAnalyticsWorkFromAnywhereMetric();

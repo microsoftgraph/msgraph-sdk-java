@@ -41,7 +41,7 @@ public class MicrosoftGraphIdentityGovernanceWorkflowsProcessedSumma_f0293aa7 ex
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/insights/microsoft.graph.identityGovernance.workflowsProcessedSummary(startDateTime={startDateTime},endDateTime={endDateTime})", rawUrl);
     }
     /**
-     * Provide a summary of all workflows processed within a tenant for a specified period. Because the amount of results for listed workflows as returned by the List workflows doesn&apos;t tell you which workflows were processed from the list of created workflows, this summary gives you a quick overview of processed status based on counts.
+     * Provide a summary from the insights resource of workflow objects processed within a tenant for a specified period. Because the list returned by List workflows doesn&apos;t indicate which workflows were processed, this summary gives you a quick overview based on counts.
      * @return a {@link WorkflowsInsightsSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-insights-workflowsprocessedsummary?view=graph-rest-1.0">Find more info here</a>
@@ -51,7 +51,7 @@ public class MicrosoftGraphIdentityGovernanceWorkflowsProcessedSumma_f0293aa7 ex
         return get(null);
     }
     /**
-     * Provide a summary of all workflows processed within a tenant for a specified period. Because the amount of results for listed workflows as returned by the List workflows doesn&apos;t tell you which workflows were processed from the list of created workflows, this summary gives you a quick overview of processed status based on counts.
+     * Provide a summary from the insights resource of workflow objects processed within a tenant for a specified period. Because the list returned by List workflows doesn&apos;t indicate which workflows were processed, this summary gives you a quick overview based on counts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkflowsInsightsSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -65,7 +65,7 @@ public class MicrosoftGraphIdentityGovernanceWorkflowsProcessedSumma_f0293aa7 ex
         return this.requestAdapter.send(requestInfo, errorMapping, WorkflowsInsightsSummary::createFromDiscriminatorValue);
     }
     /**
-     * Provide a summary of all workflows processed within a tenant for a specified period. Because the amount of results for listed workflows as returned by the List workflows doesn&apos;t tell you which workflows were processed from the list of created workflows, this summary gives you a quick overview of processed status based on counts.
+     * Provide a summary from the insights resource of workflow objects processed within a tenant for a specified period. Because the list returned by List workflows doesn&apos;t indicate which workflows were processed, this summary gives you a quick overview based on counts.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class MicrosoftGraphIdentityGovernanceWorkflowsProcessedSumma_f0293aa7 ex
         return toGetRequestInformation(null);
     }
     /**
-     * Provide a summary of all workflows processed within a tenant for a specified period. Because the amount of results for listed workflows as returned by the List workflows doesn&apos;t tell you which workflows were processed from the list of created workflows, this summary gives you a quick overview of processed status based on counts.
+     * Provide a summary from the insights resource of workflow objects processed within a tenant for a specified period. Because the list returned by List workflows doesn&apos;t indicate which workflows were processed, this summary gives you a quick overview based on counts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
