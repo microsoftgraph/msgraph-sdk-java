@@ -70,7 +70,7 @@
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
         <repository>
-            <id>GraphDeveloperExperiencesPublic</id>
+            <id>GraphDeveloperExperiences_Public</id>
             <url>https://microsoftgraph.pkgs.visualstudio.com/0985d294-5762-4bc2-a565-161ef349ca3e/_packaging/GraphDeveloperExperiences_Public/maven/v1</url>
         </repository>
     </repositories>
