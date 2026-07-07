@@ -14,8 +14,7 @@ updates:
       patterns:
         - "*microsoft-graph*"
 - package-ecosystem: gradle
-  directories:
-    - "/android"
+  directory: "/android"
   schedule:
     interval: daily
     time: "09:00" # 9am UTC
