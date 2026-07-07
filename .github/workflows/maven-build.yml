@@ -1,4 +1,4 @@
-name: Gradle Build and Compare Package
+name: Maven Build
 
 on:
   push:
@@ -17,36 +17,29 @@ jobs:
         with:
           java-version: 21
           distribution: 'temurin'
-          cache: gradle
+          cache: maven
       - name: Move generated sources to correct package
         run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\generated'
         shell: pwsh
-      - name: Grant Execute permission for gradlew
-        run: chmod +x gradlew
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Build with Maven
+        run: ./mvnw verify --no-transfer-progress
       - name: Upload Unit Test Results
         if: ${{ always() }}
         uses: actions/upload-artifact@v7
         with:
           name: UnitTests
           path: |
-            build/reports/tests/test/**
-            build/test-results/**
+            target/surefire-reports/**
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v7
         with:
           name: drop
           path: |
-            **/libs/*
-            build/generated-pom.xml
-            build/generated-pom.xml.asc
-            build.gradle
-            gradlew
-            gradlew.bat
-            settings.gradle
-            gradle.properties
-            **/gradle/**
+            target/*.jar
+            pom.xml
+            mvnw
+            mvnw.cmd
+            .mvn/**
             scripts/**
 
   build-java-8:
@@ -58,15 +51,12 @@ jobs:
         with:
           java-version: 8
           distribution: 'temurin'
-          cache: gradle
+          cache: maven
       - name: Move generated sources to correct package
         run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\generated'
         shell: pwsh
-      - name: Grant Execute permission for gradlew
-        run: chmod +x gradlew
       - name: Build with Java 8
-        working-directory: ./java-8
-        run: .././gradlew build
+        run: ./mvnw compile --no-transfer-progress
 
   build:
     needs: [build-java-latest, build-java-8]
@@ -80,20 +70,4 @@ jobs:
           else
             exit 1
           fi
-
-  dependency-submission:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push'
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v6
-      - name: Set up JDK
-        uses: actions/setup-java@v5
-        with:
-          java-version: 21
-          distribution: 'temurin'
-          cache: gradle
-      - name: Generate and submit dependency graph
-        uses: gradle/actions/dependency-submission@v6
 

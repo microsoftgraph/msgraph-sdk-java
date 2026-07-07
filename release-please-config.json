@@ -14,7 +14,11 @@
       "package-name": "com.microsoft.graph.microsoft-graph",
       "changelog-path": "CHANGELOG.md",
       "extra-files": [
-        "gradle.properties",
+        {
+          "type": "xml",
+          "path": "pom.xml",
+          "xpath": "/*[local-name()='project']/*[local-name()='version']"
+        },
         "README.md",
         "src/main/java/com/microsoft/graph/info/Constants.java"
       ]

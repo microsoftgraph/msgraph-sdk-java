@@ -43,21 +43,47 @@ extends:
               - checkout: self
                 submodules: recursive
 
-              - script: |
-                  sed -i "/mavenCentral()/d" build.gradle
-                  sed -i "/gradlePluginPortal()/d" settings.gradle
-                  sed -i "/mavenCentral()/d" settings.gradle
-                displayName: Strip plugins and public repos for network-isolated build
+              - task: JavaToolInstaller@1
+                inputs:
+                  versionSpec: '17'
+                  jdkArchitectureOption: 'x64'
+                  jdkSourceOption: 'PreInstalled'
 
-              - task: Gradle@4
+              - pwsh: |
+                  # Route all Maven resolution through the Azure Artifacts feed (Maven Central upstream)
+                  # so the network-isolated build never reaches the public internet. Credentials for the
+                  # mirror are injected PAT-less by the MavenAuthenticate task below; the mirror <id> must
+                  # match the <server> id it generates (the feed name).
+                  $settingsXml = @"
+                  <settings>
+                    <mirrors>
+                      <mirror>
+                        <id>GraphDeveloperExperiences_Public</id>
+                        <mirrorOf>*</mirrorOf>
+                        <url>https://microsoftgraph.pkgs.visualstudio.com/0985d294-5762-4bc2-a565-161ef349ca3e/_packaging/GraphDeveloperExperiences_Public/maven/v1</url>
+                      </mirror>
+                    </mirrors>
+                  </settings>
+                  "@
+                  $settingsDir = Join-Path $HOME ".m2"
+                  New-Item -ItemType Directory -Path $settingsDir -Force | Out-Null
+                  $settingsXml | Set-Content (Join-Path $settingsDir "settings.xml") -Encoding UTF8
+                displayName: Configure Maven mirror for network-isolated build
+
+              - task: MavenAuthenticate@0
+                displayName: Authenticate to Azure Artifacts feed (PAT-less)
+                inputs:
+                  artifactsFeeds: 'GraphDeveloperExperiences_Public'
+
+              - task: Maven@4
                 displayName: Build and Test SDK
                 inputs:
-                  gradleWrapperFile: 'gradlew'
-                  workingDirectory: '$(Build.SourcesDirectory)'
-                  tasks: 'assemble test'
-                  options: '--no-daemon -PGraphDeveloperExperiencesPublicPassword=$(ARTIFACTS_PAT)'
+                  mavenPomFile: 'pom.xml'
+                  goals: 'verify'
+                  options: '--no-transfer-progress'
                   publishJUnitResults: true
-                  testResultsFiles: '**/TEST-*.xml'
+                  testResultsFiles: '**/surefire-reports/TEST-*.xml'
                   javaHomeOption: 'JDKVersion'
                   jdkVersionOption: '1.17'
                   jdkArchitectureOption: 'x64'
+                  mavenOptions: '-Xmx3072m'
