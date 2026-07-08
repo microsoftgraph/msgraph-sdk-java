@@ -26,8 +26,6 @@ $expectedFiles = @(
   "-javadoc.jar.asc",
   "-sources.jar",
   "-sources.jar.asc",
-  ".module",
-  ".module.asc",
   ".pom",
   ".pom.asc",
   ".jar",
