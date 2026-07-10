@@ -35,7 +35,7 @@ public class BatchRecordDecisionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/batchRecordDecisions", rawUrl);
     }
     /**
-     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using principalId, resourceId, or neither.
+     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using principalId, resourceId, or neither.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-batchrecorddecisions?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +44,7 @@ public class BatchRecordDecisionsRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using principalId, resourceId, or neither.
+     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using principalId, resourceId, or neither.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class BatchRecordDecisionsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using principalId, resourceId, or neither.
+     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using principalId, resourceId, or neither.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class BatchRecordDecisionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using principalId, resourceId, or neither.
+     * Enables reviewers to review all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using principalId, resourceId, or neither.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

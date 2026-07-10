@@ -5,7 +5,7 @@ import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignment
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.devicestatusoverview.DeviceStatusOverviewRequestBuilder;
-import com.microsoft.graph.devicemanagement.deviceconfigurations.item.getomasettingplaintextvaluewithsecretreferencevalueid.GetOmaSettingPlainTextValueWithSecretReferenceValueIdRe_c9047fb2;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.getomasettingplaintextvaluewithsecretreferencevalueid.GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatuses.UserStatusesRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceconfigurations.item.userstatusoverview.UserStatusOverviewRequestBuilder;
 import com.microsoft.graph.models.DeviceConfiguration;
@@ -143,12 +143,12 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOmaSettingPlainTextValue method.
      * @param secretReferenceValueId Usage: secretReferenceValueId=&apos;{secretReferenceValueId}&apos;
-     * @return a {@link GetOmaSettingPlainTextValueWithSecretReferenceValueIdRe_c9047fb2}
+     * @return a {@link GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRe_c9047fb2 getOmaSettingPlainTextValueWithSecretReferenceValueId(@jakarta.annotation.Nonnull final String secretReferenceValueId) {
+    public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder getOmaSettingPlainTextValueWithSecretReferenceValueId(@jakarta.annotation.Nonnull final String secretReferenceValueId) {
         Objects.requireNonNull(secretReferenceValueId);
-        return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRe_c9047fb2(pathParameters, requestAdapter, secretReferenceValueId);
+        return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(pathParameters, requestAdapter, secretReferenceValueId);
     }
     /**
      * Update the navigation property deviceConfigurations in deviceManagement

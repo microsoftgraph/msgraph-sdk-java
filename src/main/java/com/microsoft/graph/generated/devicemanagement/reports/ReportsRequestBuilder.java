@@ -8,7 +8,7 @@ import com.microsoft.graph.devicemanagement.reports.getcompliancesettingnoncompl
 import com.microsoft.graph.devicemanagement.reports.getconfigurationpolicynoncompliancereport.GetConfigurationPolicyNonComplianceReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getconfigurationpolicynoncompliancesummaryreport.GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getconfigurationsettingnoncompliancereport.GetConfigurationSettingNonComplianceReportRequestBuilder;
-import com.microsoft.graph.devicemanagement.reports.getdevicemanagementintentpersettingcontributingprofiles.GetDeviceManagementIntentPerSettingContributingProfiles_0f5720ea;
+import com.microsoft.graph.devicemanagement.reports.getdevicemanagementintentpersettingcontributingprofiles.GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getdevicemanagementintentsettingsreport.GetDeviceManagementIntentSettingsReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getdevicenoncompliancereport.GetDeviceNonComplianceReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getdeviceswithoutcompliancepolicyreport.GetDevicesWithoutCompliancePolicyReportRequestBuilder;
@@ -106,11 +106,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method.
-     * @return a {@link GetDeviceManagementIntentPerSettingContributingProfiles_0f5720ea}
+     * @return a {@link GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetDeviceManagementIntentPerSettingContributingProfiles_0f5720ea getDeviceManagementIntentPerSettingContributingProfiles() {
-        return new GetDeviceManagementIntentPerSettingContributingProfiles_0f5720ea(pathParameters, requestAdapter);
+    public GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder getDeviceManagementIntentPerSettingContributingProfiles() {
+        return new GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getDeviceManagementIntentSettingsReport method.

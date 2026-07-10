@@ -64,7 +64,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/runs/{run%2Did}/userProcessingResults/{userProcessingResult%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get a userProcessingResult for a run.
      * @return a {@link UserProcessingResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0">Find more info here</a>
@@ -74,7 +74,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get a userProcessingResult for a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserProcessingResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -88,7 +88,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserProcessingResult::createFromDiscriminatorValue);
     }
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get a userProcessingResult for a run.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get a userProcessingResult for a run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -118,7 +118,7 @@ public class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder {
         return new UserProcessingResultItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get a userProcessingResult for a run.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -4,7 +4,7 @@ import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartner;
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartnerCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.count.CountRequestBuilder;
-import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.CrossTenantAccessPolicyConfigurationPartnerTenantItemRe_81d401bf;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,14 +34,14 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
      * @param crossTenantAccessPolicyConfigurationPartnerTenantId The unique identifier of crossTenantAccessPolicyConfigurationPartner
-     * @return a {@link CrossTenantAccessPolicyConfigurationPartnerTenantItemRe_81d401bf}
+     * @return a {@link CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public CrossTenantAccessPolicyConfigurationPartnerTenantItemRe_81d401bf byCrossTenantAccessPolicyConfigurationPartnerTenantId(@jakarta.annotation.Nonnull final String crossTenantAccessPolicyConfigurationPartnerTenantId) {
+    public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder byCrossTenantAccessPolicyConfigurationPartnerTenantId(@jakarta.annotation.Nonnull final String crossTenantAccessPolicyConfigurationPartnerTenantId) {
         Objects.requireNonNull(crossTenantAccessPolicyConfigurationPartnerTenantId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("crossTenantAccessPolicyConfigurationPartner%2DtenantId", crossTenantAccessPolicyConfigurationPartnerTenantId);
-        return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRe_81d401bf(urlTplParams, requestAdapter);
+        return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link PartnersRequestBuilder} and sets the default values.

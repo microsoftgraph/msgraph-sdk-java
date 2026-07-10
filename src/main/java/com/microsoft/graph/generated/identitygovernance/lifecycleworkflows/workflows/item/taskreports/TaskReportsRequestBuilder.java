@@ -2,7 +2,7 @@ package com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item
 
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.taskreports.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.taskreports.item.TaskReportItemRequestBuilder;
-import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.taskreports.microsoftgraphidentitygovernancesummarywithstartdatetim_9a9ea30a.MicrosoftGraphIdentityGovernanceSummaryWithStartDateTim_d3859c20;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.taskreports.microsoftgraphidentitygovernancesummarywithstartdatetimewithenddatetime.MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.models.identitygovernance.TaskReportCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -88,13 +88,13 @@ public class TaskReportsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the summary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link MicrosoftGraphIdentityGovernanceSummaryWithStartDateTim_d3859c20}
+     * @return a {@link MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTim_d3859c20 microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
-        return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTim_d3859c20(pathParameters, requestAdapter, endDateTime, startDateTime);
+        return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Get a list of the taskReport objects and their properties.

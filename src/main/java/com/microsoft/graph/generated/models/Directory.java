@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.entrarecoveryservices.Recovery;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -87,6 +88,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
         deserializerMap.put("publicKeyInfrastructure", (n) -> { this.setPublicKeyInfrastructure(n.getObjectValue(PublicKeyInfrastructureRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("recovery", (n) -> { this.setRecovery(n.getObjectValue(Recovery::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -105,6 +107,14 @@ public class Directory extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public PublicKeyInfrastructureRoot getPublicKeyInfrastructure() {
         return this.backingStore.get("publicKeyInfrastructure");
+    }
+    /**
+     * Gets the recovery property value. The recovery property
+     * @return a {@link Recovery}
+     */
+    @jakarta.annotation.Nullable
+    public Recovery getRecovery() {
+        return this.backingStore.get("recovery");
     }
     /**
      * Gets the subscriptions property value. List of commercial subscriptions that an organization acquired.
@@ -129,6 +139,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
         writer.writeObjectValue("publicKeyInfrastructure", this.getPublicKeyInfrastructure());
+        writer.writeObjectValue("recovery", this.getRecovery());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
     }
     /**
@@ -186,6 +197,13 @@ public class Directory extends Entity implements Parsable {
      */
     public void setPublicKeyInfrastructure(@jakarta.annotation.Nullable final PublicKeyInfrastructureRoot value) {
         this.backingStore.set("publicKeyInfrastructure", value);
+    }
+    /**
+     * Sets the recovery property value. The recovery property
+     * @param value Value to set for the recovery property.
+     */
+    public void setRecovery(@jakarta.annotation.Nullable final Recovery value) {
+        this.backingStore.set("recovery", value);
     }
     /**
      * Sets the subscriptions property value. List of commercial subscriptions that an organization acquired.

@@ -1,6 +1,6 @@
 package com.microsoft.graph.identity.authenticationeventsflows.item.graphexternalusersselfservicesignupeventsflow.onauthenticationmethodloadstart;
 
-import com.microsoft.graph.identity.authenticationeventsflows.item.graphexternalusersselfservicesignupeventsflow.onauthenticationmethodloadstart.graphonauthenticationmethodloadstartexternalusersselfse_ac9906a2.GraphOnAuthenticationMethodLoadStartExternalUsersSelfSe_42e72155;
+import com.microsoft.graph.identity.authenticationeventsflows.item.graphexternalusersselfservicesignupeventsflow.onauthenticationmethodloadstart.graphonauthenticationmethodloadstartexternalusersselfservicesignup.GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnAuthenticationMethodLoadStartHandler;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +23,11 @@ import java.util.Objects;
 public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp.
-     * @return a {@link GraphOnAuthenticationMethodLoadStartExternalUsersSelfSe_42e72155}
+     * @return a {@link GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GraphOnAuthenticationMethodLoadStartExternalUsersSelfSe_42e72155 graphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp() {
-        return new GraphOnAuthenticationMethodLoadStartExternalUsersSelfSe_42e72155(pathParameters, requestAdapter);
+    public GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder graphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp() {
+        return new GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link OnAuthenticationMethodLoadStartRequestBuilder} and sets the default values.

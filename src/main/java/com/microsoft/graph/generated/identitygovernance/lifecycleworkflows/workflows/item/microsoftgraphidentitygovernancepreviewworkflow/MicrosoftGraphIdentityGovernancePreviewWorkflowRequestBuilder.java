@@ -35,7 +35,7 @@ public class MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder exten
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/microsoft.graph.identityGovernance.previewWorkflow", rawUrl);
     }
     /**
-     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;preview&apos;.
+     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved by using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;previewMode&apos;.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-previewworkflow?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +44,7 @@ public class MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder exten
         post(body, null);
     }
     /**
-     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;preview&apos;.
+     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved by using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;previewMode&apos;.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder exten
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;preview&apos;.
+     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved by using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;previewMode&apos;.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder exten
         return toPostRequestInformation(body, null);
     }
     /**
-     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;preview&apos;.
+     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved by using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;previewMode&apos;.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

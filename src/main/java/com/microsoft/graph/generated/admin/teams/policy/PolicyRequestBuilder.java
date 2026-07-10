@@ -1,6 +1,6 @@
 package com.microsoft.graph.admin.teams.policy;
 
-import com.microsoft.graph.admin.teams.policy.microsoftgraphteamsadministrationgetpolicyidwithtypewithname.MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_a7f81604;
+import com.microsoft.graph.admin.teams.policy.microsoftgraphteamsadministrationgetpolicyidwithtypewithname.MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder;
 import com.microsoft.graph.admin.teams.policy.userassignments.UserAssignmentsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.teamsadministration.TeamsPolicyAssignment;
@@ -90,13 +90,13 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getPolicyId method.
      * @param name Usage: name=&apos;{name}&apos;
      * @param type Usage: type=&apos;{type}&apos;
-     * @return a {@link MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_a7f81604}
+     * @return a {@link MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_a7f81604 microsoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName(@jakarta.annotation.Nonnull final String name, @jakarta.annotation.Nonnull final String type) {
+    public MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder microsoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName(@jakarta.annotation.Nonnull final String name, @jakarta.annotation.Nonnull final String type) {
         Objects.requireNonNull(name);
         Objects.requireNonNull(type);
-        return new MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_a7f81604(pathParameters, requestAdapter, name, type);
+        return new MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder(pathParameters, requestAdapter, name, type);
     }
     /**
      * Update the navigation property policy in admin

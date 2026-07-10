@@ -1,9 +1,9 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.insights;
 
-import com.microsoft.graph.identitygovernance.lifecycleworkflows.insights.microsoftgraphidentitygovernancetoptasksprocessedsummar_e4a09820.MicrosoftGraphIdentityGovernanceTopTasksProcessedSummar_f084ca11;
-import com.microsoft.graph.identitygovernance.lifecycleworkflows.insights.microsoftgraphidentitygovernancetopworkflowsprocessedsu_e8b48f78.MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSu_7524a906;
-import com.microsoft.graph.identitygovernance.lifecycleworkflows.insights.microsoftgraphidentitygovernanceworkflowsprocessedbycat_458cb5f3.MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCat_7e0e042c;
-import com.microsoft.graph.identitygovernance.lifecycleworkflows.insights.microsoftgraphidentitygovernanceworkflowsprocessedsumma_aaef8e4d.MicrosoftGraphIdentityGovernanceWorkflowsProcessedSumma_f0293aa7;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.insights.microsoftgraphidentitygovernancetoptasksprocessedsummarywithstartdatetimewithenddatetime.MicrosoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.insights.microsoftgraphidentitygovernancetopworkflowsprocessedsummarywithstartdatetimewithenddatetime.MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.insights.microsoftgraphidentitygovernanceworkflowsprocessedbycategorywithstartdatetimewithenddatetime.MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.insights.microsoftgraphidentitygovernanceworkflowsprocessedsummarywithstartdatetimewithenddatetime.MicrosoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.models.identitygovernance.Insights;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -85,49 +85,49 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the topTasksProcessedSummary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link MicrosoftGraphIdentityGovernanceTopTasksProcessedSummar_f084ca11}
+     * @return a {@link MicrosoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernanceTopTasksProcessedSummar_f084ca11 microsoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public MicrosoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
-        return new MicrosoftGraphIdentityGovernanceTopTasksProcessedSummar_f084ca11(pathParameters, requestAdapter, endDateTime, startDateTime);
+        return new MicrosoftGraphIdentityGovernanceTopTasksProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Provides operations to call the topWorkflowsProcessedSummary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSu_7524a906}
+     * @return a {@link MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSu_7524a906 microsoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
-        return new MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSu_7524a906(pathParameters, requestAdapter, endDateTime, startDateTime);
+        return new MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Provides operations to call the workflowsProcessedByCategory method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCat_7e0e042c}
+     * @return a {@link MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCat_7e0e042c microsoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
-        return new MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCat_7e0e042c(pathParameters, requestAdapter, endDateTime, startDateTime);
+        return new MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Provides operations to call the workflowsProcessedSummary method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link MicrosoftGraphIdentityGovernanceWorkflowsProcessedSumma_f0293aa7}
+     * @return a {@link MicrosoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernanceWorkflowsProcessedSumma_f0293aa7 microsoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public MicrosoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
-        return new MicrosoftGraphIdentityGovernanceWorkflowsProcessedSumma_f0293aa7(pathParameters, requestAdapter, endDateTime, startDateTime);
+        return new MicrosoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Update the navigation property insights in identityGovernance

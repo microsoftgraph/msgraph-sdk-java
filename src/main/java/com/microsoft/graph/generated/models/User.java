@@ -7,9 +7,6 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Represents a Microsoft Entra user account.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class User extends DirectoryObject implements Parsable {
     /**

@@ -1,6 +1,6 @@
 package com.microsoft.graph.devicemanagement.applepushnotificationcertificate;
 
-import com.microsoft.graph.devicemanagement.applepushnotificationcertificate.downloadapplepushnotificationcertificatesigningrequest.DownloadApplePushNotificationCertificateSigningRequestR_030b19cc;
+import com.microsoft.graph.devicemanagement.applepushnotificationcertificate.downloadapplepushnotificationcertificatesigningrequest.DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
 import com.microsoft.graph.models.ApplePushNotificationCertificate;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +23,11 @@ import java.util.Objects;
 public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method.
-     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestR_030b19cc}
+     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DownloadApplePushNotificationCertificateSigningRequestR_030b19cc downloadApplePushNotificationCertificateSigningRequest() {
-        return new DownloadApplePushNotificationCertificateSigningRequestR_030b19cc(pathParameters, requestAdapter);
+    public DownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest() {
+        return new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ApplePushNotificationCertificateRequestBuilder} and sets the default values.

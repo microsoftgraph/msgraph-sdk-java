@@ -71,7 +71,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the accessReviewStage objects for a specific accessReviewInstance in a multi-stage access review.
      * @return a {@link AccessReviewStageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0">Find more info here</a>
@@ -81,7 +81,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the accessReviewStage objects for a specific accessReviewInstance in a multi-stage access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewStageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -120,7 +120,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewStage::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the accessReviewStage objects for a specific accessReviewInstance in a multi-stage access review.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +128,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the accessReviewStage objects for a specific accessReviewInstance in a multi-stage access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -174,7 +174,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
         return new StagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the accessReviewStage objects for a specific accessReviewInstance in a multi-stage access review.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

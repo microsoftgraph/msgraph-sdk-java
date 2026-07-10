@@ -1,7 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.assignments;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.additionalaccess.AdditionalAccessRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.additionalaccesswithaccesspackageidwithincompatibleacce_4602e7cf.AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_2751ca00;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.additionalaccesswithaccesspackageidwithincompatibleaccesspackageid.AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.item.AccessPackageAssignmentItemRequestBuilder;
@@ -46,13 +46,13 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the additionalAccess method.
      * @param accessPackageId Usage: accessPackageId=&apos;{accessPackageId}&apos;
      * @param incompatibleAccessPackageId Usage: incompatibleAccessPackageId=&apos;{incompatibleAccessPackageId}&apos;
-     * @return a {@link AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_2751ca00}
+     * @return a {@link AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_2751ca00 additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(@jakarta.annotation.Nonnull final String accessPackageId, @jakarta.annotation.Nonnull final String incompatibleAccessPackageId) {
+    public AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(@jakarta.annotation.Nonnull final String accessPackageId, @jakarta.annotation.Nonnull final String incompatibleAccessPackageId) {
         Objects.requireNonNull(accessPackageId);
         Objects.requireNonNull(incompatibleAccessPackageId);
-        return new AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_2751ca00(pathParameters, requestAdapter, accessPackageId, incompatibleAccessPackageId);
+        return new AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder(pathParameters, requestAdapter, accessPackageId, incompatibleAccessPackageId);
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.

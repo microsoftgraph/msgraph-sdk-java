@@ -5,7 +5,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.allmembers.AllMembersRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.completemigration.CompleteMigrationRequestBuilder;
-import com.microsoft.graph.users.item.joinedteams.item.channels.item.doesuserhaveaccessuseriduseridtenantidtenantiduserprinc_363088ef.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e;
+import com.microsoft.graph.users.item.joinedteams.item.channels.item.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.enabledapps.EnabledAppsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.filesfolder.FilesFolderRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.channels.item.members.MembersRequestBuilder;
@@ -60,11 +60,11 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the doesUserHaveAccess method.
-     * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e}
+     * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName() {
-        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e(pathParameters, requestAdapter);
+    public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName() {
+        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the enabledApps property of the microsoft.graph.channel entity.

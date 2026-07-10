@@ -69,6 +69,7 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         deserializerMap.put("elementDetails", (n) -> { this.setElementDetails(n.getCollectionOfObjectValues(PackageElementDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("longDescription", (n) -> { this.setLongDescription(n.getStringValue()); });
         deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getStringValue()); });
+        deserializerMap.put("sharedWithUsersAndGroups", (n) -> { this.setSharedWithUsersAndGroups(n.getCollectionOfObjectValues(PackageAccessEntity::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -88,6 +89,14 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         return this.backingStore.get("sensitivity");
     }
     /**
+     * Gets the sharedWithUsersAndGroups property value. The sharedWithUsersAndGroups property
+     * @return a {@link java.util.List<PackageAccessEntity>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PackageAccessEntity> getSharedWithUsersAndGroups() {
+        return this.backingStore.get("sharedWithUsersAndGroups");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,6 +109,7 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         writer.writeCollectionOfObjectValues("elementDetails", this.getElementDetails());
         writer.writeStringValue("longDescription", this.getLongDescription());
         writer.writeStringValue("sensitivity", this.getSensitivity());
+        writer.writeCollectionOfObjectValues("sharedWithUsersAndGroups", this.getSharedWithUsersAndGroups());
     }
     /**
      * Sets the acquireUsersAndGroups property value. The acquireUsersAndGroups property
@@ -142,5 +152,12 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
      */
     public void setSensitivity(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sensitivity", value);
+    }
+    /**
+     * Sets the sharedWithUsersAndGroups property value. The sharedWithUsersAndGroups property
+     * @param value Value to set for the sharedWithUsersAndGroups property.
+     */
+    public void setSharedWithUsersAndGroups(@jakarta.annotation.Nullable final java.util.List<PackageAccessEntity> value) {
+        this.backingStore.set("sharedWithUsersAndGroups", value);
     }
 }

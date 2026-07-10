@@ -35,7 +35,7 @@ public class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/getApplicablePolicyRequirements", rawUrl);
     }
     /**
-     * In Microsoft Entra entitlement management, this action retrieves a list of accessPackageAssignmentRequestRequirements objects that the currently signed-in user can use to create an accessPackageAssignmentRequest.  Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
+     * In Microsoft Entra entitlement management, this action retrieves accessPackageAssignmentRequestRequirements objects for an accessPackage that the currently signed-in user can use to create an accessPackageAssignmentRequest. Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
      * @return a {@link GetApplicablePolicyRequirementsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-getapplicablepolicyrequirements?view=graph-rest-1.0">Find more info here</a>
@@ -45,7 +45,7 @@ public class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBu
         return post(null);
     }
     /**
-     * In Microsoft Entra entitlement management, this action retrieves a list of accessPackageAssignmentRequestRequirements objects that the currently signed-in user can use to create an accessPackageAssignmentRequest.  Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
+     * In Microsoft Entra entitlement management, this action retrieves accessPackageAssignmentRequestRequirements objects for an accessPackage that the currently signed-in user can use to create an accessPackageAssignmentRequest. Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetApplicablePolicyRequirementsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, GetApplicablePolicyRequirementsPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * In Microsoft Entra entitlement management, this action retrieves a list of accessPackageAssignmentRequestRequirements objects that the currently signed-in user can use to create an accessPackageAssignmentRequest.  Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
+     * In Microsoft Entra entitlement management, this action retrieves accessPackageAssignmentRequestRequirements objects for an accessPackage that the currently signed-in user can use to create an accessPackageAssignmentRequest. Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(null);
     }
     /**
-     * In Microsoft Entra entitlement management, this action retrieves a list of accessPackageAssignmentRequestRequirements objects that the currently signed-in user can use to create an accessPackageAssignmentRequest.  Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
+     * In Microsoft Entra entitlement management, this action retrieves accessPackageAssignmentRequestRequirements objects for an accessPackage that the currently signed-in user can use to create an accessPackageAssignmentRequest. Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

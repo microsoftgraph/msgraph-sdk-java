@@ -7,9 +7,6 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Represents a Microsoft Entra group.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Group extends DirectoryObject implements Parsable {
     /**
@@ -62,7 +59,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoleAssignments");
     }
     /**
-     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Requires $select to retrieve. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
+     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group or a cloud security group. Requires a Microsoft Entra ID P1 license. Requires $select to retrieve. This property can be specified during group creation or update. However, for cloud security groups, it&apos;s immutable once set. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role. See Key differences from Microsoft 365 group labeling to learn more about managing this property for Microsoft 365 vs. cloud security groups.
      * @return a {@link java.util.List<AssignedLabel>}
      */
     @jakarta.annotation.Nullable
@@ -855,7 +852,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("appRoleAssignments", value);
     }
     /**
-     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Requires $select to retrieve. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
+     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group or a cloud security group. Requires a Microsoft Entra ID P1 license. Requires $select to retrieve. This property can be specified during group creation or update. However, for cloud security groups, it&apos;s immutable once set. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role. See Key differences from Microsoft 365 group labeling to learn more about managing this property for Microsoft 365 vs. cloud security groups.
      * @param value Value to set for the assignedLabels property.
      */
     public void setAssignedLabels(@jakarta.annotation.Nullable final java.util.List<AssignedLabel> value) {

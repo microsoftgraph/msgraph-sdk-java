@@ -3,7 +3,7 @@ package com.microsoft.graph.employeeexperience;
 import com.microsoft.graph.employeeexperience.communities.CommunitiesRequestBuilder;
 import com.microsoft.graph.employeeexperience.engagementasyncoperations.EngagementAsyncOperationsRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
-import com.microsoft.graph.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdReq_93f96b28;
+import com.microsoft.graph.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
 import com.microsoft.graph.employeeexperience.roles.RolesRequestBuilder;
 import com.microsoft.graph.models.EmployeeExperience;
@@ -107,16 +107,16 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperience entity.
      * @param externalcourseActivityId Alternate key of learningCourseActivity
-     * @return a {@link LearningCourseActivitiesWithExternalcourseActivityIdReq_93f96b28}
+     * @return a {@link LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public LearningCourseActivitiesWithExternalcourseActivityIdReq_93f96b28 learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
+    public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
         Objects.requireNonNull(externalcourseActivityId);
-        return new LearningCourseActivitiesWithExternalcourseActivityIdReq_93f96b28(pathParameters, requestAdapter, externalcourseActivityId);
+        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
     }
     /**
      * Update employeeExperience
-     * @param body Represents a container that exposes navigation properties for employee experience resources.
+     * @param body The request body
      * @return a {@link EmployeeExperience}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -126,7 +126,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update employeeExperience
-     * @param body Represents a container that exposes navigation properties for employee experience resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmployeeExperience}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -161,7 +161,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update employeeExperience
-     * @param body Represents a container that exposes navigation properties for employee experience resources.
+     * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -170,7 +170,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update employeeExperience
-     * @param body Represents a container that exposes navigation properties for employee experience resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
