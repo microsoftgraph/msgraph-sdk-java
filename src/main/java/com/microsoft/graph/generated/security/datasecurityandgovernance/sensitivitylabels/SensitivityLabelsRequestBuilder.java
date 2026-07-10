@@ -3,7 +3,7 @@ package com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SensitivityLabel;
 import com.microsoft.graph.models.SensitivityLabelCollectionResponse;
-import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e;
+import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
 import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.computerightsandinheritance.ComputeRightsAndInheritanceRequestBuilder;
 import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.count.CountRequestBuilder;
 import com.microsoft.graph.security.datasecurityandgovernance.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
@@ -58,14 +58,14 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
      * @param contentFormats Usage: contentFormats={contentFormats}
      * @param labelIds Usage: labelIds={labelIds}
      * @param locale Usage: locale=&apos;{locale}&apos;
-     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e}
+     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
+    public ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
         Objects.requireNonNull(contentFormats);
         Objects.requireNonNull(labelIds);
         Objects.requireNonNull(locale);
-        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e(pathParameters, requestAdapter, contentFormats, labelIds, locale);
+        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder(pathParameters, requestAdapter, contentFormats, labelIds, locale);
     }
     /**
      * Instantiates a new {@link SensitivityLabelsRequestBuilder} and sets the default values.

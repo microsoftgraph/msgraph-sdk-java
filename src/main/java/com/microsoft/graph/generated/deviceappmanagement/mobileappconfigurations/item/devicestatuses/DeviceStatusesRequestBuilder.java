@@ -1,9 +1,9 @@
 package com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses;
 
 import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.count.CountRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatus;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f;
+import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -34,14 +34,14 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param managedDeviceMobileAppConfigurationDeviceStatusId The unique identifier of managedDeviceMobileAppConfigurationDeviceStatus
-     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e}
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e byManagedDeviceMobileAppConfigurationDeviceStatusId(@jakarta.annotation.Nonnull final String managedDeviceMobileAppConfigurationDeviceStatusId) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder byManagedDeviceMobileAppConfigurationDeviceStatusId(@jakarta.annotation.Nonnull final String managedDeviceMobileAppConfigurationDeviceStatusId) {
         Objects.requireNonNull(managedDeviceMobileAppConfigurationDeviceStatusId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDeviceMobileAppConfigurationDeviceStatus%2Did", managedDeviceMobileAppConfigurationDeviceStatusId);
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e(urlTplParams, requestAdapter);
+        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link DeviceStatusesRequestBuilder} and sets the default values.
@@ -61,25 +61,25 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
-     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f}
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f get() {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse get() {
         return get(null);
     }
     /**
      * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f}
+     * @return a {@link ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_0f16022f::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceStatuses for deviceAppManagement

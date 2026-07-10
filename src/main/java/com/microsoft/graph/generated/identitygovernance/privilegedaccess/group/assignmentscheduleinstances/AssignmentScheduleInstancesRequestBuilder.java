@@ -2,10 +2,10 @@ package com.microsoft.graph.identitygovernance.privilegedaccess.group.assignment
 
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignmentscheduleinstances.count.CountRequestBuilder;
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignmentscheduleinstances.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
-import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignmentscheduleinstances.item.PrivilegedAccessGroupAssignmentScheduleInstanceItemRequ_595d3223;
+import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignmentscheduleinstances.item.PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrivilegedAccessGroupAssignmentScheduleInstance;
-import com.microsoft.graph.models.PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_ac334b75;
+import com.microsoft.graph.models.PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -35,14 +35,14 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to manage the assignmentScheduleInstances property of the microsoft.graph.privilegedAccessGroup entity.
      * @param privilegedAccessGroupAssignmentScheduleInstanceId The unique identifier of privilegedAccessGroupAssignmentScheduleInstance
-     * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstanceItemRequ_595d3223}
+     * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public PrivilegedAccessGroupAssignmentScheduleInstanceItemRequ_595d3223 byPrivilegedAccessGroupAssignmentScheduleInstanceId(@jakarta.annotation.Nonnull final String privilegedAccessGroupAssignmentScheduleInstanceId) {
+    public PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder byPrivilegedAccessGroupAssignmentScheduleInstanceId(@jakarta.annotation.Nonnull final String privilegedAccessGroupAssignmentScheduleInstanceId) {
         Objects.requireNonNull(privilegedAccessGroupAssignmentScheduleInstanceId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("privilegedAccessGroupAssignmentScheduleInstance%2Did", privilegedAccessGroupAssignmentScheduleInstanceId);
-        return new PrivilegedAccessGroupAssignmentScheduleInstanceItemRequ_595d3223(urlTplParams, requestAdapter);
+        return new PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link AssignmentScheduleInstancesRequestBuilder} and sets the default values.
@@ -72,27 +72,27 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
-     * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_ac334b75}
+     * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_ac334b75 get() {
+    public PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_ac334b75}
+     * @return a {@link PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_ac334b75 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_ac334b75::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to assignmentScheduleInstances for identityGovernance
