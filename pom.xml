@@ -5,7 +5,7 @@
     <groupId>com.microsoft.graph</groupId>
     <artifactId>microsoft-graph</artifactId>
     <!--x-release-please-start-version-->
-    <version>6.66.0</version>
+    <version>6.66.1</version>
     <!--x-release-please-end-->
     <packaging>jar</packaging>
 
