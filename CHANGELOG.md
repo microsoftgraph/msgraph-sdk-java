@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.66.1](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.66.0...v6.66.1) (2026-07-13)
+
+
+### Bug Fixes
+
+* Merge pull request [#2638](https://github.com/microsoftgraph/msgraph-sdk-java/issues/2638) from microsoftgraph/ci/update-deployment-approver ([6a199fc](https://github.com/microsoftgraph/msgraph-sdk-java/commit/6a199fcdbe9e479db1d3c96389f91af5649f1606))
+
 ## [6.66.0](https://github.com/microsoftgraph/msgraph-sdk-java/compare/v6.65.0...v6.66.0) (2026-07-10)
 
 
