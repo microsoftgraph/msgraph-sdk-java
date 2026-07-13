@@ -187,8 +187,8 @@ extends:
                         contentsource: "Folder"
                         folderlocation: "$(Pipeline.Workspace)"
                         waitforreleasecompletion: true
-                        owners: vibiret@microsoft.com
-                        approvers: mmainer@microsoft.com
+                        owners: christiano@microsoft.com,ramsess@microsoft.com,gavinbarron@microsoft.com,jingjingjia@microsoft.com,peombwa@microsoft.com,treicys@microsoft.com
+                        approvers: christiano@microsoft.com,ramsess@microsoft.com,gavinbarron@microsoft.com,jingjingjia@microsoft.com,peombwa@microsoft.com,treicys@microsoft.com
                         serviceendpointurl: "https://api.esrp.microsoft.com"
                         mainpublisher: "ESRPRELPACMAN"
                         domaintenantid: "cdc5aeea-15c5-4db6-b079-fcadd2505dc2"
