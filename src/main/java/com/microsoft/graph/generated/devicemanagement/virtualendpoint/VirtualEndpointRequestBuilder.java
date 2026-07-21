@@ -7,6 +7,7 @@ import com.microsoft.graph.devicemanagement.virtualendpoint.galleryimages.Galler
 import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.OnPremisesConnectionsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.report.ReportRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.serviceplans.ServicePlansRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.usersettings.UserSettingsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEndpoint;
@@ -83,6 +84,14 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ReportRequestBuilder report() {
         return new ReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the servicePlans property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ServicePlansRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ServicePlansRequestBuilder servicePlans() {
+        return new ServicePlansRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userSettings property of the microsoft.graph.virtualEndpoint entity.

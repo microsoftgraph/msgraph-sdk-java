@@ -44,6 +44,7 @@ public class Desk extends Place implements Parsable {
         deserializerMap.put("heightAdjustableState", (n) -> { this.setHeightAdjustableState(n.getEnumValue(PlaceFeatureEnablement::forValue)); });
         deserializerMap.put("mailboxDetails", (n) -> { this.setMailboxDetails(n.getObjectValue(MailboxDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("mode", (n) -> { this.setMode(n.getObjectValue(PlaceMode::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(PlaceServicePlanInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -71,6 +72,14 @@ public class Desk extends Place implements Parsable {
         return this.backingStore.get("mode");
     }
     /**
+     * Gets the servicePlans property value. The service plans associated with the desk.
+     * @return a {@link java.util.List<PlaceServicePlanInfo>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PlaceServicePlanInfo> getServicePlans() {
+        return this.backingStore.get("servicePlans");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -81,6 +90,7 @@ public class Desk extends Place implements Parsable {
         writer.writeEnumValue("heightAdjustableState", this.getHeightAdjustableState());
         writer.writeObjectValue("mailboxDetails", this.getMailboxDetails());
         writer.writeObjectValue("mode", this.getMode());
+        writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
     }
     /**
      * Sets the displayDeviceName property value. The name of the display device (for example, monitor or projector) that is available at the desk.
@@ -109,5 +119,12 @@ public class Desk extends Place implements Parsable {
      */
     public void setMode(@jakarta.annotation.Nullable final PlaceMode value) {
         this.backingStore.set("mode", value);
+    }
+    /**
+     * Sets the servicePlans property value. The service plans associated with the desk.
+     * @param value Value to set for the servicePlans property.
+     */
+    public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<PlaceServicePlanInfo> value) {
+        this.backingStore.set("servicePlans", value);
     }
 }

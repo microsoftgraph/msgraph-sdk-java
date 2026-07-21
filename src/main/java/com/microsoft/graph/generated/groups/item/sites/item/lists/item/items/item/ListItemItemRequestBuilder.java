@@ -9,6 +9,7 @@ import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.fields.F
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.versions.VersionsRequestBuilder;
 import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -93,6 +94,14 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
         return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.listItem entity.
+     * @return a {@link PermissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionsRequestBuilder permissions() {
+        return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the versions property of the microsoft.graph.listItem entity.

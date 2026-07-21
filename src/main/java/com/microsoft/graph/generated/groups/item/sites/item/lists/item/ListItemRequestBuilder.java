@@ -7,6 +7,7 @@ import com.microsoft.graph.groups.item.sites.item.lists.item.drive.DriveRequestB
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.models.List;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -83,6 +84,14 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.list entity.
+     * @return a {@link PermissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionsRequestBuilder permissions() {
+        return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
