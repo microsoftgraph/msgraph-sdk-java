@@ -62,6 +62,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("onPremisesConnections", (n) -> { this.setOnPremisesConnections(n.getCollectionOfObjectValues(CloudPcOnPremisesConnection::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningPolicies", (n) -> { this.setProvisioningPolicies(n.getCollectionOfObjectValues(CloudPcProvisioningPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("report", (n) -> { this.setReport(n.getObjectValue(CloudPcReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(CloudPcServicePlan::createFromDiscriminatorValue)); });
         deserializerMap.put("userSettings", (n) -> { this.setUserSettings(n.getCollectionOfObjectValues(CloudPcUserSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -98,6 +99,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("report");
     }
     /**
+     * Gets the servicePlans property value. A collection of Cloud PC service plans.
+     * @return a {@link java.util.List<CloudPcServicePlan>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudPcServicePlan> getServicePlans() {
+        return this.backingStore.get("servicePlans");
+    }
+    /**
      * Gets the userSettings property value. A collection of Cloud PC user settings.
      * @return a {@link java.util.List<CloudPcUserSetting>}
      */
@@ -119,6 +128,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("onPremisesConnections", this.getOnPremisesConnections());
         writer.writeCollectionOfObjectValues("provisioningPolicies", this.getProvisioningPolicies());
         writer.writeObjectValue("report", this.getReport());
+        writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
         writer.writeCollectionOfObjectValues("userSettings", this.getUserSettings());
     }
     /**
@@ -169,6 +179,13 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     public void setReport(@jakarta.annotation.Nullable final CloudPcReport value) {
         this.backingStore.set("report", value);
+    }
+    /**
+     * Sets the servicePlans property value. A collection of Cloud PC service plans.
+     * @param value Value to set for the servicePlans property.
+     */
+    public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<CloudPcServicePlan> value) {
+        this.backingStore.set("servicePlans", value);
     }
     /**
      * Sets the userSettings property value. A collection of Cloud PC user settings.

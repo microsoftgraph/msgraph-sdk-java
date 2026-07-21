@@ -78,6 +78,7 @@ public class ListItem extends BaseItem implements Parsable {
         deserializerMap.put("documentSetVersions", (n) -> { this.setDocumentSetVersions(n.getCollectionOfObjectValues(DocumentSetVersion::createFromDiscriminatorValue)); });
         deserializerMap.put("driveItem", (n) -> { this.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("fields", (n) -> { this.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
         deserializerMap.put("versions", (n) -> { this.setVersions(n.getCollectionOfObjectValues(ListItemVersion::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -89,6 +90,14 @@ public class ListItem extends BaseItem implements Parsable {
     @jakarta.annotation.Nullable
     public FieldValueSet getFields() {
         return this.backingStore.get("fields");
+    }
+    /**
+     * Gets the permissions property value. The permissions property
+     * @return a {@link java.util.List<Permission>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Permission> getPermissions() {
+        return this.backingStore.get("permissions");
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -119,6 +128,7 @@ public class ListItem extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("documentSetVersions", this.getDocumentSetVersions());
         writer.writeObjectValue("driveItem", this.getDriveItem());
         writer.writeObjectValue("fields", this.getFields());
+        writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("sharepointIds", this.getSharepointIds());
         writer.writeCollectionOfObjectValues("versions", this.getVersions());
     }
@@ -163,6 +173,13 @@ public class ListItem extends BaseItem implements Parsable {
      */
     public void setFields(@jakarta.annotation.Nullable final FieldValueSet value) {
         this.backingStore.set("fields", value);
+    }
+    /**
+     * Sets the permissions property value. The permissions property
+     * @param value Value to set for the permissions property.
+     */
+    public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
+        this.backingStore.set("permissions", value);
     }
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.

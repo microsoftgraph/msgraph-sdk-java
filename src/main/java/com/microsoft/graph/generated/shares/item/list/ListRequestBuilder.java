@@ -9,6 +9,7 @@ import com.microsoft.graph.shares.item.list.drive.DriveRequestBuilder;
 import com.microsoft.graph.shares.item.list.items.ItemsRequestBuilder;
 import com.microsoft.graph.shares.item.list.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.shares.item.list.operations.OperationsRequestBuilder;
+import com.microsoft.graph.shares.item.list.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.shares.item.list.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -83,6 +84,14 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.list entity.
+     * @return a {@link PermissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionsRequestBuilder permissions() {
+        return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.

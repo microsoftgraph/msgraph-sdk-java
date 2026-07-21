@@ -380,6 +380,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.cloudPcProvisioningPolicy": return new CloudPcProvisioningPolicy();
             case "#microsoft.graph.cloudPcProvisioningPolicyAssignment": return new CloudPcProvisioningPolicyAssignment();
             case "#microsoft.graph.cloudPcReport": return new CloudPcReport();
+            case "#microsoft.graph.cloudPcServicePlan": return new CloudPcServicePlan();
             case "#microsoft.graph.cloudPcUserSetting": return new CloudPcUserSetting();
             case "#microsoft.graph.cloudPcUserSettingAssignment": return new CloudPcUserSettingAssignment();
             case "#microsoft.graph.columnDefinition": return new ColumnDefinition();
@@ -704,7 +705,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.malwareStateForWindowsDevice": return new MalwareStateForWindowsDevice();
             case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();
             case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();
-            case "#microsoft.graph.managedApp": return new ManagedApp();
         }
         return null;
     }
@@ -716,6 +716,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.managedApp": return new ManagedApp();
             case "#microsoft.graph.managedAppConfiguration": return new ManagedAppConfiguration();
             case "#microsoft.graph.managedAppOperation": return new ManagedAppOperation();
             case "#microsoft.graph.managedAppPolicy": return new ManagedAppPolicy();
@@ -1215,7 +1216,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.userExperienceAnalyticsAppHealthOSVersionPerformance": return new UserExperienceAnalyticsAppHealthOSVersionPerformance();
             case "#microsoft.graph.userExperienceAnalyticsBaseline": return new UserExperienceAnalyticsBaseline();
             case "#microsoft.graph.userExperienceAnalyticsCategory": return new UserExperienceAnalyticsCategory();
-            case "#microsoft.graph.userExperienceAnalyticsDevicePerformance": return new UserExperienceAnalyticsDevicePerformance();
         }
         return null;
     }
@@ -1227,6 +1227,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.userExperienceAnalyticsDevicePerformance": return new UserExperienceAnalyticsDevicePerformance();
             case "#microsoft.graph.userExperienceAnalyticsDeviceScores": return new UserExperienceAnalyticsDeviceScores();
             case "#microsoft.graph.userExperienceAnalyticsDeviceStartupHistory": return new UserExperienceAnalyticsDeviceStartupHistory();
             case "#microsoft.graph.userExperienceAnalyticsDeviceStartupProcess": return new UserExperienceAnalyticsDeviceStartupProcess();
