@@ -2,6 +2,7 @@ package com.microsoft.graph.policies.crosstenantaccesspolicy.templates.multitena
 
 import com.microsoft.graph.models.MultiTenantOrganizationPartnerConfigurationTemplate;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.templates.multitenantorganizationpartnerconfiguration.resettodefaultsettings.ResetToDefaultSettingsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the resetToDefaultSettings method.
+     * @return a {@link ResetToDefaultSettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ResetToDefaultSettingsRequestBuilder resetToDefaultSettings() {
+        return new ResetToDefaultSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link MultiTenantOrganizationPartnerConfigurationRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

@@ -9,6 +9,7 @@ import com.microsoft.graph.directory.federationconfigurations.FederationConfigur
 import com.microsoft.graph.directory.onpremisessynchronization.OnPremisesSynchronizationRequestBuilder;
 import com.microsoft.graph.directory.publickeyinfrastructure.PublicKeyInfrastructureRequestBuilder;
 import com.microsoft.graph.directory.recovery.RecoveryRequestBuilder;
+import com.microsoft.graph.directory.remotetenantgroups.RemoteTenantGroupsRequestBuilder;
 import com.microsoft.graph.directory.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.directory.subscriptionswithcommercesubscriptionid.SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 import com.microsoft.graph.models.Directory;
@@ -102,6 +103,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RecoveryRequestBuilder recovery() {
         return new RecoveryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the remoteTenantGroups property of the microsoft.graph.directory entity.
+     * @return a {@link RemoteTenantGroupsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoteTenantGroupsRequestBuilder remoteTenantGroups() {
+        return new RemoteTenantGroupsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.directory entity.

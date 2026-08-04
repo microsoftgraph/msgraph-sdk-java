@@ -3,6 +3,7 @@ package com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item;
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartner;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.identitysynchronization.IdentitySynchronizationRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.serviceproviderconstraints.ServiceProviderConstraintsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     @jakarta.annotation.Nonnull
     public IdentitySynchronizationRequestBuilder identitySynchronization() {
         return new IdentitySynchronizationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the serviceProviderConstraints property of the microsoft.graph.crossTenantAccessPolicyConfigurationPartner entity.
+     * @return a {@link ServiceProviderConstraintsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProviderConstraintsRequestBuilder serviceProviderConstraints() {
+        return new ServiceProviderConstraintsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder} and sets the default values.

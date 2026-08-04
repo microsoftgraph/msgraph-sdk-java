@@ -89,6 +89,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
         deserializerMap.put("publicKeyInfrastructure", (n) -> { this.setPublicKeyInfrastructure(n.getObjectValue(PublicKeyInfrastructureRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("recovery", (n) -> { this.setRecovery(n.getObjectValue(Recovery::createFromDiscriminatorValue)); });
+        deserializerMap.put("remoteTenantGroups", (n) -> { this.setRemoteTenantGroups(n.getCollectionOfObjectValues(RemoteTenantGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -117,6 +118,14 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("recovery");
     }
     /**
+     * Gets the remoteTenantGroups property value. Collection of groups in remote Microsoft Entra tenants that are available in the directory.
+     * @return a {@link java.util.List<RemoteTenantGroup>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RemoteTenantGroup> getRemoteTenantGroups() {
+        return this.backingStore.get("remoteTenantGroups");
+    }
+    /**
      * Gets the subscriptions property value. List of commercial subscriptions that an organization acquired.
      * @return a {@link java.util.List<CompanySubscription>}
      */
@@ -140,6 +149,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
         writer.writeObjectValue("publicKeyInfrastructure", this.getPublicKeyInfrastructure());
         writer.writeObjectValue("recovery", this.getRecovery());
+        writer.writeCollectionOfObjectValues("remoteTenantGroups", this.getRemoteTenantGroups());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
     }
     /**
@@ -204,6 +214,13 @@ public class Directory extends Entity implements Parsable {
      */
     public void setRecovery(@jakarta.annotation.Nullable final Recovery value) {
         this.backingStore.set("recovery", value);
+    }
+    /**
+     * Sets the remoteTenantGroups property value. Collection of groups in remote Microsoft Entra tenants that are available in the directory.
+     * @param value Value to set for the remoteTenantGroups property.
+     */
+    public void setRemoteTenantGroups(@jakarta.annotation.Nullable final java.util.List<RemoteTenantGroup> value) {
+        this.backingStore.set("remoteTenantGroups", value);
     }
     /**
      * Sets the subscriptions property value. List of commercial subscriptions that an organization acquired.

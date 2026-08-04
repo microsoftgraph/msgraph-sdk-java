@@ -23,6 +23,13 @@ public class AccessPackageResource extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public static AccessPackageResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.customDataProvidedResource": return new CustomDataProvidedResource();
+            }
+        }
         return new AccessPackageResource();
     }
     /**
@@ -82,6 +89,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
         deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfObjectValues(AccessPackageResourceRole::createFromDiscriminatorValue)); });
         deserializerMap.put("scopes", (n) -> { this.setScopes(n.getCollectionOfObjectValues(AccessPackageResourceScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("uploadSessions", (n) -> { this.setUploadSessions(n.getCollectionOfObjectValues(CustomDataProvidedResourceUploadSession::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -125,6 +133,14 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("scopes");
     }
     /**
+     * Gets the uploadSessions property value. The upload sessions for uploading external access data to this resource through the Bring Your Own Data (BYOD) flow.
+     * @return a {@link java.util.List<CustomDataProvidedResourceUploadSession>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CustomDataProvidedResourceUploadSession> getUploadSessions() {
+        return this.backingStore.get("uploadSessions");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -141,6 +157,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         writer.writeStringValue("originSystem", this.getOriginSystem());
         writer.writeCollectionOfObjectValues("roles", this.getRoles());
         writer.writeCollectionOfObjectValues("scopes", this.getScopes());
+        writer.writeCollectionOfObjectValues("uploadSessions", this.getUploadSessions());
     }
     /**
      * Sets the attributes property value. Contains information about the attributes to be collected from the requestor and sent to the resource application.
@@ -211,5 +228,12 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     public void setScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
         this.backingStore.set("scopes", value);
+    }
+    /**
+     * Sets the uploadSessions property value. The upload sessions for uploading external access data to this resource through the Bring Your Own Data (BYOD) flow.
+     * @param value Value to set for the uploadSessions property.
+     */
+    public void setUploadSessions(@jakarta.annotation.Nullable final java.util.List<CustomDataProvidedResourceUploadSession> value) {
+        this.backingStore.set("uploadSessions", value);
     }
 }

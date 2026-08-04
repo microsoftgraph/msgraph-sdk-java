@@ -35,14 +35,14 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations/{virtualEventRegistration%2Did}/cancel", rawUrl);
     }
     /**
-     * Cancel a registrant&apos;s registration record for a webinar. 
+     * Cancel a registrant&apos;s registration record for a webinar or town hall. 
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post() {
         post(null);
     }
     /**
-     * Cancel a registrant&apos;s registration record for a webinar. 
+     * Cancel a registrant&apos;s registration record for a webinar or town hall. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -53,7 +53,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cancel a registrant&apos;s registration record for a webinar. 
+     * Cancel a registrant&apos;s registration record for a webinar or town hall. 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Cancel a registrant&apos;s registration record for a webinar. 
+     * Cancel a registrant&apos;s registration record for a webinar or town hall. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
