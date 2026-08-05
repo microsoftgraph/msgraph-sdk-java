@@ -31,25 +31,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("isManualApprovalEnabled", (n) -> { this.setIsManualApprovalEnabled(n.getBooleanValue()); });
-        deserializerMap.put("isWaitlistEnabled", (n) -> { this.setIsWaitlistEnabled(n.getBooleanValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the isManualApprovalEnabled property value. The isManualApprovalEnabled property
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getIsManualApprovalEnabled() {
-        return this.backingStore.get("isManualApprovalEnabled");
-    }
-    /**
-     * Gets the isWaitlistEnabled property value. The isWaitlistEnabled property
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getIsWaitlistEnabled() {
-        return this.backingStore.get("isWaitlistEnabled");
     }
     /**
      * Serializes information the current object
@@ -58,21 +40,5 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("isManualApprovalEnabled", this.getIsManualApprovalEnabled());
-        writer.writeBooleanValue("isWaitlistEnabled", this.getIsWaitlistEnabled());
-    }
-    /**
-     * Sets the isManualApprovalEnabled property value. The isManualApprovalEnabled property
-     * @param value Value to set for the isManualApprovalEnabled property.
-     */
-    public void setIsManualApprovalEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("isManualApprovalEnabled", value);
-    }
-    /**
-     * Sets the isWaitlistEnabled property value. The isWaitlistEnabled property
-     * @param value Value to set for the isWaitlistEnabled property.
-     */
-    public void setIsWaitlistEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("isWaitlistEnabled", value);
     }
 }

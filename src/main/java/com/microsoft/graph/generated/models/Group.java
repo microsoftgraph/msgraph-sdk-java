@@ -243,6 +243,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("onPremisesSyncBehavior", (n) -> { this.setOnPremisesSyncBehavior(n.getObjectValue(OnPremisesSyncBehavior::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("organizationId", (n) -> { this.setOrganizationId(n.getStringValue()); });
         deserializerMap.put("owners", (n) -> { this.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrants", (n) -> { this.setPermissionGrants(n.getCollectionOfObjectValues(ResourceSpecificPermissionGrant::createFromDiscriminatorValue)); });
         deserializerMap.put("photo", (n) -> { this.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
@@ -512,6 +513,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
         return this.backingStore.get("onPremisesSyncEnabled");
+    }
+    /**
+     * Gets the organizationId property value. The organizationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOrganizationId() {
+        return this.backingStore.get("organizationId");
     }
     /**
      * Gets the owners property value. The owners of the group who can be users or service principals. Limited to 100 owners. Nullable. If this property isn&apos;t specified when creating a Microsoft 365 group the calling user (admin or non-admin) is automatically assigned as the group owner. A non-admin user can&apos;t explicitly add themselves to this collection when they&apos;re creating the group. For more information, see the related known issue. For security groups, the admin user isn&apos;t automatically added to this collection. For more information, see the related known issue. Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,&apos;Role&apos;)&amp;$select=id,displayName&amp;$expand=owners($select=id,userPrincipalName,displayName).
@@ -794,6 +803,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeObjectValue("onPremisesSyncBehavior", this.getOnPremisesSyncBehavior());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
+        writer.writeStringValue("organizationId", this.getOrganizationId());
         writer.writeCollectionOfObjectValues("owners", this.getOwners());
         writer.writeCollectionOfObjectValues("permissionGrants", this.getPermissionGrants());
         writer.writeObjectValue("photo", this.getPhoto());
@@ -1172,6 +1182,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("onPremisesSyncEnabled", value);
+    }
+    /**
+     * Sets the organizationId property value. The organizationId property
+     * @param value Value to set for the organizationId property.
+     */
+    public void setOrganizationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("organizationId", value);
     }
     /**
      * Sets the owners property value. The owners of the group who can be users or service principals. Limited to 100 owners. Nullable. If this property isn&apos;t specified when creating a Microsoft 365 group the calling user (admin or non-admin) is automatically assigned as the group owner. A non-admin user can&apos;t explicitly add themselves to this collection when they&apos;re creating the group. For more information, see the related known issue. For security groups, the admin user isn&apos;t automatically added to this collection. For more information, see the related known issue. Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,&apos;Role&apos;)&amp;$select=id,displayName&amp;$expand=owners($select=id,userPrincipalName,displayName).

@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance;
 
 import com.microsoft.graph.identitygovernance.accessreviews.AccessReviewsRequestBuilder;
 import com.microsoft.graph.identitygovernance.appconsent.AppConsentRequestBuilder;
+import com.microsoft.graph.identitygovernance.catalogs.CatalogsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.EntitlementManagementRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.LifecycleWorkflowsRequestBuilder;
 import com.microsoft.graph.identitygovernance.privilegedaccess.PrivilegedAccessRequestBuilder;
@@ -41,6 +42,14 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AppConsentRequestBuilder appConsent() {
         return new AppConsentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the catalogs property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link CatalogsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CatalogsRequestBuilder catalogs() {
+        return new CatalogsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.

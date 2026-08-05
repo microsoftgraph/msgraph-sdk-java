@@ -76,6 +76,7 @@ import com.microsoft.graph.users.item.sendmail.SendMailRequestBuilder;
 import com.microsoft.graph.users.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.users.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.users.item.solutions.SolutionsRequestBuilder;
+import com.microsoft.graph.users.item.sponsorof.SponsorOfRequestBuilder;
 import com.microsoft.graph.users.item.sponsors.SponsorsRequestBuilder;
 import com.microsoft.graph.users.item.teamwork.TeamworkRequestBuilder;
 import com.microsoft.graph.users.item.todo.TodoRequestBuilder;
@@ -675,6 +676,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SolutionsRequestBuilder solutions() {
         return new SolutionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sponsorOf property of the microsoft.graph.user entity.
+     * @return a {@link SponsorOfRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SponsorOfRequestBuilder sponsorOf() {
+        return new SponsorOfRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sponsors property of the microsoft.graph.user entity.

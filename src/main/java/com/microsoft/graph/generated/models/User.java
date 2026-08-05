@@ -556,6 +556,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("signInSessionsValidFromDateTime", (n) -> { this.setSignInSessionsValidFromDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("skills", (n) -> { this.setSkills(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("solutions", (n) -> { this.setSolutions(n.getObjectValue(UserSolutionRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("sponsorOf", (n) -> { this.setSponsorOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         deserializerMap.put("streetAddress", (n) -> { this.setStreetAddress(n.getStringValue()); });
@@ -1169,6 +1170,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("solutions");
     }
     /**
+     * Gets the sponsorOf property value. Directory objects that this user sponsors, such as guest users, agent users, agent blueprints, agent blueprint principals, and agent identities. If the user is a member of a group that&apos;s a sponsor, the objects sponsored by that group are also included. Read-only. Nullable. Supports $filter, $count, $select, $expand, $top, and $skip.
+     * @return a {@link java.util.List<DirectoryObject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DirectoryObject> getSponsorOf() {
+        return this.backingStore.get("sponsorOf");
+    }
+    /**
      * Gets the sponsors property value. The users and groups responsible for this guest&apos;s privileges in the tenant and keeping the guest&apos;s information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @return a {@link java.util.List<DirectoryObject>}
      */
@@ -1379,6 +1388,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeOffsetDateTimeValue("signInSessionsValidFromDateTime", this.getSignInSessionsValidFromDateTime());
         writer.writeCollectionOfPrimitiveValues("skills", this.getSkills());
         writer.writeObjectValue("solutions", this.getSolutions());
+        writer.writeCollectionOfObjectValues("sponsorOf", this.getSponsorOf());
         writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
         writer.writeStringValue("state", this.getState());
         writer.writeStringValue("streetAddress", this.getStreetAddress());
@@ -2257,6 +2267,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setSolutions(@jakarta.annotation.Nullable final UserSolutionRoot value) {
         this.backingStore.set("solutions", value);
+    }
+    /**
+     * Sets the sponsorOf property value. Directory objects that this user sponsors, such as guest users, agent users, agent blueprints, agent blueprint principals, and agent identities. If the user is a member of a group that&apos;s a sponsor, the objects sponsored by that group are also included. Read-only. Nullable. Supports $filter, $count, $select, $expand, $top, and $skip.
+     * @param value Value to set for the sponsorOf property.
+     */
+    public void setSponsorOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.backingStore.set("sponsorOf", value);
     }
     /**
      * Sets the sponsors property value. The users and groups responsible for this guest&apos;s privileges in the tenant and keeping the guest&apos;s information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.

@@ -37,7 +37,7 @@ public class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions/{virtualEventRegistrationQuestionBase%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 
+     * Delete a registration question from a webinar or town hall. The question can either be a predefined registration question or a custom registration question. 
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistrationquestionbase-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends Base
         delete(null);
     }
     /**
-     * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 
+     * Delete a registration question from a webinar or town hall. The question can either be a predefined registration question or a custom registration question. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistrationquestionbase-delete?view=graph-rest-1.0">Find more info here</a>
@@ -104,7 +104,7 @@ public class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventRegistrationQuestionBase::createFromDiscriminatorValue);
     }
     /**
-     * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 
+     * Delete a registration question from a webinar or town hall. The question can either be a predefined registration question or a custom registration question. 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends Base
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 
+     * Delete a registration question from a webinar or town hall. The question can either be a predefined registration question or a custom registration question. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

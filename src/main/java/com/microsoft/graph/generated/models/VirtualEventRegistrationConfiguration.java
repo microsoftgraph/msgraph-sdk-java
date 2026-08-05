@@ -26,6 +26,7 @@ public class VirtualEventRegistrationConfiguration extends Entity implements Par
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.virtualEventTownhallRegistrationConfiguration": return new VirtualEventTownhallRegistrationConfiguration();
                 case "#microsoft.graph.virtualEventWebinarRegistrationConfiguration": return new VirtualEventWebinarRegistrationConfiguration();
             }
         }
@@ -47,9 +48,27 @@ public class VirtualEventRegistrationConfiguration extends Entity implements Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("capacity", (n) -> { this.setCapacity(n.getIntegerValue()); });
+        deserializerMap.put("isManualApprovalEnabled", (n) -> { this.setIsManualApprovalEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isWaitlistEnabled", (n) -> { this.setIsWaitlistEnabled(n.getBooleanValue()); });
         deserializerMap.put("questions", (n) -> { this.setQuestions(n.getCollectionOfObjectValues(VirtualEventRegistrationQuestionBase::createFromDiscriminatorValue)); });
         deserializerMap.put("registrationWebUrl", (n) -> { this.setRegistrationWebUrl(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isManualApprovalEnabled property value. Indicates whether registrations require organizer approval before a participant is confirmed.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsManualApprovalEnabled() {
+        return this.backingStore.get("isManualApprovalEnabled");
+    }
+    /**
+     * Gets the isWaitlistEnabled property value. Indicates whether more registrants are automatically placed on a waitlist when capacity is reached.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsWaitlistEnabled() {
+        return this.backingStore.get("isWaitlistEnabled");
     }
     /**
      * Gets the questions property value. Registration questions.
@@ -75,6 +94,8 @@ public class VirtualEventRegistrationConfiguration extends Entity implements Par
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("capacity", this.getCapacity());
+        writer.writeBooleanValue("isManualApprovalEnabled", this.getIsManualApprovalEnabled());
+        writer.writeBooleanValue("isWaitlistEnabled", this.getIsWaitlistEnabled());
         writer.writeCollectionOfObjectValues("questions", this.getQuestions());
         writer.writeStringValue("registrationWebUrl", this.getRegistrationWebUrl());
     }
@@ -84,6 +105,20 @@ public class VirtualEventRegistrationConfiguration extends Entity implements Par
      */
     public void setCapacity(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("capacity", value);
+    }
+    /**
+     * Sets the isManualApprovalEnabled property value. Indicates whether registrations require organizer approval before a participant is confirmed.
+     * @param value Value to set for the isManualApprovalEnabled property.
+     */
+    public void setIsManualApprovalEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isManualApprovalEnabled", value);
+    }
+    /**
+     * Sets the isWaitlistEnabled property value. Indicates whether more registrants are automatically placed on a waitlist when capacity is reached.
+     * @param value Value to set for the isWaitlistEnabled property.
+     */
+    public void setIsWaitlistEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isWaitlistEnabled", value);
     }
     /**
      * Sets the questions property value. Registration questions.

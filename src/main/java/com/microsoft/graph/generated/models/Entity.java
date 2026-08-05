@@ -419,6 +419,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.crossTenantAccessPolicyConfigurationDefault": return new CrossTenantAccessPolicyConfigurationDefault();
             case "#microsoft.graph.customAuthenticationExtension": return new CustomAuthenticationExtension();
             case "#microsoft.graph.customCalloutExtension": return new CustomCalloutExtension();
+            case "#microsoft.graph.customDataProvidedResource": return new CustomDataProvidedResource();
+            case "#microsoft.graph.customDataProvidedResourceAccessReviewUploadSession": return new CustomDataProvidedResourceAccessReviewUploadSession();
+            case "#microsoft.graph.customDataProvidedResourceFile": return new CustomDataProvidedResourceFile();
+            case "#microsoft.graph.customDataProvidedResourceUploadSession": return new CustomDataProvidedResourceUploadSession();
             case "#microsoft.graph.customExtensionStageSetting": return new CustomExtensionStageSetting();
             case "#microsoft.graph.customSecurityAttributeDefinition": return new CustomSecurityAttributeDefinition();
             case "#microsoft.graph.dataPolicyOperation": return new DataPolicyOperation();
@@ -431,6 +435,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.delegatedAdminRelationshipOperation": return new DelegatedAdminRelationshipOperation();
             case "#microsoft.graph.delegatedAdminRelationshipRequest": return new DelegatedAdminRelationshipRequest();
             case "#microsoft.graph.delegatedAdminServiceManagementDetail": return new DelegatedAdminServiceManagementDetail();
+            case "#microsoft.graph.delegatedAdminServiceProviderConstraints": return new DelegatedAdminServiceProviderConstraints();
             case "#microsoft.graph.delegatedPermissionClassification": return new DelegatedPermissionClassification();
             case "#microsoft.graph.deletedChat": return new DeletedChat();
             case "#microsoft.graph.deletedItemContainer": return new DeletedItemContainer();
@@ -700,11 +705,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.mailboxProtectionUnitsBulkAdditionJob": return new MailboxProtectionUnitsBulkAdditionJob();
             case "#microsoft.graph.mailboxRestoreArtifact": return new MailboxRestoreArtifact();
             case "#microsoft.graph.mailboxRestoreArtifactsBulkAdditionRequest": return new MailboxRestoreArtifactsBulkAdditionRequest();
-            case "#microsoft.graph.mailFolder": return new MailFolder();
-            case "#microsoft.graph.mailSearchFolder": return new MailSearchFolder();
-            case "#microsoft.graph.malwareStateForWindowsDevice": return new MalwareStateForWindowsDevice();
-            case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();
-            case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();
         }
         return null;
     }
@@ -716,6 +716,11 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.mailFolder": return new MailFolder();
+            case "#microsoft.graph.mailSearchFolder": return new MailSearchFolder();
+            case "#microsoft.graph.malwareStateForWindowsDevice": return new MalwareStateForWindowsDevice();
+            case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();
+            case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();
             case "#microsoft.graph.managedApp": return new ManagedApp();
             case "#microsoft.graph.managedAppConfiguration": return new ManagedAppConfiguration();
             case "#microsoft.graph.managedAppOperation": return new ManagedAppOperation();
@@ -920,6 +925,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.relyingPartyDetailedSummary": return new RelyingPartyDetailedSummary();
             case "#microsoft.graph.remoteAssistancePartner": return new RemoteAssistancePartner();
             case "#microsoft.graph.remoteDesktopSecurityConfiguration": return new RemoteDesktopSecurityConfiguration();
+            case "#microsoft.graph.remoteTenantGroup": return new RemoteTenantGroup();
             case "#microsoft.graph.reportsRoot": return new ReportsRoot();
             case "#microsoft.graph.request": return new Request();
             case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
@@ -1055,6 +1061,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.serviceHealthIssue": return new ServiceHealthIssue();
             case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();
             case "#microsoft.graph.servicePrincipalRiskDetection": return new ServicePrincipalRiskDetection();
+            case "#microsoft.graph.serviceProviderConstraints": return new ServiceProviderConstraints();
             case "#microsoft.graph.serviceStorageQuotaBreakdown": return new ServiceStorageQuotaBreakdown();
             case "#microsoft.graph.serviceUpdateMessage": return new ServiceUpdateMessage();
             case "#microsoft.graph.settingStateDeviceSummary": return new SettingStateDeviceSummary();
@@ -1209,13 +1216,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.userExperienceAnalyticsAppHealthApplicationPerformance": return new UserExperienceAnalyticsAppHealthApplicationPerformance();
             case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails": return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails();
             case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId": return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId();
-            case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByOSVersion": return new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion();
-            case "#microsoft.graph.userExperienceAnalyticsAppHealthDeviceModelPerformance": return new UserExperienceAnalyticsAppHealthDeviceModelPerformance();
-            case "#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformance": return new UserExperienceAnalyticsAppHealthDevicePerformance();
-            case "#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformanceDetails": return new UserExperienceAnalyticsAppHealthDevicePerformanceDetails();
-            case "#microsoft.graph.userExperienceAnalyticsAppHealthOSVersionPerformance": return new UserExperienceAnalyticsAppHealthOSVersionPerformance();
-            case "#microsoft.graph.userExperienceAnalyticsBaseline": return new UserExperienceAnalyticsBaseline();
-            case "#microsoft.graph.userExperienceAnalyticsCategory": return new UserExperienceAnalyticsCategory();
         }
         return null;
     }
@@ -1227,6 +1227,13 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByOSVersion": return new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion();
+            case "#microsoft.graph.userExperienceAnalyticsAppHealthDeviceModelPerformance": return new UserExperienceAnalyticsAppHealthDeviceModelPerformance();
+            case "#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformance": return new UserExperienceAnalyticsAppHealthDevicePerformance();
+            case "#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformanceDetails": return new UserExperienceAnalyticsAppHealthDevicePerformanceDetails();
+            case "#microsoft.graph.userExperienceAnalyticsAppHealthOSVersionPerformance": return new UserExperienceAnalyticsAppHealthOSVersionPerformance();
+            case "#microsoft.graph.userExperienceAnalyticsBaseline": return new UserExperienceAnalyticsBaseline();
+            case "#microsoft.graph.userExperienceAnalyticsCategory": return new UserExperienceAnalyticsCategory();
             case "#microsoft.graph.userExperienceAnalyticsDevicePerformance": return new UserExperienceAnalyticsDevicePerformance();
             case "#microsoft.graph.userExperienceAnalyticsDeviceScores": return new UserExperienceAnalyticsDeviceScores();
             case "#microsoft.graph.userExperienceAnalyticsDeviceStartupHistory": return new UserExperienceAnalyticsDeviceStartupHistory();
@@ -1268,6 +1275,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.virtualEventSession": return new VirtualEventSession();
             case "#microsoft.graph.virtualEventsRoot": return new VirtualEventsRoot();
             case "#microsoft.graph.virtualEventTownhall": return new VirtualEventTownhall();
+            case "#microsoft.graph.virtualEventTownhallRegistrationConfiguration": return new VirtualEventTownhallRegistrationConfiguration();
             case "#microsoft.graph.virtualEventWebinar": return new VirtualEventWebinar();
             case "#microsoft.graph.virtualEventWebinarRegistrationConfiguration": return new VirtualEventWebinarRegistrationConfiguration();
             case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();

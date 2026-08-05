@@ -109,7 +109,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("appServiceConnectInbound", (n) -> { this.setAppServiceConnectInbound(n.getObjectValue(CrossTenantAccessPolicyAppServiceConnectSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -123,6 +123,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         deserializerMap.put("m365CollaborationInbound", (n) -> { this.setM365CollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationInboundSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("m365CollaborationOutbound", (n) -> { this.setM365CollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationOutboundSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("serviceProviderConstraints", (n) -> { this.setServiceProviderConstraints(n.getObjectValue(ServiceProviderConstraints::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("tenantRestrictions", (n) -> { this.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -184,6 +185,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the serviceProviderConstraints property value. The serviceProviderConstraints property
+     * @return a {@link ServiceProviderConstraints}
+     */
+    @jakarta.annotation.Nullable
+    public ServiceProviderConstraints getServiceProviderConstraints() {
+        return this.backingStore.get("serviceProviderConstraints");
+    }
+    /**
      * Gets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @return a {@link String}
      */
@@ -218,6 +227,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         writer.writeObjectValue("m365CollaborationInbound", this.getM365CollaborationInbound());
         writer.writeObjectValue("m365CollaborationOutbound", this.getM365CollaborationOutbound());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("serviceProviderConstraints", this.getServiceProviderConstraints());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -327,6 +337,13 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the serviceProviderConstraints property value. The serviceProviderConstraints property
+     * @param value Value to set for the serviceProviderConstraints property.
+     */
+    public void setServiceProviderConstraints(@jakarta.annotation.Nullable final ServiceProviderConstraints value) {
+        this.backingStore.set("serviceProviderConstraints", value);
     }
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
