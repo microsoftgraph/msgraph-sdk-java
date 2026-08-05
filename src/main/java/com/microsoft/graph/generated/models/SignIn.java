@@ -50,6 +50,14 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("appliedConditionalAccessPolicies");
     }
     /**
+     * Gets the authenticationAppDeviceDetails property value. The authenticationAppDeviceDetails property
+     * @return a {@link AuthenticationAppDeviceDetails}
+     */
+    @jakarta.annotation.Nullable
+    public AuthenticationAppDeviceDetails getAuthenticationAppDeviceDetails() {
+        return this.backingStore.get("authenticationAppDeviceDetails");
+    }
+    /**
      * Gets the clientAppUsed property value. Identifies the client used for the sign-in activity. Modern authentication clients include Browser, modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients.  Supports $filter (eq).
      * @return a {@link String}
      */
@@ -99,27 +107,41 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("appliedConditionalAccessPolicies", (n) -> { this.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationAppDeviceDetails", (n) -> { this.setAuthenticationAppDeviceDetails(n.getObjectValue(AuthenticationAppDeviceDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("clientAppUsed", (n) -> { this.setClientAppUsed(n.getStringValue()); });
         deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus::forValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceDetail", (n) -> { this.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("isInteractive", (n) -> { this.setIsInteractive(n.getBooleanValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("resourceTenantId", (n) -> { this.setResourceTenantId(n.getStringValue()); });
         deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
         deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfEnumValues(RiskEventType::forValue)); });
         deserializerMap.put("riskEventTypes_v2", (n) -> { this.setRiskEventTypesV2(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("riskLevelAggregated", (n) -> { this.setRiskLevelAggregated(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskLevelDuringSignIn", (n) -> { this.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalName", (n) -> { this.setServicePrincipalName(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("userAgent", (n) -> { this.setUserAgent(n.getStringValue()); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the homeTenantId property value. The homeTenantId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getHomeTenantId() {
+        return this.backingStore.get("homeTenantId");
     }
     /**
      * Gets the ipAddress property value. IP address of the client used to sign in.  Supports $filter (eq, startsWith).
@@ -160,6 +182,14 @@ public class SignIn extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.backingStore.get("resourceId");
+    }
+    /**
+     * Gets the resourceTenantId property value. The resourceTenantId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getResourceTenantId() {
+        return this.backingStore.get("resourceTenantId");
     }
     /**
      * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. The value none means that Microsoft Entra risk detection did not flag the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
@@ -210,12 +240,36 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("riskState");
     }
     /**
+     * Gets the servicePrincipalId property value. The servicePrincipalId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getServicePrincipalId() {
+        return this.backingStore.get("servicePrincipalId");
+    }
+    /**
+     * Gets the servicePrincipalName property value. The servicePrincipalName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getServicePrincipalName() {
+        return this.backingStore.get("servicePrincipalName");
+    }
+    /**
      * Gets the status property value. Sign-in status. Includes the error code and description of the error (if a sign-in failure occurs).  Supports $filter (eq) on errorCode property.
      * @return a {@link SignInStatus}
      */
     @jakarta.annotation.Nullable
     public SignInStatus getStatus() {
         return this.backingStore.get("status");
+    }
+    /**
+     * Gets the userAgent property value. The userAgent property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getUserAgent() {
+        return this.backingStore.get("userAgent");
     }
     /**
      * Gets the userDisplayName property value. Display name of the user that initiated the sign-in.  Supports $filter (eq, startsWith).
@@ -251,23 +305,29 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeCollectionOfObjectValues("appliedConditionalAccessPolicies", this.getAppliedConditionalAccessPolicies());
+        writer.writeObjectValue("authenticationAppDeviceDetails", this.getAuthenticationAppDeviceDetails());
         writer.writeStringValue("clientAppUsed", this.getClientAppUsed());
         writer.writeEnumValue("conditionalAccessStatus", this.getConditionalAccessStatus());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("deviceDetail", this.getDeviceDetail());
+        writer.writeStringValue("homeTenantId", this.getHomeTenantId());
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeBooleanValue("isInteractive", this.getIsInteractive());
         writer.writeObjectValue("location", this.getLocation());
         writer.writeStringValue("resourceDisplayName", this.getResourceDisplayName());
         writer.writeStringValue("resourceId", this.getResourceId());
+        writer.writeStringValue("resourceTenantId", this.getResourceTenantId());
         writer.writeEnumValue("riskDetail", this.getRiskDetail());
         writer.writeCollectionOfEnumValues("riskEventTypes", this.getRiskEventTypes());
         writer.writeCollectionOfPrimitiveValues("riskEventTypes_v2", this.getRiskEventTypesV2());
         writer.writeEnumValue("riskLevelAggregated", this.getRiskLevelAggregated());
         writer.writeEnumValue("riskLevelDuringSignIn", this.getRiskLevelDuringSignIn());
         writer.writeEnumValue("riskState", this.getRiskState());
+        writer.writeStringValue("servicePrincipalId", this.getServicePrincipalId());
+        writer.writeStringValue("servicePrincipalName", this.getServicePrincipalName());
         writer.writeObjectValue("status", this.getStatus());
+        writer.writeStringValue("userAgent", this.getUserAgent());
         writer.writeStringValue("userDisplayName", this.getUserDisplayName());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
@@ -292,6 +352,13 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setAppliedConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<AppliedConditionalAccessPolicy> value) {
         this.backingStore.set("appliedConditionalAccessPolicies", value);
+    }
+    /**
+     * Sets the authenticationAppDeviceDetails property value. The authenticationAppDeviceDetails property
+     * @param value Value to set for the authenticationAppDeviceDetails property.
+     */
+    public void setAuthenticationAppDeviceDetails(@jakarta.annotation.Nullable final AuthenticationAppDeviceDetails value) {
+        this.backingStore.set("authenticationAppDeviceDetails", value);
     }
     /**
      * Sets the clientAppUsed property value. Identifies the client used for the sign-in activity. Modern authentication clients include Browser, modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients.  Supports $filter (eq).
@@ -329,6 +396,13 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("deviceDetail", value);
     }
     /**
+     * Sets the homeTenantId property value. The homeTenantId property
+     * @param value Value to set for the homeTenantId property.
+     */
+    public void setHomeTenantId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("homeTenantId", value);
+    }
+    /**
      * Sets the ipAddress property value. IP address of the client used to sign in.  Supports $filter (eq, startsWith).
      * @param value Value to set for the ipAddress property.
      */
@@ -362,6 +436,13 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceId", value);
+    }
+    /**
+     * Sets the resourceTenantId property value. The resourceTenantId property
+     * @param value Value to set for the resourceTenantId property.
+     */
+    public void setResourceTenantId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("resourceTenantId", value);
     }
     /**
      * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. The value none means that Microsoft Entra risk detection did not flag the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
@@ -406,11 +487,32 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("riskState", value);
     }
     /**
+     * Sets the servicePrincipalId property value. The servicePrincipalId property
+     * @param value Value to set for the servicePrincipalId property.
+     */
+    public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("servicePrincipalId", value);
+    }
+    /**
+     * Sets the servicePrincipalName property value. The servicePrincipalName property
+     * @param value Value to set for the servicePrincipalName property.
+     */
+    public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("servicePrincipalName", value);
+    }
+    /**
      * Sets the status property value. Sign-in status. Includes the error code and description of the error (if a sign-in failure occurs).  Supports $filter (eq) on errorCode property.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SignInStatus value) {
         this.backingStore.set("status", value);
+    }
+    /**
+     * Sets the userAgent property value. The userAgent property
+     * @param value Value to set for the userAgent property.
+     */
+    public void setUserAgent(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("userAgent", value);
     }
     /**
      * Sets the userDisplayName property value. Display name of the user that initiated the sign-in.  Supports $filter (eq, startsWith).

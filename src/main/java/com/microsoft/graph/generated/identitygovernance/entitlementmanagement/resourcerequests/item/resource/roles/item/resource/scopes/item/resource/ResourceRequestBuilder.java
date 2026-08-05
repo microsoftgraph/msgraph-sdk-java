@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement.resourcereq
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.item.resource.roles.item.resource.scopes.item.resource.environment.EnvironmentRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.item.resource.roles.item.resource.scopes.item.resource.refresh.RefreshRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.item.resource.roles.item.resource.scopes.item.resource.uploadsessions.UploadSessionsRequestBuilder;
 import com.microsoft.graph.models.AccessPackageResource;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -37,6 +38,14 @@ public class ResourceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RefreshRequestBuilder refresh() {
         return new RefreshRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the uploadSessions property of the microsoft.graph.accessPackageResource entity.
+     * @return a {@link UploadSessionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UploadSessionsRequestBuilder uploadSessions() {
+        return new UploadSessionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ResourceRequestBuilder} and sets the default values.

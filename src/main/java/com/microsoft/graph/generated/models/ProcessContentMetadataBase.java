@@ -73,6 +73,14 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("content");
     }
     /**
+     * Gets the contentCategory property value. The contentCategory property
+     * @return a {@link ContentCategory}
+     */
+    @jakarta.annotation.Nullable
+    public ContentCategory getContentCategory() {
+        return this.backingStore.get("contentCategory");
+    }
+    /**
      * Gets the correlationId property value. An identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).
      * @return a {@link String}
      */
@@ -94,8 +102,9 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(ContentBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCategory", (n) -> { this.setContentCategory(n.getEnumValue(ContentCategory::forValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getStringValue()); });
@@ -170,6 +179,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("content", this.getContent());
+        writer.writeEnumValue("contentCategory", this.getContentCategory());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("identifier", this.getIdentifier());
@@ -202,6 +212,13 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
      */
     public void setContent(@jakarta.annotation.Nullable final ContentBase value) {
         this.backingStore.set("content", value);
+    }
+    /**
+     * Sets the contentCategory property value. The contentCategory property
+     * @param value Value to set for the contentCategory property.
+     */
+    public void setContentCategory(@jakarta.annotation.Nullable final ContentCategory value) {
+        this.backingStore.set("contentCategory", value);
     }
     /**
      * Sets the correlationId property value. An identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).

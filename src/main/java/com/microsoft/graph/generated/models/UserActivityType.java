@@ -9,7 +9,11 @@ public enum UserActivityType implements ValuedEnum {
     UploadFile("uploadFile"),
     DownloadText("downloadText"),
     DownloadFile("downloadFile"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    CopyToClipboard("copyToClipboard"),
+    PasteFromClipboard("pasteFromClipboard"),
+    Print("print"),
+    AccessDebugTools("accessDebugTools");
     public final String value;
     UserActivityType(final String value) {
         this.value = value;
@@ -25,6 +29,10 @@ public enum UserActivityType implements ValuedEnum {
             case "downloadText": return DownloadText;
             case "downloadFile": return DownloadFile;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "copyToClipboard": return CopyToClipboard;
+            case "pasteFromClipboard": return PasteFromClipboard;
+            case "print": return Print;
+            case "accessDebugTools": return AccessDebugTools;
             default: return null;
         }
     }

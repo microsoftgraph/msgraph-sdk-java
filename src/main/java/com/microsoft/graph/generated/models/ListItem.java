@@ -92,7 +92,7 @@ public class ListItem extends BaseItem implements Parsable {
         return this.backingStore.get("fields");
     }
     /**
-     * Gets the permissions property value. The permissions property
+     * Gets the permissions property value. The set of permissions for the item. Read-only. Nullable.
      * @return a {@link java.util.List<Permission>}
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class ListItem extends BaseItem implements Parsable {
         this.backingStore.set("fields", value);
     }
     /**
-     * Sets the permissions property value. The permissions property
+     * Sets the permissions property value. The set of permissions for the item. Read-only. Nullable.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {

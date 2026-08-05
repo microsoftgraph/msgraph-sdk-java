@@ -78,6 +78,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         deserializerMap.put("directoryScopeId", (n) -> { this.setDirectoryScopeId(n.getStringValue()); });
         deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getStringValue()); });
+        deserializerMap.put("principalOrganizationId", (n) -> { this.setPrincipalOrganizationId(n.getStringValue()); });
         deserializerMap.put("roleDefinition", (n) -> { this.setRoleDefinition(n.getObjectValue(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("roleDefinitionId", (n) -> { this.setRoleDefinitionId(n.getStringValue()); });
         return deserializerMap;
@@ -97,6 +98,14 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
         return this.backingStore.get("principalId");
+    }
+    /**
+     * Gets the principalOrganizationId property value. The principalOrganizationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPrincipalOrganizationId() {
+        return this.backingStore.get("principalOrganizationId");
     }
     /**
      * Gets the roleDefinition property value. The roleDefinition the assignment is for. Supports $expand.
@@ -128,6 +137,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         writer.writeStringValue("directoryScopeId", this.getDirectoryScopeId());
         writer.writeObjectValue("principal", this.getPrincipal());
         writer.writeStringValue("principalId", this.getPrincipalId());
+        writer.writeStringValue("principalOrganizationId", this.getPrincipalOrganizationId());
         writer.writeObjectValue("roleDefinition", this.getRoleDefinition());
         writer.writeStringValue("roleDefinitionId", this.getRoleDefinitionId());
     }
@@ -179,6 +189,13 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("principalId", value);
+    }
+    /**
+     * Sets the principalOrganizationId property value. The principalOrganizationId property
+     * @param value Value to set for the principalOrganizationId property.
+     */
+    public void setPrincipalOrganizationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("principalOrganizationId", value);
     }
     /**
      * Sets the roleDefinition property value. The roleDefinition the assignment is for. Supports $expand.

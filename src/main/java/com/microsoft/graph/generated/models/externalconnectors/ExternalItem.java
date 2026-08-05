@@ -59,8 +59,17 @@ public class ExternalItem extends Entity implements Parsable {
         deserializerMap.put("acl", (n) -> { this.setAcl(n.getCollectionOfObjectValues(Acl::createFromDiscriminatorValue)); });
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ExternalActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(ExternalItemContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("informationProtectionLabel", (n) -> { this.setInformationProtectionLabel(n.getObjectValue(ExternalItemInformationProtectionLabel::createFromDiscriminatorValue)); });
         deserializerMap.put("properties", (n) -> { this.setProperties(n.getObjectValue(Properties::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the informationProtectionLabel property value. The informationProtectionLabel property
+     * @return a {@link ExternalItemInformationProtectionLabel}
+     */
+    @jakarta.annotation.Nullable
+    public ExternalItemInformationProtectionLabel getInformationProtectionLabel() {
+        return this.backingStore.get("informationProtectionLabel");
     }
     /**
      * Gets the properties property value. A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
@@ -80,6 +89,7 @@ public class ExternalItem extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("acl", this.getAcl());
         writer.writeCollectionOfObjectValues("activities", this.getActivities());
         writer.writeObjectValue("content", this.getContent());
+        writer.writeObjectValue("informationProtectionLabel", this.getInformationProtectionLabel());
         writer.writeObjectValue("properties", this.getProperties());
     }
     /**
@@ -102,6 +112,13 @@ public class ExternalItem extends Entity implements Parsable {
      */
     public void setContent(@jakarta.annotation.Nullable final ExternalItemContent value) {
         this.backingStore.set("content", value);
+    }
+    /**
+     * Sets the informationProtectionLabel property value. The informationProtectionLabel property
+     * @param value Value to set for the informationProtectionLabel property.
+     */
+    public void setInformationProtectionLabel(@jakarta.annotation.Nullable final ExternalItemInformationProtectionLabel value) {
+        this.backingStore.set("informationProtectionLabel", value);
     }
     /**
      * Sets the properties property value. A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
