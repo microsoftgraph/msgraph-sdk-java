@@ -35,18 +35,20 @@ public class DeleteTargetedMessageRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/deleteTargetedMessage", rawUrl);
     }
     /**
-     * Invoke action deleteTargetedMessage
+     * Delete a specific targeted message from a channel context. Teams administrators can use this API to remove targeted messages by providing the message ID, team ID, and channel ID.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-deletetargetedmessage?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final DeleteTargetedMessagePostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action deleteTargetedMessage
+     * Delete a specific targeted message from a channel context. Teams administrators can use this API to remove targeted messages by providing the message ID, team ID, and channel ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-deletetargetedmessage?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final DeleteTargetedMessagePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -56,7 +58,7 @@ public class DeleteTargetedMessageRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action deleteTargetedMessage
+     * Delete a specific targeted message from a channel context. Teams administrators can use this API to remove targeted messages by providing the message ID, team ID, and channel ID.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +67,7 @@ public class DeleteTargetedMessageRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action deleteTargetedMessage
+     * Delete a specific targeted message from a channel context. Teams administrators can use this API to remove targeted messages by providing the message ID, team ID, and channel ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
