@@ -112,6 +112,7 @@ extends:
                   javaHomeOption: 'JDKVersion'
                   jdkVersionOption: '1.21'
                   jdkArchitectureOption: 'x64'
+                  mavenOptions: '-Xmx3072m'
 
               - task: Maven@4
                 displayName: Publish to local Maven for verification
@@ -124,6 +125,7 @@ extends:
                   javaHomeOption: 'JDKVersion'
                   jdkVersionOption: '1.21'
                   jdkArchitectureOption: 'x64'
+                  mavenOptions: '-Xmx3072m'
 
               - task: Maven@4
                 displayName: Stage artifacts for ESRP
@@ -136,6 +138,7 @@ extends:
                   javaHomeOption: 'JDKVersion'
                   jdkVersionOption: '1.21'
                   jdkArchitectureOption: 'x64'
+                  mavenOptions: '-Xmx3072m'
 
               - task: Maven@4
                 displayName: Stage artifacts for ESRP
@@ -148,6 +151,7 @@ extends:
                   javaHomeOption: 'JDKVersion'
                   jdkVersionOption: '1.21'
                   jdkArchitectureOption: 'x64'
+                  mavenOptions: '-Xmx3072m'
 
               - pwsh: |
                   $pomXml = [xml](Get-Content pom.xml -Raw)
