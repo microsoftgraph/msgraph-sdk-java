@@ -37,7 +37,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records/{auditLogRecord%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * An individual audit log record.
+     * The collection of audit log records retrieved by the query.
      * @return a {@link AuditLogRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * An individual audit log record.
+     * The collection of audit log records retrieved by the query.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuditLogRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuditLogRecord::createFromDiscriminatorValue);
     }
     /**
-     * An individual audit log record.
+     * The collection of audit log records retrieved by the query.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * An individual audit log record.
+     * The collection of audit log records retrieved by the query.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         return new AuditLogRecordItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * An individual audit log record.
+     * The collection of audit log records retrieved by the query.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -37,7 +37,7 @@ public class RecoveryJobItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recovery/snapshots/{snapshot%2Did}/recoveryJobs/{recoveryJob%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @return a {@link RecoveryJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class RecoveryJobItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RecoveryJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class RecoveryJobItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RecoveryJob::createFromDiscriminatorValue);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RecoveryJobItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class RecoveryJobItemRequestBuilder extends BaseRequestBuilder {
         return new RecoveryJobItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

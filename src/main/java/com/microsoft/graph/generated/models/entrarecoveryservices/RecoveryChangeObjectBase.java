@@ -26,7 +26,7 @@ public class RecoveryChangeObjectBase extends Entity implements Parsable {
         return new RecoveryChangeObjectBase();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the changed object in its current state, used to uniquely identify the object. Supports $filter (eq, ne, startswith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class RecoveryChangeObjectBase extends Entity implements Parsable {
         return this.backingStore.get("entityTypeName");
     }
     /**
-     * Gets the failureMessage property value. The failureMessage property
+     * Gets the failureMessage property value. The error message if the change failed to apply. Only populated in getFailedChanges responses. null otherwise.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class RecoveryChangeObjectBase extends Entity implements Parsable {
         writer.writeEnumValue("recoveryAction", this.getRecoveryAction());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the changed object in its current state, used to uniquely identify the object. Supports $filter (eq, ne, startswith).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -97,7 +97,7 @@ public class RecoveryChangeObjectBase extends Entity implements Parsable {
         this.backingStore.set("entityTypeName", value);
     }
     /**
-     * Sets the failureMessage property value. The failureMessage property
+     * Sets the failureMessage property value. The error message if the change failed to apply. Only populated in getFailedChanges responses. null otherwise.
      * @param value Value to set for the failureMessage property.
      */
     public void setFailureMessage(@jakarta.annotation.Nullable final String value) {

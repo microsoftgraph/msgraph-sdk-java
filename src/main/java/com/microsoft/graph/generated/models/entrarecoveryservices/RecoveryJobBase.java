@@ -51,7 +51,7 @@ public class RecoveryJobBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the filteringCriteria property value. The filteringCriteria property
+     * Gets the filteringCriteria property value. Optional filtering criteria used to scope the job to specific entity types or entity IDs.
      * @return a {@link RecoveryJobFilteringCriteriaBase}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class RecoveryJobBase extends Entity implements Parsable {
         return this.backingStore.get("filteringCriteria");
     }
     /**
-     * Gets the jobCompletionDateTime property value. The jobCompletionDateTime property
+     * Gets the jobCompletionDateTime property value. The date and time when the job completed. Null if the job is still running.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class RecoveryJobBase extends Entity implements Parsable {
         return this.backingStore.get("jobCompletionDateTime");
     }
     /**
-     * Gets the jobStartDateTime property value. The jobStartDateTime property
+     * Gets the jobStartDateTime property value. The date and time when the job started.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class RecoveryJobBase extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the targetStateDateTime property value. The targetStateDateTime property
+     * Gets the targetStateDateTime property value. The target snapshot timestamp to which the tenant is being restored. Supports $filter (eq, ne).
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class RecoveryJobBase extends Entity implements Parsable {
         return this.backingStore.get("targetStateDateTime");
     }
     /**
-     * Gets the totalChangedLinksCalculated property value. The totalChangedLinksCalculated property
+     * Gets the totalChangedLinksCalculated property value. The total count of changed directory object links (relationships) calculated by the job. null until the job completes calculation. Not all calculated link changes may be successfully applied; see totalLinksModified on derived types for the count of links that were actually modified.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class RecoveryJobBase extends Entity implements Parsable {
         return this.backingStore.get("totalChangedLinksCalculated");
     }
     /**
-     * Gets the totalChangedObjectsCalculated property value. The totalChangedObjectsCalculated property
+     * Gets the totalChangedObjectsCalculated property value. The total count of changed directory objects calculated by the job. null until the job completes calculation. Not all calculated object changes may be successfully applied; see totalObjectsModified on derived types for the count of objects that were actually modified.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -122,21 +122,21 @@ public class RecoveryJobBase extends Entity implements Parsable {
         writer.writeIntegerValue("totalChangedObjectsCalculated", this.getTotalChangedObjectsCalculated());
     }
     /**
-     * Sets the filteringCriteria property value. The filteringCriteria property
+     * Sets the filteringCriteria property value. Optional filtering criteria used to scope the job to specific entity types or entity IDs.
      * @param value Value to set for the filteringCriteria property.
      */
     public void setFilteringCriteria(@jakarta.annotation.Nullable final RecoveryJobFilteringCriteriaBase value) {
         this.backingStore.set("filteringCriteria", value);
     }
     /**
-     * Sets the jobCompletionDateTime property value. The jobCompletionDateTime property
+     * Sets the jobCompletionDateTime property value. The date and time when the job completed. Null if the job is still running.
      * @param value Value to set for the jobCompletionDateTime property.
      */
     public void setJobCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("jobCompletionDateTime", value);
     }
     /**
-     * Sets the jobStartDateTime property value. The jobStartDateTime property
+     * Sets the jobStartDateTime property value. The date and time when the job started.
      * @param value Value to set for the jobStartDateTime property.
      */
     public void setJobStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -150,21 +150,21 @@ public class RecoveryJobBase extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the targetStateDateTime property value. The targetStateDateTime property
+     * Sets the targetStateDateTime property value. The target snapshot timestamp to which the tenant is being restored. Supports $filter (eq, ne).
      * @param value Value to set for the targetStateDateTime property.
      */
     public void setTargetStateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("targetStateDateTime", value);
     }
     /**
-     * Sets the totalChangedLinksCalculated property value. The totalChangedLinksCalculated property
+     * Sets the totalChangedLinksCalculated property value. The total count of changed directory object links (relationships) calculated by the job. null until the job completes calculation. Not all calculated link changes may be successfully applied; see totalLinksModified on derived types for the count of links that were actually modified.
      * @param value Value to set for the totalChangedLinksCalculated property.
      */
     public void setTotalChangedLinksCalculated(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("totalChangedLinksCalculated", value);
     }
     /**
-     * Sets the totalChangedObjectsCalculated property value. The totalChangedObjectsCalculated property
+     * Sets the totalChangedObjectsCalculated property value. The total count of changed directory objects calculated by the job. null until the job completes calculation. Not all calculated object changes may be successfully applied; see totalObjectsModified on derived types for the count of objects that were actually modified.
      * @param value Value to set for the totalChangedObjectsCalculated property.
      */
     public void setTotalChangedObjectsCalculated(@jakarta.annotation.Nullable final Integer value) {

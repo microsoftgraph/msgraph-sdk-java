@@ -56,7 +56,7 @@ public class EntityTypeAndIds implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the entityIds property value. The entityIds property
+     * Gets the entityIds property value. The list of entity IDs for the specified entity type.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class EntityTypeAndIds implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the entityIds property value. The entityIds property
+     * Sets the entityIds property value. The list of entity IDs for the specified entity type.
      * @param value Value to set for the entityIds property.
      */
     public void setEntityIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

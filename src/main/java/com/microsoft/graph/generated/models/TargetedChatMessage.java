@@ -36,7 +36,7 @@ public class TargetedChatMessage extends ChatMessage implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the recipient property value. The recipient property
+     * Gets the recipient property value. The intended recipient of the targeted message.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TargetedChatMessage extends ChatMessage implements Parsable {
         writer.writeObjectValue("recipient", this.getRecipient());
     }
     /**
-     * Sets the recipient property value. The recipient property
+     * Sets the recipient property value. The intended recipient of the targeted message.
      * @param value Value to set for the recipient property.
      */
     public void setRecipient(@jakarta.annotation.Nullable final Identity value) {

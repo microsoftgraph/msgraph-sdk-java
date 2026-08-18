@@ -30,7 +30,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return new AuditLogRecord();
     }
     /**
-     * Gets the administrativeUnits property value. The administrative units tagged to an audit log record.
+     * Gets the administrativeUnits property value. The collection of administrative units associated with the record.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -38,7 +38,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("administrativeUnits");
     }
     /**
-     * Gets the auditData property value. A JSON object that contains the actual audit log data.
+     * Gets the auditData property value. The audit data associated with the record.
      * @return a {@link AuditData}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("auditData");
     }
     /**
-     * Gets the auditLogRecordType property value. The type of operation indicated by the record. For the list of member values, see auditLogRecordType.
+     * Gets the auditLogRecordType property value. The type of the audit log record.
      * @return a {@link AuditLogRecordType}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("auditLogRecordType");
     }
     /**
-     * Gets the clientIp property value. The IP address of the device used when the activity was logged. The IP address is displayed in either an IPv4 or IPv6 address format.
+     * Gets the clientIp property value. The IP address of the client that performed the activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("clientIp");
     }
     /**
-     * Gets the createdDateTime property value. The date and time in UTC when the user performed the activity.
+     * Gets the createdDateTime property value. The date and time when the activity was performed.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the objectId property value. For Exchange admin audit logging, the name of the object modified by the cmdlet. For SharePoint activity, the full URL path name of the file or folder accessed by a user. For Microsoft Entra activity, the name of the user account that was modified.
+     * Gets the objectId property value. The identifier of the object that was affected by the activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("objectId");
     }
     /**
-     * Gets the operation property value. The name of the user or admin activity.
+     * Gets the operation property value. The name of the activity that was performed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("operation");
     }
     /**
-     * Gets the organizationId property value. The GUID for your organization.
+     * Gets the organizationId property value. The GUID of the organization&apos;s Microsoft 365 tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("service");
     }
     /**
-     * Gets the userId property value. The user who performed the action (specified in the Operation property) that resulted in the record being logged. Audit records for activity performed by system accounts (such as SHAREPOINT/system or NT AUTHORITY/SYSTEM) are also included in the audit log. Another common value for the UserId property is app@sharepoint. It indicates that the &apos;user&apos; who performed the activity was an application with the necessary permissions in SharePoint to perform organization-wide actions (such as searching a SharePoint site or OneDrive account) on behalf of a user, admin, or service.
+     * Gets the userId property value. The identifier of the user, system account, service, or application that performed the activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. UPN of the user who performed the action.
+     * Gets the userPrincipalName property value. The user principal name of the user who performed the activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the userType property value. The type of user that performed the operation. The possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
+     * Gets the userType property value. The type of user who performed the activity. Possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
      * @return a {@link AuditLogUserType}
      */
     @jakarta.annotation.Nullable
@@ -167,56 +167,56 @@ public class AuditLogRecord extends Entity implements Parsable {
         writer.writeEnumValue("userType", this.getUserType());
     }
     /**
-     * Sets the administrativeUnits property value. The administrative units tagged to an audit log record.
+     * Sets the administrativeUnits property value. The collection of administrative units associated with the record.
      * @param value Value to set for the administrativeUnits property.
      */
     public void setAdministrativeUnits(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("administrativeUnits", value);
     }
     /**
-     * Sets the auditData property value. A JSON object that contains the actual audit log data.
+     * Sets the auditData property value. The audit data associated with the record.
      * @param value Value to set for the auditData property.
      */
     public void setAuditData(@jakarta.annotation.Nullable final AuditData value) {
         this.backingStore.set("auditData", value);
     }
     /**
-     * Sets the auditLogRecordType property value. The type of operation indicated by the record. For the list of member values, see auditLogRecordType.
+     * Sets the auditLogRecordType property value. The type of the audit log record.
      * @param value Value to set for the auditLogRecordType property.
      */
     public void setAuditLogRecordType(@jakarta.annotation.Nullable final AuditLogRecordType value) {
         this.backingStore.set("auditLogRecordType", value);
     }
     /**
-     * Sets the clientIp property value. The IP address of the device used when the activity was logged. The IP address is displayed in either an IPv4 or IPv6 address format.
+     * Sets the clientIp property value. The IP address of the client that performed the activity.
      * @param value Value to set for the clientIp property.
      */
     public void setClientIp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientIp", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time in UTC when the user performed the activity.
+     * Sets the createdDateTime property value. The date and time when the activity was performed.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the objectId property value. For Exchange admin audit logging, the name of the object modified by the cmdlet. For SharePoint activity, the full URL path name of the file or folder accessed by a user. For Microsoft Entra activity, the name of the user account that was modified.
+     * Sets the objectId property value. The identifier of the object that was affected by the activity.
      * @param value Value to set for the objectId property.
      */
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("objectId", value);
     }
     /**
-     * Sets the operation property value. The name of the user or admin activity.
+     * Sets the operation property value. The name of the activity that was performed.
      * @param value Value to set for the operation property.
      */
     public void setOperation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operation", value);
     }
     /**
-     * Sets the organizationId property value. The GUID for your organization.
+     * Sets the organizationId property value. The GUID of the organization&apos;s Microsoft 365 tenant.
      * @param value Value to set for the organizationId property.
      */
     public void setOrganizationId(@jakarta.annotation.Nullable final String value) {
@@ -230,21 +230,21 @@ public class AuditLogRecord extends Entity implements Parsable {
         this.backingStore.set("service", value);
     }
     /**
-     * Sets the userId property value. The user who performed the action (specified in the Operation property) that resulted in the record being logged. Audit records for activity performed by system accounts (such as SHAREPOINT/system or NT AUTHORITY/SYSTEM) are also included in the audit log. Another common value for the UserId property is app@sharepoint. It indicates that the &apos;user&apos; who performed the activity was an application with the necessary permissions in SharePoint to perform organization-wide actions (such as searching a SharePoint site or OneDrive account) on behalf of a user, admin, or service.
+     * Sets the userId property value. The identifier of the user, system account, service, or application that performed the activity.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. UPN of the user who performed the action.
+     * Sets the userPrincipalName property value. The user principal name of the user who performed the activity.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the userType property value. The type of user that performed the operation. The possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
+     * Sets the userType property value. The type of user who performed the activity. Possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
      * @param value Value to set for the userType property.
      */
     public void setUserType(@jakarta.annotation.Nullable final AuditLogUserType value) {

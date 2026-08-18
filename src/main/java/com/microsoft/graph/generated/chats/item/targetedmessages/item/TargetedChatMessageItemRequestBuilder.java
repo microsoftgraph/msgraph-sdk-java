@@ -73,7 +73,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get targetedMessages from chats
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can&apos;t expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      * @return a {@link TargetedChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get targetedMessages from chats
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can&apos;t expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TargetedChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get targetedMessages from chats
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can&apos;t expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get targetedMessages from chats
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can&apos;t expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get targetedMessages from chats
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can&apos;t expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

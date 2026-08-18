@@ -60,19 +60,21 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recovery/snapshots{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get snapshots from directory
+     * Get a list of available backup snapshot objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
      * @return a {@link SnapshotCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entrarecoveryservices-recovery-list-snapshots?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SnapshotCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get snapshots from directory
+     * Get a list of available backup snapshot objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SnapshotCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entrarecoveryservices-recovery-list-snapshots?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SnapshotCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Snapshot::createFromDiscriminatorValue);
     }
     /**
-     * Get snapshots from directory
+     * Get a list of available backup snapshot objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get snapshots from directory
+     * Get a list of available backup snapshot objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         return new SnapshotsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get snapshots from directory
+     * Get a list of available backup snapshot objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

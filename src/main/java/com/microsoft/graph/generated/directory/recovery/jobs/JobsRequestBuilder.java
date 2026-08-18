@@ -60,19 +60,21 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recovery/jobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get jobs from directory
+     * Get a list of all recovery recoveryJobBase objects (both preview and recovery jobs) across all snapshots for the tenant.
      * @return a {@link RecoveryJobBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entrarecoveryservices-recovery-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RecoveryJobBaseCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get jobs from directory
+     * Get a list of all recovery recoveryJobBase objects (both preview and recovery jobs) across all snapshots for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RecoveryJobBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/entrarecoveryservices-recovery-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RecoveryJobBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RecoveryJobBase::createFromDiscriminatorValue);
     }
     /**
-     * Get jobs from directory
+     * Get a list of all recovery recoveryJobBase objects (both preview and recovery jobs) across all snapshots for the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get jobs from directory
+     * Get a list of all recovery recoveryJobBase objects (both preview and recovery jobs) across all snapshots for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return new JobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get jobs from directory
+     * Get a list of all recovery recoveryJobBase objects (both preview and recovery jobs) across all snapshots for the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

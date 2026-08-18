@@ -457,7 +457,7 @@ public class AuditData implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the dynamicProperties property value. The dynamicProperties property
+     * Gets the dynamicProperties property value. An open-type dictionary that contains dynamic audit event properties as name-value pairs.
      * @return a {@link AuditRecordTypeDictionary}
      */
     @jakarta.annotation.Nullable
@@ -509,7 +509,7 @@ public class AuditData implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the dynamicProperties property value. The dynamicProperties property
+     * Sets the dynamicProperties property value. An open-type dictionary that contains dynamic audit event properties as name-value pairs.
      * @param value Value to set for the dynamicProperties property.
      */
     public void setDynamicProperties(@jakarta.annotation.Nullable final AuditRecordTypeDictionary value) {
