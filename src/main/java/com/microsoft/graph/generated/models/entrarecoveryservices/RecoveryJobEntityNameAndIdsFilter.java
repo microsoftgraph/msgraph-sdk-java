@@ -36,7 +36,7 @@ public class RecoveryJobEntityNameAndIdsFilter extends RecoveryJobFilteringCrite
         return deserializerMap;
     }
     /**
-     * Gets the filterValues property value. The filterValues property
+     * Gets the filterValues property value. The list of entity type and ID pairs to include in the recovery job. Duplicate entity types are not allowed and return a 400 Bad Request error.
      * @return a {@link java.util.List<EntityTypeAndIds>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RecoveryJobEntityNameAndIdsFilter extends RecoveryJobFilteringCrite
         writer.writeCollectionOfObjectValues("filterValues", this.getFilterValues());
     }
     /**
-     * Sets the filterValues property value. The filterValues property
+     * Sets the filterValues property value. The list of entity type and ID pairs to include in the recovery job. Duplicate entity types are not allowed and return a 400 Bad Request error.
      * @param value Value to set for the filterValues property.
      */
     public void setFilterValues(@jakarta.annotation.Nullable final java.util.List<EntityTypeAndIds> value) {

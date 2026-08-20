@@ -36,19 +36,21 @@ public class GetAllRetainedTargetedMessagesRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/getAllRetainedTargetedMessages(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getAllRetainedTargetedMessages
+     * Get all retained targeted messages sent to a specific user in group chats and channels.
      * @return a {@link GetAllRetainedTargetedMessagesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-getallretainedtargetedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAllRetainedTargetedMessagesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getAllRetainedTargetedMessages
+     * Get all retained targeted messages sent to a specific user in group chats and channels.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAllRetainedTargetedMessagesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-getallretainedtargetedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAllRetainedTargetedMessagesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetAllRetainedTargetedMessagesRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, GetAllRetainedTargetedMessagesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getAllRetainedTargetedMessages
+     * Get all retained targeted messages sent to a specific user in group chats and channels.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetAllRetainedTargetedMessagesRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getAllRetainedTargetedMessages
+     * Get all retained targeted messages sent to a specific user in group chats and channels.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetAllRetainedTargetedMessagesRequestBuilder extends BaseRequestBui
         return new GetAllRetainedTargetedMessagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getAllRetainedTargetedMessages
+     * Get all retained targeted messages sent to a specific user in group chats and channels.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

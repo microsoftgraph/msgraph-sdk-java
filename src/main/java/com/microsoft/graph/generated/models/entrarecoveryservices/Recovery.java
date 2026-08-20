@@ -37,7 +37,7 @@ public class Recovery extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the jobs property value. The jobs property
+     * Gets the jobs property value. Collection of all recovery jobs (both preview and recovery) for the tenant.
      * @return a {@link java.util.List<RecoveryJobBase>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class Recovery extends Entity implements Parsable {
         return this.backingStore.get("jobs");
     }
     /**
-     * Gets the snapshots property value. The snapshots property
+     * Gets the snapshots property value. Collection of backup snapshots available for the tenant.
      * @return a {@link java.util.List<Snapshot>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class Recovery extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("snapshots", this.getSnapshots());
     }
     /**
-     * Sets the jobs property value. The jobs property
+     * Sets the jobs property value. Collection of all recovery jobs (both preview and recovery) for the tenant.
      * @param value Value to set for the jobs property.
      */
     public void setJobs(@jakarta.annotation.Nullable final java.util.List<RecoveryJobBase> value) {
         this.backingStore.set("jobs", value);
     }
     /**
-     * Sets the snapshots property value. The snapshots property
+     * Sets the snapshots property value. Collection of backup snapshots available for the tenant.
      * @param value Value to set for the snapshots property.
      */
     public void setSnapshots(@jakarta.annotation.Nullable final java.util.List<Snapshot> value) {

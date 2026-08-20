@@ -59,7 +59,7 @@ public class RecoveryJobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recovery/snapshots/{snapshot%2Did}/recoveryJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @return a {@link RecoveryJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class RecoveryJobsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RecoveryJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class RecoveryJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RecoveryJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class RecoveryJobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class RecoveryJobsRequestBuilder extends BaseRequestBuilder {
         return new RecoveryJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

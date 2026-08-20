@@ -39,7 +39,7 @@ public class AuditCoreRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the queries property value. The queries property
+     * Gets the queries property value. The collection of audit log queries.
      * @return a {@link java.util.List<AuditLogQuery>}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class AuditCoreRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("queries", this.getQueries());
     }
     /**
-     * Sets the queries property value. The queries property
+     * Sets the queries property value. The collection of audit log queries.
      * @param value Value to set for the queries property.
      */
     public void setQueries(@jakarta.annotation.Nullable final java.util.List<AuditLogQuery> value) {

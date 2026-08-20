@@ -38,7 +38,7 @@ public class RecoveryJob extends RecoveryJobBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the totalFailedChanges property value. The totalFailedChanges property
+     * Gets the totalFailedChanges property value. The count of changes (including both objects and links) that failed to apply during recovery.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class RecoveryJob extends RecoveryJobBase implements Parsable {
         return this.backingStore.get("totalFailedChanges");
     }
     /**
-     * Gets the totalLinksModified property value. The totalLinksModified property
+     * Gets the totalLinksModified property value. The count of directory object links (relationships) that were successfully modified during recovery. This value may be less than totalChangedLinksCalculated if some link changes failed.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class RecoveryJob extends RecoveryJobBase implements Parsable {
         return this.backingStore.get("totalLinksModified");
     }
     /**
-     * Gets the totalObjectsModified property value. The totalObjectsModified property
+     * Gets the totalObjectsModified property value. The count of directory objects that were successfully modified during recovery. This value may be less than totalChangedObjectsCalculated if some object changes failed.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class RecoveryJob extends RecoveryJobBase implements Parsable {
         writer.writeIntegerValue("totalObjectsModified", this.getTotalObjectsModified());
     }
     /**
-     * Sets the totalFailedChanges property value. The totalFailedChanges property
+     * Sets the totalFailedChanges property value. The count of changes (including both objects and links) that failed to apply during recovery.
      * @param value Value to set for the totalFailedChanges property.
      */
     public void setTotalFailedChanges(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("totalFailedChanges", value);
     }
     /**
-     * Sets the totalLinksModified property value. The totalLinksModified property
+     * Sets the totalLinksModified property value. The count of directory object links (relationships) that were successfully modified during recovery. This value may be less than totalChangedLinksCalculated if some link changes failed.
      * @param value Value to set for the totalLinksModified property.
      */
     public void setTotalLinksModified(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("totalLinksModified", value);
     }
     /**
-     * Sets the totalObjectsModified property value. The totalObjectsModified property
+     * Sets the totalObjectsModified property value. The count of directory objects that were successfully modified during recovery. This value may be less than totalChangedObjectsCalculated if some object changes failed.
      * @param value Value to set for the totalObjectsModified property.
      */
     public void setTotalObjectsModified(@jakarta.annotation.Nullable final Integer value) {

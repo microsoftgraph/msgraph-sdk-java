@@ -27,7 +27,7 @@ public class Snapshot extends Entity implements Parsable {
         return new Snapshot();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the snapshot was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class Snapshot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the recoveryJobs property value. The recoveryJobs property
+     * Gets the recoveryJobs property value. Collection of recovery jobs created for this snapshot.
      * @return a {@link java.util.List<RecoveryJob>}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class Snapshot extends Entity implements Parsable {
         return this.backingStore.get("recoveryJobs");
     }
     /**
-     * Gets the recoveryPreviewJobs property value. The recoveryPreviewJobs property
+     * Gets the recoveryPreviewJobs property value. Collection of preview jobs created for this snapshot.
      * @return a {@link java.util.List<RecoveryPreviewJob>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class Snapshot extends Entity implements Parsable {
         return this.backingStore.get("recoveryPreviewJobs");
     }
     /**
-     * Gets the totalChangedObjects property value. The totalChangedObjects property
+     * Gets the totalChangedObjects property value. The total number of changed objects identified in this snapshot.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -84,28 +84,28 @@ public class Snapshot extends Entity implements Parsable {
         writer.writeIntegerValue("totalChangedObjects", this.getTotalChangedObjects());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the snapshot was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the recoveryJobs property value. The recoveryJobs property
+     * Sets the recoveryJobs property value. Collection of recovery jobs created for this snapshot.
      * @param value Value to set for the recoveryJobs property.
      */
     public void setRecoveryJobs(@jakarta.annotation.Nullable final java.util.List<RecoveryJob> value) {
         this.backingStore.set("recoveryJobs", value);
     }
     /**
-     * Sets the recoveryPreviewJobs property value. The recoveryPreviewJobs property
+     * Sets the recoveryPreviewJobs property value. Collection of preview jobs created for this snapshot.
      * @param value Value to set for the recoveryPreviewJobs property.
      */
     public void setRecoveryPreviewJobs(@jakarta.annotation.Nullable final java.util.List<RecoveryPreviewJob> value) {
         this.backingStore.set("recoveryPreviewJobs", value);
     }
     /**
-     * Sets the totalChangedObjects property value. The totalChangedObjects property
+     * Sets the totalChangedObjects property value. The total number of changed objects identified in this snapshot.
      * @param value Value to set for the totalChangedObjects property.
      */
     public void setTotalChangedObjects(@jakarta.annotation.Nullable final Integer value) {

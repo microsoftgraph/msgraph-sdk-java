@@ -26,7 +26,7 @@ public class RecoveryJobEntityNamesFilter extends RecoveryJobFilteringCriteriaBa
         return new RecoveryJobEntityNamesFilter();
     }
     /**
-     * Gets the entityTypes property value. The entityTypes property
+     * Gets the entityTypes property value. The list of entity types to include in the recovery job.
      * @return a {@link java.util.List<ResourceTypeName>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RecoveryJobEntityNamesFilter extends RecoveryJobFilteringCriteriaBa
         writer.writeCollectionOfEnumValues("entityTypes", this.getEntityTypes());
     }
     /**
-     * Sets the entityTypes property value. The entityTypes property
+     * Sets the entityTypes property value. The list of entity types to include in the recovery job.
      * @param value Value to set for the entityTypes property.
      */
     public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<ResourceTypeName> value) {

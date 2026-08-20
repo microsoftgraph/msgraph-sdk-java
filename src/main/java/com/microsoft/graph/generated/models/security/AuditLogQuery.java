@@ -30,7 +30,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return new AuditLogQuery();
     }
     /**
-     * Gets the administrativeUnitIdFilters property value. The administrative units tagged to an audit log record.
+     * Gets the administrativeUnitIdFilters property value. The collection of administrative unit IDs to filter on.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -38,7 +38,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("administrativeUnitIdFilters");
     }
     /**
-     * Gets the displayName property value. The display name of the saved audit log query.
+     * Gets the displayName property value. The display name of the audit log query.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the filterEndDateTime property value. The end date of the date range in the query.
+     * Gets the filterEndDateTime property value. The end date and time of the audit log query filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("filterEndDateTime");
     }
     /**
-     * Gets the filterStartDateTime property value. The start date of the date range in the query.
+     * Gets the filterStartDateTime property value. The start date and time of the audit log query filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("filterStartDateTime");
     }
     /**
-     * Gets the ipAddressFilters property value. The IP address of the device that was used when the activity was logged.
+     * Gets the ipAddressFilters property value. The collection of IP addresses to filter on.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("ipAddressFilters");
     }
     /**
-     * Gets the keywordFilter property value. Free text field to search non-indexed properties of the audit log.
+     * Gets the keywordFilter property value. The keyword to filter on.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("keywordFilter");
     }
     /**
-     * Gets the objectIdFilters property value. For SharePoint and OneDrive for Business activity, the full path name of the file or folder accessed by the user. For Exchange admin audit logging, the name of the object that was modified by the cmdlet.
+     * Gets the objectIdFilters property value. The collection of object IDs to filter on.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("objectIdFilters");
     }
     /**
-     * Gets the operationFilters property value. The name of the user or admin activity. For a description of the most common operations/activities, see Search the audit log in the Office 365 Protection Center.
+     * Gets the operationFilters property value. The collection of operations to filter on.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("operationFilters");
     }
     /**
-     * Gets the records property value. An individual audit log record.
+     * Gets the records property value. The collection of audit log records retrieved by the query.
      * @return a {@link java.util.List<AuditLogRecord>}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("records");
     }
     /**
-     * Gets the recordTypeFilters property value. The type of operation indicated by the record. For the list of member values, see auditLogRecordType.
+     * Gets the recordTypeFilters property value. The collection of record types to filter on.
      * @return a {@link java.util.List<AuditLogRecordType>}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("recordTypeFilters");
     }
     /**
-     * Gets the serviceFilters property value. The serviceFilters property
+     * Gets the serviceFilters property value. The collection of services to filter on.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("serviceFilters");
     }
     /**
-     * Gets the status property value. Describes the current status of the query. The possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
+     * Gets the status property value. The status of the audit log query. Possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
      * @return a {@link AuditLogQueryStatus}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userPrincipalNameFilters property value. The UPN (user principal name) of the user who performed the action (specified in the operation property) that resulted in the record being logged; for example, myname@mydomain_name.
+     * Gets the userPrincipalNameFilters property value. The collection of user principal names to filter on.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -177,91 +177,91 @@ public class AuditLogQuery extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("userPrincipalNameFilters", this.getUserPrincipalNameFilters());
     }
     /**
-     * Sets the administrativeUnitIdFilters property value. The administrative units tagged to an audit log record.
+     * Sets the administrativeUnitIdFilters property value. The collection of administrative unit IDs to filter on.
      * @param value Value to set for the administrativeUnitIdFilters property.
      */
     public void setAdministrativeUnitIdFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("administrativeUnitIdFilters", value);
     }
     /**
-     * Sets the displayName property value. The display name of the saved audit log query.
+     * Sets the displayName property value. The display name of the audit log query.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the filterEndDateTime property value. The end date of the date range in the query.
+     * Sets the filterEndDateTime property value. The end date and time of the audit log query filter.
      * @param value Value to set for the filterEndDateTime property.
      */
     public void setFilterEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("filterEndDateTime", value);
     }
     /**
-     * Sets the filterStartDateTime property value. The start date of the date range in the query.
+     * Sets the filterStartDateTime property value. The start date and time of the audit log query filter.
      * @param value Value to set for the filterStartDateTime property.
      */
     public void setFilterStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("filterStartDateTime", value);
     }
     /**
-     * Sets the ipAddressFilters property value. The IP address of the device that was used when the activity was logged.
+     * Sets the ipAddressFilters property value. The collection of IP addresses to filter on.
      * @param value Value to set for the ipAddressFilters property.
      */
     public void setIpAddressFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("ipAddressFilters", value);
     }
     /**
-     * Sets the keywordFilter property value. Free text field to search non-indexed properties of the audit log.
+     * Sets the keywordFilter property value. The keyword to filter on.
      * @param value Value to set for the keywordFilter property.
      */
     public void setKeywordFilter(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("keywordFilter", value);
     }
     /**
-     * Sets the objectIdFilters property value. For SharePoint and OneDrive for Business activity, the full path name of the file or folder accessed by the user. For Exchange admin audit logging, the name of the object that was modified by the cmdlet.
+     * Sets the objectIdFilters property value. The collection of object IDs to filter on.
      * @param value Value to set for the objectIdFilters property.
      */
     public void setObjectIdFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("objectIdFilters", value);
     }
     /**
-     * Sets the operationFilters property value. The name of the user or admin activity. For a description of the most common operations/activities, see Search the audit log in the Office 365 Protection Center.
+     * Sets the operationFilters property value. The collection of operations to filter on.
      * @param value Value to set for the operationFilters property.
      */
     public void setOperationFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("operationFilters", value);
     }
     /**
-     * Sets the records property value. An individual audit log record.
+     * Sets the records property value. The collection of audit log records retrieved by the query.
      * @param value Value to set for the records property.
      */
     public void setRecords(@jakarta.annotation.Nullable final java.util.List<AuditLogRecord> value) {
         this.backingStore.set("records", value);
     }
     /**
-     * Sets the recordTypeFilters property value. The type of operation indicated by the record. For the list of member values, see auditLogRecordType.
+     * Sets the recordTypeFilters property value. The collection of record types to filter on.
      * @param value Value to set for the recordTypeFilters property.
      */
     public void setRecordTypeFilters(@jakarta.annotation.Nullable final java.util.List<AuditLogRecordType> value) {
         this.backingStore.set("recordTypeFilters", value);
     }
     /**
-     * Sets the serviceFilters property value. The serviceFilters property
+     * Sets the serviceFilters property value. The collection of services to filter on.
      * @param value Value to set for the serviceFilters property.
      */
     public void setServiceFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("serviceFilters", value);
     }
     /**
-     * Sets the status property value. Describes the current status of the query. The possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
+     * Sets the status property value. The status of the audit log query. Possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AuditLogQueryStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userPrincipalNameFilters property value. The UPN (user principal name) of the user who performed the action (specified in the operation property) that resulted in the record being logged; for example, myname@mydomain_name.
+     * Sets the userPrincipalNameFilters property value. The collection of user principal names to filter on.
      * @param value Value to set for the userPrincipalNameFilters property.
      */
     public void setUserPrincipalNameFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {

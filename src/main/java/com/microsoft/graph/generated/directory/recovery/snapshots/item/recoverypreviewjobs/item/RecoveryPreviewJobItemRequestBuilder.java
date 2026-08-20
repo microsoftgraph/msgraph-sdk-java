@@ -37,7 +37,7 @@ public class RecoveryPreviewJobItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recovery/snapshots/{snapshot%2Did}/recoveryPreviewJobs/{recoveryPreviewJob%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get recoveryPreviewJobs from directory
+     * Collection of preview jobs created for this snapshot.
      * @return a {@link RecoveryPreviewJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class RecoveryPreviewJobItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get recoveryPreviewJobs from directory
+     * Collection of preview jobs created for this snapshot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RecoveryPreviewJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class RecoveryPreviewJobItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RecoveryPreviewJob::createFromDiscriminatorValue);
     }
     /**
-     * Get recoveryPreviewJobs from directory
+     * Collection of preview jobs created for this snapshot.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RecoveryPreviewJobItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get recoveryPreviewJobs from directory
+     * Collection of preview jobs created for this snapshot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class RecoveryPreviewJobItemRequestBuilder extends BaseRequestBuilder {
         return new RecoveryPreviewJobItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get recoveryPreviewJobs from directory
+     * Collection of preview jobs created for this snapshot.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
