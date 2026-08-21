@@ -37,7 +37,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
         return deserializerMap;
     }
     /**
-     * Gets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review.
+     * Gets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review. Use an accessReviewPrincipalScope object to select a well-known population of principals, such as all guest users.
      * @return a {@link java.util.List<AccessReviewScope>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
         return this.backingStore.get("principalScopes");
     }
     /**
-     * Gets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
+     * Gets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed. Use an accessReviewResourceScope object to identify the resource, or an accessReviewAccessPackageAssignmentPolicyScope object when the resource is an access package assignment policy.
      * @return a {@link java.util.List<AccessReviewScope>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
         writer.writeCollectionOfObjectValues("resourceScopes", this.getResourceScopes());
     }
     /**
-     * Sets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review.
+     * Sets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review. Use an accessReviewPrincipalScope object to select a well-known population of principals, such as all guest users.
      * @param value Value to set for the principalScopes property.
      */
     public void setPrincipalScopes(@jakarta.annotation.Nullable final java.util.List<AccessReviewScope> value) {
         this.backingStore.set("principalScopes", value);
     }
     /**
-     * Sets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
+     * Sets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed. Use an accessReviewResourceScope object to identify the resource, or an accessReviewAccessPackageAssignmentPolicyScope object when the resource is an access package assignment policy.
      * @param value Value to set for the resourceScopes property.
      */
     public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<AccessReviewScope> value) {
