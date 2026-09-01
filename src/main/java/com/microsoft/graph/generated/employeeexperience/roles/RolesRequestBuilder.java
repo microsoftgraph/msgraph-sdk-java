@@ -1,8 +1,6 @@
 package com.microsoft.graph.employeeexperience.roles;
 
-import com.microsoft.graph.employeeexperience.roles.count.CountRequestBuilder;
 import com.microsoft.graph.employeeexperience.roles.item.EngagementRoleItemRequestBuilder;
-import com.microsoft.graph.models.EngagementRole;
 import com.microsoft.graph.models.EngagementRoleCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,14 +21,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RolesRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to count the resources in the collection.
-     * @return a {@link CountRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to manage the roles property of the microsoft.graph.employeeExperience entity.
      * @param engagementRoleId The unique identifier of engagementRole
@@ -84,31 +74,6 @@ public class RolesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EngagementRoleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to roles for employeeExperience
-     * @param body The request body
-     * @return a {@link EngagementRole}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public EngagementRole post(@jakarta.annotation.Nonnull final EngagementRole body) {
-        return post(body, null);
-    }
-    /**
-     * Create new navigation property to roles for employeeExperience
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link EngagementRole}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public EngagementRole post(@jakarta.annotation.Nonnull final EngagementRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, EngagementRole::createFromDiscriminatorValue);
-    }
-    /**
      * Get a list of all the roles that can be assigned in Viva Engage.
      * @return a {@link RequestInformation}
      */
@@ -126,30 +91,6 @@ public class RolesRequestBuilder extends BaseRequestBuilder {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to roles for employeeExperience
-     * @param body The request body
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EngagementRole body) {
-        return toPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to roles for employeeExperience
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EngagementRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -235,11 +176,5 @@ public class RolesRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

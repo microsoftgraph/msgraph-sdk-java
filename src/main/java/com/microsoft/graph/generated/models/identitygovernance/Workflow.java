@@ -58,6 +58,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         deserializerMap.put("quarantineDetails", (n) -> { this.setQuarantineDetails(n.getObjectValue(QuarantineDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("runs", (n) -> { this.setRuns(n.getCollectionOfObjectValues(Run::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(WorkflowSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectProcessingResults", (n) -> { this.setSubjectProcessingResults(n.getCollectionOfObjectValues(SubjectProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("taskReports", (n) -> { this.setTaskReports(n.getCollectionOfObjectValues(TaskReport::createFromDiscriminatorValue)); });
         deserializerMap.put("userProcessingResults", (n) -> { this.setUserProcessingResults(n.getCollectionOfObjectValues(UserProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
@@ -113,6 +114,14 @@ public class Workflow extends WorkflowBase implements Parsable {
         return this.backingStore.get("settings");
     }
     /**
+     * Gets the subjectProcessingResults property value. Per-subject workflow execution results.
+     * @return a {@link java.util.List<SubjectProcessingResult>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SubjectProcessingResult> getSubjectProcessingResults() {
+        return this.backingStore.get("subjectProcessingResults");
+    }
+    /**
      * Gets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
      * @return a {@link java.util.List<TaskReport>}
      */
@@ -159,6 +168,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         writer.writeObjectValue("quarantineDetails", this.getQuarantineDetails());
         writer.writeCollectionOfObjectValues("runs", this.getRuns());
         writer.writeObjectValue("settings", this.getSettings());
+        writer.writeCollectionOfObjectValues("subjectProcessingResults", this.getSubjectProcessingResults());
         writer.writeCollectionOfObjectValues("taskReports", this.getTaskReports());
         writer.writeCollectionOfObjectValues("userProcessingResults", this.getUserProcessingResults());
         writer.writeIntegerValue("version", this.getVersion());
@@ -219,6 +229,13 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     public void setSettings(@jakarta.annotation.Nullable final WorkflowSetting value) {
         this.backingStore.set("settings", value);
+    }
+    /**
+     * Sets the subjectProcessingResults property value. Per-subject workflow execution results.
+     * @param value Value to set for the subjectProcessingResults property.
+     */
+    public void setSubjectProcessingResults(@jakarta.annotation.Nullable final java.util.List<SubjectProcessingResult> value) {
+        this.backingStore.set("subjectProcessingResults", value);
     }
     /**
      * Sets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.

@@ -35,6 +35,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetSubject", (n) -> { this.setTargetSubject(n.getObjectValue(WorkflowSubject::createFromDiscriminatorValue)); });
         deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
         deserializerMap.put("taskProcessingresult", (n) -> { this.setTaskProcessingresult(n.getObjectValue(TaskProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("workflow", (n) -> { this.setWorkflow(n.getObjectValue(Workflow::createFromDiscriminatorValue)); });
@@ -47,6 +48,14 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     @jakarta.annotation.Nullable
     public User getSubject() {
         return this.backingStore.get("subject");
+    }
+    /**
+     * Gets the targetSubject property value. The target subject for workflow execution.
+     * @return a {@link WorkflowSubject}
+     */
+    @jakarta.annotation.Nullable
+    public WorkflowSubject getTargetSubject() {
+        return this.backingStore.get("targetSubject");
     }
     /**
      * Gets the task property value. The task property
@@ -80,6 +89,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("subject", this.getSubject());
+        writer.writeObjectValue("targetSubject", this.getTargetSubject());
         writer.writeObjectValue("task", this.getTask());
         writer.writeObjectValue("taskProcessingresult", this.getTaskProcessingresult());
         writer.writeObjectValue("workflow", this.getWorkflow());
@@ -90,6 +100,13 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      */
     public void setSubject(@jakarta.annotation.Nullable final User value) {
         this.backingStore.set("subject", value);
+    }
+    /**
+     * Sets the targetSubject property value. The target subject for workflow execution.
+     * @param value Value to set for the targetSubject property.
+     */
+    public void setTargetSubject(@jakarta.annotation.Nullable final WorkflowSubject value) {
+        this.backingStore.set("targetSubject", value);
     }
     /**
      * Sets the task property value. The task property

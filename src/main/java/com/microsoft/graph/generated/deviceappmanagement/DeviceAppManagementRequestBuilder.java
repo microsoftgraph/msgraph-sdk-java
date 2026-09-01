@@ -206,7 +206,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update the properties of a deviceAppManagement object.
-     * @param body The request body
+     * @param body Singleton entity that acts as a container for all device app management functionality.
      * @return a {@link DeviceAppManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/intune-policyset-deviceappmanagement-update?view=graph-rest-1.0">Find more info here</a>
@@ -217,7 +217,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update the properties of a deviceAppManagement object.
-     * @param body The request body
+     * @param body Singleton entity that acts as a container for all device app management functionality.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceAppManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -253,7 +253,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update the properties of a deviceAppManagement object.
-     * @param body The request body
+     * @param body Singleton entity that acts as a container for all device app management functionality.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -262,7 +262,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update the properties of a deviceAppManagement object.
-     * @param body The request body
+     * @param body Singleton entity that acts as a container for all device app management functionality.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

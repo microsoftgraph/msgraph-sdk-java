@@ -2,7 +2,6 @@ package com.microsoft.graph.admin.configurationmanagement.configurationmonitorin
 
 import com.microsoft.graph.admin.configurationmanagement.configurationmonitoringresults.count.CountRequestBuilder;
 import com.microsoft.graph.admin.configurationmanagement.configurationmonitoringresults.item.ConfigurationMonitoringResultItemRequestBuilder;
-import com.microsoft.graph.models.ConfigurationMonitoringResult;
 import com.microsoft.graph.models.ConfigurationMonitoringResultCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -84,31 +83,6 @@ public class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationMonitoringResultCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to configurationMonitoringResults for admin
-     * @param body The request body
-     * @return a {@link ConfigurationMonitoringResult}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationMonitoringResult post(@jakarta.annotation.Nonnull final ConfigurationMonitoringResult body) {
-        return post(body, null);
-    }
-    /**
-     * Create new navigation property to configurationMonitoringResults for admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ConfigurationMonitoringResult}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationMonitoringResult post(@jakarta.annotation.Nonnull final ConfigurationMonitoringResult body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationMonitoringResult::createFromDiscriminatorValue);
-    }
-    /**
      * Get a list of the configurationMonitoringResult objects and their properties.
      * @return a {@link RequestInformation}
      */
@@ -126,30 +100,6 @@ public class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBui
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to configurationMonitoringResults for admin
-     * @param body The request body
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConfigurationMonitoringResult body) {
-        return toPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to configurationMonitoringResults for admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConfigurationMonitoringResult body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -235,11 +185,5 @@ public class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBui
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

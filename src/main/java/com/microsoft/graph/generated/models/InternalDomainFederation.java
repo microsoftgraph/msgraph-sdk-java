@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -56,6 +57,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior::forValue)); });
         deserializerMap.put("signingCertificateUpdateStatus", (n) -> { this.setSigningCertificateUpdateStatus(n.getObjectValue(SigningCertificateUpdateStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("signOutUri", (n) -> { this.setSignOutUri(n.getStringValue()); });
+        deserializerMap.put("systemBrowserEnabledOn", (n) -> { this.setSystemBrowserEnabledOn(n.getEnumSetValue(SystemBrowserEnabledOn::forValue)); });
         return deserializerMap;
     }
     /**
@@ -107,6 +109,14 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         return this.backingStore.get("signOutUri");
     }
     /**
+     * Gets the systemBrowserEnabledOn property value. The systemBrowserEnabledOn property
+     * @return a {@link EnumSet<SystemBrowserEnabledOn>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<SystemBrowserEnabledOn> getSystemBrowserEnabledOn() {
+        return this.backingStore.get("systemBrowserEnabledOn");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -121,6 +131,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         writer.writeEnumValue("promptLoginBehavior", this.getPromptLoginBehavior());
         writer.writeObjectValue("signingCertificateUpdateStatus", this.getSigningCertificateUpdateStatus());
         writer.writeStringValue("signOutUri", this.getSignOutUri());
+        writer.writeEnumSetValue("systemBrowserEnabledOn", this.getSystemBrowserEnabledOn());
     }
     /**
      * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
@@ -177,5 +188,12 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      */
     public void setSignOutUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("signOutUri", value);
+    }
+    /**
+     * Sets the systemBrowserEnabledOn property value. The systemBrowserEnabledOn property
+     * @param value Value to set for the systemBrowserEnabledOn property.
+     */
+    public void setSystemBrowserEnabledOn(@jakarta.annotation.Nullable final EnumSet<SystemBrowserEnabledOn> value) {
+        this.backingStore.set("systemBrowserEnabledOn", value);
     }
 }

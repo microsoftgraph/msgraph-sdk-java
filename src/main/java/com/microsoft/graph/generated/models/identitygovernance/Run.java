@@ -74,6 +74,7 @@ public class Run extends Entity implements Parsable {
         deserializerMap.put("reprocessedRuns", (n) -> { this.setReprocessedRuns(n.getCollectionOfObjectValues(Run::createFromDiscriminatorValue)); });
         deserializerMap.put("scheduledDateTime", (n) -> { this.setScheduledDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("subjectProcessingResults", (n) -> { this.setSubjectProcessingResults(n.getCollectionOfObjectValues(SubjectProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("successfulUsersCount", (n) -> { this.setSuccessfulUsersCount(n.getIntegerValue()); });
         deserializerMap.put("taskProcessingResults", (n) -> { this.setTaskProcessingResults(n.getCollectionOfObjectValues(TaskProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("totalTasksCount", (n) -> { this.setTotalTasksCount(n.getIntegerValue()); });
@@ -122,6 +123,14 @@ public class Run extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
         return this.backingStore.get("startedDateTime");
+    }
+    /**
+     * Gets the subjectProcessingResults property value. The processing results for each subject in this workflow run.
+     * @return a {@link java.util.List<SubjectProcessingResult>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SubjectProcessingResult> getSubjectProcessingResults() {
+        return this.backingStore.get("subjectProcessingResults");
     }
     /**
      * Gets the successfulUsersCount property value. The number of successfully completed users in the run.
@@ -195,6 +204,7 @@ public class Run extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("reprocessedRuns", this.getReprocessedRuns());
         writer.writeOffsetDateTimeValue("scheduledDateTime", this.getScheduledDateTime());
         writer.writeOffsetDateTimeValue("startedDateTime", this.getStartedDateTime());
+        writer.writeCollectionOfObjectValues("subjectProcessingResults", this.getSubjectProcessingResults());
         writer.writeIntegerValue("successfulUsersCount", this.getSuccessfulUsersCount());
         writer.writeCollectionOfObjectValues("taskProcessingResults", this.getTaskProcessingResults());
         writer.writeIntegerValue("totalTasksCount", this.getTotalTasksCount());
@@ -265,6 +275,13 @@ public class Run extends Entity implements Parsable {
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("startedDateTime", value);
+    }
+    /**
+     * Sets the subjectProcessingResults property value. The processing results for each subject in this workflow run.
+     * @param value Value to set for the subjectProcessingResults property.
+     */
+    public void setSubjectProcessingResults(@jakarta.annotation.Nullable final java.util.List<SubjectProcessingResult> value) {
+        this.backingStore.set("subjectProcessingResults", value);
     }
     /**
      * Sets the successfulUsersCount property value. The number of successfully completed users in the run.

@@ -73,6 +73,14 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("environment");
     }
     /**
+     * Gets the externalOriginResourceConnector property value. The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
+     * @return a {@link ExternalOriginResourceConnector}
+     */
+    @jakarta.annotation.Nullable
+    public ExternalOriginResourceConnector getExternalOriginResourceConnector() {
+        return this.backingStore.get("externalOriginResourceConnector");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -84,6 +92,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("environment", (n) -> { this.setEnvironment(n.getObjectValue(AccessPackageResourceEnvironment::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalOriginResourceConnector", (n) -> { this.setExternalOriginResourceConnector(n.getObjectValue(ExternalOriginResourceConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("originId", (n) -> { this.setOriginId(n.getStringValue()); });
         deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
@@ -152,6 +161,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("environment", this.getEnvironment());
+        writer.writeObjectValue("externalOriginResourceConnector", this.getExternalOriginResourceConnector());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
         writer.writeStringValue("originId", this.getOriginId());
         writer.writeStringValue("originSystem", this.getOriginSystem());
@@ -193,6 +203,13 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     public void setEnvironment(@jakarta.annotation.Nullable final AccessPackageResourceEnvironment value) {
         this.backingStore.set("environment", value);
+    }
+    /**
+     * Sets the externalOriginResourceConnector property value. The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
+     * @param value Value to set for the externalOriginResourceConnector property.
+     */
+    public void setExternalOriginResourceConnector(@jakarta.annotation.Nullable final ExternalOriginResourceConnector value) {
+        this.backingStore.set("externalOriginResourceConnector", value);
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.

@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.accessreviews;
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.DefinitionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.HistoryDefinitionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.unified.UnifiedRequestBuilder;
 import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -37,6 +38,14 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HistoryDefinitionsRequestBuilder historyDefinitions() {
         return new HistoryDefinitionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the unified property of the microsoft.graph.accessReviewSet entity.
+     * @return a {@link UnifiedRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnifiedRequestBuilder unified() {
+        return new UnifiedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AccessReviewsRequestBuilder} and sets the default values.

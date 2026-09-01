@@ -41,6 +41,7 @@ public class AccessReviewSet extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("definitions", (n) -> { this.setDefinitions(n.getCollectionOfObjectValues(AccessReviewScheduleDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("historyDefinitions", (n) -> { this.setHistoryDefinitions(n.getCollectionOfObjectValues(AccessReviewHistoryDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("unified", (n) -> { this.setUnified(n.getObjectValue(UnifiedRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -52,6 +53,14 @@ public class AccessReviewSet extends Entity implements Parsable {
         return this.backingStore.get("historyDefinitions");
     }
     /**
+     * Gets the unified property value. Entry point for the unified (vNext) access reviews API surface. Requests under this path are routed to the vNext service through the dedicated accessReviews/unified path segment.
+     * @return a {@link UnifiedRoot}
+     */
+    @jakarta.annotation.Nullable
+    public UnifiedRoot getUnified() {
+        return this.backingStore.get("unified");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -60,6 +69,7 @@ public class AccessReviewSet extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("definitions", this.getDefinitions());
         writer.writeCollectionOfObjectValues("historyDefinitions", this.getHistoryDefinitions());
+        writer.writeObjectValue("unified", this.getUnified());
     }
     /**
      * Sets the definitions property value. Represents the template and scheduling for an access review.
@@ -74,5 +84,12 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     public void setHistoryDefinitions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDefinition> value) {
         this.backingStore.set("historyDefinitions", value);
+    }
+    /**
+     * Sets the unified property value. Entry point for the unified (vNext) access reviews API surface. Requests under this path are routed to the vNext service through the dedicated accessReviews/unified path segment.
+     * @param value Value to set for the unified property.
+     */
+    public void setUnified(@jakarta.annotation.Nullable final UnifiedRoot value) {
+        this.backingStore.set("unified", value);
     }
 }

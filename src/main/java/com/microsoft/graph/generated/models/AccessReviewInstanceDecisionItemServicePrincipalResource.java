@@ -34,6 +34,22 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
         return this.backingStore.get("appId");
     }
     /**
+     * Gets the appRoleDisplayName property value. The display name of the app role.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAppRoleDisplayName() {
+        return this.backingStore.get("appRoleDisplayName");
+    }
+    /**
+     * Gets the appRoleId property value. The identifier of the app role.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAppRoleId() {
+        return this.backingStore.get("appRoleId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -41,6 +57,8 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("appRoleDisplayName", (n) -> { this.setAppRoleDisplayName(n.getStringValue()); });
+        deserializerMap.put("appRoleId", (n) -> { this.setAppRoleId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -51,6 +69,8 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
+        writer.writeStringValue("appRoleDisplayName", this.getAppRoleDisplayName());
+        writer.writeStringValue("appRoleId", this.getAppRoleId());
     }
     /**
      * Sets the appId property value. The globally unique identifier of the application to which access has been granted.
@@ -58,5 +78,19 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
+    }
+    /**
+     * Sets the appRoleDisplayName property value. The display name of the app role.
+     * @param value Value to set for the appRoleDisplayName property.
+     */
+    public void setAppRoleDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("appRoleDisplayName", value);
+    }
+    /**
+     * Sets the appRoleId property value. The identifier of the app role.
+     * @param value Value to set for the appRoleId property.
+     */
+    public void setAppRoleId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("appRoleId", value);
     }
 }

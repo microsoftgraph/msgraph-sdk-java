@@ -10,6 +10,7 @@ import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -128,7 +129,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
         deserializerMap.put("administrationScopeTargets", (n) -> { this.setAdministrationScopeTargets(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(LifecycleWorkflowCategory::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
@@ -141,6 +142,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("targetSubjectType", (n) -> { this.setTargetSubjectType(n.getEnumSetValue(SubjectType::forValue)); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(Task::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -185,6 +187,14 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the targetSubjectType property value. The targetSubjectType property
+     * @return a {@link EnumSet<SubjectType>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<SubjectType> getTargetSubjectType() {
+        return this.backingStore.get("targetSubjectType");
+    }
+    /**
      * Gets the tasks property value. The tasks in the workflow.
      * @return a {@link java.util.List<Task>}
      */
@@ -210,6 +220,7 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeEnumSetValue("targetSubjectType", this.getTargetSubjectType());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -311,6 +322,13 @@ public class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the targetSubjectType property value. The targetSubjectType property
+     * @param value Value to set for the targetSubjectType property.
+     */
+    public void setTargetSubjectType(@jakarta.annotation.Nullable final EnumSet<SubjectType> value) {
+        this.backingStore.set("targetSubjectType", value);
     }
     /**
      * Sets the tasks property value. The tasks in the workflow.

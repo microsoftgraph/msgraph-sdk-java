@@ -10,6 +10,7 @@ import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
@@ -61,9 +62,10 @@ public class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, Bac
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
         deserializerMap.put("timespan", (n) -> { this.setTimespan(n.getStringValue()); });
+        deserializerMap.put("workspaceId", (n) -> { this.setWorkspaceId(n.getUUIDValue()); });
         return deserializerMap;
     }
     /**
@@ -83,6 +85,14 @@ public class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, Bac
         return this.backingStore.get("timespan");
     }
     /**
+     * Gets the workspaceId property value. The workspaceId property
+     * @return a {@link UUID}
+     */
+    @jakarta.annotation.Nullable
+    public UUID getWorkspaceId() {
+        return this.backingStore.get("workspaceId");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -90,6 +100,7 @@ public class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, Bac
         Objects.requireNonNull(writer);
         writer.writeStringValue("query", this.getQuery());
         writer.writeStringValue("timespan", this.getTimespan());
+        writer.writeUUIDValue("workspaceId", this.getWorkspaceId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,5 +131,12 @@ public class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, Bac
      */
     public void setTimespan(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("timespan", value);
+    }
+    /**
+     * Sets the workspaceId property value. The workspaceId property
+     * @param value Value to set for the workspaceId property.
+     */
+    public void setWorkspaceId(@jakarta.annotation.Nullable final UUID value) {
+        this.backingStore.set("workspaceId", value);
     }
 }

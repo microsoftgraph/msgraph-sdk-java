@@ -2,6 +2,7 @@ package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.identitygovernance.CustomTaskExtensionCallbackData;
 import com.microsoft.graph.models.identitygovernance.CustomTaskExtensionCalloutData;
+import com.microsoft.graph.models.identitygovernance.CustomTaskExtensionResponseData;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -42,6 +43,7 @@ public class CustomExtensionData implements AdditionalDataHolder, BackedModel, P
                 case "#microsoft.graph.assignmentRequestApprovalStageCallbackData": return new AssignmentRequestApprovalStageCallbackData();
                 case "#microsoft.graph.identityGovernance.customTaskExtensionCallbackData": return new CustomTaskExtensionCallbackData();
                 case "#microsoft.graph.identityGovernance.customTaskExtensionCalloutData": return new CustomTaskExtensionCalloutData();
+                case "#microsoft.graph.identityGovernance.customTaskExtensionResponseData": return new CustomTaskExtensionResponseData();
             }
         }
         return new CustomExtensionData();

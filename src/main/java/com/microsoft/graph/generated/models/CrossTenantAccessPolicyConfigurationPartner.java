@@ -109,7 +109,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
         deserializerMap.put("appServiceConnectInbound", (n) -> { this.setAppServiceConnectInbound(n.getObjectValue(CrossTenantAccessPolicyAppServiceConnectSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -120,6 +120,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
         deserializerMap.put("isInMultiTenantOrganization", (n) -> { this.setIsInMultiTenantOrganization(n.getBooleanValue()); });
         deserializerMap.put("isServiceProvider", (n) -> { this.setIsServiceProvider(n.getBooleanValue()); });
+        deserializerMap.put("m365Capabilities", (n) -> { this.setM365Capabilities(n.getCollectionOfObjectValues(M365CapabilityBase::createFromDiscriminatorValue)); });
         deserializerMap.put("m365CollaborationInbound", (n) -> { this.setM365CollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationInboundSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("m365CollaborationOutbound", (n) -> { this.setM365CollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationOutboundSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -159,6 +160,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @jakarta.annotation.Nullable
     public Boolean getIsServiceProvider() {
         return this.backingStore.get("isServiceProvider");
+    }
+    /**
+     * Gets the m365Capabilities property value. Defines the partner-specific Microsoft 365 cross-tenant capabilities for inbound access from the partner organization.
+     * @return a {@link java.util.List<M365CapabilityBase>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<M365CapabilityBase> getM365Capabilities() {
+        return this.backingStore.get("m365Capabilities");
     }
     /**
      * Gets the m365CollaborationInbound property value. Defines your partner-specific configuration for inbound Microsoft 365 collaboration settings that determine which users from the partner organization can collaborate with your organization using Microsoft 365 apps.
@@ -224,6 +233,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeBooleanValue("isInMultiTenantOrganization", this.getIsInMultiTenantOrganization());
         writer.writeBooleanValue("isServiceProvider", this.getIsServiceProvider());
+        writer.writeCollectionOfObjectValues("m365Capabilities", this.getM365Capabilities());
         writer.writeObjectValue("m365CollaborationInbound", this.getM365CollaborationInbound());
         writer.writeObjectValue("m365CollaborationOutbound", this.getM365CollaborationOutbound());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -316,6 +326,13 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     public void setIsServiceProvider(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isServiceProvider", value);
+    }
+    /**
+     * Sets the m365Capabilities property value. Defines the partner-specific Microsoft 365 cross-tenant capabilities for inbound access from the partner organization.
+     * @param value Value to set for the m365Capabilities property.
+     */
+    public void setM365Capabilities(@jakarta.annotation.Nullable final java.util.List<M365CapabilityBase> value) {
+        this.backingStore.set("m365Capabilities", value);
     }
     /**
      * Sets the m365CollaborationInbound property value. Defines your partner-specific configuration for inbound Microsoft 365 collaboration settings that determine which users from the partner organization can collaborate with your organization using Microsoft 365 apps.

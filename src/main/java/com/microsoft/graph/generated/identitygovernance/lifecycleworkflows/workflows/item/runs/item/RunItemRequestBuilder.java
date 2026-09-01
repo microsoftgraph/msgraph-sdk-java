@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.runs.item;
 
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.runs.item.reprocessedruns.ReprocessedRunsRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.runs.item.subjectprocessingresults.SubjectProcessingResultsRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.runs.item.taskprocessingresults.TaskProcessingResultsRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.runs.item.userprocessingresults.UserProcessingResultsRequestBuilder;
 import com.microsoft.graph.models.identitygovernance.Run;
@@ -30,6 +31,14 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ReprocessedRunsRequestBuilder reprocessedRuns() {
         return new ReprocessedRunsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the subjectProcessingResults property of the microsoft.graph.identityGovernance.run entity.
+     * @return a {@link SubjectProcessingResultsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SubjectProcessingResultsRequestBuilder subjectProcessingResults() {
+        return new SubjectProcessingResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.run entity.

@@ -105,6 +105,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("controlConfigurations");
     }
     /**
+     * Gets the externalOriginResourceConnectors property value. Represents the connectors used to communicate with external resource systems.
+     * @return a {@link java.util.List<ExternalOriginResourceConnector>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ExternalOriginResourceConnector> getExternalOriginResourceConnectors() {
+        return this.backingStore.get("externalOriginResourceConnectors");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -121,6 +129,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         deserializerMap.put("catalogs", (n) -> { this.setCatalogs(n.getCollectionOfObjectValues(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("connectedOrganizations", (n) -> { this.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
         deserializerMap.put("controlConfigurations", (n) -> { this.setControlConfigurations(n.getCollectionOfObjectValues(ControlConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalOriginResourceConnectors", (n) -> { this.setExternalOriginResourceConnectors(n.getCollectionOfObjectValues(ExternalOriginResourceConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceEnvironments", (n) -> { this.setResourceEnvironments(n.getCollectionOfObjectValues(AccessPackageResourceEnvironment::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceRequests", (n) -> { this.setResourceRequests(n.getCollectionOfObjectValues(AccessPackageResourceRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceRoleScopes", (n) -> { this.setResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
@@ -194,6 +203,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("catalogs", this.getCatalogs());
         writer.writeCollectionOfObjectValues("connectedOrganizations", this.getConnectedOrganizations());
         writer.writeCollectionOfObjectValues("controlConfigurations", this.getControlConfigurations());
+        writer.writeCollectionOfObjectValues("externalOriginResourceConnectors", this.getExternalOriginResourceConnectors());
         writer.writeCollectionOfObjectValues("resourceEnvironments", this.getResourceEnvironments());
         writer.writeCollectionOfObjectValues("resourceRequests", this.getResourceRequests());
         writer.writeCollectionOfObjectValues("resourceRoleScopes", this.getResourceRoleScopes());
@@ -270,6 +280,13 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     public void setControlConfigurations(@jakarta.annotation.Nullable final java.util.List<ControlConfiguration> value) {
         this.backingStore.set("controlConfigurations", value);
+    }
+    /**
+     * Sets the externalOriginResourceConnectors property value. Represents the connectors used to communicate with external resource systems.
+     * @param value Value to set for the externalOriginResourceConnectors property.
+     */
+    public void setExternalOriginResourceConnectors(@jakarta.annotation.Nullable final java.util.List<ExternalOriginResourceConnector> value) {
+        this.backingStore.set("externalOriginResourceConnectors", value);
     }
     /**
      * Sets the resourceEnvironments property value. A reference to the geolocation environments in which a resource is located.

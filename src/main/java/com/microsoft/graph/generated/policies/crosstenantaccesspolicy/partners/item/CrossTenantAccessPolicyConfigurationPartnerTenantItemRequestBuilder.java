@@ -3,6 +3,7 @@ package com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item;
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartner;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.identitysynchronization.IdentitySynchronizationRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.m365capabilities.M365CapabilitiesRequestBuilder;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.serviceproviderconstraints.ServiceProviderConstraintsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,14 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     @jakarta.annotation.Nonnull
     public IdentitySynchronizationRequestBuilder identitySynchronization() {
         return new IdentitySynchronizationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the m365Capabilities property of the microsoft.graph.crossTenantAccessPolicyConfigurationPartner entity.
+     * @return a {@link M365CapabilitiesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public M365CapabilitiesRequestBuilder m365Capabilities() {
+        return new M365CapabilitiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the serviceProviderConstraints property of the microsoft.graph.crossTenantAccessPolicyConfigurationPartner entity.

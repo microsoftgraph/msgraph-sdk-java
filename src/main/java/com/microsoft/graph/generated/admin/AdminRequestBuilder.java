@@ -30,7 +30,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the configurationManagement property of the microsoft.graph.admin entity.
+     * The configurationManagement property
      * @return a {@link ConfigurationManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull

@@ -1,8 +1,6 @@
 package com.microsoft.graph.admin.configurationmanagement.configurationsnapshotjobs;
 
-import com.microsoft.graph.admin.configurationmanagement.configurationsnapshotjobs.count.CountRequestBuilder;
 import com.microsoft.graph.admin.configurationmanagement.configurationsnapshotjobs.item.ConfigurationSnapshotJobItemRequestBuilder;
-import com.microsoft.graph.models.ConfigurationSnapshotJob;
 import com.microsoft.graph.models.ConfigurationSnapshotJobCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,14 +21,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConfigurationSnapshotJobsRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to count the resources in the collection.
-     * @return a {@link CountRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to manage the configurationSnapshotJobs property of the microsoft.graph.configurationManagement entity.
      * @param configurationSnapshotJobId The unique identifier of configurationSnapshotJob
@@ -84,31 +74,6 @@ public class ConfigurationSnapshotJobsRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationSnapshotJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to configurationSnapshotJobs for admin
-     * @param body The request body
-     * @return a {@link ConfigurationSnapshotJob}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationSnapshotJob post(@jakarta.annotation.Nonnull final ConfigurationSnapshotJob body) {
-        return post(body, null);
-    }
-    /**
-     * Create new navigation property to configurationSnapshotJobs for admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ConfigurationSnapshotJob}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationSnapshotJob post(@jakarta.annotation.Nonnull final ConfigurationSnapshotJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationSnapshotJob::createFromDiscriminatorValue);
-    }
-    /**
      * Get a list of the configurationSnapshotJob objects and their properties.
      * @return a {@link RequestInformation}
      */
@@ -126,30 +91,6 @@ public class ConfigurationSnapshotJobsRequestBuilder extends BaseRequestBuilder 
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to configurationSnapshotJobs for admin
-     * @param body The request body
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConfigurationSnapshotJob body) {
-        return toPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to configurationSnapshotJobs for admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConfigurationSnapshotJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -235,11 +176,5 @@ public class ConfigurationSnapshotJobsRequestBuilder extends BaseRequestBuilder 
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

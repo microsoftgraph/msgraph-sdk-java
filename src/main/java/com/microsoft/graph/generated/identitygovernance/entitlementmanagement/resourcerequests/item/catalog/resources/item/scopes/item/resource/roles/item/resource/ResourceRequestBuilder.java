@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.item.catalog.resources.item.scopes.item.resource.roles.item.resource;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.item.catalog.resources.item.scopes.item.resource.roles.item.resource.environment.EnvironmentRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.item.catalog.resources.item.scopes.item.resource.roles.item.resource.externaloriginresourceconnector.ExternalOriginResourceConnectorRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.item.catalog.resources.item.scopes.item.resource.roles.item.resource.refresh.RefreshRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.item.catalog.resources.item.scopes.item.resource.roles.item.resource.uploadsessions.UploadSessionsRequestBuilder;
 import com.microsoft.graph.models.AccessPackageResource;
@@ -30,6 +31,14 @@ public class ResourceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EnvironmentRequestBuilder environment() {
         return new EnvironmentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the externalOriginResourceConnector property of the microsoft.graph.accessPackageResource entity.
+     * @return a {@link ExternalOriginResourceConnectorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExternalOriginResourceConnectorRequestBuilder externalOriginResourceConnector() {
+        return new ExternalOriginResourceConnectorRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the refresh method.

@@ -8,7 +8,8 @@ public enum LifecycleTaskCategory implements ValuedEnum {
     Joiner("joiner"),
     Leaver("leaver"),
     UnknownFutureValue("unknownFutureValue"),
-    Mover("mover");
+    Mover("mover"),
+    Extensibility("extensibility");
     public final String value;
     LifecycleTaskCategory(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum LifecycleTaskCategory implements ValuedEnum {
             case "leaver": return Leaver;
             case "unknownFutureValue": return UnknownFutureValue;
             case "mover": return Mover;
+            case "extensibility": return Extensibility;
             default: return null;
         }
     }

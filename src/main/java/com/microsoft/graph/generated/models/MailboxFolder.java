@@ -64,6 +64,7 @@ public class MailboxFolder extends Entity implements Parsable {
         deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("totalItemCount", (n) -> { this.setTotalItemCount(n.getIntegerValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("wellKnownName", (n) -> { this.setWellKnownName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -115,6 +116,14 @@ public class MailboxFolder extends Entity implements Parsable {
         return this.backingStore.get("type");
     }
     /**
+     * Gets the wellKnownName property value. The locale-independent well-known name of the folder for folders created by Outlook, such as inbox, sentitems, drafts, deleteditems, or archive. For user-created folders, the value is null. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getWellKnownName() {
+        return this.backingStore.get("wellKnownName");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -130,6 +139,7 @@ public class MailboxFolder extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
         writer.writeIntegerValue("totalItemCount", this.getTotalItemCount());
         writer.writeStringValue("type", this.getType());
+        writer.writeStringValue("wellKnownName", this.getWellKnownName());
     }
     /**
      * Sets the childFolderCount property value. The number of immediate child folders in the current folder.
@@ -193,5 +203,12 @@ public class MailboxFolder extends Entity implements Parsable {
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("type", value);
+    }
+    /**
+     * Sets the wellKnownName property value. The locale-independent well-known name of the folder for folders created by Outlook, such as inbox, sentitems, drafts, deleteditems, or archive. For user-created folders, the value is null. Read-only.
+     * @param value Value to set for the wellKnownName property.
+     */
+    public void setWellKnownName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("wellKnownName", value);
     }
 }

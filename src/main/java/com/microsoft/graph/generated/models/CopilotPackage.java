@@ -33,6 +33,14 @@ public class CopilotPackage extends Entity implements Parsable {
         return new CopilotPackage();
     }
     /**
+     * Gets the agentIdentityId property value. The agentIdentityId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAgentIdentityId() {
+        return this.backingStore.get("agentIdentityId");
+    }
+    /**
      * Gets the appId property value. The appId property
      * @return a {@link String}
      */
@@ -95,6 +103,7 @@ public class CopilotPackage extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agentIdentityId", (n) -> { this.setAgentIdentityId(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("assetId", (n) -> { this.setAssetId(n.getStringValue()); });
         deserializerMap.put("availableTo", (n) -> { this.setAvailableTo(n.getEnumValue(PackageStatus::forValue)); });
@@ -219,6 +228,7 @@ public class CopilotPackage extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("agentIdentityId", this.getAgentIdentityId());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeStringValue("assetId", this.getAssetId());
         writer.writeEnumValue("availableTo", this.getAvailableTo());
@@ -238,6 +248,13 @@ public class CopilotPackage extends Entity implements Parsable {
         writer.writeEnumValue("type", this.getType());
         writer.writeStringValue("version", this.getVersion());
         writer.writeByteArrayValue("zipFile", this.getZipFile());
+    }
+    /**
+     * Sets the agentIdentityId property value. The agentIdentityId property
+     * @param value Value to set for the agentIdentityId property.
+     */
+    public void setAgentIdentityId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("agentIdentityId", value);
     }
     /**
      * Sets the appId property value. The appId property

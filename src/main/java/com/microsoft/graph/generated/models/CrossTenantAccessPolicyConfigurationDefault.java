@@ -88,6 +88,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
         deserializerMap.put("invitationRedemptionIdentityProviderConfiguration", (n) -> { this.setInvitationRedemptionIdentityProviderConfiguration(n.getObjectValue(DefaultInvitationRedemptionIdentityProviderConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("isServiceDefault", (n) -> { this.setIsServiceDefault(n.getBooleanValue()); });
+        deserializerMap.put("m365Capabilities", (n) -> { this.setM365Capabilities(n.getCollectionOfObjectValues(M365CapabilityBase::createFromDiscriminatorValue)); });
         deserializerMap.put("m365CollaborationInbound", (n) -> { this.setM365CollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationInboundSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("m365CollaborationOutbound", (n) -> { this.setM365CollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationOutboundSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantRestrictions", (n) -> { this.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
@@ -116,6 +117,14 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     @jakarta.annotation.Nullable
     public Boolean getIsServiceDefault() {
         return this.backingStore.get("isServiceDefault");
+    }
+    /**
+     * Gets the m365Capabilities property value. Defines the default Microsoft 365 cross-tenant capabilities for inbound access from external organizations.
+     * @return a {@link java.util.List<M365CapabilityBase>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<M365CapabilityBase> getM365Capabilities() {
+        return this.backingStore.get("m365Capabilities");
     }
     /**
      * Gets the m365CollaborationInbound property value. Defines your default configuration for inbound Microsoft 365 collaboration settings that determine which users from other organizations can collaborate with your organization using Microsoft 365 apps.
@@ -157,6 +166,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeObjectValue("invitationRedemptionIdentityProviderConfiguration", this.getInvitationRedemptionIdentityProviderConfiguration());
         writer.writeBooleanValue("isServiceDefault", this.getIsServiceDefault());
+        writer.writeCollectionOfObjectValues("m365Capabilities", this.getM365Capabilities());
         writer.writeObjectValue("m365CollaborationInbound", this.getM365CollaborationInbound());
         writer.writeObjectValue("m365CollaborationOutbound", this.getM365CollaborationOutbound());
         writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
@@ -223,6 +233,13 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     public void setIsServiceDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isServiceDefault", value);
+    }
+    /**
+     * Sets the m365Capabilities property value. Defines the default Microsoft 365 cross-tenant capabilities for inbound access from external organizations.
+     * @param value Value to set for the m365Capabilities property.
+     */
+    public void setM365Capabilities(@jakarta.annotation.Nullable final java.util.List<M365CapabilityBase> value) {
+        this.backingStore.set("m365Capabilities", value);
     }
     /**
      * Sets the m365CollaborationInbound property value. Defines your default configuration for inbound Microsoft 365 collaboration settings that determine which users from other organizations can collaborate with your organization using Microsoft 365 apps.

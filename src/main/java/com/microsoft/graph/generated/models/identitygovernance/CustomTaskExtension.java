@@ -65,6 +65,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("replyMode", (n) -> { this.setReplyMode(n.getEnumValue(CustomTaskExtensionReplyMode::forValue)); });
         return deserializerMap;
     }
     /**
@@ -84,6 +85,14 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
+     * Gets the replyMode property value. The replyMode property
+     * @return a {@link CustomTaskExtensionReplyMode}
+     */
+    @jakarta.annotation.Nullable
+    public CustomTaskExtensionReplyMode getReplyMode() {
+        return this.backingStore.get("replyMode");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -95,6 +104,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeEnumValue("replyMode", this.getReplyMode());
     }
     /**
      * Sets the callbackConfiguration property value. The callback configuration for a custom task extension.
@@ -130,5 +140,12 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the replyMode property value. The replyMode property
+     * @param value Value to set for the replyMode property.
+     */
+    public void setReplyMode(@jakarta.annotation.Nullable final CustomTaskExtensionReplyMode value) {
+        this.backingStore.set("replyMode", value);
     }
 }
