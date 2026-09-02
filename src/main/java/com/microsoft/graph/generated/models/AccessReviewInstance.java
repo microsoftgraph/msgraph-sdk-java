@@ -50,6 +50,14 @@ public class AccessReviewInstance extends Entity implements Parsable {
         return this.backingStore.get("endDateTime");
     }
     /**
+     * Gets the errors property value. Collection of errors in an access review instance lifecycle. Read-only.
+     * @return a {@link java.util.List<AccessReviewError>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AccessReviewError> getErrors() {
+        return this.backingStore.get("errors");
+    }
+    /**
      * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user&apos;s manager does not exist. Supports $select.
      * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
@@ -67,6 +75,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         deserializerMap.put("contactedReviewers", (n) -> { this.setContactedReviewers(n.getCollectionOfObjectValues(AccessReviewReviewer::createFromDiscriminatorValue)); });
         deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::createFromDiscriminatorValue)); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("errors", (n) -> { this.setErrors(n.getCollectionOfObjectValues(AccessReviewError::createFromDiscriminatorValue)); });
         deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
         deserializerMap.put("reviewers", (n) -> { this.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
         deserializerMap.put("scope", (n) -> { this.setScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
@@ -125,6 +134,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("contactedReviewers", this.getContactedReviewers());
         writer.writeCollectionOfObjectValues("decisions", this.getDecisions());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
+        writer.writeCollectionOfObjectValues("errors", this.getErrors());
         writer.writeCollectionOfObjectValues("fallbackReviewers", this.getFallbackReviewers());
         writer.writeCollectionOfObjectValues("reviewers", this.getReviewers());
         writer.writeObjectValue("scope", this.getScope());
@@ -152,6 +162,13 @@ public class AccessReviewInstance extends Entity implements Parsable {
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("endDateTime", value);
+    }
+    /**
+     * Sets the errors property value. Collection of errors in an access review instance lifecycle. Read-only.
+     * @param value Value to set for the errors property.
+     */
+    public void setErrors(@jakarta.annotation.Nullable final java.util.List<AccessReviewError> value) {
+        this.backingStore.set("errors", value);
     }
     /**
      * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user&apos;s manager does not exist. Supports $select.

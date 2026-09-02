@@ -9,7 +9,8 @@ public enum WorkflowExecutionType implements ValuedEnum {
     OnDemand("onDemand"),
     UnknownFutureValue("unknownFutureValue"),
     ActivatedWithScope("activatedWithScope"),
-    Preview("preview");
+    Preview("preview"),
+    ExtensibilityOnDemand("extensibilityOnDemand");
     public final String value;
     WorkflowExecutionType(final String value) {
         this.value = value;
@@ -25,6 +26,7 @@ public enum WorkflowExecutionType implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "activatedWithScope": return ActivatedWithScope;
             case "preview": return Preview;
+            case "extensibilityOnDemand": return ExtensibilityOnDemand;
             default: return null;
         }
     }

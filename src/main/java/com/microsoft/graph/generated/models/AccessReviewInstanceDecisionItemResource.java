@@ -37,6 +37,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource": return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
+                case "#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageResource": return new AccessReviewInstanceDecisionItemAccessPackageResource();
                 case "#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource": return new AccessReviewInstanceDecisionItemAzureRoleResource();
                 case "#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource": return new AccessReviewInstanceDecisionItemServicePrincipalResource();
             }

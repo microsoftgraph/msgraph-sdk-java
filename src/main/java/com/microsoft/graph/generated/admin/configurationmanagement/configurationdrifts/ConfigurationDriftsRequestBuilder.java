@@ -2,7 +2,6 @@ package com.microsoft.graph.admin.configurationmanagement.configurationdrifts;
 
 import com.microsoft.graph.admin.configurationmanagement.configurationdrifts.count.CountRequestBuilder;
 import com.microsoft.graph.admin.configurationmanagement.configurationdrifts.item.ConfigurationDriftItemRequestBuilder;
-import com.microsoft.graph.models.ConfigurationDrift;
 import com.microsoft.graph.models.ConfigurationDriftCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -84,31 +83,6 @@ public class ConfigurationDriftsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationDriftCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to configurationDrifts for admin
-     * @param body The request body
-     * @return a {@link ConfigurationDrift}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationDrift post(@jakarta.annotation.Nonnull final ConfigurationDrift body) {
-        return post(body, null);
-    }
-    /**
-     * Create new navigation property to configurationDrifts for admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ConfigurationDrift}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationDrift post(@jakarta.annotation.Nonnull final ConfigurationDrift body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationDrift::createFromDiscriminatorValue);
-    }
-    /**
      * Get a list of the configurationDrift objects and their properties.
      * @return a {@link RequestInformation}
      */
@@ -126,30 +100,6 @@ public class ConfigurationDriftsRequestBuilder extends BaseRequestBuilder {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to configurationDrifts for admin
-     * @param body The request body
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConfigurationDrift body) {
-        return toPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to configurationDrifts for admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConfigurationDrift body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -235,11 +185,5 @@ public class ConfigurationDriftsRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

@@ -50,6 +50,14 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("appliedDateTime");
     }
     /**
+     * Gets the applyDescription property value. The description of the apply result. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getApplyDescription() {
+        return this.backingStore.get("applyDescription");
+    }
+    /**
      * Gets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @return a {@link String}
      */
@@ -75,6 +83,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         deserializerMap.put("accessReviewId", (n) -> { this.setAccessReviewId(n.getStringValue()); });
         deserializerMap.put("appliedBy", (n) -> { this.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("appliedDateTime", (n) -> { this.setAppliedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("applyDescription", (n) -> { this.setApplyDescription(n.getStringValue()); });
         deserializerMap.put("applyResult", (n) -> { this.setApplyResult(n.getStringValue()); });
         deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getCollectionOfObjectValues(GovernanceInsight::createFromDiscriminatorValue)); });
@@ -170,6 +179,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         writer.writeStringValue("accessReviewId", this.getAccessReviewId());
         writer.writeObjectValue("appliedBy", this.getAppliedBy());
         writer.writeOffsetDateTimeValue("appliedDateTime", this.getAppliedDateTime());
+        writer.writeStringValue("applyDescription", this.getApplyDescription());
         writer.writeStringValue("applyResult", this.getApplyResult());
         writer.writeStringValue("decision", this.getDecision());
         writer.writeCollectionOfObjectValues("insights", this.getInsights());
@@ -202,6 +212,13 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     public void setAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("appliedDateTime", value);
+    }
+    /**
+     * Sets the applyDescription property value. The description of the apply result. Read-only.
+     * @param value Value to set for the applyDescription property.
+     */
+    public void setApplyDescription(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("applyDescription", value);
     }
     /**
      * Sets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.

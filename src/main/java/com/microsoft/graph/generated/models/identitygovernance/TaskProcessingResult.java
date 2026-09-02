@@ -66,6 +66,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
+        deserializerMap.put("workflowSubject", (n) -> { this.setWorkflowSubject(n.getObjectValue(WorkflowSubject::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -109,6 +110,14 @@ public class TaskProcessingResult extends Entity implements Parsable {
         return this.backingStore.get("task");
     }
     /**
+     * Gets the workflowSubject property value. The workflow subject associated with this task processing result. Populated for extensibility and provisioning workflows.
+     * @return a {@link WorkflowSubject}
+     */
+    @jakarta.annotation.Nullable
+    public WorkflowSubject getWorkflowSubject() {
+        return this.backingStore.get("workflowSubject");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -123,6 +132,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("startedDateTime", this.getStartedDateTime());
         writer.writeObjectValue("subject", this.getSubject());
         writer.writeObjectValue("task", this.getTask());
+        writer.writeObjectValue("workflowSubject", this.getWorkflowSubject());
     }
     /**
      * Sets the completedDateTime property value. The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -179,5 +189,12 @@ public class TaskProcessingResult extends Entity implements Parsable {
      */
     public void setTask(@jakarta.annotation.Nullable final Task value) {
         this.backingStore.set("task", value);
+    }
+    /**
+     * Sets the workflowSubject property value. The workflow subject associated with this task processing result. Populated for extensibility and provisioning workflows.
+     * @param value Value to set for the workflowSubject property.
+     */
+    public void setWorkflowSubject(@jakarta.annotation.Nullable final WorkflowSubject value) {
+        this.backingStore.set("workflowSubject", value);
     }
 }

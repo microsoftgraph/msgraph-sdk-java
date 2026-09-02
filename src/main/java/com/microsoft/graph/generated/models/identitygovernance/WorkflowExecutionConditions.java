@@ -37,6 +37,7 @@ public class WorkflowExecutionConditions implements AdditionalDataHolder, Backed
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.identityGovernance.onDemandExecutionOnly": return new OnDemandExecutionOnly();
+                case "#microsoft.graph.identityGovernance.provisioningAttributeMapping": return new ProvisioningAttributeMapping();
                 case "#microsoft.graph.identityGovernance.triggerAndScopeBasedConditions": return new TriggerAndScopeBasedConditions();
             }
         }

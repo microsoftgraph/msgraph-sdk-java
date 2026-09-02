@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -33,6 +34,14 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         return this.backingStore.get("acquireUsersAndGroups");
     }
     /**
+     * Gets the activeUsers property value. The number of distinct users who actively used the package during the reporting period.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getActiveUsers() {
+        return this.backingStore.get("activeUsers");
+    }
+    /**
      * Gets the allowedUsersAndGroups property value. The allowedUsersAndGroups property
      * @return a {@link java.util.List<PackageAccessEntity>}
      */
@@ -57,6 +66,14 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         return this.backingStore.get("elementDetails");
     }
     /**
+     * Gets the exceptionRate property value. The fraction of sessions that resulted in an exception, expressed as a value between 0 and 1.
+     * @return a {@link Double}
+     */
+    @jakarta.annotation.Nullable
+    public Double getExceptionRate() {
+        return this.backingStore.get("exceptionRate");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -64,13 +81,26 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acquireUsersAndGroups", (n) -> { this.setAcquireUsersAndGroups(n.getCollectionOfObjectValues(PackageAccessEntity::createFromDiscriminatorValue)); });
+        deserializerMap.put("activeUsers", (n) -> { this.setActiveUsers(n.getIntegerValue()); });
         deserializerMap.put("allowedUsersAndGroups", (n) -> { this.setAllowedUsersAndGroups(n.getCollectionOfObjectValues(PackageAccessEntity::createFromDiscriminatorValue)); });
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("elementDetails", (n) -> { this.setElementDetails(n.getCollectionOfObjectValues(PackageElementDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("exceptionRate", (n) -> { this.setExceptionRate(n.getDoubleValue()); });
+        deserializerMap.put("lastUsedDateTime", (n) -> { this.setLastUsedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("longDescription", (n) -> { this.setLongDescription(n.getStringValue()); });
         deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getStringValue()); });
         deserializerMap.put("sharedWithUsersAndGroups", (n) -> { this.setSharedWithUsersAndGroups(n.getCollectionOfObjectValues(PackageAccessEntity::createFromDiscriminatorValue)); });
+        deserializerMap.put("totalRunTimeInHours", (n) -> { this.setTotalRunTimeInHours(n.getDoubleValue()); });
+        deserializerMap.put("totalSessions", (n) -> { this.setTotalSessions(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lastUsedDateTime property value. The date and time when the package was last used, in ISO 8601 format and UTC.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUsedDateTime() {
+        return this.backingStore.get("lastUsedDateTime");
     }
     /**
      * Gets the longDescription property value. The longDescription property
@@ -97,6 +127,22 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         return this.backingStore.get("sharedWithUsersAndGroups");
     }
     /**
+     * Gets the totalRunTimeInHours property value. Total hours worked by the agent.
+     * @return a {@link Double}
+     */
+    @jakarta.annotation.Nullable
+    public Double getTotalRunTimeInHours() {
+        return this.backingStore.get("totalRunTimeInHours");
+    }
+    /**
+     * Gets the totalSessions property value. The total number of sessions served by the package during the reporting period.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getTotalSessions() {
+        return this.backingStore.get("totalSessions");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -104,12 +150,17 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("acquireUsersAndGroups", this.getAcquireUsersAndGroups());
+        writer.writeIntegerValue("activeUsers", this.getActiveUsers());
         writer.writeCollectionOfObjectValues("allowedUsersAndGroups", this.getAllowedUsersAndGroups());
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
         writer.writeCollectionOfObjectValues("elementDetails", this.getElementDetails());
+        writer.writeDoubleValue("exceptionRate", this.getExceptionRate());
+        writer.writeOffsetDateTimeValue("lastUsedDateTime", this.getLastUsedDateTime());
         writer.writeStringValue("longDescription", this.getLongDescription());
         writer.writeStringValue("sensitivity", this.getSensitivity());
         writer.writeCollectionOfObjectValues("sharedWithUsersAndGroups", this.getSharedWithUsersAndGroups());
+        writer.writeDoubleValue("totalRunTimeInHours", this.getTotalRunTimeInHours());
+        writer.writeIntegerValue("totalSessions", this.getTotalSessions());
     }
     /**
      * Sets the acquireUsersAndGroups property value. The acquireUsersAndGroups property
@@ -117,6 +168,13 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
      */
     public void setAcquireUsersAndGroups(@jakarta.annotation.Nullable final java.util.List<PackageAccessEntity> value) {
         this.backingStore.set("acquireUsersAndGroups", value);
+    }
+    /**
+     * Sets the activeUsers property value. The number of distinct users who actively used the package during the reporting period.
+     * @param value Value to set for the activeUsers property.
+     */
+    public void setActiveUsers(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("activeUsers", value);
     }
     /**
      * Sets the allowedUsersAndGroups property value. The allowedUsersAndGroups property
@@ -140,6 +198,20 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         this.backingStore.set("elementDetails", value);
     }
     /**
+     * Sets the exceptionRate property value. The fraction of sessions that resulted in an exception, expressed as a value between 0 and 1.
+     * @param value Value to set for the exceptionRate property.
+     */
+    public void setExceptionRate(@jakarta.annotation.Nullable final Double value) {
+        this.backingStore.set("exceptionRate", value);
+    }
+    /**
+     * Sets the lastUsedDateTime property value. The date and time when the package was last used, in ISO 8601 format and UTC.
+     * @param value Value to set for the lastUsedDateTime property.
+     */
+    public void setLastUsedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUsedDateTime", value);
+    }
+    /**
      * Sets the longDescription property value. The longDescription property
      * @param value Value to set for the longDescription property.
      */
@@ -159,5 +231,19 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
      */
     public void setSharedWithUsersAndGroups(@jakarta.annotation.Nullable final java.util.List<PackageAccessEntity> value) {
         this.backingStore.set("sharedWithUsersAndGroups", value);
+    }
+    /**
+     * Sets the totalRunTimeInHours property value. Total hours worked by the agent.
+     * @param value Value to set for the totalRunTimeInHours property.
+     */
+    public void setTotalRunTimeInHours(@jakarta.annotation.Nullable final Double value) {
+        this.backingStore.set("totalRunTimeInHours", value);
+    }
+    /**
+     * Sets the totalSessions property value. The total number of sessions served by the package during the reporting period.
+     * @param value Value to set for the totalSessions property.
+     */
+    public void setTotalSessions(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("totalSessions", value);
     }
 }

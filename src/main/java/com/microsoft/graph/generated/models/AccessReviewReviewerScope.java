@@ -61,11 +61,13 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, BackedMo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
         deserializerMap.put("queryRoot", (n) -> { this.setQueryRoot(n.getStringValue()); });
         deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getStringValue()); });
+        deserializerMap.put("reviewerId", (n) -> { this.setReviewerId(n.getStringValue()); });
+        deserializerMap.put("scopeType", (n) -> { this.setScopeType(n.getEnumValue(AccessReviewReviewerScopeType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -101,6 +103,22 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("queryType");
     }
     /**
+     * Gets the reviewerId property value. The identifier of the reviewer.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getReviewerId() {
+        return this.backingStore.get("reviewerId");
+    }
+    /**
+     * Gets the scopeType property value. The scopeType property
+     * @return a {@link AccessReviewReviewerScopeType}
+     */
+    @jakarta.annotation.Nullable
+    public AccessReviewReviewerScopeType getScopeType() {
+        return this.backingStore.get("scopeType");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -110,6 +128,8 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, BackedMo
         writer.writeStringValue("query", this.getQuery());
         writer.writeStringValue("queryRoot", this.getQueryRoot());
         writer.writeStringValue("queryType", this.getQueryType());
+        writer.writeStringValue("reviewerId", this.getReviewerId());
+        writer.writeEnumValue("scopeType", this.getScopeType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -154,5 +174,19 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, BackedMo
      */
     public void setQueryType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("queryType", value);
+    }
+    /**
+     * Sets the reviewerId property value. The identifier of the reviewer.
+     * @param value Value to set for the reviewerId property.
+     */
+    public void setReviewerId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("reviewerId", value);
+    }
+    /**
+     * Sets the scopeType property value. The scopeType property
+     * @param value Value to set for the scopeType property.
+     */
+    public void setScopeType(@jakarta.annotation.Nullable final AccessReviewReviewerScopeType value) {
+        this.backingStore.set("scopeType", value);
     }
 }

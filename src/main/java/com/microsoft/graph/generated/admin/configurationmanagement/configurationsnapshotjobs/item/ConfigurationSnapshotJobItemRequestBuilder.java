@@ -81,31 +81,6 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationSnapshotJob::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property configurationSnapshotJobs in admin
-     * @param body The request body
-     * @return a {@link ConfigurationSnapshotJob}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationSnapshotJob patch(@jakarta.annotation.Nonnull final ConfigurationSnapshotJob body) {
-        return patch(body, null);
-    }
-    /**
-     * Update the navigation property configurationSnapshotJobs in admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ConfigurationSnapshotJob}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationSnapshotJob patch(@jakarta.annotation.Nonnull final ConfigurationSnapshotJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationSnapshotJob::createFromDiscriminatorValue);
-    }
-    /**
      * Delete a configurationSnapshotJob object.
      * @return a {@link RequestInformation}
      */
@@ -143,30 +118,6 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Update the navigation property configurationSnapshotJobs in admin
-     * @param body The request body
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConfigurationSnapshotJob body) {
-        return toPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property configurationSnapshotJobs in admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConfigurationSnapshotJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -222,11 +173,5 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

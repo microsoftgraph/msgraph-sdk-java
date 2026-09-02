@@ -1,6 +1,5 @@
 package com.microsoft.graph.employeeexperience.communities;
 
-import com.microsoft.graph.employeeexperience.communities.count.CountRequestBuilder;
 import com.microsoft.graph.employeeexperience.communities.item.CommunityItemRequestBuilder;
 import com.microsoft.graph.models.Community;
 import com.microsoft.graph.models.CommunityCollectionResponse;
@@ -23,14 +22,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunitiesRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to count the resources in the collection.
-     * @return a {@link CountRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to manage the communities property of the microsoft.graph.employeeExperience entity.
      * @param communityId The unique identifier of community

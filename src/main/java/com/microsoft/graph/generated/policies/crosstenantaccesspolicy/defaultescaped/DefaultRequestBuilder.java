@@ -2,6 +2,7 @@ package com.microsoft.graph.policies.crosstenantaccesspolicy.defaultescaped;
 
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationDefault;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.defaultescaped.m365capabilities.M365CapabilitiesRequestBuilder;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.defaultescaped.resettosystemdefault.ResetToSystemDefaultRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DefaultRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the m365Capabilities property of the microsoft.graph.crossTenantAccessPolicyConfigurationDefault entity.
+     * @return a {@link M365CapabilitiesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public M365CapabilitiesRequestBuilder m365Capabilities() {
+        return new M365CapabilitiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the resetToSystemDefault method.
      * @return a {@link ResetToSystemDefaultRequestBuilder}

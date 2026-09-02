@@ -1,5 +1,7 @@
 package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.acceptrecommendations.AcceptRecommendationsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.batchrecorddecisions.BatchRecordDecisionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.DecisionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.stop.StopRequestBuilder;
 import com.microsoft.graph.models.AccessReviewStage;
@@ -22,6 +24,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the acceptRecommendations method.
+     * @return a {@link AcceptRecommendationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AcceptRecommendationsRequestBuilder acceptRecommendations() {
+        return new AcceptRecommendationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the batchRecordDecisions method.
+     * @return a {@link BatchRecordDecisionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BatchRecordDecisionsRequestBuilder batchRecordDecisions() {
+        return new BatchRecordDecisionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity.
      * @return a {@link DecisionsRequestBuilder}
