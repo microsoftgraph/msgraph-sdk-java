@@ -51,6 +51,7 @@ import com.microsoft.graph.users.item.manageddevices.ManagedDevicesRequestBuilde
 import com.microsoft.graph.users.item.manager.ManagerRequestBuilder;
 import com.microsoft.graph.users.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.users.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.users.item.notes.NotesRequestBuilder;
 import com.microsoft.graph.users.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.users.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.OnlineMeetingsRequestBuilder;
@@ -484,6 +485,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the notes property of the microsoft.graph.user entity.
+     * @return a {@link NotesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public NotesRequestBuilder notes() {
+        return new NotesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity.

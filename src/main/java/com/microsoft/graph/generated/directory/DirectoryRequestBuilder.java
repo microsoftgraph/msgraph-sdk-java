@@ -12,6 +12,7 @@ import com.microsoft.graph.directory.recovery.RecoveryRequestBuilder;
 import com.microsoft.graph.directory.remotetenantgroups.RemoteTenantGroupsRequestBuilder;
 import com.microsoft.graph.directory.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.directory.subscriptionswithcommercesubscriptionid.SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
+import com.microsoft.graph.directory.tenantgovernance.TenantGovernanceRequestBuilder;
 import com.microsoft.graph.models.Directory;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -119,6 +120,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tenantGovernance property of the microsoft.graph.directory entity.
+     * @return a {@link TenantGovernanceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TenantGovernanceRequestBuilder tenantGovernance() {
+        return new TenantGovernanceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.

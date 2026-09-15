@@ -11,9 +11,6 @@ import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Represents a container that exposes navigation properties for cloud communications resources.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable {
     /**

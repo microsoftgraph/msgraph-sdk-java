@@ -12,7 +12,8 @@ public enum ExchangeMessageTraceStatus implements ValuedEnum {
     Expanded("expanded"),
     Quarantined("quarantined"),
     FilteredAsSpam("filteredAsSpam"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Recalled("recalled");
     public final String value;
     ExchangeMessageTraceStatus(final String value) {
         this.value = value;
@@ -31,6 +32,7 @@ public enum ExchangeMessageTraceStatus implements ValuedEnum {
             case "quarantined": return Quarantined;
             case "filteredAsSpam": return FilteredAsSpam;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "recalled": return Recalled;
             default: return null;
         }
     }

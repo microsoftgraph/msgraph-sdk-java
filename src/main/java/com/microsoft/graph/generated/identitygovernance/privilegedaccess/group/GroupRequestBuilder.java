@@ -7,6 +7,7 @@ import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignments
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityscheduleinstances.EligibilityScheduleInstancesRequestBuilder;
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityschedulerequests.EligibilityScheduleRequestsRequestBuilder;
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityschedules.EligibilitySchedulesRequestBuilder;
+import com.microsoft.graph.identitygovernance.privilegedaccess.group.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrivilegedAccessGroup;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -82,6 +83,14 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EligibilitySchedulesRequestBuilder eligibilitySchedules() {
         return new EligibilitySchedulesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.privilegedAccessGroup entity.
+     * @return a {@link ResourcesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ResourcesRequestBuilder resources() {
+        return new ResourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link GroupRequestBuilder} and sets the default values.

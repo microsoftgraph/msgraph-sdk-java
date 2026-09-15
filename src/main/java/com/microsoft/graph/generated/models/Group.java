@@ -451,7 +451,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesDomainName");
     }
     /**
-     * Gets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
+     * Gets the onPremisesExtensionAttributes property value. Complex type containing extension attributes 1-15 for the group, synchronized from on-premises Active Directory. Returned only on $select. Supports $filter (eq, ne, not, in).
      * @return a {@link OnPremisesExtensionAttributes}
      */
     @jakarta.annotation.Nullable
@@ -1128,7 +1128,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesDomainName", value);
     }
     /**
-     * Sets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
+     * Sets the onPremisesExtensionAttributes property value. Complex type containing extension attributes 1-15 for the group, synchronized from on-premises Active Directory. Returned only on $select. Supports $filter (eq, ne, not, in).
      * @param value Value to set for the onPremisesExtensionAttributes property.
      */
     public void setOnPremisesExtensionAttributes(@jakarta.annotation.Nullable final OnPremisesExtensionAttributes value) {

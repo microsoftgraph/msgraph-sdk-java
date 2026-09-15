@@ -87,6 +87,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customExtensionCalloutInstances", (n) -> { this.setCustomExtensionCalloutInstances(n.getCollectionOfObjectValues(CustomExtensionCalloutInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("parameters", (n) -> { this.setParameters(n.getObjectValue(AccessPackageAssignmentRequestParameters::createFromDiscriminatorValue)); });
         deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
         deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getEnumValue(AccessPackageRequestType::forValue)); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
@@ -101,6 +102,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getJustification() {
         return this.backingStore.get("justification");
+    }
+    /**
+     * Gets the parameters property value. The parameters property
+     * @return a {@link AccessPackageAssignmentRequestParameters}
+     */
+    @jakarta.annotation.Nullable
+    public AccessPackageAssignmentRequestParameters getParameters() {
+        return this.backingStore.get("parameters");
     }
     /**
      * Gets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
@@ -156,6 +165,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("customExtensionCalloutInstances", this.getCustomExtensionCalloutInstances());
         writer.writeStringValue("justification", this.getJustification());
+        writer.writeObjectValue("parameters", this.getParameters());
         writer.writeObjectValue("requestor", this.getRequestor());
         writer.writeEnumValue("requestType", this.getRequestType());
         writer.writeObjectValue("schedule", this.getSchedule());
@@ -210,6 +220,13 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("justification", value);
+    }
+    /**
+     * Sets the parameters property value. The parameters property
+     * @param value Value to set for the parameters property.
+     */
+    public void setParameters(@jakarta.annotation.Nullable final AccessPackageAssignmentRequestParameters value) {
+        this.backingStore.set("parameters", value);
     }
     /**
      * Sets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.

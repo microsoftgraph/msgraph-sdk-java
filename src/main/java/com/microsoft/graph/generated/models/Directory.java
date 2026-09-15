@@ -91,6 +91,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("recovery", (n) -> { this.setRecovery(n.getObjectValue(Recovery::createFromDiscriminatorValue)); });
         deserializerMap.put("remoteTenantGroups", (n) -> { this.setRemoteTenantGroups(n.getCollectionOfObjectValues(RemoteTenantGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantGovernance", (n) -> { this.setTenantGovernance(n.getObjectValue(TenantGovernance::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -134,6 +135,14 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("subscriptions");
     }
     /**
+     * Gets the tenantGovernance property value. The tenantGovernance property
+     * @return a {@link TenantGovernance}
+     */
+    @jakarta.annotation.Nullable
+    public TenantGovernance getTenantGovernance() {
+        return this.backingStore.get("tenantGovernance");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -151,6 +160,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeObjectValue("recovery", this.getRecovery());
         writer.writeCollectionOfObjectValues("remoteTenantGroups", this.getRemoteTenantGroups());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
+        writer.writeObjectValue("tenantGovernance", this.getTenantGovernance());
     }
     /**
      * Sets the administrativeUnits property value. Conceptual container for user and group directory objects.
@@ -228,5 +238,12 @@ public class Directory extends Entity implements Parsable {
      */
     public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<CompanySubscription> value) {
         this.backingStore.set("subscriptions", value);
+    }
+    /**
+     * Sets the tenantGovernance property value. The tenantGovernance property
+     * @param value Value to set for the tenantGovernance property.
+     */
+    public void setTenantGovernance(@jakarta.annotation.Nullable final TenantGovernance value) {
+        this.backingStore.set("tenantGovernance", value);
     }
 }
