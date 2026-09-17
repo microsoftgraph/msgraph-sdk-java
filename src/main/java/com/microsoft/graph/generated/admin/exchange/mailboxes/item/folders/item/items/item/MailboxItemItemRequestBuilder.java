@@ -37,6 +37,26 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/folders/{mailboxFolder%2Did}/items/{mailboxItem%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
+     * Delete a mailboxItem from a mailboxFolder in a mailbox. Use the disposalType query parameter to specify whether to soft-delete or hard-delete the item.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-delete-items?view=graph-rest-1.0">Find more info here</a>
+     */
+    public void delete() {
+        delete(null);
+    }
+    /**
+     * Delete a mailboxItem from a mailboxFolder in a mailbox. Use the disposalType query parameter to specify whether to soft-delete or hard-delete the item.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-delete-items?view=graph-rest-1.0">Find more info here</a>
+     */
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
      * Read the properties and relationships of a mailboxItem object.
      * @return a {@link MailboxItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,6 +79,26 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxItem::createFromDiscriminatorValue);
+    }
+    /**
+     * Delete a mailboxItem from a mailboxFolder in a mailbox. Use the disposalType query parameter to specify whether to soft-delete or hard-delete the item.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * Delete a mailboxItem from a mailboxFolder in a mailbox. Use the disposalType query parameter to specify whether to soft-delete or hard-delete the item.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        return requestInfo;
     }
     /**
      * Read the properties and relationships of a mailboxItem object.
@@ -89,6 +129,12 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
     public MailboxItemItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MailboxItemItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * Read the properties and relationships of a mailboxItem object.

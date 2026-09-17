@@ -509,6 +509,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
         deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
         deserializerMap.put("mySite", (n) -> { this.setMySite(n.getStringValue()); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getCollectionOfObjectValues(Note::createFromDiscriminatorValue)); });
         deserializerMap.put("oauth2PermissionGrants", (n) -> { this.setOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
         deserializerMap.put("officeLocation", (n) -> { this.setOfficeLocation(n.getStringValue()); });
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
@@ -792,6 +793,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getMySite() {
         return this.backingStore.get("mySite");
+    }
+    /**
+     * Gets the notes property value. The notes in the user&apos;s Notes folder. Read-only. Nullable.
+     * @return a {@link java.util.List<Note>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Note> getNotes() {
+        return this.backingStore.get("notes");
     }
     /**
      * Gets the oauth2PermissionGrants property value. The oauth2PermissionGrants property
@@ -1341,6 +1350,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
         writer.writeStringValue("mobilePhone", this.getMobilePhone());
         writer.writeStringValue("mySite", this.getMySite());
+        writer.writeCollectionOfObjectValues("notes", this.getNotes());
         writer.writeCollectionOfObjectValues("oauth2PermissionGrants", this.getOauth2PermissionGrants());
         writer.writeStringValue("officeLocation", this.getOfficeLocation());
         writer.writeObjectValue("onenote", this.getOnenote());
@@ -1938,6 +1948,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setMySite(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mySite", value);
+    }
+    /**
+     * Sets the notes property value. The notes in the user&apos;s Notes folder. Read-only. Nullable.
+     * @param value Value to set for the notes property.
+     */
+    public void setNotes(@jakarta.annotation.Nullable final java.util.List<Note> value) {
+        this.backingStore.set("notes", value);
     }
     /**
      * Sets the oauth2PermissionGrants property value. The oauth2PermissionGrants property

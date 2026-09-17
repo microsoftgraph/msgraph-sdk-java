@@ -94,7 +94,16 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
         deserializerMap.put("eligibilityScheduleInstances", (n) -> { this.setEligibilityScheduleInstances(n.getCollectionOfObjectValues(PrivilegedAccessGroupEligibilityScheduleInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("eligibilityScheduleRequests", (n) -> { this.setEligibilityScheduleRequests(n.getCollectionOfObjectValues(PrivilegedAccessGroupEligibilityScheduleRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("eligibilitySchedules", (n) -> { this.setEligibilitySchedules(n.getCollectionOfObjectValues(PrivilegedAccessGroupEligibilitySchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(GroupResource::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the resources property value. The resources property
+     * @return a {@link java.util.List<GroupResource>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<GroupResource> getResources() {
+        return this.backingStore.get("resources");
     }
     /**
      * Serializes information the current object
@@ -110,6 +119,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("eligibilityScheduleInstances", this.getEligibilityScheduleInstances());
         writer.writeCollectionOfObjectValues("eligibilityScheduleRequests", this.getEligibilityScheduleRequests());
         writer.writeCollectionOfObjectValues("eligibilitySchedules", this.getEligibilitySchedules());
+        writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
     /**
      * Sets the assignmentApprovals property value. The assignmentApprovals property
@@ -159,5 +169,12 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
      */
     public void setEligibilitySchedules(@jakarta.annotation.Nullable final java.util.List<PrivilegedAccessGroupEligibilitySchedule> value) {
         this.backingStore.set("eligibilitySchedules", value);
+    }
+    /**
+     * Sets the resources property value. The resources property
+     * @param value Value to set for the resources property.
+     */
+    public void setResources(@jakarta.annotation.Nullable final java.util.List<GroupResource> value) {
+        this.backingStore.set("resources", value);
     }
 }

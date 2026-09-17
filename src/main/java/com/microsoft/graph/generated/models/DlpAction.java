@@ -17,7 +17,8 @@ public enum DlpAction implements ValuedEnum {
     SPRuntimeAccessControl("sPRuntimeAccessControl"),
     SPSharingNotifyUser("sPSharingNotifyUser"),
     SPSharingGenerateIncidentReport("sPSharingGenerateIncidentReport"),
-    RestrictWebGrounding("restrictWebGrounding");
+    RestrictWebGrounding("restrictWebGrounding"),
+    PolicyTip("policyTip");
     public final String value;
     DlpAction(final String value) {
         this.value = value;
@@ -41,6 +42,7 @@ public enum DlpAction implements ValuedEnum {
             case "sPSharingNotifyUser": return SPSharingNotifyUser;
             case "sPSharingGenerateIncidentReport": return SPSharingGenerateIncidentReport;
             case "restrictWebGrounding": return RestrictWebGrounding;
+            case "policyTip": return PolicyTip;
             default: return null;
         }
     }

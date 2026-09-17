@@ -132,7 +132,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update communications
-     * @param body Represents a container that exposes navigation properties for cloud communications resources.
+     * @param body The request body
      * @return a {@link CloudCommunications}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -142,7 +142,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update communications
-     * @param body Represents a container that exposes navigation properties for cloud communications resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudCommunications}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -177,7 +177,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update communications
-     * @param body Represents a container that exposes navigation properties for cloud communications resources.
+     * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -186,7 +186,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update communications
-     * @param body Represents a container that exposes navigation properties for cloud communications resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

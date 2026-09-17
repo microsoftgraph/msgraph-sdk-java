@@ -88,6 +88,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getCollectionOfObjectValues(GovernanceInsight::createFromDiscriminatorValue)); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("permission", (n) -> { this.setPermission(n.getObjectValue(AccessReviewInstanceDecisionItemPermission::createFromDiscriminatorValue)); });
         deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("principalLink", (n) -> { this.setPrincipalLink(n.getStringValue()); });
         deserializerMap.put("recommendation", (n) -> { this.setRecommendation(n.getStringValue()); });
@@ -112,6 +113,14 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     @jakarta.annotation.Nullable
     public String getJustification() {
         return this.backingStore.get("justification");
+    }
+    /**
+     * Gets the permission property value. The permission property
+     * @return a {@link AccessReviewInstanceDecisionItemPermission}
+     */
+    @jakarta.annotation.Nullable
+    public AccessReviewInstanceDecisionItemPermission getPermission() {
+        return this.backingStore.get("permission");
     }
     /**
      * Gets the principal property value. Every decision item in an access review represents a principal&apos;s access to a resource. This property represents details of the principal. For example, if a decision item represents access of User &apos;Bob&apos; to Group &apos;Sales&apos; - The principal is &apos;Bob&apos; and the resource is &apos;Sales&apos;. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
@@ -184,6 +193,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         writer.writeStringValue("decision", this.getDecision());
         writer.writeCollectionOfObjectValues("insights", this.getInsights());
         writer.writeStringValue("justification", this.getJustification());
+        writer.writeObjectValue("permission", this.getPermission());
         writer.writeObjectValue("principal", this.getPrincipal());
         writer.writeStringValue("principalLink", this.getPrincipalLink());
         writer.writeStringValue("recommendation", this.getRecommendation());
@@ -247,6 +257,13 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("justification", value);
+    }
+    /**
+     * Sets the permission property value. The permission property
+     * @param value Value to set for the permission property.
+     */
+    public void setPermission(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemPermission value) {
+        this.backingStore.set("permission", value);
     }
     /**
      * Sets the principal property value. Every decision item in an access review represents a principal&apos;s access to a resource. This property represents details of the principal. For example, if a decision item represents access of User &apos;Bob&apos; to Group &apos;Sales&apos; - The principal is &apos;Bob&apos; and the resource is &apos;Sales&apos;. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.

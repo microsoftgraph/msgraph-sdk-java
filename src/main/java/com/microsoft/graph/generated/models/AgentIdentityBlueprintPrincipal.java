@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgentIdentityBlueprintPrincipal extends ServicePrincipal implements Parsable {
     /**
@@ -32,8 +33,17 @@ public class AgentIdentityBlueprintPrincipal extends ServicePrincipal implements
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("managerApplications", (n) -> { this.setManagerApplications(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the managerApplications property value. The collection of application IDs designated as managers of this agent identity blueprint principal&apos;s backing agentIdentityBlueprint. Read-only; the value is server-managed and reflects the managerApplications of the backing agentIdentityBlueprint. To change the managers, an owner or administrator must update the managerApplications property on the backing agentIdentityBlueprint in the tenant where it&apos;s registered. For multitenant agent identity blueprints, admins in a tenant where the blueprint is only consumed can&apos;t make this change  they must ask an owner or administrator in the blueprint&apos;s home tenant. Not nullable. Returned only on $select.
+     * @return a {@link java.util.List<UUID>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<UUID> getManagerApplications() {
+        return this.backingStore.get("managerApplications");
     }
     /**
      * Gets the sponsors property value. The sponsors for this agent identity blueprint principal. Sponsors are users or service principals who can authorize and manage the lifecycle of agent identity instances.
@@ -51,6 +61,13 @@ public class AgentIdentityBlueprintPrincipal extends ServicePrincipal implements
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
+    }
+    /**
+     * Sets the managerApplications property value. The collection of application IDs designated as managers of this agent identity blueprint principal&apos;s backing agentIdentityBlueprint. Read-only; the value is server-managed and reflects the managerApplications of the backing agentIdentityBlueprint. To change the managers, an owner or administrator must update the managerApplications property on the backing agentIdentityBlueprint in the tenant where it&apos;s registered. For multitenant agent identity blueprints, admins in a tenant where the blueprint is only consumed can&apos;t make this change  they must ask an owner or administrator in the blueprint&apos;s home tenant. Not nullable. Returned only on $select.
+     * @param value Value to set for the managerApplications property.
+     */
+    public void setManagerApplications(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
+        this.backingStore.set("managerApplications", value);
     }
     /**
      * Sets the sponsors property value. The sponsors for this agent identity blueprint principal. Sponsors are users or service principals who can authorize and manage the lifecycle of agent identity instances.

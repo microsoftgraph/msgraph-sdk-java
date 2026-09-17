@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.in
 
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.acceptrecommendations.AcceptRecommendationsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.applydecisions.ApplyDecisionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.batchapplycustomdataprovidedresourcedecisions.BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.batchrecorddecisions.BatchRecordDecisionsRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers.ContactedReviewersRequestBuilder;
 import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.decisions.DecisionsRequestBuilder;
@@ -44,6 +45,14 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ApplyDecisionsRequestBuilder applyDecisions() {
         return new ApplyDecisionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the batchApplyCustomDataProvidedResourceDecisions method.
+     * @return a {@link BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder batchApplyCustomDataProvidedResourceDecisions() {
+        return new BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the batchRecordDecisions method.
