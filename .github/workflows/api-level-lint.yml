@@ -22,6 +22,8 @@ jobs:
         shell: pwsh
       - name: Setup Android SDK
         uses: android-actions/setup-android@v4.0.1
+        with:
+          packages: 'platform-tools'
       - name: Add execution right to the script
         run: chmod +x gradlew
         working-directory: ./android
