@@ -56,7 +56,7 @@ public class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
-     * Gets the delegatedAdministrationRoleAssignments property value. The delegatedAdministrationRoleAssignments property
+     * Gets the delegatedAdministrationRoleAssignments property value. A snapshot of the delegated administration role assignments configured in this policy.
      * @return a {@link java.util.List<DelegatedAdministrationRoleAssignmentSnapshot>}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Pa
         return deserializerMap;
     }
     /**
-     * Gets the governedTenantCanTerminate property value. The governedTenantCanTerminate property
+     * Gets the governedTenantCanTerminate property value. Indicates whether the governed tenant can terminate the relationship.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("governedTenantCanTerminate");
     }
     /**
-     * Gets the multiTenantApplicationsToProvision property value. The multiTenantApplicationsToProvision property
+     * Gets the multiTenantApplicationsToProvision property value. A snapshot of the multi-tenant applications to be provisioned in the governed tenant.
      * @return a {@link java.util.List<MultiTenantApplicationsToProvisionSnapshot>}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the policyId property value. The policyId property
+     * Gets the policyId property value. The identifier of the source policy template from which this snapshot was created.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("policyId");
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the source policy template from which this snapshot was created.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -147,21 +147,21 @@ public class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the delegatedAdministrationRoleAssignments property value. The delegatedAdministrationRoleAssignments property
+     * Sets the delegatedAdministrationRoleAssignments property value. A snapshot of the delegated administration role assignments configured in this policy.
      * @param value Value to set for the delegatedAdministrationRoleAssignments property.
      */
     public void setDelegatedAdministrationRoleAssignments(@jakarta.annotation.Nullable final java.util.List<DelegatedAdministrationRoleAssignmentSnapshot> value) {
         this.backingStore.set("delegatedAdministrationRoleAssignments", value);
     }
     /**
-     * Sets the governedTenantCanTerminate property value. The governedTenantCanTerminate property
+     * Sets the governedTenantCanTerminate property value. Indicates whether the governed tenant can terminate the relationship.
      * @param value Value to set for the governedTenantCanTerminate property.
      */
     public void setGovernedTenantCanTerminate(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("governedTenantCanTerminate", value);
     }
     /**
-     * Sets the multiTenantApplicationsToProvision property value. The multiTenantApplicationsToProvision property
+     * Sets the multiTenantApplicationsToProvision property value. A snapshot of the multi-tenant applications to be provisioned in the governed tenant.
      * @param value Value to set for the multiTenantApplicationsToProvision property.
      */
     public void setMultiTenantApplicationsToProvision(@jakarta.annotation.Nullable final java.util.List<MultiTenantApplicationsToProvisionSnapshot> value) {
@@ -175,14 +175,14 @@ public class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the policyId property value. The policyId property
+     * Sets the policyId property value. The identifier of the source policy template from which this snapshot was created.
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyId", value);
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the source policy template from which this snapshot was created.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {

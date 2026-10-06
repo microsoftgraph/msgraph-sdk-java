@@ -36,7 +36,7 @@ public class MultiTenantApplicationMetricsRecent extends MultiTenantApplicationM
         return deserializerMap;
     }
     /**
-     * Gets the updateDateTime property value. The updateDateTime property
+     * Gets the updateDateTime property value. Timestamp that represents when multitenant application metrics are aggregated and have sufficiently changed for the related tenant.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class MultiTenantApplicationMetricsRecent extends MultiTenantApplicationM
         writer.writeOffsetDateTimeValue("updateDateTime", this.getUpdateDateTime());
     }
     /**
-     * Sets the updateDateTime property value. The updateDateTime property
+     * Sets the updateDateTime property value. Timestamp that represents when multitenant application metrics are aggregated and have sufficiently changed for the related tenant.
      * @param value Value to set for the updateDateTime property.
      */
     public void setUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

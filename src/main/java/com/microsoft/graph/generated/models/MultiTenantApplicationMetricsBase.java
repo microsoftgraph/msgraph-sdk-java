@@ -47,7 +47,7 @@ public class MultiTenantApplicationMetricsBase extends Entity implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the inboundMonthlyTotalApplications property value. The inboundMonthlyTotalApplications property
+     * Gets the inboundMonthlyTotalApplications property value. The total number of inbound multi-tenant applications in the last month.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class MultiTenantApplicationMetricsBase extends Entity implements Parsabl
         return this.backingStore.get("inboundMonthlyTotalApplications");
     }
     /**
-     * Gets the outboundMonthlyTotalApplications property value. The outboundMonthlyTotalApplications property
+     * Gets the outboundMonthlyTotalApplications property value. The total number of outbound multi-tenant applications in the last month.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class MultiTenantApplicationMetricsBase extends Entity implements Parsabl
         return this.backingStore.get("outboundMonthlyTotalApplications");
     }
     /**
-     * Gets the watermarkDateTime property value. The watermarkDateTime property
+     * Gets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -82,21 +82,21 @@ public class MultiTenantApplicationMetricsBase extends Entity implements Parsabl
         writer.writeOffsetDateTimeValue("watermarkDateTime", this.getWatermarkDateTime());
     }
     /**
-     * Sets the inboundMonthlyTotalApplications property value. The inboundMonthlyTotalApplications property
+     * Sets the inboundMonthlyTotalApplications property value. The total number of inbound multi-tenant applications in the last month.
      * @param value Value to set for the inboundMonthlyTotalApplications property.
      */
     public void setInboundMonthlyTotalApplications(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("inboundMonthlyTotalApplications", value);
     }
     /**
-     * Sets the outboundMonthlyTotalApplications property value. The outboundMonthlyTotalApplications property
+     * Sets the outboundMonthlyTotalApplications property value. The total number of outbound multi-tenant applications in the last month.
      * @param value Value to set for the outboundMonthlyTotalApplications property.
      */
     public void setOutboundMonthlyTotalApplications(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("outboundMonthlyTotalApplications", value);
     }
     /**
-     * Sets the watermarkDateTime property value. The watermarkDateTime property
+     * Sets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @param value Value to set for the watermarkDateTime property.
      */
     public void setWatermarkDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

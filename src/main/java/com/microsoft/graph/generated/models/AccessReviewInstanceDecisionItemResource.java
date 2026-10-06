@@ -67,7 +67,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         return this.backingStore;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy.
+     * Gets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy, and CustomDataProvidedResource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         this.backingStore = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the resource.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -177,7 +177,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy.
+     * Sets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy, and CustomDataProvidedResource.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

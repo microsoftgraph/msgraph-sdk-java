@@ -37,7 +37,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/relatedTenants/{relatedTenant%2Did}/multiTenantApplicationMetrics{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get multiTenantApplicationMetrics from directory
+     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
      * @return a {@link MultiTenantApplicationMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Get multiTenantApplicationMetrics from directory
+     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantApplicationMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantApplicationMetrics::createFromDiscriminatorValue);
     }
     /**
-     * Get multiTenantApplicationMetrics from directory
+     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get multiTenantApplicationMetrics from directory
+     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         return new MultiTenantApplicationMetricsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get multiTenantApplicationMetrics from directory
+     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

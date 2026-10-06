@@ -52,7 +52,7 @@ public class BillingMetricsBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the foreignAssociatedTenantBillingManagementActiveCount property value. The foreignAssociatedTenantBillingManagementActiveCount property
+     * Gets the foreignAssociatedTenantBillingManagementActiveCount property value. The number of foreign associated tenants with active billing management.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class BillingMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("foreignAssociatedTenantBillingManagementActiveCount");
     }
     /**
-     * Gets the foreignAssociatedTenantCount property value. The foreignAssociatedTenantCount property
+     * Gets the foreignAssociatedTenantCount property value. The total number of foreign associated tenants.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class BillingMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("foreignAssociatedTenantCount");
     }
     /**
-     * Gets the foreignAssociatedTenantProvisioningActiveCount property value. The foreignAssociatedTenantProvisioningActiveCount property
+     * Gets the foreignAssociatedTenantProvisioningActiveCount property value. The number of foreign associated tenants with active provisioning.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class BillingMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("foreignAssociatedTenantProvisioningActiveCount");
     }
     /**
-     * Gets the localAssociatedTenantBillingManagementActiveCount property value. The localAssociatedTenantBillingManagementActiveCount property
+     * Gets the localAssociatedTenantBillingManagementActiveCount property value. The number of local associated tenants with active billing management.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class BillingMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("localAssociatedTenantBillingManagementActiveCount");
     }
     /**
-     * Gets the localAssociatedTenantCount property value. The localAssociatedTenantCount property
+     * Gets the localAssociatedTenantCount property value. The total number of local associated tenants.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class BillingMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("localAssociatedTenantCount");
     }
     /**
-     * Gets the localAssociatedTenantIds property value. The localAssociatedTenantIds property
+     * Gets the localAssociatedTenantIds property value. The list of local associated tenant IDs.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class BillingMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("localAssociatedTenantIds");
     }
     /**
-     * Gets the localAssociatedTenantProvisioningActiveCount property value. The localAssociatedTenantProvisioningActiveCount property
+     * Gets the localAssociatedTenantProvisioningActiveCount property value. The number of local associated tenants with active provisioning.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class BillingMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("localAssociatedTenantProvisioningActiveCount");
     }
     /**
-     * Gets the watermarkDateTime property value. The watermarkDateTime property
+     * Gets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -132,56 +132,56 @@ public class BillingMetricsBase extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("watermarkDateTime", this.getWatermarkDateTime());
     }
     /**
-     * Sets the foreignAssociatedTenantBillingManagementActiveCount property value. The foreignAssociatedTenantBillingManagementActiveCount property
+     * Sets the foreignAssociatedTenantBillingManagementActiveCount property value. The number of foreign associated tenants with active billing management.
      * @param value Value to set for the foreignAssociatedTenantBillingManagementActiveCount property.
      */
     public void setForeignAssociatedTenantBillingManagementActiveCount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("foreignAssociatedTenantBillingManagementActiveCount", value);
     }
     /**
-     * Sets the foreignAssociatedTenantCount property value. The foreignAssociatedTenantCount property
+     * Sets the foreignAssociatedTenantCount property value. The total number of foreign associated tenants.
      * @param value Value to set for the foreignAssociatedTenantCount property.
      */
     public void setForeignAssociatedTenantCount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("foreignAssociatedTenantCount", value);
     }
     /**
-     * Sets the foreignAssociatedTenantProvisioningActiveCount property value. The foreignAssociatedTenantProvisioningActiveCount property
+     * Sets the foreignAssociatedTenantProvisioningActiveCount property value. The number of foreign associated tenants with active provisioning.
      * @param value Value to set for the foreignAssociatedTenantProvisioningActiveCount property.
      */
     public void setForeignAssociatedTenantProvisioningActiveCount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("foreignAssociatedTenantProvisioningActiveCount", value);
     }
     /**
-     * Sets the localAssociatedTenantBillingManagementActiveCount property value. The localAssociatedTenantBillingManagementActiveCount property
+     * Sets the localAssociatedTenantBillingManagementActiveCount property value. The number of local associated tenants with active billing management.
      * @param value Value to set for the localAssociatedTenantBillingManagementActiveCount property.
      */
     public void setLocalAssociatedTenantBillingManagementActiveCount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("localAssociatedTenantBillingManagementActiveCount", value);
     }
     /**
-     * Sets the localAssociatedTenantCount property value. The localAssociatedTenantCount property
+     * Sets the localAssociatedTenantCount property value. The total number of local associated tenants.
      * @param value Value to set for the localAssociatedTenantCount property.
      */
     public void setLocalAssociatedTenantCount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("localAssociatedTenantCount", value);
     }
     /**
-     * Sets the localAssociatedTenantIds property value. The localAssociatedTenantIds property
+     * Sets the localAssociatedTenantIds property value. The list of local associated tenant IDs.
      * @param value Value to set for the localAssociatedTenantIds property.
      */
     public void setLocalAssociatedTenantIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("localAssociatedTenantIds", value);
     }
     /**
-     * Sets the localAssociatedTenantProvisioningActiveCount property value. The localAssociatedTenantProvisioningActiveCount property
+     * Sets the localAssociatedTenantProvisioningActiveCount property value. The number of local associated tenants with active provisioning.
      * @param value Value to set for the localAssociatedTenantProvisioningActiveCount property.
      */
     public void setLocalAssociatedTenantProvisioningActiveCount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("localAssociatedTenantProvisioningActiveCount", value);
     }
     /**
-     * Sets the watermarkDateTime property value. The watermarkDateTime property
+     * Sets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @param value Value to set for the watermarkDateTime property.
      */
     public void setWatermarkDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

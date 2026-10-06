@@ -35,7 +35,7 @@ public class SetCurrentLocationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/settings/workHoursAndLocations/occurrences/setCurrentLocation", rawUrl);
     }
     /**
-     * Update your work location for the current day or current active segment. This action allows you to quickly update your work location without modifying individual occurrences.
+     * Update a user&apos;s work location for the current day or current active segment. This action quickly updates the user&apos;s work location without modifying individual occurrences.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/workplanoccurrence-setcurrentlocation?view=graph-rest-1.0">Find more info here</a>
@@ -44,7 +44,7 @@ public class SetCurrentLocationRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Update your work location for the current day or current active segment. This action allows you to quickly update your work location without modifying individual occurrences.
+     * Update a user&apos;s work location for the current day or current active segment. This action quickly updates the user&apos;s work location without modifying individual occurrences.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class SetCurrentLocationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Update your work location for the current day or current active segment. This action allows you to quickly update your work location without modifying individual occurrences.
+     * Update a user&apos;s work location for the current day or current active segment. This action quickly updates the user&apos;s work location without modifying individual occurrences.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class SetCurrentLocationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update your work location for the current day or current active segment. This action allows you to quickly update your work location without modifying individual occurrences.
+     * Update a user&apos;s work location for the current day or current active segment. This action quickly updates the user&apos;s work location without modifying individual occurrences.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

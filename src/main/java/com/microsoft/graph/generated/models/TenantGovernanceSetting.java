@@ -25,7 +25,7 @@ public class TenantGovernanceSetting extends Entity implements Parsable {
         return new TenantGovernanceSetting();
     }
     /**
-     * Gets the canReceiveInvitations property value. The canReceiveInvitations property
+     * Gets the canReceiveInvitations property value. Indicates whether the tenant can receive governance invitations. When set to false, the tenant cannot receive new governance invitations. When set to true, other tenants can send your tenant invitations by providing your tenant id or domain name. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class TenantGovernanceSetting extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isRelatedTenantsEnabled property value. The isRelatedTenantsEnabled property
+     * Gets the isRelatedTenantsEnabled property value. Indicates whether the related tenants feature is enabled for tenant discovery. When set to false, related tenant APIs don&apos;t work. This property can be enabled by calling the enableRelatedTenants action. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class TenantGovernanceSetting extends Entity implements Parsable {
         writer.writeBooleanValue("isRelatedTenantsEnabled", this.getIsRelatedTenantsEnabled());
     }
     /**
-     * Sets the canReceiveInvitations property value. The canReceiveInvitations property
+     * Sets the canReceiveInvitations property value. Indicates whether the tenant can receive governance invitations. When set to false, the tenant cannot receive new governance invitations. When set to true, other tenants can send your tenant invitations by providing your tenant id or domain name. Default value is false.
      * @param value Value to set for the canReceiveInvitations property.
      */
     public void setCanReceiveInvitations(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("canReceiveInvitations", value);
     }
     /**
-     * Sets the isRelatedTenantsEnabled property value. The isRelatedTenantsEnabled property
+     * Sets the isRelatedTenantsEnabled property value. Indicates whether the related tenants feature is enabled for tenant discovery. When set to false, related tenant APIs don&apos;t work. This property can be enabled by calling the enableRelatedTenants action. Default value is false.
      * @param value Value to set for the isRelatedTenantsEnabled property.
      */
     public void setIsRelatedTenantsEnabled(@jakarta.annotation.Nullable final Boolean value) {

@@ -37,7 +37,7 @@ public class AppB2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/relatedTenants/{relatedTenant%2Did}/appB2BSignInActivityMetrics{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get appB2BSignInActivityMetrics from directory
+     * B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @return a {@link B2BSignInActivityMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class AppB2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get appB2BSignInActivityMetrics from directory
+     * B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link B2BSignInActivityMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class AppB2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, B2BSignInActivityMetrics::createFromDiscriminatorValue);
     }
     /**
-     * Get appB2BSignInActivityMetrics from directory
+     * B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AppB2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get appB2BSignInActivityMetrics from directory
+     * B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class AppB2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilde
         return new AppB2BSignInActivityMetricsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get appB2BSignInActivityMetrics from directory
+     * B2B sign-in activity metrics for this related tenant. Expanded by default.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

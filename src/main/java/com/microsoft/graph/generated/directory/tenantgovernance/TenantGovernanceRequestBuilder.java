@@ -109,7 +109,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get tenantGovernance from directory
+     * Container for Microsoft Entra Tenant Governance capabilities.
      * @return a {@link TenantGovernance}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -118,7 +118,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get tenantGovernance from directory
+     * Container for Microsoft Entra Tenant Governance capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGovernance}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -176,7 +176,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get tenantGovernance from directory
+     * Container for Microsoft Entra Tenant Governance capabilities.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -184,7 +184,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get tenantGovernance from directory
+     * Container for Microsoft Entra Tenant Governance capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -236,7 +236,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get tenantGovernance from directory
+     * Container for Microsoft Entra Tenant Governance capabilities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

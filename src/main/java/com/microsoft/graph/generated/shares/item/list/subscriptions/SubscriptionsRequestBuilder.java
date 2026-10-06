@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Subscription;
 import com.microsoft.graph.models.SubscriptionCollectionResponse;
 import com.microsoft.graph.shares.item.list.subscriptions.count.CountRequestBuilder;
+import com.microsoft.graph.shares.item.list.subscriptions.getvapidpublickey.GetVapidPublicKeyRequestBuilder;
 import com.microsoft.graph.shares.item.list.subscriptions.item.SubscriptionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -30,6 +31,14 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getVapidPublicKey method.
+     * @return a {@link GetVapidPublicKeyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetVapidPublicKeyRequestBuilder getVapidPublicKey() {
+        return new GetVapidPublicKeyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.

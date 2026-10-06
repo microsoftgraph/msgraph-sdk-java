@@ -27,7 +27,7 @@ public class B2BRegistrationMetricsInitial extends B2BRegistrationMetricsBase im
         return new B2BRegistrationMetricsInitial();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Timestamp that represents the date time that B2B registration data was initially aggregated.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class B2BRegistrationMetricsInitial extends B2BRegistrationMetricsBase im
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Timestamp that represents the date time that B2B registration data was initially aggregated.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

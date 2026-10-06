@@ -49,7 +49,7 @@ public class B2BSignInActivityMetricsBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the inboundMonthlyTotalApplications property value. The inboundMonthlyTotalApplications property
+     * Gets the inboundMonthlyTotalApplications property value. The total number of applications accessed by inbound users in the last month.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class B2BSignInActivityMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("inboundMonthlyTotalApplications");
     }
     /**
-     * Gets the inboundMonthlyTotalUsers property value. The inboundMonthlyTotalUsers property
+     * Gets the inboundMonthlyTotalUsers property value. The total number of unique inbound users with sign-in activity in the last month.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class B2BSignInActivityMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("inboundMonthlyTotalUsers");
     }
     /**
-     * Gets the outboundMonthlyTotalApplications property value. The outboundMonthlyTotalApplications property
+     * Gets the outboundMonthlyTotalApplications property value. The total number of applications accessed by outbound users in the last month.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class B2BSignInActivityMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("outboundMonthlyTotalApplications");
     }
     /**
-     * Gets the outboundMonthlyTotalUsers property value. The outboundMonthlyTotalUsers property
+     * Gets the outboundMonthlyTotalUsers property value. The total number of unique outbound users with sign-in activity in the last month.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class B2BSignInActivityMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("outboundMonthlyTotalUsers");
     }
     /**
-     * Gets the watermarkDateTime property value. The watermarkDateTime property
+     * Gets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -102,35 +102,35 @@ public class B2BSignInActivityMetricsBase extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("watermarkDateTime", this.getWatermarkDateTime());
     }
     /**
-     * Sets the inboundMonthlyTotalApplications property value. The inboundMonthlyTotalApplications property
+     * Sets the inboundMonthlyTotalApplications property value. The total number of applications accessed by inbound users in the last month.
      * @param value Value to set for the inboundMonthlyTotalApplications property.
      */
     public void setInboundMonthlyTotalApplications(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("inboundMonthlyTotalApplications", value);
     }
     /**
-     * Sets the inboundMonthlyTotalUsers property value. The inboundMonthlyTotalUsers property
+     * Sets the inboundMonthlyTotalUsers property value. The total number of unique inbound users with sign-in activity in the last month.
      * @param value Value to set for the inboundMonthlyTotalUsers property.
      */
     public void setInboundMonthlyTotalUsers(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("inboundMonthlyTotalUsers", value);
     }
     /**
-     * Sets the outboundMonthlyTotalApplications property value. The outboundMonthlyTotalApplications property
+     * Sets the outboundMonthlyTotalApplications property value. The total number of applications accessed by outbound users in the last month.
      * @param value Value to set for the outboundMonthlyTotalApplications property.
      */
     public void setOutboundMonthlyTotalApplications(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("outboundMonthlyTotalApplications", value);
     }
     /**
-     * Sets the outboundMonthlyTotalUsers property value. The outboundMonthlyTotalUsers property
+     * Sets the outboundMonthlyTotalUsers property value. The total number of unique outbound users with sign-in activity in the last month.
      * @param value Value to set for the outboundMonthlyTotalUsers property.
      */
     public void setOutboundMonthlyTotalUsers(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("outboundMonthlyTotalUsers", value);
     }
     /**
-     * Sets the watermarkDateTime property value. The watermarkDateTime property
+     * Sets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @param value Value to set for the watermarkDateTime property.
      */
     public void setWatermarkDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

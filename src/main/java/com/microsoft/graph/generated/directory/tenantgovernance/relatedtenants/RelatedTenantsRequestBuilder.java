@@ -69,19 +69,21 @@ public class RelatedTenantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/relatedTenants{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get relatedTenants from directory
+     * Get a list of relatedTenant objects and their properties, including relationship metrics.
      * @return a {@link RelatedTenantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-relatedtenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RelatedTenantCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get relatedTenants from directory
+     * Get a list of relatedTenant objects and their properties, including relationship metrics.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RelatedTenantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-relatedtenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RelatedTenantCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +118,7 @@ public class RelatedTenantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RelatedTenant::createFromDiscriminatorValue);
     }
     /**
-     * Get relatedTenants from directory
+     * Get a list of relatedTenant objects and their properties, including relationship metrics.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +126,7 @@ public class RelatedTenantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get relatedTenants from directory
+     * Get a list of relatedTenant objects and their properties, including relationship metrics.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +172,7 @@ public class RelatedTenantsRequestBuilder extends BaseRequestBuilder {
         return new RelatedTenantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get relatedTenants from directory
+     * Get a list of relatedTenant objects and their properties, including relationship metrics.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

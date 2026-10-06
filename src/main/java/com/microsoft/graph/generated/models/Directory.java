@@ -135,7 +135,7 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("subscriptions");
     }
     /**
-     * Gets the tenantGovernance property value. The tenantGovernance property
+     * Gets the tenantGovernance property value. Container for Microsoft Entra Tenant Governance capabilities.
      * @return a {@link TenantGovernance}
      */
     @jakarta.annotation.Nullable
@@ -240,7 +240,7 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("subscriptions", value);
     }
     /**
-     * Sets the tenantGovernance property value. The tenantGovernance property
+     * Sets the tenantGovernance property value. Container for Microsoft Entra Tenant Governance capabilities.
      * @param value Value to set for the tenantGovernance property.
      */
     public void setTenantGovernance(@jakarta.annotation.Nullable final TenantGovernance value) {

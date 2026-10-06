@@ -37,7 +37,7 @@ public class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/governanceRequests/{governanceRequest%2Did}/governancePolicyTemplate{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get governancePolicyTemplate from directory
+     * The governance policy template associated with this request.
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get governancePolicyTemplate from directory
+     * The governance policy template associated with this request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernancePolicyTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Get governancePolicyTemplate from directory
+     * The governance policy template associated with this request.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get governancePolicyTemplate from directory
+     * The governance policy template associated with this request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder {
         return new GovernancePolicyTemplateRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get governancePolicyTemplate from directory
+     * The governance policy template associated with this request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

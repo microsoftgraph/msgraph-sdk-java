@@ -115,7 +115,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("justification");
     }
     /**
-     * Gets the permission property value. The permission property
+     * Gets the permission property value. The permission that grants the principal access to a resource. Read-only.
      * @return a {@link AccessReviewInstanceDecisionItemPermission}
      */
     @jakarta.annotation.Nullable
@@ -259,7 +259,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("justification", value);
     }
     /**
-     * Sets the permission property value. The permission property
+     * Sets the permission property value. The permission that grants the principal access to a resource. Read-only.
      * @param value Value to set for the permission property.
      */
     public void setPermission(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemPermission value) {
