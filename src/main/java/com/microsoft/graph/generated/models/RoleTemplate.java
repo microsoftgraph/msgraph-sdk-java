@@ -68,7 +68,7 @@ public class RoleTemplate implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The template ID of the Microsoft Entra role (e.g., 62e90394-69f5-4237-9190-012177145e10 for Global Administrator).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class RoleTemplate implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("id");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The display name of the role (e.g., &apos;Global Administrator&apos;, &apos;Helpdesk Administrator&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class RoleTemplate implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The template ID of the Microsoft Entra role (e.g., 62e90394-69f5-4237-9190-012177145e10 for Global Administrator).
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The display name of the role (e.g., &apos;Global Administrator&apos;, &apos;Helpdesk Administrator&apos;).
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

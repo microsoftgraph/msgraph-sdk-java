@@ -64,19 +64,21 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get settings from directory
+     * Read the properties of the tenantGovernanceSetting singleton, which controls related tenant discovery and invitation capabilities.
      * @return a {@link TenantGovernanceSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-tenantgovernancesetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGovernanceSetting get() {
         return get(null);
     }
     /**
-     * Get settings from directory
+     * Read the properties of the tenantGovernanceSetting singleton, which controls related tenant discovery and invitation capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGovernanceSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-tenantgovernancesetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGovernanceSetting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +88,23 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernanceSetting::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property settings in directory
+     * Update the canReceiveInvitations property of the tenantGovernanceSetting singleton. This property controls whether the tenant can receive governance invitations.
      * @param body The request body
      * @return a {@link TenantGovernanceSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-tenantgovernancesetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGovernanceSetting patch(@jakarta.annotation.Nonnull final TenantGovernanceSetting body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property settings in directory
+     * Update the canReceiveInvitations property of the tenantGovernanceSetting singleton. This property controls whether the tenant can receive governance invitations.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGovernanceSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-tenantgovernancesetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGovernanceSetting patch(@jakarta.annotation.Nonnull final TenantGovernanceSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -131,7 +135,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get settings from directory
+     * Read the properties of the tenantGovernanceSetting singleton, which controls related tenant discovery and invitation capabilities.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +143,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get settings from directory
+     * Read the properties of the tenantGovernanceSetting singleton, which controls related tenant discovery and invitation capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property settings in directory
+     * Update the canReceiveInvitations property of the tenantGovernanceSetting singleton. This property controls whether the tenant can receive governance invitations.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +164,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property settings in directory
+     * Update the canReceiveInvitations property of the tenantGovernanceSetting singleton. This property controls whether the tenant can receive governance invitations.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +195,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get settings from directory
+     * Read the properties of the tenantGovernanceSetting singleton, which controls related tenant discovery and invitation capabilities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

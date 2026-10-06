@@ -26,7 +26,7 @@ public class GovernanceRequest extends Entity implements Parsable {
         return new GovernanceRequest();
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time when the request expires if not accepted or rejected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class GovernanceRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the governancePolicyTemplate property value. The governancePolicyTemplate property
+     * Gets the governancePolicyTemplate property value. The governance policy template associated with this request.
      * @return a {@link TenantGovernancePolicyTemplate}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class GovernanceRequest extends Entity implements Parsable {
         return this.backingStore.get("governancePolicyTemplate");
     }
     /**
-     * Gets the governedTenantId property value. The governedTenantId property
+     * Gets the governedTenantId property value. The Microsoft Entra tenant ID of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class GovernanceRequest extends Entity implements Parsable {
         return this.backingStore.get("governedTenantId");
     }
     /**
-     * Gets the governedTenantName property value. The governedTenantName property
+     * Gets the governedTenantName property value. The display name of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class GovernanceRequest extends Entity implements Parsable {
         return this.backingStore.get("governedTenantName");
     }
     /**
-     * Gets the governingTenantId property value. The governingTenantId property
+     * Gets the governingTenantId property value. The Microsoft Entra tenant ID of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class GovernanceRequest extends Entity implements Parsable {
         return this.backingStore.get("governingTenantId");
     }
     /**
-     * Gets the governingTenantName property value. The governingTenantName property
+     * Gets the governingTenantName property value. The display name of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class GovernanceRequest extends Entity implements Parsable {
         return this.backingStore.get("policySnapshot");
     }
     /**
-     * Gets the requestDateTime property value. The requestDateTime property
+     * Gets the requestDateTime property value. The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -133,42 +133,42 @@ public class GovernanceRequest extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time when the request expires if not accepted or rejected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the governancePolicyTemplate property value. The governancePolicyTemplate property
+     * Sets the governancePolicyTemplate property value. The governance policy template associated with this request.
      * @param value Value to set for the governancePolicyTemplate property.
      */
     public void setGovernancePolicyTemplate(@jakarta.annotation.Nullable final TenantGovernancePolicyTemplate value) {
         this.backingStore.set("governancePolicyTemplate", value);
     }
     /**
-     * Sets the governedTenantId property value. The governedTenantId property
+     * Sets the governedTenantId property value. The Microsoft Entra tenant ID of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the governedTenantId property.
      */
     public void setGovernedTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("governedTenantId", value);
     }
     /**
-     * Sets the governedTenantName property value. The governedTenantName property
+     * Sets the governedTenantName property value. The display name of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the governedTenantName property.
      */
     public void setGovernedTenantName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("governedTenantName", value);
     }
     /**
-     * Sets the governingTenantId property value. The governingTenantId property
+     * Sets the governingTenantId property value. The Microsoft Entra tenant ID of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the governingTenantId property.
      */
     public void setGoverningTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("governingTenantId", value);
     }
     /**
-     * Sets the governingTenantName property value. The governingTenantName property
+     * Sets the governingTenantName property value. The display name of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the governingTenantName property.
      */
     public void setGoverningTenantName(@jakarta.annotation.Nullable final String value) {
@@ -182,7 +182,7 @@ public class GovernanceRequest extends Entity implements Parsable {
         this.backingStore.set("policySnapshot", value);
     }
     /**
-     * Sets the requestDateTime property value. The requestDateTime property
+     * Sets the requestDateTime property value. The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param value Value to set for the requestDateTime property.
      */
     public void setRequestDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

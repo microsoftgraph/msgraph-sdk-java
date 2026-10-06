@@ -5,6 +5,7 @@ import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignments
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignmentschedulerequests.item.group.GroupRequestBuilder;
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignmentschedulerequests.item.principal.PrincipalRequestBuilder;
 import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignmentschedulerequests.item.targetschedule.TargetScheduleRequestBuilder;
+import com.microsoft.graph.identitygovernance.privilegedaccess.group.assignmentschedulerequests.item.updaterequest.UpdateRequestRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrivilegedAccessGroupAssignmentScheduleRequest;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -64,6 +65,14 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     @jakarta.annotation.Nonnull
     public TargetScheduleRequestBuilder targetSchedule() {
         return new TargetScheduleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the updateRequest method.
+     * @return a {@link UpdateRequestRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UpdateRequestRequestBuilder updateRequest() {
+        return new UpdateRequestRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder} and sets the default values.

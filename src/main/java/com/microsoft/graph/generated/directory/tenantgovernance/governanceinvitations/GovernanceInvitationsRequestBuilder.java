@@ -60,19 +60,21 @@ public class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/governanceInvitations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get governanceInvitations from directory
+     * Get a list of the governanceInvitation objects and their properties. This API method returns all governance invitations where the calling tenant is either the governing tenant or the governed tenant.
      * @return a {@link GovernanceInvitationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-governanceinvitations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GovernanceInvitationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get governanceInvitations from directory
+     * Get a list of the governanceInvitation objects and their properties. This API method returns all governance invitations where the calling tenant is either the governing tenant or the governed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GovernanceInvitationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-governanceinvitations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GovernanceInvitationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceInvitationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to governanceInvitations for directory
+     * Create a new governanceInvitation to establish a governance relationship with a governed tenant. Invitations provide an alternative mechanism to governance requests for initiating relationships.
      * @param body The request body
      * @return a {@link GovernanceInvitation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-post-governanceinvitations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GovernanceInvitation post(@jakarta.annotation.Nonnull final GovernanceInvitation body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to governanceInvitations for directory
+     * Create a new governanceInvitation to establish a governance relationship with a governed tenant. Invitations provide an alternative mechanism to governance requests for initiating relationships.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GovernanceInvitation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-post-governanceinvitations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GovernanceInvitation post(@jakarta.annotation.Nonnull final GovernanceInvitation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceInvitation::createFromDiscriminatorValue);
     }
     /**
-     * Get governanceInvitations from directory
+     * Get a list of the governanceInvitation objects and their properties. This API method returns all governance invitations where the calling tenant is either the governing tenant or the governed tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get governanceInvitations from directory
+     * Get a list of the governanceInvitation objects and their properties. This API method returns all governance invitations where the calling tenant is either the governing tenant or the governed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to governanceInvitations for directory
+     * Create a new governanceInvitation to establish a governance relationship with a governed tenant. Invitations provide an alternative mechanism to governance requests for initiating relationships.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to governanceInvitations for directory
+     * Create a new governanceInvitation to establish a governance relationship with a governed tenant. Invitations provide an alternative mechanism to governance requests for initiating relationships.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder {
         return new GovernanceInvitationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get governanceInvitations from directory
+     * Get a list of the governanceInvitation objects and their properties. This API method returns all governance invitations where the calling tenant is either the governing tenant or the governed tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

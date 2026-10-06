@@ -26,7 +26,7 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         return new TenantGovernancePolicyTemplate();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the template was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the delegatedAdministrationRoleAssignments property value. The delegatedAdministrationRoleAssignments property
+     * Gets the delegatedAdministrationRoleAssignments property value. A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established.
      * @return a {@link java.util.List<DelegatedAdministrationRoleAssignment>}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         return this.backingStore.get("delegatedAdministrationRoleAssignments");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description of the policy template. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the policy template. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the governedTenantCanTerminate property value. The governedTenantCanTerminate property
+     * Gets the governedTenantCanTerminate property value. Not implemented.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         return this.backingStore.get("governedTenantCanTerminate");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the template was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the multiTenantApplicationsToProvision property value. The multiTenantApplicationsToProvision property
+     * Gets the multiTenantApplicationsToProvision property value. A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established.
      * @return a {@link java.util.List<MultiTenantApplicationsToProvision>}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         return this.backingStore.get("multiTenantApplicationsToProvision");
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the policy template. Version count increased by 1 when updated. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,56 +123,56 @@ public class TenantGovernancePolicyTemplate extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the template was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the delegatedAdministrationRoleAssignments property value. The delegatedAdministrationRoleAssignments property
+     * Sets the delegatedAdministrationRoleAssignments property value. A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established.
      * @param value Value to set for the delegatedAdministrationRoleAssignments property.
      */
     public void setDelegatedAdministrationRoleAssignments(@jakarta.annotation.Nullable final java.util.List<DelegatedAdministrationRoleAssignment> value) {
         this.backingStore.set("delegatedAdministrationRoleAssignments", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description of the policy template. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the policy template. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the governedTenantCanTerminate property value. The governedTenantCanTerminate property
+     * Sets the governedTenantCanTerminate property value. Not implemented.
      * @param value Value to set for the governedTenantCanTerminate property.
      */
     public void setGovernedTenantCanTerminate(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("governedTenantCanTerminate", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the template was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the multiTenantApplicationsToProvision property value. The multiTenantApplicationsToProvision property
+     * Sets the multiTenantApplicationsToProvision property value. A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established.
      * @param value Value to set for the multiTenantApplicationsToProvision property.
      */
     public void setMultiTenantApplicationsToProvision(@jakarta.annotation.Nullable final java.util.List<MultiTenantApplicationsToProvision> value) {
         this.backingStore.set("multiTenantApplicationsToProvision", value);
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the policy template. Version count increased by 1 when updated. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

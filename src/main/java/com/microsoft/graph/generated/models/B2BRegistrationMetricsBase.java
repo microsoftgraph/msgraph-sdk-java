@@ -47,7 +47,7 @@ public class B2BRegistrationMetricsBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the inboundTotalUsers property value. The inboundTotalUsers property
+     * Gets the inboundTotalUsers property value. The total number of inbound B2B guest users registered.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class B2BRegistrationMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("inboundTotalUsers");
     }
     /**
-     * Gets the outboundTotalUsers property value. The outboundTotalUsers property
+     * Gets the outboundTotalUsers property value. The total number of outbound B2B users from this tenant registered in other tenants.
      * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class B2BRegistrationMetricsBase extends Entity implements Parsable {
         return this.backingStore.get("outboundTotalUsers");
     }
     /**
-     * Gets the watermarkDateTime property value. The watermarkDateTime property
+     * Gets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -82,21 +82,21 @@ public class B2BRegistrationMetricsBase extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("watermarkDateTime", this.getWatermarkDateTime());
     }
     /**
-     * Sets the inboundTotalUsers property value. The inboundTotalUsers property
+     * Sets the inboundTotalUsers property value. The total number of inbound B2B guest users registered.
      * @param value Value to set for the inboundTotalUsers property.
      */
     public void setInboundTotalUsers(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("inboundTotalUsers", value);
     }
     /**
-     * Sets the outboundTotalUsers property value. The outboundTotalUsers property
+     * Sets the outboundTotalUsers property value. The total number of outbound B2B users from this tenant registered in other tenants.
      * @param value Value to set for the outboundTotalUsers property.
      */
     public void setOutboundTotalUsers(@jakarta.annotation.Nullable final BigDecimal value) {
         this.backingStore.set("outboundTotalUsers", value);
     }
     /**
-     * Sets the watermarkDateTime property value. The watermarkDateTime property
+     * Sets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @param value Value to set for the watermarkDateTime property.
      */
     public void setWatermarkDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

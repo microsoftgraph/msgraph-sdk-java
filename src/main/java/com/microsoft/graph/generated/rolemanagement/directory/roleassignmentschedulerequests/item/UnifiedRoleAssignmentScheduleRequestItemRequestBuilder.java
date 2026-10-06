@@ -9,6 +9,7 @@ import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulereques
 import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.principal.PrincipalRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.roledefinition.RoleDefinitionRequestBuilder;
 import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.targetschedule.TargetScheduleRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.updaterequest.UpdateRequestRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -82,6 +83,14 @@ public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends Base
     @jakarta.annotation.Nonnull
     public TargetScheduleRequestBuilder targetSchedule() {
         return new TargetScheduleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the updateRequest method.
+     * @return a {@link UpdateRequestRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UpdateRequestRequestBuilder updateRequest() {
+        return new UpdateRequestRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link UnifiedRoleAssignmentScheduleRequestItemRequestBuilder} and sets the default values.

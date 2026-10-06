@@ -131,7 +131,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoleAssignments");
     }
     /**
-     * Gets the appRoles property value. The roles exposed by the application that&apos;s linked to this service principal. For more information, see the appRoles property definition on the application entity. Not nullable.
+     * Gets the appRoles property value. The roles exposed by the application that&apos;s linked to this service principal. For more information, see the appRoles property definition on the application entity. Not nullable. App roles and exposed delegated permission scopes (oauth2PermissionScopes) share a default limit of 700 permission definitions per service principal, including definitions inherited from the application and definitions added directly to the service principal. Enabled and disabled definitions both count. This limit counts definitions, not app role assignments. For counting rules, behavior for existing objects above the limit, and design guidance, see App role limits.
      * @return a {@link java.util.List<AppRole>}
      */
     @jakarta.annotation.Nullable
@@ -370,7 +370,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("oauth2PermissionGrants");
     }
     /**
-     * Gets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information, see the oauth2PermissionScopes property on the application entity&apos;s api property. Not nullable.
+     * Gets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information, see the oauth2PermissionScopes property on the application entity&apos;s api property. Not nullable. These scopes and appRoles share a default limit of 700 permission definitions per service principal. Enabled and disabled definitions both count. For counting rules, behavior for existing objects above the limit, and design guidance, see App role limits.
      * @return a {@link java.util.List<PermissionScope>}
      */
     @jakarta.annotation.Nullable
@@ -676,7 +676,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("appRoleAssignments", value);
     }
     /**
-     * Sets the appRoles property value. The roles exposed by the application that&apos;s linked to this service principal. For more information, see the appRoles property definition on the application entity. Not nullable.
+     * Sets the appRoles property value. The roles exposed by the application that&apos;s linked to this service principal. For more information, see the appRoles property definition on the application entity. Not nullable. App roles and exposed delegated permission scopes (oauth2PermissionScopes) share a default limit of 700 permission definitions per service principal, including definitions inherited from the application and definitions added directly to the service principal. Enabled and disabled definitions both count. This limit counts definitions, not app role assignments. For counting rules, behavior for existing objects above the limit, and design guidance, see App role limits.
      * @param value Value to set for the appRoles property.
      */
     public void setAppRoles(@jakarta.annotation.Nullable final java.util.List<AppRole> value) {
@@ -830,7 +830,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("oauth2PermissionGrants", value);
     }
     /**
-     * Sets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information, see the oauth2PermissionScopes property on the application entity&apos;s api property. Not nullable.
+     * Sets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information, see the oauth2PermissionScopes property on the application entity&apos;s api property. Not nullable. These scopes and appRoles share a default limit of 700 permission definitions per service principal. Enabled and disabled definitions both count. For counting rules, behavior for existing objects above the limit, and design guidance, see App role limits.
      * @param value Value to set for the oauth2PermissionScopes property.
      */
     public void setOauth2PermissionScopes(@jakarta.annotation.Nullable final java.util.List<PermissionScope> value) {

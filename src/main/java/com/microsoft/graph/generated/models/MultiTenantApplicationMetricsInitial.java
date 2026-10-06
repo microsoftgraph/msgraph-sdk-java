@@ -26,7 +26,7 @@ public class MultiTenantApplicationMetricsInitial extends MultiTenantApplication
         return new MultiTenantApplicationMetricsInitial();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Timestamp that represents when multitenant application metrics are initially aggregated for the related tenant.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class MultiTenantApplicationMetricsInitial extends MultiTenantApplication
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Timestamp that represents when multitenant application metrics are initially aggregated for the related tenant.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -35,7 +35,7 @@ public class RelatedTenantsRefreshRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. The location URL where the status of the refresh request can be retrieved.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class RelatedTenantsRefreshRequest extends Entity implements Parsable {
         writer.writeStringValue("location", this.getLocation());
     }
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. The location URL where the status of the refresh request can be retrieved.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final String value) {

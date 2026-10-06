@@ -102,6 +102,9 @@ public class Subscription extends Entity implements Parsable {
         deserializerMap.put("notificationUrl", (n) -> { this.setNotificationUrl(n.getStringValue()); });
         deserializerMap.put("notificationUrlAppId", (n) -> { this.setNotificationUrlAppId(n.getStringValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
+        deserializerMap.put("vapidPublicKey", (n) -> { this.setVapidPublicKey(n.getStringValue()); });
+        deserializerMap.put("webPushEncryptionP256dhPublicKey", (n) -> { this.setWebPushEncryptionP256dhPublicKey(n.getStringValue()); });
+        deserializerMap.put("webPushEncryptionSecret", (n) -> { this.setWebPushEncryptionSecret(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -161,6 +164,30 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("resource");
     }
     /**
+     * Gets the vapidPublicKey property value. Optional. The application server&apos;s VAPID public key, base64url-encoded (P-256 uncompressed point, 65 bytes pre-encoding). Obtained by calling the getVapidPublicKey function on the subscription collection. The browser passes this value to PushManager.subscribe({ applicationServerKey: vapidPublicKey }) to bind the push subscription to this server identity. Required when notificationUrl targets a known Web Push service origin (for example, *.push.apple.com, fcm.googleapis.com, updates.push.services.mozilla.com); rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8292.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getVapidPublicKey() {
+        return this.backingStore.get("vapidPublicKey");
+    }
+    /**
+     * Gets the webPushEncryptionP256dhPublicKey property value. Optional. The subscriber&apos;s ECDH public key, base64url-encoded (P-256 uncompressed point, 65 bytes pre-encoding). Obtained from the browser via PushSubscription.getKey(&apos;p256dh&apos;). Used as the peer public key during ECDH key agreement to derive the per-message content encryption key for RFC 8291 payload encryption. Required when notificationUrl targets a known Web Push service origin; rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8291 Section 3.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getWebPushEncryptionP256dhPublicKey() {
+        return this.backingStore.get("webPushEncryptionP256dhPublicKey");
+    }
+    /**
+     * Gets the webPushEncryptionSecret property value. Optional. The subscriber&apos;s auth secret, base64url-encoded (16 bytes pre-encoding). Obtained from the browser via PushSubscription.getKey(&apos;auth&apos;). Used as the HMAC-SHA-256 salt for the HKDF combine step that derives key material for RFC 8291 payload encryption. Write-only: this value is never returned in GET responses (returned as null). Treat as a secret. Required when notificationUrl targets a known Web Push service origin; rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8291 Section 3.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getWebPushEncryptionSecret() {
+        return this.backingStore.get("webPushEncryptionSecret");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -181,6 +208,9 @@ public class Subscription extends Entity implements Parsable {
         writer.writeStringValue("notificationUrl", this.getNotificationUrl());
         writer.writeStringValue("notificationUrlAppId", this.getNotificationUrlAppId());
         writer.writeStringValue("resource", this.getResource());
+        writer.writeStringValue("vapidPublicKey", this.getVapidPublicKey());
+        writer.writeStringValue("webPushEncryptionP256dhPublicKey", this.getWebPushEncryptionP256dhPublicKey());
+        writer.writeStringValue("webPushEncryptionSecret", this.getWebPushEncryptionSecret());
     }
     /**
      * Sets the applicationId property value. Optional. Identifier of the application used to create the subscription. Read-only.
@@ -279,5 +309,26 @@ public class Subscription extends Entity implements Parsable {
      */
     public void setResource(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resource", value);
+    }
+    /**
+     * Sets the vapidPublicKey property value. Optional. The application server&apos;s VAPID public key, base64url-encoded (P-256 uncompressed point, 65 bytes pre-encoding). Obtained by calling the getVapidPublicKey function on the subscription collection. The browser passes this value to PushManager.subscribe({ applicationServerKey: vapidPublicKey }) to bind the push subscription to this server identity. Required when notificationUrl targets a known Web Push service origin (for example, *.push.apple.com, fcm.googleapis.com, updates.push.services.mozilla.com); rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8292.
+     * @param value Value to set for the vapidPublicKey property.
+     */
+    public void setVapidPublicKey(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("vapidPublicKey", value);
+    }
+    /**
+     * Sets the webPushEncryptionP256dhPublicKey property value. Optional. The subscriber&apos;s ECDH public key, base64url-encoded (P-256 uncompressed point, 65 bytes pre-encoding). Obtained from the browser via PushSubscription.getKey(&apos;p256dh&apos;). Used as the peer public key during ECDH key agreement to derive the per-message content encryption key for RFC 8291 payload encryption. Required when notificationUrl targets a known Web Push service origin; rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8291 Section 3.
+     * @param value Value to set for the webPushEncryptionP256dhPublicKey property.
+     */
+    public void setWebPushEncryptionP256dhPublicKey(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("webPushEncryptionP256dhPublicKey", value);
+    }
+    /**
+     * Sets the webPushEncryptionSecret property value. Optional. The subscriber&apos;s auth secret, base64url-encoded (16 bytes pre-encoding). Obtained from the browser via PushSubscription.getKey(&apos;auth&apos;). Used as the HMAC-SHA-256 salt for the HKDF combine step that derives key material for RFC 8291 payload encryption. Write-only: this value is never returned in GET responses (returned as null). Treat as a secret. Required when notificationUrl targets a known Web Push service origin; rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8291 Section 3.
+     * @param value Value to set for the webPushEncryptionSecret property.
+     */
+    public void setWebPushEncryptionSecret(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("webPushEncryptionSecret", value);
     }
 }

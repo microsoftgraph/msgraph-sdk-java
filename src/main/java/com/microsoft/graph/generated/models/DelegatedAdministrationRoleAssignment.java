@@ -77,7 +77,7 @@ public class DelegatedAdministrationRoleAssignment implements AdditionalDataHold
         return this.backingStore.get("group");
     }
     /**
-     * Gets the groupDisplayName property value. The groupDisplayName property
+     * Gets the groupDisplayName property value. The display name of the security group referenced by the group navigation property. Server-populated and read-only; returns null if the referenced group has been deleted.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class DelegatedAdministrationRoleAssignment implements AdditionalDataHold
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the roleTemplates property value. The roleTemplates property
+     * Gets the roleTemplates property value. A collection of role templates that define the roles to be assigned to the group in the governed tenant.
      * @return a {@link java.util.List<RoleTemplate>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class DelegatedAdministrationRoleAssignment implements AdditionalDataHold
         this.backingStore.set("group", value);
     }
     /**
-     * Sets the groupDisplayName property value. The groupDisplayName property
+     * Sets the groupDisplayName property value. The display name of the security group referenced by the group navigation property. Server-populated and read-only; returns null if the referenced group has been deleted.
      * @param value Value to set for the groupDisplayName property.
      */
     public void setGroupDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class DelegatedAdministrationRoleAssignment implements AdditionalDataHold
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the roleTemplates property value. The roleTemplates property
+     * Sets the roleTemplates property value. A collection of role templates that define the roles to be assigned to the group in the governed tenant.
      * @param value Value to set for the roleTemplates property.
      */
     public void setRoleTemplates(@jakarta.annotation.Nullable final java.util.List<RoleTemplate> value) {

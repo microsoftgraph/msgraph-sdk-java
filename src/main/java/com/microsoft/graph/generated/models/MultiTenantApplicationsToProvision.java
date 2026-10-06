@@ -48,7 +48,7 @@ public class MultiTenantApplicationsToProvision implements AdditionalDataHolder,
         return value;
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. The appId (client ID) of the multi-tenant application.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class MultiTenantApplicationsToProvision implements AdditionalDataHolder,
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the application.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class MultiTenantApplicationsToProvision implements AdditionalDataHolder,
         return deserializerMap;
     }
     /**
-     * Gets the objectId property value. The objectId property
+     * Gets the objectId property value. The object ID of the service principal in the governing tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class MultiTenantApplicationsToProvision implements AdditionalDataHolder,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the requiredResourceAccesses property value. The requiredResourceAccesses property
+     * Gets the requiredResourceAccesses property value. The collection of resource accesses (permissions) required by the application.
      * @return a {@link java.util.List<ApplicationsRequiredResourceAccess>}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class MultiTenantApplicationsToProvision implements AdditionalDataHolder,
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. The appId (client ID) of the multi-tenant application.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
@@ -145,14 +145,14 @@ public class MultiTenantApplicationsToProvision implements AdditionalDataHolder,
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the application.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the objectId property value. The objectId property
+     * Sets the objectId property value. The object ID of the service principal in the governing tenant.
      * @param value Value to set for the objectId property.
      */
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class MultiTenantApplicationsToProvision implements AdditionalDataHolder,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the requiredResourceAccesses property value. The requiredResourceAccesses property
+     * Sets the requiredResourceAccesses property value. The collection of resource accesses (permissions) required by the application.
      * @param value Value to set for the requiredResourceAccesses property.
      */
     public void setRequiredResourceAccesses(@jakarta.annotation.Nullable final java.util.List<ApplicationsRequiredResourceAccess> value) {

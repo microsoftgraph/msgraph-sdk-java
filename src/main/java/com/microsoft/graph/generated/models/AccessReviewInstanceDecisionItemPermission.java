@@ -56,7 +56,7 @@ public class AccessReviewInstanceDecisionItemPermission implements AdditionalDat
         return this.backingStore;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the permission.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AccessReviewInstanceDecisionItemPermission implements AdditionalDat
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the permission.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class AccessReviewInstanceDecisionItemPermission implements AdditionalDat
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The identifier of the permission.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AccessReviewInstanceDecisionItemPermission implements AdditionalDat
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of the permission.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class AccessReviewInstanceDecisionItemPermission implements AdditionalDat
         this.backingStore = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the permission.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the permission.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The identifier of the permission.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class AccessReviewInstanceDecisionItemPermission implements AdditionalDat
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of the permission.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

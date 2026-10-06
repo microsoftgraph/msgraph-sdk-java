@@ -37,7 +37,7 @@ public class BillingMetricsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/relatedTenants/{relatedTenant%2Did}/billingMetrics{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get billingMetrics from directory
+     * Billing metrics for this related tenant. Expanded by default.
      * @return a {@link BillingMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class BillingMetricsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get billingMetrics from directory
+     * Billing metrics for this related tenant. Expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BillingMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class BillingMetricsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BillingMetrics::createFromDiscriminatorValue);
     }
     /**
-     * Get billingMetrics from directory
+     * Billing metrics for this related tenant. Expanded by default.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BillingMetricsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get billingMetrics from directory
+     * Billing metrics for this related tenant. Expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class BillingMetricsRequestBuilder extends BaseRequestBuilder {
         return new BillingMetricsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get billingMetrics from directory
+     * Billing metrics for this related tenant. Expanded by default.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -40,7 +40,7 @@ public class TenantGovernance extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the governanceInvitations property value. The governanceInvitations property
+     * Gets the governanceInvitations property value. Collection of governance invitations associated with the tenant.
      * @return a {@link java.util.List<GovernanceInvitation>}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class TenantGovernance extends Entity implements Parsable {
         return this.backingStore.get("governanceInvitations");
     }
     /**
-     * Gets the governancePolicyTemplates property value. The governancePolicyTemplates property
+     * Gets the governancePolicyTemplates property value. Collection of governance policy templates associated with the tenant.
      * @return a {@link java.util.List<TenantGovernancePolicyTemplate>}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class TenantGovernance extends Entity implements Parsable {
         return this.backingStore.get("governancePolicyTemplates");
     }
     /**
-     * Gets the governanceRelationships property value. The governanceRelationships property
+     * Gets the governanceRelationships property value. Collection of governance relationships associated with the tenant.
      * @return a {@link java.util.List<GovernanceRelationship>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class TenantGovernance extends Entity implements Parsable {
         return this.backingStore.get("governanceRelationships");
     }
     /**
-     * Gets the governanceRequests property value. The governanceRequests property
+     * Gets the governanceRequests property value. Collection of governance requests associated with the tenant.
      * @return a {@link java.util.List<GovernanceRequest>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class TenantGovernance extends Entity implements Parsable {
         return this.backingStore.get("governanceRequests");
     }
     /**
-     * Gets the relatedTenants property value. The relatedTenants property
+     * Gets the relatedTenants property value. Collection of related tenants associated with the tenant.
      * @return a {@link java.util.List<RelatedTenant>}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class TenantGovernance extends Entity implements Parsable {
         return this.backingStore.get("relatedTenants");
     }
     /**
-     * Gets the settings property value. The settings property
+     * Gets the settings property value. Settings for the tenant governance container.
      * @return a {@link TenantGovernanceSetting}
      */
     @jakarta.annotation.Nullable
@@ -102,42 +102,42 @@ public class TenantGovernance extends Entity implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
-     * Sets the governanceInvitations property value. The governanceInvitations property
+     * Sets the governanceInvitations property value. Collection of governance invitations associated with the tenant.
      * @param value Value to set for the governanceInvitations property.
      */
     public void setGovernanceInvitations(@jakarta.annotation.Nullable final java.util.List<GovernanceInvitation> value) {
         this.backingStore.set("governanceInvitations", value);
     }
     /**
-     * Sets the governancePolicyTemplates property value. The governancePolicyTemplates property
+     * Sets the governancePolicyTemplates property value. Collection of governance policy templates associated with the tenant.
      * @param value Value to set for the governancePolicyTemplates property.
      */
     public void setGovernancePolicyTemplates(@jakarta.annotation.Nullable final java.util.List<TenantGovernancePolicyTemplate> value) {
         this.backingStore.set("governancePolicyTemplates", value);
     }
     /**
-     * Sets the governanceRelationships property value. The governanceRelationships property
+     * Sets the governanceRelationships property value. Collection of governance relationships associated with the tenant.
      * @param value Value to set for the governanceRelationships property.
      */
     public void setGovernanceRelationships(@jakarta.annotation.Nullable final java.util.List<GovernanceRelationship> value) {
         this.backingStore.set("governanceRelationships", value);
     }
     /**
-     * Sets the governanceRequests property value. The governanceRequests property
+     * Sets the governanceRequests property value. Collection of governance requests associated with the tenant.
      * @param value Value to set for the governanceRequests property.
      */
     public void setGovernanceRequests(@jakarta.annotation.Nullable final java.util.List<GovernanceRequest> value) {
         this.backingStore.set("governanceRequests", value);
     }
     /**
-     * Sets the relatedTenants property value. The relatedTenants property
+     * Sets the relatedTenants property value. Collection of related tenants associated with the tenant.
      * @param value Value to set for the relatedTenants property.
      */
     public void setRelatedTenants(@jakarta.annotation.Nullable final java.util.List<RelatedTenant> value) {
         this.backingStore.set("relatedTenants", value);
     }
     /**
-     * Sets the settings property value. The settings property
+     * Sets the settings property value. Settings for the tenant governance container.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final TenantGovernanceSetting value) {

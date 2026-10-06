@@ -76,7 +76,7 @@ public class ApplicationsRequiredResourceAccess implements AdditionalDataHolder,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the permissions property value. The permissions property
+     * Gets the permissions property value. The collection of resource permissions required by the application.
      * @return a {@link java.util.List<ApplicationResourcePermission>}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ApplicationsRequiredResourceAccess implements AdditionalDataHolder,
         return this.backingStore.get("permissions");
     }
     /**
-     * Gets the resourceAppId property value. The resourceAppId property
+     * Gets the resourceAppId property value. The appId (client ID) of the resource that the application needs to access.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class ApplicationsRequiredResourceAccess implements AdditionalDataHolder,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the permissions property value. The permissions property
+     * Sets the permissions property value. The collection of resource permissions required by the application.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<ApplicationResourcePermission> value) {
         this.backingStore.set("permissions", value);
     }
     /**
-     * Sets the resourceAppId property value. The resourceAppId property
+     * Sets the resourceAppId property value. The appId (client ID) of the resource that the application needs to access.
      * @param value Value to set for the resourceAppId property.
      */
     public void setResourceAppId(@jakarta.annotation.Nullable final String value) {

@@ -26,7 +26,7 @@ public class GovernanceInvitation extends Entity implements Parsable {
         return new GovernanceInvitation();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the invitation was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class GovernanceInvitation extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time when the invitation expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class GovernanceInvitation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the governedTenantId property value. The governedTenantId property
+     * Gets the governedTenantId property value. The Microsoft Entra tenant ID of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class GovernanceInvitation extends Entity implements Parsable {
         return this.backingStore.get("governedTenantId");
     }
     /**
-     * Gets the governedTenantName property value. The governedTenantName property
+     * Gets the governedTenantName property value. The display name of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class GovernanceInvitation extends Entity implements Parsable {
         return this.backingStore.get("governedTenantName");
     }
     /**
-     * Gets the governingTenantId property value. The governingTenantId property
+     * Gets the governingTenantId property value. The Microsoft Entra tenant ID of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class GovernanceInvitation extends Entity implements Parsable {
         return this.backingStore.get("governingTenantId");
     }
     /**
-     * Gets the governingTenantName property value. The governingTenantName property
+     * Gets the governingTenantName property value. The display name of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,42 +103,42 @@ public class GovernanceInvitation extends Entity implements Parsable {
         writer.writeStringValue("governingTenantName", this.getGoverningTenantName());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the invitation was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time when the invitation expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the governedTenantId property value. The governedTenantId property
+     * Sets the governedTenantId property value. The Microsoft Entra tenant ID of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the governedTenantId property.
      */
     public void setGovernedTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("governedTenantId", value);
     }
     /**
-     * Sets the governedTenantName property value. The governedTenantName property
+     * Sets the governedTenantName property value. The display name of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the governedTenantName property.
      */
     public void setGovernedTenantName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("governedTenantName", value);
     }
     /**
-     * Sets the governingTenantId property value. The governingTenantId property
+     * Sets the governingTenantId property value. The Microsoft Entra tenant ID of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the governingTenantId property.
      */
     public void setGoverningTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("governingTenantId", value);
     }
     /**
-     * Sets the governingTenantName property value. The governingTenantName property
+     * Sets the governingTenantName property value. The display name of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @param value Value to set for the governingTenantName property.
      */
     public void setGoverningTenantName(@jakarta.annotation.Nullable final String value) {

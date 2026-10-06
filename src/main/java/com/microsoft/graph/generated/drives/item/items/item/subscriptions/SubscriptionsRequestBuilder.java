@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item.subscriptions;
 
 import com.microsoft.graph.drives.item.items.item.subscriptions.count.CountRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.subscriptions.getvapidpublickey.GetVapidPublicKeyRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.subscriptions.item.SubscriptionItemRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Subscription;
@@ -30,6 +31,14 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getVapidPublicKey method.
+     * @return a {@link GetVapidPublicKeyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetVapidPublicKeyRequestBuilder getVapidPublicKey() {
+        return new GetVapidPublicKeyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.

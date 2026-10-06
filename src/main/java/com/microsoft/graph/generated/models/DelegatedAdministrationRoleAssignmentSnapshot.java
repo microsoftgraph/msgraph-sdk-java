@@ -69,7 +69,7 @@ public class DelegatedAdministrationRoleAssignmentSnapshot implements Additional
         return deserializerMap;
     }
     /**
-     * Gets the groupDisplayName property value. The groupDisplayName property
+     * Gets the groupDisplayName property value. The display name of the security group identified by groupId at the time the snapshot was created. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class DelegatedAdministrationRoleAssignmentSnapshot implements Additional
         return this.backingStore.get("groupDisplayName");
     }
     /**
-     * Gets the groupId property value. The groupId property
+     * Gets the groupId property value. The object ID of the role-assignable security group in the governing tenant that will be assigned the specified roles.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class DelegatedAdministrationRoleAssignmentSnapshot implements Additional
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the roleTemplates property value. The roleTemplates property
+     * Gets the roleTemplates property value. The collection of role templates that define the Microsoft Entra roles to be assigned.
      * @return a {@link java.util.List<RoleTemplate>}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class DelegatedAdministrationRoleAssignmentSnapshot implements Additional
         this.backingStore = value;
     }
     /**
-     * Sets the groupDisplayName property value. The groupDisplayName property
+     * Sets the groupDisplayName property value. The display name of the security group identified by groupId at the time the snapshot was created. Read-only.
      * @param value Value to set for the groupDisplayName property.
      */
     public void setGroupDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("groupDisplayName", value);
     }
     /**
-     * Sets the groupId property value. The groupId property
+     * Sets the groupId property value. The object ID of the role-assignable security group in the governing tenant that will be assigned the specified roles.
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class DelegatedAdministrationRoleAssignmentSnapshot implements Additional
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the roleTemplates property value. The roleTemplates property
+     * Sets the roleTemplates property value. The collection of role templates that define the Microsoft Entra roles to be assigned.
      * @param value Value to set for the roleTemplates property.
      */
     public void setRoleTemplates(@jakarta.annotation.Nullable final java.util.List<RoleTemplate> value) {

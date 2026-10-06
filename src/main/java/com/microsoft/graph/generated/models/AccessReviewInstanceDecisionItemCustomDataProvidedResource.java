@@ -26,7 +26,7 @@ public class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends 
         return new AccessReviewInstanceDecisionItemCustomDataProvidedResource();
     }
     /**
-     * Gets the customData property value. The customData property
+     * Gets the customData property value. Custom data to include with the decision.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends 
         return deserializerMap;
     }
     /**
-     * Gets the scopeDisplayName property value. The scopeDisplayName property
+     * Gets the scopeDisplayName property value. The name of the scope for the decision.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends 
         return this.backingStore.get("scopeDisplayName");
     }
     /**
-     * Gets the scopeId property value. The scopeId property
+     * Gets the scopeId property value. The identifier of the scope for the decision.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends 
         writer.writeStringValue("scopeId", this.getScopeId());
     }
     /**
-     * Sets the customData property value. The customData property
+     * Sets the customData property value. Custom data to include with the decision.
      * @param value Value to set for the customData property.
      */
     public void setCustomData(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customData", value);
     }
     /**
-     * Sets the scopeDisplayName property value. The scopeDisplayName property
+     * Sets the scopeDisplayName property value. The name of the scope for the decision.
      * @param value Value to set for the scopeDisplayName property.
      */
     public void setScopeDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("scopeDisplayName", value);
     }
     /**
-     * Sets the scopeId property value. The scopeId property
+     * Sets the scopeId property value. The identifier of the scope for the decision.
      * @param value Value to set for the scopeId property.
      */
     public void setScopeId(@jakarta.annotation.Nullable final String value) {

@@ -37,16 +37,18 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/governancePolicyTemplates/{tenantGovernancePolicyTemplate%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property governancePolicyTemplates for directory
+     * Delete a tenantGovernancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-delete-governancepolicytemplates?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property governancePolicyTemplates for directory
+     * Delete a tenantGovernancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-delete-governancepolicytemplates?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get governancePolicyTemplates from directory
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancepolicytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGovernancePolicyTemplate get() {
         return get(null);
     }
     /**
-     * Get governancePolicyTemplates from directory
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancepolicytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGovernancePolicyTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernancePolicyTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property governancePolicyTemplates in directory
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param body The request body
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancepolicytemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGovernancePolicyTemplate patch(@jakarta.annotation.Nonnull final TenantGovernancePolicyTemplate body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property governancePolicyTemplates in directory
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancepolicytemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGovernancePolicyTemplate patch(@jakarta.annotation.Nonnull final TenantGovernancePolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernancePolicyTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property governancePolicyTemplates for directory
+     * Delete a tenantGovernancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property governancePolicyTemplates for directory
+     * Delete a tenantGovernancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Get governancePolicyTemplates from directory
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Get governancePolicyTemplates from directory
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Update the navigation property governancePolicyTemplates in directory
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property governancePolicyTemplates in directory
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get governancePolicyTemplates from directory
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

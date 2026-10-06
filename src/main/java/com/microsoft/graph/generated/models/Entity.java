@@ -980,6 +980,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.riskyUserHistoryItem": return new RiskyUserHistoryItem();
             case "#microsoft.graph.roleAssignment": return new RoleAssignment();
             case "#microsoft.graph.roleDefinition": return new RoleDefinition();
+            case "#microsoft.graph.roleManagementCustomCalloutExtension": return new RoleManagementCustomCalloutExtension();
             case "#microsoft.graph.room": return new Room();
             case "#microsoft.graph.roomList": return new RoomList();
             case "#microsoft.graph.samlOrWsFedExternalDomainFederation": return new SamlOrWsFedExternalDomainFederation();
@@ -1216,7 +1217,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
             case "#microsoft.graph.todo": return new Todo();
             case "#microsoft.graph.todoTask": return new TodoTask();
-            case "#microsoft.graph.todoTaskList": return new TodoTaskList();
         }
         return null;
     }
@@ -1228,6 +1228,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.todoTaskList": return new TodoTaskList();
             case "#microsoft.graph.tokenIssuancePolicy": return new TokenIssuancePolicy();
             case "#microsoft.graph.tokenLifetimePolicy": return new TokenLifetimePolicy();
             case "#microsoft.graph.training": return new Training();
@@ -1247,6 +1248,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.unifiedRoleManagementPolicyApprovalRule": return new UnifiedRoleManagementPolicyApprovalRule();
             case "#microsoft.graph.unifiedRoleManagementPolicyAssignment": return new UnifiedRoleManagementPolicyAssignment();
             case "#microsoft.graph.unifiedRoleManagementPolicyAuthenticationContextRule": return new UnifiedRoleManagementPolicyAuthenticationContextRule();
+            case "#microsoft.graph.unifiedRoleManagementPolicyCustomExtensionRule": return new UnifiedRoleManagementPolicyCustomExtensionRule();
             case "#microsoft.graph.unifiedRoleManagementPolicyEnablementRule": return new UnifiedRoleManagementPolicyEnablementRule();
             case "#microsoft.graph.unifiedRoleManagementPolicyExpirationRule": return new UnifiedRoleManagementPolicyExpirationRule();
             case "#microsoft.graph.unifiedRoleManagementPolicyNotificationRule": return new UnifiedRoleManagementPolicyNotificationRule();
