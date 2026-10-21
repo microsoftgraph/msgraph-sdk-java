@@ -26,7 +26,7 @@ public class RoleManagementCustomCalloutExtension extends CustomCalloutExtension
         return new RoleManagementCustomCalloutExtension();
     }
     /**
-     * Gets the customAttributes property value. The customAttributes property
+     * Gets the customAttributes property value. The custom attribute names to include in the callout payload.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class RoleManagementCustomCalloutExtension extends CustomCalloutExtension
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the customAttributes property value. The customAttributes property
+     * Sets the customAttributes property value. The custom attribute names to include in the callout payload.
      * @param value Value to set for the customAttributes property.
      */
     public void setCustomAttributes(@jakarta.annotation.Nullable final java.util.List<String> value) {

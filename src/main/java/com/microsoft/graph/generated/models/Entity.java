@@ -269,6 +269,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.androidWorkProfileCompliancePolicy": return new AndroidWorkProfileCompliancePolicy();
             case "#microsoft.graph.androidWorkProfileCustomConfiguration": return new AndroidWorkProfileCustomConfiguration();
             case "#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration": return new AndroidWorkProfileGeneralDeviceConfiguration();
+            case "#microsoft.graph.anonymousCalendarSharingFreeBusyDetail": return new AnonymousCalendarSharingFreeBusyDetail();
+            case "#microsoft.graph.anonymousCalendarSharingFreeBusyReviewer": return new AnonymousCalendarSharingFreeBusyReviewer();
+            case "#microsoft.graph.anonymousCalendarSharingFreeBusySimple": return new AnonymousCalendarSharingFreeBusySimple();
             case "#microsoft.graph.anonymousGuestConversationMember": return new AnonymousGuestConversationMember();
             case "#microsoft.graph.appCatalogs": return new AppCatalogs();
             case "#microsoft.graph.appConsentApprovalRoute": return new AppConsentApprovalRoute();
@@ -703,9 +706,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.landingPageDetail": return new LandingPageDetail();
             case "#microsoft.graph.learningAssignment": return new LearningAssignment();
             case "#microsoft.graph.learningContent": return new LearningContent();
-            case "#microsoft.graph.learningCourseActivity": return new LearningCourseActivity();
-            case "#microsoft.graph.learningProvider": return new LearningProvider();
-            case "#microsoft.graph.learningSelfInitiatedCourse": return new LearningSelfInitiatedCourse();
         }
         return null;
     }
@@ -717,6 +717,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.learningCourseActivity": return new LearningCourseActivity();
+            case "#microsoft.graph.learningProvider": return new LearningProvider();
+            case "#microsoft.graph.learningSelfInitiatedCourse": return new LearningSelfInitiatedCourse();
             case "#microsoft.graph.levelMap": return new LevelMap();
             case "#microsoft.graph.licenseDetails": return new LicenseDetails();
             case "#microsoft.graph.linkedResource": return new LinkedResource();
@@ -966,6 +969,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.reportsRoot": return new ReportsRoot();
             case "#microsoft.graph.request": return new Request();
             case "#microsoft.graph.resellerDelegatedAdminRelationship": return new ResellerDelegatedAdminRelationship();
+            case "#microsoft.graph.resourceAccountKeyAuthenticationMethod": return new ResourceAccountKeyAuthenticationMethod();
             case "#microsoft.graph.resourceOperation": return new ResourceOperation();
             case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
             case "#microsoft.graph.restoreArtifactBase": return new RestoreArtifactBase();
@@ -1213,10 +1217,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.thumbnailSet": return new ThumbnailSet();
             case "#microsoft.graph.timeCard": return new TimeCard();
             case "#microsoft.graph.timeOff": return new TimeOff();
-            case "#microsoft.graph.timeOffReason": return new TimeOffReason();
-            case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
-            case "#microsoft.graph.todo": return new Todo();
-            case "#microsoft.graph.todoTask": return new TodoTask();
         }
         return null;
     }
@@ -1228,6 +1228,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.timeOffReason": return new TimeOffReason();
+            case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
+            case "#microsoft.graph.todo": return new Todo();
+            case "#microsoft.graph.todoTask": return new TodoTask();
             case "#microsoft.graph.todoTaskList": return new TodoTaskList();
             case "#microsoft.graph.tokenIssuancePolicy": return new TokenIssuancePolicy();
             case "#microsoft.graph.tokenLifetimePolicy": return new TokenLifetimePolicy();

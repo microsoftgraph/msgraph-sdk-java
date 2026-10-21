@@ -11,6 +11,7 @@ import com.microsoft.graph.users.item.authentication.operations.OperationsReques
 import com.microsoft.graph.users.item.authentication.passwordmethods.PasswordMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.phonemethods.PhoneMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
 import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.WindowsHelloForBusinessMethodsRequestBuilder;
@@ -103,6 +104,14 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PlatformCredentialMethodsRequestBuilder platformCredentialMethods() {
         return new PlatformCredentialMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceAccountKeyAuthenticationMethods property of the microsoft.graph.authentication entity.
+     * @return a {@link ResourceAccountKeyAuthenticationMethodsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ResourceAccountKeyAuthenticationMethodsRequestBuilder resourceAccountKeyAuthenticationMethods() {
+        return new ResourceAccountKeyAuthenticationMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.

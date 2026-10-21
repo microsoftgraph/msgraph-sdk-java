@@ -70,10 +70,11 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("consumingTenantOverridables", (n) -> { this.setConsumingTenantOverridables(n.getEnumSetValue(FileStorageContainerTypeSettingsOverride::forValue)); });
         deserializerMap.put("isDiscoverabilityEnabled", (n) -> { this.setIsDiscoverabilityEnabled(n.getBooleanValue()); });
         deserializerMap.put("isItemVersioningEnabled", (n) -> { this.setIsItemVersioningEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isOfficeRestricted", (n) -> { this.setIsOfficeRestricted(n.getBooleanValue()); });
         deserializerMap.put("isSearchEnabled", (n) -> { this.setIsSearchEnabled(n.getBooleanValue()); });
         deserializerMap.put("isSharingRestricted", (n) -> { this.setIsSharingRestricted(n.getBooleanValue()); });
         deserializerMap.put("itemMajorVersionLimit", (n) -> { this.setItemMajorVersionLimit(n.getLongValue()); });
@@ -98,6 +99,14 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
     @jakarta.annotation.Nullable
     public Boolean getIsItemVersioningEnabled() {
         return this.backingStore.get("isItemVersioningEnabled");
+    }
+    /**
+     * Gets the isOfficeRestricted property value. Indicates whether Office apps (Word, Excel, and PowerPoint) for desktop and web are restricted for containers of this container type.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsOfficeRestricted() {
+        return this.backingStore.get("isOfficeRestricted");
     }
     /**
      * Gets the isSearchEnabled property value. Indicates whether search is enabled.
@@ -164,6 +173,7 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
         writer.writeEnumSetValue("consumingTenantOverridables", this.getConsumingTenantOverridables());
         writer.writeBooleanValue("isDiscoverabilityEnabled", this.getIsDiscoverabilityEnabled());
         writer.writeBooleanValue("isItemVersioningEnabled", this.getIsItemVersioningEnabled());
+        writer.writeBooleanValue("isOfficeRestricted", this.getIsOfficeRestricted());
         writer.writeBooleanValue("isSearchEnabled", this.getIsSearchEnabled());
         writer.writeBooleanValue("isSharingRestricted", this.getIsSharingRestricted());
         writer.writeLongValue("itemMajorVersionLimit", this.getItemMajorVersionLimit());
@@ -208,6 +218,13 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
      */
     public void setIsItemVersioningEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isItemVersioningEnabled", value);
+    }
+    /**
+     * Sets the isOfficeRestricted property value. Indicates whether Office apps (Word, Excel, and PowerPoint) for desktop and web are restricted for containers of this container type.
+     * @param value Value to set for the isOfficeRestricted property.
+     */
+    public void setIsOfficeRestricted(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isOfficeRestricted", value);
     }
     /**
      * Sets the isSearchEnabled property value. Indicates whether search is enabled.

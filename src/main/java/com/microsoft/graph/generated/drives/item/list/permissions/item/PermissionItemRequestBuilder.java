@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.list.permissions.item;
 
 import com.microsoft.graph.drives.item.list.permissions.item.grant.GrantRequestBuilder;
+import com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +29,14 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GrantRequestBuilder grant() {
         return new GrantRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the revokeGrants method.
+     * @return a {@link RevokeGrantsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RevokeGrantsRequestBuilder revokeGrants() {
+        return new RevokeGrantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PermissionItemRequestBuilder} and sets the default values.

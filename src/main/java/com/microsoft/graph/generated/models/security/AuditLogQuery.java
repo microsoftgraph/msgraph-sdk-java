@@ -38,6 +38,14 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("administrativeUnitIdFilters");
     }
     /**
+     * Gets the approximateReturnedRecordCount property value. The approximate number of records retrieved by the query. This value can be higher or lower than recordCountLimit due to distributed counting. Read-only.
+     * @return a {@link Long}
+     */
+    @jakarta.annotation.Nullable
+    public Long getApproximateReturnedRecordCount() {
+        return this.backingStore.get("approximateReturnedRecordCount");
+    }
+    /**
      * Gets the displayName property value. The display name of the audit log query.
      * @return a {@link String}
      */
@@ -53,13 +61,16 @@ public class AuditLogQuery extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("administrativeUnitIdFilters", (n) -> { this.setAdministrativeUnitIdFilters(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("approximateReturnedRecordCount", (n) -> { this.setApproximateReturnedRecordCount(n.getLongValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("filterEndDateTime", (n) -> { this.setFilterEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("filterStartDateTime", (n) -> { this.setFilterStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("ipAddressFilters", (n) -> { this.setIpAddressFilters(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isRecordCountLimitExceeded", (n) -> { this.setIsRecordCountLimitExceeded(n.getBooleanValue()); });
         deserializerMap.put("keywordFilter", (n) -> { this.setKeywordFilter(n.getStringValue()); });
         deserializerMap.put("objectIdFilters", (n) -> { this.setObjectIdFilters(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("operationFilters", (n) -> { this.setOperationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("recordCountLimit", (n) -> { this.setRecordCountLimit(n.getLongValue()); });
         deserializerMap.put("records", (n) -> { this.setRecords(n.getCollectionOfObjectValues(AuditLogRecord::createFromDiscriminatorValue)); });
         deserializerMap.put("recordTypeFilters", (n) -> { this.setRecordTypeFilters(n.getCollectionOfEnumValues(AuditLogRecordType::forValue)); });
         deserializerMap.put("serviceFilters", (n) -> { this.setServiceFilters(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -92,7 +103,15 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("ipAddressFilters");
     }
     /**
-     * Gets the keywordFilter property value. The keyword to filter on.
+     * Gets the isRecordCountLimitExceeded property value. Indicates whether the query exceeded the per-search record-count limit. The default value is false. A value of true is authoritative and isn&apos;t derived from approximateReturnedRecordCount. Read-only.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsRecordCountLimitExceeded() {
+        return this.backingStore.get("isRecordCountLimitExceeded");
+    }
+    /**
+     * Gets the keywordFilter property value. Free text to match against the non-indexed content of each record: the workload-specific properties inside auditData, including its AppAccessContext object. The indexed common-schema properties, such as the operation name, aren&apos;t matched by keyword; use their own filters, such as operationFilters, for those.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -114,6 +133,14 @@ public class AuditLogQuery extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<String> getOperationFilters() {
         return this.backingStore.get("operationFilters");
+    }
+    /**
+     * Gets the recordCountLimit property value. The record-count threshold used to limit query result retrieval. Read-only.
+     * @return a {@link Long}
+     */
+    @jakarta.annotation.Nullable
+    public Long getRecordCountLimit() {
+        return this.backingStore.get("recordCountLimit");
     }
     /**
      * Gets the records property value. The collection of audit log records retrieved by the query.
@@ -184,6 +211,13 @@ public class AuditLogQuery extends Entity implements Parsable {
         this.backingStore.set("administrativeUnitIdFilters", value);
     }
     /**
+     * Sets the approximateReturnedRecordCount property value. The approximate number of records retrieved by the query. This value can be higher or lower than recordCountLimit due to distributed counting. Read-only.
+     * @param value Value to set for the approximateReturnedRecordCount property.
+     */
+    public void setApproximateReturnedRecordCount(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("approximateReturnedRecordCount", value);
+    }
+    /**
      * Sets the displayName property value. The display name of the audit log query.
      * @param value Value to set for the displayName property.
      */
@@ -212,7 +246,14 @@ public class AuditLogQuery extends Entity implements Parsable {
         this.backingStore.set("ipAddressFilters", value);
     }
     /**
-     * Sets the keywordFilter property value. The keyword to filter on.
+     * Sets the isRecordCountLimitExceeded property value. Indicates whether the query exceeded the per-search record-count limit. The default value is false. A value of true is authoritative and isn&apos;t derived from approximateReturnedRecordCount. Read-only.
+     * @param value Value to set for the isRecordCountLimitExceeded property.
+     */
+    public void setIsRecordCountLimitExceeded(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isRecordCountLimitExceeded", value);
+    }
+    /**
+     * Sets the keywordFilter property value. Free text to match against the non-indexed content of each record: the workload-specific properties inside auditData, including its AppAccessContext object. The indexed common-schema properties, such as the operation name, aren&apos;t matched by keyword; use their own filters, such as operationFilters, for those.
      * @param value Value to set for the keywordFilter property.
      */
     public void setKeywordFilter(@jakarta.annotation.Nullable final String value) {
@@ -231,6 +272,13 @@ public class AuditLogQuery extends Entity implements Parsable {
      */
     public void setOperationFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("operationFilters", value);
+    }
+    /**
+     * Sets the recordCountLimit property value. The record-count threshold used to limit query result retrieval. Read-only.
+     * @param value Value to set for the recordCountLimit property.
+     */
+    public void setRecordCountLimit(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("recordCountLimit", value);
     }
     /**
      * Sets the records property value. The collection of audit log records retrieved by the query.

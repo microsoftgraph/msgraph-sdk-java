@@ -68,7 +68,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
         return deserializerMap;
     }
     /**
-     * Gets the maximumRetries property value. The max number of retries that Microsoft Entra ID makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
+     * Gets the maximumRetries property value. The max number of retries that Microsoft Entra ID makes to the external API. For a roleManagementCustomCalloutExtension, the valid range is from 0 through 5. For other custom extensions, values of 0 or 1 are supported. If null, the default for the service applies.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the timeoutInMilliseconds property value. The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
+     * Gets the timeoutInMilliseconds property value. The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. For a roleManagementCustomCalloutExtension, the valid range is from 1000 through 60000 milliseconds. For other custom extensions, the valid range is from 200 through 2000 milliseconds and the default is 1000 milliseconds.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
         this.backingStore = value;
     }
     /**
-     * Sets the maximumRetries property value. The max number of retries that Microsoft Entra ID makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
+     * Sets the maximumRetries property value. The max number of retries that Microsoft Entra ID makes to the external API. For a roleManagementCustomCalloutExtension, the valid range is from 0 through 5. For other custom extensions, values of 0 or 1 are supported. If null, the default for the service applies.
      * @param value Value to set for the maximumRetries property.
      */
     public void setMaximumRetries(@jakarta.annotation.Nullable final Integer value) {
@@ -132,7 +132,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the timeoutInMilliseconds property value. The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. Default duration is 1000.
+     * Sets the timeoutInMilliseconds property value. The max duration in milliseconds that Microsoft Entra ID waits for a response from the external app before it shuts down the connection. For a roleManagementCustomCalloutExtension, the valid range is from 1000 through 60000 milliseconds. For other custom extensions, the valid range is from 200 through 2000 milliseconds and the default is 1000 milliseconds.
      * @param value Value to set for the timeoutInMilliseconds property.
      */
     public void setTimeoutInMilliseconds(@jakarta.annotation.Nullable final Integer value) {

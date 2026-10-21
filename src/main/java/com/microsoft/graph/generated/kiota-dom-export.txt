@@ -28983,6 +28983,7 @@ com.microsoft.graph.devices.DevicesRequestBuilder::|public|getAvailableExtension
 com.microsoft.graph.devices.DevicesRequestBuilder::|public|getByIds:GetByIdsRequestBuilder
 com.microsoft.graph.devices.DevicesRequestBuilder::|public|post(body:Device):Device
 com.microsoft.graph.devices.DevicesRequestBuilder::|public|post(body:Device; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Device
+com.microsoft.graph.devices.DevicesRequestBuilder::|public|provision:ProvisionRequestBuilder
 com.microsoft.graph.devices.DevicesRequestBuilder::|public|toGetRequestInformation():RequestInformation
 com.microsoft.graph.devices.DevicesRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
 com.microsoft.graph.devices.DevicesRequestBuilder::|public|toPostRequestInformation(body:Device):RequestInformation
@@ -30143,6 +30144,27 @@ com.microsoft.graph.devices.item.transitivememberof.TransitiveMemberOfRequestBui
 com.microsoft.graph.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder::|public|toGetRequestInformation():RequestInformation
 com.microsoft.graph.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
 com.microsoft.graph.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder::|public|withUrl(rawUrl:String):TransitiveMemberOfRequestBuilder
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|constructor():void
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|getProvisioningBlob():String
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|public|setProvisioningBlob(value?:String):void
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):ProvisionPostRequestBody
+com.microsoft.graph.devices.provision.ProvisionPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder::|public|post(body:ProvisionPostRequestBody):ProvisionResponse
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder::|public|post(body:ProvisionPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):ProvisionResponse
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder::|public|toPostRequestInformation(body:ProvisionPostRequestBody):RequestInformation
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder::|public|toPostRequestInformation(body:ProvisionPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.devices.provision.ProvisionRequestBuilder::|public|withUrl(rawUrl:String):ProvisionRequestBuilder
 com.microsoft.graph.devices.validateproperties.ValidatePropertiesPostRequestBody::|protected|backingStore:BackingStore
 com.microsoft.graph.devices.validateproperties.ValidatePropertiesPostRequestBody::|public|constructor():void
 com.microsoft.graph.devices.validateproperties.ValidatePropertiesPostRequestBody::|public|getAdditionalData():Map<String, Object>
@@ -32835,6 +32857,15 @@ com.microsoft.graph.directory.tenantgovernance.relatedtenants.refresh.RefreshReq
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.refresh.RefreshRequestBuilder::|public|toPostRequestInformation():RequestInformation
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.refresh.RefreshRequestBuilder::|public|toPostRequestInformation(requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.refresh.RefreshRequestBuilder::|public|withUrl(rawUrl:String):RefreshRequestBuilder
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder.GetRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder::|public|get():RelatedTenantsRefreshStatus
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder::|public|get(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RelatedTenantsRefreshStatus
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder::|public|toGetRequestInformation():RequestInformation
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder::|public|withUrl(rawUrl:String):RefreshStatusRequestBuilder
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -32858,6 +32889,7 @@ com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequ
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder::|public|post(body:RelatedTenant):RelatedTenant
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder::|public|post(body:RelatedTenant; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RelatedTenant
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder::|public|refresh:RefreshRequestBuilder
+com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder::|public|refreshStatus:RefreshStatusRequestBuilder
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder::|public|toGetRequestInformation():RequestInformation
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
 com.microsoft.graph.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder::|public|toPostRequestInformation(body:RelatedTenant):RequestInformation
@@ -35997,6 +36029,7 @@ com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemReques
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -36004,6 +36037,27 @@ com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemReques
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.drives.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.drives.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.drives.item.items.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.drives.item.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.drives.item.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -62334,6 +62388,7 @@ com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemR
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -62341,6 +62396,27 @@ com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemR
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.drives.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.drives.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.drives.item.list.items.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.drives.item.list.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.drives.item.list.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -62727,6 +62803,7 @@ com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuild
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -62734,6 +62811,27 @@ com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuild
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.drives.item.list.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.drives.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.drives.item.list.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.drives.item.list.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.drives.item.list.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -79390,6 +79488,7 @@ com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.ite
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -79397,6 +79496,27 @@ com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.ite
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.groups.item.sites.item.lists.item.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -79782,6 +79902,7 @@ com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.Permissio
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -79789,6 +79910,27 @@ com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.Permissio
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.groups.item.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.groups.item.sites.item.lists.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -82994,6 +83136,7 @@ com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemReques
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -83001,6 +83144,27 @@ com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemReques
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.groups.item.sites.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.groups.item.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.groups.item.sites.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.groups.item.sites.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.groups.item.sites.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -131190,6 +131354,24 @@ com.microsoft.graph.models.AndroidWorkProfileRequiredPasswordType::0004-NumericC
 com.microsoft.graph.models.AndroidWorkProfileRequiredPasswordType::0005-AtLeastAlphabetic
 com.microsoft.graph.models.AndroidWorkProfileRequiredPasswordType::0006-AtLeastAlphanumeric
 com.microsoft.graph.models.AndroidWorkProfileRequiredPasswordType::0007-AlphanumericWithSymbols
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyDetail-->M365CapabilityBase
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyDetail::|public|constructor():void
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyDetail::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyDetail::|public|OdataType:String
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyDetail::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyDetail::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):AnonymousCalendarSharingFreeBusyDetail
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyReviewer-->M365CapabilityBase
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyReviewer::|public|constructor():void
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyReviewer::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyReviewer::|public|OdataType:String
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyReviewer::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusyReviewer::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):AnonymousCalendarSharingFreeBusyReviewer
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusySimple-->M365CapabilityBase
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusySimple::|public|constructor():void
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusySimple::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusySimple::|public|OdataType:String
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusySimple::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.models.AnonymousCalendarSharingFreeBusySimple::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):AnonymousCalendarSharingFreeBusySimple
 com.microsoft.graph.models.AnonymousGuestConversationMember-->ConversationMember
 com.microsoft.graph.models.AnonymousGuestConversationMember::|public|constructor():void
 com.microsoft.graph.models.AnonymousGuestConversationMember::|public|getAnonymousGuestId():String
@@ -133216,6 +133398,7 @@ com.microsoft.graph.models.Authentication::|public|getOperations():java.util.Lis
 com.microsoft.graph.models.Authentication::|public|getPasswordMethods():java.util.List<PasswordAuthenticationMethod>
 com.microsoft.graph.models.Authentication::|public|getPhoneMethods():java.util.List<PhoneAuthenticationMethod>
 com.microsoft.graph.models.Authentication::|public|getPlatformCredentialMethods():java.util.List<PlatformCredentialAuthenticationMethod>
+com.microsoft.graph.models.Authentication::|public|getResourceAccountKeyAuthenticationMethods():java.util.List<ResourceAccountKeyAuthenticationMethod>
 com.microsoft.graph.models.Authentication::|public|getSoftwareOathMethods():java.util.List<SoftwareOathAuthenticationMethod>
 com.microsoft.graph.models.Authentication::|public|getTemporaryAccessPassMethods():java.util.List<TemporaryAccessPassAuthenticationMethod>
 com.microsoft.graph.models.Authentication::|public|getWindowsHelloForBusinessMethods():java.util.List<WindowsHelloForBusinessAuthenticationMethod>
@@ -133230,6 +133413,7 @@ com.microsoft.graph.models.Authentication::|public|setOperations(value?:java.uti
 com.microsoft.graph.models.Authentication::|public|setPasswordMethods(value?:java.util.List<PasswordAuthenticationMethod>):void
 com.microsoft.graph.models.Authentication::|public|setPhoneMethods(value?:java.util.List<PhoneAuthenticationMethod>):void
 com.microsoft.graph.models.Authentication::|public|setPlatformCredentialMethods(value?:java.util.List<PlatformCredentialAuthenticationMethod>):void
+com.microsoft.graph.models.Authentication::|public|setResourceAccountKeyAuthenticationMethods(value?:java.util.List<ResourceAccountKeyAuthenticationMethod>):void
 com.microsoft.graph.models.Authentication::|public|setSoftwareOathMethods(value?:java.util.List<SoftwareOathAuthenticationMethod>):void
 com.microsoft.graph.models.Authentication::|public|setTemporaryAccessPassMethods(value?:java.util.List<TemporaryAccessPassAuthenticationMethod>):void
 com.microsoft.graph.models.Authentication::|public|setWindowsHelloForBusinessMethods(value?:java.util.List<WindowsHelloForBusinessAuthenticationMethod>):void
@@ -148154,6 +148338,7 @@ com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|getIsDiscoverabilityEnabled():Boolean
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|getIsItemVersioningEnabled():Boolean
+com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|getIsOfficeRestricted():Boolean
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|getIsSearchEnabled():Boolean
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|getIsSharingRestricted():Boolean
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|getItemMajorVersionLimit():Long
@@ -148166,6 +148351,7 @@ com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|setBackingStore(value:BackingStore):void
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|setIsDiscoverabilityEnabled(value?:Boolean):void
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|setIsItemVersioningEnabled(value?:Boolean):void
+com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|setIsOfficeRestricted(value?:Boolean):void
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|setIsSearchEnabled(value?:Boolean):void
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|setIsSharingRestricted(value?:Boolean):void
 com.microsoft.graph.models.FileStorageContainerTypeRegistrationSettings::|public|setItemMajorVersionLimit(value?:Long):void
@@ -148183,6 +148369,7 @@ com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|getConsumin
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|getIsDiscoverabilityEnabled():Boolean
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|getIsItemVersioningEnabled():Boolean
+com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|getIsOfficeRestricted():Boolean
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|getIsSearchEnabled():Boolean
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|getIsSharingRestricted():Boolean
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|getItemMajorVersionLimit():Long
@@ -148196,6 +148383,7 @@ com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|setBackingS
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|setConsumingTenantOverridables(value?:FileStorageContainerTypeSettingsOverride):void
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|setIsDiscoverabilityEnabled(value?:Boolean):void
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|setIsItemVersioningEnabled(value?:Boolean):void
+com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|setIsOfficeRestricted(value?:Boolean):void
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|setIsSearchEnabled(value?:Boolean):void
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|setIsSharingRestricted(value?:Boolean):void
 com.microsoft.graph.models.FileStorageContainerTypeSettings::|public|setItemMajorVersionLimit(value?:Long):void
@@ -148211,6 +148399,7 @@ com.microsoft.graph.models.FileStorageContainerTypeSettingsOverride::0003-IsItem
 com.microsoft.graph.models.FileStorageContainerTypeSettingsOverride::0004-ItemMajorVersionLimit
 com.microsoft.graph.models.FileStorageContainerTypeSettingsOverride::0005-MaxStoragePerContainerInBytes
 com.microsoft.graph.models.FileStorageContainerTypeSettingsOverride::0006-UnknownFutureValue
+com.microsoft.graph.models.FileStorageContainerTypeSettingsOverride::0007-IsOfficeRestricted
 com.microsoft.graph.models.FileStorageContainerTypeSettings~~>AdditionalDataHolder; BackedModel; Parsable
 com.microsoft.graph.models.FileStorageContainerViewpoint::|protected|backingStore:BackingStore
 com.microsoft.graph.models.FileStorageContainerViewpoint::|public|constructor():void
@@ -163054,6 +163243,22 @@ com.microsoft.graph.models.ProvisioningSystem::|public|OdataType:String
 com.microsoft.graph.models.ProvisioningSystem::|public|serialize(writer:SerializationWriter):Void
 com.microsoft.graph.models.ProvisioningSystem::|public|setDetails(value?:DetailsInfo):void
 com.microsoft.graph.models.ProvisioningSystem::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):ProvisioningSystem
+com.microsoft.graph.models.ProvisionResponse::|protected|backingStore:BackingStore
+com.microsoft.graph.models.ProvisionResponse::|public|constructor():void
+com.microsoft.graph.models.ProvisionResponse::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.models.ProvisionResponse::|public|getBackingStore():BackingStore
+com.microsoft.graph.models.ProvisionResponse::|public|getChallenge():String
+com.microsoft.graph.models.ProvisionResponse::|public|getDeviceId():String
+com.microsoft.graph.models.ProvisionResponse::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.models.ProvisionResponse::|public|getOdataType():String
+com.microsoft.graph.models.ProvisionResponse::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.models.ProvisionResponse::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.models.ProvisionResponse::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.models.ProvisionResponse::|public|setChallenge(value?:String):void
+com.microsoft.graph.models.ProvisionResponse::|public|setDeviceId(value?:String):void
+com.microsoft.graph.models.ProvisionResponse::|public|setOdataType(value?:String):void
+com.microsoft.graph.models.ProvisionResponse::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):ProvisionResponse
+com.microsoft.graph.models.ProvisionResponse~~>AdditionalDataHolder; BackedModel; Parsable
 com.microsoft.graph.models.ProxiedDomain::|protected|backingStore:BackingStore
 com.microsoft.graph.models.ProxiedDomain::|public|constructor():void
 com.microsoft.graph.models.ProxiedDomain::|public|getAdditionalData():Map<String, Object>
@@ -163973,6 +164178,24 @@ com.microsoft.graph.models.RelatedTenantsRefreshRequest::|public|OdataType:Strin
 com.microsoft.graph.models.RelatedTenantsRefreshRequest::|public|serialize(writer:SerializationWriter):Void
 com.microsoft.graph.models.RelatedTenantsRefreshRequest::|public|setLocation(value?:String):void
 com.microsoft.graph.models.RelatedTenantsRefreshRequest::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RelatedTenantsRefreshRequest
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|protected|backingStore:BackingStore
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|constructor():void
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|getBackingStore():BackingStore
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|getIsFirstRefresh():Boolean
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|getMostRecentRefreshDateTime():OffsetDateTime
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|getMostRecentRefreshRequestStatus():String
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|getOdataType():String
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|setIsFirstRefresh(value?:Boolean):void
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|setMostRecentRefreshDateTime(value?:OffsetDateTime):void
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|setMostRecentRefreshRequestStatus(value?:String):void
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|public|setOdataType(value?:String):void
+com.microsoft.graph.models.RelatedTenantsRefreshStatus::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RelatedTenantsRefreshStatus
+com.microsoft.graph.models.RelatedTenantsRefreshStatus~~>AdditionalDataHolder; BackedModel; Parsable
 com.microsoft.graph.models.RelationshipCreationType::0000-ApprovedByAdmin
 com.microsoft.graph.models.RelationshipCreationType::0001-AddOnTenant
 com.microsoft.graph.models.RelationshipCreationType::0002-UnknownFutureValue
@@ -164413,6 +164636,23 @@ com.microsoft.graph.models.ResourceAccessType::0002-Write
 com.microsoft.graph.models.ResourceAccessType::0003-Create
 com.microsoft.graph.models.ResourceAccessType::0004-UnknownFutureValue
 com.microsoft.graph.models.ResourceAccess~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod-->AuthenticationMethod
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|public|constructor():void
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|public|getDevice():Device
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|public|getDisplayName():String
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|public|OdataType:String
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|public|setDevice(value?:Device):void
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|public|setDisplayName(value?:String):void
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethod::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):ResourceAccountKeyAuthenticationMethod
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethodCollectionResponse-->BaseCollectionPaginationCountResponse
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethodCollectionResponse::|public|constructor():void
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethodCollectionResponse::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethodCollectionResponse::|public|getValue():java.util.List<ResourceAccountKeyAuthenticationMethod>
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethodCollectionResponse::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethodCollectionResponse::|public|setValue(value?:java.util.List<ResourceAccountKeyAuthenticationMethod>):void
+com.microsoft.graph.models.ResourceAccountKeyAuthenticationMethodCollectionResponse::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):ResourceAccountKeyAuthenticationMethodCollectionResponse
 com.microsoft.graph.models.ResourceAction::|protected|backingStore:BackingStore
 com.microsoft.graph.models.ResourceAction::|public|constructor():void
 com.microsoft.graph.models.ResourceAction::|public|getAdditionalData():Map<String, Object>
@@ -167266,14 +167506,17 @@ com.microsoft.graph.models.security.AuditData~~>AdditionalDataHolder; BackedMode
 com.microsoft.graph.models.security.AuditLogQuery-->Entity
 com.microsoft.graph.models.security.AuditLogQuery::|public|constructor():void
 com.microsoft.graph.models.security.AuditLogQuery::|public|getAdministrativeUnitIdFilters():java.util.List<String>
+com.microsoft.graph.models.security.AuditLogQuery::|public|getApproximateReturnedRecordCount():Long
 com.microsoft.graph.models.security.AuditLogQuery::|public|getDisplayName():String
 com.microsoft.graph.models.security.AuditLogQuery::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
 com.microsoft.graph.models.security.AuditLogQuery::|public|getFilterEndDateTime():OffsetDateTime
 com.microsoft.graph.models.security.AuditLogQuery::|public|getFilterStartDateTime():OffsetDateTime
 com.microsoft.graph.models.security.AuditLogQuery::|public|getIpAddressFilters():java.util.List<String>
+com.microsoft.graph.models.security.AuditLogQuery::|public|getIsRecordCountLimitExceeded():Boolean
 com.microsoft.graph.models.security.AuditLogQuery::|public|getKeywordFilter():String
 com.microsoft.graph.models.security.AuditLogQuery::|public|getObjectIdFilters():java.util.List<String>
 com.microsoft.graph.models.security.AuditLogQuery::|public|getOperationFilters():java.util.List<String>
+com.microsoft.graph.models.security.AuditLogQuery::|public|getRecordCountLimit():Long
 com.microsoft.graph.models.security.AuditLogQuery::|public|getRecords():java.util.List<AuditLogRecord>
 com.microsoft.graph.models.security.AuditLogQuery::|public|getRecordTypeFilters():java.util.List<AuditLogRecordType>
 com.microsoft.graph.models.security.AuditLogQuery::|public|getServiceFilters():java.util.List<String>
@@ -167282,13 +167525,16 @@ com.microsoft.graph.models.security.AuditLogQuery::|public|getUserPrincipalNameF
 com.microsoft.graph.models.security.AuditLogQuery::|public|OdataType:String
 com.microsoft.graph.models.security.AuditLogQuery::|public|serialize(writer:SerializationWriter):Void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setAdministrativeUnitIdFilters(value?:java.util.List<String>):void
+com.microsoft.graph.models.security.AuditLogQuery::|public|setApproximateReturnedRecordCount(value?:Long):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setDisplayName(value?:String):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setFilterEndDateTime(value?:OffsetDateTime):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setFilterStartDateTime(value?:OffsetDateTime):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setIpAddressFilters(value?:java.util.List<String>):void
+com.microsoft.graph.models.security.AuditLogQuery::|public|setIsRecordCountLimitExceeded(value?:Boolean):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setKeywordFilter(value?:String):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setObjectIdFilters(value?:java.util.List<String>):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setOperationFilters(value?:java.util.List<String>):void
+com.microsoft.graph.models.security.AuditLogQuery::|public|setRecordCountLimit(value?:Long):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setRecords(value?:java.util.List<AuditLogRecord>):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setRecordTypeFilters(value?:java.util.List<AuditLogRecordType>):void
 com.microsoft.graph.models.security.AuditLogQuery::|public|setServiceFilters(value?:java.util.List<String>):void
@@ -177409,7 +177655,8 @@ com.microsoft.graph.models.SystemBrowserEnabledOn::0000-None
 com.microsoft.graph.models.SystemBrowserEnabledOn::0001-Ios
 com.microsoft.graph.models.SystemBrowserEnabledOn::0002-Android
 com.microsoft.graph.models.SystemBrowserEnabledOn::0003-Mac
-com.microsoft.graph.models.SystemBrowserEnabledOn::0004-UnknownFutureValue
+com.microsoft.graph.models.SystemBrowserEnabledOn::0004-Linux
+com.microsoft.graph.models.SystemBrowserEnabledOn::0005-UnknownFutureValue
 com.microsoft.graph.models.SystemFacet::|protected|backingStore:BackingStore
 com.microsoft.graph.models.SystemFacet::|public|constructor():void
 com.microsoft.graph.models.SystemFacet::|public|getAdditionalData():Map<String, Object>
@@ -213406,6 +213653,7 @@ com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemR
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -213413,6 +213661,27 @@ com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemR
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.shares.item.list.items.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.shares.item.list.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.shares.item.list.items.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.shares.item.list.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.shares.item.list.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -213798,6 +214067,7 @@ com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuild
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -213805,6 +214075,27 @@ com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuild
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.shares.item.list.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.shares.item.list.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.shares.item.list.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.shares.item.list.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.shares.item.list.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -213991,6 +214282,7 @@ com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|get
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -213998,6 +214290,27 @@ com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|toG
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.shares.item.permission.PermissionRequestBuilder::|public|withUrl(rawUrl:String):PermissionRequestBuilder
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.shares.item.root.content.ContentRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.shares.item.root.content.ContentRequestBuilder.DeleteRequestConfiguration-->BaseRequestConfiguration
 com.microsoft.graph.shares.item.root.content.ContentRequestBuilder.GetQueryParameters::|public|format:String
@@ -217081,6 +217394,7 @@ com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.Permission
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -217088,6 +217402,27 @@ com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.Permission
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.sites.item.lists.item.items.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.sites.item.lists.item.items.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -217473,6 +217808,7 @@ com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequest
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -217480,6 +217816,27 @@ com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequest
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.sites.item.lists.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.sites.item.lists.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.sites.item.lists.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.sites.item.lists.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.sites.item.lists.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -220655,6 +221012,7 @@ com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|p
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -220662,6 +221020,27 @@ com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|p
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.sites.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.sites.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.sites.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.sites.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -232650,6 +233029,7 @@ com.microsoft.graph.storage.filestorage.containers.item.permissions.item.Permiss
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -232657,6 +233037,27 @@ com.microsoft.graph.storage.filestorage.containers.item.permissions.item.Permiss
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.storage.filestorage.containers.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.storage.filestorage.containers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.storage.filestorage.containers.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.storage.filestorage.containers.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.storage.filestorage.containers.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -233815,6 +234216,7 @@ com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|grant:GrantRequestBuilder
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission):Permission
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|patch(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Permission
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|revokeGrants:RevokeGrantsRequestBuilder
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
@@ -233822,6 +234224,27 @@ com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission):RequestInformation
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|toPatchRequestInformation(body:Permission; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):RequestInformation
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.PermissionItemRequestBuilder::|public|withUrl(rawUrl:String):PermissionItemRequestBuilder
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|protected|backingStore:BackingStore
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|constructor():void
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getAdditionalData():Map<String, Object>
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getBackingStore():BackingStore
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getFieldDeserializers():Map<String, java.util.function.Consumer<ParseNode>>
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|getGrantees():java.util.List<DriveRecipient>
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|serialize(writer:SerializationWriter):Void
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setAdditionalData(value?:Map<String, Object>):void
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setBackingStore(value:BackingStore):void
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|public|setGrantees(value?:java.util.List<DriveRecipient>):void
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody::|static|public|createFromDiscriminatorValue(parseNode:ParseNode):RevokeGrantsPostRequestBody
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsPostRequestBody~~>AdditionalDataHolder; BackedModel; Parsable
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder.PostRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody):Permission
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|post(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):Permission
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody):RequestInformation
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|toPostRequestInformation(body:RevokeGrantsPostRequestBody; requestConfiguration?:java.util.function.Consumer<PostRequestConfiguration>):RequestInformation
+com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.item.revokegrants.RevokeGrantsRequestBuilder::|public|withUrl(rawUrl:String):RevokeGrantsRequestBuilder
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.PermissionsRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|count:Boolean
 com.microsoft.graph.storage.filestorage.deletedcontainers.item.permissions.PermissionsRequestBuilder.GetQueryParameters::|public|expand:String[]
@@ -242081,6 +242504,7 @@ com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder::|pub
 com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder::|public|patch(body:Authentication; requestConfiguration?:java.util.function.Consumer<PatchRequestConfiguration>):Authentication
 com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder::|public|phoneMethods:PhoneMethodsRequestBuilder
 com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder::|public|platformCredentialMethods:PlatformCredentialMethodsRequestBuilder
+com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder::|public|resourceAccountKeyAuthenticationMethods:ResourceAccountKeyAuthenticationMethodsRequestBuilder
 com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder::|public|softwareOathMethods:SoftwareOathMethodsRequestBuilder
 com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder::|public|temporaryAccessPassMethods:TemporaryAccessPassMethodsRequestBuilder
 com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
@@ -242713,6 +243137,76 @@ com.microsoft.graph.users.item.authentication.platformcredentialmethods.Platform
 com.microsoft.graph.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder::|public|toGetRequestInformation():RequestInformation
 com.microsoft.graph.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
 com.microsoft.graph.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder::|public|withUrl(rawUrl:String):PlatformCredentialMethodsRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder.GetQueryParameters::|public|filter:String
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder.GetQueryParameters::|public|search:String
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder.GetQueryParameters::|public|toQueryParameters():Map<String, Object>
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder.GetQueryParameters~~>QueryParameters
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder.GetRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder.GetRequestConfiguration::|public|queryParameters:GetQueryParameters
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder::|public|get():Integer
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder::|public|get(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):Integer
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder::|public|toGetRequestInformation():RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.count.CountRequestBuilder::|public|withUrl(rawUrl:String):CountRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder.GetQueryParameters::|public|expand:String[]
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder.GetQueryParameters::|public|select:String[]
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder.GetQueryParameters::|public|toQueryParameters():Map<String, Object>
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder.GetQueryParameters~~>QueryParameters
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder.GetRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder.GetRequestConfiguration::|public|queryParameters:GetQueryParameters
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder::|public|get():Device
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder::|public|get(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):Device
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder::|public|toGetRequestInformation():RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.device.DeviceRequestBuilder::|public|withUrl(rawUrl:String):DeviceRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder.DeleteRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder.GetQueryParameters::|public|expand:String[]
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder.GetQueryParameters::|public|select:String[]
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder.GetQueryParameters::|public|toQueryParameters():Map<String, Object>
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder.GetQueryParameters~~>QueryParameters
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder.GetRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder.GetRequestConfiguration::|public|queryParameters:GetQueryParameters
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|delete():Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|delete(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|device:DeviceRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|get():ResourceAccountKeyAuthenticationMethod
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|get(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):ResourceAccountKeyAuthenticationMethod
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|toDeleteRequestInformation():RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|toDeleteRequestInformation(requestConfiguration?:java.util.function.Consumer<DeleteRequestConfiguration>):RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|toGetRequestInformation():RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.item.ResourceAccountKeyAuthenticationMethodItemRequestBuilder::|public|withUrl(rawUrl:String):ResourceAccountKeyAuthenticationMethodItemRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder-->BaseRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|count:Boolean
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|expand:String[]
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|filter:String
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|orderby:String[]
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|search:String
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|select:String[]
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|skip:Integer
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|top:Integer
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters::|public|toQueryParameters():Map<String, Object>
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetQueryParameters~~>QueryParameters
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetRequestConfiguration-->BaseRequestConfiguration
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder.GetRequestConfiguration::|public|queryParameters:GetQueryParameters
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|byResourceAccountKeyAuthenticationMethodId(resourceAccountKeyAuthenticationMethodId:String):ResourceAccountKeyAuthenticationMethodItemRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|constructor(pathParameters:HashMap<String, Object>; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|constructor(rawUrl:String; requestAdapter:RequestAdapter):Void
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|count:CountRequestBuilder
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|get():ResourceAccountKeyAuthenticationMethodCollectionResponse
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|get(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):ResourceAccountKeyAuthenticationMethodCollectionResponse
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|toGetRequestInformation():RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|toGetRequestInformation(requestConfiguration?:java.util.function.Consumer<GetRequestConfiguration>):RequestInformation
+com.microsoft.graph.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder::|public|withUrl(rawUrl:String):ResourceAccountKeyAuthenticationMethodsRequestBuilder
 com.microsoft.graph.users.item.authentication.softwareoathmethods.count.CountRequestBuilder-->BaseRequestBuilder
 com.microsoft.graph.users.item.authentication.softwareoathmethods.count.CountRequestBuilder.GetQueryParameters::|public|filter:String
 com.microsoft.graph.users.item.authentication.softwareoathmethods.count.CountRequestBuilder.GetQueryParameters::|public|search:String

@@ -37,16 +37,18 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/customExtensions/{roleManagementCustomCalloutExtension%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property customExtensions for identityGovernance
+     * Delete a roleManagementCustomCalloutExtension object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property customExtensions for identityGovernance
+     * Delete a roleManagementCustomCalloutExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get customExtensions from identityGovernance
+     * Retrieve the properties of a roleManagementCustomCalloutExtension object.
      * @return a {@link RoleManagementCustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleManagementCustomCalloutExtension get() {
         return get(null);
     }
     /**
-     * Get customExtensions from identityGovernance
+     * Retrieve the properties of a roleManagementCustomCalloutExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleManagementCustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleManagementCustomCalloutExtension get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, RoleManagementCustomCalloutExtension::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property customExtensions in identityGovernance
+     * Update the properties of a roleManagementCustomCalloutExtension object.
      * @param body The request body
      * @return a {@link RoleManagementCustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleManagementCustomCalloutExtension patch(@jakarta.annotation.Nonnull final RoleManagementCustomCalloutExtension body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property customExtensions in identityGovernance
+     * Update the properties of a roleManagementCustomCalloutExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleManagementCustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleManagementCustomCalloutExtension patch(@jakarta.annotation.Nonnull final RoleManagementCustomCalloutExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, RoleManagementCustomCalloutExtension::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property customExtensions for identityGovernance
+     * Delete a roleManagementCustomCalloutExtension object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property customExtensions for identityGovernance
+     * Delete a roleManagementCustomCalloutExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Get customExtensions from identityGovernance
+     * Retrieve the properties of a roleManagementCustomCalloutExtension object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Get customExtensions from identityGovernance
+     * Retrieve the properties of a roleManagementCustomCalloutExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Update the navigation property customExtensions in identityGovernance
+     * Update the properties of a roleManagementCustomCalloutExtension object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customExtensions in identityGovernance
+     * Update the properties of a roleManagementCustomCalloutExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class RoleManagementCustomCalloutExtensionItemRequestBuilder extends Base
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get customExtensions from identityGovernance
+     * Retrieve the properties of a roleManagementCustomCalloutExtension object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

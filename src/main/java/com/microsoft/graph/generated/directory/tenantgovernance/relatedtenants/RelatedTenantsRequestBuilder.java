@@ -3,6 +3,7 @@ package com.microsoft.graph.directory.tenantgovernance.relatedtenants;
 import com.microsoft.graph.directory.tenantgovernance.relatedtenants.count.CountRequestBuilder;
 import com.microsoft.graph.directory.tenantgovernance.relatedtenants.item.RelatedTenantItemRequestBuilder;
 import com.microsoft.graph.directory.tenantgovernance.relatedtenants.refresh.RefreshRequestBuilder;
+import com.microsoft.graph.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RelatedTenant;
 import com.microsoft.graph.models.RelatedTenantCollectionResponse;
@@ -39,6 +40,14 @@ public class RelatedTenantsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RefreshRequestBuilder refresh() {
         return new RefreshRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the refreshStatus method.
+     * @return a {@link RefreshStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RefreshStatusRequestBuilder refreshStatus() {
+        return new RefreshStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernance entity.

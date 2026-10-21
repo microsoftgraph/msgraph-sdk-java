@@ -3,6 +3,7 @@ package com.microsoft.graph.shares.item.permission;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.shares.item.permission.grant.GrantRequestBuilder;
+import com.microsoft.graph.shares.item.permission.revokegrants.RevokeGrantsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class PermissionRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GrantRequestBuilder grant() {
         return new GrantRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the revokeGrants method.
+     * @return a {@link RevokeGrantsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RevokeGrantsRequestBuilder revokeGrants() {
+        return new RevokeGrantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PermissionRequestBuilder} and sets the default values.
