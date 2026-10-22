@@ -11,7 +11,8 @@ public enum FileStorageContainerTypeSettingsOverride implements ValuedEnum {
     IsItemVersioningEnabled("isItemVersioningEnabled"),
     ItemMajorVersionLimit("itemMajorVersionLimit"),
     MaxStoragePerContainerInBytes("maxStoragePerContainerInBytes"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    IsOfficeRestricted("isOfficeRestricted");
     public final String value;
     FileStorageContainerTypeSettingsOverride(final String value) {
         this.value = value;
@@ -29,6 +30,7 @@ public enum FileStorageContainerTypeSettingsOverride implements ValuedEnum {
             case "itemMajorVersionLimit": return ItemMajorVersionLimit;
             case "maxStoragePerContainerInBytes": return MaxStoragePerContainerInBytes;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "isOfficeRestricted": return IsOfficeRestricted;
             default: return null;
         }
     }

@@ -36,7 +36,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
         return deserializerMap;
     }
     /**
-     * Gets the targetUrl property value. The HTTP endpoint that a custom extension calls.
+     * Gets the targetUrl property value. The URL of the HTTP endpoint that Microsoft Entra ID calls for the custom extension.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
         writer.writeStringValue("targetUrl", this.getTargetUrl());
     }
     /**
-     * Sets the targetUrl property value. The HTTP endpoint that a custom extension calls.
+     * Sets the targetUrl property value. The URL of the HTTP endpoint that Microsoft Entra ID calls for the custom extension.
      * @param value Value to set for the targetUrl property.
      */
     public void setTargetUrl(@jakarta.annotation.Nullable final String value) {

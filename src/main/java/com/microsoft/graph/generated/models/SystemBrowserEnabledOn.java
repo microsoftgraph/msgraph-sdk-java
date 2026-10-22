@@ -9,6 +9,7 @@ public enum SystemBrowserEnabledOn implements ValuedEnum {
     Ios("ios"),
     Android("android"),
     Mac("mac"),
+    Linux("linux"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     SystemBrowserEnabledOn(final String value) {
@@ -24,6 +25,7 @@ public enum SystemBrowserEnabledOn implements ValuedEnum {
             case "ios": return Ios;
             case "android": return Android;
             case "mac": return Mac;
+            case "linux": return Linux;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
