@@ -64,6 +64,7 @@ public class Authentication extends Entity implements Parsable {
         deserializerMap.put("passwordMethods", (n) -> { this.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("phoneMethods", (n) -> { this.setPhoneMethods(n.getCollectionOfObjectValues(PhoneAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("platformCredentialMethods", (n) -> { this.setPlatformCredentialMethods(n.getCollectionOfObjectValues(PlatformCredentialAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceAccountKeyAuthenticationMethods", (n) -> { this.setResourceAccountKeyAuthenticationMethods(n.getCollectionOfObjectValues(ResourceAccountKeyAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("softwareOathMethods", (n) -> { this.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("temporaryAccessPassMethods", (n) -> { this.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsHelloForBusinessMethods", (n) -> { this.setWindowsHelloForBusinessMethods(n.getCollectionOfObjectValues(WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue)); });
@@ -118,6 +119,14 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("platformCredentialMethods");
     }
     /**
+     * Gets the resourceAccountKeyAuthenticationMethods property value. Represents the resource account key credentials registered to a user for authentication on shared devices.
+     * @return a {@link java.util.List<ResourceAccountKeyAuthenticationMethod>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ResourceAccountKeyAuthenticationMethod> getResourceAccountKeyAuthenticationMethods() {
+        return this.backingStore.get("resourceAccountKeyAuthenticationMethods");
+    }
+    /**
      * Gets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return a {@link java.util.List<SoftwareOathAuthenticationMethod>}
      */
@@ -157,6 +166,7 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("passwordMethods", this.getPasswordMethods());
         writer.writeCollectionOfObjectValues("phoneMethods", this.getPhoneMethods());
         writer.writeCollectionOfObjectValues("platformCredentialMethods", this.getPlatformCredentialMethods());
+        writer.writeCollectionOfObjectValues("resourceAccountKeyAuthenticationMethods", this.getResourceAccountKeyAuthenticationMethods());
         writer.writeCollectionOfObjectValues("softwareOathMethods", this.getSoftwareOathMethods());
         writer.writeCollectionOfObjectValues("temporaryAccessPassMethods", this.getTemporaryAccessPassMethods());
         writer.writeCollectionOfObjectValues("windowsHelloForBusinessMethods", this.getWindowsHelloForBusinessMethods());
@@ -223,6 +233,13 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setPlatformCredentialMethods(@jakarta.annotation.Nullable final java.util.List<PlatformCredentialAuthenticationMethod> value) {
         this.backingStore.set("platformCredentialMethods", value);
+    }
+    /**
+     * Sets the resourceAccountKeyAuthenticationMethods property value. Represents the resource account key credentials registered to a user for authentication on shared devices.
+     * @param value Value to set for the resourceAccountKeyAuthenticationMethods property.
+     */
+    public void setResourceAccountKeyAuthenticationMethods(@jakarta.annotation.Nullable final java.util.List<ResourceAccountKeyAuthenticationMethod> value) {
+        this.backingStore.set("resourceAccountKeyAuthenticationMethods", value);
     }
     /**
      * Sets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.

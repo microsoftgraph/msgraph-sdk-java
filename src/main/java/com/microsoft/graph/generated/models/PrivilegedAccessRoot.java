@@ -25,7 +25,7 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
         return new PrivilegedAccessRoot();
     }
     /**
-     * Gets the customExtensions property value. The customExtensions property
+     * Gets the customExtensions property value. The custom extensions configured for PIM role management operations.
      * @return a {@link java.util.List<RoleManagementCustomCalloutExtension>}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class PrivilegedAccessRoot extends Entity implements Parsable {
         writer.writeObjectValue("group", this.getGroup());
     }
     /**
-     * Sets the customExtensions property value. The customExtensions property
+     * Sets the customExtensions property value. The custom extensions configured for PIM role management operations.
      * @param value Value to set for the customExtensions property.
      */
     public void setCustomExtensions(@jakarta.annotation.Nullable final java.util.List<RoleManagementCustomCalloutExtension> value) {

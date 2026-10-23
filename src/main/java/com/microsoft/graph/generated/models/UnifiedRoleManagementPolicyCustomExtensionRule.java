@@ -26,7 +26,7 @@ public class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleM
         return new UnifiedRoleManagementPolicyCustomExtensionRule();
     }
     /**
-     * Gets the customAttributes property value. The customAttributes property
+     * Gets the customAttributes property value. The custom attributes associated with the policy rule. Read-only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleM
         return this.backingStore.get("customAttributes");
     }
     /**
-     * Gets the customExtensionId property value. The customExtensionId property
+     * Gets the customExtensionId property value. The unique identifier of the roleManagementCustomCalloutExtension associated with this rule.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleM
         return this.backingStore.get("customExtensionId");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the policy rule. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleM
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether the custom extension rule is enabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleM
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
     }
     /**
-     * Sets the customAttributes property value. The customAttributes property
+     * Sets the customAttributes property value. The custom attributes associated with the policy rule. Read-only.
      * @param value Value to set for the customAttributes property.
      */
     public void setCustomAttributes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("customAttributes", value);
     }
     /**
-     * Sets the customExtensionId property value. The customExtensionId property
+     * Sets the customExtensionId property value. The unique identifier of the roleManagementCustomCalloutExtension associated with this rule.
      * @param value Value to set for the customExtensionId property.
      */
     public void setCustomExtensionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customExtensionId", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the policy rule. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether the custom extension rule is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
