@@ -51,7 +51,7 @@
         <!-- Dependency versions -->
         <microsoft-graph-core.version>3.6.6</microsoft-graph-core.version>
         <okhttp.version>4.12.0</okhttp.version>
-        <jakarta-annotation.version>2.1.1</jakarta-annotation.version>
+        <jakarta-annotation.version>3.0.0</jakarta-annotation.version>
         <kiota.version>1.9.2</kiota.version>
 
         <!-- Plugin versions -->
