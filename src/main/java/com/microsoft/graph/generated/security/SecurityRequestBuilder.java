@@ -13,6 +13,7 @@ import com.microsoft.graph.security.identities.IdentitiesRequestBuilder;
 import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
 import com.microsoft.graph.security.labels.LabelsRequestBuilder;
 import com.microsoft.graph.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
+import com.microsoft.graph.security.rules.RulesRequestBuilder;
 import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
 import com.microsoft.graph.security.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
@@ -40,7 +41,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the alerts property of the microsoft.graph.security entity.
      * @return a {@link AlertsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
@@ -124,6 +128,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder microsoftGraphSecurityRunHuntingQuery() {
         return new MicrosoftGraphSecurityRunHuntingQueryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the rules property of the microsoft.graph.security entity.
+     * @return a {@link RulesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RulesRequestBuilder rules() {
+        return new RulesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.

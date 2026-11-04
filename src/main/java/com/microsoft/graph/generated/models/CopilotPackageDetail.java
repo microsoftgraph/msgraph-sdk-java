@@ -88,6 +88,7 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         deserializerMap.put("exceptionRate", (n) -> { this.setExceptionRate(n.getDoubleValue()); });
         deserializerMap.put("lastUsedDateTime", (n) -> { this.setLastUsedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("longDescription", (n) -> { this.setLongDescription(n.getStringValue()); });
+        deserializerMap.put("requestMetadata", (n) -> { this.setRequestMetadata(n.getObjectValue(CopilotPackageRequestMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getStringValue()); });
         deserializerMap.put("sharedWithUsersAndGroups", (n) -> { this.setSharedWithUsersAndGroups(n.getCollectionOfObjectValues(PackageAccessEntity::createFromDiscriminatorValue)); });
         deserializerMap.put("totalRunTimeInHours", (n) -> { this.setTotalRunTimeInHours(n.getDoubleValue()); });
@@ -109,6 +110,14 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
     @jakarta.annotation.Nullable
     public String getLongDescription() {
         return this.backingStore.get("longDescription");
+    }
+    /**
+     * Gets the requestMetadata property value. Request metadata returned by an explicit opt-in package detail read. Null when not loaded.
+     * @return a {@link CopilotPackageRequestMetadata}
+     */
+    @jakarta.annotation.Nullable
+    public CopilotPackageRequestMetadata getRequestMetadata() {
+        return this.backingStore.get("requestMetadata");
     }
     /**
      * Gets the sensitivity property value. The sensitivity property
@@ -217,6 +226,13 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
      */
     public void setLongDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("longDescription", value);
+    }
+    /**
+     * Sets the requestMetadata property value. Request metadata returned by an explicit opt-in package detail read. Null when not loaded.
+     * @param value Value to set for the requestMetadata property.
+     */
+    public void setRequestMetadata(@jakarta.annotation.Nullable final CopilotPackageRequestMetadata value) {
+        this.backingStore.set("requestMetadata", value);
     }
     /**
      * Sets the sensitivity property value. The sensitivity property

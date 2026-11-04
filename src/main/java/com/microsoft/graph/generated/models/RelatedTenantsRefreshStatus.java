@@ -73,7 +73,7 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the isFirstRefresh property value. The isFirstRefresh property
+     * Gets the isFirstRefresh property value. Indicates whether the operation is the first refresh of the related tenants list.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         return this.backingStore.get("isFirstRefresh");
     }
     /**
-     * Gets the mostRecentRefreshDateTime property value. The mostRecentRefreshDateTime property
+     * Gets the mostRecentRefreshDateTime property value. The date and time of the most recent refresh operation. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         return this.backingStore.get("mostRecentRefreshDateTime");
     }
     /**
-     * Gets the mostRecentRefreshRequestStatus property value. The mostRecentRefreshRequestStatus property
+     * Gets the mostRecentRefreshRequestStatus property value. The status of the most recent refresh operation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,21 +132,21 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the isFirstRefresh property value. The isFirstRefresh property
+     * Sets the isFirstRefresh property value. Indicates whether the operation is the first refresh of the related tenants list.
      * @param value Value to set for the isFirstRefresh property.
      */
     public void setIsFirstRefresh(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFirstRefresh", value);
     }
     /**
-     * Sets the mostRecentRefreshDateTime property value. The mostRecentRefreshDateTime property
+     * Sets the mostRecentRefreshDateTime property value. The date and time of the most recent refresh operation. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the mostRecentRefreshDateTime property.
      */
     public void setMostRecentRefreshDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("mostRecentRefreshDateTime", value);
     }
     /**
-     * Sets the mostRecentRefreshRequestStatus property value. The mostRecentRefreshRequestStatus property
+     * Sets the mostRecentRefreshRequestStatus property value. The status of the most recent refresh operation.
      * @param value Value to set for the mostRecentRefreshRequestStatus property.
      */
     public void setMostRecentRefreshRequestStatus(@jakarta.annotation.Nullable final String value) {

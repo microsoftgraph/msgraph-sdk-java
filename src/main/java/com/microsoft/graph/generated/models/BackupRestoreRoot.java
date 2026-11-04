@@ -102,6 +102,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         deserializerMap.put("oneDriveForBusinessRestoreSessions", (n) -> { this.setOneDriveForBusinessRestoreSessions(n.getCollectionOfObjectValues(OneDriveForBusinessRestoreSession::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionPolicies", (n) -> { this.setProtectionPolicies(n.getCollectionOfObjectValues(ProtectionPolicyBase::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionUnits", (n) -> { this.setProtectionUnits(n.getCollectionOfObjectValues(ProtectionUnitBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(BackupReport::createFromDiscriminatorValue)); });
         deserializerMap.put("restorePoints", (n) -> { this.setRestorePoints(n.getCollectionOfObjectValues(RestorePoint::createFromDiscriminatorValue)); });
         deserializerMap.put("restoreSessions", (n) -> { this.setRestoreSessions(n.getCollectionOfObjectValues(RestoreSessionBase::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceApps", (n) -> { this.setServiceApps(n.getCollectionOfObjectValues(ServiceApp::createFromDiscriminatorValue)); });
@@ -177,6 +178,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<ProtectionUnitBase> getProtectionUnits() {
         return this.backingStore.get("protectionUnits");
+    }
+    /**
+     * Gets the reports property value. The backup reports available in the tenant.
+     * @return a {@link BackupReport}
+     */
+    @jakarta.annotation.Nullable
+    public BackupReport getReports() {
+        return this.backingStore.get("reports");
     }
     /**
      * Gets the restorePoints property value. List of restore points in the tenant.
@@ -280,6 +289,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("oneDriveForBusinessRestoreSessions", this.getOneDriveForBusinessRestoreSessions());
         writer.writeCollectionOfObjectValues("protectionPolicies", this.getProtectionPolicies());
         writer.writeCollectionOfObjectValues("protectionUnits", this.getProtectionUnits());
+        writer.writeObjectValue("reports", this.getReports());
         writer.writeCollectionOfObjectValues("restorePoints", this.getRestorePoints());
         writer.writeCollectionOfObjectValues("restoreSessions", this.getRestoreSessions());
         writer.writeCollectionOfObjectValues("serviceApps", this.getServiceApps());
@@ -395,6 +405,13 @@ public class BackupRestoreRoot extends Entity implements Parsable {
      */
     public void setProtectionUnits(@jakarta.annotation.Nullable final java.util.List<ProtectionUnitBase> value) {
         this.backingStore.set("protectionUnits", value);
+    }
+    /**
+     * Sets the reports property value. The backup reports available in the tenant.
+     * @param value Value to set for the reports property.
+     */
+    public void setReports(@jakarta.annotation.Nullable final BackupReport value) {
+        this.backingStore.set("reports", value);
     }
     /**
      * Sets the restorePoints property value. List of restore points in the tenant.

@@ -98,7 +98,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. The groups managed through PIM for groups.
      * @return a {@link java.util.List<GroupResource>}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
         this.backingStore.set("eligibilitySchedules", value);
     }
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. The groups managed through PIM for groups.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<GroupResource> value) {

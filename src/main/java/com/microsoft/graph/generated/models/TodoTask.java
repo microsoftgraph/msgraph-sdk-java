@@ -129,6 +129,7 @@ public class TodoTask extends Entity implements Parsable {
         deserializerMap.put("linkedResources", (n) -> { this.setLinkedResources(n.getCollectionOfObjectValues(LinkedResource::createFromDiscriminatorValue)); });
         deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("reminderDateTime", (n) -> { this.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(TaskStatus::forValue)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
@@ -191,6 +192,14 @@ public class TodoTask extends Entity implements Parsable {
         return this.backingStore.get("reminderDateTime");
     }
     /**
+     * Gets the singleValueExtendedProperties property value. A collection of custom fields linked to the task.
+     * @return a {@link java.util.List<SingleValueExtendedProperty>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SingleValueExtendedProperty> getSingleValueExtendedProperties() {
+        return this.backingStore.get("singleValueExtendedProperties");
+    }
+    /**
      * Gets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
      * @return a {@link DateTimeTimeZone}
      */
@@ -238,6 +247,7 @@ public class TodoTask extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("linkedResources", this.getLinkedResources());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeObjectValue("reminderDateTime", this.getReminderDateTime());
+        writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("title", this.getTitle());
@@ -360,6 +370,13 @@ public class TodoTask extends Entity implements Parsable {
      */
     public void setReminderDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("reminderDateTime", value);
+    }
+    /**
+     * Sets the singleValueExtendedProperties property value. A collection of custom fields linked to the task.
+     * @param value Value to set for the singleValueExtendedProperties property.
+     */
+    public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueExtendedProperty> value) {
+        this.backingStore.set("singleValueExtendedProperties", value);
     }
     /**
      * Sets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.

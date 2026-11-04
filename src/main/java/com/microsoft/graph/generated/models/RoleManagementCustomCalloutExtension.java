@@ -41,9 +41,18 @@ public class RoleManagementCustomCalloutExtension extends CustomCalloutExtension
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customAttributes", (n) -> { this.setCustomAttributes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getEnumValue(CustomExtensionResourceType::forValue)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CustomCalloutExtensionType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isEnabled property value. When true, enables the custom extension. When false, disables it. Nullable.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsEnabled() {
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the resourceType property value. The resourceType property
@@ -69,6 +78,7 @@ public class RoleManagementCustomCalloutExtension extends CustomCalloutExtension
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("customAttributes", this.getCustomAttributes());
+        writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeEnumValue("resourceType", this.getResourceType());
         writer.writeEnumValue("type", this.getType());
     }
@@ -78,6 +88,13 @@ public class RoleManagementCustomCalloutExtension extends CustomCalloutExtension
      */
     public void setCustomAttributes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("customAttributes", value);
+    }
+    /**
+     * Sets the isEnabled property value. When true, enables the custom extension. When false, disables it. Nullable.
+     * @param value Value to set for the isEnabled property.
+     */
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isEnabled", value);
     }
     /**
      * Sets the resourceType property value. The resourceType property

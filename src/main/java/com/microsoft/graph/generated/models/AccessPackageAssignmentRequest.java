@@ -104,7 +104,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("justification");
     }
     /**
-     * Gets the parameters property value. The parameters property
+     * Gets the parameters property value. Additional parameters that control how the request is processed, such as bypassing the approval requirement configured on the access package policy.
      * @return a {@link AccessPackageAssignmentRequestParameters}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("justification", value);
     }
     /**
-     * Sets the parameters property value. The parameters property
+     * Sets the parameters property value. Additional parameters that control how the request is processed, such as bypassing the approval requirement configured on the access package policy.
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final AccessPackageAssignmentRequestParameters value) {

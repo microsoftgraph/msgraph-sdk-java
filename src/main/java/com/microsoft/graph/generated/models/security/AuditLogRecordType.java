@@ -479,6 +479,41 @@ public enum AuditLogRecordType implements ValuedEnum {
     MDASH("MDASH"),
     DefenderSecurityForAIConfiguration("DefenderSecurityForAIConfiguration"),
     SparkCoreCustomLivePool("SparkCoreCustomLivePool"),
+    PlannerCustomFieldDefinition("PlannerCustomFieldDefinition"),
+    PlannerCustomFieldDefinitionList("PlannerCustomFieldDefinitionList"),
+    SyntheticMediaDetectionEvent("SyntheticMediaDetectionEvent"),
+    VivaGlintVivaInsightsIntegration("VivaGlintVivaInsightsIntegration"),
+    PeopleSkillsAdmin("PeopleSkillsAdmin"),
+    PeopleSkillsUser("PeopleSkillsUser"),
+    DSPMAdminActivity("DSPMAdminActivity"),
+    OnDemandExchangeClassification("OnDemandExchangeClassification"),
+    UniversalPrintSecureScan("UniversalPrintSecureScan"),
+    CloudSecurityManagement("CloudSecurityManagement"),
+    CloudSecurityConnector("CloudSecurityConnector"),
+    CloudSecurityEnablement("CloudSecurityEnablement"),
+    MCSRawEmailContentMetadata("MCSRawEmailContentMetadata"),
+    AIGuardrail("AIGuardrail"),
+    A365AIGuardrail("A365AIGuardrail"),
+    WorkIQAdminActivity("WorkIQAdminActivity"),
+    VivaGlintClientConfiguration("VivaGlintClientConfiguration"),
+    VivaGlintDataRetention("VivaGlintDataRetention"),
+    FilteringTeamsMessageFileInfo("FilteringTeamsMessageFileInfo"),
+    SharePointFileArchivePolicy("SharePointFileArchivePolicy"),
+    DefenderAutomationRule("DefenderAutomationRule"),
+    DefenderGeneratedPlaybook("DefenderGeneratedPlaybook"),
+    DefenderIntegration("DefenderIntegration"),
+    P4AIDagSitePermissionsRecord("P4AIDagSitePermissionsRecord"),
+    PlannerDependency("PlannerDependency"),
+    PlannerDependencyList("PlannerDependencyList"),
+    CSCContentMetadata("CSCContentMetadata"),
+    MicrosoftSecurityForAIConfiguration("MicrosoftSecurityForAIConfiguration"),
+    MicrosoftSecurityForAIRealTimeProtection("MicrosoftSecurityForAIRealTimeProtection"),
+    MTPContentMetadata("MTPContentMetadata"),
+    ComplianceEvaluationIncomplete("ComplianceEvaluationIncomplete"),
+    ComplianceEndpointEvaluationIncomplete("ComplianceEndpointEvaluationIncomplete"),
+    MicrosoftTeamsMoveMessages("MicrosoftTeamsMoveMessages"),
+    ECSContentMetadata("ECSContentMetadata"),
+    MESRawEmailContentMetadata("MESRawEmailContentMetadata"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AuditLogRecordType(final String value) {
@@ -961,6 +996,41 @@ public enum AuditLogRecordType implements ValuedEnum {
             case "MDASH": return MDASH;
             case "DefenderSecurityForAIConfiguration": return DefenderSecurityForAIConfiguration;
             case "SparkCoreCustomLivePool": return SparkCoreCustomLivePool;
+            case "PlannerCustomFieldDefinition": return PlannerCustomFieldDefinition;
+            case "PlannerCustomFieldDefinitionList": return PlannerCustomFieldDefinitionList;
+            case "SyntheticMediaDetectionEvent": return SyntheticMediaDetectionEvent;
+            case "VivaGlintVivaInsightsIntegration": return VivaGlintVivaInsightsIntegration;
+            case "PeopleSkillsAdmin": return PeopleSkillsAdmin;
+            case "PeopleSkillsUser": return PeopleSkillsUser;
+            case "DSPMAdminActivity": return DSPMAdminActivity;
+            case "OnDemandExchangeClassification": return OnDemandExchangeClassification;
+            case "UniversalPrintSecureScan": return UniversalPrintSecureScan;
+            case "CloudSecurityManagement": return CloudSecurityManagement;
+            case "CloudSecurityConnector": return CloudSecurityConnector;
+            case "CloudSecurityEnablement": return CloudSecurityEnablement;
+            case "MCSRawEmailContentMetadata": return MCSRawEmailContentMetadata;
+            case "AIGuardrail": return AIGuardrail;
+            case "A365AIGuardrail": return A365AIGuardrail;
+            case "WorkIQAdminActivity": return WorkIQAdminActivity;
+            case "VivaGlintClientConfiguration": return VivaGlintClientConfiguration;
+            case "VivaGlintDataRetention": return VivaGlintDataRetention;
+            case "FilteringTeamsMessageFileInfo": return FilteringTeamsMessageFileInfo;
+            case "SharePointFileArchivePolicy": return SharePointFileArchivePolicy;
+            case "DefenderAutomationRule": return DefenderAutomationRule;
+            case "DefenderGeneratedPlaybook": return DefenderGeneratedPlaybook;
+            case "DefenderIntegration": return DefenderIntegration;
+            case "P4AIDagSitePermissionsRecord": return P4AIDagSitePermissionsRecord;
+            case "PlannerDependency": return PlannerDependency;
+            case "PlannerDependencyList": return PlannerDependencyList;
+            case "CSCContentMetadata": return CSCContentMetadata;
+            case "MicrosoftSecurityForAIConfiguration": return MicrosoftSecurityForAIConfiguration;
+            case "MicrosoftSecurityForAIRealTimeProtection": return MicrosoftSecurityForAIRealTimeProtection;
+            case "MTPContentMetadata": return MTPContentMetadata;
+            case "ComplianceEvaluationIncomplete": return ComplianceEvaluationIncomplete;
+            case "ComplianceEndpointEvaluationIncomplete": return ComplianceEndpointEvaluationIncomplete;
+            case "MicrosoftTeamsMoveMessages": return MicrosoftTeamsMoveMessages;
+            case "ECSContentMetadata": return ECSContentMetadata;
+            case "MESRawEmailContentMetadata": return MESRawEmailContentMetadata;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

@@ -36,7 +36,7 @@ public class SearchRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/restorePoints/search", rawUrl);
     }
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. You can also provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param body The request body
      * @return a {@link RestorePointSearchResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class SearchRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. You can also provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RestorePointSearchResponse}
@@ -63,7 +63,7 @@ public class SearchRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RestorePointSearchResponse::createFromDiscriminatorValue);
     }
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. You can also provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class SearchRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. You can also provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -124,6 +124,7 @@ public class Calendar extends Entity implements Parsable {
         deserializerMap.put("hexColor", (n) -> { this.setHexColor(n.getStringValue()); });
         deserializerMap.put("isDefaultCalendar", (n) -> { this.setIsDefaultCalendar(n.getBooleanValue()); });
         deserializerMap.put("isRemovable", (n) -> { this.setIsRemovable(n.getBooleanValue()); });
+        deserializerMap.put("isSharedWithMe", (n) -> { this.setIsSharedWithMe(n.getBooleanValue()); });
         deserializerMap.put("isTallyingResponses", (n) -> { this.setIsTallyingResponses(n.getBooleanValue()); });
         deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -154,6 +155,14 @@ public class Calendar extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsRemovable() {
         return this.backingStore.get("isRemovable");
+    }
+    /**
+     * Gets the isSharedWithMe property value. true if someone shared this calendar with the user; false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client and can be reset when sharing is canceled through the client or the corresponding calendarPermission resource. Read-only.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsSharedWithMe() {
+        return this.backingStore.get("isSharedWithMe");
     }
     /**
      * Gets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users&apos; primary calendars support tracking of meeting responses.
@@ -215,6 +224,7 @@ public class Calendar extends Entity implements Parsable {
         writer.writeStringValue("hexColor", this.getHexColor());
         writer.writeBooleanValue("isDefaultCalendar", this.getIsDefaultCalendar());
         writer.writeBooleanValue("isRemovable", this.getIsRemovable());
+        writer.writeBooleanValue("isSharedWithMe", this.getIsSharedWithMe());
         writer.writeBooleanValue("isTallyingResponses", this.getIsTallyingResponses());
         writer.writeCollectionOfObjectValues("multiValueExtendedProperties", this.getMultiValueExtendedProperties());
         writer.writeStringValue("name", this.getName());
@@ -311,6 +321,13 @@ public class Calendar extends Entity implements Parsable {
      */
     public void setIsRemovable(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isRemovable", value);
+    }
+    /**
+     * Sets the isSharedWithMe property value. true if someone shared this calendar with the user; false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client and can be reset when sharing is canceled through the client or the corresponding calendarPermission resource. Read-only.
+     * @param value Value to set for the isSharedWithMe property.
+     */
+    public void setIsSharedWithMe(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isSharedWithMe", value);
     }
     /**
      * Sets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users&apos; primary calendars support tracking of meeting responses.

@@ -5,6 +5,7 @@ import com.microsoft.graph.models.SolutionsRoot;
 import com.microsoft.graph.solutions.backuprestore.BackupRestoreRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.BookingBusinessesRequestBuilder;
 import com.microsoft.graph.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
+import com.microsoft.graph.solutions.migrations.MigrationsRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.VirtualEventsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -47,6 +48,14 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BookingCurrenciesRequestBuilder bookingCurrencies() {
         return new BookingCurrenciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the migrations property of the microsoft.graph.solutionsRoot entity.
+     * @return a {@link MigrationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MigrationsRequestBuilder migrations() {
+        return new MigrationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the virtualEvents property of the microsoft.graph.solutionsRoot entity.

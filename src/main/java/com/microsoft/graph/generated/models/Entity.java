@@ -32,7 +32,9 @@ import com.microsoft.graph.models.identitygovernance.TaskProcessingResult;
 import com.microsoft.graph.models.identitygovernance.TaskReport;
 import com.microsoft.graph.models.identitygovernance.UserProcessingResult;
 import com.microsoft.graph.models.identitygovernance.WorkflowTemplate;
+import com.microsoft.graph.models.partners.billing.AzureAggregatedUsage;
 import com.microsoft.graph.models.partners.billing.AzureUsage;
+import com.microsoft.graph.models.partners.billing.BilledAggregatedUsage;
 import com.microsoft.graph.models.partners.billing.BilledReconciliation;
 import com.microsoft.graph.models.partners.billing.BilledUsage;
 import com.microsoft.graph.models.partners.billing.Billing;
@@ -68,6 +70,7 @@ import com.microsoft.graph.models.security.DataSet;
 import com.microsoft.graph.models.security.DataSource;
 import com.microsoft.graph.models.security.DataSourceContainer;
 import com.microsoft.graph.models.security.DepartmentTemplate;
+import com.microsoft.graph.models.security.DetectionRule;
 import com.microsoft.graph.models.security.DispositionReviewStage;
 import com.microsoft.graph.models.security.EdiscoveryAddToReviewSetOperation;
 import com.microsoft.graph.models.security.EdiscoveryCase;
@@ -113,6 +116,7 @@ import com.microsoft.graph.models.security.PassiveDnsRecord;
 import com.microsoft.graph.models.security.RetentionEvent;
 import com.microsoft.graph.models.security.RetentionEventType;
 import com.microsoft.graph.models.security.RetentionLabel;
+import com.microsoft.graph.models.security.RulesRoot;
 import com.microsoft.graph.models.security.Search;
 import com.microsoft.graph.models.security.Sensor;
 import com.microsoft.graph.models.security.SensorCandidate;
@@ -328,6 +332,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.b2BSignInActivityMetricsInitial": return new B2BSignInActivityMetricsInitial();
             case "#microsoft.graph.b2BSignInActivityMetricsRecent": return new B2BSignInActivityMetricsRecent();
             case "#microsoft.graph.b2xIdentityUserFlow": return new B2xIdentityUserFlow();
+            case "#microsoft.graph.backupReport": return new BackupReport();
             case "#microsoft.graph.backupRestoreRoot": return new BackupRestoreRoot();
             case "#microsoft.graph.baseItem": return new BaseItem();
             case "#microsoft.graph.baseItemVersion": return new BaseItemVersion();
@@ -441,6 +446,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.crossTenantMailTipsAll": return new CrossTenantMailTipsAll();
             case "#microsoft.graph.crossTenantMailTipsLimited": return new CrossTenantMailTipsLimited();
             case "#microsoft.graph.crossTenantMigration": return new CrossTenantMigration();
+            case "#microsoft.graph.crossTenantMigrationJob": return new CrossTenantMigrationJob();
+            case "#microsoft.graph.crossTenantMigrationTask": return new CrossTenantMigrationTask();
             case "#microsoft.graph.crossTenantOpenProfileCard": return new CrossTenantOpenProfileCard();
             case "#microsoft.graph.crossTenantPlacesDeskBooking": return new CrossTenantPlacesDeskBooking();
             case "#microsoft.graph.crossTenantPlacesRoomBooking": return new CrossTenantPlacesRoomBooking();
@@ -515,6 +522,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.directoryObject": return new DirectoryObject();
             case "#microsoft.graph.directoryObjectPartnerReference": return new DirectoryObjectPartnerReference();
             case "#microsoft.graph.directoryRole": return new DirectoryRole();
+            case "#microsoft.graph.directoryRoleManagementDeletedItemContainer": return new DirectoryRoleManagementDeletedItemContainer();
             case "#microsoft.graph.directoryRoleTemplate": return new DirectoryRoleTemplate();
             case "#microsoft.graph.documentSetVersion": return new DocumentSetVersion();
             case "#microsoft.graph.domain": return new Domain();
@@ -702,10 +710,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.itemInsights": return new ItemInsights();
             case "#microsoft.graph.itemRetentionLabel": return new ItemRetentionLabel();
             case "#microsoft.graph.labelContentRight": return new LabelContentRight();
-            case "#microsoft.graph.landingPage": return new LandingPage();
-            case "#microsoft.graph.landingPageDetail": return new LandingPageDetail();
-            case "#microsoft.graph.learningAssignment": return new LearningAssignment();
-            case "#microsoft.graph.learningContent": return new LearningContent();
         }
         return null;
     }
@@ -717,6 +721,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.landingPage": return new LandingPage();
+            case "#microsoft.graph.landingPageDetail": return new LandingPageDetail();
+            case "#microsoft.graph.learningAssignment": return new LearningAssignment();
+            case "#microsoft.graph.learningContent": return new LearningContent();
             case "#microsoft.graph.learningCourseActivity": return new LearningCourseActivity();
             case "#microsoft.graph.learningProvider": return new LearningProvider();
             case "#microsoft.graph.learningSelfInitiatedCourse": return new LearningSelfInitiatedCourse();
@@ -788,6 +796,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget": return new MicrosoftAuthenticatorAuthenticationMethodTarget();
             case "#microsoft.graph.microsoftStoreForBusinessApp": return new MicrosoftStoreForBusinessApp();
+            case "#microsoft.graph.migrationsRoot": return new MigrationsRoot();
             case "#microsoft.graph.mobileApp": return new MobileApp();
             case "#microsoft.graph.mobileAppAssignment": return new MobileAppAssignment();
             case "#microsoft.graph.mobileAppCategory": return new MobileAppCategory();
@@ -867,7 +876,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.participantJoiningNotification": return new ParticipantJoiningNotification();
             case "#microsoft.graph.participantLeftNotification": return new ParticipantLeftNotification();
             case "#microsoft.graph.partners": return new Partners();
+            case "#microsoft.graph.partners.billing.azureAggregatedUsage": return new AzureAggregatedUsage();
             case "#microsoft.graph.partners.billing.azureUsage": return new AzureUsage();
+            case "#microsoft.graph.partners.billing.billedAggregatedUsage": return new BilledAggregatedUsage();
             case "#microsoft.graph.partners.billing.billedReconciliation": return new BilledReconciliation();
             case "#microsoft.graph.partners.billing.billedUsage": return new BilledUsage();
             case "#microsoft.graph.partners.billing.billing": return new Billing();
@@ -1025,6 +1036,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.dataSource": return new DataSource();
             case "#microsoft.graph.security.dataSourceContainer": return new DataSourceContainer();
             case "#microsoft.graph.security.departmentTemplate": return new DepartmentTemplate();
+            case "#microsoft.graph.security.detectionRule": return new DetectionRule();
             case "#microsoft.graph.security.dispositionReviewStage": return new DispositionReviewStage();
             case "#microsoft.graph.security.ediscoveryAddToReviewSetOperation": return new EdiscoveryAddToReviewSetOperation();
             case "#microsoft.graph.security.ediscoveryCase": return new EdiscoveryCase();
@@ -1070,6 +1082,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.retentionEvent": return new RetentionEvent();
             case "#microsoft.graph.security.retentionEventType": return new RetentionEventType();
             case "#microsoft.graph.security.retentionLabel": return new RetentionLabel();
+            case "#microsoft.graph.security.rulesRoot": return new RulesRoot();
             case "#microsoft.graph.security.search": return new Search();
             case "#microsoft.graph.security.sensor": return new Sensor();
             case "#microsoft.graph.security.sensorCandidate": return new SensorCandidate();
@@ -1134,6 +1147,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.simulation": return new Simulation();
             case "#microsoft.graph.simulationAutomation": return new SimulationAutomation();
             case "#microsoft.graph.simulationAutomationRun": return new SimulationAutomationRun();
+            case "#microsoft.graph.singleValueExtendedProperty": return new SingleValueExtendedProperty();
             case "#microsoft.graph.singleValueLegacyExtendedProperty": return new SingleValueLegacyExtendedProperty();
             case "#microsoft.graph.site": return new Site();
             case "#microsoft.graph.sitePage": return new SitePage();
@@ -1207,16 +1221,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.termsAndConditionsAssignment": return new TermsAndConditionsAssignment();
             case "#microsoft.graph.termsOfUseContainer": return new TermsOfUseContainer();
             case "#microsoft.graph.termStore.group": return new Group();
-            case "#microsoft.graph.termStore.relation": return new Relation();
-            case "#microsoft.graph.termStore.set": return new Set();
-            case "#microsoft.graph.termStore.store": return new Store();
-            case "#microsoft.graph.termStore.term": return new Term();
-            case "#microsoft.graph.textWebPart": return new TextWebPart();
-            case "#microsoft.graph.threatAssessmentRequest": return new ThreatAssessmentRequest();
-            case "#microsoft.graph.threatAssessmentResult": return new ThreatAssessmentResult();
-            case "#microsoft.graph.thumbnailSet": return new ThumbnailSet();
-            case "#microsoft.graph.timeCard": return new TimeCard();
-            case "#microsoft.graph.timeOff": return new TimeOff();
         }
         return null;
     }
@@ -1228,6 +1232,16 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.termStore.relation": return new Relation();
+            case "#microsoft.graph.termStore.set": return new Set();
+            case "#microsoft.graph.termStore.store": return new Store();
+            case "#microsoft.graph.termStore.term": return new Term();
+            case "#microsoft.graph.textWebPart": return new TextWebPart();
+            case "#microsoft.graph.threatAssessmentRequest": return new ThreatAssessmentRequest();
+            case "#microsoft.graph.threatAssessmentResult": return new ThreatAssessmentResult();
+            case "#microsoft.graph.thumbnailSet": return new ThumbnailSet();
+            case "#microsoft.graph.timeCard": return new TimeCard();
+            case "#microsoft.graph.timeOff": return new TimeOff();
             case "#microsoft.graph.timeOffReason": return new TimeOffReason();
             case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
             case "#microsoft.graph.todo": return new Todo();

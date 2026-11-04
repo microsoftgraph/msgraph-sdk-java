@@ -82,7 +82,10 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the recent method.
      * @return a {@link RecentRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after November, 2027. as of 2025-11/Removal on 2025-11-13 and will be removed 2027-11-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RecentRequestBuilder recent() {
         return new RecentRequestBuilder(pathParameters, requestAdapter);
@@ -98,7 +101,10 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the sharedWithMe method.
      * @return a {@link SharedWithMeRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after November, 2027. as of 2025-11/Removal on 2025-11-13 and will be removed 2027-11-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SharedWithMeRequestBuilder sharedWithMe() {
         return new SharedWithMeRequestBuilder(pathParameters, requestAdapter);

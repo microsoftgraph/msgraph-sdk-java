@@ -33,6 +33,14 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this.backingStore.get("actionSource");
     }
     /**
+     * Gets the applicationMode property value. The applicationMode property
+     * @return a {@link ApplicationMode}
+     */
+    @jakarta.annotation.Nullable
+    public ApplicationMode getApplicationMode() {
+        return this.backingStore.get("applicationMode");
+    }
+    /**
      * Gets the autoTooltip property value. The autoTooltip property
      * @return a {@link String}
      */
@@ -64,6 +72,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionSource", (n) -> { this.setActionSource(n.getEnumValue(LabelActionSource::forValue)); });
+        deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode::forValue)); });
         deserializerMap.put("autoTooltip", (n) -> { this.setAutoTooltip(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -167,6 +176,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("actionSource", this.getActionSource());
+        writer.writeEnumValue("applicationMode", this.getApplicationMode());
         writer.writeStringValue("autoTooltip", this.getAutoTooltip());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -187,6 +197,13 @@ public class SensitivityLabel extends Entity implements Parsable {
      */
     public void setActionSource(@jakarta.annotation.Nullable final LabelActionSource value) {
         this.backingStore.set("actionSource", value);
+    }
+    /**
+     * Sets the applicationMode property value. The applicationMode property
+     * @param value Value to set for the applicationMode property.
+     */
+    public void setApplicationMode(@jakarta.annotation.Nullable final ApplicationMode value) {
+        this.backingStore.set("applicationMode", value);
     }
     /**
      * Sets the autoTooltip property value. The autoTooltip property

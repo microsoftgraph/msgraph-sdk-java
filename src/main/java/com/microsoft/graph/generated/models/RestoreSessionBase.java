@@ -79,6 +79,7 @@ public class RestoreSessionBase extends Entity implements Parsable {
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("restoreJobType", (n) -> { this.setRestoreJobType(n.getEnumValue(RestoreJobType::forValue)); });
         deserializerMap.put("restoreSessionArtifactCount", (n) -> { this.setRestoreSessionArtifactCount(n.getObjectValue(RestoreSessionArtifactCount::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RestoreSessionStatus::forValue)); });
@@ -99,6 +100,14 @@ public class RestoreSessionBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the policyId property value. The identifier of the protection policy that scopes the restore session. When supplied during creation or update, the service validates that the referenced protection units belong to the specified policy.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPolicyId() {
+        return this.backingStore.get("policyId");
     }
     /**
      * Gets the restoreJobType property value. Indicates whether the restore session was created normally or by a bulk job.
@@ -137,6 +146,7 @@ public class RestoreSessionBase extends Entity implements Parsable {
         writer.writeObjectValue("error", this.getError());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("policyId", this.getPolicyId());
         writer.writeEnumValue("restoreJobType", this.getRestoreJobType());
         writer.writeObjectValue("restoreSessionArtifactCount", this.getRestoreSessionArtifactCount());
         writer.writeEnumValue("status", this.getStatus());
@@ -182,6 +192,13 @@ public class RestoreSessionBase extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the policyId property value. The identifier of the protection policy that scopes the restore session. When supplied during creation or update, the service validates that the referenced protection units belong to the specified policy.
+     * @param value Value to set for the policyId property.
+     */
+    public void setPolicyId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("policyId", value);
     }
     /**
      * Sets the restoreJobType property value. Indicates whether the restore session was created normally or by a bulk job.
