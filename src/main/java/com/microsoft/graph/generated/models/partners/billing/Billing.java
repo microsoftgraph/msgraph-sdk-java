@@ -26,12 +26,21 @@ public class Billing extends Entity implements Parsable {
         return new Billing();
     }
     /**
+     * Gets the aggregatedUsage property value. The aggregatedUsage property
+     * @return a {@link AzureAggregatedUsage}
+     */
+    @jakarta.annotation.Nullable
+    public AzureAggregatedUsage getAggregatedUsage() {
+        return this.backingStore.get("aggregatedUsage");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("aggregatedUsage", (n) -> { this.setAggregatedUsage(n.getObjectValue(AzureAggregatedUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("manifests", (n) -> { this.setManifests(n.getCollectionOfObjectValues(Manifest::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(Operation::createFromDiscriminatorValue)); });
         deserializerMap.put("reconciliation", (n) -> { this.setReconciliation(n.getObjectValue(BillingReconciliation::createFromDiscriminatorValue)); });
@@ -77,10 +86,18 @@ public class Billing extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("aggregatedUsage", this.getAggregatedUsage());
         writer.writeCollectionOfObjectValues("manifests", this.getManifests());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeObjectValue("reconciliation", this.getReconciliation());
         writer.writeObjectValue("usage", this.getUsage());
+    }
+    /**
+     * Sets the aggregatedUsage property value. The aggregatedUsage property
+     * @param value Value to set for the aggregatedUsage property.
+     */
+    public void setAggregatedUsage(@jakarta.annotation.Nullable final AzureAggregatedUsage value) {
+        this.backingStore.set("aggregatedUsage", value);
     }
     /**
      * Sets the manifests property value. Represents metadata for the exported data.

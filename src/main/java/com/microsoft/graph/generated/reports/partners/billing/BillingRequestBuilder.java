@@ -2,6 +2,7 @@ package com.microsoft.graph.reports.partners.billing;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.partners.billing.Billing;
+import com.microsoft.graph.reports.partners.billing.aggregatedusage.AggregatedUsageRequestBuilder;
 import com.microsoft.graph.reports.partners.billing.manifests.ManifestsRequestBuilder;
 import com.microsoft.graph.reports.partners.billing.operations.OperationsRequestBuilder;
 import com.microsoft.graph.reports.partners.billing.reconciliation.ReconciliationRequestBuilder;
@@ -24,6 +25,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BillingRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the aggregatedUsage property of the microsoft.graph.partners.billing.billing entity.
+     * @return a {@link AggregatedUsageRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AggregatedUsageRequestBuilder aggregatedUsage() {
+        return new AggregatedUsageRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the manifests property of the microsoft.graph.partners.billing.billing entity.
      * @return a {@link ManifestsRequestBuilder}

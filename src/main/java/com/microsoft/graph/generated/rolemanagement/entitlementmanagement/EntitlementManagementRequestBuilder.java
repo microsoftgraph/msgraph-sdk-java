@@ -2,6 +2,7 @@ package com.microsoft.graph.rolemanagement.entitlementmanagement;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.RbacApplication;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.deleteditems.DeletedItemsRequestBuilder;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.resourcenamespaces.ResourceNamespacesRequestBuilder;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignments.RoleAssignmentsRequestBuilder;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentscheduleinstances.RoleAssignmentScheduleInstancesRequestBuilder;
@@ -29,6 +30,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the deletedItems property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link DeletedItemsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeletedItemsRequestBuilder deletedItems() {
+        return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
      * @return a {@link ResourceNamespacesRequestBuilder}

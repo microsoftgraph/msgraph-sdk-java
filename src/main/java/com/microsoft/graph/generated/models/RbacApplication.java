@@ -25,12 +25,21 @@ public class RbacApplication extends Entity implements Parsable {
         return new RbacApplication();
     }
     /**
+     * Gets the deletedItems property value. Container for custom role definitions that have been soft-deleted from Microsoft Entra directory role management.
+     * @return a {@link DirectoryRoleManagementDeletedItemContainer}
+     */
+    @jakarta.annotation.Nullable
+    public DirectoryRoleManagementDeletedItemContainer getDeletedItems() {
+        return this.backingStore.get("deletedItems");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getObjectValue(DirectoryRoleManagementDeletedItemContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceNamespaces", (n) -> { this.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
         deserializerMap.put("roleAssignments", (n) -> { this.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("roleAssignmentScheduleInstances", (n) -> { this.setRoleAssignmentScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleInstance::createFromDiscriminatorValue)); });
@@ -121,6 +130,7 @@ public class RbacApplication extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("deletedItems", this.getDeletedItems());
         writer.writeCollectionOfObjectValues("resourceNamespaces", this.getResourceNamespaces());
         writer.writeCollectionOfObjectValues("roleAssignments", this.getRoleAssignments());
         writer.writeCollectionOfObjectValues("roleAssignmentScheduleInstances", this.getRoleAssignmentScheduleInstances());
@@ -130,6 +140,13 @@ public class RbacApplication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("roleEligibilityScheduleInstances", this.getRoleEligibilityScheduleInstances());
         writer.writeCollectionOfObjectValues("roleEligibilityScheduleRequests", this.getRoleEligibilityScheduleRequests());
         writer.writeCollectionOfObjectValues("roleEligibilitySchedules", this.getRoleEligibilitySchedules());
+    }
+    /**
+     * Sets the deletedItems property value. Container for custom role definitions that have been soft-deleted from Microsoft Entra directory role management.
+     * @param value Value to set for the deletedItems property.
+     */
+    public void setDeletedItems(@jakarta.annotation.Nullable final DirectoryRoleManagementDeletedItemContainer value) {
+        this.backingStore.set("deletedItems", value);
     }
     /**
      * Sets the resourceNamespaces property value. The resourceNamespaces property

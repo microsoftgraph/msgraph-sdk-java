@@ -3,6 +3,7 @@ package com.microsoft.graph.admin.exchange.mailboxes.item.folders;
 import com.microsoft.graph.admin.exchange.mailboxes.item.folders.count.CountRequestBuilder;
 import com.microsoft.graph.admin.exchange.mailboxes.item.folders.delta.DeltaRequestBuilder;
 import com.microsoft.graph.admin.exchange.mailboxes.item.folders.item.MailboxFolderItemRequestBuilder;
+import com.microsoft.graph.models.MailboxFolder;
 import com.microsoft.graph.models.MailboxFolderCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -92,6 +93,33 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxFolderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
+     * Create a new mailboxFolder or child mailboxFolder in a user&apos;s mailbox.
+     * @param body The request body
+     * @return a {@link MailboxFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-post-folders?view=graph-rest-1.0">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    public MailboxFolder post(@jakarta.annotation.Nonnull final MailboxFolder body) {
+        return post(body, null);
+    }
+    /**
+     * Create a new mailboxFolder or child mailboxFolder in a user&apos;s mailbox.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link MailboxFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-post-folders?view=graph-rest-1.0">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    public MailboxFolder post(@jakarta.annotation.Nonnull final MailboxFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, MailboxFolder::createFromDiscriminatorValue);
+    }
+    /**
      * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
      * @return a {@link RequestInformation}
      */
@@ -109,6 +137,30 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
+        return requestInfo;
+    }
+    /**
+     * Create a new mailboxFolder or child mailboxFolder in a user&apos;s mailbox.
+     * @param body The request body
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailboxFolder body) {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create a new mailboxFolder or child mailboxFolder in a user&apos;s mailbox.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailboxFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -194,5 +246,11 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

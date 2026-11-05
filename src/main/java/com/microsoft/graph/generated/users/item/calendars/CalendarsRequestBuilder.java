@@ -4,6 +4,7 @@ import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.CalendarCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.calendars.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.calendars.delta.DeltaRequestBuilder;
 import com.microsoft.graph.users.item.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -30,6 +31,14 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the calendars property of the microsoft.graph.user entity.

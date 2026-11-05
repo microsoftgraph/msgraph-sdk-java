@@ -26,7 +26,10 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
      * @return a {@link SharedRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SharedRequestBuilder shared() {
         return new SharedRequestBuilder(pathParameters, requestAdapter);
@@ -42,7 +45,10 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
      * @return a {@link UsedRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data after January, 2028. as of 2026-01/Removal on 2026-01-28 and will be removed 2028-01-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UsedRequestBuilder used() {
         return new UsedRequestBuilder(pathParameters, requestAdapter);

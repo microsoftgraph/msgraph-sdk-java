@@ -74,13 +74,22 @@ public class SearchPostRequestBody implements AdditionalDataHolder, BackedModel,
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("artifactQuery", (n) -> { this.setArtifactQuery(n.getObjectValue(ArtifactQuery::createFromDiscriminatorValue)); });
+        deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("protectionTimePeriod", (n) -> { this.setProtectionTimePeriod(n.getObjectValue(TimePeriod::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionUnitIds", (n) -> { this.setProtectionUnitIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("restorePointPreference", (n) -> { this.setRestorePointPreference(n.getEnumValue(RestorePointPreference::forValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getEnumSetValue(RestorePointTags::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the policyId property value. The policyId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPolicyId() {
+        return this.backingStore.get("policyId");
     }
     /**
      * Gets the protectionTimePeriod property value. The protectionTimePeriod property
@@ -121,6 +130,7 @@ public class SearchPostRequestBody implements AdditionalDataHolder, BackedModel,
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("artifactQuery", this.getArtifactQuery());
+        writer.writeStringValue("policyId", this.getPolicyId());
         writer.writeObjectValue("protectionTimePeriod", this.getProtectionTimePeriod());
         writer.writeCollectionOfPrimitiveValues("protectionUnitIds", this.getProtectionUnitIds());
         writer.writeEnumValue("restorePointPreference", this.getRestorePointPreference());
@@ -148,6 +158,13 @@ public class SearchPostRequestBody implements AdditionalDataHolder, BackedModel,
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the policyId property value. The policyId property
+     * @param value Value to set for the policyId property.
+     */
+    public void setPolicyId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("policyId", value);
     }
     /**
      * Sets the protectionTimePeriod property value. The protectionTimePeriod property

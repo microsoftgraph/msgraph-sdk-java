@@ -51,6 +51,7 @@ public class TodoTaskList extends Entity implements Parsable {
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("isOwner", (n) -> { this.setIsOwner(n.getBooleanValue()); });
         deserializerMap.put("isShared", (n) -> { this.setIsShared(n.getBooleanValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(TodoTask::createFromDiscriminatorValue)); });
         deserializerMap.put("wellknownListName", (n) -> { this.setWellknownListName(n.getEnumValue(WellknownListName::forValue)); });
         return deserializerMap;
@@ -70,6 +71,14 @@ public class TodoTaskList extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
         return this.backingStore.get("isShared");
+    }
+    /**
+     * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task list. Nullable.
+     * @return a {@link java.util.List<SingleValueExtendedProperty>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SingleValueExtendedProperty> getSingleValueExtendedProperties() {
+        return this.backingStore.get("singleValueExtendedProperties");
     }
     /**
      * Gets the tasks property value. The tasks in this task list. Read-only. Nullable.
@@ -98,6 +107,7 @@ public class TodoTaskList extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeBooleanValue("isOwner", this.getIsOwner());
         writer.writeBooleanValue("isShared", this.getIsShared());
+        writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
         writer.writeEnumValue("wellknownListName", this.getWellknownListName());
     }
@@ -128,6 +138,13 @@ public class TodoTaskList extends Entity implements Parsable {
      */
     public void setIsShared(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isShared", value);
+    }
+    /**
+     * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task list. Nullable.
+     * @param value Value to set for the singleValueExtendedProperties property.
+     */
+    public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueExtendedProperty> value) {
+        this.backingStore.set("singleValueExtendedProperties", value);
     }
     /**
      * Sets the tasks property value. The tasks in this task list. Read-only. Nullable.

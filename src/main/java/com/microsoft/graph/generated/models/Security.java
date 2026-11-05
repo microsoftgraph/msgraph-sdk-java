@@ -7,6 +7,7 @@ import com.microsoft.graph.models.security.CollaborationRoot;
 import com.microsoft.graph.models.security.IdentityContainer;
 import com.microsoft.graph.models.security.Incident;
 import com.microsoft.graph.models.security.LabelsRoot;
+import com.microsoft.graph.models.security.RulesRoot;
 import com.microsoft.graph.models.security.ThreatIntelligence;
 import com.microsoft.graph.models.security.TriggersRoot;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
@@ -107,6 +108,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("identities", (n) -> { this.setIdentities(n.getObjectValue(IdentityContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
         deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("rules", (n) -> { this.setRules(n.getObjectValue(RulesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScores", (n) -> { this.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
         deserializerMap.put("subjectRightsRequests", (n) -> { this.setSubjectRightsRequests(n.getCollectionOfObjectValues(SubjectRightsRequest::createFromDiscriminatorValue)); });
@@ -138,6 +140,14 @@ public class Security extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public LabelsRoot getLabels() {
         return this.backingStore.get("labels");
+    }
+    /**
+     * Gets the rules property value. Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
+     * @return a {@link RulesRoot}
+     */
+    @jakarta.annotation.Nullable
+    public RulesRoot getRules() {
+        return this.backingStore.get("rules");
     }
     /**
      * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
@@ -204,6 +214,7 @@ public class Security extends Entity implements Parsable {
         writer.writeObjectValue("identities", this.getIdentities());
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeObjectValue("labels", this.getLabels());
+        writer.writeObjectValue("rules", this.getRules());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
         writer.writeCollectionOfObjectValues("subjectRightsRequests", this.getSubjectRightsRequests());
@@ -280,6 +291,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setLabels(@jakarta.annotation.Nullable final LabelsRoot value) {
         this.backingStore.set("labels", value);
+    }
+    /**
+     * Sets the rules property value. Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
+     * @param value Value to set for the rules property.
+     */
+    public void setRules(@jakarta.annotation.Nullable final RulesRoot value) {
+        this.backingStore.set("rules", value);
     }
     /**
      * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property

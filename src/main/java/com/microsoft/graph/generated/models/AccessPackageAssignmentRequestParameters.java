@@ -56,7 +56,7 @@ public class AccessPackageAssignmentRequestParameters implements AdditionalDataH
         return this.backingStore;
     }
     /**
-     * Gets the bypassApproval property value. The bypassApproval property
+     * Gets the bypassApproval property value. When true, bypasses the approval requirement configured on the access package policy for this request.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class AccessPackageAssignmentRequestParameters implements AdditionalDataH
         this.backingStore = value;
     }
     /**
-     * Sets the bypassApproval property value. The bypassApproval property
+     * Sets the bypassApproval property value. When true, bypasses the approval requirement configured on the access package policy for this request.
      * @param value Value to set for the bypassApproval property.
      */
     public void setBypassApproval(@jakarta.annotation.Nullable final Boolean value) {

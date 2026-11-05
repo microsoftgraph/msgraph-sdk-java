@@ -8,7 +8,9 @@ public enum CustomExtensionResourceType implements ValuedEnum {
     EntraRoles("entraRoles"),
     AzureResources("azureResources"),
     EntraGroups("entraGroups"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ApplicationAuthorization("applicationAuthorization"),
+    AppRoles("appRoles");
     public final String value;
     CustomExtensionResourceType(final String value) {
         this.value = value;
@@ -23,6 +25,8 @@ public enum CustomExtensionResourceType implements ValuedEnum {
             case "azureResources": return AzureResources;
             case "entraGroups": return EntraGroups;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "applicationAuthorization": return ApplicationAuthorization;
+            case "appRoles": return AppRoles;
             default: return null;
         }
     }

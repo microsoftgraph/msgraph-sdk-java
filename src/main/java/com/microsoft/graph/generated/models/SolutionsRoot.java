@@ -85,13 +85,22 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("backupRestore", (n) -> { this.setBackupRestore(n.getObjectValue(BackupRestoreRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingBusinesses", (n) -> { this.setBookingBusinesses(n.getCollectionOfObjectValues(BookingBusiness::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingCurrencies", (n) -> { this.setBookingCurrencies(n.getCollectionOfObjectValues(BookingCurrency::createFromDiscriminatorValue)); });
+        deserializerMap.put("migrations", (n) -> { this.setMigrations(n.getObjectValue(MigrationsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("virtualEvents", (n) -> { this.setVirtualEvents(n.getObjectValue(VirtualEventsRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the migrations property value. The entry point for cross-tenant migration operations.
+     * @return a {@link MigrationsRoot}
+     */
+    @jakarta.annotation.Nullable
+    public MigrationsRoot getMigrations() {
+        return this.backingStore.get("migrations");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -118,6 +127,7 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeObjectValue("backupRestore", this.getBackupRestore());
         writer.writeCollectionOfObjectValues("bookingBusinesses", this.getBookingBusinesses());
         writer.writeCollectionOfObjectValues("bookingCurrencies", this.getBookingCurrencies());
+        writer.writeObjectValue("migrations", this.getMigrations());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("virtualEvents", this.getVirtualEvents());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -157,6 +167,13 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setBookingCurrencies(@jakarta.annotation.Nullable final java.util.List<BookingCurrency> value) {
         this.backingStore.set("bookingCurrencies", value);
+    }
+    /**
+     * Sets the migrations property value. The entry point for cross-tenant migration operations.
+     * @param value Value to set for the migrations property.
+     */
+    public void setMigrations(@jakarta.annotation.Nullable final MigrationsRoot value) {
+        this.backingStore.set("migrations", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

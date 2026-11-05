@@ -36,19 +36,21 @@ public class RefreshStatusRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/relatedTenants/refreshStatus()", rawUrl);
     }
     /**
-     * Invoke function refreshStatus
+     * Get the status of the most recent related tenants refresh operation.
      * @return a {@link RelatedTenantsRefreshStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-relatedtenant-refreshstatus?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RelatedTenantsRefreshStatus get() {
         return get(null);
     }
     /**
-     * Invoke function refreshStatus
+     * Get the status of the most recent related tenants refresh operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RelatedTenantsRefreshStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-relatedtenant-refreshstatus?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RelatedTenantsRefreshStatus get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class RefreshStatusRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RelatedTenantsRefreshStatus::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function refreshStatus
+     * Get the status of the most recent related tenants refresh operation.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class RefreshStatusRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function refreshStatus
+     * Get the status of the most recent related tenants refresh operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

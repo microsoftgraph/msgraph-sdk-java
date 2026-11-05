@@ -18,6 +18,7 @@ import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessprotection
 import com.microsoft.graph.solutions.backuprestore.onedriveforbusinessrestoresessions.OneDriveForBusinessRestoreSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.protectionpolicies.ProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.protectionunits.ProtectionUnitsRequestBuilder;
+import com.microsoft.graph.solutions.backuprestore.reports.ReportsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.restorepoints.RestorePointsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.restoresessions.RestoreSessionsRequestBuilder;
 import com.microsoft.graph.solutions.backuprestore.serviceapps.ServiceAppsRequestBuilder;
@@ -172,6 +173,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProtectionUnitsRequestBuilder protectionUnits() {
         return new ProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the reports property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link ReportsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReportsRequestBuilder reports() {
+        return new ReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the restorePoints property of the microsoft.graph.backupRestoreRoot entity.

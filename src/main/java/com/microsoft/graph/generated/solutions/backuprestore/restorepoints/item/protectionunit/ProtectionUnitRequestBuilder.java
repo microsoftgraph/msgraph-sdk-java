@@ -37,7 +37,7 @@ public class ProtectionUnitRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/restorePoints/{restorePoint%2Did}/protectionUnit{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The site, drive, or mailbox units that are protected under a protection policy.
+     * The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @return a {@link ProtectionUnitBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class ProtectionUnitRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The site, drive, or mailbox units that are protected under a protection policy.
+     * The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProtectionUnitBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class ProtectionUnitRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProtectionUnitBase::createFromDiscriminatorValue);
     }
     /**
-     * The site, drive, or mailbox units that are protected under a protection policy.
+     * The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ProtectionUnitRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The site, drive, or mailbox units that are protected under a protection policy.
+     * The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class ProtectionUnitRequestBuilder extends BaseRequestBuilder {
         return new ProtectionUnitRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The site, drive, or mailbox units that are protected under a protection policy.
+     * The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

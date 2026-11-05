@@ -3,6 +3,7 @@ package com.microsoft.graph.rolemanagement.entitlementmanagement.roledefinitions
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
 import com.microsoft.graph.rolemanagement.entitlementmanagement.roledefinitions.item.inheritspermissionsfrom.InheritsPermissionsFromRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roledefinitions.item.restore.RestoreRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public InheritsPermissionsFromRequestBuilder inheritsPermissionsFrom() {
         return new InheritsPermissionsFromRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link UnifiedRoleDefinitionItemRequestBuilder} and sets the default values.

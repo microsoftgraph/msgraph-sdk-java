@@ -26,7 +26,7 @@ public class EnumeratedDomains extends ValidatingDomains implements Parsable {
         return new EnumeratedDomains();
     }
     /**
-     * Gets the domainNames property value. The domainNames property
+     * Gets the domainNames property value. List of federated or managed root domains that Microsoft Entra ID validates.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EnumeratedDomains extends ValidatingDomains implements Parsable {
         writer.writeCollectionOfPrimitiveValues("domainNames", this.getDomainNames());
     }
     /**
-     * Sets the domainNames property value. The domainNames property
+     * Sets the domainNames property value. List of federated or managed root domains that Microsoft Entra ID validates.
      * @param value Value to set for the domainNames property.
      */
     public void setDomainNames(@jakarta.annotation.Nullable final java.util.List<String> value) {

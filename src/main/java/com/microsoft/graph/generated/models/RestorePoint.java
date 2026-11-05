@@ -56,7 +56,7 @@ public class RestorePoint extends Entity implements Parsable {
         return this.backingStore.get("protectionDateTime");
     }
     /**
-     * Gets the protectionUnit property value. The site, drive, or mailbox units that are protected under a protection policy.
+     * Gets the protectionUnit property value. The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @return a {@link ProtectionUnitBase}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class RestorePoint extends Entity implements Parsable {
         this.backingStore.set("protectionDateTime", value);
     }
     /**
-     * Sets the protectionUnit property value. The site, drive, or mailbox units that are protected under a protection policy.
+     * Sets the protectionUnit property value. The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @param value Value to set for the protectionUnit property.
      */
     public void setProtectionUnit(@jakarta.annotation.Nullable final ProtectionUnitBase value) {

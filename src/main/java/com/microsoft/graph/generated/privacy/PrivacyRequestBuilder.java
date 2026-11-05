@@ -24,7 +24,10 @@ public class PrivacyRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
      * @return a {@link SubjectRightsRequestsRequestBuilder}
+     * @deprecated
+     * The subject rights request API under Privacy is deprecated and will stop working on  March 22, 2025. Please use the new API under Security. as of 2022-02/PrivacyDeprecate on 2022-03-22 and will be removed 2025-03-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SubjectRightsRequestsRequestBuilder subjectRightsRequests() {
         return new SubjectRightsRequestsRequestBuilder(pathParameters, requestAdapter);

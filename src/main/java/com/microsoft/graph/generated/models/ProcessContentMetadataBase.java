@@ -102,7 +102,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(ContentBase::createFromDiscriminatorValue)); });
         deserializerMap.put("contentCategory", (n) -> { this.setContentCategory(n.getEnumValue(ContentCategory::forValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
@@ -113,6 +113,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sensitivityLabels", (n) -> { this.setSensitivityLabels(n.getCollectionOfObjectValues(CurrentLabel::createFromDiscriminatorValue)); });
         deserializerMap.put("sequenceNumber", (n) -> { this.setSequenceNumber(n.getLongValue()); });
         return deserializerMap;
     }
@@ -165,6 +166,14 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the sensitivityLabels property value. The sensitivityLabels property
+     * @return a {@link java.util.List<CurrentLabel>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CurrentLabel> getSensitivityLabels() {
+        return this.backingStore.get("sensitivityLabels");
+    }
+    /**
      * Gets the sequenceNumber property value. A sequence number indicating the order in which content was generated or should be processed, required when correlationId is used.
      * @return a {@link Long}
      */
@@ -188,6 +197,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeCollectionOfObjectValues("sensitivityLabels", this.getSensitivityLabels());
         writer.writeLongValue("sequenceNumber", this.getSequenceNumber());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -275,6 +285,13 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the sensitivityLabels property value. The sensitivityLabels property
+     * @param value Value to set for the sensitivityLabels property.
+     */
+    public void setSensitivityLabels(@jakarta.annotation.Nullable final java.util.List<CurrentLabel> value) {
+        this.backingStore.set("sensitivityLabels", value);
     }
     /**
      * Sets the sequenceNumber property value. A sequence number indicating the order in which content was generated or should be processed, required when correlationId is used.

@@ -129,7 +129,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.backingStore.get("featureRolloutPolicies");
     }
     /**
-     * Gets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
+     * Gets the federatedTokenValidationPolicy property value. Represents a policy to control enabling or disabling validation of federation authentication tokens.
      * @return a {@link FederatedTokenValidationPolicy}
      */
     @jakarta.annotation.Nullable
@@ -353,7 +353,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this.backingStore.set("featureRolloutPolicies", value);
     }
     /**
-     * Sets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
+     * Sets the federatedTokenValidationPolicy property value. Represents a policy to control enabling or disabling validation of federation authentication tokens.
      * @param value Value to set for the federatedTokenValidationPolicy property.
      */
     public void setFederatedTokenValidationPolicy(@jakarta.annotation.Nullable final FederatedTokenValidationPolicy value) {

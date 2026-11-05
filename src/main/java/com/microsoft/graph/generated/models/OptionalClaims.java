@@ -69,9 +69,10 @@ public class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("accessToken", (n) -> { this.setAccessToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
         deserializerMap.put("idToken", (n) -> { this.setIdToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
+        deserializerMap.put("kerberosTicket", (n) -> { this.setKerberosTicket(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("saml2Token", (n) -> { this.setSaml2Token(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -83,6 +84,14 @@ public class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nullable
     public java.util.List<OptionalClaim> getIdToken() {
         return this.backingStore.get("idToken");
+    }
+    /**
+     * Gets the kerberosTicket property value. The kerberosTicket property
+     * @return a {@link java.util.List<OptionalClaim>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OptionalClaim> getKerberosTicket() {
+        return this.backingStore.get("kerberosTicket");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -108,6 +117,7 @@ public class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsab
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("accessToken", this.getAccessToken());
         writer.writeCollectionOfObjectValues("idToken", this.getIdToken());
+        writer.writeCollectionOfObjectValues("kerberosTicket", this.getKerberosTicket());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("saml2Token", this.getSaml2Token());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -140,6 +150,13 @@ public class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void setIdToken(@jakarta.annotation.Nullable final java.util.List<OptionalClaim> value) {
         this.backingStore.set("idToken", value);
+    }
+    /**
+     * Sets the kerberosTicket property value. The kerberosTicket property
+     * @param value Value to set for the kerberosTicket property.
+     */
+    public void setKerberosTicket(@jakarta.annotation.Nullable final java.util.List<OptionalClaim> value) {
+        this.backingStore.set("kerberosTicket", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
