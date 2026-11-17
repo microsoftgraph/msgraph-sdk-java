@@ -49,10 +49,9 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!-- Dependency versions -->
-        <microsoft-graph-core.version>3.6.6</microsoft-graph-core.version>
-        <okhttp.version>4.12.0</okhttp.version>
+        <microsoft-graph-core.version>3.6.6-SNAPSHOT</microsoft-graph-core.version>
         <jakarta-annotation.version>2.1.1</jakarta-annotation.version>
-        <kiota.version>1.9.2</kiota.version>
+        <kiota.version>1.10.5-SNAPSHOT</kiota.version>
 
         <!-- Plugin versions -->
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
@@ -87,13 +86,7 @@
             <artifactId>microsoft-graph-core</artifactId>
             <version>${microsoft-graph-core.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-            <version>${okhttp.version}</version>
-        </dependency>
-
+       
         <dependency>
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
