@@ -33,6 +33,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(SmsAuthenticationMethodTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("telecomProviderSettings", (n) -> { this.setTelecomProviderSettings(n.getObjectValue(TelecomProviderSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -44,6 +45,14 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
         return this.backingStore.get("includeTargets");
     }
     /**
+     * Gets the telecomProviderSettings property value. Settings for routing SMS authentication traffic through a telecom provider integration.
+     * @return a {@link TelecomProviderSettings}
+     */
+    @jakarta.annotation.Nullable
+    public TelecomProviderSettings getTelecomProviderSettings() {
+        return this.backingStore.get("telecomProviderSettings");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -51,6 +60,7 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
+        writer.writeObjectValue("telecomProviderSettings", this.getTelecomProviderSettings());
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
@@ -58,5 +68,12 @@ public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodCo
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<SmsAuthenticationMethodTarget> value) {
         this.backingStore.set("includeTargets", value);
+    }
+    /**
+     * Sets the telecomProviderSettings property value. Settings for routing SMS authentication traffic through a telecom provider integration.
+     * @param value Value to set for the telecomProviderSettings property.
+     */
+    public void setTelecomProviderSettings(@jakarta.annotation.Nullable final TelecomProviderSettings value) {
+        this.backingStore.set("telecomProviderSettings", value);
     }
 }

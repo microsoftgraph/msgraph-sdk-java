@@ -524,6 +524,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.directoryRole": return new DirectoryRole();
             case "#microsoft.graph.directoryRoleManagementDeletedItemContainer": return new DirectoryRoleManagementDeletedItemContainer();
             case "#microsoft.graph.directoryRoleTemplate": return new DirectoryRoleTemplate();
+            case "#microsoft.graph.distributionList": return new DistributionList();
+            case "#microsoft.graph.distributionListMember": return new DistributionListMember();
             case "#microsoft.graph.documentSetVersion": return new DocumentSetVersion();
             case "#microsoft.graph.domain": return new Domain();
             case "#microsoft.graph.domainDnsCnameRecord": return new DomainDnsCnameRecord();
@@ -708,8 +710,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.itemAnalytics": return new ItemAnalytics();
             case "#microsoft.graph.itemAttachment": return new ItemAttachment();
             case "#microsoft.graph.itemInsights": return new ItemInsights();
-            case "#microsoft.graph.itemRetentionLabel": return new ItemRetentionLabel();
-            case "#microsoft.graph.labelContentRight": return new LabelContentRight();
         }
         return null;
     }
@@ -721,6 +721,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.itemRetentionLabel": return new ItemRetentionLabel();
+            case "#microsoft.graph.labelContentRight": return new LabelContentRight();
             case "#microsoft.graph.landingPage": return new LandingPage();
             case "#microsoft.graph.landingPageDetail": return new LandingPageDetail();
             case "#microsoft.graph.learningAssignment": return new LearningAssignment();
@@ -802,6 +804,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.mobileAppCategory": return new MobileAppCategory();
             case "#microsoft.graph.mobileAppContent": return new MobileAppContent();
             case "#microsoft.graph.mobileAppContentFile": return new MobileAppContentFile();
+            case "#microsoft.graph.mobileAppContentScript": return new MobileAppContentScript();
             case "#microsoft.graph.mobileAppRelationship": return new MobileAppRelationship();
             case "#microsoft.graph.mobileAppTroubleshootingEvent": return new MobileAppTroubleshootingEvent();
             case "#microsoft.graph.mobileContainedApp": return new MobileContainedApp();
@@ -1218,9 +1221,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.tenantProtectionScopeContainer": return new TenantProtectionScopeContainer();
             case "#microsoft.graph.termsAndConditions": return new TermsAndConditions();
             case "#microsoft.graph.termsAndConditionsAcceptanceStatus": return new TermsAndConditionsAcceptanceStatus();
-            case "#microsoft.graph.termsAndConditionsAssignment": return new TermsAndConditionsAssignment();
-            case "#microsoft.graph.termsOfUseContainer": return new TermsOfUseContainer();
-            case "#microsoft.graph.termStore.group": return new Group();
         }
         return null;
     }
@@ -1232,6 +1232,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.termsAndConditionsAssignment": return new TermsAndConditionsAssignment();
+            case "#microsoft.graph.termsOfUseContainer": return new TermsOfUseContainer();
+            case "#microsoft.graph.termStore.group": return new Group();
             case "#microsoft.graph.termStore.relation": return new Relation();
             case "#microsoft.graph.termStore.set": return new Set();
             case "#microsoft.graph.termStore.store": return new Store();
@@ -1346,6 +1349,9 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.webApplicationFirewallVerificationModel": return new WebApplicationFirewallVerificationModel();
             case "#microsoft.graph.webPart": return new WebPart();
             case "#microsoft.graph.win32LobApp": return new Win32LobApp();
+            case "#microsoft.graph.win32LobAppInstallPowerShellScript": return new Win32LobAppInstallPowerShellScript();
+            case "#microsoft.graph.win32LobAppScript": return new Win32LobAppScript();
+            case "#microsoft.graph.win32LobAppUninstallPowerShellScript": return new Win32LobAppUninstallPowerShellScript();
             case "#microsoft.graph.windows10CompliancePolicy": return new Windows10CompliancePolicy();
             case "#microsoft.graph.windows10CustomConfiguration": return new Windows10CustomConfiguration();
             case "#microsoft.graph.windows10EndpointProtectionConfiguration": return new Windows10EndpointProtectionConfiguration();

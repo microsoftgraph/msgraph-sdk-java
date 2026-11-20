@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AgentUser extends User implements Parsable {
     /**
@@ -32,7 +33,16 @@ public class AgentUser extends User implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("managerApplications", (n) -> { this.setManagerApplications(n.getCollectionOfPrimitiveValues(UUID.class)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the managerApplications property value. The application IDs (appId values) authorized to manage the agent user&apos;s backing agent blueprint. Read-only. Not nullable. Returns an empty collection when no manager applications are configured. Returned only with $select and the microsoft.graph.agentUser type cast; see Get agentUser. Doesn&apos;t support $filter.
+     * @return a {@link java.util.List<UUID>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<UUID> getManagerApplications() {
+        return this.backingStore.get("managerApplications");
     }
     /**
      * Serializes information the current object
@@ -41,5 +51,12 @@ public class AgentUser extends User implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+    }
+    /**
+     * Sets the managerApplications property value. The application IDs (appId values) authorized to manage the agent user&apos;s backing agent blueprint. Read-only. Not nullable. Returns an empty collection when no manager applications are configured. Returned only with $select and the microsoft.graph.agentUser type cast; see Get agentUser. Doesn&apos;t support $filter.
+     * @param value Value to set for the managerApplications property.
+     */
+    public void setManagerApplications(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
+        this.backingStore.set("managerApplications", value);
     }
 }

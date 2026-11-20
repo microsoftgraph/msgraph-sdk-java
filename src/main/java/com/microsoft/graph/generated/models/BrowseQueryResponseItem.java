@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -56,14 +57,34 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
+     * Gets the createdBy property value. The identity of the user or application that created the item. Returned only when type is file or folder.
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getCreatedBy() {
+        return this.backingStore.get("createdBy");
+    }
+    /**
+     * Gets the createdDateTime property value. The date and time when the item was created. Returned only when type is file or folder. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("itemKey", (n) -> { this.setItemKey(n.getStringValue()); });
         deserializerMap.put("itemsCount", (n) -> { this.setItemsCount(n.getIntegerValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("sizeInBytes", (n) -> { this.setSizeInBytes(n.getStringValue()); });
@@ -86,6 +107,22 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nullable
     public Integer getItemsCount() {
         return this.backingStore.get("itemsCount");
+    }
+    /**
+     * Gets the lastModifiedBy property value. The identity of the user or application that last modified the item. Returned only when type is file or folder.
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getLastModifiedBy() {
+        return this.backingStore.get("lastModifiedBy");
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. The date and time when the item was last modified. Returned only when type is file or folder. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. The name of the item.
@@ -133,8 +170,12 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("createdBy", this.getCreatedBy());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("itemKey", this.getItemKey());
         writer.writeIntegerValue("itemsCount", this.getItemsCount());
+        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sizeInBytes", this.getSizeInBytes());
@@ -158,6 +199,20 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
+     * Sets the createdBy property value. The identity of the user or application that created the item. Returned only when type is file or folder.
+     * @param value Value to set for the createdBy property.
+     */
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("createdBy", value);
+    }
+    /**
+     * Sets the createdDateTime property value. The date and time when the item was created. Returned only when type is file or folder. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
+    }
+    /**
      * Sets the itemKey property value. Unique identifier of the returned item.
      * @param value Value to set for the itemKey property.
      */
@@ -170,6 +225,20 @@ public class BrowseQueryResponseItem implements AdditionalDataHolder, BackedMode
      */
     public void setItemsCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("itemsCount", value);
+    }
+    /**
+     * Sets the lastModifiedBy property value. The identity of the user or application that last modified the item. Returned only when type is file or folder.
+     * @param value Value to set for the lastModifiedBy property.
+     */
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("lastModifiedBy", value);
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. The date and time when the item was last modified. Returned only when type is file or folder. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. The name of the item.
