@@ -83,5 +83,5 @@ dependencies {
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:1.9.2'
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:1.9.2'
     implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:1.9.2'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:1.9.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:1.10.5'
 }
