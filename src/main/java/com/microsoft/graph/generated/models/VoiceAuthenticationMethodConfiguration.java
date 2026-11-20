@@ -34,6 +34,7 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("isOfficePhoneAllowed", (n) -> { this.setIsOfficePhoneAllowed(n.getBooleanValue()); });
+        deserializerMap.put("telecomProviderSettings", (n) -> { this.setTelecomProviderSettings(n.getObjectValue(TelecomProviderSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
         return this.backingStore.get("isOfficePhoneAllowed");
     }
     /**
+     * Gets the telecomProviderSettings property value. Settings for routing voice authentication traffic through a telecom provider integration.
+     * @return a {@link TelecomProviderSettings}
+     */
+    @jakarta.annotation.Nullable
+    public TelecomProviderSettings getTelecomProviderSettings() {
+        return this.backingStore.get("telecomProviderSettings");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
         writer.writeBooleanValue("isOfficePhoneAllowed", this.getIsOfficePhoneAllowed());
+        writer.writeObjectValue("telecomProviderSettings", this.getTelecomProviderSettings());
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
@@ -75,5 +85,12 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
      */
     public void setIsOfficePhoneAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isOfficePhoneAllowed", value);
+    }
+    /**
+     * Sets the telecomProviderSettings property value. Settings for routing voice authentication traffic through a telecom provider integration.
+     * @param value Value to set for the telecomProviderSettings property.
+     */
+    public void setTelecomProviderSettings(@jakarta.annotation.Nullable final TelecomProviderSettings value) {
+        this.backingStore.set("telecomProviderSettings", value);
     }
 }

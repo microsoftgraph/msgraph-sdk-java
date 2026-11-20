@@ -30,6 +30,22 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return new Win32LobApp();
     }
     /**
+     * Gets the activeInstallScript property value. Contains the unique identifier of the associated install script for this Win32 app to be used instead of the install command line by the managed device during app installation. When null, the install command line is used instead.
+     * @return a {@link MobileAppScriptReference}
+     */
+    @jakarta.annotation.Nullable
+    public MobileAppScriptReference getActiveInstallScript() {
+        return this.backingStore.get("activeInstallScript");
+    }
+    /**
+     * Gets the activeUninstallScript property value. Contains the unique identifier of the associated uninstall script for this Win32 app to be used instead of the uninstall command line by the managed device during app uninstallation. When null, the uninstall command line is used instead.
+     * @return a {@link MobileAppScriptReference}
+     */
+    @jakarta.annotation.Nullable
+    public MobileAppScriptReference getActiveUninstallScript() {
+        return this.backingStore.get("activeUninstallScript");
+    }
+    /**
      * Gets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. The possible values are: null, x86, x64, arm64. The possible values are: none, x86, x64, arm, neutral.
      * @return a {@link EnumSet<WindowsArchitecture>}
      */
@@ -52,6 +68,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeInstallScript", (n) -> { this.setActiveInstallScript(n.getObjectValue(MobileAppScriptReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("activeUninstallScript", (n) -> { this.setActiveUninstallScript(n.getObjectValue(MobileAppScriptReference::createFromDiscriminatorValue)); });
         deserializerMap.put("allowedArchitectures", (n) -> { this.setAllowedArchitectures(n.getEnumSetValue(WindowsArchitecture::forValue)); });
         deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture::forValue)); });
         deserializerMap.put("installCommandLine", (n) -> { this.setInstallCommandLine(n.getStringValue()); });
@@ -171,6 +189,8 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("activeInstallScript", this.getActiveInstallScript());
+        writer.writeObjectValue("activeUninstallScript", this.getActiveUninstallScript());
         writer.writeEnumSetValue("allowedArchitectures", this.getAllowedArchitectures());
         writer.writeEnumSetValue("applicableArchitectures", this.getApplicableArchitectures());
         writer.writeStringValue("installCommandLine", this.getInstallCommandLine());
@@ -185,6 +205,20 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         writer.writeCollectionOfObjectValues("rules", this.getRules());
         writer.writeStringValue("setupFilePath", this.getSetupFilePath());
         writer.writeStringValue("uninstallCommandLine", this.getUninstallCommandLine());
+    }
+    /**
+     * Sets the activeInstallScript property value. Contains the unique identifier of the associated install script for this Win32 app to be used instead of the install command line by the managed device during app installation. When null, the install command line is used instead.
+     * @param value Value to set for the activeInstallScript property.
+     */
+    public void setActiveInstallScript(@jakarta.annotation.Nullable final MobileAppScriptReference value) {
+        this.backingStore.set("activeInstallScript", value);
+    }
+    /**
+     * Sets the activeUninstallScript property value. Contains the unique identifier of the associated uninstall script for this Win32 app to be used instead of the uninstall command line by the managed device during app uninstallation. When null, the uninstall command line is used instead.
+     * @param value Value to set for the activeUninstallScript property.
+     */
+    public void setActiveUninstallScript(@jakarta.annotation.Nullable final MobileAppScriptReference value) {
+        this.backingStore.set("activeUninstallScript", value);
     }
     /**
      * Sets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. The possible values are: null, x86, x64, arm64. The possible values are: none, x86, x64, arm, neutral.

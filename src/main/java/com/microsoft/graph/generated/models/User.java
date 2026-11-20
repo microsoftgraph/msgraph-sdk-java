@@ -322,6 +322,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the distributionLists property value. The personal distribution lists in the user&apos;s mailbox. Read-only. Nullable.
+     * @return a {@link java.util.List<DistributionList>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DistributionList> getDistributionLists() {
+        return this.backingStore.get("distributionLists");
+    }
+    /**
      * Gets the drive property value. The user&apos;s OneDrive. Read-only.
      * @return a {@link Drive}
      */
@@ -468,6 +476,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("deviceManagementTroubleshootingEvents", (n) -> { this.setDeviceManagementTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("directReports", (n) -> { this.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("distributionLists", (n) -> { this.setDistributionLists(n.getCollectionOfObjectValues(DistributionList::createFromDiscriminatorValue)); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("employeeExperience", (n) -> { this.setEmployeeExperience(n.getObjectValue(EmployeeExperienceUser::createFromDiscriminatorValue)); });
@@ -1309,6 +1318,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("deviceManagementTroubleshootingEvents", this.getDeviceManagementTroubleshootingEvents());
         writer.writeCollectionOfObjectValues("directReports", this.getDirectReports());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeCollectionOfObjectValues("distributionLists", this.getDistributionLists());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
         writer.writeObjectValue("employeeExperience", this.getEmployeeExperience());
@@ -1661,6 +1671,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the distributionLists property value. The personal distribution lists in the user&apos;s mailbox. Read-only. Nullable.
+     * @param value Value to set for the distributionLists property.
+     */
+    public void setDistributionLists(@jakarta.annotation.Nullable final java.util.List<DistributionList> value) {
+        this.backingStore.set("distributionLists", value);
     }
     /**
      * Sets the drive property value. The user&apos;s OneDrive. Read-only.

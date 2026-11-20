@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,6 +24,14 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     public static UnifiedRoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleDefinition();
+    }
+    /**
+     * Gets the deletedDateTime property value. The date and time when the custom role definition was deleted. The value is null for active and restored role definitions. Read-only.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getDeletedDateTime() {
+        return this.backingStore.get("deletedDateTime");
     }
     /**
      * Gets the description property value. The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
@@ -47,11 +56,13 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("inheritsPermissionsFrom", (n) -> { this.setInheritsPermissionsFrom(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isPrivileged", (n) -> { this.setIsPrivileged(n.getBooleanValue()); });
         deserializerMap.put("resourceScopes", (n) -> { this.setResourceScopes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("rolePermissions", (n) -> { this.setRolePermissions(n.getCollectionOfObjectValues(UnifiedRolePermission::createFromDiscriminatorValue)); });
         deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
@@ -81,6 +92,14 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.backingStore.get("isEnabled");
+    }
+    /**
+     * Gets the isPrivileged property value. Flag indicating whether the role is privileged. Microsoft Entra ID defines a role as privileged if it contains at least one sensitive resource action in the allowedResourceActions collection of rolePermissions. Applies only to actions in the microsoft.directory resource namespace. Nullable. A value of null indicates that the privileged classification is unavailable, not that the role is nonprivileged. Read-only. Supports $filter (eq).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsPrivileged() {
+        return this.backingStore.get("isPrivileged");
     }
     /**
      * Gets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
@@ -121,15 +140,24 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeOffsetDateTimeValue("deletedDateTime", this.getDeletedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("inheritsPermissionsFrom", this.getInheritsPermissionsFrom());
         writer.writeBooleanValue("isBuiltIn", this.getIsBuiltIn());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeBooleanValue("isPrivileged", this.getIsPrivileged());
         writer.writeCollectionOfPrimitiveValues("resourceScopes", this.getResourceScopes());
         writer.writeCollectionOfObjectValues("rolePermissions", this.getRolePermissions());
         writer.writeStringValue("templateId", this.getTemplateId());
         writer.writeStringValue("version", this.getVersion());
+    }
+    /**
+     * Sets the deletedDateTime property value. The date and time when the custom role definition was deleted. The value is null for active and restored role definitions. Read-only.
+     * @param value Value to set for the deletedDateTime property.
+     */
+    public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("deletedDateTime", value);
     }
     /**
      * Sets the description property value. The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
@@ -165,6 +193,13 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEnabled", value);
+    }
+    /**
+     * Sets the isPrivileged property value. Flag indicating whether the role is privileged. Microsoft Entra ID defines a role as privileged if it contains at least one sensitive resource action in the allowedResourceActions collection of rolePermissions. Applies only to actions in the microsoft.directory resource namespace. Nullable. A value of null indicates that the privileged classification is unavailable, not that the role is nonprivileged. Read-only. Supports $filter (eq).
+     * @param value Value to set for the isPrivileged property.
+     */
+    public void setIsPrivileged(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isPrivileged", value);
     }
     /**
      * Sets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.

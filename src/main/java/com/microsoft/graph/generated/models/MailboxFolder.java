@@ -58,6 +58,7 @@ public class MailboxFolder extends Entity implements Parsable {
         deserializerMap.put("childFolderCount", (n) -> { this.setChildFolderCount(n.getIntegerValue()); });
         deserializerMap.put("childFolders", (n) -> { this.setChildFolders(n.getCollectionOfObjectValues(MailboxFolder::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isHidden", (n) -> { this.setIsHidden(n.getBooleanValue()); });
         deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(MailboxItem::createFromDiscriminatorValue)); });
         deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("parentFolderId", (n) -> { this.setParentFolderId(n.getStringValue()); });
@@ -66,6 +67,14 @@ public class MailboxFolder extends Entity implements Parsable {
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         deserializerMap.put("wellKnownName", (n) -> { this.setWellKnownName(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isHidden property value. Indicates whether the folder is hidden. The default value is false. This property can be set only when you create the folder; it can&apos;t be updated using PATCH. By default, listing folders or listing child folders returns only folders that aren&apos;t hidden. To include hidden folders in the response, use the optional query parameter includeHiddenFolders=true. The response includes both hidden and nonhidden folders. If you use $select to limit the returned properties, include isHidden in the selection.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHidden() {
+        return this.backingStore.get("isHidden");
     }
     /**
      * Gets the items property value. The collection of items in this folder.
@@ -133,6 +142,7 @@ public class MailboxFolder extends Entity implements Parsable {
         writer.writeIntegerValue("childFolderCount", this.getChildFolderCount());
         writer.writeCollectionOfObjectValues("childFolders", this.getChildFolders());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("isHidden", this.getIsHidden());
         writer.writeCollectionOfObjectValues("items", this.getItems());
         writer.writeCollectionOfObjectValues("multiValueExtendedProperties", this.getMultiValueExtendedProperties());
         writer.writeStringValue("parentFolderId", this.getParentFolderId());
@@ -161,6 +171,13 @@ public class MailboxFolder extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the isHidden property value. Indicates whether the folder is hidden. The default value is false. This property can be set only when you create the folder; it can&apos;t be updated using PATCH. By default, listing folders or listing child folders returns only folders that aren&apos;t hidden. To include hidden folders in the response, use the optional query parameter includeHiddenFolders=true. The response includes both hidden and nonhidden folders. If you use $select to limit the returned properties, include isHidden in the selection.
+     * @param value Value to set for the isHidden property.
+     */
+    public void setIsHidden(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHidden", value);
     }
     /**
      * Sets the items property value. The collection of items in this folder.

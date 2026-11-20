@@ -36,6 +36,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return new ProtectionUnitBase();
     }
     /**
+     * Gets the backupRetentionPeriodInDays property value. The policy-configured retention period of the backup, in days. Not nullable.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getBackupRetentionPeriodInDays() {
+        return this.backingStore.get("backupRetentionPeriodInDays");
+    }
+    /**
      * Gets the createdBy property value. The identity of the person who created the protection unit.
      * @return a {@link IdentitySet}
      */
@@ -66,12 +74,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("backupRetentionPeriodInDays", (n) -> { this.setBackupRetentionPeriodInDays(n.getIntegerValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("offboardRequestedDateTime", (n) -> { this.setOffboardRequestedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("pendingRetentionPeriodChange", (n) -> { this.setPendingRetentionPeriodChange(n.getObjectValue(RetentionPeriodChange::createFromDiscriminatorValue)); });
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("protectionSources", (n) -> { this.setProtectionSources(n.getEnumSetValue(ProtectionSource::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProtectionUnitStatus::forValue)); });
@@ -100,6 +110,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getOffboardRequestedDateTime() {
         return this.backingStore.get("offboardRequestedDateTime");
+    }
+    /**
+     * Gets the pendingRetentionPeriodChange property value. The retention period change to be applied to the protection unit when it moves between policies with different retention periods. Read-only. null when no change is pending.
+     * @return a {@link RetentionPeriodChange}
+     */
+    @jakarta.annotation.Nullable
+    public RetentionPeriodChange getPendingRetentionPeriodChange() {
+        return this.backingStore.get("pendingRetentionPeriodChange");
     }
     /**
      * Gets the policyId property value. The unique identifier of the protection policy based on which protection unit was created.
@@ -132,6 +150,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeIntegerValue("backupRetentionPeriodInDays", this.getBackupRetentionPeriodInDays());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("error", this.getError());
@@ -141,6 +160,13 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         writer.writeStringValue("policyId", this.getPolicyId());
         writer.writeEnumSetValue("protectionSources", this.getProtectionSources());
         writer.writeEnumValue("status", this.getStatus());
+    }
+    /**
+     * Sets the backupRetentionPeriodInDays property value. The policy-configured retention period of the backup, in days. Not nullable.
+     * @param value Value to set for the backupRetentionPeriodInDays property.
+     */
+    public void setBackupRetentionPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("backupRetentionPeriodInDays", value);
     }
     /**
      * Sets the createdBy property value. The identity of the person who created the protection unit.
@@ -183,6 +209,13 @@ public class ProtectionUnitBase extends Entity implements Parsable {
      */
     public void setOffboardRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("offboardRequestedDateTime", value);
+    }
+    /**
+     * Sets the pendingRetentionPeriodChange property value. The retention period change to be applied to the protection unit when it moves between policies with different retention periods. Read-only. null when no change is pending.
+     * @param value Value to set for the pendingRetentionPeriodChange property.
+     */
+    public void setPendingRetentionPeriodChange(@jakarta.annotation.Nullable final RetentionPeriodChange value) {
+        this.backingStore.set("pendingRetentionPeriodChange", value);
     }
     /**
      * Sets the policyId property value. The unique identifier of the protection policy based on which protection unit was created.

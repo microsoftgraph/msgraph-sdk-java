@@ -48,7 +48,7 @@ public class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
         return value;
     }
     /**
-     * Gets the applicationMode property value. The applicationMode property
+     * Gets the applicationMode property value. The application mode associated with the sensitivity label. The possible values are: manual, automatic, recommended, unknownFutureValue.
      * @return a {@link ApplicationMode}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The GUID that identifies the sensitivity label.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the applicationMode property value. The applicationMode property
+     * Sets the applicationMode property value. The application mode associated with the sensitivity label. The possible values are: manual, automatic, recommended, unknownFutureValue.
      * @param value Value to set for the applicationMode property.
      */
     public void setApplicationMode(@jakarta.annotation.Nullable final ApplicationMode value) {
@@ -125,7 +125,7 @@ public class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The GUID that identifies the sensitivity label.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
