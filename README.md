@@ -115,7 +115,7 @@ The Microsoft Graph SDK is open for contribution. To contribute to this project,
 
 The Microsoft Graph SDK for Java library is supported at runtime for Java 8+ and [Android API revision 26](http://source.android.com/source/build-numbers.html) and greater.
 
-Android builds require `compileSdk` 37 or later, Android Gradle Plugin 9.1.1 or later, and AndroidX enabled with `android.useAndroidX=true` in `gradle.properties`.
+Android builds require `compileSdk` 37 or later, Android Gradle Plugin 9.1.1 or later with JDK 17 or later, and AndroidX enabled with `android.useAndroidX=true` in `gradle.properties`.
 
 Use a repository that serves Gradle module metadata so the Android OkHttp variant is selected. If only Maven POM metadata is available, exclude the transitive `okhttp-jvm` dependency and add `okhttp-android` explicitly.
 

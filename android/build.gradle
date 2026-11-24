@@ -56,6 +56,7 @@ android {
         disable "ResourceType"                 // Annotation binding
         disable "GradleDependency"
         disable "NewerVersionAvailable"
+        disable "OldTargetApi" // The consuming app controls the target SDK.
         disable "KotlinPropertyAccess" // getting false positives because of odata actions & functions (getOrder setOrder)
         disable 'AndroidGradlePluginVersion'
     }
