@@ -9,7 +9,7 @@ buildscript {
         classpath "com.gradle:gradle-enterprise-gradle-plugin:3.19.2"
         classpath "gradle.plugin.com.github.viswaramamoorthy:gradle-util-plugins:0.1.0-RELEASE"
         classpath "com.github.ben-manes:gradle-versions-plugin:0.54.0"
-        classpath "com.android.tools.build:gradle:8.13.2"
+        classpath "com.android.tools.build:gradle:9.2.1"
     }
 }
 
@@ -25,7 +25,7 @@ apply plugin: "com.github.ManifestClasspath"
 android {
     namespace 'com.microsoft.graph'
 
-    compileSdkVersion 36
+    compileSdkVersion 37
 
     defaultConfig {
         versionCode 1
@@ -56,8 +56,9 @@ android {
         disable "ResourceType"                 // Annotation binding
         disable "GradleDependency"
         disable "NewerVersionAvailable"
+        disable "OldTargetApi" // The consuming app controls the target SDK.
         disable "KotlinPropertyAccess" // getting false positives because of odata actions & functions (getOrder setOrder)
-        disable 'AndroidGradlePluginVersion' // We will not be upgrading gradle to version 9 as it does not support our minimum required version of jdk8
+        disable 'AndroidGradlePluginVersion'
     }
 	sourceSets {
 		main {
@@ -73,15 +74,14 @@ android {
 
 
 dependencies {
-    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
     implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
 
-    api 'com.microsoft.graph:microsoft-graph-core:3.6.6'
+    api 'com.microsoft.graph:microsoft-graph-core:4.0.0'
 
-    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:1.9.2'
-    implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:1.9.2'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:1.9.2'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:1.9.2'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:1.9.2'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:1.9.2'
+    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:2.0.0'
+    api 'com.microsoft.kiota:microsoft-kiota-http-okHttp:2.0.0'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:2.0.0'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:2.0.0'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-form:2.0.0'
+    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-multipart:2.0.0'
 }
