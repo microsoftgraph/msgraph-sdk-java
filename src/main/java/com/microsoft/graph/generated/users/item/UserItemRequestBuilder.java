@@ -24,6 +24,7 @@ import com.microsoft.graph.users.item.createdobjects.CreatedObjectsRequestBuilde
 import com.microsoft.graph.users.item.datasecurityandgovernance.DataSecurityAndGovernanceRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
+import com.microsoft.graph.users.item.distributionlists.DistributionListsRequestBuilder;
 import com.microsoft.graph.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.users.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.users.item.employeeexperience.EmployeeExperienceRequestBuilder;
@@ -277,6 +278,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DirectReportsRequestBuilder directReports() {
         return new DirectReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the distributionLists property of the microsoft.graph.user entity.
+     * @return a {@link DistributionListsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DistributionListsRequestBuilder distributionLists() {
+        return new DistributionListsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.user entity.

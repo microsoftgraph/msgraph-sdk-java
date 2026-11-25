@@ -166,7 +166,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sensitivityLabels property value. The sensitivityLabels property
+     * Gets the sensitivityLabels property value. Caller-supplied sensitivity labels describing the content.
      * @return a {@link java.util.List<CurrentLabel>}
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sensitivityLabels property value. The sensitivityLabels property
+     * Sets the sensitivityLabels property value. Caller-supplied sensitivity labels describing the content.
      * @param value Value to set for the sensitivityLabels property.
      */
     public void setSensitivityLabels(@jakarta.annotation.Nullable final java.util.List<CurrentLabel> value) {

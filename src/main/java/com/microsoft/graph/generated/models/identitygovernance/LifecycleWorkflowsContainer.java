@@ -35,7 +35,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
         return this.backingStore.get("customTaskExtensions");
     }
     /**
-     * Gets the deletedItems property value. Deleted workflows in your lifecycle workflows instance.
+     * Gets the deletedItems property value. Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @return a {@link DeletedItemContainer}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
         this.backingStore.set("customTaskExtensions", value);
     }
     /**
-     * Sets the deletedItems property value. Deleted workflows in your lifecycle workflows instance.
+     * Sets the deletedItems property value. Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @param value Value to set for the deletedItems property.
      */
     public void setDeletedItems(@jakarta.annotation.Nullable final DeletedItemContainer value) {

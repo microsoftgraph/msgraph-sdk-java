@@ -86,7 +86,7 @@ public class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("idToken");
     }
     /**
-     * Gets the kerberosTicket property value. The kerberosTicket property
+     * Gets the kerberosTicket property value. Optional claims that control group SID resolution for Kerberos tickets. The supported claim name is groups.
      * @return a {@link java.util.List<OptionalClaim>}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("idToken", value);
     }
     /**
-     * Sets the kerberosTicket property value. The kerberosTicket property
+     * Sets the kerberosTicket property value. Optional claims that control group SID resolution for Kerberos tickets. The supported claim name is groups.
      * @param value Value to set for the kerberosTicket property.
      */
     public void setKerberosTicket(@jakarta.annotation.Nullable final java.util.List<OptionalClaim> value) {

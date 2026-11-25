@@ -44,6 +44,7 @@ public class MobileAppContent extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("containedApps", (n) -> { this.setContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
         deserializerMap.put("files", (n) -> { this.setFiles(n.getCollectionOfObjectValues(MobileAppContentFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("scripts", (n) -> { this.setScripts(n.getCollectionOfObjectValues(MobileAppContentScript::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -55,6 +56,14 @@ public class MobileAppContent extends Entity implements Parsable {
         return this.backingStore.get("files");
     }
     /**
+     * Gets the scripts property value. The list of scripts for this app content version.
+     * @return a {@link java.util.List<MobileAppContentScript>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MobileAppContentScript> getScripts() {
+        return this.backingStore.get("scripts");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -63,6 +72,7 @@ public class MobileAppContent extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("containedApps", this.getContainedApps());
         writer.writeCollectionOfObjectValues("files", this.getFiles());
+        writer.writeCollectionOfObjectValues("scripts", this.getScripts());
     }
     /**
      * Sets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
@@ -77,5 +87,12 @@ public class MobileAppContent extends Entity implements Parsable {
      */
     public void setFiles(@jakarta.annotation.Nullable final java.util.List<MobileAppContentFile> value) {
         this.backingStore.set("files", value);
+    }
+    /**
+     * Sets the scripts property value. The list of scripts for this app content version.
+     * @param value Value to set for the scripts property.
+     */
+    public void setScripts(@jakarta.annotation.Nullable final java.util.List<MobileAppContentScript> value) {
+        this.backingStore.set("scripts", value);
     }
 }

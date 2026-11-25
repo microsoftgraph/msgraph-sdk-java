@@ -69,7 +69,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/folders/{mailboxFolder%2Did}/childFolders{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox.
+     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox. By default, hidden child folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      * @return a {@link MailboxFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox.
+     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox. By default, hidden child folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -118,7 +118,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxFolder::createFromDiscriminatorValue);
     }
     /**
-     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox.
+     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox. By default, hidden child folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox.
+     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox. By default, hidden child folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +172,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return new ChildFoldersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox.
+     * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox. By default, hidden child folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

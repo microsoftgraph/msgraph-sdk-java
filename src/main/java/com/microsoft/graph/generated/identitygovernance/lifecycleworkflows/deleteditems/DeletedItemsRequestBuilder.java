@@ -64,7 +64,7 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Deleted workflows in your lifecycle workflows instance.
+     * Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @return a {@link DeletedItemContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Deleted workflows in your lifecycle workflows instance.
+     * Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeletedItemContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -106,7 +106,7 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Deleted workflows in your lifecycle workflows instance.
+     * Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Deleted workflows in your lifecycle workflows instance.
+     * Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +142,7 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Deleted workflows in your lifecycle workflows instance.
+     * Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -2,6 +2,7 @@ package com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacoslobapp
 
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacoslobapp.contentversions.item.containedapps.ContainedAppsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacoslobapp.contentversions.item.files.FilesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacoslobapp.contentversions.item.scripts.ScriptsRequestBuilder;
 import com.microsoft.graph.models.MobileAppContent;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -37,6 +38,14 @@ public class MobileAppContentItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FilesRequestBuilder files() {
         return new FilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the scripts property of the microsoft.graph.mobileAppContent entity.
+     * @return a {@link ScriptsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ScriptsRequestBuilder scripts() {
+        return new ScriptsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link MobileAppContentItemRequestBuilder} and sets the default values.
